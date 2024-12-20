@@ -1,0 +1,27 @@
+on: 
+  push:
+    branches:
+      - 24@8.2
+name: 🚀 Deploy on push versão 24 PHP 8.2
+jobs:
+  web-deploy:
+    name: 🎉 Deploy v24 PHP 8.2
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+    
+    - name: 📂 Sync files PortalHomolog
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.ftp_host_portalhomolog }}
+        username: ${{ secrets.ftp_username_portalhomolog }}
+        password: ${{ secrets.ftp_password_portalhomolog }}
+        server-dir: ./homolog/
+
+    # - name: 🔗 Call API after deploy PortalHomolog
+    #   run: |
+    #     curl -X POST https://api.example.com/deploy-complete \
+    #     -H "Content-Type: application/json" \
+    #     -H "Authorization: Bearer ${{ secrets.API_TOKEN }}" \
+    #     -d '{"status": "success", "message": "FTP deploy complete"}'

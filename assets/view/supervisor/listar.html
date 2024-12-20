@@ -1,0 +1,67 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Supervisores</li>
+</ol>
+
+<!-- LISTAGEM -->
+<div>
+
+    <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+        <button type="button" class="btn_novo btn btn-primary">
+            <span class="glyphicon glyphicon-plus-sign"></span> Novo
+        </button>
+        <button type="button" class="btn_filtrar btn btn-default">
+            <span class="glyphicon glyphicon-filter"></span> Pesquisar
+        </button>                        
+        <button type="button" class="btn_listar btn btn-default">
+            <span class="glyphicon glyphicon-refresh"></span> Listar
+        </button>
+    </nav>
+
+    <div class="table-responsive">
+
+        <table class="tab_listagem table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Supervisor</th>
+                    <th>E-mail</th>
+                    <th>Bloqueado</th>
+                    <th>Administrador</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- itens -->
+                <tr template-row style="display: none;">
+                    <td template-field="nome">{nome}</td>
+                    <td template-field="email">{e-mail}</td>
+                    <td template-field="bloqueado">{bloqueado}</td>
+                    <td template-field="admin">{admin}</td>                    
+                    <td template-buttons="actions">
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn_editar btn btn-default">
+                                <span class="glyphicon glyphicon-pencil"></span> Editar
+                            </button>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a class="btn_visualizar" href="#">
+                                        Visualizar
+                                    </a></li>
+                                    <li><a class="btn_excluir" href="#">
+                                        Excluir
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<!-- /LISTAGEM -->

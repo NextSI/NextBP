@@ -1,0 +1,63 @@
+<!-- MODAL DETALHE -->
+<div class="modal bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal_formulario_evento_destino_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_formulario_evento_destino_label">Evento do Destino</h4>
+            </div>  
+            <div class="modal-body">
+
+                <div class="dx-field-label" translate="gateway_destino_evento.tipo_automacao"></div>
+                <div class="dx-field-value">
+                    <div class="SelectBox_tipo_automacao"></div>
+                </div>
+                <br />
+                <div class="row div_javascript">
+
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Elementos:</label>
+                                    <div class="div_elementos" style="height: calc(100vh - 230px); overflow: auto;">
+                                    </div>
+
+                                    <span class="text-muted" template-field="elemento" style="display: none"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-12 div_clicar">
+                                <div class="form-group">
+                                    <textarea class="edt_enviar form-control" rows="10" style="font-family: Monospace"></textarea>
+                                    <span class="text-muted pull-right">Javascript</span>
+                                    <button type="button" class="btn_fullscreen btn btn-default pull-right" style="margin-right: 10px;" title="Tela cheia">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row div_filterBuilder">
+                    <div class="col-md-12">
+                        <div class="filterBuilder"></div>
+                    </div>
+                </div>
+                                                  
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

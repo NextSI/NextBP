@@ -1,0 +1,137 @@
+<div class="modal bs-example-modal-lg" id="modal_alteracao_massa" tabindex="-1" role="dialog" aria-labelledby="label_modal_alteracao_massa" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close btn_cancelar" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="label_modal_alteracao_massa">Alterar Atividades Selecionadas</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class=" row">
+
+                    <div class="div_recursos hidden col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-top:15px;padding-bottom: 20px;">
+                        <select   class=" select-multi-column cbo_executores" placeholder="Selecione os executores"></select>
+                    </div>
+
+
+                    <div class="div_recursos hidden col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                         
+                        <table class="tab_executores hidden table table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="visible-xs text-center">Executor</th>
+                                    <th class="hidden-xs text-center">Nome</th>
+                                    <th class="hidden-xs text-center th_horas_previstas hidden">Horas Previstas</th>
+                                    <th class="hidden-xs text-center th_valor_hora hidden" >Valor Hora</th>
+                                    <th class="hidden-xs text-center th_valor_total hidden" >Valor Total</th>
+                                    <th class="hidden-xs text-right th_btn_excluir hidden">&nbsp;</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr template-row style="display: none">
+                                    <!-- MOBILE -->
+                                        
+                                    <td class="visible-xs">
+                                        <button type="button" template-button="btn_usuario_remover" class=" close pull-rigth" aria-hidden="true">&times;</button>
+                                        <div class="row">
+                                            
+                                            <div class="col-xs-2" style="padding-bottom: 20px">
+                                                <span class="label lb_tipo" template-field="tipo" style="margin-right: 5px;"></span>
+                                            </div>
+                                            
+                                            <div class="col-xs-10" style="padding-bottom: 20px">
+                                                <span template-field="nome">{nome}</span>
+                                            </div>
+                                            
+                                            <div class="col-xs-12">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control edt_horas_previstas" template-field="edt_horas_previstas" placeholder="000:00"></input>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xs-12">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control edt_valor_hora" template-field="edt_valor_hora" placeholder="R$ 0000,00"></input>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xs-12">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control edt_valor_total" template-field="edt_valor_total" placeholder="R$ 0000,00"></input>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        
+                                    </td>
+
+                                    <!-- MOBILE -->
+
+                                    <td class="hidden-xs">
+                                        <span class="label lb_tipo" template-field="tipo" style="margin-right: 5px;"></span>
+                                        <span template-field="nome">{nome}</span>
+                                    </td>
+                                    <td class="hidden-xs">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control edt_horas_previstas" template-field="edt_horas_previstas" placeholder="000:00"></input>
+                                        </div>
+                                        
+                                    </td>
+                                    <td class="hidden-xs">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control edt_valor_hora" template-field="edt_valor_hora" placeholder="R$ 0000,00"></input>
+                                        </div>
+                                        
+                                    </td>
+
+                                    <td class="hidden-xs">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control edt_valor_total" template-field="edt_valor_total" readonly placeholder="R$ 0000,00"></input>
+                                        </div>
+                                    </td>
+
+                                    <td class="text-right hidden-xs" style="margin-right: 0px; padding-right: 0px">
+                                        <a class=" btn btn-default" template-button="btn_usuario_remover">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                        </a>
+                                    </td>
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="row">
+                            <div class="div_recursos hidden col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label>Responsável</label>
+                                    <select class="form-control cbo_responsavel" data-live-search="true" id="cbo_responsavel"> 
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div id="div_datas" class="div_datas hidden col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <label>Início</label>
+                                <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_inicio">
+                            </div>
+
+                            <div id="div_datas" class="div_datas hidden col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <label>Prazo</label>
+                                <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_prazo"> 
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+            </div><!-- /.modal-body -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn_cancelar">Cancelar</button>
+                <button type="button" class="btn btn-primary btn_confirmar">Salvar</button>
+            </div>
+        </div><!-- /.modal-dialog -->
+    </div>
+</div>

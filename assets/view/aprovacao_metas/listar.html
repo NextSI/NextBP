@@ -1,0 +1,85 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Aprovação de Metas</li>
+</ol>
+
+<!-- LISTAGEM -->
+<div>
+    <div class="row">
+
+        <div class="col-sm-12 col-md-4 col-lg-4 filtro_atividades">
+            <label>Filtrar por Status</label>
+            <div class="form-group">
+                <select id="cbo_status" class="form-control selectpicker cbo_status show-tick" data-live-search="true" title="Filtro por Status">
+                    <option value="-1" selected>Todos</option>
+                    <option value="3">Aprovado</option>
+                    <option value="5">Reprovado</option>
+                    <option value="2">Aguardando Aprovação</option>
+                    <option value="4">Em Aprovação</option>
+                </select>
+            </div>
+        </div>
+  
+    </div>
+    <!-- filtros -->
+
+    <div >
+
+        <table class="tab_listagem table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th class="hidden-xs">Descrição</th>
+                    <th class="hidden-xs">Meta</th>
+                    <th class="hidden-xs">Autor</th>
+ <!--                    <th class="hidden-xs">Valor</th>
+                    <th class="hidden-xs">Início</th>
+                    <th class="hidden-xs">Fim</th> -->
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- itens -->
+                <tr template-row style="display: none;">
+                    <td class="hidden-xs" template-field="descricao">{descricao}</td>
+                    <td class="hidden-xs" template-field="meta_acao_24_horas">{meta_acao_24_horas}</td>
+                    <td class="hidden-xs" template-field="autor">{autor}</td>
+                    <!-- <td class="hidden-xs" template-field="valor">{valor}</td>
+                    <td class="hidden-xs" template-field="inicio">{inicio}</td>
+                    <td class="hidden-xs" template-field="fim">{fim}</td> -->
+                    
+                    <td class="hidden-xs" template-buttons="actions">
+                        <!-- <div class="btn-group pull-right" style="padding-left: 15px;"> -->
+                            <button type="button" class="btn_visualizar btn btn-default">
+                                <span class="glyphicon glyphicon-pencil"></span> Visualizar
+                            </button>
+                            <!-- <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a class="btn_aprovar" href="#">
+                                        Aprovar
+                                    </a></li>
+                                    <li><a class="btn_reprovar" href="#">
+                                        Reprovar
+                                    </a></li>
+                                </ul>
+                            </div> -->
+                        <!-- </div> -->
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+        <div style="position: relative; bottom: 20px;">
+            <div style="padding: 10px; padding-bottom: 0px; padding-top: 0; background-color: white;" class="text-center div_carregar_mais hidden">
+                <span class="btn btn-link btn_carregar_mais">
+                    <span class="txt_carregar_mais text-primary">Carregar mais registros</span>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- /LISTAGEM -->

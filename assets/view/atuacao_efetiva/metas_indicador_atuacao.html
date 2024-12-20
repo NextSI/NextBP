@@ -1,0 +1,81 @@
+<!-- MODAL DETALHE -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_area_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_area_detalhes_label">{title}</h4>
+            </div>
+            <div class="modal-body modal-fixo">
+				<div template-rows>
+	              	<div class="row row_acao" template-row-acao style="padding-top: 15px;display: none;">
+	              		<div class="col-sm-12">
+	              			<div class="form-group">
+	              				<label>Desdobramento</label>
+	              				<span class="label label-default hidden lbl_info_agenda">Agenda gerada</span>
+	              				<span class="label label-success hidden lbl_realizado">Evento realizado</span>
+	              				<textarea rows="2" class="form-control" maxlength="255" template-field="descricao" style="max-width: 100%;"></textarea>
+	              			</div>
+	              			<div class="row">
+	              				<div class="col-sm-3">
+	              					<label>Unidade de medida</label>
+	              					<select class="select-multi-column form-control cbo_tipo" template-field="tipo">
+	                                  <option selected disabled>Selecione o tipo</option>
+	                                  <option value="1">Informativo</option>
+	                                  <option value="2">Percentual</option>
+	                                  <option value="3">Valor</option>
+	                                </select>
+	              				</div>
+	              				<div class="col-sm-3">
+	              					<label>Valor</label>
+	              					<input type="text" class="form-control" template-field="valor">
+	              				</div>
+	              				<div class="col-sm-3">
+									  <label>Data Início</label>
+									  <div class="div_dt_inicio"></div>
+	              				</div>
+	              				<div class="col-sm-3">
+									  <label>Data Fim</label>
+									<div class="div_dt_fim"></div>
+	              				</div>
+	              			</div>
+	              			<div class="row" style="padding-top: 10px;">
+	              				<div class="col-sm-6">
+			                    	<div template="div_checkbox">
+	                                	<input template-field="chk_padrao" type="checkbox" class="form-control checkbox_bootstrap_toggle template_switch" checked>
+	                                	<label>Depende de aprovação?</label>
+	                            	</div>
+	                            </div>
+	              			</div> 
+	              			<a href="#" class="btn_deletar_objetivo btn_remove_meta">
+								<span class="glyphicon glyphicon-trash"></span>
+		                    </a>
+			              	<hr style="border:1px solid #eee">
+	              		</div>
+	              	</div>
+	            </div>
+              	<div style="text-align: center" class="mensagem_aprovacao hidden">
+                  <span class="label label-info">Metas ainda não foram enviadas para aprovação pelo usuário</span>
+                </div>
+            </div>
+
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_incluir_objetivo btn btn-info">Novo</button>
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+                <button type="button" class="btn_salvar_enviar btn btn-info">Salvar e Enviar</button>
+            </div>
+            <div class="modal-footer div_aprovador hidden" style="bottom: 0px;">
+                  <div class="form-group">
+                    <label for="txt_observacoes">Observações:</label>
+                    <textarea class="form-control txt_observacoes" style="width:100%;" rows="5" placeholder="Digite aqui, suas observações"></textarea>
+                  </div>
+                  <button type="button" class="btn_aprovar btn btn-success">Aprovar</button>
+                  <button type="button" class="btn_reprovar btn btn-danger">Reprovar</button>
+                  <button type="button" class="btn_aprovar_gerar_agenda btn btn-info">Aprovar e gerar agenda</button>
+                  <button type="button" class="btn_refazer btn btn-warning">Refazer</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

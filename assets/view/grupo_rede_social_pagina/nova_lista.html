@@ -1,0 +1,67 @@
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_motivos_chamado_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_motivos_chamado_detalhes_label">Lista de Discussão</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="panel panel-default painel_detalhes">
+
+                    <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                        <div class="pull-right">
+                            <!-- -->
+                        </div>
+                        <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                            <li class="active lbl_tab_geral">
+                                <a id="modal_geral_tab" href="#modal_geral" role="tab" data-toggle="tab">Geral</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="panel-body">
+                         <!-- Tab panes -->
+                        <div class="tab-content">
+
+                            <div class="tab-pane active " id="modal_geral">
+
+                                <div class="row">  
+                                    <div class="col-md-12">                                           
+                                        <div class="form-group">
+                                            <label for="edt_titulo">Título</label>
+                                            <input type="text" class="edt_titulo form-control" id="edt_titulo" placeholder="Título da Lista de Discussão">
+                                        </div>
+                                    </div>
+                                </div>    
+                                <div class="row">            
+                                    <div class="col-md-12">                                                
+                                        <div class="form-group">
+                                            <label for="desc_nova_lista">Descrição</label>
+                                            <textarea class="desc_nova_lista form-control" id="desc_nova_lista"></textarea>
+                                        </div>            
+                                    </div>            
+                                </div>
+                                <div class="row">            
+                                    <div class="col-md-12">                                                
+                                        <div class="form-group div_encerrar_lista">
+                                            <label for="chk_encerrar_lista">Fechar Lista</label>
+                                            <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                <input class="chk_encerrar_lista" id="chk_encerrar_lista" type="checkbox" value="">
+                                            </div>
+                                        </div>            
+                                    </div>            
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+                <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>

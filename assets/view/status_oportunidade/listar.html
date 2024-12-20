@@ -1,0 +1,87 @@
+<!-- LISTAGEM -->
+<div>
+	<nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+        <button type="button" class="btn_novo btn btn-primary">
+            <span class="glyphicon glyphicon-plus-sign"></span> Novo
+        </button>
+        <button type="button" class="btn_listar btn btn-default">
+            <span class="glyphicon glyphicon-refresh"></span>
+        </button>
+    </nav>
+
+    <table class="tab_listagem table table-striped table-hover">
+		<thead>
+			<tr class="hidden-xs">
+                <th class="visible-xs"><!-- mobile -->&nbsp;</th>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Cor</th>
+                <th class="text-center">Pintar Cartão</th>
+                <th class="text-center">Padrão</th>
+                <th>&nbsp;</th>
+            </tr>
+		</thead>
+		<tbody>
+			<!-- itens -->
+            <tr template-row style="display: none;">
+                <!-- mobile -->
+                <td class="td-mobile visible-xs">
+                    <div class="pull-right">
+                        <div class="btn-group">
+                            <button type="button" class="btn_editar btn btn-default">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </button>
+                            <button type="button" class="btn_excluir btn btn-default">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <h4 template-field="nome"></h4>
+
+                    <div class="text-info">
+                        <span template-field="cor"></span>
+                    </div>
+                    <div>
+                        <span class="glyphicon" template-field="pintar_cartao"></span> Pintar cartão
+                    </div>
+                    <div>
+                        <span class="glyphicon" template-field="padrao"></span> Padrão
+                    </div>
+                </td>
+                <!-- /mobile -->
+                <td class="hidden-xs" template-field="id">{id}</td>
+                <td class="hidden-xs" template-field="nome">{nome}</td>
+                <td class="hidden-xs" template-field="cor"></td>
+                <td class="hidden-xs text-center">
+                    <span class="glyphicon" template-field="pintar_cartao"></span>
+                </td>
+                <td class="hidden-xs text-center">
+                    <span class="glyphicon" template-field="padrao"></span>
+                </td>
+                <td class="hidden-xs" template-buttons="actions">
+
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn_editar btn btn-default">
+                            <span class="glyphicon glyphicon-pencil"></span> Editar
+                        </button>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu pull-right">
+                                <li><a class="btn_visualizar" href="#">
+                                    Visualizar
+                                </a></li>
+                                <li><a class="btn_excluir" href="#">
+                                    Excluir
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+		</tbody>
+    </table>
+</div>
+<!-- /LISTAGEM -->

@@ -1,0 +1,98 @@
+<!-- MODAL DETALHE -->
+<div class="panel panel-default painel_detalhes">
+    <div class="panel-body">
+        <div class="row">
+            <div class="div_tamanho col-sm-4">
+                <div class="form-group">
+                    <label for="modal_formulario_tabela_edt_nome">Nome da tabela</label>
+                    <input type="text" class="edt_nome form-control" id="modal_formulario_tabela_edt_nome" maxlength="150">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="modal_formulario_campo_edt_id">ID do Campo</label>
+                    <input type="text" class="edt_id_elemento form-control"   id="modal_formulario_campo_edt_id" maxlength="20">
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="modal_formulario_campo_edt_tamanho">Quantidade de linhas</label>
+                    <input type="text" class="edt_tamanho form-control" id="modal_formulario_campo_edt_tamanho" maxlength="4">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="modal_formulario_campo_edt_tipo_linha">&nbsp;</label>
+                    <select class="edt_tipo_linha form-control">
+                        <option value="0">Mínimo</option>
+                        <option value="1">Exato</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <table class="tab_listagem table table-striped">
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>Campo</th>
+                    <th>&nbsp;</th>
+                    <th>
+                        <div class="pull-right">
+                            <button type="button" class="btn_add_campo btn btn-default">
+                                <span class="glyphicon glyphicon-plus"></span> Campo
+                            </button>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr template-row style="display: none;">
+                    <td style="width: 100px">
+                        <div class="btn-group">
+                            <button type="button" class="btn_tab_up_campo btn btn-default">
+                                <span class="glyphicon glyphicon-chevron-up"></span>
+                            </button>
+                            <button type="button" class="btn_tab_down_campo btn btn-default">
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                    <td class="lbl_nome">{nome}</td>
+                    <td>
+                        <span class="lbl_tipo label label-default">tipo (tamanho, decimal)</span>
+                        <span class="lbl_id label label-default"></span>
+                        <span class="lbl_obrigatorio label label-warning">obrigatorio</span>
+                        <span class="lbl_possui_evento label label-info" style="display: none;" title="Possui eventos javascript"><i class="fas fa-code"></i></span>
+                    </td>
+                    <td>
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn_editar btn btn-default">
+                                    <span class="glyphicon glyphicon-pencil"></span> Editar
+                                </button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>                
+            </tbody>
+        </table>
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="modal_chk_exibir_impressao">Exibir esta tabela na impressão (E-Mail/PDF)</label>&nbsp;
+                    <input type="checkbox" class="chk_exibir_impressao checkbox_bootstrap_toggle" id="modal_chk_exibir_impressao">
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center;">
+            <button type="button" class="btn_remover btn btn-sm btn-danger"><i class="fas fa-trash"></i> Remover tabela</button>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

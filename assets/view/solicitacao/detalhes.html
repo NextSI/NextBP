@@ -1,0 +1,335 @@
+<style>
+@media (max-width:799px) {
+    .div_solicitacao_topo {
+        display: flex !important;
+        flex-flow: column-reverse !important;
+    }
+
+    .div_solicitacao_topo > .pull-right {
+        float: none !important;
+        margin-left: 10px;
+    }
+
+    .div_solicitacao_topo > .pull-right > div {
+        text-align: left !important;
+    }
+
+    .div_solicitacao_topo > .pull-right .div_solicitacao_informativo_prazo > div > div {
+        justify-content: start !important;
+    }
+    
+}
+</style>
+<div class="detalharMenu">
+</div>
+
+<div class="scrollview">
+    <div class="panel panel-default div_topo">
+        
+        <div class="div_solicitacao_topo">
+            <div class="pull-right div_menu_block" style="margin-top: 4px; margin-right: 8px;">
+                <div style="display: inline-flex; margin-top: 4px; margin-bottom: 4px; text-align: right;">
+                    <span class="lbl_prazo_execucao text-muted small" style="display: none;">Prazo</span>&nbsp;
+                    <div class="div_solicitacao_informativo_prazo"></div>
+                </div>
+        
+                <div style="margin-bottom: 10px; display: none; text-align: right;" class="div_usuario_responsavel_atividade_nome">
+                    <span class="text-muted small">Responsável</span>
+                    <span class="lbl_usuario_responsavel_atividade_nome"></span>
+                </div>
+            </div>
+            <div style="margin-left: 10px; margin-bottom: 0px; min-width: 0;">
+                <h4 style="margin-top: 0px; margin-bottom: 0px;">
+                    <span>Solicitação</span> <span class="solicitacao_id"></span> <span class="solicitacao_copiar_link"></span> 
+                    <span class="lbl_data small text-muted" title="Início Solicitação"></span>
+                </h4>
+                <div style="display: inline-flex; align-items: center;">
+                    <div class="div_cliente"></div>
+                    <div class="div_solicitante"></div>
+                </div>
+                <div class="lbl_descricao small hidden"></div>
+            </div>
+            
+        </div>
+
+        <form role="form" style="padding: 10px;">
+            <div class="row div_seleciona_cliente">
+                <div class="col-sm-4 col-md-4">
+                    <div class="div_component_cbo_clientes"></div>
+                </div>
+    
+                <div class="col-sm-4 col-md-4 div_usuarios hidden">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <select id="cbo_usuarios" class="form-control selectpicker cbo_usuarios show-tick" multiple  data-size="5" title="Clientes em acompanhamento" data-live-search="true"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row div_seleciona_pasta hidden">
+                <div class="col-sm-4 col-md-4">
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label class="control-label">Armazenar anexos em</label>
+                            <div class="div_pasta"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <b class="lbl_processo_nome" style="cursor: pointer;"></b>
+                <span class="text text-info small">v.<span class="lbl_versao"></span></span>
+            </div>
+            <div class="lbl_processo_instrucao text-info small"></div>
+    
+            <div class="lbl_atividade_nome div_menu_block"></div>
+            <div class="lbl_atividade_instrucao text-info small div_menu_block"></div>
+
+            <div class="div_dropdown_etiquetas" style="padding-top: 10px;">
+
+            </div>
+    
+            <div class="clearfix"></div>
+        </form>
+    </div>
+    <div class="alert alert-info aviso_modo_teste hidden" role="alert">
+        <p class="p_usuario_teste"></p>
+    </div>
+    <div class="panel panel-default" style="margin: 0px;">
+        <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+            <div class="pull-right">
+                <!-- -->
+            </div>
+            <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                <li class="active">
+                    <a class="menu_formulario" href="javascript:;" role="tab" data-toggle="tab">Formulário</a>
+                </li>
+                <li>
+                    <a class="menu_historico" href="javascript:;" role="tab" data-toggle="tab">
+                        Histórico
+                        <sup><strong class="observacao_historico hidden" style="color: red;"></strong></sup>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu_fluxo" href="javascript:;" role="tab" data-toggle="tab">Fluxo</a>
+                </li>
+                <li>
+                    <a class="menu_diagrama" href="javascript:;" role="tab" data-toggle="tab">Diagrama</a>
+                </li>
+                <li>
+                    <a class="menu_referencias_solicitacao" href="javascript:;" role="tab" data-toggle="tab">Ref. Sol.</a>
+                </li>
+                <li>
+                    <a class="menu_referencias_atividade" href="javascript:;" role="tab" data-toggle="tab">Ref. Ativ.</a>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="panel-body">
+    
+            <!-- Tab panes -->
+            <div class="tab-content">
+    
+                <!-- modal_solicitacao_formulario -->
+                <div class="tab-pane active aba_formulario">
+    
+                    <div class="form-editor">
+    
+                        <div class="form-grupos panel-body" style="padding: 0px;">
+                        </div>
+    
+                        <div class="form-grupo" template-grupo template-ref="" style="display: none;">
+                            <div>
+                                <h3 class="text-primary lbl_grupo_nome"></h3>
+                            </div>
+    
+                        </div>
+    
+                        <div class="form-grupo-campo" template-campo template-ref="" style="display: none;">
+                            <div class="div_campo form-group">
+                                <span class="lbl_obrigatorio text-danger">* </span>
+                                <label class="lbl_nome">{Nome}</label>
+                                <div class="div_input">
+                                    <!-- elemento do campo -->
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="form-observacoes panel-body" style="padding: 0px;">
+                            <div class="form-grupo">
+                                <div class="panel panel-info">
+                                    <div class="form-titulo panel-heading">
+                                        <span class="lbl_grupo_nome">Suas observações nesta atividade</span>
+                                        <span class="contador_obs"></span>
+                                    </div>
+                                    <textarea class="edt_observacoes form-control" id="modal_solicitacao_formulario_edt_observacoes" rows="5" maxlength="5000" style="border:none;"></textarea>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+                <!-- modal_solicitacao_menu_historico -->
+                <div class="tab-pane aba_historico">
+    
+                    <table class="tab_historico table">
+                        <thead>
+                            <tr class="hidden-xs">
+                                <th class="visible-xs">&nbsp;</th>
+                                <th>Atividade</th>
+                                <th width="200px" class="th_origem text-right" style="cursor: pointer;width:200px;">Origem</th>
+                                <th width="200px" class="th_execucao text-right" style="cursor: pointer;">Execução</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr template-row="historico" style="display: none">
+                                <!-- MOBILE -->
+                                <td class="visible-xs">
+                                    <div class="pull-right" >
+    
+    
+                                        <div class="pull-right btn-group">
+                                            <button type="button" class="btn_detalhes btn btn-sm"></button>
+                                        </div>
+    
+    
+                                        <br>
+                                        
+                                    </div>
+                                    <div template-field="descricao"></div>
+                                </td>
+    
+                                <!-- MOBILE -->
+    
+                                <td template-field="descricao" class="hidden-xs" colspan="2"></td>
+                            
+                                <td class="text-right hidden-xs" style="width: 4%;">
+                                    <button class="btn_detalhes"></button>
+                                </td>
+                            </tr>
+                            <tr template-row="atividade" style="display: none">
+                                <!-- mobile -->
+                                <td class="td-mobile visible-xs">
+                                    <div class="pull-right">
+                                        <div class="text-right" style="margin-bottom: 15px;">
+                                            <span class="small" template-field="sequencia"></span>
+                                            <span template-field="tipo" class="label label-success"></span>
+                                            <span class="pull-right label span_type">Atividade</span>
+                                        </div>
+                                    </div>
+    
+                                    <h4 template-field="atividade_descricao"></h4>
+    
+                                    <div>
+                                        <span>Solicitado em</span>
+                                        <span template-field="solicitado_em"></span>
+                                        <br>
+                                        <span>por</span>
+                                        <span template-field="solicitado_por">
+                                            <img class="solicitado_por_foto img-circle" width="20px" height="20px" src="assets/img/imagem_usuario_padrao.svg"/>&nbsp;
+                                            <span></span>
+                                        </span>
+                                    </div>
+                                    <div class="div_executado">
+                                        <span>Executada em</span>
+                                        <span template-field="executado_em"></span>
+                                        <br>
+                                        <span>por</span>
+                                        <span template-field="executado_por">
+                                            <img class="executor_foto img-circle" width="20px" height="20px" src="assets/img/imagem_usuario_padrao.svg">&nbsp;
+                                            <span></span>
+                                        </span>
+                                    </div>
+    
+                                    <div template-field="observacoes">
+                                    </div>
+                                </td>
+                                <!-- /mobile -->
+    
+                                <!-- atividade -->
+                                <td class="hidden-xs" colspan="3">
+                                    <div class="pull-right text-right">
+                                        <div template-field="executado_por">
+                                            <span class="small text-danger txt_cancelado"></span>
+                                            <span class="small text-muted"></span>&nbsp;
+                                            <img class="executor_foto img-circle" width="20px" height="20px" src="assets/img/imagem_usuario_padrao.svg">
+                                        </div>
+                                        <div class="small text-muted" template-field="executado_em"></div>
+                                        <div>
+                                            <span class="imginfo glyphicon glyphicon-info-sign" style="padding-left: 4px" data-html="true"></span>
+                                        </div>
+                                    </div>
+    
+                                    <div class="div_atividades_pendentes pull-left">
+                                        <span class="label label-warning">Aguardando atividades em paralelo</span>
+                                        &nbsp;
+                                    </div>                                        
+                                    
+                                    <div template-field="atividade_descricao" >
+                                    </div>                              
+                            
+                                    <div style="margin-bottom:5px;"></div>
+    
+                                    <div class="div_retorno text-danger">
+                                        <span class="img_retorno glyphicon"></span>
+                                        <span template-field="retorno_motivo"></span>
+                                    </div>
+    
+                                    <div class="div_observacoes text-info">
+                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                                        <span template-field="observacoes"></span>
+                                    </div>
+                                    
+                                </td>
+                                <!-- /atividade -->
+                            </tr>
+                        </tbody>
+                    </table>
+    
+                </div>
+    
+                <!-- modal_solicitacao_menu_fluxo -->
+                <div class="tab-pane aba_fluxo">
+                    <div class="tab_atividades"></div>
+                </div>
+    
+                <!-- modal_solicitacao_menu_fluxo -->
+                <div class="tab-pane aba_diagrama">
+                    <div class="div_diagrama"></div>
+                </div>
+
+                <div class="tab-pane aba_referencias_solicitacao">
+                    <div class="div_componente_referencias_solicitacao"></div>
+                </div>
+
+                <div class="tab-pane aba_referencias_atividade">
+                    <div class="div_componente_referencias_atividade"></div>
+                </div>
+            </div>
+    
+    
+        </div>
+    </div>
+    
+    <div class="modal modalEscolha" tabindex="-1" role="dialog">
+        <div class="modal-dialog  modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Escolha a certificadora</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <button type="button"  class="form-control btn btn-default btnModalClick" data-dismiss="modal">Clicksign</button>
+                <button type="button" class="form-control btn btn-default btnModalCert" data-dismiss="modal">Certsign</button>
+                <button type="button" class="form-control btn btn-default btnModalD4" data-dismiss="modal">D4Sign</button>
+            </div> 
+          </div>
+        </div>
+      </div>
+</div>

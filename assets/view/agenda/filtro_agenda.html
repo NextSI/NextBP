@@ -1,0 +1,97 @@
+<div class="modal modal_filtro_agenda" tabindex="-1" role="dialog" aria-labelledby="label_modal_filtro_agenda" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close"  aria-hidden="true">&times;</button>
+                <h4 class="modal-title label_modal_filtro_agenda" translate="gestao_agenda.filtro">Filtro</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <input style="margin-top:35px" value="1" class="radio_semana" type="radio" name="agenda"></input>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="edt_inicio_calendario" translate="gestao_agenda.inicio_calendario">Início calendário</label>
+                            <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_inicio_calendario" name="edt_inicio_calendario">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="cbo_semanas" translate="dia_semana.semanas">Semanas</label>
+                            <select class="form-control cbo_semanas">
+                                <option value="7" selected translate="dia_semana.uma_semana">Uma semana</option>
+                                <option value="14" translate="dia_semana.duas_semanas">Duas semanas</option>
+                                <option value="21" translate="dia_semana.tres_semanas">Três semanas</option>
+                                <option value="28" translate="dia_semana.quatro_semanas">Quatro semanas</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <input style="margin-top:35px" value="2" class="radio_dia_fim" type="radio" name="agenda" ></input>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="edt_inicio_novo_calendario" translate="gestao_agenda.inicio_calendario">Início calendário</label>
+                            <input  type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_inicio_novo_calendario" name="edt_inicio_novo_calendario">
+                        </div>
+                    </div>
+                     <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="edt_fim_calendario" translate="gestao_agenda.fim_calendario">Fim calendário</label>
+                            <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_fim_calendario" name="edt_fim_calendario">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 div_grupo_usuarios hidden">
+                        <div class="form-group">
+                            <label translate="grupo_usuarios.grupo_usuarios">Grupos de Usuários</label>
+                            <select class="form-control cbo_grupo_usuarios" data-live-search="true" multiple data-selected-text-format="count > 1" title="Filtro por Grupos de Usuários" data-toggle="tooltip" data-actions-box="true" data-deselect-all-text="Nenhum" data-select-all-text="Todos">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 div_usuarios hidden">
+                        <div class="form-group">
+                            <label translate="usuarios.usuarios">Usuários</label>
+                            <select class="form-control cbo_usuarios" data-live-search="true" multiple data-selected-text-format="count > 1" title="Filtro por Usuários" data-toggle="tooltip" data-actions-box="true" data-deselect-all-text="Nenhum" data-select-all-text="Todos">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 div_grupos_ativos hidden">
+                        <div class="form-group">
+                            <label>Grupos de Ativos</label>
+                            <select class="form-control cbo_grupos_ativos" data-live-search="true" multiple data-selected-text-format="count > 1" title="Filtro por Grupos de Ativos" data-toggle="tooltip" data-actions-box="true" data-deselect-all-text="Nenhum" data-select-all-text="Todos">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 div_ativos hidden">
+                        <div class="form-group">
+                            <label>Ativos</label>
+                            <select class="form-control cbo_ativos" data-live-search="true" multiple data-selected-text-format="count > 1" title="Filtro por Ativos" data-toggle="tooltip" data-actions-box="true" data-deselect-all-text="Nenhum" data-select-all-text="Todos">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Exibir endereços expandidos</label><br />
+                            <input type="checkbox" class="checkbox_bootstrap_toggle chk_exibir_endereco form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn_cancelar" translate="modal_cadastro.cancelar">Cancelar</button>
+                <button type="button" class="btn btn-primary btn_filtrar" translate="modal_cadastro.confirmar">Confirmar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

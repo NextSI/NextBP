@@ -1,0 +1,304 @@
+<div class="modal bs-modal-md" tabindex="-1" role="dialog" aria-labelledby="modal_cliente_configuracoes_label" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_cliente_configuracoes_label">Configurações</h4>
+            </div>
+            <div class="modal-body">  
+
+                <div class="panel panel-default painel_detalhes">
+
+                    <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                        <div class="pull-right">
+                            <!-- -->
+                        </div>
+                        <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                            <li class="active lbl_tab_geral">
+                                <a id="modal_geral_tab" href="#modal_geral" role="tab" data-toggle="tab">Geral</a>
+                            </li>
+                            <!--li class="lbl_tab_atalhos">
+                                <a id="modal_atalhos_tab" href="#modal_atalhos" role="tab" data-toggle="tab">Atalhos</a>
+                            </li-->
+                            <li class="lbl_tab_personalizados">
+                                <a id="modal_personalizados_tab" href="#modal_personalizados" role="tab" data-toggle="tab">Campos Personalizados</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="panel-body">
+                         <!-- Tab panes -->
+                        <div class="tab-content">
+
+                            <div class="tab-pane active  frm_detalhes" id="modal_geral">
+                                <table class="table table-striped small">
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-left">
+                                                <label for="modal_cliente_configuracoes_chk_codigo_automatico">Código gerado automaticamente</label>
+                                            </td>
+                                            <td class="text-right">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_gerar_codigo form-control" id="modal_cliente_configuracoes_chk_codigo_automatico">                        
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <label for="modal_cliente_configuracoes_edt_codigo_zeros_esquerda">Preencher com zeros à esquerda do código</label>
+                                                <div class="small text-muted">Informe a quantidade máxima de casas a serem preenchidas. 0 para desativar</small>
+                                            </td>
+                                            <td class="text-right">
+                                                <input type="text" class="edt_codigo_zeros_esquerda form-control pull-right" style="width: 60px;" id="modal_cliente_configuracoes_edt_codigo_zeros_esquerda">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <label for="modal_cliente_configuracoes_chk_codigo_unidade_repetidos">Permitir Código e Unidade repetidos</label>
+                                            </td>
+                                            <td class="text-right">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_codigo_unidade_repetidos form-control" id="modal_cliente_configuracoes_chk_codigo_unidade_repetidos">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <label for="modal_cliente_configuracoes_chk_razao_social">Razão Social obrigatório</label>
+                                            </td>
+                                            <td class="text-right">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_razao_social form-control" id="modal_cliente_configuracoes_chk_razao_social">                        
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <label for="modal_cliente_configuracoes_chk_nome_fantasia">Nome Fantasia obrigatório</label>
+                                            </td>
+                                            <td class="text-right">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_nome_fantasia form-control" id="modal_cliente_configuracoes_chk_nome_fantasia">                        
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <label for="modal_cliente_configuracoes_chk_tipo">Tipo obrigatório</label>
+                                            </td>
+                                            <td class="text-right">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_tipo form-control" id="modal_cliente_configuracoes_chk_tipo">                        
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <label for="modal_cliente_configuracoes_chk_cep">CEP obrigatório</label>
+                                            </td>
+                                            <td class="text-right">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_cep form-control" id="modal_cliente_configuracoes_chk_cep">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <label for="modal_cliente_configuracoes_chk_endereco">Endereço obrigatório</label>
+                                            </td>
+                                            <td class="text-right">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_endereco form-control" id="modal_cliente_configuracoes_chk_endereco">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <label for="modal_cliente_configuracoes_chk_numero">Número obrigatório</label>
+                                            </td>
+                                            <td class="text-right">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_numero form-control" id="modal_cliente_configuracoes_chk_numero">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <label for="modal_cliente_configuracoes_chk_bairro">Bairro obrigatório</label>
+                                            </td>
+                                            <td class="text-right">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_bairro form-control" id="modal_cliente_configuracoes_chk_bairro">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <label for="modal_cliente_configuracoes_chk_municipio">Município obrigatório</label>
+                                            </td>
+                                            <td class="text-right">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_municipio form-control" id="modal_cliente_configuracoes_chk_municipio">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <label for="modal_cliente_configuracoes_chk_pais">País obrigatório</label>
+                                            </td>
+                                            <td class="text-right">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_pais form-control" id="modal_cliente_configuracoes_chk_pais">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <label for="modal_cliente_configuracoes_chk_cnpj">CNPJ/CPF obrigatório</label>
+                                            </td>
+                                            <td class="text-right">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_cnpj form-control" id="modal_cliente_configuracoes_chk_cnpj">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <label for="modal_cliente_configuracoes_chk_cnpj_repetidos">Permitir CNPJ/CPF repetidos</label>
+                                            </td>
+                                            <td class="text-right">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_cnpj_repetidos form-control" id="modal_cliente_configuracoes_chk_cnpj_repetidos">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <label for="modal_cliente_configuracoes_chk_inscricao_estadual">Inscrição Estadual obrigatório</label>
+                                            </td>
+                                            <td class="text-right">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_inscricao_estadual form-control" id="modal_cliente_configuracoes_chk_inscricao_estadual">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <label for="modal_cliente_configuracoes_chk_segmentos">Segmentos obrigatório</label>
+                                            </td>
+                                            <td class="text-right">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_segmentos form-control" id="modal_cliente_configuracoes_chk_segmentos">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <label for="modal_cliente_configuracoes_chk_representantes">Representantes obrigatório</label>
+                                            </td>
+                                            <td class="text-right">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_representantes form-control" id="modal_cliente_configuracoes_chk_representantes">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <label for="modal_cliente_configuracoes_chk_email_principal_obrigatorio">E-mail principal obrigatório</label>
+                                            </td>
+                                            <td class="text-right">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_email_principal form-control" id="modal_cliente_configuracoes_chk_email_principal_obrigatorio">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <label for="modal_cliente_configuracoes_chk_somente_consulta">Somente consulta</label>
+                                                <div class="small text-muted">Quando ativo, os usuários não conseguirão incluir nem editar clientes. Normalmente esta opção é habilitada quando o cliente é incluso automaticamente dentro do Next BP através de alguma integração externa.</small>
+                                            </td>
+                                            <td class="text-right">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_somente_consulta form-control" id="modal_cliente_configuracoes_chk_somente_consulta">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <!--
+                            <div class="tab-pane frm_detalhes" id="modal_atalhos">
+                                <div class="row">
+                                    <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+                                        <table class="table table-striped table-hover table-responsive tbl_atalhos">
+                                            <thead>
+                                                <tr>
+                                                    <th class="hidden-xs">&nbsp;</th>
+                                                    <th class="hidden-xs text-right">
+                                                        <button class="pull-right btn btn-default btn_novo_atalho">
+                                                            <span class="glyphicon glyphicon-plus"></span>
+                                                        </button>
+                                                    </th>
+                                                    <th width="100%" class="text-right visible-xs">
+                                                        <button style="width:100%;" class="pull-right btn_novo_atalho btn btn-default">
+                                                            <span class="glyphicon glyphicon-plus"></span>
+                                                            Incluir
+                                                        </button>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr template-row style="display: none; cursor: pointer;">
+                                                    
+                                                    // MOBILE
+                                                    <td class="text-right visible-xs">
+                                                        <div class="btn-group pull-right">
+                                                            <button type="button" class="btn btn-default" template-button="btn_atalho">
+                                                            {nome}
+                                                            </button>
+                                                            <div class="btn-group">
+                                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                                                    <span class="caret"></span>
+                                                                </button>
+                                                                <ul class="dropdown-menu pull-right">
+                                                                    <li><a class="btn_detalhes" href="javascript:;">
+                                                                        Editar
+                                                                    </a></li>
+                                                                    <li><a class="btn_visualizar" href="javascript:;">
+                                                                        Visualizar
+                                                                    </a></li>
+                                                                    <li><a class="btn_excluir" href="javascript:;">
+                                                                        Excluir
+                                                                    </a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    // FIM MOBILE
+
+                                                    <td class="hidden-xs">
+                                                        <button type="button" class="btn btn-default" style="width:100%;" template-button="btn_atalho">
+                                                            {nome}
+                                                        </button>
+                                                    </td>
+                                                    <td class="text-right hidden-xs">
+                                                        <div class="btn-group pull-right">
+                                                            <button type="button" class="btn_detalhes btn btn-default">
+                                                                <span class="glyphicon glyphicon-pencil"></span> Editar
+                                                            </button>
+                                                            <div class="btn-group">
+                                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                                                    <span class="caret"></span>
+                                                                </button>
+                                                                <ul class="dropdown-menu pull-right">
+                                                                    <li><a class="btn_visualizar" href="javascript:;">
+                                                                        Visualizar
+                                                                    </a></li>
+                                                                    <li><a class="btn_excluir" href="javascript:;">
+                                                                        Excluir
+                                                                    </a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="tab-pane frm_personalizados" id="modal_personalizados">
+                                <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 div_cbo_vincular_form">
+                                    <label>Vincular Formulário</label>   
+                                    <div class="form-group">
+                                        <select id="cbo_vincular_form" class="form-control selectpicker cbo_vincular_form show-tick" data-live-search="true" title="Vincular Formulário">
+                                        </select>
+                                    </div>
+                                </div>   
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>                
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,60 @@
+<div class="modal bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal_produto_selecionar_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_produto_selecionar_label">Selecionar Organização</h4> 
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <label for="modal_prospect_edt_nome_fantasia">Nome Fantasia</label>
+                            <input type="text" class="edt_nome_fantasia form-control" id="modal_prospect_edt_nome_fantasia" maxlength="45" placeholder="Filtro por Nome Fantasia">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <label for="modal_prospect_edt_razao_social">Razão Social</label>
+                            <input type="text" class="edt_razao_social form-control" id="modal_prospect_edt_razao_social" maxlength="80" placeholder="Filtro por Razão Social">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="table-responsive">
+                    <table class="tab_listagem table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Nome Fantasia</th>                            
+                                <th>Razão Social</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- itens -->
+                            <tr template-row style="display: none;">
+                                <td template-field="nome_fantasia">{nome_fantasia}</td>                            
+                                <td template-field="razao_social">{razao_social}</td>
+                                <td template-buttons="actions">
+                                    <div class="btn-group pull-right">
+                                        <button type="button" class="btn_selecionar btn btn-primary">
+                                            <span class="glyphicon glyphicon-ok"></span> Selecionar
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="pull-left btn btn-primary btn_novo_prospect">Nova Organização</button>
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>

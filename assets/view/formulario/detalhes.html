@@ -1,0 +1,269 @@
+<style>
+    .tab_modelagem .form-editor input, .tab_modelagem .form-editor button {
+        border-width: 0px;
+        box-shadow: none;
+    }
+</style>
+<div class="row">
+    <div class="pull-left" style="padding-left: 15px">
+        <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+        <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
+    </div>
+
+    <div class="pull-right" style="padding-right: 15px">
+        <button type="button" class="btn_form_add_grupo btn btn-default" title="Novo grupo">
+            <span class="glyphicon glyphicon-plus"></span> Grupo
+        </button>
+        <button type="button" class="btn_variaveis_template btn btn-default" title="Variáveis de Template">
+            <i class="fas fa-code"></i>
+        </button>
+        <button type="button" class="btn_previsao btn btn-default">
+            <span class="glyphicon glyphicon-eye-open"></span> Previsão
+        </button>
+        <button type="button" class="btn_salvar btn btn-default">
+            <i class="far fa-save"></i> Salvar
+        </button>
+        <button type="button" class="btn_salvar salvar-e-sair btn btn-default">
+            <i class="far fa-save"></i> <div class="fa fa-sign-out-alt icon-on-top"></div> Salvar e Sair
+        </button>
+    </div>
+    
+</div>
+
+<div class="scrollview">
+    
+    <div class="panel panel-default painel_detalhes" style="margin-bottom: 0px;">
+        <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+            <div class="pull-right">
+                    <!-- -->
+            </div>
+            <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                <li class="active">
+                    <a class="lbl_tab_modelagem" href="#" role="tab" data-toggle="tab">Modelagem</a>
+                </li>
+                <li>
+                    <a class="lbl_tab_eventos" href="#" role="tab" data-toggle="tab">Eventos</a>
+                </li>
+                <li >
+                    <a class="lbl_tab_configuracoes" href="#" role="tab" data-toggle="tab">Configurações</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="panel-body">
+
+            <div class="tab-content">
+
+                <div class="tab_modelagem tab-pane frm_detalhes active">
+                    <div class="form-editor">
+                        <div class="panel panel-default">
+                            <div class="form-titulo">
+                                
+                                    <div class="input-group col-md-12">
+                                        <input type="text" class="edt_nome form-control" maxlength="150" style="border: 0; font-weight: bold;" placeholder="Nome do formulário">
+                                    </div>               
+                                
+                            </div>
+                            
+                            <div class="form-grupos panel-body">
+                                
+                            </div>
+
+                            <div class="form-grupo" template-grupo template-ref="" style="display: none;">
+                                <div class="panel panel-default">
+                                    <div class="form-titulo">
+                                        <div class="row">
+                                            <!--div class="col-sm-12 col-md-3">
+                                                <div class="input-group">
+                                                    <input type="text" class="edt_grupo_sequencia form-control text-muted" maxlength="3" placeholder="Sequência">
+                                                </div>
+                                            </div-->
+                                            <input type="hidden"/>
+                                        
+                                            <div class="col-sm-12 col-md-12">
+                                                <div class="input-group">
+                                                    <div class="input-group-btn">
+                                                        <button type="button" class="btn_form_up_grupo btn btn-default" title="Mover grupo para cima">
+                                                            <i class="fa fa-solid fa-caret-up"></i>
+                                                        </button>
+                                                        <button type="button" class="btn_form_down_grupo btn btn-default" title="Mover grupo para baixo">
+                                                            <i class="fa fa-solid fa-caret-down"></i>
+                                                        </button>
+                                                    </div>
+                                                    <input type="text" class="edt_grupo_nome form-control" maxlength="150" style="font-weight: bold;" placeholder="Nome do grupo">
+                                                    <div class="input-group-btn">
+                                                        <button type="button" class="btn_form_rem_grupo btn btn-default" title="Excluir grupo">
+                                                            <span class="fa fa-trash"></span>
+                                                        </button>
+                                                        <button type="button" class="btn_form_add_campo btn btn-default" title="Novo campo">
+                                                            <i class="fa fa-solid fa-plus"></i> Campo
+                                                        </button>
+                                                        <button type="button" class="btn_form_add_tabela btn btn-default" title="Nova tabela">
+                                                            <i class="fa fa-solid fa-plus"></i> Tabela
+                                                        </button>
+                                                        <button type="button" class="btn_colar_campo btn btn-default disabled" title="Colar Campo">
+                                                            <i class="fa fa-regular fa-paste"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                                
+                                                
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-grupos-campos row">
+                                        
+                                        </div>
+                                        <div class="form-grupos-tabelas row">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-grupo-campo" template-campo template-ref="" style="display: none; min-height: 100px">
+                                <div class="div_campo form-group" style="cursor: pointer; margin-bottom: 0px; padding-bottom: 3px; border: #ccc dotted 1px;">
+                                    <div class="context-menu"></div>
+                                    <span class="lbl_nome">Nome</span>
+                                    <div>
+                                        <span class="lbl_tipo label label-default">tipo (tamanho, decimal)</span>
+                                        <span class="lbl_id label label-default"></span>
+                                        <span class="lbl_obrigatorio label label-warning">obrigatorio</span>
+                                        <span class="lbl_possui_evento label label-info" style="display: none;" title="Possui eventos javascript"><i class="fas fa-code"></i></span>
+                                    </div>
+                                    <div class="div_tabela_campos" style="display: none;"></div>
+                                </div>
+                                <div class="text-left" style="padding-bottom: 10px;">
+                                    <div class="btn-group" style="margin-top: 0px; padding-top: 0px;">
+                                        <button type="button" class="btn_form_up_campo btn btn-xs btn-default" title="Mover campo para trás">
+                                            <i class="fa fa-solid fa-caret-left"></i>
+                                        </button>
+                                        <button type="button" class="btn_form_down_campo btn btn-xs btn-default" title="Mover campo para frente">
+                                            <i class="fa fa-solid fa-caret-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="tab_eventos tab-pane frm_detalhes">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="row">
+                                <div class="col-md-12 div_opcoes_evento">
+                                    <div class="list-group">
+                                        <a href="#" class="list_iniciar active list-group-item">
+                                            Ao Iniciar
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Elementos:</label>
+                                        <div class="div_elementos" style="height: calc(100vh - 265px);overflow: auto;">
+
+
+                                        </div>
+
+                                        <span class="text-muted" template-field="elemento" style="display: none"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-12 div_iniciar">
+                                    <div class="form-group" style="margin-bottom: 0px;">
+                                        <textarea class="edt_iniciar form-control" rows="20" style="font-family: Monospace; white-space: pre; word-wrap: normal; overflow-x: scroll;" spellcheck="false"></textarea>
+                                        <span class="text-muted pull-right">Javascript</span>
+                                        <button type="button" class="btn_fullscreen btn btn-default pull-right" style="margin-right: 10px;" title="Tela cheia">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab_configuracoes tab-pane frm_detalhes">
+
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <th colspan="2">
+                                Impressão (PDF)
+                            </th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-left">
+                                    <label>Imprimir logo da empresa</label>
+                                </td>
+                                <td class="text-right">
+                                    <input type="checkbox" class="chk_imprimir_logo checkbox_bootstrap_toggle" checked>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">
+                                    <label>Imprimir dados da empresa</label>
+                                </td>
+                                <td class="text-right">
+                                    <input type="checkbox" class="chk_imprimir_dados_empresa checkbox_bootstrap_toggle" checked>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">
+                                    <label>Imprimir páginas no formato paisagem</label>
+                                </td>
+                                <td class="text-right">
+                                    <select class="form-control cbo_imprimir_layout_pdf">
+                                        <option value="R" selected>Retrato</option>
+                                        <option value="P">Paisagem</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <th colspan="2">
+                                Utilização do formulário
+                            </th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-left">
+                                    <label>Utilizar formulário em processo?</label>
+                                </td>
+                                <td class="text-right">
+                                    <input type="checkbox" class="chk_formulario_processo checkbox_bootstrap_toggle" checked>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">
+                                    <label>Utilizar formulário em cadastro personalizado?</label>
+                                </td>
+                                <td class="text-right">
+                                    <input type="checkbox" class="chk_formulario_cliente checkbox_bootstrap_toggle">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>

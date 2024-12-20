@@ -1,0 +1,44 @@
+<!-- MODAL DETALHE -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_login_sessao_expirada_label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_login_webservice_detalhes_label" translate="login.sua_sessao_expirou">Sua Sessão Expirou</h4>
+            </div>
+            <div class="modal-body">
+
+                
+                <!-- Enter -->
+                <form class="form-signin" role="form" onsubmit="javascript:return false;">
+                    
+                    <div class="div_info_usuario media" style="margin-bottom: 10px;">
+                        <div class="media-left">
+                            <img class="img-circle img_login_usuario" src="assets/img/imagem_usuario_padrao.svg">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="list-group-item-heading lbl_autenticacao_nome"></h4>
+                            <p class="list-group-item-text lbl_autenticacao_detalhes"></p>
+                        </div>
+                    </div>
+
+                    <input type="password" name="password" class="edt_senha form-control" placeholder="Senha" translate-placeholder="login.senha" maxlength="50" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+
+                    <div class="form-group">
+                        <div>
+                            <div style="margin-bottom: 5px;" id="chk_entrar_memorizar_senha"></div>
+                            <div id="chk_entrar_entrar_automaticamente"></div>
+                        </div>
+                    </div>
+
+                    <div id="dxButtonEntrar" style="width: 100%; margin-bottom: 8px;"></div>
+                    <div id="dxButtonEsqueciSenha" style="width: 100%; margin-bottom: 8px;"></div>
+			        <div id="dxButtonTrocarUsuario" style="width: 100%; margin-bottom: 8px;"></div>
+                </form>
+                <!-- /Enter -->
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

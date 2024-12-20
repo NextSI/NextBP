@@ -1,0 +1,85 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Job Scheduler</li>
+</ol>
+
+<!-- LISTAGEM -->
+<div>
+
+    <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+        <button type="button" class="btn_novo btn btn-primary">
+            <span class="glyphicon glyphicon-plus-sign"></span> Novo
+        </button>
+        <button type="button" class="btn_limpar_semaforo btn btn-default">
+            Limpar semáforo
+        </button>
+        <button type="button" class="btn_listar btn btn-default">
+            <span class="glyphicon glyphicon-refresh"></span>
+        </button>
+    </nav>
+
+    <div class="table-responsive">
+
+        <table class="tab_listagem table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Job Script</th>
+                    <th>Ativo</th>
+                    <th>Minuto</th>
+                    <th>Hora</th>
+                    <th>Dia</th>
+                    <th>Mês</th>
+                    <th>Dia Semana</th>
+                    <th>Última Execução</th>
+                    <th>Situação</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- itens -->
+                <tr template-row style="display: none;">
+                    <td template-field="script">{script}</td>
+                    <td template-field="ativo">{ativo}</td>
+                    <td template-field="minuto">{minuto}</td>
+                    <td template-field="hora">{hora}</td>
+                    <td template-field="dia">{dia}</td>
+                    <td template-field="mes">{mes}</td>
+                    <td template-field="dia_semana">{dia_semana}</td>
+                    <td template-field="ultima_execucao">{ultima_execucao}</td>
+                    <td class="text-left">
+                        <span template-field="situacao" class="label label-default">
+                            {situacao}
+                        </span>
+                    </td>
+                    
+                    <td template-buttons="actions">
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn_executar btn btn-primary">
+                                <span class="glyphicon glyphicon-send"></span>
+                            </button>
+                            <button type="button" class="btn_editar btn btn-default">
+                                <span class="glyphicon glyphicon-pencil"></span> Editar
+                            </button>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a class="btn_visualizar" href="#">
+                                        Visualizar
+                                    </a></li>
+                                    <li><a class="btn_excluir" href="#">
+                                        Excluir
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<!-- /LISTAGEM -->

@@ -1,0 +1,6 @@
+<?php
+
+function agenda_contato_listagem_where(&$sql, &$params) {
+    // Alterar condições da listagem de Entidades
+    // $sql e $params são passados por referência
+}

@@ -1,0 +1,10 @@
+<?php
+
+use \Sys\Util;
+use \Sys\DB;
+use \Sys\Basic;
+use \Sys\Validation;
+
+function oportunidade_item_listar_select_colunas($oportunidade_id) {
+    return 'tabela_x.coluna_y, tabela_x.coluna_z';
+}

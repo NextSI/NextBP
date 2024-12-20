@@ -1,0 +1,92 @@
+
+<ol class="breadcrumb visible-xs">
+    <li class="active">Relatório de Horas Gastas</li>
+</ol>
+
+
+<!-- LISTAGEM -->
+<div>
+
+    <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+        <button type="button" class="btn_parametros btn btn-primary">
+            <span class="glyphicon glyphicon-filter"></span> Parâmetros
+        </button>
+    </nav>
+
+    <div class="div_relatorios">
+
+    </div>
+
+    <div class="panel div_template" style="display: none">
+                <div class="div_data hidden" style="padding: 10px;">
+                    <div><b>Data Início:</b> <span class="span_data_inicio"></span> - <b>Data Fim:</b> <span class="span_data_fim"></span></div>
+                </div>
+
+            
+                <table class="tab_cabecalho table small">
+                    <thead class="bg-primary">
+                        <th template-field="projeto_nome" colspan="3" class="bg-primary" title="Nome do Projeto"></th>
+                        <th template-field="cliente_nome" colspan="3" class="bg-primary" title="Nome do Cliente"></th>
+                        <th template-field="projeto_tipo" ></th>
+                        <th template-field="projeto_status" title="Status do projeto"></th>
+                    </thead>
+                    <tbody>
+                        <tr class="text-info">
+                            <td class="text-right" >Total Horas Previstas Projeto:</td>
+                            <td class="text-left" template-field="cabecalho_projeto_horas_previstas" ></td>
+                            <td class="text-right" >Total Horas Trabalhadas Projeto:</td>
+                            <td class="text-left" template-field="cabecalho_projeto_horas_trabalhadas" ></td>
+                            <td class="text-right" >Saldo Total Projeto:</td>
+                            <td class="text-left" template-field="cabecalho_projeto_saldo" ></td>
+                            <td class="text-right" >% Saldo Projeto:</td>
+                            <td class="text-left" template-field="cabecalho_projeto_saldo_percentual" ></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+                <br>
+            
+                <table class="tab_body table table-striped table-hover small">
+                    <thead>
+                        <!--<th>Sequência</th>-->
+                        <th>Código</th>
+                        <th>Atividade</th>
+                        <th>Assunto</th>
+                        <th class="text-right" width="100px" >Total Horas Previstas Atividade</th>
+                        <th class="text-right th_total_horas_realizadas_no_periodo" width="100px"></th>
+                        <th class="text-right div_data hidden" width="100px" >Total Horas Realizadas Antes do Período</th>
+                        <th class="text-right" width="100px" >Saldo Horas Atividade</th>
+                        <th class="text-right" width="100px" >% Saldo Atividade</th>
+                    </thead>
+                    <tbody>
+                        <tr template-row style="display: none">
+                            <!--<td template-field="sequencia"></td>-->
+                            <td template-field="codigo"></td>
+                            <td template-field="atividade"></td>
+                            <td template-field="assunto"></td>
+                            <td class="text-right" template-field="horas_previstas"></td>
+                            <td class="text-right" template-field="horas_trabalhadas_periodo"></td>
+                            <td class="text-right div_data hidden" template-field="horas_trabalhadas_antes_periodo"></td>
+                            <td class="text-right" template-field="saldo"></td>
+                            <td class="text-right" template-field="saldo_percentual"></td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="bg-warning">
+                        <!--<td>&nbsp;</td>-->
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class="text-right">Totais</td>
+                        <td class="text-right" template-field="rodape_projeto_horas_previstas_totais" ></td>
+                        <td class="text-right" template-field="rodape_projeto_horas_trabalhadas_periodo_totais" ></td>
+                        <td class="text-right div_data hidden" template-field="rodape_projeto_horas_trabalhadas_antes_periodo_totais" ></td>
+                        <td class="text-right" template-field="rodape_projeto_saldo_totais" ></td>
+                        <td class="text-right" template-field="rodape_projeto_saldo_percentual_totais" ></td>
+                    </tfoot>
+                </table>
+            
+        
+    </div>
+
+</div>
+
+<!-- /LISTAGEM -->

@@ -1,0 +1,184 @@
+<script type="application/javascript">
+const PROJETO_STATUS = { ANDAMENTO: 1, CONCLUIDO: 2, NAO_INICIADO: 3, CANCELADO: 4 };
+const PROJETO_STATUS_ATIVIDADES = { PROGRAMADO: 1, ANDAMENTO: 2, CONCLUIDO: 3, NAO_INICIADO: 4, ATRASADO: 5, CANCELADA: 6 };
+window.onload = function () { renderizarGantt({dadosGantt}) };
+function renderizarGantt(a) { 
+    a = JSON.parse(a);
+    DevExpress.localization.locale("pt-BR");
+    $("#gantt").dxGantt({
+        tasks: { dataSource: a.tasks },
+        dependencies: { dataSource: a.dependencies },
+        resources: { dataSource: a.resources },
+        resourceAssignments: { dataSource: a.resourceAssignments },
+        taskListWidth: 900,
+        scaleType: "days",
+        rootValue: -1, 
+        height: "calc(100vh - 25px)", 
+        filterRow: { visible: true }, 
+        headerFilter: { visible: true }, 
+        columns: {columns},
+        toolbar: {
+            items: [
+                "collapseAll", "expandAll", "separator", "zoomIn", "zoomOut", "separator",
+                {
+                    widget: "dxButton",
+                    options: {
+                        text: "Legendas",
+                        hint: "Legendas",
+                        icon: "bulletlist",
+                        stylingMode: "text",
+                        onClick: function () {
+                            const a = $("#popUpLegendas").dxPopup({
+                                contentTemplate: t,
+                                width: 500,
+                                height: 250,
+                                container: "#container",
+                                showTitle: true,
+                                title: "Legendas",
+                                visible: false,
+                                dragEnabled: false,
+                                hideOnOutsideClick: false,
+                                showCloseButton: true
+                            }).dxPopup("instance");
+                            a.show();
+                            function t() {
+                                let a = $("<div>");
+                                let t = $("<ul>").appendTo(a);
+                                let e = ['#4796CE', /*'#FFB67C',*/ '#35B86B', '#8B8B8B', '#DE6175', '#F78119'/*, '#D3D3D3'*/];
+                                let s = [' Em andamento', /*' Não iniciado',*/ ' Concluído', ' Cancelado', ' Atrasado', ' Não Iniciado'/*, ' Programado'*/];  
+                                
+                                for (let a = 0; a < e.length; a++) {
+                                    let o = $("<li>").appendTo(t);
+                                    $("<span>").css({
+                                        backgroundColor: e[a],
+                                        display: "inline-block",
+                                        'border-radius': '5px',
+                                        width: 50,
+                                        height: 12
+                                    }).appendTo(o);
+                                    $("<span>").text(s[a]).css({ fontSize: 17 }).appendTo(o)
+                                }
+                                return $(a)
+                            }
+                        }
+                    }
+                },
+                {
+                    widget: "dxButton",
+                    options: {
+                        hint: "Recarregar",
+                        icon: "refresh",
+                        stylingMode: "text",
+                        onClick: function () { listarDadosGantt() }
+                    }
+                }
+            ]
+        },
+        taskContentTemplate: function (a, t, x) {
+            let e = "#3498DB";
+            let s = "#2980B9";
+            if (a.taskData.id === "raiz") {
+                switch (a.taskData.status) {
+                    case PROJETO_STATUS.CONCLUIDO:
+                        e = "#35B86B";
+                        break;
+                    case PROJETO_STATUS.NAO_INICIADO:
+                        e = "#F78119";
+                        break;
+                    case PROJETO_STATUS.CANCELADO:
+                        e = '#8B8B8B';
+                        break;
+                    default:
+                        e = "#4796CE";
+                        break;
+                }
+            }
+            else {
+                switch (a.taskData.status) {
+                    case PROJETO_STATUS_ATIVIDADES.PROGRAMADO:
+                        //e = "#D3D3D3";
+                        //s = "#696969";
+                        //break;
+                    case PROJETO_STATUS_ATIVIDADES.NAO_INICIADO:
+                        e = "#F78119";
+                        break;
+                    case PROJETO_STATUS_ATIVIDADES.CONCLUIDO:
+                        e = "#35B86B";
+                        break;
+                    case PROJETO_STATUS_ATIVIDADES.ATRASADO:
+                        e = "#DE6175";
+                        break;
+                    case PROJETO_STATUS_ATIVIDADES.CANCELADA:
+                        e = '#8B8B8B';
+                       // s = '#777777';
+                        break;
+                    default:
+                        e = "#4796CE";
+                        break;
+                }
+            }
+            let recursos = ''
+			
+			if (a.taskResources.length > 0) {
+				recursos = a.taskResources.map(resource => resource.text).filter(Boolean).join(', ');
+			}
+            
+            const customTaks = $("<div>").addClass("div-custom-task").css({width: a.taskSize.width, backgroundColor: e });
+			const taskWrapper = $("<div>")
+					.addClass("taskWrapper")
+					.css({ 
+							color: '#fff', 
+							padding: '1px', 
+							position: 'relative',  
+							overflow: 'hidden' ,
+							'white-space': 'nowrap',
+					});
+
+			$(taskWrapper).appendTo(customTaks)
+			
+			const taskTitle = $("<div>")
+				.addClass("taskTitle")
+				.css({
+					'font-weight': '600',
+					'font-size': '12px',
+					'padding-left': '2px',
+					padding: '3px',
+					 'line-height': '1'
+				})
+				.text(a.taskData.title);
+
+			$(taskTitle).appendTo(taskWrapper);
+
+			const taskRow = $("<div>")
+				.addClass("taskRow")
+				.css({
+					padding: '0px',
+					'font-size': '10px',
+					'padding-left': '2px'
+				})
+				.text(recursos ? recursos : '');
+
+			$(taskRow).appendTo(taskWrapper);
+
+            const progress = $("<div>")
+				  .addClass("progress")
+				  .addClass("div-progress")
+				  .css({
+					width: `${a.taskData.progress}%`,
+					left: '0',
+					bottom: '0px',                   
+					height: '0px',
+					padding: '1.5px',
+					'margin-bottom': '0px',
+					'border-radius': '1px',
+					background: 'rgba(0, 0, 0, 0.3)',
+					position: 'absolute'
+				  });
+			$(progress).appendTo(taskWrapper)
+
+            $(customTaks).appendTo(t)
+
+        }
+    })
+}
+</script>

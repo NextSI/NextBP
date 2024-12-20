@@ -1,0 +1,62 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Classificação de Projeto</li>
+</ol>
+
+<!-- LISTAGEM -->
+<div>
+
+    <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+        <button type="button" class="btn_novo btn btn-primary" translate="classificacao_projeto.novo">
+            <span class="glyphicon glyphicon-plus-sign"></span> Novo
+        </button>                     
+        <button type="button" class="btn_listar btn btn-default">
+            <span class="glyphicon glyphicon-refresh"></span> 
+        </button>
+
+        <div class="navbar-right" style="margin-right: 10px">
+            <label translate="classificacao_projeto.utilizar_classificacao">Utilizar classificações de Projeto</label>
+            <input type="checkbox" class="chk_classificacao_projeto checkbox_bootstrap_toggle">
+        </div>
+    </nav>
+
+    <div class="table-responsive">
+
+        <table class="tab_listagem table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th translate="classificacao_projeto.nome">Nome</th>
+                    <th>&nbsp;</th>                                        
+                </tr>
+            </thead>
+            <tbody>
+                <tr template-row style="display: none;">
+                    <td template-field="nome">{nome}</td>                    
+                    <td template-buttons="actions">
+                        <div class="btn-group pull-right">                            
+                            <button type="button" class="btn_editar btn btn-default" translate="classificacao_projeto.editar">
+                                <span class="glyphicon glyphicon-pencil"></span> Editar
+                            </button>                        
+                            <div class="btn-group">                                
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a class="btn_visualizar" href="#"  translate="classificacao_projeto.visualizar">
+                                        Visualizar
+                                    </a></li>
+                                    <li><a class="btn_excluir" href="#" translate="classificacao_projeto.excluir">
+                                        Excluir
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>                                                          
+                </tr>
+            </tbody>
+        </table> 
+
+    </div>
+
+</div>
+
+<!-- /LISTAGEM -->

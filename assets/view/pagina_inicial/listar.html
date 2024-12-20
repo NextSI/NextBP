@@ -1,0 +1,386 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active titulo_aba"></li>
+</ol>
+
+<div class="row">
+
+    <div class="col-xs-12 col-md-5 col-md-5 col-lg-5">
+        <div class="row">
+            <div class="col-xs-12 col-md-12 col-md-12 col-lg-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a href="javascript:;" class="link_perfil">
+                                <span class="nome_usuario_titulo"></span>
+                            </a>
+                        </h3>    
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">   
+                            <div class="col-xs-2 col-md-2 col-md-2 col-lg-2">
+                                <div class="form-group">
+                                    <span class="preview_logo"><img class="carrega_img"/></span>
+                                    <button class="btn btn-link btn_editar_usuario hidden">
+                                        <span class="fa fa-edit" style="font-size: 16px;"></span>
+                                        <span class="small text-primary" style="padding-top:1px;">Editar</span>
+                                    </button>
+                                    <button class="btn btn-link btn_seguir hidden">
+                                        <span class="fa fa-user-plus" style="font-size: 16px;"></span>
+                                        <span class="small text-primary">Seguir</span>
+                                    </button>
+                                    <button class="btn btn-link btn_deixar_seguir hidden" style="padding-left: 0px;">
+                                        <span class="fa fa-user-times" style="font-size: 16px;"></span>
+                                        <span class="small text-primary">Deixar de Seguir</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 pull-left">
+                                <div class="form-group" style="padding-left: 17px;">
+                                    <div class="nomes_fantasia">
+                                        <div class="div_nome_fantasia hidden">
+                                            <span class=" text-primary nome_entidade"></span><br>
+                                        </div>
+                                    </div>
+                                    <br>
+                                     <label><span class=" text-primary">Área:</span></label> 
+                                    <span class=" area_usuario text-primary"></span><br>
+                                    <label><span class=" text-primary"> E-mail:</span></label>
+                                    <span class=" text-primary email_usuario"></span><br>
+                                    <label class="hidden lbl_telefone1"><span class=" text-primary"> Telefone:</span></label>
+                                    <span class=" text-primary telefone1_usuario hidden"></span><br>
+                                    <label class="hidden lbl_telefone2"><span class=" text-primary"> Telefone:</span></label>
+                                    <span class=" text-primary telefone2_usuario hidden"></span><br>
+                                    <label class="hidden lbl_telefone3"><span class=" text-primary"> Telefone:</span></label>
+                                    <span class=" text-primary telefone3_usuario hidden"></span><br>
+                                    <label class="hidden lbl_telefone4"><span class=" text-primary"> Telefone:</span></label>
+                                    <span class=" text-primary telefone4_usuario hidden"></span>
+                                </div> 
+                            </div>   
+                        </div>    
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">  
+                <div class="form-group">                                   
+                    <select class="select-multi-column cbo_pesquisa_perfil" placeholder="Digite nome para pesquisar"></select>                                            
+                </div> 
+            </div>
+            <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <span class="glyphicon glyphicon-link" ></span>
+                            <span>Seguindo</span>
+                            <span class="lbl_count_seguindo hidden"></span>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="hidden" template-seguindo>
+                            <div class="row">
+                                <div class="col-xs-2 col-md-2 col-lg-2">
+                                    <img class="carrega_img_mensagem_seguindo img-circle"/>
+                                </div>
+                                <div class="col-xs-7 col-md-7 col-lg-7" style="padding: 1px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">
+                                    <button class="btn btn-link btn_perfil_usuario_seguindo">
+                                        <span class="text-primary lbl_seguindo_nome small">{autor}</span>
+                                    </button>
+                                </div>
+                                <div class="col-xs-3 col-md-3 col-lg-3">
+                                    <button class="btn btn-link btn_seguir_div_seguindo hidden">
+                                        <span class="fa fa-user-plus text-primary" style="font-size: 16px;"></span>
+                                    </button>
+                                    <button class="btn btn-link btn_deixar_seguir_div_seguindo hidden">
+                                        <span class="fa fa-user-times text-primary" style="font-size: 16px;"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="div_seguindo"></div>
+                    <button class="btn btn-link btn_todos_seguindo hidden">
+                        <span class="small">Mostrar todos</span>
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <span class="glyphicon glyphicon-link" ></span>
+                            <span>Seguidores</span>
+                            <span class="lbl_count_seguidores hidden"></span>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="hidden" template-seguidores>
+                            <div class="row">
+                                <div class="col-xs-2 col-md-2 col-lg-2">
+                                    <img class="carrega_img_mensagem_seguidores img-circle"/>
+                                </div>
+                                <div class="col-xs-7 col-md-7 col-lg-7" style="padding: 1px; overflow: hidden;">
+                                    <button class="btn btn-link btn_perfil_usuario_seguidores">
+                                        <span class="text-primary lbl_seguidores_nome small">{autor}</span>
+                                    </button>
+                                </div>
+                                <div class="col-xs-3 col-md-3 col-lg-3">
+                                    <button class="btn btn-link btn_seguir_div_seguidores hidden">
+                                        <span class="fa fa-user-plus text-primary" style="font-size: 16px;"></span>
+                                    </button>
+                                    <button class="btn btn-link btn_deixar_seguir_div_seguidores hidden">
+                                        <span class="fa fa-user-times text-primary" style="font-size: 16px;"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="div_seguidores"></div>
+                    <button class="btn btn-link btn_todos_seguidores hidden">
+                        <span class="small">Mostrar todos</span>
+                    </button>
+                    </div>
+                </div>
+            </div>     
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6 pull-left">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <span class="fa fa-users" ></span>
+                            <span>Meus Grupos</span>
+                            <span class="lbl_count_grupo hidden"></span>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="hidden" style="padding: 1px;" template-grupo>
+                            <div class="row">
+                                <div class="col-xs-2 col-md-2 col-lg-2 col-sm-2">
+                                    <img class="carrega_img_grupo img-circle"/>
+                                </div>
+                                <div class="col-xs-8 col-md-8 col-lg-8 col-sm-8" style="overflow: hidden;">
+                                    <button class="btn btn-link btn_grupo pull-left" style="padding-top:2px;">
+                                        <span class="text-primary lbl_grupo_nome small" >{autor}</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="div_grupo"></div>
+                        <button class="btn btn-link btn_todos_grupos hidden">
+                            <span class="small">Mostrar todos</span>
+                        </button>
+                    </div>
+                </div>
+           </div>  
+        </div>        
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+        <div class="panel panel-primary">
+            <div class="pull-right" style="padding: 4px;">
+                <button class="btn btn-sm btn-default btn_refresh">
+                    <span class="glyphicon glyphicon-refresh"></span>
+                </button>
+            </div>
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <span class="fa fa-comment-dots" style="font-size: 20px;"></span>
+                    <span translate="home.rede_social">Social</span>
+                    
+                </h3>    
+            </div>
+            <div class="panel-body">
+                <div class="row" style="padding-bottom: 5px;">
+                    <div class="div_publicacao hidden col-xs-12 col-md-12 col-lg-12">
+                        <textarea class="form-control edt_mensagem" rows="1" placeholder="Escreva sua mensagem..."></textarea>  
+                    </div>
+                    <div class="div_mostrar_anexo col-xs-12 col-md-12 col-lg-12 hidden">
+                        <!-- ANEXOS -->
+                        <div class="panel panel-info panel_anexos" style="margin-top: 10px">
+                            <div id="anexos" class="panel-body div_anexos_publicacao">            
+                            </div>
+                            <div class="panel-footer">
+                                <button type="button" class="btn btn-default btn-sm btn_anexo_perfil">
+                                    <span class="glyphicon glyphicon-paperclip"></span> Incluir mais um anexo
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- ANEXO BASE -->
+                        <div id="anexo_base" class="row div_anexos_row hidden">
+                            <div class="col-xs-12 col-md-12 col-lg-12">
+                                <label class="anexo_base_label" for="anexo_base_button_icon2" style="display: table !important; float:none !important;"></label>
+                                <input class="anexo_base_input mobile_inputfile" type="file" style="top: 28px;">
+                                <span class="capture_photo glyphicon glyphicon-camera hidden"></span>
+                                <span class="btn_input">
+                                    <span class="hidden">text</span>
+                                    <span class="anexo_base_button_icon2 glyphicon glyphicon-open text-primary"></span>
+                                    <span class="anexo_base_input_text">Nenhum Arquivo Selecionado</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12 col-lg-12" style="padding-top: 5px;padding-bottom: 10px;border-bottom: 1px solid #d6d6d6;">
+                        <div class="text-center div_btn_publicacao hidden">
+                            <button class="btn btn-default btn_cancelar_publicacao">Cancelar</button>
+                            <button class="btn btn-primary btn_publicacao">Publicar</button>
+                            
+                            <br>
+                            <br>
+
+                            <label for="permite_comentario">Permite comentários nesta mensagem</label>
+                            <input type="checkbox" class="checkbox_bootstrap_toggle chk_permite_comentario form-control" id="permite_comentario">
+                        </div>
+                    </div>
+                
+                <!--Template publicação mural-->
+                <li class="media" style="padding: 4px; display: none; margin: 0px;" template-mensagem>
+                    <div class="dropdown pull-right">
+                        <button class="btn btn-xs btn-link btn_menu_editar_mensagem hidden" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu text-primary">
+                            <li><a class="btn_menu_editar" href="javascript:;"><span class=" text-primary">Editar</span></a></li>
+                            <li><a class="btn_menu_excluir text-primary" href="javascript:;"><span class=" text-primary">Excluir</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="media-body">
+                        <span class="img_mensagem_publica fa fa-globe pull-right text-muted" style="display: none;" title="Mensagem pública"></span>
+                        <span class="label label-default pull-right lbl_data_publicacao">{data_publicacao}</span>
+                        <img class="carrega_img_mensagem img-circle" style="width: 32px"/>
+                        <button class="btn btn-link btn_perfil_usuario" style="padding: 4px;">
+                            <span class="text-primary lbl_autor small">{autor}</span>
+                        </button>
+                        <button class="btn btn-link btn_grupo_pagina_inicial">
+                            <span class="label field_lb_grupo" style="white-space: inherit;"></span>
+                        </button>
+                        <p class="lbl_mensagem" style="padding-top: 5px;">{mensagem}</p>
+                        <div class="imagens_mensagem"></div>
+                    </div>
+    
+                    <div class="row hidden div_anexos">
+                        <div class="anexos col-xs-12 col-sm-12 col-md-12">
+                        </div>
+                    </div>
+    
+                    <div class="text-left" style="padding: 4px; margin-left: 0px;">
+                        <button class="btn btn-link mural_curtir" style="padding: 0px; margin-left: 0px;">
+                            <span class="fa fa-thumbs-up" aria-hidden="true" style="font-size: 15px;"></span>
+                            Curtir
+                        </button>
+                        <button class="hidden btn btn-link mural_descurtir" style="padding: 0px; margin-left: 0px;">
+                            <span class="fa fa-thumbs-up text-primary" aria-hidden="true" style="font-size: 16px;"></span>
+                            <span>Descurtir</span>
+                        </button>
+                        <span class="hidden div_mensagem_curtir" style="padding: 0px; margin-left: 0px;">
+                            <a href="javascript:;" class="lbl_mensagem_curtir btn btn-xs" style="padding: 0px; margin-left: 0px;"></a>
+                        </span>
+                        <button class="btn btn-link mural_comentar" style="padding: 0px; margin-left: 0px;">
+                            &nbsp;<span class="fa fa-comment" aria-hidden="true" style="font-size: 16px;"></span>
+                            Comentar
+                        </button>
+                    </div>
+    
+                    <div class="hidden div_enviar_comentario text-left" style="padding-left: 15px;">
+                        <div class="col-xs-12">
+                            <div class="form-inline">
+                                <div class="pull-left">
+                                    <img class="img_enviar_comentario img-circle" style="width: 32px;" src="assets/img/imagem_usuario_padrao.svg" />
+                                </div>
+                                <div class="div_enviar_comentario_mensagem" style="background-color: white; margin-left: 40px; margin-top: 8px; margin-bottom: 8px; padding-top: 4px; padding-left: 4px; padding-right: 4px; padding-bottom: 4px; border-radius: 9px;">
+                                    <input type="text" class="form-control edt_enviar_comentario" maxlength="500" placeholder="Digite seu comentário..." style="width: 100%; border: none; -webkit-box-shadow: none; box-shadow: none; color: #333 !important; background: transparent;"></input>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="hidden div_comentario text-left" style="padding-left: 15px;" template-comentario>
+                        
+                        <div class="div_listar_comentario_imagem col-xs-12">
+                            
+                            <div class="form-inline">
+                                <div class="pull-left">
+                                    <img class="carrega_img_comentario img-circle" style="width: 32px"/>
+                                </div>
+                                <div>
+    
+                                    <button type="button" class="btn btn-xs btn_excluir close hidden pull-right" aria-hidden="true" style="padding-left: 5px; padding-right: 5px; padding-bottom: 5px">
+                                        &times;
+                                    </button>
+    
+                                    <div class="div_comentario_mensagem" style="background-color: white; margin-left: 40px; margin-top: 8px; margin-bottom: 8px; padding-top: 4px; padding-left: 4px; padding-right: 4px; padding-bottom: 4px; border-radius: 9px;">
+    
+                                        <div style="margin-left: 6px; margin-right: 6px;">
+                                            <span class="btn_perfil_usuario_comentario">
+                                                <span class="text-primary lbl_comentario_autor small" style="margin-right: 6px;"><small>{autor}</small></span>
+                                            </span>
+                    
+                                            <span class="div_listar_comentario_comentario" style="padding-top: 5px;">
+                                                <span class="lbl_comentario_comentarios small"><small>{comentario}</small></span>
+                                            </span>
+    
+                                        </div>
+    
+                                        <div class="btn-group div_curtir_comentar_comentario" style="padding-right: 10px; padding-top: 6px;">
+                                            <button class="btn btn-xs btn-link btn_mural_curtir_comentario">
+                                                <span class="fa fa-thumbs-up" aria-hidden="true" style="font-size: 15px;"></span>
+                                            </button>
+                                            <button class="hidden btn btn-xs btn-link btn_mural_descurtir_comentario">
+                                                <span class="fa fa-thumbs-up text-primary" aria-hidden="true" style="font-size: 16px;"></span>
+                                            </button>
+                                            <a href="javascript:;" class="btn btn-xs link_curtida_comentario"><span class="lbl_count_curtida_comentario small">{count}</span></a>
+                                            <button class="btn btn-xs btn-link mural_comentar_comentario">
+                                                <span class="fa fa-comment" aria-hidden="true" style="font-size: 16px;"></span>
+                                            </button>
+                                        </div>
+                    
+                                        <div class="btn-group div_mostrar_respostas col-xs-12 col-sm-12 col-md-12 hidden">
+                                            <button class="btn btn-link btn_mostrar_respostas">
+                                            </button>
+                                        </div>
+            
+                                    </div>
+    
+                                    
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+    
+                        
+                        <div class="hidden div_enviar_comentario_resposta col-xs-12 col-sm-12 col-md-12" style="padding-left: 45px;">
+                            <div class="col-xs-12" style="padding-right: 0px; padding-left: 10px; ">
+                                <div class="form-inline">
+                                    <div class="pull-left">
+                                        <img class="img_enviar_comentario_resposta img-circle" style="width: 32px;" src="assets/img/imagem_usuario_padrao.svg" />
+                                    </div>
+                                    <div class="div_enviar_comentario_resposta_mensagem" style="background-color: white; margin-left: 40px; margin-top: 8px; margin-bottom: 8px; padding-top: 4px; padding-left: 4px; padding-right: 4px; padding-bottom: 4px; border-radius: 9px;">
+                                        <input type="text" class="form-control edt_enviar_comentario_resposta" maxlength="500" placeholder="Digite seu comentário..." style="width: 100%; border: none; -webkit-box-shadow: none; box-shadow: none; color: #333 !important; background: transparent;"></input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="comentario_resposta"></div>
+                    </div>
+                    <div class='comentario'></div>
+                    <div class="div_mostar_mais_comentarios hidden">
+                        <button class="btn btn-link btn_mostrar_mais_comentarios" style="padding: 4px; margin-left: 0px;">
+                            Mostrar mais comentários
+                        </button>
+                    </div>
+                </li>
+                <ul class="media-list list_mural">
+                </ul>
+                <div class="div_mostar_mais_mensagem">
+                    <button class="btn btn-link btn_mostrar_mais_mensagem">
+                        Mostrar mais Mensagem
+                    </button>
+                </div>
+                <!--Imagem load carregamento-->
+                <div class="text-center div_load">
+                    <img class="img_ajax_loader" src="assets/img/ajax-loader.gif">
+                </div>              
+            </div>
+        </div>
+    </div>    
+</div>

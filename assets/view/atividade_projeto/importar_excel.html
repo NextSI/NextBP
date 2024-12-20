@@ -1,0 +1,381 @@
+<!-- envio de planilha_atividade -->
+<div class="modal formulario_modal-lg modal_importar_atividade" id="modal_importar_atividade" tabindex="-1" role="dialog" aria-labelledby="label_importar_atividade" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close btn_cancelar" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="label_importar_atividade">Importar do excel</h4>
+            </div>
+            <div class="modal-body">
+
+               <!-- Primeira etapa -->
+               <div class="primeira_etapa">
+                    <label for="importar_planilha">Etapa 1 - Escolher Arquivo</label>
+                    <p>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="importar_planilha">Arquivo</label>
+                            <input type="file" class="importar_planilha" name="importar_planilha" id="importar_planilha">
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="edt_linha_inicial">Iniciar importação na linha</label>
+                            <input type="number" class="form-control edt_linha_inicial" maxlength="500" id="edt_linha_inicial">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primeira etapa -->
+                <div class="escolher_aba_planilha" style="display: none;">
+                    <label for="importar_planilha">Etapa 2 - Escolher a aba da Planilha</label>
+                    <p>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label>Escolha a aba da planilha</label>
+                            <select id="cbo_worksheet" class="form-control selectpicker cbo_worksheet show-tick"  data-size="5" title="Escolha a aba da planilha" data-live-search="true">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Segunda etapa -->
+                <div class="seleciona_colunas" style="display: none;">
+                    <label for="importar_planilha">Etapa 3 - Selecionar Colunas</label>
+                    <p>
+                    <div class="table-responsive">
+                        <table class="table tbl_seleciona_colunas" id="tbl_seleciona_colunas">
+                            <thead>
+                                <tr>
+                                    <th>Coluna</th>
+                                    <th>Coluna Correspondente Planilha</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               <tr>
+                                    <td>
+                                        <span>Código</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control select2 add_coluna_planilha cbo_codigo">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                   <td><span>Sintética Pai</span></td>
+                                   <td><select name="" id="" class="form-control select2 add_coluna_planilha cbo_sintetica_pai"></select></td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       <span>Tipo Atividade</span>
+                                   </td>
+                                   <td>
+                                       <select name="" id="" class="form-control select2 add_coluna_planilha cbo_tipo_atividade"></select>
+                                   </td>
+                               </tr>
+                                <tr>
+                                    <td>
+                                        <span>Nome da Atividade</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control select2 add_coluna_planilha cbo_nome_atividade">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>Descrição da Atividade</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control select2 add_coluna_planilha cbo_atividade">
+                                        </select>
+                                    </td>
+                               </tr>
+
+                               <tr>
+                                    <td>
+                                        <span>Assunto</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control select2 add_coluna_planilha cbo_assunto">
+                                        </select>
+                                    </td>
+                               </tr>
+
+                               <tr>
+                                    <td>
+                                        <span>% Concluído</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control select2 add_coluna_planilha cbo_concluido">
+                                        </select>
+                                    </td>
+                               </tr>
+
+                               <tr>
+                                    <td>
+                                        <span>Horas Previstas</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control select2 add_coluna_planilha cbo_horas_previstas">
+                                        </select>
+                                    </td>
+                               </tr>
+
+                               <tr>
+                                    <td>
+                                        <span>Valor Hora</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control select2 add_coluna_planilha cbo_valor_hora">
+                                        </select>
+                                    </td>
+                               </tr>
+
+                                <tr>
+                                    <td>
+                                        <span>Executor</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control select2 add_coluna_planilha cbo_consultor">
+                                        </select>
+                                    </td>
+                               </tr>
+
+                                <tr>
+                                    <td>
+                                        <span>Responsável</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control select2 add_coluna_planilha cbo_responsavel">
+                                        </select>
+                                    </td>
+                               </tr>
+
+                                <tr>
+                                    <td>
+                                        <span>Solicitação</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control select2 add_coluna_planilha cbo_solicitacao">
+                                        </select>
+                                    </td>
+                               </tr>
+
+                               <tr>
+                                    <td>
+                                        <span>Previsão Inicio</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control select2 add_coluna_planilha cbo_previsao_inicio">
+                                        </select>
+                                    </td>
+                               </tr>
+
+                                <tr>
+                                    <td>
+                                        <span>Início</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control select2 add_coluna_planilha cbo_inicio">
+                                        </select>
+                                    </td>
+                               </tr>
+
+                                <tr>
+                                    <td>
+                                        <span>Prazo Dias</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control select2 add_coluna_planilha cbo_prazo_dias">
+                                        </select>
+                                    </td>
+                               </tr>
+
+                                <tr>
+                                    <td>
+                                        <span>Data Prazo</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control select2 add_coluna_planilha cbo_prazo">
+                                        </select>
+                                    </td>
+                               </tr>
+
+                                <tr>
+                                    <td>
+                                        <span>Conclusão</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control select2 add_coluna_planilha cbo_conclusao">
+                                        </select>
+                                    </td>
+                               </tr>
+
+                               <tr>
+                                    <td>
+                                        <span>Observação</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control select2 add_coluna_planilha cbo_observacao">
+                                        </select>
+                                    </td>
+                               </tr>
+
+                               <tr>
+                                    <td>
+                                        <span>Marco</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control select2 add_coluna_planilha cbo_marco">
+                                        </select>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>    
+                </div>
+
+                <!-- Terceira etapa -->
+                <div class="segunda_etapa" style="display: none;">
+                    <label for="importar_planilha">Etapa 4 - Assuntos</label>
+                    <p>
+                    <div class="table-responsive">
+                        <table class="table tbl_importar_atividades_assuntos" id="tbl_importar_atividades_assuntos">
+                            <thead>
+                                <tr>
+                                    <th>Descrição</th>
+                                    <th>Assunto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               <tr template-row style="display: none;">
+                                    <div class="row">
+                                    <td template-field="desc_assunto_planilha">{desc_assunto_planilha}</td>
+                                    <td>
+                                        <div class="input-group">
+                                            <select template-field="template_assunto_planilha"  id="cbo_assunto_projeto" class="cbo_assunto_projeto form-control">
+                                            </select>
+                                            <div class="input-group-btn">
+                                                <button type="button" template-button="btn_visualizar_assunto"  class="btn_visualizar_assunto btn btn-default">
+                                                    <span class="glyphicon glyphicon-info-sign"></span>
+                                                </button>
+                                                <button type="button" template-button="btn_novo_assunto"  class="btn_novo_assunto btn btn-default">
+                                                    <span class="glyphicon glyphicon-plus"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    </div>
+                               </tr>
+                            </tbody>
+                        </table>
+                    </div>    
+                </div>
+
+                <div class="terceira_etapa" style="display: none;">
+                    <label for="importar_planilha">Etapa 5 - Usuários</label>
+                    <p>
+                    <div class="alert hidden div_alert" id="div_alert">
+                      <p class="text-muted">Nenhum Executor ou Responsável encontrado</p>
+                    </div>
+                    <div class="table-responsive div_tabela_usuario">
+                        
+                        <table class="table tbl_importar_atividades_usuarios" id="tbl_importar_atividades_usuarios">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Tipo</th>
+                                    <th>Usuário do sistema</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr template-row style="display: none;">
+                                    <td template-field="template_nome_usuario">{template_nome_usuario}</td>
+                                    <td template-field="template_tipo_usuario">{template_tipo_usuario}</td>
+                                    <td >
+                                        <select template-field="template_cbo_usuario_tipo" class="form-control select2">
+                                        </select>
+                                    </td>
+                               </tr>
+                            </tbody>
+                        </table>
+                    </div>    
+                </div>
+
+                <div class="quarta_etapa" style="display: none;">
+                    <label for="importar_planilha">Etapa 6 - Verificar atividades a serem importadas</label>
+                    <br><br>
+                    <span class="text-muted"> <span class="fa fa-info-circle"></span> As colunas com este ícone <span class="fa fa-edit"></span> são editáveis. Clique sobre o conteúdo para começar a edição.</span>
+                    <p>
+                    <!-- <div style="overflow-x: auto;"> -->
+                        <div class="table-responsive">
+                            <table class="table small tbl_importar_atividades_verificar" id="tbl_importar_atividades_verificar">
+                                <thead>
+                                    <tr>
+                                        <th>Código <span class="fa fa-edit small"></span></th>
+                                        <th>Sintético Pai</th>
+                                        <th>Tipo</th>
+                                        <th>Nome Atividade <span class="fa fa-edit small"></span></th>
+                                        <th>Atividade (descrição) <span class="fa fa-edit small"></span></th>
+                                        <th>Assunto</th>
+                                        <th>Concluído <span class="fa fa-edit small"></span></th>
+                                        <th>Horas Previstas <span class="fa fa-edit small"></span></th>
+                                        <th>Executor</th>
+                                        <th>Valor Hora <span class="fa fa-edit small"></span></th>
+                                        <th>Responsável</th>
+                                        <th>Prazo Dias <span class="fa fa-edit small"></span></th>
+                                        <th>Datas</th>
+                                        <th>Observação <span class="fa fa-edit small"></span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr template-row style="display:none">
+                                        <td template-field="codigo_planilha"></td>
+                                        <td template-field="sintetico_pai_planilha"></td>
+                                        <td template-field="tipo_planilha"></td>
+                                        <td template-field="nome_atividade_planilha"></td>
+                                        <td template-field="atividade_planilha"></td>
+                                        <td template-field="assunto_planilha"></td>
+                                        <td template-field="concluido_planilha"></td>
+                                        <td template-field="horas_previstas"></td>
+                                        <td template-field="consultor_planilha"></td>
+                                        <td template-field="valor_hora"></td>
+                                        <td template-field="responsavel_planilha"></td>
+                                        <td template-field="prazo_dias"></td>
+                                        <td template-field="datas"></td>
+                                        <td template-field="observacao_planilha"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>    
+                    <!-- </div> -->
+                </div>
+            </div>
+
+            <div class="modal-footer div_check">
+
+                <div class="row" style="margin-bottom: 0px; padding-bottom: 0px;">
+
+                    <div class="col-xs-12 col-sm-4 col-md-6">
+                        <div class="pull-left div_check_email hidden"><label>Notificar envolvidos por e-mail&nbsp;</label><input type="checkbox" class="chk_enviar_email_atividade" value="" checked></div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
+                        <button type="button" class="btn btn-default btn_cancelar">Cancelar</button>
+                        <button type="button" class="btn btn-default btn_voltar hidden">
+                            <span class="glyphicon glyphicon-backward"></span>
+                            Etapa Anterior
+                        </button>
+                        <button type="button" class="btn btn-primary btn_proxima_etapa">
+                            Próxima Etapa
+                            <span class="glyphicon glyphicon-forward"></span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn_confirmar" style="display: none;">Confirmar Importação</button>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>

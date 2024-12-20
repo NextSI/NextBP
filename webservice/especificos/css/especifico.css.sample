@@ -1,0 +1,15 @@
+/* Aqui você pode adicionar suas clases css customizadas */
+
+.dx-scheduler-timeline > * .dx-scheduler-cell-sizes-vertical {
+    height: 1500px !important;
+}
+
+/* Seletor de formulário */
+.form-editor>[formulario_id="28"] {
+    background-color: red;
+}
+
+/* Seletor de formulário e grupo de formulário */
+.form-editor>[formulario_id="28"] [formulario_grupo_id="133"] {
+    background-color: yellow;
+}

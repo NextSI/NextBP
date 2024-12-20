@@ -1,0 +1,168 @@
+App.PE.Chamado_Listagem_show_antes = function(main) {
+    //$(main).find('.dx-tabs-wrapper')
+}
+
+App.PE.Chamado_Detalhes_listar_mensagens_antes = function(html_id, state, solicitarRefresh) {
+    var dialog = $('#' + html_id);
+}
+
+App.PE.Chamado_Detalhes_listar_mensagens_depois = function(html_id, state, solicitarRefresh) {
+    var dialog = $('#' + html_id);
+}
+
+App.PE.Mural_Mensagem_Detalhes_Ao_Abrir = function(main) {
+}
+
+App.PE.ChamadoMensagemEditavelRender = function(html_id, state) {
+}
+
+App.PE.CardMensagemChamadoTopoBotoesAdicionais = function(html_id, state, solicitarRefresh) {
+    /*
+    var botoesAdicionais = [
+        {
+            titulo: 'Botão 1',
+            click: function() {
+                alert('Botão 1');
+            }
+        },
+        {
+            titulo: 'Botão 2',
+            click: function() {
+                alert('Botão 2');
+            }
+        },
+        {
+            titulo: 'Botão 3',
+            click: function() {
+                alert('Botão 3');
+            }
+        },
+    ];
+
+    return botoesAdicionais;
+    */
+}
+
+App.PE.Oportunidade_render_itens_add_row_antes = function(new_row, main, index) {
+}
+
+App.PE.Oportunidade_adicionar_item = function(main, item, new_row, index){
+}
+
+App.PE.Oportunidade_remover_item = function(item, new_row){
+}
+
+App.PE.Oportunidade_render_itens_add_row_depois = function(new_row, main, index) {
+}
+
+App.PE.Oportunidade_download_orcamento_antes = function(main, empresa_id, oportunidade_orcamento_id, callback_download) {
+    callback_download(empresa_id, oportunidade_orcamento_id);
+}
+
+App.PE.formulario_render_antes = function(parametros) {
+}
+
+App.PE.formulario_render_depois = function(parametros) {
+}
+
+App.PE.formulario_ao_executar_evento = function(obj_solicitacao, obj_campo, div_formulario, tipo, id_elemento, form_start, handler, execute) {
+}
+
+App.PE.formulario_render_btn_add = function(tabela, obj_solicitacao, main) {
+}
+
+App.PE.formulario_render_tabela_depois = function(tabela, obj_solicitacao) {
+}
+
+App.PE.Solicitacao_Detalhes_show_antes = function(main) {
+}
+
+App.PE.Solicitacao_Detalhes_ao_selecionar_cliente = function(main, cliente_selecionado) {
+    // alterar campo do formulário com dados do cliente selecionado
+    // main.form_editor.find('[id_elemento="edt_nome_fantasia"]').val(cliente_selecionado.nome_fantasia).trigger('change');
+    // main.form_editor.find('[id_elemento="edt_endereco"]').val(cliente_selecionado.endereco).trigger('change');
+}
+
+App.PE.Lang_load_depois = function() {
+    // Exemplo de alteração do menu "Chamados" para "Tarefas":
+    // App.lang.home.gestao_chamados = "Tarefas";
+}
+
+App.PE.Solicitacao_Atividade_Salvar_Enviar_Antes = function(main, callback_enviar) {
+    // abrir tela "Enviar"
+    callback_enviar();
+}
+
+App.PE.Solicitacao_Atividade_Salvar_Enviar_Depois = function(main, response) {
+    // alert_saved(main.atividade.descricao + ' salvo com sucesso');
+
+    // Necessário para exibir a janela de confirmação de envio da atividade
+    main.libera_download();
+}
+
+App.PE.Login_depois = function() {
+}
+
+App.PE.Menu_Lateral_destruir_depois = function() {
+}
+
+App.PE.Imprimir_Formulario_Solicitacao = function(main) {
+    // var arr = [];
+                    
+    // arr.push(main.dialog.find('.div_topo').clone());
+    // arr.push(main.dialog.find('.aba_formulario').clone());
+
+    // imprimir_div(true, arr);
+}
+
+App.PE.Listagem_Documentos_Primeiro_Acesso = function() {
+}
+
+App.PE.Listagem_Documentos_Customizado = function(main) {
+}
+
+/**
+ * Esta função precisa retornar um array de objetos com botões, que serão incluídos na listagem de Documentos.
+ * 
+ * Todo botão precisa ter 3 proriedades:
+ * id: numérico e não pode se repetir;
+ * name: texto do botão;
+ * itemClick: ação que será executada ao clicar no botão.
+ * 
+ * Referência: https://js.devexpress.com/jQuery/Demos/WidgetsGallery/Demo/DropDownButton/Overview/MaterialBlueLight/
+ * 
+ * @returns array
+ */
+App.PE.Listagem_Documentos_Botoes_Toolbar = function() {
+    return [
+        {
+            id: 1,
+            name: 'Botão customizado 1',
+            itemClick: (item, options) => {
+                // item: informações sobre o item que foi clicado
+                // options: informações da listagem de documentos
+            }
+        },
+        {
+            id: 2,
+            name: 'Botão customizado 2',
+            itemClick: (item, options) => {
+                // item: informações sobre o item que foi clicado
+                // options: informações da listagem de documentos
+            }
+        }
+    ];
+}
+
+App.PE.Solicitacao_Listagem_onRowPrepared = function(e) {
+    // Verifico se a linha é do tipo dados
+    // if(e.rowType === "data"){
+    //     if(e.data.data_inicio_atividade <= "2023-04-20 09:42:06"){
+    //         // Adiciono a classe danger do bootstrap, poderia colocar uma cor de fundo manualmente tbm.
+    //         e.rowElement.addClass("bg-danger");
+
+    //         // Removo a classe da zebra para cor de fundo funcionar corretamente.
+    //         e.rowElement.removeClass("dx-row-alt");
+    //     }
+    // }
+}

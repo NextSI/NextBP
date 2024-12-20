@@ -1,0 +1,284 @@
+<div class="modal bs-modal-lg" id="formulario_modal" tabindex="-1" role="dialog" aria-labelledby="label_formulario_modal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_projeto_detalhe_label"><span class="lbl_nome_grupo"></span> <span class="small">Grupo</span></h4>
+            </div>
+            <div class="modal-body">
+                <div class="panel panel-default painel_detalhes">
+
+                    <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                        <div class="pull-right">
+                            <!-- -->
+                        </div>
+                        <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                            <li class="active lbl_tab_geral">
+                                <a id="modal_projeto_geral_tab" href="#modal_grupo_rede_social_geral" role="tab" data-toggle="tab">Geral</a>
+                            </li>
+                            <li class="lbl_tab_equipe">
+                                <a id="modal_membros_tab" href="#modal_membros" role="tab" data-toggle="tab">Usuários e Grupo de Usuários</a>
+                            </li>
+                             <li class="lbl_tab_equipe_motivo_chamado">
+                                <a id="modal_membros_tab_motivo_chamado" href="#modal_membros_motivo_chamado" role="tab" data-toggle="tab">Grupos de motivo de chamado</a>
+                            </li>
+                            <li class="lbl_tab_equipe_tipo_usuario">
+                                <a id="modal_membros_tab_tipo_usuario" href="#modal_membros_tipo_usuario" role="tab" data-toggle="tab">Tipos de usuário</a>
+                            </li>                    
+                        </ul>
+                    </div>
+
+                    <div class="panel-body">
+                         <!-- Tab panes -->
+                        <div class="tab-content">
+
+                            <div class="tab-pane active  frm_detalhes" id="modal_grupo_rede_social_geral">
+                                <input type="hidden" class="grupo_id" name="grupo_id">
+                                <div class="row">
+
+                                    <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+                                        <div class="form-group">
+                                            <span class="preview_logo" style="padding-top: 7px; padding-bottom: 0px;" ><img style="min-height: 80px; min-width: 80px; max-height: 80px; max-width: 80px; padding:1px; border:1px solid #021a40;" class="carrega_img_grupo"/></span> 
+                                        </div>
+                                    </div>            
+                                    <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">        
+                                        <div class="form-group">
+                                            <input type="file" class="files hidden" name="files[]" accept="image/*"/>
+                                            <button type="button" class="btn_alterar_logo btn btn-primary">Alterar Logo</button>
+                                            <button type="button" class="btn_remover_logo btn btn-primary">Remover Logo</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group col-sm-12 col-md-12 col-xs-12 col-lg-12">
+                                        <label for="edt_nome">Nome</label>
+                                        <input type="text" class="form-control edt_nome" placeholder="Nome" maxlength="100">
+                                    </div>
+                                    <div class="form-group col-sm-12 col-md-12 col-xs-12 col-lg-12">
+                                        <label for="edt_link_sufixo">Link de acesso</label>
+                                        <div class="form-inline">
+                                            <span class="text-muted lbl_url_publica">
+                                                {url}
+                                            </span>
+                                            <input type="text" class="form-control edt_link_sufixo" placeholder="" maxlength="100" style="padding: 2px;">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-12 col-md-12 col-xs-12 col-lg-12">
+                                        <input type="radio" class="radio_permissao" name="radio_permissao" id="optionsRadios3" value="P">
+                                        <span class="fa fa-globe"></span><label>&nbsp;Público, não precisa ser usuário do Next BP</label>
+                                        <br>
+                                        <span class="text-muted">
+                                            Qualquer pessoa poderá ver o grupo, e suas publicações definidas como "Públicas". As publicações não públicas não serão exibidas para este grupo.
+                                        </span>
+                                    </div>
+                                    <div class="form-group col-sm-12 col-md-12 col-xs-12 col-lg-12">
+                                        <input type="radio" class="radio_permissao" name="radio_permissao" id="optionsRadios1" value="N">
+                                        <span class="fa fa-users"></span><label>&nbsp;Interno, para qualquer usuário do Next BP</label>
+                                        <br>
+                                        <span class="text-muted">
+                                            Qualquer usuário poderá ver o grupo, membros e publicações.
+                                        </span>  
+                                    </div>
+                                    <div class="form-group col-sm-12 col-md-12 col-xs-12 col-lg-12">
+                                        <input type="radio" class="radio_permissao"name="radio_permissao" id="optionsRadios2" value="S">
+                                        <span class="fa fa-lock"></span><label>&nbsp;Privado</label>
+                                        <br>
+                                        <span class="text-muted">
+                                            Qualquer pessoa poderá encontrar o grupo, somente membros poderão ver as publicações. Participação sujeita à aprovação do administrador.
+                                        </span>  
+                                    </div>
+                                    <div class="form-group col-sm-12 col-md-12 col-xs-12 col-lg-12">
+                                        <div class="form-group">
+                                            <label>Listas de Discussão</label>
+                                            <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                <input class="chk_listas_discussao checkbox_bootstrap_toggle" type="checkbox" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                                         
+                    
+                                
+                            </div>
+
+                            <div class="tab-pane" id="modal_membros">
+
+
+                                 <div class="row">
+                                    <div class="col-md-12">
+
+                                        <table class="tab_equipe table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Membros</th>
+                                                    <th>Administrador</th>
+                                                    <th>Permitir Publicar</th>
+                                                    <th class="text-right" colspan="15" style="margin-right: 0px; padding-right: 0px">
+                                                       
+                                                        <select  style="width: 100%;" class=" select-multi-column cbo_membros" placeholder="Digite para pesquisar"></select>
+                                                    </th> 
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr template-row style="display: none">
+                                                    <td>
+                                                        <span class="label lb_tipo" template-field="tipo" style="margin-right: 5px;"></span>
+                                                        <span template-field="nome">{nome}</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="div_esconder">
+                                                            <div class="form-group">
+                                                                <div class="admin">
+                                                                    <input class="chk_administrador_grupo" type="radio"></input>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="div_permite_esconder">
+                                                            <div class="form-group">
+                                                                <div class="admin_motivo_chamado">
+                                                                    <input class="chk_permite_publicar" type="radio"></input>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-right" style="margin-right: 0px; padding-right: 0px">
+                                                        <a class="btn_usuario_remover btn btn-default">
+                                                            <span class="glyphicon glyphicon-trash"></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="modal_membros_motivo_chamado">
+
+
+                                 <div class="row">
+                                    <div class="col-md-12">
+
+                                        <table class="tab_equipe_motivo_chamado table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Membros</th>
+                                                    <th>Administrador</th>
+                                                    <th>Permitir Publicar</th>
+                                                    <th class="text-right" colspan="15" style="margin-right: 0px; padding-right: 0px">
+                                                       
+                                                        <select  style="width: 100%;" class=" select-multi-column cbo_membros_motivo_chamado" placeholder="Digite para pesquisar"></select>
+                                                    </th> 
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr template-row style="display: none">
+                                                    <td>
+                                                        <span class="label lb_tipo_motivo_chamado" template-field="tipo" style="margin-right: 5px;"></span>
+                                                        <span template-field="nome_motivo_chamado">{nome}</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="div_esconder_motivo_chamado">
+                                                            <div class="form-group">
+                                                                <div class="admin_motivo_chamado">
+                                                                    <input class="chk_administrador_grupo_motivo_chamado" type="radio"></input>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="div_permite_motivo_chamado">
+                                                            <div class="form-group">
+                                                                <div class="admin_motivo_chamado">
+                                                                    <input class="chk_permite_publicar_motivo_chamado" type="radio"></input>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>    
+                                                    <td class="text-right" style="margin-right: 0px; padding-right: 0px">
+                                                        <a class="btn_usuario_remover_motivo_chamado btn btn-default">
+                                                            <span class="glyphicon glyphicon-trash"></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="modal_membros_tipo_usuario">
+
+
+                                 <div class="row">
+                                    <div class="col-md-12">
+
+                                        <table class="tab_equipe_tipo_usuario table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Membros</th>
+                                                    <th>Administrador</th>
+                                                    <th>Permitir Publicar</th>
+                                                    <th class="text-right" colspan="15" style="margin-right: 0px; padding-right: 0px">
+                                                       
+                                                        <select class="cbo_tipo_usuario select form-control" id="cbo_tipo_usuario">
+                                                            <option value="" selected>Selecione</option>
+                                                            <option value="2">Colaborador</option>
+                                                            <option value="1">Cliente</option>
+                                                            <option value="4">Fornecedor</option>
+                                                            <option value="5">Organização</option>
+                                                        </select>
+                                                    </th> 
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr template-row style="display: none">
+                                                    <td>
+                                                        <span class="label lb_tipo_usuario" template-field="tipo" style="margin-right: 5px;"></span>
+                                                        <span template-field="nome_tipo_usuario">{nome}</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="div_esconder_tipo_usuario">
+                                                            <div class="form-group">
+                                                                <div class="admin_tipo_usuario">
+                                                                    <input class="chk_administrador_grupo_tipo_usuario" type="radio"></input>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="div_esconder_publicar_tipo_usuario">
+                                                            <div class="form-group">
+                                                                <div class="admin_tipo_usuario">
+                                                                    <input class="chk_permite_publicar_tipo_usuario" type="radio"></input>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-right" style="margin-right: 0px; padding-right: 0px">
+                                                        <a class="btn_usuario_remover_tipo_usuario btn btn-default">
+                                                            <span class="glyphicon glyphicon-trash"></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn_cancelar">Cancelar</button>
+                <button type="button" class="btn btn-primary btn_confirmar">Confirmar</button>
+                <button type="button" class="btn btn-primary btn_excluir">Excluir</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

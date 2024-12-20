@@ -1,0 +1,49 @@
+<!-- MODAL DETALHE -->
+<div class="modal bs-example-modal-lg modal_selecionar" tabindex="-1" role="dialog" aria-labelledby="modal_consulta_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title modal_title" id="modal_consulta_detalhes_label"></h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="row div_parametros">
+
+
+                    <div class="col-md-4" template-row="parametros" style="display: none;">
+                        <div class="form-group">
+                            <label for="edt_parametro_valor" template-field="nome">{nome}</label>
+                            <input type="text" id="edt_parametro_valor" class="form-control" template-field="valor"></input>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+                
+                
+                <div class="table-responsive ">
+                    <table class="table_generic table table-striped table-hover">
+                        <thead>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <div class="text-center div_load">
+                        <img class="img_ajax_loader" src="assets/img/ajax-loader.gif">
+                    </div>
+                </div>
+
+
+                
+                          
+            </div>
+
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

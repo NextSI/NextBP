@@ -1,0 +1,223 @@
+<!-- passo a passo das atuações efetivas -->
+<div style="background: #fff; padding: 5px;">
+
+    <ul class="nav nav-bp steps">
+      <li class="active"><a href="#">1. Função</a></li>
+      <li><a href="#">2. Missão</a></li>
+      <li><a href="#">3. Responsabilidades</a></li>
+      <li><a href="#">4. Indicadores</a></li>
+      <li><a href="#">5. Seleção de Indicadores</a></li>
+      <li><a href="#">6. Resumo Geral</a></li>
+    </ul>
+    <div class="form-group text-right">
+       <div class="row" style="margin-bottom: 0px; paddin-bottom: 0px;">
+           <div class="col-xs-12 col-sm-6 col-md-6 pull-right btns_acoes">
+               <button type="button" class="btn btn-default btn_cancelar">Cancelar</button>
+               <button type="button" class="btn btn-default btn_voltar hidden">
+                   <span class="glyphicon glyphicon-backward"></span>
+                   Etapa Anterior
+               </button>
+               <button type="button" class="btn btn-primary btn_proxima_etapa">
+                   Próxima Etapa
+                   <span class="glyphicon glyphicon-forward"></span>
+               </button>
+               <button type="button" class="btn btn-primary btn_confirmar" style="display: none;">Salvar</button>
+               <button type="button" class="btn btn-primary btn_fechar" style="display: none;">Fechar</button>
+           </div>
+       </div>
+   </div>
+   <span class="label label-default lbl_autor">{autor}</span>
+    <div tipo="etapa">
+
+        <div class="div_funcao">
+          <h3>Digite sua função</h3>
+
+          <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+             <input modo_edicao type="text" class="form-control edt_funcao" placeholder="Digite sua função">
+          </div>
+        </div>
+
+   </div>
+
+   <div tipo="etapa">
+      <h3>Defina a verdadeira missão do seu cargo / função.
+        <button type="button" class="btn btn-default btn_info_missao">
+          <span class="glyphicon glyphicon-question-sign"></span>
+        </button>
+      </h3>
+      <h4>Não deixe de ler a explicação ao lado, pois o perfeito entendimento da mesma, fará total diferença.</h4>
+      <div class="form-group">
+         <textarea modo_edicao class="form-control edt_missao_cargo" name="edt_missao_cargo" maxlength="255" rows="5" required></textarea>
+      </div>
+   </div>
+
+    <div tipo="etapa">
+    	<h3>Descreva separadamente quais são ou deveriam ser as Responsabilidades, tarefas e deveres principais e mais relevantes da função (escreva pelo menos 10). 
+        Não deixe de ler a explicação ao lado, pois o perfeito entendimento da mesma, fará total diferença. 
+        <button type="button" class="btn btn-default btn_info_responsabilidades">
+          <span class="glyphicon glyphicon-question-sign"></span>
+        </button>
+      </h3>
+      <table class="hpe_layout tabela_responsabilidades table table-striped table-hover">
+        <thead>
+          <tr>
+            <th width="90%">Responsabilidades</th>
+            <th>
+              <div class="pull-right">
+                <button type="button" modo_edicao class="btn_incluir_responsabilidade btn btn-default">
+                  <span class="glyphicon glyphicon-plus"></span>
+                </button>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr template-row style="display: none;">
+            <td><input type="text" modo_edicao class="form-control" template-field="descricao"></td>
+            <td>
+              <div class="pull-right">
+                <button type="button" modo_edicao class="btn_excluir btn btn-default">
+                  <span class="glyphicon glyphicon-trash"></span>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+    <div tipo="etapa">
+      <!-- <button type="button" class="btn btn-primary btn-block btn-lg btn_metas_atuacao_efetiva">Indicador principal</button> -->
+      <h3>
+        Descreva quais são as suas principais Metas a serem atingidas e KPIs a serem acompanhados para garantir atingimento das mesmas<br>
+        Dica: Algo a ser atingido - valor, número, percentual dentro de um prazo pré-determinado. 
+        Não deixe de ler a explicação ao lado, pois o perfeito entendimento da mesma, fará total diferença. 
+        <button type="button" class="btn btn-default btn_info_indicador">
+          <span class="glyphicon glyphicon-question-sign"></span>
+        </button>
+      </h3>
+      <div class="form-group">
+      <table class="hpe_layout tab_indicadores table table-striped table-hover">
+        <thead>
+          <tr>
+            <th width="90%">Metas e KPI's</th>
+            <th>
+              <div class="pull-right">
+                <button type="button" modo_edicao class="btn_incluir btn btn-default">
+                  <span class="glyphicon glyphicon-plus"></span>
+                </button>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr template-row style="display: none;">
+            <td template-field="nome"><input modo_edicao type="text" class="form-control"></td>
+            <td>
+              <div class="pull-right">
+                <button type="button" modo_edicao class="btn_excluir btn btn-default">
+                  <span class="glyphicon glyphicon-trash"></span>
+                </button>
+                <button type="button" class="btn_editar btn btn-default hidden">
+                  <span class="glyphicon glyphicon-pencil"></span>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div tipo="etapa">
+      <h3>Selecione a Meta / KPI que você acredita ou necessita trabalhar prioritariamente.</h3>
+      <div class="list-group lista_indicadores">
+        <a href="#" class="list-group-item clearfix" style="display: none;" template-item>
+          <span template-nome></span>
+          <span class="label hidden" template-label style=" position: absolute; right: 10px; ">{label}</span>
+          <span class="pull-right hidden">
+            <button class="btn btn_metas btn-default">Definição de sub-metas</button>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <div tipo="etapa">
+      <h4>1.Função</h4>
+      <p style="margin-left:10px;" class="desc_funcao"></p>
+      <h4>2.Missão</h4>
+      <p style="margin-left:10px;" class="desc_missao"></p>
+      <h4>3.Responsabilidades</h4>
+      <div class="form-group">
+        <table class="hpe_layout tab_listagem_responsabilidades table">
+            <tbody>
+                <tr template-row style="display: none;">
+                    <td>
+                      <input type="text" class="form-control" disabled>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+
+      <h4>4.Indicadores</h4>
+      <div class="form-group">
+        <table class="hpe_layout tab_listagem_indicadores table">
+            <tbody>
+                <tr template-row style="display: none;">
+                    <td>
+                      <input type="text" class="form-control" disabled>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+      <button class="btn btn-default btn_indicadores">Selecionar indicadores</button>
+
+    </div>
+    
+    <div class="form-group text-right">
+       <div class="row" style="margin-bottom: 0px; paddin-bottom: 0px;">
+           <div class="col-xs-12 col-sm-6 col-md-6 pull-right btns_acoes">
+               <button type="button" class="btn btn-default btn_cancelar">Cancelar</button>
+               <button type="button" class="btn btn-default btn_voltar hidden">
+                   <span class="glyphicon glyphicon-backward"></span>
+                   Etapa Anterior
+               </button>
+               <button type="button" class="btn btn-primary btn_proxima_etapa">
+                   Próxima Etapa
+                   <span class="glyphicon glyphicon-forward"></span>
+               </button>
+               <button type="button" class="btn btn-primary btn_confirmar" style="display: none;">Salvar</button>
+               <button type="button" class="btn btn-primary btn_fechar" style="display: none;">Fechar</button>
+           </div>
+       </div>
+   </div>
+
+  <!-- Botões exibidos, quando o usuário estiver acessando por dispositivos móveis -->
+   <div class="form-group text-right">
+     <div class="row" style="margin-bottom: 0px; paddin-bottom: 0px;">
+       <div class="col-xs-12 col-sm-6 col-md-6 pull-right btns_bottom" style="display: none;">
+           <button type="button" class="btn btn-default btn_cancelar">
+               <span class="glyphicon glyphicon-remove"></span>
+           </button>
+           <button type="button" class="btn btn-default btn_voltar hidden">
+               <span class="glyphicon glyphicon-backward"></span>
+           </button>
+           <button type="button" class="btn btn-primary btn_proxima_etapa">
+               <span class="glyphicon glyphicon-forward"></span>
+           </button>
+           <button type="button" class="btn btn-primary btn_confirmar" style="display: none;">
+           <span class="glyphicon glyphicon-floppy-disk"></span>
+           </button>
+           <button type="button" class="btn btn-primary btn_fechar" style="display: none;">
+              <span class="glyphicon glyphicon-log-out"></span>
+           </button>
+       </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- <label class="pagina">1/11</label> -->

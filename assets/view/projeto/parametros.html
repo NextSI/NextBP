@@ -1,0 +1,49 @@
+<div class="modal bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal_projeto_selecionar_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_projeto_selecionar_label">Selecionar Projeto</h4>
+            </div>
+            <div class="modal-body">
+                
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label>Cliente</label>
+                            <select class="form-control select-multi-column cbo_cliente" placeholder="Digite nome para pesquisar">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label>Projetos</label>
+                            <select class="form-control selectpicker cbo_projeto" data-live-search="true">
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="edt_data_inicio">Data início</label>
+                            <input type="date" min="1900-01-01" max="2222-12-31" class="edt_data_inicio form-control" id="edt_data_inicio" maxlength="50" placeholder="Data início">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="edt_data_fim">Data fim</label>
+                            <input type="date" min="1900-01-01" max="2222-12-31" class="edt_data_fim form-control" id="edt_data_fim" maxlength="50" placeholder="Data fim">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_pesquisar btn btn-primary">Pesquisar</button>                
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,165 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active" translate=""></li>
+</ol>
+
+<!-- LISTAGEM -->
+<div>
+
+    <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+        <button type="button" class="somente_leitura btn_novo btn btn-primary">
+            <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;
+            <span translate="generico.novo"></span>
+        </button>
+        <button type="button" class="btn_filtrar btn btn-default">
+            <span class="glyphicon glyphicon-filter"></span>&nbsp;
+            <span translate="generico.filtrar"></span>
+        </button>
+        <button type="button" class="btn_listar btn btn-default">
+            <span class="glyphicon glyphicon-refresh"></span>
+        </button>
+        <button type="button" class="hidden btn_configuracao btn btn-default">
+            <span class="glyphicon glyphicon-cog"></span>
+        </button>
+        <button type="button" class="btn_pesquisar btn btn-primary hidden">
+            <span class="glyphicon glyphicon-search"></span>&nbsp;
+            <span translate="generico.pesquisar"></span>
+        </button>
+        <button type="button" class="btn_limpar_filtros btn btn-default hidden">
+            <span class="glyphicon glyphicon-trash"></span>&nbsp;
+            <span translate="generico.limpar_filtro"></span>
+        </button>
+    </nav>
+
+    <div class="div_listagem">
+
+        <div class="div_filtros" id="div_filtros" style="display: none;">
+            <div class="row" style="margin-left: 0px; margin-right: 0px">
+                <div class="col-md-1">
+                    <div class="form-group">
+                        <label for="item_edt_codigo" translate="generico.codigo"></label>
+                        <input type="text" class="edt_codigo form-control" id="item_edt_codigo" maxlength="45" translate-placeholder="generico.codigo">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="item_edt_nome" translate="generico.descricao"></label>
+                        <input type="text" class="edt_nome form-control" id="item_edt_nome" maxlength="50" translate-placeholder="item.filtrar_por_descricao">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		<table class="tab_listagem table table-striped table-hover">
+            <thead>
+                <tr class="hidden-xs">
+                    <th width="130px" style="min-height: 60px; min-width: 60px; max-height: 60px; max-width: 180px;" >&nbsp;</th>
+                    <th translate="generico.codigo"></th>
+                    <th>Nickname</th>
+                    <th translate="generico.descricao"></th>
+                    <th translate="item.preco"></th>
+                    <th translate="item.preco_minimo"></th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr template-row style="display: none;" class="row-fluid">
+
+                    <!-- mobile -->
+                    <td class="td-mobile visible-xs">
+                        
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="somente_leitura btn_editar btn btn-default">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </button>
+                                <button type="button" class="somente_leitura btn_excluir btn btn-default">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                                <button type="button" class="somente_visualizar hidden btn_visualizar btn btn-default">
+                                    <span class="glyphicon glyphicon-eye-open"></span> 
+                                </button>
+                                <button type="button" class="btn_alterar_foto btn btn-default">
+                                    <span translate-title="item.alterar_foto">
+                                        <span class="fa fa-image fa-fw"></span> <span translate="item.alterar_foto"></span>
+                                    </span>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div>
+                            <span style="padding-top: 7px; padding-bottom: 0px;" >
+                                <img style="min-height: 60px; min-width: 60px; max-height: 60px; max-width: 150px; padding:1px;     margin-top: 12px;" class="carrega_img" template-field="logo" />
+                            </span> 
+                        </div>
+
+                        <h4 template-field="descricao" translate="generico.descricao"></h4>
+                        <div class="text-info">
+                            <span class="small" translate="item.preco"></span>
+                            <span template-field="preco"></span>
+                        </div>
+                        <div class="text-info">
+                            <span class="small" translate="item.preco_minimo"></span>
+                            <span template-field="preco_minimo"></span>
+                        </div>
+                        
+                    </td>
+                    <!-- mobile -->
+
+                    <!-- desktop -->
+                    <td class="hidden-xs">
+                        <div class="form-group" style="margin-top:12px;">
+                            <span style="padding-top: 7px; padding-bottom: 0px;" >
+                                <img style="min-height: 60px; min-width: 60px; max-height: 60px; max-width: 180px; padding:1px;" class="carrega_img" template-field="logo" />
+                            </span> 
+                        </div>
+                    </td>                    
+                    <td template-field="codigo" class="hidden-xs">{codigo}</td>
+                    <td template-field="nickname" class="hidden-xs">{nickname}</td>
+                    <td template-field="descricao" class="hidden-xs">{descricao}</td>
+                    <td template-field="preco" class="hidden-xs">{preco}</td>
+                    <td template-field="preco_minimo" class="hidden-xs">{preco_minimo}</td>
+                    <td template-buttons="actions" class="hidden-xs" style="min-width:140px;">
+                        <div class="btn-group pull-right">                            
+                            <button type="button" class="btn_alterar_foto btn btn-default" >
+                                <span translate-title="item.alterar_foto">                      
+                                    <span class="fa fa-image fa-fw" ></span><span class="hidden-xs hidden-sm hidden-md" translate="item.alterar_foto"></span>
+                                </span>
+                            </button>
+                                          
+                            <div class="btn-group">                                
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a class=" btn_visualizar" href="#">&nbsp;
+                                        <span translate="generico.visualizar"></span>
+                                    </a></li>
+                                    <li><a class="somente_leitura btn_editar" href="#">&nbsp;
+                                        <span translate="generico.editar"></span>
+                                    </a></li>
+                                    <li><a class="somente_leitura btn_excluir" href="#">&nbsp;
+                                        <span translate="generico.excluir"></span>
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>           
+                    <!-- desktop -->                                               
+
+                </tr>
+
+            </tbody>
+        </table>
+        <div style="position: relative; bottom: 20px;">
+            <div style="padding: 10px; padding-bottom: 0px; padding-top: 0; background-color: white;" class="text-center div_carregar_mais hidden">
+                <span class="btn btn-link btn_carregar_mais">
+                    <span class="txt_carregar_mais text-primary">Carregar mais registros</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- /LISTAGEM -->

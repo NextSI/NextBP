@@ -1,0 +1,129 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Detalhes Região de Vendas</li>
+</ol>
+
+<div class="row"> 
+
+    <div class="col-sm-3 col-md-3 col-lg-2">
+
+        <div class="panel panel-default">
+            <div class="list-group">
+                <a href="#" class="btn_salvar list-group-item">
+                    <span class="glyphicon glyphicon-floppy-disk"></span>
+                    Salvar
+                </a>
+                <a href="#" class="btn_excluir list-group-item list-group-item-danger">
+                    <span class="glyphicon glyphicon-check"></span>
+                    Excluir
+                </a>                
+                <a href="#" class="btn_cancelar list-group-item">
+                    <span class="glyphicon glyphicon-remove"></span>
+                    Cancelar
+                </a>
+            </div>
+        </div>    
+
+    </div>    
+
+    <div class="col-sm-9 col-md-9 col-lg-10">        
+
+        <div class="row">                  
+            <div class="col-md-10">
+                <div class="form-group">
+                    <label for="edt_descricao">Descrição</label>
+                    <span class="text-danger">*</span>
+                    <input type="text" class="edt_descricao form-control" maxlength="150" id="edt_descricao" placeholder="Descrição">
+                </div>                            
+            </div>       
+        </div>  
+
+        <div class="row">                  
+
+            <div class="col-md-6"> 
+                <label>Região de Vendas Pai</label>                       
+                <select class="select-multi-column cbo_regiao_vendas_pai"></select>                                                
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="chk_bloqueado">Bloqueado ?</label>
+                    <div style="margin-top: 3px;">
+                        <input type="checkbox" class="chk_bloqueado form-control" id="chk_bloqueado">
+                    </div>
+                </div>
+            </div>
+
+        </div>            
+
+        <div class="row">
+            <div class="col-md-10">
+                <div class="form-group">
+                    <label for="edt_observacoes">Observações</label>        
+                    <textarea class="edt_observacoes form-control" id="edt_observacoes" maxlength="500" rows="4" placeholder="Observações"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="div_representante form-group" id="div_representante">
+
+            <br>
+
+            <div class="row">
+                        
+                <div class="col-md-6"> 
+                    <label>Relacionar Representantes</label>                       
+                    <select class="select-multi-column cbo_representante"></select>                                                
+                </div>
+
+            </div>  
+
+            <br>          
+
+            <table class="tab_listagem_representante table-responsive table">
+                <thead>
+                    <tr>
+                        <th>Nome Fantasia</th>                        
+                        <th>Razão Social</th>                        
+                        <th>E-mail</th>                        
+                        <th>Telefone</th>                        
+                        <th>&nbsp;</th>                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr template-row style="display: none;">
+                        <td> 
+                            <span class="label lb_tipo"></span>
+                            <span template-field="nome_fantasia"></span>
+                        </td>
+                        <td template-field="razao_social"></td>
+                        <td template-field="email"></td>
+
+                        <td style="font-size: 11px" class="hidden-xs">
+                            <span class="text-nowrap" template-field="telefone1"></span>
+                            <br>
+                            <span class="text-nowrap" template-field="telefone2"></span>
+                            <br>
+                            <span class="text-nowrap" template-field="telefone3"></span>
+                            <br>
+                            <span class="text-nowrap" template-field="telefone4"></span>
+                        </td>
+
+                        <td>
+                            <div class="pull-right">
+                                <button type="button" class="btn_deletar_representante btn btn-default">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>                
+                </tbody>
+            </table>     
+        </div>          
+
+
+
+        
+    </div>    
+
+</div>    
+        

@@ -1,0 +1,16 @@
+<?php
+
+/*
+function consultar_situacao_gateway_override($versao_processo_gateway_id, $solicitacao_model, $solicitacao_atividade_versao_processo_atividade_id=null, $destinos=null) {
+    
+    // seu cálculo por aqui
+    // ...
+
+    // exemplo da estrutura do retorno:
+    return [
+            'atividades_pendentes' => 3,
+            'qtde_origens' => 4,
+            'total_atividades_aguardando_envio' => 1,
+    ];
+}
+*/

@@ -1,0 +1,479 @@
+<style type="text/css">
+    .transparent {
+        background-color: transparent;
+    }
+
+    .home-title {
+        font-size: 22px;
+        font-weight: bold;
+        color: rgb(100, 100, 100);
+    }
+
+    .btn-title {
+        background: transparent;
+        border: none;
+        float: right;
+    }
+
+    .btn-title span {
+        font-size: 18px;
+    }
+
+    .ellipsis-content {
+        max-width: 360px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+</style>
+
+<div class="drawer">
+    <div class="row">
+        <div class="col-md-6 divLadoEsquerdo">
+            <div class="div_cockpit home-painel" style="display: none;">
+                <div class="panel-heading text-primary div_cockpit_header transparent" style="display: flex; justify-content: space-between;">
+                    <div class="dropdown home-title ellipsis-content">
+    
+                        <i class="fas fa-history text-primary"></i>
+                        <span class="txt_timeline" translate="home.cockpit">Cockpit</span>
+                        <span class="caret dropdown-toggle itens_timeline hidden" data-toggle="dropdown" role="button" aria-expanded="false" style="cursor: pointer;"></span>
+    
+                        <ul class="dropdown-menu ul_supervisionados" role="menu">
+                            <li class="li_supervisor" template-meu-cockpit style="display: none"><a href="javascript:;">Meu Cockpit</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Cockpit dos meus Supervisionados</li>
+                            <li>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control edt_nome_supervisionado" placeholder="Digite para pesquisar" style="font-weight: initial;">
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <small class="nome_usuario_timeline hidden"></small>
+                    </div>
+
+                    <div style="display: flex;">
+                        <button class="btn btn-sm btn-default btn_refresh btn-title">
+                            <span class="fas fa-sync-alt text-primary"></span>
+                        </button>
+    
+                        <button class="btn btn-sm btn-default btn_view_wrap btn-title" title="Visualização em Grade">
+                            <span class="fas fa-th text-primary"></span>
+                        </button>
+    
+                        <button class="btn btn-sm btn-default btn_view_inline btn-title" title="Visualização em Linha">
+                            <span class="fas fa-ellipsis-h"></span>
+                        </button>
+    
+                        <button class="btn btn-sm btn-default btn_expandir_cockpit btn-title" title="Exibir Cockpit">
+                            <span class="fas fa-expand-alt"></span>
+                        </button>
+    
+                        <button class="btn btn-sm btn-default btn_retrair_cockpit btn-title" title="Retrair Cockpit">
+                            <span class="fas fa-compress-alt"></span>
+                        </button>
+                    </div>
+                </div>
+    
+                <!-- COCKPIT -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="cockpitComponent" style="overflow-x: scroll; overflow-y: hidden;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scrollview">
+
+                <div class="row">
+                    <div class="col-md-12 div_dashboard_crm hidden">
+                        <div class="panel-heading text-primary div_dashboard_header transparent" style="display: flex; justify-content: space-between;">
+                            <strong class="dropdown home-title">
+                                <i class="fa fa-tachometer-alt text-primary"></i>
+                                <span>Dashboard CRM</span>
+                            </strong>
+
+                            <div style="display: flex;">
+                                <button class="btn btn-sm btn-default btn_refresh btn-title">
+                                    <span class="fas fa-sync-alt text-primary"></span>
+                                </button>
+            
+                                <button class="btn btn-sm btn-default btn_expandir_dashboard btn-title" title="Exibir Dashboard">
+                                    <span class="fas fa-expand-alt"></span>
+                                </button>
+            
+                                <button class="btn btn-sm btn-default btn_retrair_dashboard btn-title" title="Retrair Dashboard">
+                                    <span class="fas fa-compress-alt"></span>
+                                </button>
+                            </div>
+                        </div>
+        
+                        <div class="graficos_dashboard_crm">
+                            <div class="col-md-6 cardCockpit div_dashboard_representante hidden" style="clear: left;">
+                            </div>
+                
+                            <div class="col-md-6 cardCockpit div_dashboard_representante_grafico_meta hidden">
+                                <div class="row div_dashboard" style="border-radius: 10px;">
+                                    <div class="col-md-12">
+                                        <div class="div_velocimetro"></div>
+                                        <div align="center">
+                                            <span class="badge info_metas" style="background-color: #DF5353;" title="Total de Oportunidades Ganhas <= 60% da meta" data-toggle="tooltip">Ruim</span>
+                                            <span class="badge info_metas" style="background-color: #DDDF0D;" title="Total de Oportunidades Ganhas > 60% e <= 80% da meta" data-toggle="tooltip">Regular</span>
+                                            <span class="badge info_metas" style="background-color: #55BF3B;" title="Total de Oportunidades Ganhas > 80% e <= 95% da meta" data-toggle="tooltip">Bom</span>
+                                            <span class="badge info_metas" style="background-color: #0000cc;" title="Total de Oportunidades Ganhas > 95% da meta" data-toggle="tooltip">Ótimo</span>
+                                        </div>
+                                    </div>          
+                                </div>
+                            </div>    
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12 div_aniversariantes">
+                        <div class="panel-heading text-primary div_aniversariantes_header transparent" style="display: flex; justify-content: space-between;">
+                            <strong class="dropdown home-title">
+                                <i class="fas fa-calendar-day text-primary"></i>
+                                <span>Datas Comemorativas</span>
+                            </strong>
+
+                            <div style="display: flex;">
+                                <button class="btn btn-sm btn-default btn_refresh btn-title">
+                                    <span class="fas fa-sync-alt text-primary"></span>
+                                </button>
+            
+                                <button class="btn btn-sm btn-default btn_expandir_aniversariantes btn-title" title="Exibir Aniversariantes">
+                                    <span class="fas fa-expand-alt"></span>
+                                </button>
+            
+                                <button class="btn btn-sm btn-default btn_retrair_aniversariantes btn-title" title="Retrair Aniversariantes">
+                                    <span class="fas fa-compress-alt"></span>
+                                </button>
+                            </div>
+                        </div>
+        
+                        <div class="divComponenteAniversariantes"></div>
+                        
+                    </div>
+                </div>
+
+                <!--div class="panel panel-primary div_painel_atalhos" style="display: none;">
+                    <div class="panel-heading text-primary">
+                        <h3 class="panel-title">
+                            <span class="fa fa-bookmark"></span>
+                            <span translate="home.atalhos">Acesso Rápido</span>
+                        </h3>
+                    </div>
+        
+                    <div class="list-group div_menu_atalhos">
+                        <a class="list-group-item" href="javascript:;" template-button="btn_atalho_cliente" style="display: none;"></a>
+                        <span class="list-group-item" style="height: 0px; padding: 0px; margin: 0px;"></span>
+                    </div>
+        
+                </div-->
+        
+                <div class="panel panel-primary div_painel_modulos" style="display: none;">
+                    <div class="panel-heading text-primary">
+                        <h3 class="panel-title">
+                            <span class="glyphicon glyphicon-th-large"></span>
+                            <span translate="home.modulos">Módulos</span>
+                        </h3>
+                    </div>
+        
+                        <a class="template_menu_modulos list-group-item" href="javascript:;" style="display: none; min-height: 62px;">
+                            <div class="pull-right">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default btn_menu">
+                                        <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <img class="icone" src="" width="40px" height="40px" style="margin-right: 5px; margin-top: 5px;" />
+                            <span template-field="modulo_nome">Modulo</span>
+                        </a>
+        
+                        <div class="list-group div_menu">
+        
+        
+                        </div>
+                </div>
+
+                <div class="div_card_notas"></div>
+        
+                <div class="mural_mensagem_div home-painel" style="border-radius: 15px !important; overflow: hidden;">
+                    <div class="panel-heading text-primary transparent" style="margin-bottom: 10px;">
+                        <div class="pull-right btn-group" style="margin-top:5px;z-index: 1;">
+            
+                            <button class="btn btn-sm btn-default btn_gestao_mural btn-title"  permissao="mural_mensagem">
+                                <span class="fas fa-cog text-primary"></span>
+                            </button>
+
+                            <!--button class="btn btn-sm btn-default btn_mural_nova_votacao btn-title" permissao="mural_mensagem" title="Criar Votação">
+                                <i class="fas fa-chart-pie text-primary"></i>
+                            </button-->
+
+                            <button class="btn btn-sm btn-default btn_mural_nova_mensagem btn-title" permissao="mural_mensagem">
+                                <span class="fa fa-plus text-primary"></span>
+                            </button>
+            
+                        </div>
+                        <strong class="home-title">
+                            <span class="fas fa-users text-primary"></span>
+                            <span translate="home.mural">Social</span>
+                        </strong>
+                    </div>
+            
+                    <div class="div_mural_nova_votacao" style="padding: 4px; display: none; background: #FFF; box-shadow: 2px 2px 1px rgb(218, 218, 218); border-radius: 10px; margin-bottom: 5px;">
+                        <div class="media-body" style="padding: 10px 5px;">
+                        </div>
+                    </div>
+
+                    <div style="padding: 4px; display: none; background: #FFF; box-shadow: 2px 2px 1px rgb(218, 218, 218); border-radius: 10px; margin-bottom: 5px;" template-mensagem>
+                        
+                        <div style="padding: 5px 5px;">
+                            <div class="mensagem-header" style="margin-bottom: 40px;">
+                                <div class="col-xs-12 text-left" style="display: inline-flex; padding-left: 0px; padding-right: 0px;">
+                                    <img class="carrega_img_mensagem img-circle"
+                                        height="32" width="32" alt="" title="" style="border-radius: 25em;">
+                                    <div style="width: 10px;"></div>
+                                    <div style="width: 100%;">
+                                        <div class="dropdown pull-right" style="margin-right: 10px;">
+                                            <a class="btn_menu_editar_mensagem hidden" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu text-primary">
+                                                <li><a class="btn_menu_editar" href="javascript:;"><span class=" text-primary">Editar</span></a></li>
+                                                <li><a class="btn_menu_excluir text-primary" href="javascript:;"><span class=" text-primary">Excluir</span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="pull-right" style="margin-right: 10px;">
+                                            <span class="img_mensagem_publica fa fa-globe pull-right text-muted" style="display: none;" title="Mensagem pública"></span>
+                                        </div>
+                                        <div class="pull-right" style="margin-right: 10px;">
+                                            <a href="javascript:;" class="btn_grupo_pagina_inicial_home text-muted small">
+                                                <span class="field_lb_grupo_home" style="white-space: inherit;"></span>
+                                            </a>
+                                        </div>
+                                        <div class="text-left">
+                                            <div class="lbl_autor" style="font-weight: bold;">{autor}</div>
+                                            <div class="lbl_data_publicacao text-muted small">{data_publicacao}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div><p class="lbl_mensagem" style="padding: 0px 0 5px 0;">{mensagem}</p></div>
+                            <div class="div_votacao"></div>
+                            <div class="imagens_mensagem"></div>
+                        </div>
+        
+                        <div class="row hidden div_anexos">
+                            <div class="anexos col-xs-12 col-sm-12 col-md-12">
+                            </div>
+                        </div>
+        
+                        <div class="acoes_mensagem text-left" style="padding: 4px; margin-left: 0px;">
+                            <div class="pull-right">
+                                <div class="btn-group dropup">
+                                    <button class="btn btn-link dropdown-toggle mural_mensagem_anexos_button" style="display: none; padding: 0px; margin-left: 0px;" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-paperclip"></i>
+                                    </button>
+                                    <ul class="mural_mensagem_anexos_dropdown dropdown-menu dropdown-menu-right">
+                                    </ul>
+                                </div>
+                            </div>
+                            <button class="btn btn-link mural_curtir" style="padding: 0px; margin-left: 0px;">
+                                <span class="fa fa-thumbs-up" aria-hidden="true" style="font-size: 15px;"></span>
+                                Curtir
+                            </button>
+                            <button class="hidden btn btn-link mural_descurtir" style="padding: 0px; margin-left: 0px;">
+                                <span class="fa fa-thumbs-up text-primary" aria-hidden="true" style="font-size: 16px;"></span>
+                                <span>Descurtir</span>
+                            </button>
+                            <span class="hidden div_mensagem_curtir" style="padding: 0px; margin-left: 0px;">
+                                <a href="javascript:;" class="lbl_mensagem_curtir btn btn-xs" style="padding: 0px; margin-left: 0px;"></a>
+                            </span>
+                            <button class="btn btn-link mural_comentar" style="padding: 0px; margin-left: 0px;">
+                                &nbsp;<span class="fa fa-comment" aria-hidden="true" style="font-size: 16px;"></span>
+                                Comentar
+                            </button>
+                        </div>
+        
+                        <div class="hidden div_enviar_comentario text-left" style="padding-left: 15px;">
+                            <div class="form-inline">
+                                <div class="pull-left">
+                                    <img class="img_enviar_comentario img-circle" style="width: 32px;" src="assets/img/imagem_usuario_padrao.svg" />
+                                </div>
+                                <div class="div_enviar_comentario_mensagem" style="background-color: white; margin-left: 40px; margin-top: 8px; margin-bottom: 8px; padding-top: 4px; padding-left: 4px; padding-right: 4px; padding-bottom: 4px; border-radius: 9px;">
+                                    <input type="text" class="form-control edt_enviar_comentario" maxlength="500" placeholder="Digite seu comentário..." style="width: 100%; border: none; -webkit-box-shadow: none; box-shadow: none; color: #333 !important; background: transparent;"></input>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="hidden div_comentario" style="padding-left: 15px;" template-comentario>
+                            <div class="div_listar_comentario_imagem">
+                                <div class="form-inline">
+                                    <div class="pull-left">
+                                        <img class="carrega_img_comentario img-circle" style="width: 32px"/>
+                                    </div>
+        
+                                    <div>
+                                        <button type="button" class="btn btn-xs btn_excluir close hidden pull-right" aria-hidden="true" style="padding-left: 5px; padding-right: 5px; padding-bottom: 5px">
+                                            &times;
+                                        </button>
+        
+                                        <div class="div_comentario_mensagem" style="background-color: white; margin-left: 40px; margin-top: 8px; margin-bottom: 8px; padding-top: 4px; padding-left: 4px; padding-right: 4px; padding-bottom: 4px; border-radius: 9px;">
+        
+                                            <div style="margin-left: 6px; margin-right: 6px;">
+                                                <span class="btn_perfil_usuario_comentario">
+                                                    <span class="text-primary lbl_comentario_autor small" style="margin-right: 6px;"><small>{autor}</small></span>
+                                                </span>
+                        
+                                                <span class="div_listar_comentario_comentario" style="padding-top: 5px;">
+                                                    <span class="lbl_comentario_comentarios small"><small>{comentario}</small></span>
+                                                </span>
+        
+                                            </div>
+        
+                                            <div class="btn-group div_curtir_comentar_comentario" style="padding-right: 10px; padding-top: 6px;">
+                                                <button class="btn btn-xs btn-link btn_mural_curtir_comentario">
+                                                    <span class="fa fa-thumbs-up" aria-hidden="true" style="font-size: 15px;"></span>
+                                                </button>
+                                                <button class="hidden btn btn-xs btn-link btn_mural_descurtir_comentario">
+                                                    <span class="fa fa-thumbs-up text-primary" aria-hidden="true" style="font-size: 16px;"></span>
+                                                </button>
+                                                <a href="javascript:;" class="btn btn-xs link_curtida_comentario"><span class="lbl_count_curtida_comentario small">{count}</span></a>
+                                                <button class="btn btn-xs btn-link mural_comentar_comentario">
+                                                    <span class="fa fa-comment" aria-hidden="true" style="font-size: 16px;"></span>
+                                                </button>
+                                            </div>
+                        
+                                            <div class="btn-group div_mostrar_respostas col-xs-12 col-sm-12 col-md-12 hidden">
+                                                <button class="btn btn-link btn_mostrar_respostas">
+                                                </button>
+                                            </div>
+                
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="hidden div_enviar_comentario_resposta col-xs-12 col-sm-12 col-md-12" style="padding-left: 45px;">
+                                <div class="col-xs-12" style="padding-right: 0px; padding-left: 10px; ">
+                                    <div class="form-inline">
+                                        <div class="pull-left">
+                                            <img class="img_enviar_comentario_resposta img-circle" style="width: 32px;" src="assets/img/imagem_usuario_padrao.svg" />
+                                        </div>
+                                        <div class="div_enviar_comentario_resposta_mensagem" style="background-color: white; margin-left: 40px; margin-top: 8px; margin-bottom: 8px; padding-top: 4px; padding-left: 4px; padding-right: 4px; padding-bottom: 4px; border-radius: 9px;">
+                                            <input type="text" class="form-control edt_enviar_comentario_resposta" maxlength="500" placeholder="Digite seu comentário..." style="width: 100%; border: none; -webkit-box-shadow: none; box-shadow: none; color: #333 !important; background: transparent;"></input>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="comentario_resposta"></div>
+                        </div>
+        
+                        <div class='comentario'></div>
+                        <div class="div_mostar_mais_comentarios hidden">
+                            <button class="btn btn-link btn_mostrar_mais_comentarios" style="padding: 4px; margin-left: 0px;">
+                                Mostrar mais comentários
+                            </button>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="media-list list_mural">
+                    </div>
+                    <div class="div_mostar_mais_mensagem hidden">
+                        <button class="btn btn-link btn_mostrar_mais_mensagem">
+                            Mostrar mais Mensagem
+                        </button>
+                    </div>
+                    <div class="text-center div_load">
+                        <img class="img_ajax_loader" src="assets/img/ajax-loader.gif">
+                    </div>
+                </div>
+                <div style="padding-top:1px;">
+                    <button class="btn btn-link btn_voltar_ao_topo hidden">
+                        <span class="glyphicon glyphicon-arrow-up"></span>
+                        Voltar ao topo
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-md-6 divMeio">
+            <div style="margin-bottom: 0px; border-radius: 15px !important; overflow: hidden;">
+              <div class="panel-heading text-primary transparent" style="display: flex; justify-content: space-between;">
+                <div class="dropdown home-title ellipsis-content">
+    
+                    <span class="fas fa-calendar-week text-primary"></span>
+                    <span class="txt_timeline" translate="home.timeline">Timeline</span>
+                    <span class="caret dropdown-toggle itens_timeline hidden" data-toggle="dropdown" role="button" aria-expanded="false"
+                          style="cursor: pointer;">
+                    </span>
+    
+                    <ul class="dropdown-menu ul_supervisionados" role="menu">
+                        <li class="li_supervisor" template-minha-timeline style="display: none"><a href="javascript:;">Minha Timeline</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">Timeline dos meus Supervisionados</li>
+                        <li>
+                            <div class="col-md-12">
+                                <input type="text" class="form-control edt_nome_supervisionado" placeholder="Digite para pesquisar" style="font-weight: initial;">
+                            </div>
+                        </li>
+                        <li class="li_supervisionado" template-timeline-supervisionados style="display: none">
+                            <a href="javascript:;" class="opt_supervisionado" template-field="nome_supervisionado"></a>
+                        </li>
+                    </ul>
+                    <small class="nome_usuario_timeline hidden"></small>
+                </div>
+
+                <div style="display: flex;">
+
+                    <button class="btn btn-sm btn-default btn_toggle_notas btn-title hidden-xs" style="margin-right: 5px;" title="Exibir/esconder Notas">
+                        <span class="fas fa-sticky-note text-primary"></span>
+                    </button>
+                    
+                    <button class="btn btn-sm btn-default btn_toggle_favoritos btn-title hidden hidden-xs" style="margin-right: 5px;" title="Exibir/esconder Favoritos">
+                        <span class="fas fa-star text-primary"></span>
+                    </button>
+    
+                    <button class="btn btn-sm btn-default btn_expandir_timeline btn-title" style="margin-right: 5px;">
+                        <span class="fas fa-expand-alt text-primary"></span>
+                    </button>
+    
+                    <button class="btn btn-sm btn-default btn_retrair_timeline btn-title" style="margin-right: 5px;">
+                        <span class="fas fa-compress-alt text-primary"></span>
+                    </button>
+    
+                    <button class="btn btn-sm btn-default btn_config_timeline btn-title" style="margin-right: 5px;">
+                        <span class="fas fa-cog text-primary"></span>
+                    </button>
+                    
+                    <button class="btn btn-sm btn-default btn_refresh btn-title">
+                        <span class="fas fa-sync-alt text-primary"></span>
+                    </button>
+                </div>
+              </div>
+              
+    
+              <div class="dx_listagem_timeline"></div>
+    
+            </div>
+    
+        </div>
+    </div>
+</div>
+
+<!-- CONTEXT MENU OPORTUNIDADE AGENDA-->
+<ul id="context_menu_oportunidade" class="dropdown-menu context_menu_oportunidade" role="menu" aria-labelledby="context_menu_oportunidade">
+    <li role="presentation">
+        <a role="menuitem" tabindex="-1" data-context-menu="editar_oportunidade" style="cursor: pointer;">
+            Editar Oportunidade
+        </a>
+    </li>
+</ul>
+
+<!-- CONTEXT MENU OPORTUNIDADE AGENDA-->

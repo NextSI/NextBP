@@ -1,0 +1,72 @@
+<div class="reset-container">
+    <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+        <div class="form-inline">
+            <div class="navbar-left">
+                <div class="form-group">
+                    <label>Data Inicial</label>
+                    <br>
+                    <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_dt_ini"> 
+                </div>
+                <div class="form-group hidden-xs">
+                    <br>
+                    <br>
+                    <label>até</label>
+                </div>                                        
+                <div class="form-group hidden-md hidden-lg hidden-sm ">
+                    <label>até</label>
+                </div>                                                        
+                <div class="form-group">
+                    <label>Data Final</label><br>
+                    <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_dt_fim">
+                </div>
+                <div class="form-group">
+                    <label>&nbsp;</label><br>
+                    <button type="button" class="btn btn-primary btn_refresh">
+                        <span class="glyphicon glyphicon-search"></span> Filtrar
+                    </button>
+                </div>       
+                <div class="form-group" style="margin-left: 10px;">
+                    <div class="div_valor_oportunidades_ganhas" style="background: #FFF; margin-top: 20px;padding: 8px 10px;border-radius: 5px;display: flex;gap: 5px;justify-content: center;align-items: center;">
+                        <span>Total de vendas: </span>
+                        <strong>
+                            <span class="fa fa-money-bill"></span>&nbsp;
+                            <span class="valor_oportunidades_ganhas">R$ 0,00</span>
+                        </strong>
+                    </div>
+                </div>
+            </div>
+        </div>                                                                         
+    </nav>  
+</div>
+
+
+<div class="row visible-md visible-lg" align="center">
+    <div class="col-md-7"></div>
+    <div class="col-md-5 div_legenda" style="display: none;">
+        <span class="badge info_metas" style="background-color: #DF5353;" title="Total de Oportunidades Ganhas <= 60% da meta" data-toggle="tooltip">Ruim</span>
+        <span class="badge info_metas" style="background-color: #DDDF0D;" title="Total de Oportunidades Ganhas > 60% e <= 80% da meta" data-toggle="tooltip">Regular</span>
+        <span class="badge info_metas" style="background-color: #55BF3B;" title="Total de Oportunidades Ganhas > 80% e <= 95% da meta" data-toggle="tooltip">Bom</span>
+        <span class="badge info_metas" style="background-color: #0000cc;" title="Total de Oportunidades Ganhas > 95% da meta" data-toggle="tooltip">Ótimo</span>
+    </div>                
+</div>
+   
+<div class="row div_dashboard">
+    <div template-row="representantes" style="display:none">
+
+        <div class="panel panel-default col-md-7 form-group">
+            <div class="panel-body">
+                <div class="div_dashboard_representante"></div>        
+            </div>
+        </div>
+
+        <div class="col-md-5" align="center">
+            <div class="div_velocimetro panel"></div>
+            <div class="visible-xs visible-sm">
+                <span class="badge info_metas" style="background-color: #DF5353;" title="Total de Oportunidades Ganhas <= 60% da meta" data-toggle="tooltip">Ruim</span>
+                <span class="badge info_metas" style="background-color: #DDDF0D;" title="Total de Oportunidades Ganhas > 60% e <= 80% da meta" data-toggle="tooltip">Regular</span>
+                <span class="badge info_metas" style="background-color: #55BF3B;" title="Total de Oportunidades Ganhas > 80% e <= 95% da meta" data-toggle="tooltip">Bom</span>
+                <span class="badge info_metas" style="background-color: #0000cc;" title="Total de Oportunidades Ganhas > 95% da meta" data-toggle="tooltip">Ótimo</span>
+            </div>                            
+        </div>        
+    </div>        
+</div>

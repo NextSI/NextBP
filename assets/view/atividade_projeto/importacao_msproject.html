@@ -1,0 +1,206 @@
+<div class="modal modal_importacao_projeto" tabindex="-1" role="dialog" aria-labelledby="label_modal_importacao_projeto" aria-hidden="true">
+    <div class="modal-dialog modal-lg" tabindex="-1">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn_cancelar close"  aria-hidden="true">&times;</button>
+                    <h4 class="modal-title label_modal_importacao_projeto" >Importação de projeto</h4>
+                </div>
+
+                <div class="modal-body modal-fixo">
+                    
+                    <!-- <div class="row"> -->
+                        <div class="panel panel-default painel_detalhes">
+                            <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                                <div class="pull-right">
+                                    <!-- -->
+                                </div>
+                                <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                                    <li class="active lbl_tab_arquivo">
+                                        <a style="padding-top: 15px; padding-bottom: 15px; padding-right: 5px; padding-left: 5px;" href="#modal_importacao_projeto_arquivo" role="tab" data-toggle="tab">
+                                            Arquivo
+                                        </a>
+                                    </li>
+                                    <li class="lbl_tab_usuarios hidden">
+                                        <a style="padding-top: 15px; padding-bottom: 15px; padding-right: 5px; padding-left: 5px;" href="#modal_importacao_projeto_usuarios" role="tab" data-toggle="tab">
+                                            Usuários
+                                        </a>
+                                    </li>
+                                    <li class="lbl_tab_configuracoes hidden">
+                                        <a style="padding-top: 15px; padding-bottom: 15px; padding-right: 5px; padding-left: 5px;" href="#modal_importacao_projeto_configuracoes" role="tab" data-toggle="tab">
+                                            Configurações
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+    
+                            <div class="panel-body panel_substituto_usuario">
+                                <!-- Tab panes -->
+                                <div class="tab-content content_substituto_usuario">
+    
+                                    <div class="modal_importacao_projeto_arquivo active tab-pane" id="modal_importacao_projeto_arquivo">
+                                        <div class="row form-group">
+                                            <div class="col-md-12">
+                                                <div class="div_dropabled_file " style="position: relative; border:2.5px dashed rgba(51, 51, 51, 0.4); min-height: 200px;text-align: center">
+                                                    <input class="file_importacao_projeto" style="position: absolute;width: 100%;height: 100%;opacity: 0;" type="file" accept=".xml">
+                                                    <span style="line-height: 170px;font-family: Arial;">Arraste seu arquivo aqui ou clique nesta área.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal_importacao_projeto_usuarios tab-pane" id="modal_importacao_projeto_usuarios">
+                                        <div class="row form-group">
+                                            <div class="col-md-12">
+                                                <table class="tab_listagem table table-striped table-hover">
+                                                    <thead>
+                                                        <tr class="">
+                                                            <th>Nome</th>
+                                                            <th>Usuário BP</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <!-- itens -->
+                                                        <tr class="usuario_importacao" template-row style="display: none;">
+                                                            <td class=" nome" template-field="nome">{nome}</td>
+                                            
+                                                            <td>
+                                                                <div class="div_componente_usuario"></div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="modal_importacao_projeto_configuracoes">
+                                        <div class="row form-group">
+                                            <!-- <div class="col-md-12"> -->
+
+                                                <div class="col-md-4" style="margin-bottom: 15px;">
+                                                    <label>Quantidade de horas por dia</label>
+                                                    <input type="number" id="qtd_horas_dia" class="form-control" value="8" />
+                                                </div>
+                                                
+                                                <div class="col-md-4 div_valor_previsto" style="margin-bottom: 15px;">
+                                                    <label>Tipo do valor hora</label>
+                                                    <select id="cbo_valor_previsto" class="cbo_valor_previsto form-control selectpicker" data-live-search="true">
+                                                        <option value="0">Utilizar valor/hora por técnico</option>
+                                                        <option value="1">Utilizar valor/hora por atividade</option>
+                                                        <option value="2" selected >Utilizar valores do técnico do MS Project</option>
+                                                    </select>
+                                                </div>
+                    
+                                                <div class="col-md-4 div_valor_hora hidden">
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <label>Valor hora</label>
+                                                            <input type="text" class="form-control edt_valor_hora_atividade" maxlength="11" placeholder="0,00">
+                                                        </div>
+                                                    </div>
+                                                </div>                                                
+                                            <!-- </div> -->
+                                        </div>
+
+                                        <div>
+                                            <label style="display: block;" for="chk_exibir_prazo_agenda">Exibir prazo da atividade na agenda</label>
+                                            <input type="checkbox" id="chk_exibir_prazo_agenda" class="checkbox_bootstrap_toggle form-control" />
+                                        </div>
+
+                                        <div style="margin-top: 15px" class='atualizacao hidden'>
+                                            <label style="display: block;" for="chk_redefinir_tipo_previsao_inicio" data-toggle='tooltip' title='Isso será aplicado a todas as atividades da importação'>
+                                                Redefinir tipo de previsão de início para 'Deve iniciar em' <span class="fa fa-question-circle" data-toggle='tooltip' title='Isso será aplicado a todas as atividades da importação'></span>
+                                            </label>
+                                            <input type="checkbox" id="chk_redefinir_tipo_previsao_inicio" class="checkbox_bootstrap_toggle form-control" />
+                                        </div>
+
+                                        <hr />
+
+                                        <div class="row" style="margin-top: 15px;">
+                                            <table class="table table-striped" >
+                                                <tbody>
+                                                    <tr class="atualizacao hidden">
+                                                        <td class="text-left"><label>Marcar todos</label></td>
+                                                        <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_marcar_todos form-control"></td>
+                                                    </tr>
+                                                    <tr class="atualizacao hidden">
+                                                        <td class="text-left"><label>Atualizar tipo e valor da hora da atividade</label></td>
+                                                        <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_atualizar_tipo_valor_hora form-control"></td>
+                                                    </tr>
+                                                    <tr class="atualizacao hidden">
+                                                        <td class="text-left"><label>Atualizar hierarquia</label></td>
+                                                        <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_atualizar_hierarquia form-control"></td>
+                                                    </tr>
+                                                    <tr class="atualizacao hidden">
+                                                        <td class="text-left"><label>Atualizar Codigo</label></td>
+                                                        <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_atualizar_codigo form-control"></td>
+                                                    </tr>
+                                                    <tr class="atualizacao hidden">
+                                                        <td class="text-left"><label>Atualizar Marco</label></td>
+                                                        <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_atualizar_marco form-control"></td>
+                                                    </tr>
+                                                    <tr class="atualizacao hidden">
+                                                        <td class="text-left"><label>Atualizar nome das atividades</label></td>
+                                                        <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_atualizar_nome form-control"></td>
+                                                    </tr>
+                                                    <tr class="atualizacao hidden">
+                                                        <td class="text-left"><label>Atualizar horas previstas</label></td>
+                                                        <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_atualizar_horas_previstas form-control"></td>
+                                                    </tr>
+                                                    <tr class="atualizacao hidden">
+                                                        <td class="text-left"><label>Atualizar previsão de início</label></td>
+                                                        <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_atualizar_previsao_inicio form-control"></td>
+                                                    </tr>
+                                                    <tr class="atualizacao hidden">
+                                                        <td class="text-left"><label>Atualizar prazo de execução</label></td>
+                                                        <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_atualizar_prazo_execucao form-control"></td>
+                                                    </tr>
+                                                    <tr class="atualizacao hidden">
+                                                        <td class="text-left"><label>Atualizar data de início</label></td>
+                                                        <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_atualizar_data_inicio form-control"></td>
+                                                    </tr>
+                                                    <tr class="atualizacao hidden">
+                                                        <td class="text-left"><label>Atualizar percentual de conclusão</label></td>
+                                                        <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_atualizar_percentual_conclusao form-control"></td>
+                                                    </tr>
+                                                    <tr class="atualizacao hidden">
+                                                        <td class="text-left"><label>Atualizar data de conclusão</label></td>
+                                                        <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_atualizar_data_conclusao form-control"></td>
+                                                    </tr>
+                                                    <tr class="atualizacao hidden">
+                                                        <td class="text-left">
+                                                            <label>Atualizar executores</label>
+                                                            <br />
+                                                            <small class="text-danger"><span class="fa fa-info-circle"></span> Atenção: ativando esta opção, os executores das atividades importadas do arquivo XML serão redefinidos! As atividades criadas manualmente não serão afetadas.</small>
+                                                            <br />
+                                                            <small class="text-warning"><span class="fa fa-info-circle"></span> Pode fazer com que a importação leve mais tempo para concluir.</small>
+                                                        </td>
+                                                        <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_atualizar_executores form-control"></td>
+                                                    </tr>
+                                                    <tr class="atualizacao hidden">
+                                                        <td class="text-left"><label>Atualizar predecessoras</label></td>
+                                                        <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_atualizar_predecessoras form-control"></td>
+                                                    </tr>
+                                                </tbody>
+                                                
+                                            </table>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                </div>
+    
+                <div class="modal-footer">
+                    <div>
+                        <button type="button" class="btn btn-default btn_cancelar" translate="modal_cadastro.cancelar">Cancelar</button>
+                        <button type="submit" class="btn btn-primary btn_salvar" translate="modal_cadastro.salvar">Confirmar</button>
+                    </div>
+                </div>
+                
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    

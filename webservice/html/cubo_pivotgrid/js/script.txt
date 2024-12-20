@@ -1,0 +1,118 @@
+<script type="application/javascript">
+    window.onload = function() {
+        DevExpress.localization.locale("pt-BR");
+
+        const divChart = $('#chart');
+        const divPivotGrid = $('#pivotgrid');
+        const pivotGridDataSource = handleDataSource({dadosCubo});
+
+        const summaryTypes = [
+            { text: 'Padrão', value: undefined },
+            { text: 'Soma', value: 'sum' },
+            { text: 'Contagem', value: 'count' },
+            { text: 'Média', value: 'avg' },
+            { text: 'Máximo', value: 'max' },
+            { text: 'Minímo', value: 'min' }
+        ];
+
+        // PivotGrid
+        const pivotGrid = divPivotGrid.dxPivotGrid({
+            dataSource: pivotGridDataSource,
+            allowSortingBySummary: true,
+            allowFiltering: true,
+            showBorders: true,
+            showColumnTotals: false,
+            showColumnGrandTotals: false,
+            showRowTotals: false,
+            showRowGrandTotals: false,
+            fieldChooser: { enabled: true, height: 400 },
+            fieldPanel: { visible: true },
+            scrolling: { mode: 'virtual' },
+            onContextMenuPreparing: handleContextMenu,
+            stateStoring: handleStateStoring()
+        }).dxPivotGrid('instance');
+
+        // Chart
+        const chart = divChart.dxChart({
+            size: { height: 200 },
+            commonSeriesSettings: { type: 'bar' },
+            adaptiveLayout: { width: 450 },
+            tooltip: { enabled: true, customizeTooltip: customizeChartTooltip }
+        }).dxChart('instance');
+
+        // Adicionar Chart ao PivotGrid
+        pivotGrid.bindChart(chart, {
+            dataFieldsDisplayMode: 'splitPanes',
+            alternateDataFields: false,
+        });
+
+        /** 
+         * Métodos
+        */
+        function handleDataSource(store) {
+            let pivotGridDataSource = new DevExpress.data.PivotGridDataSource({ store });
+            return pivotGridDataSource;
+        }
+
+        function handleContextMenu(e) {
+            if (e.field && e.field.area === 'data') {
+                let items = [];
+
+                summaryTypes.forEach((summaryType) => {
+                    items.push({
+                        text: summaryType.text,
+                        selected: e.summaryType === summaryType.value,
+                        onItemClick: () => {
+                            pivotGridDataSource.field(e.field ? e.field.index : e.cell.dataSourceIndex, {
+                                summaryType: summaryType.value,
+                                dataType: summaryType.value && summaryType.value !== 'count' ? 'number' : null,
+                                format: '#,##0.##',
+                            });
+                            
+                            pivotGridDataSource.load();
+                        },
+                    });
+                });
+
+                e.items.push({
+                    text: "Tipo de Resumo",
+                    items
+                });
+		    }
+        }
+        
+        function customizeChartTooltip(args) {
+            return { html: `${args.seriesName} | Total <div>${args.originalValue}</div>` };
+        }
+
+        function handleStateStoring() {
+            return {
+                enabled: true,
+                type: 'custom',
+                customLoad() {
+                    const param = JSON.parse({parametrosCuboUsuario});
+
+                    if (!param || !param.fields) return false;
+
+                    setTimeout(() => {
+                        for (let i = 0; i < param.fields.length; i++) {
+                            const field = param.fields[i];
+                        
+                            if (field.summaryType) {
+                                pivotGridDataSource.field(i, {
+                                    summaryType: field.summaryType,
+                                    dataType: field.summaryType && field.summaryType !== 'count' ? 'number' : null,
+                                    format: '#,##0.##',
+                                });
+                            }
+                        }
+
+                        pivotGridDataSource.load();
+                    });
+                    
+                    return param;
+                }
+            }
+        }
+    }
+</script>

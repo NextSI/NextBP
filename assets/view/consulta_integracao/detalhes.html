@@ -1,0 +1,108 @@
+<div class="panel panel-default painel_detalhes">
+
+    <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+        <div class="pull-right">
+            <!-- -->
+        </div>
+        <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+            <li class="active lbl_tab_geral">
+                <a id="modal_consulta_tab" href="#modal_consulta" role="tab" data-toggle="tab">Consulta</a>
+            </li>
+            <li class="lbl_tab_resultado hidden">
+                <a class="lbl_tab_resultado" id="modal_resultado_tab" href="#modal_result" role="tab" data-toggle="tab">Resultado</a>
+            </li>
+                                       
+        </ul>
+    </div>
+
+    <div class="panel-body">
+            <!-- Tab panes -->
+        <div class="tab-content">
+
+            <div class="tab-pane  frm_detalhes" id="modal_result">
+
+                <div class="table-responsive">
+                    <table class="table_generic table table-striped table-hover">
+                        <thead>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="text-center div_load">
+                    <img class="img_ajax_loader" src="assets/img/ajax-loader.gif">
+                </div>
+            </div>
+
+            <div class="tab-pane active  frm_detalhes" id="modal_consulta">
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="modal_consulta_edt_nome">Nome</label>
+                                    <input type="text" class="edt_nome form-control" id="modal_consulta_edt_nome" maxlength="150">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="modal_consulta_cbo_conexao">Conexão da Integração</label>
+                                    <select  class="cbo_conexao form-control selectpicker" id="modal_consulta_cbo_conexao" >
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 dx_grid_colunas">
+                            </div>
+
+                            <div class="col-md-12 div_parametros hidden">
+                                <div class="dx_listagem_parametros" style="padding-bottom: 35px;"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea class="edt_query form-control" rows="20" style="font-family: Monospace"></textarea>
+                                    <span class="text-muted pull-right">SQL</span>
+                                    <button type="button" class="btn_fullscreen btn btn-default pull-right" style="margin-right: 10px;" title="Tela cheia">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="chk_paginacao" >Paginação na consulta</label>
+                                    <br>
+                                    <input type="checkbox" id="chk_paginacao" class="form-control chk_paginacao"></input>
+                                    <br>
+                                    <span class="small text-muted">Não funciona no MS SQL Server 2008</span>
+                                </div>
+                            </div>
+                            <div class="col-md-12 text-muted">
+                                <i class="fa fa-info-circle"></i>
+                                Para incorporar condições adicionais dos campos de integração do formulário de processo à consulta de integração, utilize a tag {sql_condicao_customizada}. O local em que a tag for inserida será substituído pelo conteúdo correspondente às condições do campo de integração do formulário.
+                                <br>
+                                <br>
+                                <span style="cursor: pointer;" onclick="window.open(`${WS_URI}/manual/?i=pt-BR&p=log/BPM16241`, '_blank').focus();">
+                                    <i class="fa fa-question-circle"></i>
+                                    <span onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                                        Clique aqui para saber mais sobre essa funcionalidade.
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                    
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Unidade de Medida</li>
+</ol>
+
+<!-- LISTAGEM -->
+<div>
+	<nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+        <button type="button" class="somente_leitura btn_novo btn btn-primary">
+            <span class="glyphicon glyphicon-plus-sign"></span> Novo
+        </button>
+        <button type="button" class="btn_listar btn btn-default">
+            <span class="glyphicon glyphicon-refresh"></span> Listar
+        </button>
+        <button type="button" class="btn_configuracoes btn btn-default hidden">
+            <span class="glyphicon glyphicon-cog"></span> Configurações
+        </button>
+    </nav>
+
+    <div class="div_listagem">
+    	<table class="tab_listagem table table-striped table-hover">
+    		<thead>
+    			<tr class="hidden-xs">
+                    <th>Código</th>
+                    <th>Descrição</th>
+                    <th class="text-center">Decimal</th>
+                    <th class="text-center">Bloqueado</th>
+                    <th>&nbsp;</th>
+                </tr>
+    		</thead>
+    		<tbody>
+    			<tr template-row style="display: none;" class="row-fluid">
+
+    				<!-- mobile -->
+                    <td class="td-mobile visible-xs">
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn_editar btn btn-default">
+                                    <span class="somente_leitura glyphicon glyphicon-pencil"></span>
+                                </button>
+                                <button type="button" class="btn_excluir btn btn-default">
+                                    <span class="somente_leitura glyphicon glyphicon-trash"></span>
+                                </button>
+                                <button type="button" class="somente_visualizar hidden btn_visualizar btn btn-default">
+                                    <span class="glyphicon glyphicon-eye-open"></span> 
+                                </button>
+                            </div>
+                        </div>
+                        <h4 template-field="descricao">Descrição</h4>
+                    </td>
+                    <!-- mobile -->
+
+                    <!-- desktop -->
+                    <td template-field="codigo" class="hidden-xs">{codigo}</td>
+                    <td template-field="descricao" class="hidden-xs">{descricao}</td>
+                    <td template-field="qtde_casas_decimal" class="hidden-xs text-center">{qtde_casas_decimal}</td>
+                    <td class="text-center td_bloqueado">
+                        <span class="glyphicon" template-field="bloqueado"></span>
+                    </td>
+                    <td template-buttons="actions" class="hidden-xs">
+                    	<div class="btn-group pull-right">
+                    		<button type="button" class="somente_leitura btn_editar btn btn-default">
+                                <span class="glyphicon glyphicon-pencil"></span> Editar
+                            </button>
+                            <button type="button" class="somente_visualizar hidden btn_visualizar btn btn-default">
+                                <span class="glyphicon glyphicon-eye-open"></span> Visualizar 
+                            </button>
+                            <div class="btn-group somente_leitura">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a class="somente_leitura btn_visualizar" href="#">
+                                        Visualizar
+                                    </a></li>
+                                    <li><a class="somente_leitura btn_excluir" href="#">
+                                        Excluir
+                                    </a></li>
+                                </ul>
+                            </div>
+                    	</div>
+                    </td>
+                    <!-- desktop -->
+    			</tr>
+    		</tbody>
+    	</table>
+    </div>
+</div>
+<!-- /LISTAGEM -->

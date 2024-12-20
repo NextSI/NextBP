@@ -1,0 +1,229 @@
+<ol class="breadcrumb visible-xs">
+  <li class="active">Dashboard Entidades</li>
+</ol>
+ 
+<div class="row div_filtros" style="padding-top: 15px;">
+
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <div class="form-group">
+            <label for="edt_qtd_dias">Quantidade de dias.</label>
+            <input type="number" id="edt_qtd_dias" class="edt_qtd_dias form-control">
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="form-group">
+                    <label for="edt_day_start">Início</label>
+                    <input type="date" id="edt_day_start" min="1900-01-01" class="form-control edt_day_start">
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="form-group">
+                    <label for="edt_day_end">Fim</label>
+                    <input type="date" id="edt_day_end" min="1900-01-01" class="form-control edt_day_end">
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" style="padding-top:20px;">
+                <button type="button" class="btn btn-primary btn_search" style="margin-top:5px;margin-bottom:5px;">
+                    <span class="glyphicon glyphicon-search"></span> Filtrar
+                </button>
+                <button type="button" class="btn btn-default btn_limpar_filtro">
+                    Limpar Filtro
+                    <span class="glyphicon glyphicon-trash"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="div_principal hidden">
+    <div class="row" style="padding-top:15px;">
+        
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="panel panel-primary" style="background: #ddd; border: solid 1px white">
+                <div class="panel-heading">Segmentos que mais compram</div>
+                <div class="div_grafico_segmento" style="margin-right: 10px;">
+                </div>
+                
+                <div class="list-group div_segmento">
+                    <div class="alert hidden div_alert_segmentos_mais_compram" id="div_alert">
+                        <p class="text-muted">Nenhum segmento encontrado</p>
+                    </div>
+                    
+                    <a href="#" class="list-group-item" template-row="segmento" style="display: none">
+                        <div class="row">
+                            <div class="col-ls-6 col-md-6 col-sm-6 col-xs-6">
+                                <span class="text-info" template-field="segmento_nome">{segmento_nome}</span>
+                            </div>
+                            <div class="col-ls-6 col-md-6 col-sm-6 col-xs-6">
+                                <span class="pull-right" template-field="valor_negocio_segmento">{valor_negocio_segmento}</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-ls-6 col-md-6 col-sm-6 col-xs-6">
+                                <span class=" text-muted small" template-field="qtd_segmento">{qtd_segmento}</span>
+                            </div>
+                            <div class="col-ls-6 col-md-6 col-sm-6 col-xs-6">
+                                <span class="pull-right text-muted small" template-field="valor_medio_segmento">{valor_medio_segmento}</span>
+                            </div>
+                        </div>
+                    </a>
+                
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="panel panel-primary" style="background: #ddd; border: solid 1px white">
+                <div class="panel-heading">Entidades que mais compram</div>
+
+                <div class="div_grafico_cliente" style="margin-right: 10px;">
+                </div>
+
+                <div class="list-group div_cliente">
+                    <div class="alert hidden div_alert_mais_compram" id="div_alert">
+                        <p class="text-muted">Nenhuma entidade encontrada</p>
+                    </div>
+                    <a href="#" class="list-group-item" template-row="cliente" style="display: none;">
+
+                        <div class="row">
+                            <div class="col-ls-6 col-md-6 col-sm-6 col-xs-6">
+                                <span class="label" template-field="tipo">{tipo}</span>
+                                <span class="text-info" template-field="nome">{nome}</span>
+                            </div>
+                            <div class="col-ls-6 col-md-6 col-sm-6 col-xs-6">
+                                <span class="pull-right" template-field="valor">{valor}</span> 
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-ls-6 col-md-6 col-sm-6 col-xs-6">
+                                <span class=" text-muted small" template-field="qtd">{qtd}</span>
+                            </div>
+                            <div class="col-ls-6 col-md-6 col-sm-6 col-xs-6">
+                                <span class="pull-right text-muted small" template-field="valor_medio">{valor_medio}</span>
+                            </div>
+                        </div>
+                    </a>  
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="panel panel-primary" style="background: #ddd; border: solid 1px white">
+                <div class="panel-heading">Entidades que não compram há mais de <span class="lbl_qtd_dias"></span> dias.</div>
+                
+                <div class="div_grafico_cliente_nao_compram" style="margin-right: 10px;">
+                </div>
+
+                <div class="list-group div_cliente_nao_compram">
+                    <div class="alert hidden div_alert_nao_compram" id="div_alert">
+                        <p class="text-muted">Nenhuma entidade encontrada</p>
+                    </div>
+                    <a href="#" class="list-group-item" template-row="cliente" style="display: none;">
+
+                        <div class="row">
+                            <div class="col-ls-6 col-md-6 col-sm-6 col-xs-6">
+                                <span class="label" template-field="tipo">{tipo}</span>
+                                <span class="text-info" template-field="nome">{nome}</span>
+                            </div>
+                            <div class="col-ls-6 col-md-6 col-sm-6 col-xs-6">
+                                <span class="pull-right label label-danger" template-field="qtd_dias">{qtd}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-ls-12 col-md-12 col-sm-12 col-xs-12">
+                                <span class="text-muted text-left">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                    <span template-field="ultima_compra"></span>
+                                </span> 
+                            </div>
+                        </div>
+
+                    </a>  
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="border: solid 1px white">
+        <div class="div_grafico_cliente_linhas col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="col-sm-8 col-md-8 col-lg-8">
+            <div class="">
+                <label>Motivos de perda de negócio</label>
+                <table class="table table-striped tbl_qtd_motivos_perda">
+                    <thead>
+                        <tr>
+                            <th width="50%">Nome</th>
+                            <th width="25%" class="text-center">Quantidade</th>
+                            <th width="25%" class="text-right">Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- itens -->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Total</th>
+                            <td class="foot_total_qtd text-center"></td>
+                            <td class="foot_total_valor text-right"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="div_grafico_motivo_perda_negocio">
+
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="col-sm-8 col-md-8 col-lg-8">
+            <div class="">
+                <label>Origem de Oportunidades Ganhas</label>
+                <table class="table table-striped tbl_origem_qtd">
+                    <thead>
+                        <tr>
+                            <th width="50%">Origem</th>
+                            <th width="25%" class="text-center">Quantidade</th>
+                            <th width="25%" class="text-right">Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- itens -->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Total</th>
+                            <td class="foot_total_qtd text-center"></td>
+                            <td class="foot_total_valor text-right"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="div_grafico_origem_qtd">
+
+            </div>
+        </div>
+    </div>
+</div>

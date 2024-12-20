@@ -1,0 +1,79 @@
+<div class="modal bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal_processo_configuracoes_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_processo_configuracoes_label">Configurações</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <input type="checkbox" class="chk_gerar_codigo form-control checkbox_bootstrap_toggle" id="modal_processo_configuracoes_chk_codigo_automatico">
+                            <label for="modal_processo_configuracoes_chk_codigo_automatico">Utilizar controle de solicitações por processo</label>&nbsp;
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" class="chk_utilizar_nome_extenso form-control checkbox_bootstrap_toggle" id="modal_processo_configuracoes_chk_utilizar_nome_extenso">
+                            <label for="modal_processo_configuracoes_chk_utilizar_nome_extenso">Utilizar Cliente, Solicitante e Responsável por extenso</label>&nbsp;
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" class="chk_nome_padrao form-control checkbox_bootstrap_toggle" id="modal_processo_configuracoes_chk_nome_padrao">
+                            <label for="modal_processo_configuracoes_chk_nome_padrao">Utilizar nome padrão em documentos/anexos</label>&nbsp;
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><strong style="font-size: 14px;">Nome padrão de documentos vinculados à processos</strong><textarea style="margin-top: 5px;" type="text" class="form-control txt_processo_padrao_nome_documento" rows="5"></textarea>
+                    </div>
+                </div>
+                <div style="margin-top: 5px;">
+                    <strong>Tags:</strong>
+                    <br>
+                    {solicitacao_numero} = Número da Solicitação
+                    <br>
+                    {nome_processo} = Nome do processo
+                    <br>
+                    {nome_atividade} = Nome da atividade do processo
+                    <br>
+                    {nome_documento} = Nome do arquivo que está sendo enviado
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><strong style="font-size: 14px;">Nome padrão de documentos vinculados à formulário de processos</strong><textarea style="margin-top: 5px;" type="text" class="form-control txt_processo_padrao_nome_formulario" rows="5"></textarea>
+                    </div>
+                </div>
+                <div style="margin-top: 5px;">
+                    <strong>Tags:</strong>
+                    <br>
+                    {solicitacao_numero} = Número da Solicitação
+                    <br>
+                    {nome_processo} = Nome do processo
+                    <br>
+                    {nome_atividade} = Nome da atividade do processo
+                    <br>
+                    {nome_campo} = Nome do campo do formulário
+                    <br>
+                    {nome_documento} = Nome do arquivo que está sendo enviado
+                    <br>
+                    {solicitacao_atividade_id} = ID da Atividade da Solicitação
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><strong style="font-size: 14px;">Mensagem padrão para assinaturas de documentos D4Sign</strong><textarea style="margin-top: 5px;" type="text" class="form-control txtMsgPadraoD4Sign" rows="5"></textarea>
+                    </div>
+                </div>
+                <div style="margin-top: 5px;">
+                    <strong>Tags:</strong>
+                    <br>
+                    {solicitacao_numero} = Número (ID) da Solicitação
+                    <br>
+                    {endereco_nextbp} = Endereço de acesso ao Next BP (constante APP_URL do System.config.php)
+                </div>
+            </div>
+         <div class="modal-footer" style="bottom: 0px;">
+            <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+            <button type="button" class="btn_salvar btn btn-primary">Salvar</button>                
+        </div>
+    </div>
+</div>
+</div>

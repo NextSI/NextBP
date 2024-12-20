@@ -1,0 +1,165 @@
+<div class="modal bs-modal-md" tabindex="-1" role="dialog" aria-labelledby="modal_fornecedor_configuracoes_label" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_fornecedor_configuracoes_label">Configurações</h4>
+            </div>
+            <div class="modal-body">
+                <div class="panel panel-default painel_detalhes">
+
+                <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                    <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                        <li class="active lbl_tab_geral">
+                            <a id="modal_geral_tab" href="#modal_geral" role="tab" data-toggle="tab">Geral</a>
+                        </li>
+                        <li class="lbl_tab_personalizados">
+                            <a id="modal_personalizados_tab" href="#modal_personalizados" role="tab" data-toggle="tab">Campos Personalizados</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="modal_geral">
+                            <table class="table table-striped small">
+                                <tbody>
+                                    <tr>
+                                        <td class="text-left">
+                                            <label for="modal_fornecedor_configuracoes_chk_codigo_automatico">Código gerado automaticamente</label>
+                                        </td>
+                                        <td class="text-right">
+                                            <input type="checkbox" class="checkbox_bootstrap_toggle chk_gerar_codigo form-control" id="modal_fornecedor_configuracoes_chk_codigo_automatico">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">
+                                            <label for="modal_fornecedor_configuracoes_edt_codigo_zeros_esquerda">Preencher com zeros à esquerda do código</label>
+                                            <div class="small text-muted">Informe a quantidade máxima de casas a serem preenchidas. 0 para desativar</small>
+                                        </td>
+                                        <td class="text-right">
+                                            <input type="text" class="edt_codigo_zeros_esquerda form-control pull-right" style="width: 60px;" id="modal_fornecedor_configuracoes_edt_codigo_zeros_esquerda">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">
+                                            <label for="modal_fornecedor_configuracoes_chk_codigo_unidade_repetidos">Permitir Código e Unidade repetidos</label>
+                                        </td>
+                                        <td class="text-right">
+                                            <input type="checkbox" class="checkbox_bootstrap_toggle chk_codigo_unidade_repetidos form-control" id="modal_fornecedor_configuracoes_chk_codigo_unidade_repetidos">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">
+                                            <label for="modal_fornecedor_configuracoes_chk_razao_social">Razão Social obrigatório</label>
+                                        </td>
+                                        <td class="text-right">
+                                            <input type="checkbox" class="checkbox_bootstrap_toggle chk_razao_social form-control" id="modal_fornecedor_configuracoes_chk_razao_social">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">
+                                            <label for="modal_fornecedor_configuracoes_chk_nome_fantasia">Nome Fantasia obrigatório</label>
+                                        </td>
+                                        <td class="text-right">
+                                            <input type="checkbox" class="checkbox_bootstrap_toggle chk_nome_fantasia form-control" id="modal_fornecedor_configuracoes_chk_nome_fantasia">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">
+                                            <label for="modal_fornecedor_configuracoes_chk_tipo">Tipo obrigatório</label>
+                                        </td>
+                                        <td class="text-right">
+                                            <input type="checkbox" class="checkbox_bootstrap_toggle chk_tipo form-control" id="modal_fornecedor_configuracoes_chk_tipo">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">
+                                            <label for="modal_fornecedor_configuracoes_chk_cep">CEP obrigatório</label>
+                                        </td>
+                                        <td class="text-right">
+                                            <input type="checkbox" class="checkbox_bootstrap_toggle chk_cep form-control" id="modal_fornecedor_configuracoes_chk_cep">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">
+                                            <label for="modal_fornecedor_configuracoes_chk_endereco">Endereço obrigatório</label>
+                                        </td>
+                                        <td class="text-right">
+                                            <input type="checkbox" class="checkbox_bootstrap_toggle chk_endereco form-control" id="modal_fornecedor_configuracoes_chk_endereco">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">
+                                            <label for="modal_fornecedor_configuracoes_chk_numero">Número obrigatório</label>
+                                        </td>
+                                        <td class="text-right">
+                                            <input type="checkbox" class="checkbox_bootstrap_toggle chk_numero form-control" id="modal_fornecedor_configuracoes_chk_numero">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">
+                                            <label for="modal_fornecedor_configuracoes_chk_bairro">Bairro obrigatório</label>
+                                        </td>
+                                        <td class="text-right">
+                                            <input type="checkbox" class="checkbox_bootstrap_toggle chk_bairro form-control" id="modal_fornecedor_configuracoes_chk_bairro">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">
+                                            <label for="modal_fornecedor_configuracoes_chk_municipio">Município obrigatório</label>
+                                        </td>
+                                        <td class="text-right">
+                                            <input type="checkbox" class="checkbox_bootstrap_toggle chk_municipio form-control" id="modal_fornecedor_configuracoes_chk_municipio">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">
+                                            <label for="modal_fornecedor_configuracoes_chk_pais">País obrigatório</label>
+                                        </td>
+                                        <td class="text-right">
+                                            <input type="checkbox" class="checkbox_bootstrap_toggle chk_pais form-control" id="modal_fornecedor_configuracoes_chk_pais">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">
+                                            <label for="modal_fornecedor_configuracoes_chk_cnpj">CNPJ/CPF obrigatório</label>
+                                        </td>
+                                        <td class="text-right">
+                                            <input type="checkbox" class="checkbox_bootstrap_toggle chk_cnpj form-control" id="modal_fornecedor_configuracoes_chk_cnpj">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">
+                                            <label for="modal_fornecedor_configuracoes_chk_inscricao_estadual">Inscrição Estadual obrigatório</label>
+                                        </td>
+                                        <td class="text-right">
+                                            <input type="checkbox" class="checkbox_bootstrap_toggle chk_inscricao_estadual form-control" id="modal_fornecedor_configuracoes_chk_inscricao_estadual">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="tab-pane" id="modal_personalizados">
+                            <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+                                <label>Vincular Formulário</label>   
+                                <div class="form-group">
+                                    <select id="cbo_vincular_form" class="form-control selectpicker cbo_vincular_form show-tick" data-live-search="true" title="Vincular Formulário">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>                
+            </div>
+        </div>
+    </div>
+</div>
+
+

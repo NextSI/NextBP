@@ -1,0 +1,216 @@
+<div class="row">
+    <div class="col-md-12" style="padding-bottom: 10px;">
+        <button type="button" class="btn btn-default btn_cancelar">Cancelar</button>
+        <button type="button" class="btn btn-primary btn_confirmar">Confirmar</button>
+        <button type="button" class="btn btn-primary btn_excluir">Excluir</button>
+    </div>
+</div>
+
+<div class="panel panel-default painel_detalhes">
+
+	<div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+		<div class="pull-right">
+		<!-- -->
+		</div>
+		<ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+			<li class="active lbl_tab_geral">
+				<a id="modal_projeto_geral_tab" href="#modal_projeto_geral" role="tab" data-toggle="tab">Geral</a>
+		  </li>
+		  <li class="lbl_tab_equipe">
+			  <a id="modal_projeto_equipe_tab" href="#modal_projeto_equipe" role="tab" data-toggle="tab">Equipe</a>
+		  </li>
+		  <li class="lbl_tab_anexos">
+			  <a id="modal_projeto_anexos_tab" href="#modal_anexos" role="tab" data-toggle="tab">Anexos</a>
+		  </li>
+	</ul>
+	</div>
+
+	<div class="panel-body">
+		 <!-- Tab panes -->
+		<div class="tab-content">
+
+			<div class="tab-pane active  frm_detalhes" id="modal_projeto_geral">
+
+				<div class="row">
+					<div class="form-group col-sm-3">
+						<label for="edt_codigo">Codigo</label>
+						<input type="text" class="form-control edt_codigo" placeholder="Código" maxlength="11" data-toggle="tooltip">
+					</div>
+					<div class="form-group col-sm-3">
+						<label for='div_selecao_categoria'>Categoria</label>
+						<div class='div_selecao_categoria' id='div_selecao_categoria'></div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="descricao">Objetivo</label>
+					<textarea
+					class="form-control edt_objetivo" name="edt_objetivo" placeholder="Objetivo" rows="5" required></textarea>
+				</div>
+				<div id="div_datas" class="row div_datas">
+					<div class="form-group col-sm-6">
+						<label for="edt_nome">Início</label>
+						<input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_inicio">
+					</div>
+					<div class="form-group col-sm-6">
+						<label for="edt_nome">Fim</label>
+						<input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_fim">
+					</div>
+				</div>
+
+				<div class="row div_status">
+				  <div class="form-group col-sm-6">
+					  <label for="lbl_status">Status</label>
+					  <select  class="form-control cbo_status" data-live-search="true">
+						  <option value="0" selected >Não Iniciado</option>
+						  <option value="1">Andamento</option>
+						  <option value="2">Concluído</option>
+					  </select>
+				  </div>
+			  </div>
+		  </div>
+		  <div class="tab-pane" id="modal_projeto_equipe" class="modal_projeto_equipe">
+			  <div class="row">
+				 <div class="col-md-12">
+
+					 <table class="tab_equipe table table-striped">
+						 <thead>
+							 <tr>
+								 <th class="hidden-xs">Equipe</th>
+								 <th class="hidden-xs">Permissões</th>
+
+								 <th class="text-right" colspan="3" style="margin-right: 0px; padding-right: 0px">
+									 <!--a class="btn_add_usuario_responsavel btn btn-default">
+										 <span class="glyphicon glyphicon-plus"></span>
+									 </a-->
+									 <div>
+										 <div class="div_componente_usuario form-group"></div>
+									 </div>
+
+								 </th>
+
+							 </tr>
+						 </thead>
+						 <tbody>
+							 <tr template-row style="display: none">
+
+								 <!-- MOBILE -->
+								 <td class="visible-xs">
+									 <button type="button" class="btn_usuario_remover close pull-rigth" aria-hidden="true">&times;</button>
+									 <div class="row">
+										 <div class="col-xs-12">
+											 <span class="label lb_tipo" template-field="tipo" style="margin-right: 5px;"></span>
+											 <span template-field="nome">{nome}</span>
+										 </div>
+										 <div class="col-xs-6 div_esconder">
+											 <div class="form-group">
+												 <span class="small">Equipe</span>
+												 <div>
+													 <input class="chk_atividade" id="mobile"></input>
+												 </div>
+											 </div>
+										 </div>
+										 <div class="col-xs-6 div_esconder">
+										  <div class="form-group">
+												  <span class="small">Acompanhamento</span>
+												  <div>
+													  <input class="chk_acompanhamento" id="mobile"></input>
+												  </div>
+											  </div>
+										  </div>
+										 <div class="col-xs-6">
+											 <div class="form-group">
+												 <span class="small">Gerente</span>
+												 <div>
+													 <input class="chk_gerente" id="mobile"></input>
+												 </div>
+											 </div>
+										 </div>
+										 
+									 </div>
+								 </td>
+								 <!-- MOBILE -->
+
+								 <td class="hidden-xs">
+									 <span class="label lb_tipo" template-field="tipo" style="margin-right: 5px;"></span>
+									 <span template-field="nome">{nome}</span>
+								 </td>
+								 <td class="hidden-xs">
+									  <div class="div_gerente">
+										  <div class="form-group">
+											  <span class="small">Gerente</span>
+											  <div>
+												  <input class="chk_gerente"></input>
+											  </div>
+										  </div>
+									  </div>
+								  </td>
+								 <td class="hidden-xs">
+									 <div class="div_esconder">
+										 <div class="form-group">
+											 <span class="small">Equipe</span>
+											 <div>
+												 <input class="chk_equipe"></input>
+											 </div>
+										 </div>
+									 </div>
+								  </td>
+								  <td class="hidden-xs">
+									  <div class="div_esconder">
+										  <div class="form-group">
+											  <span class="small">Acompanhamento</span>
+											  <div>
+												  <input class="chk_acompanhamento"></input>
+											  </div>
+										  </div>
+									  </div>
+								  </td>
+									 <td class="hidden-xs text-right" style="margin-right: 0px; padding-right: 0px">
+									 <a class="btn_usuario_remover btn btn-default">
+										 <span class="glyphicon glyphicon-trash"></span>
+									 </a>
+									 </td>
+
+							 </tr>
+						 </tbody>
+					 </table>
+
+				 </div>
+			 </div>
+		  </div>
+		  <div class="tab-pane" id="modal_anexos">
+			  <div class="row">
+				  <div class="col-md-12">
+					  <table class="table table-striped" id="tbl_listagem_draft">
+						  <thead>
+							  <th>Arquivo</th>
+							  <th class="text-right">Tamanho</th>
+							  <th>&nbsp;</th>
+						  </thead>
+						  <tbody>
+							  <tr template-row style="display: none;">
+								  <td><a href="javascript:;" target="_blank" template-field="file">Arquivo</a></td>
+								  <td template-field="size" class="text-right">0</td>
+								  <td class="text-right">
+									  <a href="javascript:;" title="Remove" template-button="remove"><span class="glyphicon glyphicon-minus-sign text-muted"></span></a>
+								  </td>
+							  </tr>
+						  </tbody>
+					  </table>
+					  
+					  <div class="panel panel-default painel_anexos" style="min-height: 280px; border: 1px #ccc dotted; margin-top: 10px">
+						  <div class="panel-heading">Anexos</div>
+						  <div class="panel-body">
+							  <div class="files_upload text-center text-muted" id="div_files_upload_draft">
+								  <span class="glyphicon glyphicon-cloud-upload text-muted" style="font-size: 90px"></span>
+								  <div class="row" style="margin-top:18px">
+									  <a href="javascript:;" id="lbl_choose_file">Escolha o seu anexo</a>
+								  </div>
+							  </div>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+  </div>
+</div>

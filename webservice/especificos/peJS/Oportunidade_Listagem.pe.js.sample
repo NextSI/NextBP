@@ -1,0 +1,10 @@
+define([], function(){
+    var Oportunidade_Listagem_PE = function(main) {
+        'use strict';
+
+        console.log('Oportunidade_Listagem_PE');
+        console.log(main);
+    }
+
+    return Oportunidade_Listagem_PE;
+});

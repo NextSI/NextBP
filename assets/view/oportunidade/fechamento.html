@@ -1,0 +1,38 @@
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_fechamento_label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_fechamento_label">Fechamento da Oportunidade</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row"> 
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="edt_data_fechamento">Data de Fechamento</label>
+                            <input type="date" id="edt_data_fechamento" class="edt_data_fechamento form-control" placeholder="dd/mm/aaaa">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body div_empresa hidden">
+                <div class="row"> 
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="edt_data_fechamento">Empresa</label>
+
+                            <select class="form-control selectpicker cbo_empresas" data-live-search="true">
+                                <option selected disabled>Selecione uma empresa</option>
+                            </select>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>

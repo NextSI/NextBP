@@ -1,0 +1,99 @@
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="form-group">
+            <button class="btn btn-primary btn_importar hidden" type="button">
+                <i class="fa fa-cloud-download-alt" aria-hidden="true"></i>
+                    Importar
+            </button>
+            <button class="btn btn-default btn_refresh hidden" type="button">
+                <i class="fa fa-sync" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn-default btn_trocar_servidor hidden" type="button">
+                <i class="fa fa-sign-in-alt" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btn_configuracoes btn btn-default hidden">
+                <span class="glyphicon glyphicon-cog"></span> Configurações
+            </button>
+
+            <div class="btn-group div_usuarios hidden">
+                <select class="form-control cbo_usuarios" data-live-search="true" multiple data-selected-text-format="count > 1" title="Selecione os Usuários" data-toggle="tooltip" data-actions-box="true" data-deselect-all-text="Nenhum" data-select-all-text="Todos">
+                </select>
+            </div>
+
+            <div class="btn-group div_grupo_usuarios hidden">
+                <select class="form-control cbo_grupo_usuarios" data-live-search="true" multiple data-selected-text-format="count > 1" title="Selecione os Grupos" data-toggle="tooltip" data-actions-box="true" data-deselect-all-text="Nenhum" data-select-all-text="Todos">
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <table class="tab_listagem table table-striped table-hover">
+        <thead>
+            <tr class="">
+                <th class="visible-xs"><!-- mobile -->&nbsp;</th>
+                <th>Nome</th>
+                <th>Usuário AD</th>
+                <th>E-mail</th>
+                <th>Nivel</th>
+                <th>Área</th>
+                <th>Calendário de trabalho</th>
+                <th>Usuário BP</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- itens -->
+            <tr class="linha_importacao" template-row style="display: none;">
+                <td class=" nome" template-field="nome">{nome}</td>
+                <td class=" usuario_ad" template-field="usuario_ad">{usuario_ad}</td>
+                <td class=" email" template-field="email">{email}</td>
+                <td >
+                    <input type="number" min="1" max="100" class="edt_nivel form-control" required>
+                </td>
+                <td class="" template-field="area">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <select id="modal_usuario_cbo_area" class="cbo_area form-control" required></select>
+                            <div class="input-group-btn">
+                                <button type="button" class="btn_area_novo btn btn-default">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+
+                <td class="" template-field="calendario_trabalho">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <select id="modal_usuario_cbo_calendario_trabalho" class="cbo_calendario_trabalho form-control" required></select>
+                            <div class="input-group-btn">
+                                <button type="button" class="btn_calendario_trabalho_novo btn btn-default">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>   
+                </td>
+
+                <td>
+                    <div class="div_cbo_usuario_bp">
+                        <select id="cbo_usuario_bp" class="cbo_usuario_bp form-control select-multi-column" placeholder="Pesquisar por nome"></select>
+                    </div> 
+                </td>
+
+                <td class="" template-buttons="actions">
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn_remover btn btn-default">
+                            <span class="glyphicon glyphicon-trash"></span> Remover
+                        </button>
+                    </div>
+                </td>
+
+                
+            </tr>
+        </tbody>
+    </table>
+</div>

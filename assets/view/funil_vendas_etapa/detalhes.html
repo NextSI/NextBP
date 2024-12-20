@@ -1,0 +1,127 @@
+<!-- MODAL DETALHE -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_funil_vendas_etapa_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_funil_vendas_etapa_detalhes_label">Etapa</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="panel panel-default painel_detalhes">
+                    <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                        <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                            <li class="active lbl_tab_geral">
+                                <a id="modal_funil_geral_tab" href="#modal_funil_etapa_geral" role="tab" data-toggle="tab">Geral</a>
+                            </li>
+                            <li class="lbl_tab_config">
+                                <a id="modal_funil_config_tab" href="#modal_funil_etapa_vincular_processo" role="tab" data-toggle="tab">Vincular Processo</a>
+                            </li>                           
+                        </ul>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="tab-content">
+
+                            <div class="tab-pane active" id="modal_funil_etapa_geral">
+
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <div class="form-group">
+                                            <label for="modal_funil_vendas_etapa_edt_nome">Nome</label>
+                                            <input type="text" class="edt_nome form-control" id="modal_funil_vendas_etapa_edt_nome" maxlength="50">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">                    
+                                        <div class="form-group">
+                                            <label for="modal_funil_vendas_etapa_edt_probabilidade_negocio">%Probabilidade de Negócio</label>
+                                            <input type="text" class="edt_probabilidade_negocio form-control" id="modal_funil_vendas_etapa_edt_probabilidade_negocio">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <div class="form-group">
+                                            <label for="modal_funil_vendas_etapa_chk_notificar_negocio">Notificar negócio estagnado</label><br />
+                                            <input type="checkbox" class="checkbox_bootstrap_toggle chk_notificar_negocio form-control" id="modal_funil_vendas_etapa_chk_notificar_negocio">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 div_negocio_estagnado">                    
+                                        <div class="form-group">
+                                            <label for="modal_funil_vendas_etapa_edt_negocio_estagnado">Estagnado por dias inativo</label>
+                                            <input type="text" class="edt_negocio_estagnado form-control" id="modal_funil_vendas_etapa_edt_negocio_estagnado">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="modal_funil_etapa_vincular_processo">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Selecione o processo</label> <i class="fa fa-question-circle help_vincular_processo" aria-hidden="true"></i>
+                                            <div class="input-group" style="width: 100%;">
+                                                <select id="cbo_processo" class="form-control selectpicker cbo_processo show-tick" data-live-search="true" title="Escolha o Processo">
+                                                </select>
+                                                <div class="input-group-btn">
+                                                    <button type="button" class="btn_refresh_cbo_processo btn btn-default">
+                                                        <span class="fa fa-sync"></span>
+                                                    </button>
+                                                </div>
+                                                <div class="input-group-btn">
+                                                    <button type="button" class="btn_remove_cbo_processo btn btn-default">
+                                                        <span class="fa fa-times"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group div_atividades">
+                                            <label>Selecione a atividade</label>
+                                            <div class="input-group" style="width: 100%;">
+                                                <select class="form-control selectpicker cbo_atividades show-tick" data-live-search="true" title="Selecione a Atividade">
+                                                </select>
+                                                <div class="input-group-btn">
+                                                    <button type="button" class="btn_refresh_cbo_atividades btn btn-default">
+                                                        <span class="fa fa-sync"></span>
+                                                    </button>
+                                                </div>
+                                                <div class="input-group-btn">
+                                                    <button type="button" class="btn_remove_cbo_atividades btn btn-default">
+                                                        <span class="fa fa-times"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="modal_funil_vendas_etapa_chk_tornar_vinculo_obrigatorio">Permite avançar etapa somente se houver atividade concluída</label>
+                                            <i class="fa fa-question-circle help_tornar_vinculo_obrigatorio" aria-hidden="true"></i><br />
+                                            <input style="text-align: right" type="checkbox" class="checkbox_bootstrap_toggle chk_tornar_vinculo_obrigatorio form-control" id="modal_funil_vendas_etapa_chk_tornar_vinculo_obrigatorio">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Ok</button>
+                <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

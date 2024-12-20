@@ -1,0 +1,189 @@
+<div class="container update-container" style="height: calc(100vh - 35px);">
+    <div class="col-md-4 system-info hidden-xs">
+        <img src="assets/img/logo_next.png" alt="logo-next" width="250">
+        
+        <img src="assets/img/database-update.svg" alt="database-update" width="90" style="margin-top: 15px;">
+
+        <p class="text_next_bp">NEXT BP</p>
+        <p class="subtitle">Atualização da estrutura do banco de dados</p>
+
+        <ul class="informacoes_sistema">
+            <li><strong style="font-size: 16px;">Versão do sistema:</strong> <span class="info_versao" style="text-decoration: underline; cursor: pointer;"></span></li>
+            <li><strong style="font-size: 16px;">Atualizações pendentes:</strong> <span class="info_qtd_atualizacoes" style="text-decoration: underline; cursor: pointer;"></span></li>
+            <li>
+                <strong style="font-size: 16px;">Versão do PHP:</strong> 
+                <span class="info_php_version" style="text-decoration: underline; cursor: pointer;"></span>
+            </li>
+            <li><strong style="font-size: 16px;">Versão do MySQL:</strong> <span class="info_mysql_version" style="text-decoration: underline; cursor: pointer;"></span></li>
+        </ul>
+    </div>
+    <div class="col-md-8 div_info_php" style="display: none; overflow: scroll;"></div>
+    <div class="col-md-8 div_info_mysql" style="display: none; overflow: scroll;"></div>
+    <div class="col-md-8 update-progress">
+        <p class="subtitle">Progresso da atualização</p>
+
+        <label>Atualização da estrutura</label>
+        <div class="progress">
+            <div class="progress-bar barra_progresso_atualizacao" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                <span>0%</span>
+            </div>
+        </div>
+
+        <label>Atualização de recursos</label>
+        <div class="progress">
+            <div class="progress-bar barra_progresso_recursos" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                <span>0%</span>
+            </div>
+        </div>
+    
+        <pre class="painel_atualizacao_log"></pre>
+
+        <div class="modal versoes_modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="gridSystemModalLabel">Histórico de Atualizações</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="versoes"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="botoes">
+            <button type="button" class="btn_iniciar_atualizacao">Iniciar atualização</button>
+            <button type="button" class="btn_atualizar_recursos">Atualizar recursos</button>
+            <div class="dropup">
+                <button type="button" class="btn_reprocessar_central_de_pendencias dropdown-toggle" data-toggle="dropdown">Reprocessar central de pendências</button>
+                <ul class="menu_reprocessar_central_de_pendencias dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><a href="#admin" rota="agenda-evento">Agenda Evento</a></li>
+                    <li><a href="#admin" rota="tarefa-cartao">Tarefa Cartão</a></li>
+                    <li><a href="#admin" rota="chamado">Chamado</a></li>
+                    <li><a href="#admin" rota="documento-aprovacao-alcada">Documento Aprovação Alçada</a></li>
+                    <li><a href="#admin" rota="documento-distribuicao-controlada">Documento Distribuição Controlada</a></li>
+                    <li><a href="#admin" rota="processo-solicitacao-atividade">Processo Solicitação Atividade</a></li>
+                    <li><a href="#admin" rota="projeto-atividade">Projeto Atividade</a></li>
+                    <li><a href="#admin" rota="pdca-atividade">PDCA Atividade</a></li>
+                    <li><a href="#admin" rota="crm-oportunidade">CRM Oportunidade</a></li>
+                    <li><a href="#admin" rota="crm-oportunidade-orcamento">CRM Oportunidade Orçamento</a></li>
+                    <li><a href="#admin" rota="crm-oportunidade-agenda">CRM Oportunidade Agenda</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#admin" rota="">Todos (possibilidade de timeout)</a></li>
+                </ul>
+            </div>
+            <button type="button" class="btn_historico_atualizacoes">Histórico de Atualizações</button>
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+    :root {
+        --next-red: #bd0900;
+        --gray: #4F4F4F;
+        --lightgray: #D3D3D3;
+        --white: #FFF;
+        --blue-twitter: #2AA9E0
+    }
+
+    .subtitle {
+        color: var(--gray);
+        font-weight: bold; 
+        font-size: 17px;
+    }
+
+    .update-container {
+        display: flex; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 5px; 
+        background: var(--white);
+        padding: 15px; 
+        height: 900px;
+        box-shadow: 1px 1px 1px #ccc;
+        border-radius: 10px;
+        margin-top: 15px;
+    }
+
+    .system-info {
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        padding: 0 15px 0 0; 
+        border-right: 1px solid var(--lightgray);
+    }
+
+    .system-info p.text_next_bp { 
+        color: var(--next-red); 
+        font-weight: bold; 
+        font-size: 2.5rem; 
+        margin-top: 15px;
+    }
+
+    .informacoes_sistema {
+        list-style: none; 
+        padding: 0; 
+        line-height: 40px; 
+        margin-top: 30px;
+    }
+
+    .update-progress {
+        display: grid;
+        padding-left: 20px;
+        padding-top: 5px;
+        padding-right: 25px;
+    }
+
+    .painel_atualizacao_log {
+        height: calc(100vh - 285px);
+        width: 100%;
+        text-overflow: ellipsis;
+        background: #FFF;
+        box-shadow: 1px 1px 1px #ccc;
+    }
+
+    .update-progress button {
+        height: 5rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 0;
+        border-radius: 5px !important;
+
+        color: var(--white);
+        font-weight: 600;
+
+        transition: filter 0.2s;
+
+        /* width: 280px; */
+    }
+
+    .update-progress div.botoes {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .update-progress button.btn_iniciar_atualizacao {
+        background: var(--next-red);
+    }
+
+    .update-progress button.btn_atualizar_recursos {
+        background: var(--blue-twitter);
+    }
+
+    .update-progress button.btn_reprocessar_central_de_pendencias {
+        background: var(--blue-twitter);
+    }
+
+    .update-progress button:hover {
+        filter: brightness(0.9);
+    }
+
+    .update-progress button.btn_historico_atualizacoes {
+        background: var(--blue-twitter);
+    }
+</style>

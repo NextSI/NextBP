@@ -1,0 +1,99 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Região de Vendas</li>
+</ol>
+
+<!-- LISTAGEM -->
+<div>
+
+    <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+        <button type="button" class="btn_novo btn btn-primary">
+            <span class="glyphicon glyphicon-plus-sign"></span> Novo
+        </button>
+        <button type="button" class="btn_listar btn btn-default">
+            <span class="glyphicon glyphicon-refresh"></span> Listar
+        </button>
+    </nav>
+
+    <div class="col-sm-12 col-md-12 col-lg-12 div_tabela_atividade hidden">
+        <div class="panel panel-default">
+            <ul class="div_sinteticas esconde_ponto">
+
+            </ul>
+            <li class="li_template" template-sintetica style="cursor: pointer; padding-bot: 15px; padding-top: 15px; display: none;"> 
+                
+                <span class="glyphicon glyphicon-minus text-info" style="cursor: pointer;" template-button="btn_efect"></span>
+                
+                <span class="glyphicon glyphicon-forward" template-button="btn_detalhe"></span>
+                <span template-field="nome" template-button="btn_detalhe">{nome}</span>
+                <span class="glyphicon glyphicon-remove text-danger" template-button="btn_remove"></span>
+                <ul class="esconde_ponto" template-filhas style=" cursor: pointer; display: none;">
+
+                </ul>
+                
+            </li>            
+		</div>            
+	</div>    
+
+    <table class="tab_listagem table table-striped table-hover table-responsive">
+        <thead>
+            <tr>
+                <th>Regiões de Vendas</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>            
+            <tr template-row style="display: none; cursor: pointer;">
+                <td template-field="col_descricao"> 
+
+	                <span class="glyphicon glyphicon-minus text-primary" style="cursor: pointer;" template-button="btn_efect"></span>
+
+
+
+                    
+                        <!--<div class="btn-group btn-group-xs">
+                            <button class="btn btn-default">
+                                <span class="glyphicon glyphicon-minus"></span>
+                            </button>
+                        </div> -->
+                    
+
+
+	                
+	                <img template-button="btn_detalhe">
+	                <span template-field="descricao">{descricao}</span>
+
+                    <input type="text" template-field="input_descricao" class="hidden" style="width: 300px;">
+	           
+	                <span class="glyphicon glyphicon-remove text-danger hidden" template-button="btn_remove"></span>
+                	                	
+				</td>     
+				<td>
+	                <div class="btn-group pull-right btns_normal">
+	                    <button type="button" class="btn_insert btn btn-default">
+	                        <span class="glyphicon glyphicon-plus"></span>
+	                    </button>
+	                    <button type="button" class="btn_editar btn btn-default">
+	                        <span class="glyphicon glyphicon-pencil"></span>
+	                    </button>
+	                    <button type="button" class="btn_excluir btn btn-default">
+	                        <span class="glyphicon glyphicon-trash"></span>
+	                    </button>
+	                </div>	
+
+                    <div class="btn-group pull-right btns_insert_update hidden">
+                        <button type="button" class="btn_confirmar btn btn-primary">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </button>
+                        <button type="button" class="btn_cancelar btn btn-default">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </div>  
+
+				</td>           	
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<!-- /LISTAGEM -->

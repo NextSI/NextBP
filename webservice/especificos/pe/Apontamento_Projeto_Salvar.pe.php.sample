@@ -1,0 +1,12 @@
+<?php
+
+use \Sys\Util;
+use \Sys\Basic;
+use \Sys\Validation;
+use \Sys\DB;
+
+function apontamento_projeto_salvar_antes($apontamento_projeto_model) {    
+};
+
+function apontamento_projeto_salvar_depois($apontamento_projeto_model) {
+};

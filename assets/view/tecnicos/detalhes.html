@@ -1,0 +1,94 @@
+<!-- MODAL DETALHE -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_tecnicos_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_tecnicos_detalhes_label">Técnicos</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="modal_tecnicos_detalhes_label_codigo">Código</label>
+                            <input type="text" id="modal_tecnicos_detalhes_label_codigo" maxlength="50" class="form-control edt_codigo">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="modal_tecnicos_detalhes_label_usuario">Usuário</label>
+                           <select class="form-control cbo_usuario selectpicker"  id="modal_tecnicos_detalhes_label_usuario" data-size="10" data-live-search="true" data-show-subtext="true" id="cbo_usuario">
+                           </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="modal_tecnicos_detalhes_label_tipo">Tipo</label>
+                            <select class="form-control cbo_tipo selectpicker" id="modal_tecnicos_detalhes_label_tipo" data-size="10" data-live-search="true" id="cbo_tipo">
+                                <option value="I">Interno</option>
+                                <option value="E">Externo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="modal_tecnicos_detalhes_label_km">Valor KM (R$)</label>
+                            <input type="text" id="modal_tecnicos_detalhes_label_km" class="form-control edt_quilometragem">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="modal_tecnicos_detalhes_label_valor_projeto">Valor Projeto (R$)</label>
+                            <input type="text" id="modal_tecnicos_detalhes_label_valor_projeto" class="form-control edt_valor_projeto">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="modal_tecnicos_detalhes_edt_valor_refeicao">Valor da Refeição (R$)</label>
+                            <input type="text" id="modal_tecnicos_detalhes_edt_valor_refeicao" class="form-control edt_valor_refeicao">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="modal_tecnicos_detalhes_label_refeicao">Reembolso de Refeição</label>
+                            <br>
+                            <input type="checkbox" id="modal_tecnicos_detalhes_label_refeicao" class="form-control chk_reembolso_refeicao">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="modal_tecnicos_detalhes_label_despesas">Visualizar Despesas</label>
+                            <br>
+                            <input type="checkbox" id="modal_tecnicos_detalhes_label_despesas" class="form-control chk_visualiza_despezas">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="modal_tecnicos_detalhes_label_apontamentos">Visualizar Apontamentos</label>
+                            <br>
+                            <input type="checkbox" id="modal_tecnicos_detalhes_label_apontamentos" class="form-control chk_visualiza_apontamentos">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+                <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

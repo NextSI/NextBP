@@ -1,0 +1,121 @@
+<div class="modal bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal_processo_selecionar_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_processo_selecionar_label">Paramêtros</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <div class="form-group">
+                            <input type="radio" id="modal_processo_selecionar_label_chk_sintetico" class="chk_sintetico chk_tipo" name="tipo_relatorio" value="1">
+                            <label for="modal_processo_selecionar_label_chk_sintetico">Relatório Sintético</label>
+                            <br />
+                            <input type="radio" id="modal_processo_selecionar_label_chk_analitico" class="chk_analitico chk_tipo" name="tipo_relatorio" value="0">
+                            <label for="modal_processo_selecionar_label_chk_analitico">Relatório Analítico</label>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                        
+                        <div class="row">
+                            
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="edt_ini">Data de Solicitação Inicial</label>
+                                    <input type="date" min="1900-01-01" max="2222-12-31" id="edt_ini" class="edt_solicitacao_ini form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="edt_fim">Data de Solicitação Final</label>
+                                    <input type="date" min="1900-01-01" max="2222-12-31" id="edt_fim" class="edt_solicitacao_fim form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-6 div_analitico">
+                                <div class="form-group">
+                                    <label for="edt_ini">Data de Recebimento Inicial</label>
+                                    <input type="date" min="1900-01-01" max="2222-12-31" id="edt_ini" class="edt_recebimento_ini form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 div_analitico">
+                                <div class="form-group">
+                                    <label for="edt_fim">Data de Recebimento Final</label>
+                                    <input type="date" min="1900-01-01" max="2222-12-31" id="edt_fim" class="edt_recebimento_fim form-control">
+                                </div>
+                            </div> 
+                            
+                            
+
+                            <div class="col-md-6 div_analitico">
+                                <div class="form-group">
+                                    <label for="edt_ini">Data de Execução Inicial</label>
+                                    <input type="date" min="1900-01-01" max="2222-12-31" id="edt_ini" class="edt_execucao_ini form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 div_analitico">
+                                <div class="form-group">
+                                    <label for="edt_fim">Data de Execução Final</label>
+                                    <input type="date" min="1900-01-01" max="2222-12-31" id="edt_fim" class="edt_execucao_fim form-control">
+                                </div>
+                            </div> 
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="edt_codigo">N° Solicitação</label>
+                                    <input type="text" class="form-control edt_codigo" id="edt_codigo">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="edt_descricao">Descrição</label>
+                                    <input type="text" class="form-control edt_descricao" id="edt_descricao">
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                     <select id="cbo_processo" class="form-control selectpicker cbo_processo show-tick" multiple  data-size="5" title="Filtro por Processo" data-live-search="true"></select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 hidden">
+                                <div class="form-group">
+                                     <select id="cbo_responsavel" class="form-control selectpicker cbo_responsavel show-tick" multiple  data-size="5" title="Filtro por responsável" data-live-search="true"></select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                     <select id="cbo_solicitante" class="form-control selectpicker cbo_solicitante show-tick" multiple  data-size="5" title="Filtro por Solicitante" data-live-search="true"></select>
+                                </div>
+                            </div>
+                            
+                        </div>
+                       
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn btn-default btn_limpar_filtros" style="float: left;">
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Limpar Filtros
+                </button>
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_pesquisar btn btn-primary">Pesquisar</button>                
+            </div>
+        </div>
+    </div>
+</div>

@@ -23,5 +23,5 @@ jobs:
       run: |
         curl -X POST https://portalhomolog.nextsi.com.br/webservice/cli.php?argv=-dbu \
         -H "Content-Type: application/json" \
-        -H "Authorization: Bearer ${{ secrets.DBU_API_TOKEN }}" \
+        -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
         -d '{"status": "success", "message": "FTP deploy complete"}'

@@ -1,0 +1,90 @@
+<div class="col-md-12" style="padding-left:0">
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <button type="button" class="btn_salvar btn btn-primary">
+                <span class="far fa-save"></span>
+                Salvar
+            </button>
+            <button type="button" class="btn_cancelar btn btn-default">
+                <span class="fa fa-times"></span> 
+                Cancelar
+            </button>
+        </div>
+    </div>
+
+    <div class="col-md-6 div_cbo_consultor hidden">
+        <div class="form-group">
+            <select class="form-control selectpicker cbo_consultor" data-live-search="true">
+            </select>
+        </div>
+    </div>
+
+</div>  
+
+<div class="row" style="padding-bottom: 10px "> 
+
+    <div class="col-md-12">
+
+    <div class="panel panel-default" style="display: none;" template-row="atividade">
+        <button type="button" class="btn_exclui_atividade close" style="padding-right: 10px;padding-top: 5px;" aria-hidden="true">&times;</button>
+        <div class="panel-body">
+            <div class="col-md-12" style="padding: 0px;">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="modal_apontamento_edt_cliente">Cliente</label>
+                            <div class="form-group">
+                                <div template-field="div_componente_cbo_clientes" class="div_componente_cbo_clientes"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="modal_apontamento_edt_projeto">Projeto</label>
+                            <div class="form-group">
+                                <select class="form-control select-multi-column projeto_id" placeholder="Pesquisar por projeto" template-field="cbo_filtro_projeto"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="modal_apontamento_edt_projeto">Atividade</label>
+                            <div template-field="div_componente_atividades" class="div_componente_atividades"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label for="modal_apontamento_edt_porcentagem">%Conclusão</label>
+                            <input type="number" min="0" max="100" class="form-control text-center" template-field="porcentagem_atividade">
+                        </div>
+                    </div>
+                </div>    
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <div template-field="div_componente_apontamentos"></div>
+                    </div>
+                </div>   
+            </div>
+
+        </div>
+    </div>
+
+    <div class="div_todas_atividades"></div>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group" style="padding-top: 25px;">
+                <button type="button" class="btn_add_atividade btn btn-primary">Adicionar atividade  <span class="fa fa-plus"></span></button>
+            </div>
+        </div>   
+    </div>
+
+</div>
+</div>
+
+
+

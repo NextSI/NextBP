@@ -1,0 +1,217 @@
+
+    <div class="col-sm-12 col-md-12 col-lg-12" style="padding-left:0">
+
+        <button type="button" class="btn_salvar btn btn-primary">
+            <span class="glyphicon glyphicon-floppy-disk"></span>
+            Salvar
+        </button>
+        <button type="button" class="btn_excluir btn btn-default">
+            <span class="glyphicon glyphicon-trash"></span> 
+            Excluir
+        </button>
+        <button type="button" class="btn_cancelar btn btn-default">
+            <span class="glyphicon glyphicon-remove"></span> 
+            Cancelar
+        </button>
+
+    </div>  
+
+<div class="row" style="padding-bottom: 10px"> 
+
+
+    <div class="col-sm-12 col-md-12 col-lg-12">
+
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-2">
+            <div class="form-group">
+                <label for="modal_apontamento_edt_data">Data</label>
+                <input type="date" min="1900-01-01" max="2222-12-31" class="edt_data form-control">
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-8 col-lg-10 ">
+            <div class="form-group">
+                <label for="modal_apontamento_edt_consultor">Consultor</label>
+                <select class="form-control selectpicker cbo_consultor" data-live-search="true">
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="modal_apontamento_edt_cliente">Cliente</label>
+                <div class="div_component_cbo_clientes"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="modal_apontamento_edt_projeto">Projeto</label>
+                <div class="form-group">
+                    <select id="filtro_projeto_id" class="form-control cbo_projeto select-multi-column" placeholder="Pesquisar por projeto"></select>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="panel panel-default" style="display: none;" template-row="atividade">
+        <div class="panel-body">
+            <div class="row">
+
+                <div class="col-md-9" style="padding-top: 10px;">
+                    <div class="form-group">
+
+                        <!-- <label for="modal_apontamento_edt_atividade" >Atividade <span class="small" template-field="status"></span> </label>
+                        <div class="btn-group">
+                          <div class="input-group" style="width: 100%">
+                            <input type="text" class="form-control" template-field="edt_atividade" placeholder="Atividade do projeto" disabled />
+                            <span class="input-group-btn ">
+                                <button type="submit" class="btn btn-default"  template-button="btn_pesquisa_atividade">
+                                    <span class="glyphicon glyphicon-tasks"></span>
+                                </button>
+                            </span>
+                          </div>
+                        </div> -->
+
+                        <div class="form-group">
+                            <label for="modal_apontamento_edt_projeto">Atividade</label>
+                            <div template-field="div_componente_atividades" class="div_componente_atividades"></div>
+                        </div>
+
+                        <span class="small" template-field="horas_atividade"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="modal_apontamento_edt_porcentagem" style="padding-top: 10px;">% Conclusão</label>
+                        <input type="number" min="0" max="100" class="form-control text-center" template-field="porcentagem_atividade">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="modal_apontamento_edt_descricao">Descrição</label>
+                        <textarea class="form-control edt_descricao" name="mensagem" placeholder="Digite a descrição" rows="5" maxlength="3000"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row hidden div_anexos_carregados">
+                <div class="anexos col-xs-12 col-sm-12 col-md-12">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+
+                    <!-- ANEXOS -->
+
+                    <div class="panel panel-info">
+                        <div id="anexos" class="panel-body div_anexos">            
+                        </div>
+                        <div class="panel-footer">
+                            <button type="button" class="btn btn-default btn-sm btn_anexo">
+                                <span class="glyphicon glyphicon-paperclip"></span> Incluir anexo
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="anexo_base" class="row div_anexos_row hidden">
+                        <div class="col-md-8 col-sm-8">
+                          <label class="anexo_base_label" for="anexo_base_input"></label>
+                          <input class="anexo_base_input" type="file">
+                        </div>
+                        <div class="hidden col-md-4 col-sm-4">
+                          <label> Anexar no e-mail  <input class="checkbox" value="true"></input></label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="div_todas_atividades">
+
+        
+
+    </div>
+
+    <div class="row">
+        <div class="col-sm-8 hidden" style="padding-right: 0px;">
+            <div class="form-group pull-right">
+                <label for="modal_apontamento_edt_total_atividade">Horas Atividade</label>
+                <input type="time"  class="edt_total_atividade form-control text-center">
+            </div>
+        </div>        
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-2">
+            <div class="form-group">
+                <label for="modal_apontamento_edt_hora_inicio">Hora Inicial</label>
+                <div class="edt_hora_inicio"></div>
+            </div>
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-2">
+            <div class="form-group">
+                <label for="modal_apontamento_edt_hora_fim">Hora Final</label>
+                <div type="time" class="edt_hora_fim"></div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-2">
+            <div class="form-group">
+                <label for="modal_apontamento_edt_intervalo_inicio">Intervalo Inicial</label>
+                <div type="time" class="edt_intervalo_inicio"></div>
+            </div>
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-2">
+            <div class="form-group">
+                <label for="modal_apontamento_edt_intervalo_fim">Intervalo Final</label>
+                <div type="time" class="edt_intervalo_fim"></div>
+                <span class="small edt_subtotal"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-2">
+            <div class="form-group">
+                <label for="modal_apontamento_edt_traslado">Horas Traslado</label>
+                <div type="time" class="edt_traslado"></div>
+            </div>
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-2">
+            <div class="form-group">
+                <label for="modal_apontamento_edt_total">Total Horas</label>
+                <div type="time"  class="edt_total"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="dx_check_despesas" style="padding-top: 30px; padding-bottom: 20px;">
+            </div>
+            <div class="dx_despesas_formulario" style="display: none;">
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+

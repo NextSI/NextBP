@@ -1,0 +1,87 @@
+<!-- MODAL DETALHE -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_conexao_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_area_detalhes_label">Conexão do Banco de Dados</h4>
+                <div class="lbl_titulo_id pull-left text-muted small" style="left: 12px; position: absolute;"></div>
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="modal_banco_dados_edt_nome">Banco de Dados</label>
+                            <select  class="cbo_banco_dados form-control selectpicker" id="modal_banco_dados_edt_nome" >
+                                <option value="5">PDO DNS String</option>
+                                <option value="1">MySQL</option>
+                                <option value="2">SQL Server</option>
+                                <option value="3">Oracle</option>
+                                <!-- <option value="4">Firebird</option> -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="div_pdo_dns_string col-md-12" style="display: none;">
+                        <div class="form-group">
+                            <label for="modal_conexao_pdo_dns_string">PDO DNS String</label>
+                            <textarea class="edt_pdo_dns_string form-control" id="modal_solicitacao_cancelar_edt_motivo" maxlength="500" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <div class="div_database col-md-6">
+                        <div class="form-group">
+                            <label for="modal_conexao_database">Database (Schema, Service Name)</label>
+                            <input type="text" class="edt_database form-control" id="modal_conexao_database" placeholder="Nome da base de dados" maxlength="150">
+                        </div>
+                    </div>
+
+                    <div class="div_endereco col-md-6">
+                        <div class="form-group">
+                            <label for="modal_conexao_edt_endereco">Endereço</label>
+                            <input type="text" class="edt_endereco form-control" id="modal_conexao_edt_endereco" placeholder="Digite o endereço do banco de dados" maxlength="50">
+                        </div>
+                    </div>
+
+                    <div class="div_porta col-md-6">
+                        <div class="form-group">
+                            <label for="modal_conexao_porta">Porta</label>
+                            <input type="text" class="edt_porta form-control" id="modal_conexao_porta" placeholder="Padrão" maxlength="10">
+                        </div>
+                    </div>
+
+                    <div class="div_usuario col-md-6">
+                        <div class="form-group">
+                            <label for="modal_conexao_usuario">Usuário</label>
+                            <input type="text" class="edt_usuario form-control" id="modal_conexao_usuario" placeholder="Digite o Usuário de conexão" maxlength="150">
+                        </div>
+                    </div>
+
+                    <div class="div_senha col-md-6">
+                        <div class="form-group">
+                            <label for="modal_conexao_senha">Senha</label>
+                             <div class="input-group">
+                                <input type="password" class="edt_senha form-control" id="modal_conexao_senha" placeholder="Digite a Senha" maxlength="50">
+                                <span class="input-group-btn">
+                                    <button id="btn_esconder" class="btn btn-default btn_esconder" type="button">
+                                        <span id="ico_senha" class="glyphicon glyphicon-eye-open ico_senha"></span>
+                                    </button>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    
+                </div>
+                
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_testar_conexao btn btn-primary pull-left">Testar Conexão</button>
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+                <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

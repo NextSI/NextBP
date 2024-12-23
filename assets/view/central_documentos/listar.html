@@ -1,0 +1,699 @@
+    <div class="row" style="padding-right: 10px; padding-bottom: 10px;">
+        <div class="col-xs-12 col-sm-12 col-md-12" style="padding-right: 0px;">
+            <div class="pull-right">
+
+                
+                <div class="btn-group hidden div_configuracoes" title="Configurações">
+                    <button type="button" class="btn_config btn btn-default">
+                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="btn-group btn_exportar_excel">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <span class="glyphicon glyphicon-export"></span>
+                                Exportar
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
+                            <li class="dropdown-header"><i class="fa fa-file-excel" aria-hidden="true"></i>&nbsp;Excel (XLSX)</li>
+                            <li>
+                                <a href="#" class="btn_pasta_atual_xlsx active">
+                                    <i class="fa fa-file" aria-hidden="true"></i>
+                                    Documentos desta pasta
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn_pasta_atual_subpastas_xlsx">
+                                    <i class="fa fa-folder-open" aria-hidden="true"></i>
+                                    Documentos desta pasta e sub pastas
+                                </a>
+                            </li>
+                            <li class="dropdown-header"><i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp;CSV</li>
+                            <li>
+                                <a href="#" class="btn_pasta_atual_csv active">
+                                    <i class="fa fa-file" aria-hidden="true"></i>
+                                    Documentos desta pasta
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn_pasta_atual_subpastas_csv">
+                                    <i class="fa fa-folder-open" aria-hidden="true"></i>
+                                    Documentos desta pasta e sub pastas
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn_exibir_pastas btn btn-info">
+                        <span class="fa fa-folder" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn_exibir_ativos btn btn-info">
+                        <span class="fa fa-file" aria-hidden="true" style="margin-right: -15px;"></span>
+                        <span class="fa fa-check text-info" style="font-size: 10px;" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn_exibir_bloqueados btn btn-default">
+                        <span class="fa fa-ban" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn_exibir_expirados btn btn-default">
+                        <span class="fa fa-calendar-times" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn_refresh btn btn-default" title="Recarregar">
+                        <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="pull-left">
+
+                <div class="btn-group">
+                    <button type="button" class="btn_publicos active btn btn-default" title="Navegar">
+                        <span class="fa fa-folder-open"></span>
+                    </button>
+                    <button type="button" class="btn_pesquisar btn btn-default" title="Pesquisa">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                    <button type="button" class="btn_recente btn btn-default" title="Recentes">
+                        <span class="glyphicon glyphicon-time"></span>
+                    </button>
+                    <button type="button" class="btn_pendente btn btn-default" title="Aprovação pendente">
+                        <span class="glyphicon glyphicon-check"></span>
+                    </button>
+                </div>
+
+                <div class="btn-group">
+                
+                    <button class="btn btn-default btn_novo_documento btn_disable_wait" type="button" disabled>
+                        <span class="glyphicon glyphicon-file"></span>
+                            Novo Documento
+                    </button>
+                    <button type="button" class="btn btn-default dropdown-toggle btn_novo_documento_caret" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#" class="btn_nova_pasta btn_disable_wait" style="pointer-events: none;">
+                                <span class="fa fa-folder"></span>
+                                Nova Pasta
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn_envio_multiplo btn_disable_wait" style="pointer-events: none;">
+                                <span class="glyphicon glyphicon-cloud-upload"></span>
+                                Envio Multiplo
+                            </a>
+                        </li>
+                    </ul>
+                
+                </div>
+
+            </div>
+                
+                
+
+        </div>
+    </div>
+
+    <ul id="central_documentos_dashboard_context_menu_pasta" class="dropdown-menu context_menu_pasta" role="menu" aria-labelledby="central_documentos_dashboard_context_menu_pasta" >
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_abrir" data-context-menu="abrir">
+                <span class="fa fa-folder-open"></span>
+                Abrir
+            </a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_download_zip" data-context-menu="download_zip">
+                <span class="fa fa-download"></span>
+                Download (zip)
+            </a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_excluir_pasta_context" data-context-menu="excluir">
+                <span class="fa fa-trash"></span>
+                Excluir
+            </a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_copiar_pasta_context" data-context-menu="copiar">
+                <span class="far fa-copy"></span>
+                Copiar
+            </a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_recortar_pasta_context" data-context-menu="recortar">
+                <span class="fa fa-cut"></span>
+                Recortar
+            </a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_colar_pasta_context" data-context-menu="colar">
+                <span class="fa fa-clipboard"></span>
+                Colar
+            </a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_criar_atalho" data-context-menu="criar_atalho">
+                <span class="fa fa-external-link-alt"></span>
+                Criar Atalho
+            </a>
+        </li>
+        <li role="presentation" class="divider divider_propriedades"></li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_propriedades" data-context-menu="propriedades">
+                <span class="fa fa-edit"></span>
+                Propriedades
+            </a>
+        </li>
+        <li role="presentation" class="divider divider_escrita"></li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_nova_pasta">
+                <span class="fa fa-folder"></span>
+                Nova Pasta
+            </a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_novo_documento">
+                <span class="fa fa-file"></span>
+                Novo Documento
+            </a>
+        </li>
+    </ul>
+
+    <ul id="central_documentos_dashboard_context_menu_arquivo" class="dropdown-menu context_menu_arquivo" role="menu" aria-labelledby="central_documentos_dashboard_context_menu_arquivo">
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_download_zip" data-context-menu="download_zip">
+                <span class="fa fa-download"></span>
+                Download (zip)
+            </a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_download" data-context-menu="download">
+                <span class="fa fa-download"></span>
+                Download do Arquivo
+            </a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_nova_revisao" data-context-menu="nova_revisao">
+                <span class="fa fa-cloud-upload-alt"></span>
+                Enviar Nova Revisão
+            </a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_excluir_documento_context" data-context-menu="excluir">
+                <span class="fa fa-trash"></span>
+                Excluir
+            </a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_bloquear_documento_context" data-context-menu="bloquear">
+                <span class="fa fa-ban"></span>
+                Bloquear
+            </a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_copiar_documento_context" data-context-menu="copiar">
+                <span class="far fa-copy"></span>
+                Copiar
+            </a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_recortar_documento_context" data-context-menu="recortar">
+                <span class="fa fa-cut"></span>
+                Recortar
+            </a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_criar_atalho" data-context-menu="criar_atalho">
+                <span class="fa fa-external-link-alt"></span>
+                Criar Atalho
+            </a>
+        </li>
+        <li role="presentation" class="divider divider_propriedades"></li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_propriedades" data-context-menu="propriedades">
+                <span class="fa fa-edit"></span>
+                Propriedades
+            </a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_visualizar" data-context-menu="visualizar">
+                <span class="fa fa-window-maximize"></span>
+                Visualizar
+            </a>
+        </li>
+        <li role="presentation" class="divider divider_escrita"></li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_nova_pasta">
+                <span class="fa fa-folder"></span>
+                Nova Pasta
+            </a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_novo_documento">
+                <span class="fa fa-file"></span>
+                Novo Documento
+            </a>
+        </li>
+        <li role="presentation" class="divider divider_propriedades_clicksign"></li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_assinaturas_clicksign hidden" data-context-menu="assinaturas_clicksign">
+                <span class="fa fa-address-card"></span>
+                Assinaturas (Clicksign)
+            </a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_assinaturas_certsign hidden" data-context-menu="assinaturas_certsign">
+                <span class="fa fa-address-card"></span>
+                Assinaturas (Certsign)
+            </a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_assinaturas_d4sign hidden" data-context-menu="assinaturas_d4sign">
+                <span class="fa fa-address-card"></span>
+                Assinaturas (D4Sign)
+            </a>
+        </li>
+        <li role="presentation" class="divider divider_link_download"></li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_gerar_url_download" data-context-menu="gerar_url_download">
+                <i class="fa fa-link"></i>
+                Link para download
+            </a>
+        </li>
+    </ul>
+
+        <div class="col-md-3 div_arvore" style="margin:0; padding:0;">
+            <div class="panel panel-default" style="margin-bottom: 0px">
+                <span class="btn_refresh_tree pull-right btn-link glyphicon glyphicon-refresh" aria-hidden="true" style="margin: 10px;text-decoration: none;cursor: pointer;color: black;"></span>
+                <div class="panel-heading">
+                        Pastas
+                </div>
+                <div class="panel-body" style="overflow: hidden; padding: 0px 0px 10px 0px;">
+                        <div id="arvore"></div>
+                </div>
+            </div>
+        </div>
+
+<div class="col-md-9">
+    <div class="div_tabelas" style="width: 100%;">
+        <nav class="navbar navbar-default nav_publica" style="min-height: auto; margin-bottom: 2px;">
+            <div class="container-fluid" style="padding-left: 2px;">
+                
+                <ul class="nav navbar-nav" style="padding: 0px;">
+                    <li >
+                        <span template-path style="display: none;">
+                            <a href="#" class="lbl_pasta">{pasta}</a>
+                            <span> / </span>
+                        </span>
+                        <p class="navbar-text nav-path" style="margin-top: 2px; margin-bottom: 0px; margin-left: 0px;">
+                            <span class="fa fa-folder-open"></span>&nbsp;
+                            
+                            <span class="lbl_path">
+                                
+                            </span>
+                        </p>
+                    </li>
+                </ul>
+                
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <!--li>
+                        <a href="#" class="btn_lixeira">
+                            <span class="glyphicon glyphicon-trash"></span>
+                            Lixeira
+                        </a>
+                    </li-->
+                    
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" style="padding-top: 0px; padding-bottom: 0px;" data-toggle="dropdown" role="button" aria-expanded="false">Opções <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="#" class="btn_recarregar">
+                                    <span class="fa fa-sync"></span>
+                                    Recarregar
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn_renomear_pasta">
+                                    <span class="fa fa-edit"></span>
+                                    Propriedades da Pasta
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn_excluir_pasta">
+                                    <span class="fa fa-trash"></span>
+                                    Excluir Pasta
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn_copiar">
+                                    <span class="far fa-copy"></span>
+                                    Copiar
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn_recortar">
+                                    <span class="fa fa-cut"></span>
+                                    Recortar
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn_colar">
+                                    <span class="fa fa-clipboard"></span>
+                                    Colar
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.container-fluid -->
+        </nav>
+        
+        <p class="bg-warning hidden aviso_pendentes" style="margin-bottom: 0px;"></p>
+        
+        <!-- PESQUISA -->
+        <div class="row div_pesquisa hidden small">
+            
+            <!-- Path -->
+            <nav class="navbar navbar-default" style="min-height: auto; margin-bottom: 2px; margin-left: 10px;">
+                <div class="container-fluid" style="font-size: 11px; padding-left: 2px;">
+                    <ul class="nav navbar-nav" style="padding: 0px;">
+                        <li>
+                            <span template-path2 style="display: none;">
+                                <a href="#" class="lbl_pasta2">{pasta}</a>
+                                <span>/</span>
+                            </span>
+                            <p class="navbar-text nav-path" style="margin-top: 2px; margin-bottom: 0px; margin-left: 0px;">
+                                <span class="fa fa-folder-open"></span>
+                                &nbsp;
+                                <span class="lbl_path2"></span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <br>
+            <!-- Nome ou tag -->
+            <div class="col-xs-12 col-sm-4 col-md-4 div_edt_nome">
+                <div class="form-group">
+                    <label for="edt_pesq_documento">Filtro por nome, tag ou código</label>
+                    <input type="text" class="form-control edt_pesq_documento" id="edt_pesq_documento"/>
+                    <div class="btn-group hidden">
+                        <div class="input-group" style="width: 100%">
+                            <input type="text" class="form-control edt_pesq_documento"/>
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-default btn_pesquisa_documento">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Asssunto -->
+            <div class="col-xs-12 col-sm-4 col-md-4 div_assunto">
+                <div class="form-group">
+                    <label for="cbo_assunto">Filtro por assunto</label>
+                    <select class="form-control selectpicker cbo_assunto" id="cbo_assunto" data-live-search="true"></select>
+                </div>
+            </div>
+            
+            <!-- Tipo de Documento -->
+            <div class="col-xs-12 col-sm-4 col-md-4 div_tipo">
+                <div class="form-group">
+                    <label for="cbo_tipo">Filtro por tipo de documento</label>
+                    <select class="form-control selectpicker cbo_tipo" id="cbo_tipo" data-live-search="true"></select>
+                </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 div_refinar_filtro">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        
+                        <div>
+                            <input type="radio" id="refinar_filtro_nome_a" name="refinar_filtro_nome" value="A" class="refinar_filtro_nome" >
+                            <label for="refinar_filtro_nome_a">Nome completo</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="refinar_filtro_nome_b" name="refinar_filtro_nome" value="B" class="refinar_filtro_nome" checked>
+                            <label for="refinar_filtro_nome_b">Partes do nome</label>
+                        </div>
+                        
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right">
+                        
+                        <div>
+                            <input type="radio" id="refinar_filtro_tag_a" name="refinar_filtro_tag" value="A" class="refinar_filtro_tag" checked>
+                            <label for="refinar_filtro_tag_a">Documentos que contenham ao menos uma tag</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="refinar_filtro_tag_b" name="refinar_filtro_tag" value="B" class="refinar_filtro_tag">
+                            <label for="refinar_filtro_tag_b">Documentos que contenham todas as tags</label>
+                        </div>
+                        
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <br>
+            </div>
+            
+            <!-- Tipo de período -->
+            <div class="col-xs-12 col-sm-4 col-md-3 div_tipo_periodo">
+                <label for="cbo_tipo_periodo">Tipo de período</label>
+                <select class="form-control cbo_tipo_periodo" id="cbo_tipo_periodo">
+                    <option value="1">Tudo</option>
+                    <option value="2">Criação</option>
+                    <option value="3">Modificação</option>
+                </select>
+            </div>
+            
+            <!-- Período -->
+            <div class="col-xs-12 col-sm-8 col-md-9">
+                <div class="form-inline div_filtro_datas hidden">
+                    <label>&nbsp;</label><br>
+                    <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_day_start">
+                    até
+                    <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_day_end">
+                    <div class="clearfix">
+                        <br>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <button type="button" class="btn btn-primary btn_search">
+                    <span class="glyphicon glyphicon-search"></span> Pesquisar
+                </button>
+                
+                <!-- Limpar filtros -->
+                <button type="button" class="btn btn-default btn_limpar_filtros pull-right" style="position: relative; right: 14px;">
+                    <span class="glyphicon glyphicon-trash"></span> Limpar Filtros
+                </button>
+            </div>
+            
+            
+        </div>
+        <!-- FIM PESQUISA -->
+        
+        <!--div class="panel panel-default"-->
+        <a href="#" class="list-group-item" style="display: none;" template-pasta>
+            <span class="fa fa-folder"></span>
+            <span class="lbl_nome">{nome}</span>
+        </a>
+        <a href="#" class="list-group-item" style="display: none;" template-documento>
+            
+            <span class="fa fa-file"></span>
+            <span class="lbl_nome">{nome}</span>
+            <span class="small">
+                <span class="label label-default lbl_revisao">
+                    v.
+                    <span class="lbl_revisao_sequencia">
+                        {revisao}
+                    </span>
+                </span>
+            </span>
+            
+            <div class="small text-muted" style="margin-top: 3px;">
+                <span class="lbl_tamanho" style="margin-right: 10px;">
+                    {tamanho}
+                </span>
+                <span class="pull-right">
+                    <span class="lbl_modificado">
+                        {modificado}
+                    </span>
+                </span>
+            </div>
+        </a>
+        <div class="list_arquivos list-group">
+            <!-- documentos -->
+        </div>
+        
+        
+        <div class="clearfix"></div>
+        <table class="tab_listagem tabela_padrao_bp table table-striped table-bordered table-hover">
+            <thead>
+                <tr class="hidden-xs" style="cursor: pointer;">
+                    <th class="visible-xs"><!-- mobile -->&nbsp;</th>
+                    <th class="th_codigo text-center">Código</th>
+                    <th style="width: 30%; min-width: 30%" class="th_nome">Nome</th>
+                    <th style="width: 100px; min-width: 100px" class="hidden-xs hidden-sm hidden-md th_tag coluna_tag">Tag</th>
+                    <th class="hidden-xs th_situacao text-center">Situação</th>
+                    <th class="hidden-xs hidden-sm hidden-md th_data_aprovacao text-center">Aprovação</th>
+                    <th class="hidden-xs hidden-sm hidden-md th_assunto coluna_assunto text-center">Assunto</th>
+                    <th class="hidden-xs hidden-sm hidden-md th_tipo coluna_tipo text-center">Tipo</th>
+                    <th class="hidden-xs hidden-sm hidden-md text-center th_versao text-center">Versão</th>
+                    <th class="hidden-xs hidden-sm hidden-md text-right th_tamanho coluna_tamanho text-center">Tamanho</th>
+                    <th class="hidden-xs text-right th_modificacao text-center">Modificação</th>
+                    <th class="hidden-xs text-right th_data_vigencia text-center">Vigente até</th>
+                    <th class="hidden-xs hidden-sm text-center th_observacao">Observação</th>
+                    <th class="hidden-xs hidden-sm text-center">Favoritos</th>
+                    <th class="th_aprovacao">&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- itens -->
+                <tr template-row style="display: none; cursor: pointer;">
+                    <!-- mobile -->
+                    <td class="text-center">
+                        <div class="text-center">
+                            <span template-field="codigo" style="text-transform:uppercase;white-space: nowrap;">{codigo}</span>
+                        </div>
+                    </td>
+                    <td class="td-mobile visible-xs visible-sm">
+                        
+                        <div>
+                            <span class="fa fa-folder ico_pasta" style="display: none;"></span>
+                            <span class="fa fa-file ico_documento" style="display: none;"></span>
+                            <h4 template-field="nome" style="display: inline;">Nome</h4>
+                            <span class="ico_controle_acessos fa fa-lock small" style="display: none;"></span>
+                            <span class="ico_atalho fa fa-external-link-square-alt" style="display: none;"></span>
+                        </div>
+                        
+                        <div class="text-info">
+                            <div>
+                                <span template-field="tipo_documento">{tipo_documento}</span>
+                                <span class="ico_tipo_documento_controle_acessos fa fa-lock small" style="display: none;"></span>
+                            </div>
+                            <div template-field="tipo_usuario"></div>
+                        </div>
+                        
+                        <div class="text-info">
+                            <span>Versão</span>
+                            <span template-field="versao"></span>
+                            <span>de</span>
+                            <span template-field="modificacao"></span>
+                            <div class="pull-right">
+                                <span template-field="tamanho"></span>
+                            </div>
+                        </div>
+                        
+                    </td>
+                    <!-- /mobile -->
+                    <td class="hidden-xs" style="max-width: 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                        <span class="fa fa-folder ico_pasta" style="display: none;"></span>
+                        <span class="fa fa-file ico_documento" style="display: none;"></span>
+                        <span class="fa fa-external-link-square-alt ico_atalho" style="display: none;"></span>
+                        <span template-field="nome" class="coluna_nome">{nome}
+                        </span>
+                        <span class="ico_controle_acessos fa fa-lock small" style="display: none;"></span>
+                    </td>
+                    <td class="hidden-xs hidden-sm hidden-md coluna_tag" style="max-width: 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                        <div class="div_tag" data-toggle="tooltip" data-html="true">
+                            <span template-field="tag">{tag}</span>
+                        </div>
+                    </td>
+                    <td class="hidden-xs text-center">
+                        <div class="text-center">
+                            <span template-field="situacao">{situacao}</span>
+                        </div>
+                    </td> 
+                    <td class="hidden-xs hidden-sm hidden-md text-center">
+                        <div class="text-center">
+                            <span template-field="data_aprovacao">{data_aprovacao}</span>
+                        </div>
+                    </td>
+                    <td class="hidden-xs hidden-sm hidden-md text-center coluna_assunto">
+                        <span template-field="assunto">{assunto}</span>
+                        <span class="ico_assunto_controle_acessos fa fa-lock small" style="display: none;"></span>
+                    </td>
+                    <td class="hidden-xs hidden-sm hidden-md text-center coluna_tipo">
+                        <span template-field="tipo_documento">{tipo_documento}</span>
+                        <span class="ico_tipo_documento_controle_acessos glyphicon glyphicon-lock small" style="display: none;"></span>
+                    </td>
+                    <td class="hidden-xs hidden-sm hidden-md text-center" template-field="versao">{versao}</td>
+                    <td class="hidden-xs hidden-sm hidden-md text-center coluna_tamanho" template-field="tamanho" class="text-right">{tamanho}</td>
+                    <td class="hidden-xs text-center" template-field="modificacao" class="text-right">{modificacao}</td>
+                    <td class="hidden-xs text-center" template-field="data_vigencia" class="text-right">{data_vigencia}</td>
+                    <td class="hidden-xs hidden-sm text-center btn_observacoes">
+                        <span class="btn btn-link glyphicon glyphicon-comment btn_observacoes_img" style="text-decoration: none; display: none;"></span>
+                    </td>
+                    <td class="hidden" template-field="aprovacao">
+                        <a class="btn_download btn btn-default">
+                            <span class="glyphicon glyphicon-download"></span>
+                        </a>
+                        <a class="btn_aprovar btn btn-default">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </a>
+                        <a class="btn_reprovar btn btn-default">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </a>
+                    </td>
+                    <td class="text-center">
+                        <span class="glyphicon glyphicon-star-empty btn_favoritar_item" documento_id="18" documento_revisao_id="18" style="font-size: 15px;" data-toggle="tooltip" data-placement="top" title="Adicionar/Remover dos favoritos"></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <div class="dx_listagem_pendencias hidden"></div>
+        </div>
+        
+        <div style="position: relative; bottom: 20px;">
+            <div style="padding: 10px; padding-bottom: 0px; padding-top: 0; background-color: white;" class="text-center div_carregar_mais hidden">
+                <span class="btn btn-link btn_carregar_mais">
+                    <span class="txt_carregar_mais text-primary"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <span class="pull-right h5">
+                <div class="div_contador_arquivos">
+                    <div style=" font-size:14px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style:italic;">
+                        <span totalizador-pasta style="font-weight:bold;">0</span> pasta(s),
+                        <span totalizador-documento style="font-weight:bold;">0</span> documento(s).
+                    </div>
+                    <div style="font-style: italic;font-size:13px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-seri;text-align:right;margin-top:1.5px;">
+                        <span totalizador-geral style="font-weight:bold;">0</span> itens.
+                        
+                    </div>
+                </div>
+                <!-- <div class="div_contador_aprovacoes hidden">
+                    <div style=" font-size:14px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style:italic;">
+                        <span totalizador-aprovacoes style="font-weight:bold;">0</span> documento(s) aguardando aprovação.
+                    </div>
+                    <div style=" font-size:14px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style:italic;">
+                        <span totalizador-distribuicoes style="font-weight:bold;">0</span> documento(s) aguardando ações de distribuição.
+                    </div>
+                </div> -->
+            </span>
+        </div>
+        <!--/div-->
+    </div>
+    
+</div>

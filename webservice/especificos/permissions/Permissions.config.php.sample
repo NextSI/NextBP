@@ -1,0 +1,23 @@
+<?php
+use \Sys\Basic;
+
+class PermissionsEspecifico_Config extends \Sys\Permissions
+{
+    static function Register() {
+        Basic::LoadModel('Usuario');
+
+        $permissions = array(
+            'exempĺo_permissao_a' => array('especifico' => true, 'descricao' => 'Exemplo Permissão A', 'perfil' => Usuario_Model::USUARIO_TIPO_COLABORADOR),
+            'exempĺo_permissao_b' => array('especifico' => true, 'descricao' => 'Exemplo Permissão B', 'perfil' => Usuario_Model::USUARIO_TIPO_COLABORADOR),
+            'exempĺo_permissao_c' => array('especifico' => true, 'descricao' => 'Exemplo Permissão C', 'perfil' => Usuario_Model::USUARIO_TIPO_COLABORADOR),
+            'exempĺo_permissao_d' => array('especifico' => true, 'descricao' => 'Exemplo Permissão D', 'perfil' => Usuario_Model::USUARIO_TIPO_CLIENTE),
+            'exempĺo_permissao_e' => array('especifico' => true, 'descricao' => 'Exemplo Permissão E', 'perfil' => array(Usuario_Model::USUARIO_TIPO_CLIENTE, Usuario_Model::USUARIO_TIPO_PROSPECT)),
+            'exempĺo_permissao_f' => array('especifico' => true, 'descricao' => 'Exemplo Permissão F', 'perfil' => Usuario_Model::USUARIO_TIPO_CLIENTE),
+            'exempĺo_permissao_g' => array('especifico' => true, 'descricao' => 'Exemplo Permissão G', 'perfil' => Usuario_Model::USUARIO_TIPO_FORNECEDOR),
+            'exempĺo_permissao_h' => array('especifico' => true, 'descricao' => 'Exemplo Permissão H'), // quando o perfil não for informado, a permissão aparecerá para todos os perfis
+        );
+
+        return $permissions;
+    }
+
+}

@@ -1,0 +1,158 @@
+<!-- MODAL DETALHE -->
+<div class="popup"></div>
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_atividade_sintetica_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_atividade_sintetica_detalhes_label">Atividade Sintética</h4>
+            </div>
+
+            <div class="panel panel-default painel_detalhes">
+                <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                    <div class="pull-right">
+                        <!-- -->
+                    </div>
+                    <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                        <li class="active lbl_tab_geral">
+                            <a style="padding-top: 15px; padding-bottom: 15px; padding-right: 5px; padding-left: 5px;" href="#aba_geral" role="tab" data-toggle="tab" translate="generico.geral"></a>
+                        </li>
+                        <li class="lbl_tab_predecessora">
+                            <a style="padding-top: 15px; padding-bottom: 15px; padding-right: 5px; padding-left: 5px;" href="#aba_predecessora" role="tab" data-toggle="tab" translate="atividade_projeto.predecessora"></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="panel-body panel_substituto_usuario">
+                    <!-- Tab panes -->
+                    <div class="tab-content content_substituto_usuario">
+
+                        <div class="active tab-pane painel_geral" id="aba_geral">
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="">Código</label>
+                                            <input type="text" class="edt_codigo form-control" maxlength="50">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <label for="modal_atividade_sintetivca_edt_nome">Nome</label>
+                                            <input type="text" class="edt_nome form-control" id="modal_atividade_sintetivca_edt_nome" maxlength="70">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <div class="div_marco">
+                                                <label for="chk_marco">Marco</label><br />
+                                                <input type="checkbox" id="chk_marco" class="chk_marco checkbox_bootstrap_toggle">
+                                            </div>
+                                            <div class="div_excluir_filhas hidden">
+                                                <label for="chk_excluir_filhas">Excluir atividades filhas</label><br />
+                                                <input type="checkbox" id="chk_excluir_filhas" class="chk_excluir_filhas checkbox_bootstrap_toggle">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 div_atividade_sinteticas">
+                                        <div class="form-group">
+                                            <label class="label_atividade_sintetica">Atividade Sintética (Pai)</label>
+                                            <select class="form-control cbo_atividade_sinteticas selectpicker" data-live-search="true">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row" style="margin-bottom:10px;">
+
+                                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 ">
+                                        <label>Tipo Previsão de Início</label>
+                                        <select class="form-control cbo_tipo_previsao_inicio selectpicker">
+                                            <option value="0">O mais breve possível</option>
+                                            <option value="1">Deve iniciar em</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 ">
+                                        <label>Previsão de Início</label>
+                                        <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_previsao_inicio">
+                                    </div>
+                                
+                                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                        <label for="">Prazo Dias</label>
+                                        <input type="number" class="form-control edt_prazo_dias" disabled>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                        <label>Data Prazo</label>
+                                        <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_prazo_projeto">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane painel_predecessora" id="aba_predecessora">
+                            <div class="modal-body">
+                                <div class="div_atividades form-group" id="div_atividades">
+
+                                    <div class="dx_listagem_atividades_predecessoras"></div>
+        
+                                    <br>
+                                    <div>
+                                        <p>
+                                            <b>
+                                                Finish-to-Start (FS)
+                                                <span class="text-muted small">Término para Início</span>
+                                            </b>
+                                            <br>
+                                            O início de um trabalho de uma atividade sucessora depende do término da atividade predecessora.
+                                        </p>
+                                        <p>
+                                            <b>
+                                                Start-to-Start (SS)
+                                                <span class="text-muted small">Início para Início</span>
+                                            </b>
+                                            <br>
+                                            O início dos trabalhos de uma atividade sucessora depende do início dos trabalhos da atividade predecessora.
+                                        </p>
+                                        <p>
+                                            <b>
+                                                Finish-to-finish (FF)
+                                                <span class="text-muted small">Término para Término</span>
+                                            </b>
+                                            <br>
+                                            O término dos trabalhos de uma atividade sucessora depende do término dos trabalhos da atividade predecessora.
+                                        </p>
+                                        <p>
+                                            <b>
+                                                Start-to-Finish (SF)
+                                                <span class="text-muted small">Início para Término</span>
+                                            </b>
+                                            <br>
+                                            O término de uma atividade sucessora é dependente do início da atividade predecessora.
+                                        </p>
+                                        <p><b>Exemplo:</b><br>"Atividade Predecessora" to "Atividade Sucessora".</p>
+                                    </div>
+        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn_excluir" style="margin: 20px auto; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); text-align: center;">
+                <i class="fas fa-info-circle" style="font-size: 24px; color: #3498db; margin-bottom: 10px; display: inline-block;"></i>
+                <p style="display: inline-block; vertical-align: middle;">Você está prestes a excluir uma atividade sintética. Se você confirmar, quaisquer alterações não salvas serão perdidas. Tem certeza que deseja continuar?</p>
+            </div>
+            
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+                <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

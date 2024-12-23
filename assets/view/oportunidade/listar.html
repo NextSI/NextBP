@@ -1,0 +1,124 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="pull-left">
+
+            <div class="btn btn-sm btn-primary btn_novo">
+                Nova Oportunidade &nbsp;
+                <i class="fa fa-plus"></i>
+            </div><!--.btn.btn-sm.btn-success.btn_nova_oportunidade-->
+
+            <div class="btn-group" >
+                <div class="btn btn-sm btn-default  btn_opcoes_filtro"  aria-haspopup="true" aria-expanded="false" title="Filtros" data-placement="bottom">
+                    <i class="fa fa-filter"></i>&nbsp;
+                    <span class="sr-only">Filtros</span>
+                </div>
+                <button type="button" class="btn btn-sm btn-default" data-toggle="dropdown">
+                    <i class="caret"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li class="btn_limpar_filtro"><a href="#">Limpar Filtros</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="btn_configurar_filtros"><a href="#">Configurar Parâmetros</a></li>
+                </ul>
+            </div>
+            <!--Grupo [Exportação] -->
+            <div class="btn-group">
+                <div class="btn btn-sm btn-default btn_opcoes_exportacao" data-toggle="dropdown"   aria-haspopup="true" aria-expanded="false" title="Exportação" data-placement="bottom">
+                    <i class="far fa-file"></i><!-- icone .files -->
+                    &nbsp;
+                    <span class="caret"></span>    
+                    <span class="sr-only">Exportação</span>
+                </div><!-- .btn [Botão exportação] -->
+
+                <ul class="dropdown-menu dropdown-menu-left">
+                    <li class="dropdown-header"><i class="far fa-file"></i>&nbsp;Tipo Exportação</li><!-- Exportar PDF .btn_exportar_pdf-->
+                    <!-- <li class=" btn_pdf">
+                        <a href="#">
+                            <i class="fa fa-file-pdf"></i>&nbsp;Exportar PDF    
+                        </a>
+                    </li> -->
+                    <li class=" btn_excel">
+                        <a href="#">
+                            <i class="fa fa-file-excel"></i>&nbsp;Exportar Excel    
+                        </a>
+                    </li><!-- Exportar Excel .btn_exportar_excel-->
+                </ul><!--menu de opções .dropdown-menu -->
+
+            </div><!-- .btn-group  -->
+            <!--\Grupo [Exportação]-->
+
+            <!-- Grupo [Modo Visualização]-->
+            <div class="btn-group">
+                <div class="btn btn-sm btn-default btn_opcoes_modo_exibicao btn_mudar_visualizacao" data-toggle="tooltip" data-placement="bottom" title="Mudar visualização">
+                    <span class="fa fa-spinner fa-spin"></span>
+                </div>
+            </div><!--.btn-group-->
+
+            <div class="btn btn-sm btn-default btn_opcoes_modo_exibicao btn_compactar_cards" data-toggle="tooltip" data-placement="bottom" title="Compactar cards">
+                <span class="fab fa-elementor"></span>
+            </div>
+
+            <!-- Grupo [Modo Visualização]-->
+
+            <!-- Grupo [ Atualizar ]-->
+            <div class="btn-group">
+                <div class="btn btn-sm btn-default btn_refresh" data-placement="bottom" title="Atualizar" data-toggle="tooltip">
+                    <i class="fa fa-sync"></i>
+                </div><!-- Botão Atualizar .btn_atualizar -->
+            </div>
+            <!-- Grupo [ Atualizar ]-->
+
+            <div class="btn-group alert" style="margin-top:6px; margin-left:20px; padding: 5px; margin-bottom: 7px; background-color: #FFF">
+                <span class="glyphicon glyphicon-credit-card"></span>
+                <span>Total Geral: </span>
+                R$ <span class="lbl_total_geral_pipe">0,00</span>
+            </div>
+
+            <div class="btn-group text-info div_info_qtd_opt_selec hidden" style="margin-top:6px; margin-left:20px">
+                <span class="fa fa-info-circle"></span> Oportunidades selecionadas: <span class="qtd_oportunidades_selec"></span>
+            </div>
+
+            <!-- Grupo [ Pendencias ]-->
+            <div class="btn-group orcamentos_pendentes hidden" style="margin-top:6px; margin-left:20px; cursor: pointer;">
+                Orçamentos aguardando aprovação: <span class="count_orcamentos">0</span>
+            </div>
+            <!-- Grupo [ Pendencias ]-->
+
+        </div>
+        
+        <!-- Grupo [Funil de Vendas]-->
+        <div class=" pull-right" style="padding-right:0;">
+                <!--<label for="" style="margin-top:8px">Funil de Vendas</label>-->
+                <div class="cbo_funil_vendas"></div>
+                <div class="dropdown hidden">
+                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        Informe o funil de vendas &nbsp;
+                        <span class="caret"></span>
+                    </button><!--button-->
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdown-responsaveis">
+                            <li ><a href="#">  Todos </a></li>                                        
+                    </ul>
+                </div><!-- .dropdown -->
+                    <!--<select class="select-multi-column cbo_funil" placeholder="Funil de Vendas"></select>-->
+            <div class="">
+            </div><!--.col-md-->
+        </div><!-- Funil de Vendas .funil_vendas_id -->
+        <!-- Grupo [Funil de Vendas]-->
+
+        <div class="pull-right" style="padding-right: 0; margin-right: 10px; margin-top: 1px;">
+            <button type="button" class="btn btn-default btn_favoritar_funil" acao='favoritar' style="display: none;">
+                <span class="icone far fa-star"></span> <span class="texto">Favoritar</span>
+            </button>
+        </div>
+
+    </div><!--.col-md-12-->
+    <div class="clearfix"></div><!--.clearfix-->
+    <div class="col-md-12">
+        <!-- <div class="datagrid hidden "></div> -->
+        <div class="dx_kanban"></div>
+        <div class="dx_grid" style="padding-top: 10px;"></div>
+
+        <div class="context-menu"></div>
+    </div>
+</div>

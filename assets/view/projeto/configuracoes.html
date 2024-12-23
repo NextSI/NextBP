@@ -1,0 +1,89 @@
+<div class="modal bs-modal-md" tabindex="-1" role="dialog" aria-labelledby="modal_realtorio_configuracoes_label" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_realtorio_configuracoes_label">Configurações</h4>
+            </div>
+            <div class="modal-body">                
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <input type="checkbox" class="chk_sugerir_data_prazo form-control checkbox_bootstrap_toggle" id="chk_sugerir_data_prazo">
+                            <label for="chk_sugerir_data_prazo">Sugerir data prazo de atividades automaticamente
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12" style="padding-top: 10px; padding-bottom: 10px;">
+                        <b>Padrões ao criar um novo projeto:</b>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <input type="checkbox" class="chk_sugerir_codigo form-control checkbox_bootstrap_toggle" id="chk_sugerir_codigo"> 
+                            <label for="chk_sugerir_codigo">Sugerir código automaticamente</label>                       
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <input type="checkbox" class="chk_permite_alterar_padrao_apontamento checkbox_bootstrap_toggle">
+                            <label for="chk_permite_alterar_padrao_apontamento">Permite alterar valores padrão no apontamento despesa
+                                <span class="glyphicon glyphicon-info-sign" title="Esta configuração será sugerida ao criar um projeto."></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <input type="checkbox" class="chk_sugerir_despesas_no_apontamento_atividades checkbox_bootstrap_toggle">
+                            <label for="chk_sugerir_despesas_no_apontamento_atividades">Sugerir apontar despesas na tela de apontamento de atividades
+                                <span class="glyphicon glyphicon-info-sign" title="Esta configuração será sugerida ao criar um projeto."></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <label for="cbo_tipo_valor_padrao_refeicao">Sugerir no apontamento de despesas valor padrão de refeição do:
+                                <span class="glyphicon glyphicon-info-sign" title="Esta configuração será sugerida ao criar um projeto."></span>
+                            </label><br>
+                            <select id="cbo_tipo_valor_padrao_refeicao" class="form-control cbo_tipo_valor_padrao_refeicao selectpicker " data-live-search="true">
+                                <option value="0">Projeto</option>
+                                <option value="1">Técnico</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <label for="cbo_tipo_relatorio_despesas_cliente_refeicao">No relatório de despesas do cliente, considerar o valor da refeição:
+                                <span class="glyphicon glyphicon-info-sign" title="Esta configuração será sugerida ao criar um projeto."></span>
+                            </label><br>
+                            <select id="cbo_tipo_relatorio_despesas_cliente_refeicao" class="form-control cbo_tipo_relatorio_despesas_cliente_refeicao selectpicker " data-live-search="true">
+                                <option value="0">Informado pelo técnico no apontamento da despesa</option>
+                                <option value="1">Projeto</option>
+                                <option value="2">Técnico</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <input type="checkbox" class="chk_tipo_cancelamento_ignorar_prev_real form-control checkbox_bootstrap_toggle" id="chk_tipo_cancelamento_ignorar_prev_real">
+                            <label for="chk_tipo_cancelamento_ignorar_prev_real">Sugerir ignorar horas previstas e realizadas se atividade estiver "Cancelada"
+                                <span class="glyphicon glyphicon-info-sign" title="Esta configuração será sugerida ao criar um projeto."></span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="cbo_tipo_valor_padrao_refeicao">Formulário Personalizado:
+                                <span class="glyphicon glyphicon-info-sign" title="Formulário Personalizado que irá ficar vinculado aos projetos."></span>
+                            </label><br>
+                            <div class="div_componente_selecao_formulario"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>                
+            </div>
+        </div>
+    </div>
+</div>
+
+

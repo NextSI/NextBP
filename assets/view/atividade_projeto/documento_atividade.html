@@ -1,0 +1,47 @@
+<!-- MODAL DETALHE -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_anexo_atividade_label" aria-hidden="true">
+    <div class="modal-dialog  modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_anexo_atividade_label">Anexos desta Atividade</h4>
+            </div>
+            <div class="modal-body">
+
+                <table id="tab_documentos" class="table table-striped hidden tab_documentos">
+                  <thead>
+                    <tr>
+                      <th class="text-center">Autor</th>
+                      <th class="text-center th_documento">Documento</th>
+                      <th class="text-center th_modificacao">Modificação</th>
+                      <th class="text-center th_tamanho">Tamanho</th>
+                      <th class="text-center">&nbsp;</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr template-row style="display: none;">
+                      <td class="text-center" template-field="autor">{autor}</td>
+                      <td class="text-center" template-field="documento">{documento}</td>
+                      <td class="text-center" template-field="modificacao">{modificação}</td>
+                      <td class="text-center" template-field="tamanho">{tamanho}</td>
+                      <td class="text-center" template-field="btn_download" class="text-center">
+                        <button class="btn_download btn btn-default">
+                              <span class="glyphicon glyphicon-download-alt"></span> Download
+                          </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="alert hidden div_alert" id="div_alert">
+                  <p class="text-muted">Nenhum documento encontrado</p>
+                </div>
+                
+            </div>
+
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Sair</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

@@ -1,0 +1,83 @@
+<div class="modal bs-modal-md" tabindex="-1" role="dialog" aria-labelledby="modal_cliente_configuracoes_label" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_cliente_configuracoes_label">Configurações</h4>
+            </div>
+            <div class="modal-body">  
+
+                <div class="panel panel-default painel_detalhes">
+
+                    <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                        <div class="pull-right">
+                            <!-- -->
+                        </div>
+                        <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                            <li class="active lbl_tab_geral">
+                                <a id="modal_geral_tab" href="#li_tab_geral" role="tab" data-toggle="tab">Geral</a>
+                            </li>
+                            <li class="lbl_tab_personalizados">
+                                <a id="modal_personalizados_tab" href="#modal_personalizados" role="tab" data-toggle="tab">Campos Personalizados</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="panel-body">
+                         <!-- Tab panes -->
+                        <div class="tab-content">
+
+                            <div role="tabpanel" class="tab-pane active" id="li_tab_geral">
+
+                                <table class="table table-striped" >
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-left"><label for="modal_contato_configuracoes_email_obrigatorio">Tornar e-mail obrigatório</label></td>
+                                            <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_email_obrigatorio form-control" id="modal_contato_configuracoes_email_obrigatorio"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><label for="modal_contato_configuracoes_telefone_obrigatorio">Tornar telefone obrigatório</label></td>
+                                            <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_telefone_obrigatorio form-control" id="modal_contato_configuracoes_telefone_obrigatorio"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><label for="modal_contato_configuracoes_area_obrigatorio">Tornar área obrigatório</label></td>
+                                            <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_area_obrigatorio form-control" id="modal_contato_configuracoes_area_obrigatorio"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><label for="modal_contato_configuracoes_funcao_obrigatorio">Tornar função obrigatório</label></td>
+                                            <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_funcao_obrigatorio form-control" id="modal_contato_configuracoes_funcao_obrigatorio"></td>
+                                        </tr>
+                                        </tr>
+                                    </tbody>
+                                    
+                                </table>
+        
+                            </div>
+                            
+                             <div class="tab-pane frm_personalizados" id="modal_personalizados">
+                                <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 div_cbo_vincular_form">
+                                    <label>Vincular Formulário</label>   
+                                    <div class="form-group">
+                                        <select id="cbo_vincular_form" class="form-control selectpicker cbo_vincular_form show-tick" data-live-search="true" title="Vincular Formulário">
+                                        </select>
+                                    </div>
+                                </div>   
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>                
+            </div>
+        </div>
+    </div>
+</div>
+
+

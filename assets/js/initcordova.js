@@ -1,0 +1,1 @@
+var app_cordova={initialize:function(){this.bindEvents()},bindEvents:function(){},onDeviceReady:function(){},receivedEvent:function(n){}};

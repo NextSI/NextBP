@@ -1,0 +1,170 @@
+<ol class="breadcrumb visible-xs">
+  <li class="active" translate="historico_agenda.historico_agenda">Historico Agenda</li>
+</ol>
+<div class="visible-xs visible-sm">
+    <span class="row " style="border-bottom:1px solid #d2d2d2;">
+        <!-- <h4>Filtros</h4> -->
+        <div class="panel panel-default" style="margin-bottom:0px;">
+            <div class="" style="padding:5px;">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label style="margin-top:5px;" translate="historico_agenda.historico_agenda_filtros">
+                            Filtros
+                        </label>
+                        <div class="btn-group pull-right">
+                            <div class="btn btn-default btn-sm btn_atualizar">
+                                <span class="fa fa-sync"></span>
+                            </div>
+                            <div class="btn btn-primary btn-sm btn_abrir_filtros" data-visible="false">
+                                <span class="fa fa-filter"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>       
+            </div>
+
+        </div>
+    </span>
+</div>
+<div class="row" filtros>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="" translate="historico_agenda.historico_agenda_periodo">Período</label>
+                <select class="form-control cbo_periodo" id="cbo_periodo">
+                    
+                </select>
+            </div>
+            <div class="col-md-2 col-xs-6">
+                <label for="" translate="historico_agenda.historico_agenda_inicio">Início</label>
+                <input type="date" class="form-control edt_inicio">
+            </div>
+            <div class="col-md-2 col-xs-6">
+                <label for="" translate="historico_agenda.historico_agenda_fim">Fim</label>
+                <input type="date" class="form-control edt_fim">
+            </div>
+             <div class="col-md-4">  
+                <label for="cbo_de" translate="historico_agenda.historico_agenda_agenda_usuario">Agenda do usuário</label>
+                <select id="cbo_de" class="form-control cbo_de" data-live-search="true" multiple translate-title="selectpicker.todos">
+                    <optgroup translate-label="selectpicker.opcoes" class="opt_todos">
+                        <option value="-1" translate="selectpicker.todos">Todos</option>
+                    </optgroup>
+                    <optgroup translate-label="selectpicker.usuarios" class="opt_usuarios"></optgroup>
+                </select>
+            </div>
+           
+        </div>
+        <br>
+        <div class="row">   
+            <div class="col-md-12">
+                <div class="row">
+                   
+                    <div class="col-md-2">
+                        <label for="cbo_acao" translate="historico_agenda.historico_agenda_tipo_acao">Ação</label>            
+                        <select id="cbo_acao" class="form-control cbo_acao" multiple translate-title="selectpicker.todos">
+                            
+                        </select>
+                    </div>
+
+                    <div class="col-md-2">
+                        <label for="" translate="historico_agenda.historico_agenda_acao_usuario">Ação do usuário</label>
+                        <select name="" id="" class="form-control cbo_usuario_acao" translate-title="selectpicker.todos" multiple>
+                            <optgroup translate-label="selectpicker.opcoes" class="opt_todos">
+                                <option value="-1" translate="selectpicker.todos">Todos</option>
+                            </optgroup>
+                            <optgroup translate-label="selectpicker.usuarios" class="opt_usuarios"></optgroup>
+                        </select>
+                    </div>
+
+                     <div class="col-md-2">
+                        <!-- <br> -->
+                        <div class="clearfix" style="margin-bottom:5px;"></div><br>
+                        <span class="btn btn-primary btn_pesquisar" translate="historico_agenda.historico_agenda_pesquisar">
+                            Pesquisar
+                        </span>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix hidden-xs hidden-sm"></div><br>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <table class="tab_listagem table table-striped table-hover table-bordered table-responsive tabela_padrao_bp" data-table-name="historico_agenda">
+            <thead>
+                <tr>
+                    <th class="dia">
+                        <span class="orderby_dia orderbypointer" data-asc="" data-ordername="dia" translate="historico_agenda.historico_agenda_dia">
+                            Dia
+                            &nbsp;
+                            <span class="fa fa-sort-down icon_orderby hidden fa-fw"></span>
+                        </span>
+                    </th>
+                    <th class="de">
+                        <span class="orderby_dia orderbypointer" data-asc="" data-ordername="de" translate="historico_agenda.historico_agenda_agenda_usuario">
+                            Agenda do (Usuário)
+                            &nbsp;
+                            <span class="fa fa-sort-down icon_orderby hidden fa-fw"></span>
+                        </span>
+                    </th>
+                    <th class="detalhes">
+                        <span class="orderby_dia orderbypointer" data-asc="" data-ordername="detalhes" translate="historico_agenda.historico_agenda_detalhes">
+                            Detalhes
+                            &nbsp;
+                            <span class="fa fa-sort-down icon_orderby hidden fa-fw"></span>
+                        </span>
+                    </th>
+                    <th class="acao">
+                        <span class="orderby_dia orderbypointer" data-asc="" data-ordername="acao" translate="historico_agenda.historico_agenda_tipo_acao">
+                            Ação
+                            &nbsp;
+                            <span class="fa fa-sort-down icon_orderby hidden fa-fw"></span>
+                        </span>
+                    </th>
+                    <th class="acao_usuario">
+                        <span class="orderby_dia orderbypointer" data-asc="" data-ordername="acao_usuario" translate="historico_agenda.historico_agenda_acao_usuario">
+                            Ação do Usuário
+                            &nbsp;
+                            <span class="fa fa-sort-down icon_orderby hidden fa-fw"></span>
+                        </span>
+                    </th>
+                    <th class="acao_data">
+                        <span class="orderby_dia orderbypointer" data-asc="" data-ordername="acao_data" translate="historico_agenda.historico_agenda_periodo_data_acao">
+                            Dia da Ação
+                            &nbsp;
+                            <span class="fa fa-sort-down icon_orderby hidden fa-fw"></span>
+                        </span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="hidden" template-row>
+                    <td class="dia" data-bp-column="dia" >
+                        <div class="fix-mobile">
+                            <div class="dia" data-mobile-specific data-bp-column-header="Dia" data-bp-column-value="-"></div>
+                            <div class="acao_data" data-mobile-specific data-bp-column-header="Ação Data" data-bp-column-value="-"></div>
+                            <div class="acao" data-mobile-specific data-bp-column-header="Ação" data-bp-column-value="-"></div>
+                        </div>
+                    </td>
+                    <td class="de" data-bp-column="de" data-bp-column-header="Agenda De:"></td>
+                    <td class="detalhes" data-bp-column="detalhes" data-bp-column-header="Detalhes"></td>
+                    <td class="acao" data-bp-column="acao"></td>
+                    <td class="acao_usuario" data-bp-column="acao_usuario" data-bp-column-value="-" data-bp-column-header="Ação de"></td>
+                    <td class="acao_data" data-bp-column="acao_data" data-bp-column-value="-"></td>                  
+                </tr>
+            </tbody>
+            <tfoot>
+                <td colspan="6" style="text-align: left; background:#f5f5f5;">
+                    <span>
+                        <b template-field="totalizador">0</b>
+                        <span class="" translate="historico_agenda.historico_agenda_registros"> registros</span>
+                        <span class="btn btn-link btn_carregar_mais text-primary">
+                            <span class="txt_carregar_mais">Carregar mais registros</span>
+                        </span>
+                    </span>
+                </td>
+            </tfoot>
+        </table>
+    </div>
+</div>

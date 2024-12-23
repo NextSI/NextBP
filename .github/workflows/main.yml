@@ -1,0 +1,27 @@
+on: 
+  push:
+    branches:
+      - 23@7.2
+name: 🚀 Deploy on push versão 23 PHP 7.2
+jobs:
+  web-deploy:
+    name: 🎉 Deploy v23 PHP 7.2
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+    
+    - name: 📂 Sync files PortalDemo
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.ftp_host_portalhomolog }}
+        username: ${{ secrets.ftp_username_portalhomolog }}
+        password: ${{ secrets.ftp_password_portalhomolog }}
+        server-dir: ./
+
+    - name: 🔗 Call API after deploy PortalDemo
+      run: |
+        curl -X POST https://demo.nextsi.com.br/webservice/cli.php?argv=-dbu \
+        -H "Content-Type: application/json" \
+        -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
+        -d '{"status": "success", "message": "FTP deploy complete"}'

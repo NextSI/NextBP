@@ -1,0 +1,509 @@
+<!-- MODAL DETALHE -->
+<div class="modal bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal_formulario_campo_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_formulario_campo_label">Campo</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="panel panel-default painel_detalhes">
+
+                    <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                        <div class="pull-right">
+                            <!-- -->
+                        </div>
+                        <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                            <li class="active lbl_tab_geral">
+                                <a id="modal_geral_tab" href="#modal_geral" role="tab" data-toggle="tab">Geral</a>
+                            </li>
+                            <li class="lbl_tab_style">
+                                <a class="lbl_tab_style" id="modal_style_tab" href="#modal_style" role="tab" data-toggle="tab">Estilo CSS</a>
+                            </li>
+                            <li class="lbl_tab_eventos">
+                                <a class="lbl_tab_eventos" id="modal_eventos_tab" href="#modal_eventos" role="tab" data-toggle="tab">Eventos</a>
+                            </li>
+                                                       
+                        </ul>
+                    </div>
+
+
+                    <div class="panel-body">
+                             <!-- Tab panes -->
+                        <div class="tab-content">
+
+                            <div class="tab-pane frm_detalhes" id="modal_eventos">
+
+
+                                <div class="row">
+
+                                    <div class="col-md-4">
+                                        <div class="row">
+                                            <div class="col-md-12 div_opcoes_evento">
+                                                <div class="list-group">
+                                                    <a href="#" class="list_alterar list-group-item">
+                                                        Ao Alterar
+                                                    </a>
+                                                    <a href="#" class="list_selecionar active list-group-item">
+                                                        Ao Selecionar
+                                                    </a>
+                                                    <a href="#" class="list_limpar list-group-item">
+                                                        Ao Limpar
+                                                    </a>
+                                                    <a href="#" class="list_clicar list-group-item">
+                                                        Ao Clicar
+                                                    </a>
+                                                    
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label>Elementos:</label>
+                                                    <div class="div_elementos">
+
+
+                                                    </div>
+
+                                                    <span class="text-muted" template-field="elemento" style="display: none"></span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <div class="row">
+                                            <div class="col-md-12 div_clicar">
+                                                <div class="form-group">
+                                                    <textarea class="edt_clicar form-control" rows="10" style="font-family: Monospace"></textarea>
+                                                    <span class="text-muted pull-right">Javascript</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 div_selecionar">
+                                                <div class="form-group">
+                                                    <textarea class="edt_selecionar form-control" rows="10" style="font-family: Monospace"></textarea>
+                                                    <span class="text-muted pull-right">Javascript</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 div_limpar hidden">
+                                                <div class="form-group">
+                                                    <textarea class="edt_limpar form-control" rows="10" style="font-family: Monospace"></textarea>
+                                                    <span class="text-muted pull-right">Javascript</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 div_alterar hidden">
+                                                <div class="form-group">
+                                                    <textarea class="edt_alterar form-control" rows="10" style="font-family: Monospace"></textarea>
+                                                    <span class="text-muted pull-right">Javascript</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+
+                            <div class="tab-pane active frm_detalhes" id="modal_geral">
+                                <div class="row">
+
+                                    <div class="alert alert-warning campo_id_duplicado hidden" style="text-align: center">
+                                        <span href="#" class="alert-link"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                            <strong> Atenção! o ID deste campo está </strong> duplicado ! <strong>por gentileza, altere o ID de um dos campos.</strong>
+                                        </span>
+                                    </div>
+
+                                    <div class="col-md-6 div_nome_campo">
+                                        <div class="form-group">
+                                            <label for="modal_formulario_campo_edt_nome">Rótulo</label>
+                                            <input type="text" class="edt_nome form-control" id="modal_formulario_campo_edt_nome" maxlength="150">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="modal_formulario_campo_edt_id">ID do Campo</label>
+                                            <input type="text" class="edt_id_elemento form-control"   id="modal_formulario_campo_edt_id" maxlength="20">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row" style="margin-top: 10px;">
+                                    <div class="pull-left col-xs-12 col-sm-12 col-md-6 col-lg-6 div_width hidden">
+                                        <div class="form-group">
+                                            <label for="edt_tamanho_coluna">Tamanho da coluna</label>
+                                            <input type="text" class="edt_tamanho_coluna form-control" placeholder="Ex: 200px ou 20%">
+                                        </div>
+                                    </div>
+
+                                    <div class="pull-left col-xs-12 col-sm-12 col-md-6 col-lg-6 div_totalizador hidden div_cabecalho">
+                                        <div class="form-group">
+                                            <label for="modal_formulario_campo_cbo_totalizador">Totalizador</label>
+                                            <select class="cbo_totalizador form-control selectpicker" id="modal_formulario_campo_cbo_totalizador">
+                                                <option value="">Selecione</option>
+                                                <option value="1">Contagem</option>
+                                                <option value="2">Contagem com distinção</option>
+                                                <option value="3">Soma</option>
+                                                <option value="4">Média</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row" style="margin-top: 10px;"> 
+                                    <div class="col-sm-4">
+
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                <div class="form-group">
+                                                    <label for="modal_formulario_campo_cbo_tipo">Tipo</label>
+                                                    <select id="modal_formulario_campo_cbo_tipo" class="cbo_tipo form-control">
+                                                        <option value="0">Texto</option>
+                                                        <option value="8">Texto Fixo</option>
+                                                        <option value="1">Número Inteiro</option>
+                                                        <option value="2">Número Decimal</option>
+                                                        <option value="3">Opções</option>
+                                                        <option value="4">Máscara</option>
+                                                        <option value="5">Data</option>
+                                                        <option value="7">Anexo</option>
+                                                        <option value="9">Integração</option>
+                                                        <option value="10">Seleção de documentos</option>
+                                                        <option value="11">Caixa de Verificação</option>
+                                                        <option value="12">Botão</option>
+                                                        <option value="13">Editor de Texto</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 div_tipo_opcoes">
+                                                <div class="form-group">
+                                                    <div>
+                                                        <input type="radio" id="chk_option" class="chk_option check_tipo_opcoes" name="tipo_opcoes" value="1">
+                                                        <label for="chk_option" style="margin: 0px">Lista Suspensa (combobox)</label>
+                                                        <div class="small text-muted">Possível selecionar uma opção</div>
+                                                    </div>
+                                                    <div>
+                                                        <input type="radio" id="chk_option_multiplas" class="chk_option_multiplas check_tipo_opcoes" name="tipo_opcoes" value="4">
+                                                        <label for="chk_option_multiplas" style="margin: 0px">Lista Suspensa Multipla (combobox)</label>
+                                                        <div class="small text-muted">Possível selecionar multiplas opções</div>
+                                                    </div>
+                                                    <div>
+                                                        <input type="radio" id="chk_radio" class="chk_radio check_tipo_opcoes" name="tipo_opcoes" value="2">
+                                                        <label for="chk_radio" style="margin: 0px">Caixa de Seleção (radio)</label>
+                                                        <div class="small text-muted">Possível selecionar uma opção</div>
+                                                    </div>
+                                                    <div>
+                                                        <input type="radio" id="chk_verificacao" class="chk_verificacao check_tipo_opcoes" name="tipo_opcoes" value="3">
+                                                        <label for="chk_verificacao" style="margin: 0px">Caixa de Verificação (checkbox)</label>
+                                                        <div class="small text-muted">Possível selecionar multiplas opções</div>
+                                                    </div>
+                                                </div>
+                                            
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+
+                                    <div class="div_data col-sm-8">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="chk_retroativo">Não permitir data retroativa.</label>
+                                                    <input type="checkbox" id="chk_retroativo" class="chk_retroativo checkbox_bootstrap_toggle">
+                                                   
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                   
+                                                    <label for="chk_retroativo_igual">Não permitir data retroativa nem igual ao dia corrente.</label>
+                                                    <input type="checkbox" id="chk_retroativo_igual" class="chk_retroativo_igual checkbox_bootstrap_toggle">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="div_documento col-sm-4">
+                                        <div class="form-group">
+                                            <label>Pastas</label>
+                                            <div class="div_pasta"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="div_integracao col-sm-8">
+                                        <div class="form-group">
+                                            <label for="modal_formulario_campo_cbo_integracao">Consulta de Integração</label>
+                                            <div class="input-group">
+                                                <select  id="modal_formulario_campo_cbo_integracao" class="cbo_consulta_integracao form-control selectpicker" data-live-search="true">
+                                                </select>
+                                                <div class="input-group-btn">
+                                                    <button type="button" class="btn_visualizar_consulta btn btn-default">
+                                                        <span class="glyphicon glyphicon-info-sign"></span>
+                                                    </button>
+                                                    <button type="button" class="btn_nova_consulta btn btn-default">
+                                                        <span class="glyphicon glyphicon-plus"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="div_tamanho col-sm-4">
+                                        <div class="form-group">
+                                            <label for="modal_formulario_campo_edt_tamanho">Tamanho</label>
+                                            <input type="text" class="edt_tamanho form-control" id="modal_formulario_campo_edt_tamanho" maxlength="4">
+                                        </div>
+                                    </div>
+                                    <div class="div_linhas col-sm-4">
+                                        <div class="form-group">
+                                            <label for="modal_formulario_campo_edt_linhas">Linhas</label>
+                                            <input type="text" class="edt_linhas form-control" id="modal_formulario_campo_edt_linhas" maxlength="4">
+                                        </div>
+                                    </div>
+                                    <div class="div_decimais col-sm-4">
+                                        <div class="form-group">
+                                            <label for="modal_formulario_campo_edt_decimais">Casas Decimais</label>
+                                            <input type="text" class="edt_decimais form-control" id="modal_formulario_campo_edt_decimais" maxlength="2">
+                                        </div>
+                                    </div>
+                                    <div class="div_texto_fixo col-sm-8">
+                                        <div class="form-group">
+                                            <label for="modal_formulario_campo_edt_texto_fixo">Texto Fixo</label>
+                                            <textarea id="modal_formulario_campo_edt_texto_fixo" class="edt_texto_fixo form-control" rows="3" maxlength="3000"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="div_opcoes col-sm-8">
+                                        <div class="form-group">
+                                            <div class="grid_valores"></div>
+                                        </div>
+                                    </div>
+                                    <div class="div_anexo col-sm-8">
+                                        <div class="form-group">
+                                            <label for="modal_central_documentos_arquivo_cbo_assunto">Assunto</label>
+                                            <div class="input-group">
+                                                <select id="modal_central_documentos_arquivo_cbo_assunto" class="cbo_assunto form-control">
+                                                </select>
+                                                <div class="input-group-btn">
+                                                    <button type="button" class="btn_assunto_visualizar btn btn-default">
+                                                        <span class="glyphicon glyphicon-info-sign"></span>
+                                                    </button>
+                                                    <button type="button" class="btn_assunto_novo btn btn-default">
+                                                        <span class="glyphicon glyphicon-plus"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="modal_central_documentos_arquivo_cbo_tipo_documento">Tipo de documento</label>
+                                            <div class="input-group">
+                                                <select id="modal_central_documentos_arquivo_cbo_tipo_documento" class="cbo_tipo_documento form-control">
+                                                </select>
+                                                <div class="input-group-btn">
+                                                    <button type="button" class="btn_tipo_documento_visualizar btn btn-default">
+                                                        <span class="glyphicon glyphicon-info-sign"></span>
+                                                    </button>
+                                                    <button type="button" class="btn_tipo_documento_novo btn btn-default">
+                                                        <span class="glyphicon glyphicon-plus"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>                        
+                                    </div>
+                                </div>
+
+                                <div class="div_integracao_consulta div_integracao row hidden">
+                                    <div class="col-sm-4 ">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="modal_formulario_campo_opcoes_cbo_colunas">Descrição</label>
+                                            <select id="modal_formulario_campo_opcoes_cbo_colunas" class="cbo_colunas form-control selectpicker" data-live-search="true">
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 ">
+                                    </div>
+                                </div>
+
+                                <div class="div_integracao_consulta div_integracao row hidden">
+                                    <div class="col-sm-4 ">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="form-group">
+                                            <table class="table_condicao_integracao">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="100px">SQL</th>
+                                                        <th width="200px">Col</th>
+                                                        <th width="100px">Condi</th>
+                                                        <th width="200px">Form Camp</th>
+                                                        <th width="50px">
+                                                            <button class="btn btn-default btn_add_condicao_integracao">
+                                                                <span class="glyphicon glyphicon-plus"></span>
+                                                            </button>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr template-row="condicoes" style="display: none;">
+                                                        <td width="100px">
+                                                            <div class="form-group">
+                                                                <select class="form-control  cbo_ligacao"  data-width="100px">
+                                                                    <option value="">Selecione</option>
+                                                                    <option value="AND">AND</option>
+                                                                    <option value="OR">OR</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td width="200px">
+                                                            <div class="form-group">
+                                                                <select class="form-control  cbo_coluna" data-size="10" data-live-search="true" data-width="150px"></select>
+                                                            </div>
+                                                        </td>
+                                                        <td width="100px">
+                                                            <div class="form-group">
+                                                                <select class="form-control  cbo_condicao" data-width="100px">
+                                                                    <option value="">Selecione</option>
+                                                                    <option value="=">=</option>
+                                                                    <option value="!=">!=</option>
+                                                                    <option value="IN">IN</option>
+                                                                    <option value="NOT IN">NOT IN</option>
+                                                                    <option value="LIKE">LIKE</option>
+                                                                    <option value="&gt;">&gt;</option>
+                                                                    <option value="&gt;=">&gt;=</option>
+                                                                    <option value="&lt;">&lt;</option>
+                                                                    <option value="&lt;=">&lt;=</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td width="200px">
+                                                            <div class="form-group">
+                                                                <select class="form-control  cbo_campo_form" data-size="10" data-live-search="true" data-width="150px"></select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-default btn_excluir_condicao_integracao">
+                                                                <span class="glyphicon glyphicon-trash"></span>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+
+
+                                <div class="div_mascara row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="modal_formulario_campo_edt_mascara">Máscara</label>
+                                            <input type="text" class="edt_mascara form-control" id="modal_formulario_campo_edt_mascara">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <blockquote class="small">CPF <kbd>000.000.000-00</kbd>
+                                        <br>
+                                        CEP <kbd>00000-000</kbd>
+                                        <br>
+                                        Placa <kbd>AAA 0000</kbd>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <div class="div_colunas row" style="margin-top: 15px;">
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label for="modal_formulario_campo_edt_colunas">Colunas (Layout)</label>
+                                            <input type="text" class="edt_colunas form-control" id="modal_formulario_campo_edt_colunas" maxlength="2">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-8">
+                                        <blockquote class="small">Cada linha possui <kbd>12 colunas</kbd>, caso a quantidade de colunas para uma linha seja excedida, o campo será desenhado na linha de baixo
+                                        </blockquote>
+                                    </div>
+                                                      
+                                </div>
+
+                                <table class="table table-striped" >
+                                    <tbody>
+                                        <tr class="tr_exibir_previsao_imagem" class="display: hidden">
+                                            <td class="text-left"><label for="modal_formulario_campo_label_chk_exibir_previsao_imagem">Exibir previsão em miniatura de imagem no formulário</label></td>
+                                            <td class="text-right"><input type="checkbox" id="modal_formulario_campo_label_chk_exibir_previsao_imagem" class="chk_exibir_previsao_imagem checkbox_bootstrap_toggle"></td>
+                                        </tr>
+                                        <tr class="tr_obrigatorio">
+                                            <td class="text-left"><label for="modal_usuario_chk_obrigatorio">Tornar este campo obrigatório no preenchimento do formulário</label></td>
+                                            <td class="text-right"><div style="display: flex; justify-content: flex-end;"><div class="selectBox_obrigatorio"></div><div class="btn_obrigatorio_condicao" style="margin-left: 10px;"></div></div></td>
+                                        </tr>
+                                        <tr class="tr_bloqueado">
+                                            <td class="text-left"><label for="modal_usuario_chk_bloqueado">Tornar este campo bloqueado no preenchimento do formulário</label></td>
+                                            <td class="text-right"><div style="display: flex; justify-content: flex-end;"><div class="selectBox_bloqueado"></div><div class="btn_bloqueado_condicao" style="margin-left: 10px;"></div></div></td>
+                                        </tr>
+                                        <tr class="tr_oculto">
+                                            <td class="text-left"><label for="modal_usuario_chk_oculto">Tornar este campo oculto no preenchimento do formulário</label></td>
+                                            <td class="text-right"><div style="display: flex; justify-content: flex-end;"><div class="selectBox_oculto"></div><div class="btn_oculto_condicao" style="margin-left: 10px;"></div></div></td>
+                                        </tr>
+                                        <tr class="tr_exibir_descricao">
+                                            <td class="text-left"><label for="modal_chk_exibir_descricao">Exibir este campo na descrição da solicitação em andamento</label>&nbsp;</td>
+                                            <td class="text-right"><input type="checkbox" class="chk_exibir_descricao checkbox_bootstrap_toggle" id="modal_chk_exibir_descricao"></td>
+                                        </tr>
+                                        <tr class="tr_exibir_coluna" style="display: none">
+                                            <td class="text-left"><label for="modal_chk_exibir_coluna">Exibir este campo como uma coluna na grid de listagem <span class="glyphicon glyphicon-info-sign" title="Atualmente essa função está habilitada apenas para a grid de projetos, com formulários vinculados" data-toggle="tooltip"></span></label>&nbsp;</td>
+                                            <td class="text-right"><input type="checkbox" class="chk_exibir_coluna checkbox_bootstrap_toggle" id="modal_chk_exibir_coluna"></td>
+                                        </tr>
+                                        <tr class="tr_exibir_impressao">
+                                            <td class="text-left"><label for="modal_chk_exibir_impressao">Exibir este campo na impressão (E-Mail/PDF)</label>&nbsp;</td>
+                                            <td class="text-right"><input type="checkbox" class="chk_exibir_impressao checkbox_bootstrap_toggle" id="modal_chk_exibir_impressao"></td>
+                                        </tr>
+                                        <tr class="tr_selecao_multipla_integracao">
+                                            <td class="text-left">
+                                                <label for="modal_chk_selecao_multipla_integracao">Permitir seleção múltipla em campos de integração (apenas campos de tabelas com linhas dinâmicas)</label>&nbsp;
+                                                <br />
+                                                <small style="cursor: pointer;" onclick="window.open('https://portal.nextsi.com.br/webservice/index.php/manual/?i=pt-BR&p=log/BPM5344', '_blank').focus();">
+                                                    Clique aqui para saber mais sobre esta funcionalidade
+                                                </small>
+                                            </td>
+                                            <td class="text-right"><input type="checkbox" class="chk_selecao_multipla_integracao checkbox_bootstrap_toggle" id="modal_chk_selecao_multipla_integracao"></td>
+                                        </tr>
+                                    </tbody>
+                                    
+                                </table>
+                                
+                            </div>
+
+                            <div class="tab-pane frm_detalhes" id="modal_style">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label>Propriedades de estilo CSS</label>
+                                            <textarea class="edt_style form-control" rows="4" style="font-family: Monospace; resize: vertical;"></textarea>
+                                            <span class="text-muted pull-right">CSS</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                                                  
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <div class="pull-left">
+                    <button type="button" class="btn_remover btn btn-sm btn-default">Remover</button>
+                </div>
+
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

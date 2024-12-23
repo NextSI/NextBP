@@ -1,0 +1,39 @@
+<!-- MODAL DETALHE -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_area_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_area_detalhes_label">Atuação Efetiva</h4>
+            </div>
+            <div class="modal-body">
+                <p>Tem certeza que deseja excluir esta Matriz de Atuação Efetiva? Esta ação não poderá ser desfeita.</p>
+
+                <div class="form-group div_selecao_indicador">
+                    <label>Escolha o indicador que você irá trabalhar</label>
+                    <div class="form-group pull-left">
+                        <input style="margin-right:6px" value="1" class="radio_indicador pull-right" name="radio_show" type="radio" checked="checked"></input>
+                    </div>
+                    <select class="form-control selectpicker cbo_novo_indicador" data-live-search="true">
+                    <option selected disabled>Selecione um indicador</option>
+                    </select>
+                </div>
+
+                <div class="form-group div_novo_indicador">
+                    <label for="edt_indicador">Novo Indicador</label>
+                    <div class="form-group pull-left">
+                        <input style="margin-right:6px" value="2" class="radio_indicador pull-right" name="radio_show" type="radio"></input>
+                    </div>
+                    <input type="text" class="edt_indicador form-control" id="edt_indicador" maxlength="150">
+                </div>
+                
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+                <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

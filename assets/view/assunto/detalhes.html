@@ -1,0 +1,144 @@
+<!-- MODAL DETALHE -->
+<div class="modal bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal_assunto_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+
+                <h4 class="modal-title" id="modal_assunto_detalhes_label">Segurança do Assunto</h4>
+            </div>
+            <div class="modal-body">
+                <div class="panel panel-default painel_detalhes" style="-webkit-box-shadow: none; box-shadow: none;">
+                    <div class="panel-body">
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="row div_responsavel_obrigatorio">
+                                <div class="col-sm-12">
+                                    <input id="modal_assunto_chk_controle_acessos" class="chk_controle_acessos checkbox_bootstrap_toggle" type="checkbox" value="">&nbsp;
+                                    <label style="font-weight: bold;" for="modal_assunto_chk_controle_acessos">Habilitar controle de acessos a documentos e pastas deste assunto</label>
+                                </div>
+                            </div>
+
+                            <div class="div_permissoes row" style="display: none">
+                                <div class="col-md-12">
+
+                                    <div class="table-responsive" style="padding-bottom: 0px;">
+                                        <table class="tab_permissoes table">
+                                            <thead>
+                                                <th>Usuário</th>
+                                                <th style="width: 80px"><span class="lbl_visualizacao">Visualização</span></th>
+                                                <th style="width: 80px"><span class="lbl_download">Download</span></th>
+                                                <th style="width: 80px"><span class="lbl_escrita">Escrita</span></th>
+                                                <th style="width: 80px"><span class="lbl_exclusao">Exclusão</span></th>
+                                                <th style="width: 80px"><span class="lbl_revisao">Revisão</span></th>
+                                                <th style="width: 80px"><span class="lbl_seguranca">Segurança</span></th>
+                                                <th class="text-right" style="width: 80px; margin-right: 0px; padding-right: 0px">
+                                                    <a class="btn_add_usuario btn btn-default">
+                                                        <span class="glyphicon glyphicon-plus"></span>
+                                                    </a>
+                                                </th>
+                                            </thead>
+                                            <tbody>
+                                                <tr template-row style="display: none">
+                                                    <td>
+                                                        <span class="img_usuario glyphicon glyphicon-user" aria-hidden="true"></span>
+                                                        <span class="lbl_nome"></span>
+                                                    </td>
+                                                    <td>
+                                                        <input class="chk_visualizacao">
+                                                    </td>
+                                                    <td>
+                                                        <input class="chk_download">
+                                                    </td>
+                                                    <td>
+                                                        <input class="chk_escrita">
+                                                    </td>
+                                                    <td>
+                                                        <input class="chk_exclusao">
+                                                    </td>
+                                                    <td>
+                                                        <input class="chk_revisao">
+                                                    </td>
+                                                    <td>
+                                                        <input class="chk_seguranca">
+                                                    </td>
+                                                    <td class="text-right" style="margin-right: 0px; padding-right: 0px">
+                                                        <a class="btn_usuario_remover btn btn-default">
+                                                            <span class="glyphicon glyphicon-trash"></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="div_permissoes row" style="display: none">
+                                <div class="col-md-12">
+
+                                    <div class="table-responsive">
+                                        <table class="tab_permissoes_grupo table" style="padding-bottom: 0px;">
+                                            <thead>
+                                                <th>Grupo</th>
+                                                <th style="width: 80px"><span class="lbl_visualizacao">Visualização</span></th>
+                                                <th style="width: 80px"><span class="lbl_download">Download</span></th>
+                                                <th style="width: 80px"><span class="lbl_escrita">Escrita</span></th>
+                                                <th style="width: 80px"><span class="lbl_exclusao">Exclusão</span></th>
+                                                <th style="width: 80px"><span class="lbl_revisao">Revisão</span></th>
+                                                <th style="width: 80px"><span class="lbl_seguranca">Segurança</span></th>
+                                                <th class="text-right" style="width: 80px; margin-right: 0px; padding-right: 0px">
+                                                    <a class="btn_add_grupo btn btn-default">
+                                                        <span class="glyphicon glyphicon-plus"></span>
+                                                    </a>
+                                                </th>
+                                            </thead>
+                                            <tbody>
+                                                <tr template-row style="display: none">
+                                                    <td>
+                                                        <span class="img_grupo glyphicon glyphicon-th" aria-hidden="true"></span>
+                                                        <span class="lbl_nome"></span>
+                                                    </td>
+                                                    <td>
+                                                        <input class="chk_visualizacao">
+                                                    </td>
+                                                    <td>
+                                                        <input class="chk_download">
+                                                    </td>
+                                                    <td>
+                                                        <input class="chk_escrita">
+                                                    </td>
+                                                    <td>
+                                                        <input class="chk_exclusao">
+                                                    </td>
+                                                    <td>
+                                                        <input class="chk_revisao">
+                                                    </td>
+                                                    <td>
+                                                        <input class="chk_seguranca">
+                                                    </td>
+                                                    <td class="text-right" style="margin-right: 0px; padding-right: 0px">
+                                                        <a class="btn_grupo_remover btn btn-default">
+                                                            <span class="glyphicon glyphicon-trash"></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary" style="display: none">Salvar</button>
+                <button type="button" class="btn_excluir btn btn-danger" style="display: none">Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

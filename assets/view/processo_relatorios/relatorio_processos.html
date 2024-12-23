@@ -1,0 +1,146 @@
+<div class="modal bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal_projeto_selecionar_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_projeto_selecionar_label">Filtro</h4>
+            </div>
+            <div class="modal-body">
+                
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label>Processo</label>
+                            <div class="input-group" style="width: 100%;">
+                                <select id="cbo_processo" class="form-control selectpicker cbo_processo show-tick" data-live-search="true" title="Escolha o Processo">
+                                </select>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn_refresh_cbo_processo btn btn-default">
+                                        <span class="fa fa-sync"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label>Versão</label>
+                            <div class="input-group" style="width: 100%;">
+                                <select id="cbo_versao" class="form-control selectpicker cbo_versao show-tick " multiple data-selected-text-format="count > 1" data-live-search="true" title="Escolha a Versão" data-toggle="tooltip" data-actions-box="true" data-deselect-all-text="Nenhuma" data-select-all-text="Todas">
+                                </select>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn_refresh_cbo_versao btn btn-default">
+                                        <span class="fa fa-sync"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row div_versao_processo hidden">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group div_atividades">
+                            <label>Atividades</label>
+                            <div class="input-group" style="width: 100%;">
+                                <select class="form-control cbo_atividades" data-live-search="true" multiple data-selected-text-format="count > 1" title="Selecione as Atividade" data-toggle="tooltip" data-actions-box="true" data-deselect-all-text="Nenhuma" data-select-all-text="Todas">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group div_campos">
+                            <label>Campos</label>
+                            <div class="input-group" style="width: 100%;">
+                                <select class="form-control cbo_campos" data-live-search="true" multiple data-selected-text-format="count > 1" title="Selecione os Campos" data-toggle="tooltip" data-actions-box="true" data-deselect-all-text="Nenhum" data-select-all-text="Todos">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <table class="table_condicao_integracao" style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <label>Campos Filtro</label>
+                                </th>
+                                <th>
+                                    <div class="col-xs-12">
+                                        <label>Expressão</label>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="col-xs-12">
+                                        <label>Filtro</label>
+                                    </div>
+                                </th>
+                                <th>
+                                    <button type="button" class="btn_add_filtro btn btn-default pull-right">
+                                        <span class="fa fa-plus"></span>
+                                    </button>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr template-row="condicoes" style="display: none;">
+                                <td>
+                                    <div class="form-group">
+                                        <div class="input-group" style="width: 100%;">
+                                            <select class="form-control cbo_campos_filtro show-tick" data-live-search="true" title="Escolha o Campo"></select>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <div class="input-group" style="width: 100%;">
+                                                <select class="form-control cbo_expressao show-tick" data-live-search="true" title="Escolha a Expressão"></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="input-group" style="width: 100%;">
+                                            <input class="edt_filtro form-control" maxlength="50"></input>
+                                            <div class="div_filtro_situacao hidden">
+                                                <select class="form-control edt_filtro_situacao">
+                                                    <option value="Em Andamento">Em Andamento</option>
+                                                    <option value="Atrasada">Atrasada</option>
+                                                    <option value="Concluída">Concluída</option>
+                                                    <option value="Não Entregue">Não Entregue</option>
+                                                    <option value="Retornada">Retornada</option>
+                                                    <option value="Atividade Cancelada">Atividade Cancelada</option>
+                                                    <option value="Solicitação Cancelada">Solicitação Cancelada</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="vertical-align: top;">
+                                    <div class="form-group">
+                                        <button type="button" class="btn_excluir_condicao btn btn-default btn-danger pull-right">
+                                            <span class="fa fa-trash"></span>
+                                        </button>
+                                    </div>
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn_cancelar">Cancelar</button>
+                <button type="button" class="btn btn-primary btn_excel">
+                    <span class="fa fa-download"></span> Download
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

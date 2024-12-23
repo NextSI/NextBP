@@ -1,0 +1,466 @@
+<!-- envio de planilha_atividade -->
+<div class="modal formulario_modal-lg modal_importar_organizacao" id="modal_importar_organizacao" tabindex="-1" role="dialog" aria-labelledby="label_importar_organizacao" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close btn_cancelar" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="label_importar_organizacao">Importar do excel</h4>
+            </div>
+            <div class="modal-body">
+               <!-- Primeira etapa --> 
+               <div class="primeira_etapa" >
+                    <label for="importar_planilha">Etapa 1 - Escolher Arquivo</label>
+                    <p>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="importar_planilha">Arquivo</label>
+                            <input type="file" class="planilha" name="importar_planilha" id="importar_planilha">
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="edt_quantidade_linhas">Iniciar importação na linha</label>
+                            <input type="number" class="form-control edt_quantidade_linhas" maxlength="500" id="edt_quantidade_linhas">
+                        </div>
+                    </div>
+                </div>
+                <!-- Primeira etapa --> 
+
+                <!-- segunda etapa --> 
+               <div class="segunda_etapa hidden">
+                    <label for="importar_planilha">Etapa 2 - Relacionar as colunas do cadastro de organização com as colunas do Excel </label>
+                    <p>
+                    <div class="table-responsive">
+                        <table class="table tbl_seleciona_colunas" id="tbl_seleciona_colunas">
+                            <thead>
+                                <tr>
+                                    <th>Coluna</th>
+                                    <th>Coluna Correspondente Planilha</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               <tr class="codigo">
+                                    <td>
+                                        <span>Código</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_codigo" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr class="codigo">
+                                    <td>
+                                        <span>Unidade</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_unidade" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>Razão Social</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_razao_social" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>Nome Fantasia</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_nome_fantasia" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>Bloqueado</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_bloqueado" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+
+                               <tr>
+                                    <td>
+                                        <span>Tipo Pessoa</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_tipo_pessoa" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>Tipo Cadastro</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_tipo_cadastro" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>CEP</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_cep" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>Endereço</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_endereco" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+
+                               <tr>
+                                    <td>
+                                        <span>Número</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_numero" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>Complemento</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_complemento" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>Bairro</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_bairro" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>Município</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_municipio" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>País</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_pais" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+
+                               <tr>
+                                    <td>
+                                        <span>CNPJ/CPF</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_cnpj" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>Inscrição Estadual</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_inscricao_estadual" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>Inscrição Municipal</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_inscricao_municipal" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>ID Estrangeiro</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_id_estrangeiro" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>Tipo de Orgão</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_tipo_orgao" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>Dt.Fundação</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_data_fundacao" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               
+                               <tr>
+                                    <td>
+                                        <span>Telefone 1</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_telefone1" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>Telefone 2</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_telefone2" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>Telefone 3</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_telefone3" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>Telefone 4</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_telefone4" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>Site</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_site" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>E-mail Principal</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_email_principal" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>E-mail de recebimento da agenda</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_email_agenda" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>Observações</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_observacoes" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                               <tr>
+                                    <td>
+                                        <span>Classificação</span>
+                                    </td>
+                                    <td>
+                                        <select class="form-control selectpicker add_coluna_planilha cbo_classificacao" data-size="5" data-live-search="true">
+                                        </select>
+                                    </td>
+                               </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Segunda etapa --> 
+
+
+
+                 <!-- terceira etapa --> 
+               <div class="terceira_etapa hidden">
+                    <label for="importar_planilha">Etapa 3 - Confirmção de dados </label>
+                    <p>
+
+                    <div class="div_cadastro_prospect">
+
+                    </div>
+
+                    <div class="panel panel-defautl cadastro_prospect" template-row="cadastro_prospect" style="display: none;">
+                        <label template-field="nome"></label>
+                        <p>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label>Município</label>
+                                    <div class="input-group"> 
+                                        <input type="text" class="edt_municipio form-control" template-field="municipio" disabled>
+                                        <span class="input-group-btn">
+                                            <button class="btn_municipio btn btn-default" template-button="btn_municipio" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                                            <button class="btn_add_municipio btn btn-default" template-button="btn_add_municipio" type="button">
+                                              <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+                                        </span>
+                                    </div>   
+                                </div>   
+                            </div>
+
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label>País</label>
+                                    <div class="input-group"> 
+                                        <input type="text" class="edt_pais form-control" template-field="pais" disabled>
+                                        <span class="input-group-btn">
+                                            <button class="btn_pais btn btn-default" template-button="btn_pais" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                                            
+                                        </span>
+                                    </div>   
+                                </div>  
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+
+                <div class="quarta_etapa hidden">
+                    <label for="importar_planilha">Etapa 4 - Confirmção de dados </label>
+                    <p>
+
+                    <div class="table-responsive">
+
+                        <table class="tab_listagem table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Importar (Sim/Não)</th>
+                                    <th class="codigo">Código</th>
+                                    <th class="codigo">Unid.</th>                                    
+                                    <th>Nome Fantasia</th>
+                                    <th>Razão Social</th>
+                                    <th>Bloqueado</th>
+                                    <th>CNPJ/CPF</th>
+                                    <th>ID Estrangeiro</th>
+                                    <th>Inscrição Estadual</th>
+                                    <th>Inscrição Municipal</th>
+                                    <th>Tipo de Orgão</th>
+                                    <th>Tipo de Pessoa</th>
+                                    <th>Tipo de Cadastro</th>
+                                    <th>País</th>
+                                    <th>Município</th>
+                                    <th>CEP</th>
+                                    <th>Número</th>
+                                    <th>Endereço</th>
+                                    <th>Complemento</th>
+                                    <th>Bairro</th>
+                                    <th>E-mail Principal</th>
+                                    <th>E-mail Agenda</th>
+                                    <th>Site</th>
+                                    <th>Telefone 1</th>
+                                    <th>Telefone 2</th>
+                                    <th>Telefone 3</th>
+                                    <th>Telefone 4</th>
+                                    <th>Observação</th>
+                                    <th>Classificação</th>                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- itens -->
+                                <tr template-row style="display: none;">
+                                    <td class="valida">
+                                        <input template-field="importar">
+                                    </td>
+                                    <td class="text-center valida codigo" template-field="codigo"></td>
+                                    <td class="text-center valida codigo" template-field="unidade"></td>
+                                    <td class="text-center valida" template-field="nome_fantasia"></td>
+                                    <td class="text-center valida" template-field="razao_social"></td>
+                                    <td class="text-center valida" template-field="bloqueado"></td>
+                                    <td class="text-center valida" template-field="cnpj"></td>
+                                    <td class="text-center valida" template-field="id_estrangeiro"></td>
+                                    <td class="text-center valida" template-field="inscricao_estadual"></td>
+                                    <td class="text-center valida" template-field="inscricao_municipal"></td>
+                                    <td class="text-center valida" template-field="tipo_orgao"></td>
+                                    <td class="text-center valida" template-field="tipo_pessoa"></td>
+                                    <td class="text-center valida" template-field="tipo_cadastro"></td>
+                                    <td class="text-center valida" template-field="pais"></td>
+                                    <td class="text-center valida" template-field="municipio"></td>
+                                    <td class="text-center valida" template-field="cep"></td>
+                                    <td class="text-center valida" template-field="numero"></td>
+                                    <td class="text-center valida" template-field="endereco"></td>
+                                    <td class="text-center valida" template-field="complemento"></td>
+                                    <td class="text-center valida" template-field="bairro"></td>
+                                    <td class="text-center valida" template-field="email_principal"></td>
+                                    <td class="text-center valida" template-field="email_agenda"></td>
+                                    <td class="text-center valida" template-field="site"></td>
+                                    <td class="text-center valida" template-field="tel1"></td>
+                                    <td class="text-center valida" template-field="tel2"></td>
+                                    <td class="text-center valida" template-field="tel3"></td>
+                                    <td class="text-center valida" template-field="tel4"></td>
+                                    <td class="text-center valida" template-field="observacao"></td> 
+                                    <td class="text-center valida" template-field="classificacao"></td>                                                   
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <div class="row" style="margin-bottom: 0px; padding-bottom: 0px;">
+
+                    <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
+                        <button type="button" class="btn btn-default btn_cancelar">Cancelar</button>
+                        <button type="button" class="btn btn-default btn_voltar hidden">
+                            <span class="glyphicon glyphicon-backward"></span>
+                            Etapa Anterior
+                        </button>
+                        <button type="button" class="btn btn-primary btn_proxima_etapa">
+                            Próxima Etapa
+                            <span class="glyphicon glyphicon-forward"></span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn_confirmar" style="display: none;">Confirmar Importação</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>

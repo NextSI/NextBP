@@ -1,0 +1,70 @@
+<div class="row">
+    <div class="col-md-12" style="padding-bottom: 10px;">
+        <button type="submit" class="btn_salvar btn btn-primary" style="display: none;">
+            <i class="far fa-save" aria-hidden="true"></i> Salvar
+        </button>
+        <button class="btn_excluir btn btn-danger pull-right" style="display: none;">
+            <i class="fa fa-trash-alt" aria-hidden="true"></i> Excluir
+        </button>
+    </div>
+</div>
+
+<div class="panel panel-default painel_detalhes">
+    <div class="row">
+        <div class="col-md-6" style="border-right: 2px solid #c0c8cf;">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="cbo_usuario_substituido">Usuário substituído</label>
+                    <select class="cbo_usuario_substituido"></select>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="cbo_usuario_substituto">Usuário substituto</label>
+                    <select class="cbo_usuario_substituto"></select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="edt_periodo_inicio">Início período</label>
+                    <input  type="date" min="1900-01-01" class="form-control edt_periodo_inicio" name="edt_periodo_inicio">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="edt_periodo_fim">Fim período</label>
+                    <input type="date" min="1900-01-01" class="form-control edt_periodo_fim" name="edt_periodo_fim">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <table class="table" >
+                <thead>
+                    <tr>
+                        <th>Módulo</th>                            
+                        <th>Substituto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-left"><label>Documentos</label></td>
+                        <td><div class="substituto_documentos"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><label>Processos</label></td>
+                        <td><div class="substituto_processos"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><label>Projetos</label></td>
+                        <td><div class="substituto_projetos"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><label>Chamados</label></td>
+                        <td><div class="substituto_chamados"></div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,171 @@
+<style type="text/css">
+    @media (max-width: 991px) {
+        .filtro {
+            margin-bottom: 10px;
+        }
+    }
+</style>
+
+<ol class="breadcrumb visible-xs">
+  <li class="active">Atividades do Projeto</li>
+</ol>
+<div class="reset-container">
+
+<div class="row div_supervisionados">
+    <div style="padding: 12px;">
+        <div class="col-md-3 filtro" style="margin-top: 5px;">
+            <label for="filtro_descricao_atividade">Descrição da Atividade</label>
+            <div style="display: flex">
+                <input type="text" id="filtro_descricao_atividade" class="filtro_descricao_atividade form-control" placeholder="Digite o valor e pressione Enter para pesquisar" />
+                <button class="btn btn-default btn_pesquisar">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+        <div class="col-md-3 filtro">
+            <input value="1" class="radio_usuario" id="radio_usuario1" type="radio" name="atividade_usuario"></input>
+            <label for="radio_usuario1" style="position: relative; bottom: 2px;">Grupo de Usuários</label>
+            <select class="form-control cbo_grupo_usuario selectpicker show-tick" multiple title="Selecione" data-size="10" data-live-search="true" id="cbo_grupo_usuario"></select>
+        </div>
+        <div class="col-md-3 filtro">
+            <input value="2" class="radio_usuario" id="radio_usuario2" type="radio" name="atividade_usuario"></input>
+            <label for="radio_usuario2" style="position: relative; bottom: 2px;">Usuários</label>
+            <select class="form-control cbo_supervisionados selectpicker show-tick" multiple title="Selecione" data-size="10" data-live-search="true" id="cbo_supervisionados"></select>
+        </div>
+        <div class="col-md-1 filtro" style="margin-top: 27px;">
+            <button class="btn btn-default btn_refresh">
+                <span class="glyphicon glyphicon-refresh"></span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="margin-bottom: 15px;">
+    
+
+    <div class="col-md-12 col-lg-12">
+
+        <div class="div_usuarios">
+
+        </div>
+
+        <div class="" style="display: none; margin-bottom: 50px" template-row="usuarios">
+            <button type="button" template-button="btn_excluir" class="btn_excluir close" aria-hidden="true">&times;</button>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div style="padding-left: 14px; padding-right: 14px; padding-bottom: 20px; padding-top: 0px;">
+                        <div class="pull-left">
+                            <span class="preview_logo" style="padding-top: 7px; padding-bottom: 0px; padding-right: 10px;" ><img style=" height: 50px; width: 50px" template-img="img_usuario" class="carrega_img"/></span>
+                        </div>
+                        
+                        <div>
+                            <h3 template-field="nome" style="margin-top: 2px; margin-bottom: 0px;">{nome}</h3>
+                            <span template-field="email">{email}</span>
+                        </div>
+                    </div>
+                </div>
+                <!--
+                <div class="col-md-4 col-lg-4" style="padding-top: 30px; padding-left: 30px;">
+                    <div class="form-group">
+                        
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4" style="padding-top: 30px; padding-left: 30px;">
+                    <div class="form-group">
+                        
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 pull-right" style="padding-top: 15px; padding-right: 30px;">
+                    
+                </div>
+                -->
+            </div>
+
+            <div class="div_atividades" template-row="atividades_usuario"> 
+                <div class="panel panel-danger alert hidden div_alert" template-row="alert">
+                    <p class="text-muted">Nenhuma atividade encontrada</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="panel div_template" template-row="atividades" style="display: none" >
+            <div class=" panel-body" style="padding-left: 6px; padding-right: 6px; padding-bottom: 6px;padding-top: 4px;">
+                <div class="row">
+                    <div class="col-md-8 col-lg-8">
+                        <span class="label label-primary" template-field="numerador"></span>
+                        <span class="label label-default" template-field="projeto"></span>
+                        <span class="" template-field="cliente"></span>
+                        <br>
+                        <span template-field="atividade"></span>
+                    </div>
+                    
+                    <div class="col-md-4 col-lg-4">
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default btn_inicio" template-button="btn_inicio" title="Inicia apontamentos da atividade.">
+                                    <span class="glyphicon glyphicon-play"> </span>
+                                    Iniciar
+                                </button>
+                                <button type="button" class="btn btn-default btn_pause hidden" template-button="btn_pause" title='Atualiza os apontamentos da atividade. Não altera o status da atividade.'>
+                                    <span class="glyphicon glyphicon-pause"></span>
+                                    Pausar
+                                </button>
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li class="btn_detalhe" template-button="btn_detalhe">
+                                        <a href="javascript:;">
+                                            <span class="glyphicon glyphicon-list"></span>
+                                            Detalhes da atividade
+                                        </a>
+                                    </li>
+                                    <li class="btn_entregar hidden" template-button="btn_entregar">
+                                        <a href="javascript:;" title='Atualiza os apontamentos da atividade. Altera o status da atividade para concluído.'>
+                                            <span class="glyphicon glyphicon-check"></span>
+                                            Concluir atividade
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-3 col-lg-3 pull-right" style="padding-top: 4px;">
+                        <span class="text small  pull-right label" template-field="status" ></span>
+                    </div>
+                </div>
+
+                <div class="row" template-row="informacoes">
+                </div>
+                
+
+                <div class="div_atividade_predecessora hidden">
+                    <br>
+                    <span class="small ">Atividades Predecessoras</span>
+                    <div class="row" style="margin-bottom: 0px;" template-row="div_predecessora">
+
+                    </div>
+
+                    <div class="col-md-3 col-lg-3  predecessoras" template-row="predecessoras" style="display: none">
+                        <div class=" small">
+                            <span class="pull-left" template-icone="icone"></span>
+                            &nbsp;
+                            <span template-field="atividade_predecessora"></span>
+                        </div>
+                    </div>
+                </div>
+
+                    
+
+                </div>
+
+                 
+
+            </div>
+        </div>
+    </div>
+</div>

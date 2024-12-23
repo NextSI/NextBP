@@ -1,0 +1,155 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Servidor LDAP</li>
+</ol>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="form-group">
+            <div class="col-md-5">
+                <div class="input-group-btn ">
+                    <button type="button" class="btn_salvar btn btn-primary">
+                        <span class="glyphicon glyphicon-floppy-disk"></span> Salvar
+                    </button>
+                    <button type="button" class="btn_excluir btn btn-danger">
+                        <span class="glyphicon glyphicon-floppy-disk"></span> Excluir
+                    </button>
+                    <button type="button" class="btn_cancelar btn btn-default">
+                        <span class="glyphicon glyphicon-remove"></span> Cancelar
+                    </button>
+                    <a manual="importacao_ldap" class="btn btn-default" role="button">
+                        <span class="glyphicon glyphicon-question-sign"></span> Ajuda
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="clearfix"><br></div>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="panel panel-default painel_detalhes">
+            <div class="panel-body">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active form_geral" id="div_geral">
+                        
+                        <div class="div_validar_conexao">
+
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="">Código</label>
+                                        <input type="text" class="edt_codigo form-control" placeholder="Digite o Código" maxlength="10">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="edt_nome">Nome</label>
+                                        <input id="edt_nome" type="text" class="form-control edt_nome" placeholder="Digite o nome" maxlength="100">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Tipo</label>
+                                        <select class="cbo_tipo form-control">
+                                            <option value="1">Microsoft Active Directory (AD)</option>
+                                            <option value="2">OpenLDAP</option>
+                                        </select>    
+                                    </div>  
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="chk_padrao" style="display: block;">Padrão</label>
+                                        <input type="checkbox" id="chk_padrao" class="chk_padrao checkbox_bootstrap_toggle">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label for="edt_endereco">Endereço</label>
+                                        <input id="edt_endereco" type="text" class="form-control edt_endereco" placeholder="Digite o endereço" maxlength="150">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="form-group" id="div_nivel">
+                                        <label for="edt_porta">Porta</label>
+                                        <input type="number" min="1" max="9999" class="edt_porta form-control" id="edt_porta" placeholder="Digite a porta">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label style="display: block;">SSL <span class="text-muted small">(LDAPS)</span></label>
+                                        <input type="checkbox" class="chk_utilizar_ssl checkbox_bootstrap_toggle">
+                                    </div>
+                                </div>
+                            </div>
+                                
+    
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="edt_base">Base DN para consulta de usuários</label>
+                                        <input id="edt_base" type="text" class="form-control edt_base" placeholder="Exemplo: DC=corp,DC=nextsi,DC=com,DC=br" maxlength="150">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="edt_filtro">Filtro para consulta de usuários</label>
+                                        <textarea id="edt_filtro" class="form-control edt_filtro" maxlength="200" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 div_dominio">
+                                    <div class="form-group" id="div_nivel">
+                                        <label for="edt_dominio">Domínio</label>
+                                        <input class="edt_dominio form-control" id="dominio" placeholder="Digite o Domínio" maxlength="50">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Usuário Administrador</label>
+                                        <input id="edt_login_ldap" type="text" class="form-control edt_login_ldap" maxlength="50" placeholder="Informe o Login" autocomplete="false">
+                                    </div>           
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Senha</label>
+                                        <input id="edt_senha_ldap" type="password" class="form-control edt_senha_ldap" maxlength="50" placeholder="Informe a Senha" autocomplete="false"> 
+                                    </div>  
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <br/>
+                                        <button type="button" class="btn_testar_conexao btn btn-primary">
+                                            <span class="glyphicon glyphicon-send"></span> Testar Conexão
+                                        </button> 
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div> 
+                        
+                    </div>
+
+                                          
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

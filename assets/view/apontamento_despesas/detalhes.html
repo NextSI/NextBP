@@ -1,0 +1,97 @@
+
+<div class="row">    
+    <div class="col-sm-12 col-md-12 col-lg-12" style="padding-left: 15px; top: 0px; padding-top: 10px; padding-bottom: 10px">
+
+        <button type="button" class="btn_salvar btn btn-primary">
+            <span class="glyphicon glyphicon-plus-sign"></span>
+            Salvar
+        </button>
+        <button type="button" class="btn_excluir btn btn-danger">
+            <span class="glyphicon glyphicon-pushpin"></span> 
+            Excluir
+        </button>
+        <button type="button" class="btn_cancelar btn btn-default">
+            <span class="glyphicon glyphicon-remove"></span> 
+            Cancelar
+        </button>
+
+    </div> 
+
+    <div class="col-sm-12 col-md-12 col-lg-12">
+
+        <div class="panel panel-default">
+            <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                    <li class="active lbl_tab_geral">
+                        <a id="tab_dados_gerais" href="#div_dados_gerais" role="tab" data-toggle="tab">Geral</a>
+                    </li>
+                </ul>
+            </div> 
+
+            <div class="panel-body">
+
+                <div class="tab-content">
+
+                    <div class="tab-pane active div_dados_gerais" id="div_dados_gerais">
+                        
+                        <div class="row"> 
+                            <div class="col-sm-4 col-md-4 col-lg-2">        
+                                <div class="form-group">
+                                    <label for="modal_apontamento_despesa_edt_data">Data</label>
+                                    <input type="date" min="1900-01-01" max="2222-12-31" class="edt_data form-control">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row"> 
+                            <div class="col-sm-12 col-md-12 col-lg-6">        
+                                <div class="form-group">
+                                    <label for="modal_apontamento_despesa_cbo_tecnico">Técnico</label>
+                                    <select class="form-control selectpicker cbo_tecnico" data-live-search="true">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row"> 
+                            <div class="col-sm-12 col-md-12 col-lg-6">        
+                                <div class="form-group">
+                                    <label for="modal_apontamento_despesa_edt_cliente">Cliente</label>
+                                    <select class="form-control select-multi-column cbo_cliente" placeholder="Digite nome para pesquisar">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row"> 
+                            <div class="col-sm-12 col-md-12 col-lg-6">        
+                                <div class="form-group">
+                                    <label for="select_projeto">Projeto</label>
+                                    <div class="form-group">
+                                        <select id="filtro_projeto_id" class="form-control cbo_projeto select-multi-column" placeholder="Pesquisar por projeto"></select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row"> 
+                            <div class="col-sm-12 col-md-12 col-lg-12">  
+                                <div class="dx_valores_formulario">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="panel-footer">
+            </div>
+
+        </div>        
+
+    </div>    
+
+</div>    

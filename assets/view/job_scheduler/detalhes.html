@@ -1,0 +1,110 @@
+<!-- MODAL DETALHE -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_job_scheduler_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_job_scheduler_detalhes_label">Job Scheduler</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="form-group">
+                            <label for="modal_job_scheduler_cbo_script">Job Script</label>
+                            <select id="modal_processo_cbo_script" class="cbo_script form-control">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label for="modal_job_scheduler_chk_ativo">
+                                Ativo
+                            </label>
+                            <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                <input id="modal_job_scheduler_chk_ativo" class="chk_ativo checkbox_bootstrap_toggle" type="checkbox" value="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="modal_job_scheduler_edt_minuto">Minuto</label>
+                            <input type="text" class="edt_minuto form-control" id="modal_job_scheduler_edt_minuto" maxlength="10">
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="modal_job_scheduler_edt_hora">Hora</label>
+                            <input type="text" class="edt_hora form-control" id="modal_job_scheduler_edt_hora" maxlength="10">
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="modal_job_scheduler_edt_dia">Dia</label>
+                            <input type="text" class="edt_dia form-control" id="modal_job_scheduler_edt_dia" maxlength="10">
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="modal_job_scheduler_edt_mes">Mês</label>
+                            <input type="text" class="edt_mes form-control" id="modal_job_scheduler_edt_mes" maxlength="10">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="modal_job_scheduler_edt_mes">Dia da Semana</label>
+                            <input type="text" class="edt_dia_semana form-control" id="modal_job_scheduler_edt_mes" maxlength="10">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <blockquote class="small">
+                            Valores permitidos para cada campo:<br>
+                            Minuto: <code>0</code> à <code>59</code><br>
+                            Hora: <code>0</code> à <code>23</code><br>
+                            Dia: <code>1</code> à <code>31</code><br>
+                            Mes: <code>1</code> à <code>12</code><br>
+                            Dia da Semana: <code>0</code> à <code>6</code>, onde <code>0</code>=Domingo,
+                                <code>1</code>=Segunda,
+                                <code>2</code>=Terça,
+                                <code>3</code>=Quarta,
+                                <code>4</code>=Quinta,
+                                <code>5</code>=Sexta,
+                                <code>6</code>=Sábado<br>
+                            <br>
+                            Para representar todas as opções do campo, utilize o caracter <code>*</code> (asterisco)<br>
+                            Para representar um intervalo entre valores, utilize o caracter <code>-</code> (hifen)<br>
+                            Para representar um intervalo de repetição, utilize o caracter <code>*/</code> (asterisco e barra)<br>
+                            <br>
+                            Exemplo de um job que será executado de segunda à sexta-feira, às sete horas da manhã:
+                            Minuto: <code>0</code>
+                            Hora: <code>7</code>
+                            Dia: <code>*</code>
+                            Mes: <code>*</code>
+                            Dia da Semana: <code>1-5</code>
+                            <br><br>
+                            Exemplo de um job que será executado de 5 em 5 minutos:<br>
+                            Minuto: <code>*/5</code>
+                            Hora: <code>*</code>
+                            Dia: <code>*</code>
+                            Mes: <code>*</code>
+                            Dia da Semana: <code>*</code>
+                        </blockquote>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+                <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

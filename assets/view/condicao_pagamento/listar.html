@@ -1,0 +1,125 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Condições de Pagamento</li>
+</ol>
+
+<!-- LISTAGEM -->
+<div>
+
+    <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+        <button type="button" class="somente_leitura btn_novo btn btn-primary">
+            <span class="glyphicon glyphicon-plus-sign"></span> Novo
+        </button>
+        <button type="button" class="btn_configuracoes btn btn-default hidden">
+            <span class="glyphicon glyphicon-cog"></span> Configurações
+        </button>
+    </nav>
+    
+    <div class="row">
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Código</label>
+                <input type="text" class="edt_codigo form-control" maxlength="50" placeholder="Filtrar por Código">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Descrição</label>
+                <input type="text" class="edt_descricao form-control" placeholder="Filtrar por Descrição">
+            </div>
+        </div>
+        <div class="col-md-2 col-lg-1">
+            <label>Bloqueado?</label>            
+            <div style="margin-top: 3px;">                
+                <input type="checkbox" class="chk_bloqueado form-control">
+            </div>
+        </div>   
+        <div class="col-md-2">
+            <label>&nbsp;</label>            
+            <div class="form-group">
+                <button type="button" class="btn_listar btn btn-default">
+                    <span class="glyphicon glyphicon-refresh"></span> Listar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <br class="visible-xs">
+    
+    <div class="div_listagem">
+
+        <table class="tab_listagem table table-striped table-hover">
+            <thead>
+                <tr class="hidden-xs">
+                    <th>Código</th>
+                    <th>Descrição</th>
+                    <th class="text-center">Bloqueado?</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr template-row style="display: none;" class="row-fluid">
+
+                    <!-- mobile -->
+                    <td class="td-mobile visible-xs">
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn_editar btn btn-default">
+                                    <span class="somente_leitura glyphicon glyphicon-pencil"></span>
+                                </button>
+                                <button type="button" class="btn_excluir btn btn-default">
+                                    <span class="somente_leitura glyphicon glyphicon-trash"></span>
+                                </button>
+                                <button type="button" class="somente_visualizar hidden btn_visualizar btn btn-default">
+                                    <span class="glyphicon glyphicon-eye-open"></span> 
+                                </button>
+                            </div>
+                        </div>
+                        <div class="small text-info">
+                            <span>Código: </span>
+                            <span template-field="codigo"></span>
+                        </div>
+                        <h5 template-field="descricao">Descrição</h5>
+                        <div class="text-info">
+                            <span template-field="bloqueado"></span>
+                        </div>
+
+                    </td>
+                    <!-- mobile -->
+
+                    <!-- desktop -->
+                    <td template-field="codigo" class="hidden-xs">{codigo}</td>
+                    <td template-field="descricao" class="hidden-xs">{descricao}</td>
+                    <td class="text-center td_bloqueado hidden-xs">
+                        <span template-field="bloqueado"></span>
+                    </td>
+                    <td template-buttons="actions" class="hidden-xs">
+                        <div class="btn-group pull-right">
+                            <button type="button" class="somente_leitura btn_editar btn btn-default">
+                                <span class="glyphicon glyphicon-pencil"></span> Editar
+                            </button>
+                            <button type="button" class="somente_visualizar hidden btn_visualizar btn btn-default">
+                                <span class="glyphicon glyphicon-eye-open"></span> Visualizar 
+                            </button>
+                            <div class="btn-group somente_leitura">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a class="somente_leitura btn_visualizar" href="#">
+                                        Visualizar
+                                    </a></li>
+                                    <li><a class="somente_leitura btn_excluir" href="#">
+                                        Excluir
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                    <!-- desktop -->                                               
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- /LISTAGEM -->

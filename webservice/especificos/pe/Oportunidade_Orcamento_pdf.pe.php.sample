@@ -1,0 +1,18 @@
+<?php
+
+use \Sys\Util;
+use \Sys\Basic;
+use \Sys\Validation;
+use \Sys\DB;
+
+function oportunidade_orcamento_pdf_antes($empresa_id, $oportunidade_orcamento_id, $download=true) {
+    // Instruções executadas antes que o PDF seja gerado pelo sistema...
+
+    $oportunidade_orcamento_pdf = Basic::LoadPDF('Oportunidade_Exemplo', true);
+    $lista = $oportunidade_orcamento_pdf->gerar_oportunidade_pdf($empresa_id, $oportunidade_orcamento_id, $download);
+    return $lista;
+};
+
+function oportunidade_orcamento_pdf_depois($oportunidade_orcamento_model) {
+    // Instruções executadas no momento seguinte em que o PDF é gerado...
+};

@@ -1,0 +1,20 @@
+<?php
+
+use \Sys\Util;
+use \Sys\Basic;
+use \Sys\Validation;
+use \Sys\DB;
+
+function solicitacao_atividade_enviar_antes($solicitacao_atividade_model, $anexos=null, $acao=null, &$destinos=null) {
+	// ação antes de criar a nova atividade
+	// $solicitacao_atividade_model->emails_terceiros .= ';exemplo@email.com';
+	// obtenho valor do campo do formulário de ID edt_valor
+	// $edt_valor = Util::valor_campo_formulario($solicitacao_atividade_model->formulario, 'edt_valor');
+	// obtenho valor do campo de tabela formulário de ID edt_valor, linha 2
+	// Util::valor_campo_tabela_formulario($solicitacao_atividade_model->formulario, 'edt_valor', 2);
+};
+
+function solicitacao_atividade_enviar_depois($solicitacao_atividade_model, $anexos=null, $acao=null, $destinos=null) {
+	// ação depois de salvar
+	// print_r($solicitacao_atividade_model);
+};

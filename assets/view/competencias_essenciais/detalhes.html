@@ -1,0 +1,41 @@
+<!-- MODAL DETALHE -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_area_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_area_detalhes_label">Nova Matriz de Competências Essenciais</h4>
+            </div>
+            <div class="modal-body">
+            <h4>Competências Essenciais</h4>
+            <p>Por meio da nossa metodologia, será possível definir as competências mais essenciais por resultado a ser atingido, juntamente com planos de ações especificas para o desenvolvimento da mesma.</p>
+
+                <div class="form-group">
+                    <label>Escolha a matriz de atuação efetiva que irá trabalhar neste momento.</label>
+                    <select class="form-control selectpicker cbo_atuacao_efetiva" data-live-search="true">
+                        <option selected disabled>Selecione uma Atuação Efetiva</option>
+                    </select>
+                </div>
+
+                <div class="form-group div_indicador hidden">
+                    <label>Escolha um KPI que gostaria de focar</label>
+                    <select class="form-control selectpicker cbo_indicador" data-live-search="true">
+                        <option selected disabled>Selecione um Indicador</option>
+                    </select>
+                </div>
+
+                <div class="form-group div_responsabilidade hidden">
+                    <label>Escolha a responsabilidade que quer focar e desenvolver o mapeamento das competências mais essenciais neste momento. </label>
+                    <select class="form-control selectpicker cbo_atuacao_efetiva_responsabilidade" data-live-search="true">
+                        <option selected disabled>Selecione uma Responsabilidade</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

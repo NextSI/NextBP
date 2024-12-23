@@ -1,0 +1,205 @@
+<ol class="breadcrumb visible-xs">
+  <li class="active">Áreas</li>
+</ol>
+
+<!-- LISTAGEM -->
+<div>
+
+  <div class="col-sm-12 col-md-12 col-lg-12" style="padding-bottom: 10px;"> <!-- estilo-filtro -->  
+    <div class="row">
+      <div class="col-sm-12 col-md-4 col-lg-4 div_cbo_autor">
+          <label>Filtrar por Responsável</label>
+          <div class="form-group">
+              <select id="cbo_autor" class="form-control selectpicker cbo_autor show-tick" data-live-search="true" title="Filtro por Responsável">
+              </select>
+          </div>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-4 div_cbo_autor">
+        <label>Atualizar</label>
+        <div class="form-group">
+          <button type="button" class="btn_listar btn btn-default">
+            <span class="glyphicon glyphicon-refresh"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container_tabela">
+
+    <h1 class="titulo_meta">Competências Essenciais</h1>
+     <div class="panel-group accordion_habilidades" id="accordion">
+      <h3 template-usuario style="display: none;">{nome_usuario}</h3>
+        <div class="panel panel-default row_accordion" template-accordion style="display: none;">
+          <div class="panel-heading area_click_user" data-toggle="collapse" data-parent="#accordion" template-ref-a href="#collapse1">
+            <h4 class="panel-title">
+              <a>{titulo}</a>
+            </h4>
+          </div>
+          <div id="collapse1" template-ref-div class="panel-collapse collapse">
+            <div class="panel-body">
+              <div class="box-acoes text-center col-sm-12 col-md-12 col-lg-12">
+                <div class="row" template-acoes>
+                </div>
+              </div>
+            </div>
+            <div class="info-acao" template-info-acao>
+              <table class="table table-striped table-hover" template-table>
+                <tbody>
+					<tr template-row style="display: none;">
+	                	<td colspan="6">
+	                		<div class="row">
+		                		<div class="col-sm-12">
+			              			<div class="form-group">
+			              				<label>Desdobramento</label>
+			              				<span class="label label-default hidden lbl_info_agenda">Agenda gerada</span>
+                        				<span class="label label-success hidden lbl_realizado">Evento realizado</span>
+			              				<textarea rows="2" class="form-control" maxlength="255" template-field="desdobramento" style="max-width: 100%;"></textarea>
+			              			</div>
+			              			<div class="row">
+			              				<div class="col-sm-3">
+			              					<label>Unidade de medida</label>
+			              					<select class="select-multi-column form-control cbo_tipo" template-field="tipo">
+			                                  <option selected disabled>Selecione o tipo</option>
+			                                  <option value="1">Informativo</option>
+			                                  <option value="2">Percentual</option>
+			                                  <option value="3">Valor</option>
+			                                </select>
+			              				</div>
+			              				<div class="col-sm-3">
+			              					<div class="form-group">
+				              					<label>Valor</label>
+				              					<input type="text" class="form-control" template-field="valor_atual">
+				              				</div>
+			              				</div>
+			              				<div class="col-sm-3">
+			              					<div class="form-group">
+				              					<label>Data Início</label>
+				              					<input type="date" class="form-control" template-field="data_inicio">
+				              				</div>
+			              				</div>
+			              				<div class="col-sm-3">
+			              					<div class="form-group">
+				              					<label>Data Fim</label>
+				              					<input type="date" class="form-control" template-field="data_fim">
+				              				</div>
+			              				</div>
+			              			</div>
+			              			<div class="row">
+			              				<div class="col-sm-3">
+			              					<div class="form-group">
+				              					<label>Valor Atual</label>
+				              					<input type="text" class="form-control" template-field="valor_esperado">
+				              				</div>
+			              				</div>
+			              			</div>
+			              			<div class="row text-center">
+			              				<div class="btn-group" role="group" aria-label="...">
+										  <button type="button" class="btn btn-primary btn_salvar_valor_esperado" template-salvar>Salvar</button>
+										  <button type="button" class="btn btn-default" template-historico>Histórico</button>
+										</div>
+			              			</div>
+					              	<hr style="border:1px solid #eee">
+			              		</div>
+			              	</div>
+	                	</td>
+	                </tr>
+                </tbody>
+              </table>
+
+            </div>
+          <span class="mais glyphicon glyphicon-chevron-down"></span>
+          </div>
+        </div>
+    </div>
+
+  <h1 class="titulo_meta">Atuação Efetiva</h1>
+   <div class="panel-group accordion_indicadores" id="accordion_atuacao">
+    <h3 template-usuario style="display: none;">{nome_usuario}</h3>
+      <div class="panel panel-default row_accordion" template-accordion style="display: none;">
+        <div class="panel-heading area_click_user" data-toggle="collapse" data-parent="#accordion_atuacao" template-ref-a href="#collapse1">
+          <h4 class="panel-title">
+            <a>{titulo}</a>
+          </h4>
+        </div>
+        <div id="collapse1" template-ref-div class="panel-collapse collapse">
+          <div class="panel-body">
+            <div class="box-acoes text-center col-sm-12 col-md-12 col-lg-12">
+              <div class="row" template-acoes>
+              </div>
+            </div>
+          </div>
+          <div class="info-acao" template-info-acao>
+
+            <table class="tab_competencia table table-striped table-hover" template-table>
+              <tbody>
+                <tr template-row style="display: none;">
+                	<td colspan="6">
+                		<div class="row">
+	                		<div class="col-sm-12">
+		              			<div class="form-group">
+		              				<label>Desdobramento</label>
+		              				<span class="label label-default hidden lbl_info_agenda">Agenda gerada</span>
+									<span class="label label-success hidden lbl_realizado">Evento realizado</span>
+		              				<textarea rows="2" class="form-control" maxlength="255" template-field="desdobramento" style="max-width: 100%;"></textarea>
+		              			</div>
+		              			<div class="row">
+		              				<div class="col-sm-3">
+		              					<label>Unidade de medida</label>
+		              					<select class="select-multi-column form-control cbo_tipo" template-field="tipo">
+		                                  <option selected disabled>Selecione o tipo</option>
+		                                  <option value="1">Informativo</option>
+		                                  <option value="2">Percentual</option>
+		                                  <option value="3">Valor</option>
+		                                </select>
+		              				</div>
+		              				<div class="col-sm-3">
+		              					<div class="form-group">
+			              					<label>Valor</label>
+			              					<input type="text" class="form-control" template-field="valor_atual">
+			              				</div>
+		              				</div>
+		              				<div class="col-sm-3">
+		              					<div class="form-group">
+			              					<label>Data Início</label>
+			              					<input type="date" class="form-control" template-field="data_inicio">
+			              				</div>
+		              				</div>
+		              				<div class="col-sm-3">
+		              					<div class="form-group">
+			              					<label>Data Fim</label>
+			              					<input type="date" class="form-control" template-field="data_fim">
+			              				</div>
+		              				</div>
+		              			</div>
+		              			<div class="row">
+		              				<div class="col-sm-3">
+		              					<div class="form-group">
+			              					<label>Valor Atual</label>
+			              					<input type="text" class="form-control" template-field="valor_esperado">
+			              				</div>
+		              				</div>
+		              			</div>
+		              			<div class="row text-center">
+		              				<div class="btn-group" role="group" aria-label="...">
+									  <button type="button" class="btn btn-primary btn_salvar_valor_esperado" template-salvar>Salvar</button>
+									  <button type="button" class="btn btn-default" template-historico>Histórico</button>
+									</div>
+		              			</div>
+				              	<hr style="border:1px solid #eee">
+		              		</div>
+		              	</div>
+                	</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        <span class="mais glyphicon glyphicon-chevron-down"></span>
+        </div>
+      </div>
+  </div> 
+</div>
+</div>
+</div>
+
+<!-- /LISTAGEM -->

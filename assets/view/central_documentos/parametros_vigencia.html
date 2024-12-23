@@ -1,0 +1,80 @@
+<div class="modal bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal_projeto_selecionar_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_projeto_selecionar_label">Filtro</h4>
+            </div>
+            <div class="modal-body">
+                
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label>Vigência</label>
+                            <select  class="form-control selectpicker cbo_vigencia" data-live-search="true">
+                                <option value="1" selected>Todos</option>
+                                <option value="2">Vigente e não vigente</option>
+                                <option value="3">Vigente</option>
+                                <option value="4">Não vigente</option>
+                                <option value="5">Sem vigencia</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label>Situação Documento</label>
+                            <select  class="form-control selectpicker cbo_situacao_aprovacao" data-live-search="true">
+                                <option value="1" selected>Todos</option>
+                                <option value="2">Aprovado</option>
+                                <option value="3">Pendente</option>
+                                <option value="4">Reprovado</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row linha_datas_reprova">
+                    <div class="col-md-3 col-sm-12">
+                        <div class="form-group">  
+                            <label for="">Reprova inicial</label>
+                            <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_reprova_inicio">
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12">
+                        <div class="form-group">
+                            <label for="">Reprova final</label>
+                            <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_reprova_fim">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="">Exibir informaçoes da reprova</label><br />
+                            <input type="checkbox" class="checkbox_bootstrap_toggle chk_exibir_informacoes_reprova form-control" id="exibir_informacoes_reprova">
+                        </div>
+                    </div>
+                </div>
+                <div class="row linha_datas hidden">
+                    <div class="col-md-3 col-sm-12">
+                        <div class="form-group">  
+                            <label for="">Vigência inicial</label>
+                            <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_vigencia_inicio">
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12">
+                        <div class="form-group">
+                            <label for="">Vigência final</label>
+                            <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_vigencia_fim">
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="small text-info">
+                    * Documentos que não possuem data de vigência não serão exibidos nesta listagem
+                </div> -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn_cancelar">Cancelar</button>
+                <button type="button" class="btn_pesquisar btn btn-primary">Pesquisar</button>
+            </div>
+        </div>
+    </div>
+</div>

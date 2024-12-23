@@ -1,0 +1,395 @@
+<div class="scrollview">
+    <div class="panel panel-default">
+        <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+            <div class="pull-right hidden-xs">
+                <div >
+                    <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
+                    <button type="button" class="btn_salvar_processo btn btn-default">
+                        <i class="far fa-save"></i> Salvar
+                    </button>
+                    <button type="button" class="btn_salvar_processo salvar-e-sair btn btn-default">
+                        <i class="far fa-save"></i> <div class="fa fa-sign-out-alt icon-on-top"></div> Salvar e Sair
+                    </button>
+                </div>
+            </div>
+            <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                <li class="active">
+                    <a class="menu_configuracoes" href="#" role="tab" data-toggle="tab">Configurações</a>
+                </li>
+                <li>
+                    <a class="menu_atividades" href="#" role="tab" data-toggle="tab">Atividades</a>
+                </li>
+                <li>
+                    <a class="menu_diagrama" href="#" role="tab" data-toggle="tab">Diagrama</a>
+                </li>
+                <li>
+                    <a class="menu_supervisores" href="#" role="tab" data-toggle="tab">Supervisores do Processo</a>
+                </li>
+                <li>
+                    <a class="menu_recorrencia" href="#" role="tab" data-toggle="tab">Recorrência</a>
+                </li>
+                <li>
+                    <a class="menu_versoes" href="#" role="tab" data-toggle="tab">Versões</a>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="panel-body">
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="active tab-pane aba_configuracoes">                
+    
+                    <div class="row">
+                        <div class="col-md-7">
+    
+                            <!-- Nome-->
+                            <div class="row form-group">
+                                <div class="col-md-6">
+                                    <label for="modal_processo_edt_nome">Nome do processo</label>
+                                    <input type="text" class="edt_nome form-control" id="modal_processo_edt_nome" maxlength="150" placeholder="Nome do processo">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Nome da tabela</label>
+                                    <input type="text" class="nome_tabela form-control" maxlength="20" placeholder="Nome da tabela">
+                                </div>
+                            </div>
+    
+                            <!-- Textarea -->
+                            <div class="row form-group">
+                                <div class="col-md-12">                     
+                                    <label for="modal_processo_edt_instrucao_trabalho">Descrição</label>
+                                    <textarea class="edt_instrucao_trabalho form-control" id = "edt_instrucao_trabalho_processo" width="100%" id="modal_processo_edt_instrucao_trabalhos" rows="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-5">
+    
+                            <table class="tabela_configuracoes table" >
+                                <tbody>
+                                    <tr>
+                                        <td class="text-left"><label for="modal_processo_chk_ativo">Processo ativo</label></td>
+                                        <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_ativo form-control" id="modal_processo_chk_ativo"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left"><label for="modal_processo_chk_cliente">Selecionar um cliente no inicio do processo</label></td>
+                                        <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_cliente form-control" id="modal_processo_chk_cliente"></td>
+                                    </tr>
+                                    <tr class="cliente_acompanha" style="display: none">
+                                        <td class="text-left"><label for="modal_processo_chk_cliente_acompanha">Cliente poderá visualizar solicitações vinculadas a ele</label></td>
+                                        <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_cliente_acompanha form-control" id="modal_processo_chk_cliente_acompanha"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left"><label for="modal_processo_chk_solicitante_acompanha">Solicitante poderá acompanhar as atividades de solicitações abertas por ele</label></td>
+                                        <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_solicitante_acompanha form-control" id="modal_processo_chk_solicitante_acompanha"></td>
+                                    </tr>
+                                    <tr class="tr_escolha_pasta_anexos_solicitacao" style="display: none">
+                                        <td class="text-left"><label for="modal_processo_chk_diretorio">Escolher a pasta dos anexos em cada solicitação</label></td>
+                                        <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_diretorio form-control" id="modal_processo_chk_diretorio"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left"><label for="modal_permite_download_formulario_nao_concluido">Permite download de formulários de atividades não concluídas</label></td>
+                                        <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_permite_download_formulario_nao_concluido form-control" id="modal_processo_permite_download_formulario_nao_concluido"></td>
+                                    </tr>
+                                    <tr class="tr_armazenar_anexos_modulo_documentos" style="display: none">
+                                        <td class="text-left"><label for="modal_processo_chk_permite_anexos">Armazenar anexos no módulo de documentos</label></td>
+                                        <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_permite_anexos form-control" id="modal_processo_chk_permite_anexos"></td>
+                                    </tr>
+                                    <tr class="tr_exibir_modal_confirmacao_envio">
+                                        <td class="text-left"><label for="modal_processo_chk_exibir_modal_confirmacao_envio">Exibir janela de confirmação de envio ao concluir uma atividade</label></td>
+                                        <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_exibir_modal_confirmacao_envio form-control" id="modal_processo_chk_exibir_modal_confirmacao_envio"></td>
+                                    </tr>
+                                </tbody>
+                                
+                            </table>
+    
+                            <!-- Multiple Radios (inline) -->
+                            <div class="row form-group div_anexo_relacao" style="display: none">
+                                <div class="col-md-12">
+                                    <label class="control-label">Armazenar anexos em</label>
+                                    <div class="div_pasta"></div>
+                                </div>
+                            </div>
+    
+                            <!-- Select Basic -->
+                            
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <label class="control-label" for="modal_processo_cbo_calendario_trabalho">Categoria</label>
+                                    <div class="input-group">
+                                        <select id="modal_processo_cbo_categoria_processos" class="form-control selectpicker cbo_categoria_processos show-tick" data-live-search="true" title="Escolha a categoria">
+                                        </select>
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn_categoria_processos_visualizar btn btn-default">
+                                                <span class="glyphicon glyphicon-info-sign"></span>
+                                            </button>
+                                            <button type="button" class="btn_categoria_processos_recarregar btn btn-default">
+                                                <span class="glyphicon glyphicon-refresh"></span>
+                                            </button>
+                                            <button type="button" class="btn_categoria_processos_novo btn btn-default">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Select Basic -->
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <label class="control-label" for="modal_processo_cbo_calendario_trabalho">Calendário de trabalho</label>
+                                    <div class="input-group">
+                                        <select id="modal_processo_cbo_calendario_trabalho" class="form-control selectpicker cbo_calendario_trabalho show-tick" data-live-search="true" title="Escolha o calendário de trabalho">
+                                        </select>
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn_calendario_trabalho_visualizar btn btn-default">
+                                                <span class="glyphicon glyphicon-info-sign"></span>
+                                            </button>
+                                            <button type="button" class="btn_calendario_trabalho_recarregar btn btn-default">
+                                                <span class="glyphicon glyphicon-refresh"></span>
+                                            </button>
+                                            <button type="button" class="btn_calendario_trabalho_novo btn btn-default">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Select Basic -->
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <label class="control-label" for="modal_processo_cbo_formulario">Formulário</label>
+                                    <div class="input-group">
+                                        <select id="modal_processo_cbo_formulario" class="form-control selectpicker cbo_formulario show-tick" data-live-search="true" title="Escolha o formulário">
+                                        </select>
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn_formulario_visualizar btn btn-default">
+                                                <span class="glyphicon glyphicon-info-sign"></span>
+                                            </button>
+                                            <button type="button" class="btn_formulario_recarregar btn btn-default">
+                                                <span class="glyphicon glyphicon-refresh"></span>
+                                            </button>
+                                            <button type="button" class="btn_formulario_novo btn btn-default">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+                <div class="tab-pane aba_atividades">
+                    
+                    <div>
+                        <div class="tab_atividades" style="padding-bottom: 35px;"></div>
+                    </div>
+    
+                </div>
+    
+                <div class="tab-pane aba_diagrama">
+                    <div class="div_diagrama"></div>
+                </div>
+    
+                <div class="tab-pane aba_supervisores">
+                        
+                    <div class="row">
+    
+                        <div class="col-md-4" style="margin-bottom: 15px;">
+                            <label style="display: block">Adicionar supervisores</label>
+                            <select  style="width: 100%;" class=" select-multi-column cbo_supervisores" placeholder="Pesquise pelo nome do usuário ou do grupo de usuários"></select>
+                        </div>
+    
+                        <div class="col-md-12">
+    
+                            <table class="tab_supervisores table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Supervisores</th>
+                                        <th>Permite Edição?</th>
+                                        <th>Notificar cancelamento da solicitação?</th>
+                                        <th>&nbsp;</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr template-row style="display: none">
+                                        <td>
+                                            <button type="button" class="btn_usuario_remover close hidden-sm hidden-md hidden-lg" aria-hidden="true">&times;</button>
+                                            <span class="label lb_tipo" template-field="tipo" style="margin-right: 5px;"></span>
+                                            <span template-field="nome">{nome}</span>
+                                        </td>
+    
+                                        <td>
+                                            <div>
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle template_switch chk_permite_edicao" checked>    
+                                            </div>
+                                        </td>
+    
+                                        <td>
+                                            <div>
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle template_switch chk_notifica_cancelamento" checked>    
+                                            </div>
+                                        </td>
+                                        
+    
+                                        <td class="text-right hidden-xs" style="margin-right: 0px; padding-right: 0px">
+                                            <a class="btn_usuario_remover btn btn-default">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </a>
+                                        </td>
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+    
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="tab-pane aba_periodicidade">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label style="display: block">Ativar recorrência</label>
+                            <div class="abertura_automatica_ativo"></div>
+    
+                            <div style="margin-top: 15px;" class="div_configuracoes_abertura_automatica">
+                                <label style="display: block;">Permitir abertura manual</label>
+                                <div class="permitir_abertura_manual"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 div_configuracoes_abertura_automatica">
+                            Iniciar solicitações automaticamente em:
+                            <div class="abertura_automatica_dias"></div>
+                        </div>
+                        <div class="col-md-2 div_configuracoes_abertura_automatica">
+                            Hora abertura
+                            <div class="abertura_automatica_hora_abertura"></div>
+                        </div>
+                        <div class="col-md-2 div_configuracoes_abertura_automatica">
+                            Qtde por solicitante
+                            <div class="abertura_automatica_quantidade"></div>
+                        </div>
+                        <div class="col-md-2 div_configuracoes_abertura_automatica">
+                            Última execução
+                            <div class="abertura_automatica_ultimo_sincronismo"></div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="glyphicon glyphicon-info-sign text-info"></span>
+                            <span class="text-muted small text-right">Caso a configuração 'Permitir abertura manual' esteja desativada, nenhum usuário conseguirá abrir manualmente o processo.</span>
+                            <br />
+                            <span class="glyphicon glyphicon-info-sign text-info"></span>
+                            <span class="text-muted small text-right">As alterações de recorrência não necessitam de uma nova versão.</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="tab-pane aba_versoes">
+                    <div>
+                        <p class="text-center" style="padding: 5px">
+                            <button class="btn_nova_versao btn btn-primary">
+                                Publicar nova versão
+                            </button>
+                        </p>
+                    </div>
+                    <table class="tab_versoes table">
+                        <thead>
+                            <tr class="hidden-xs">
+                                <th class="visible-xs"><!-- mobile -->&nbsp;</th>
+                                <th style="width: 20px">&nbsp;</th>
+                                <th style="width: 20px">Versão</th>
+                                <th style="width: 180px">Publicação</th>
+                                <th>&nbsp;</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                                
+                        </thead>
+                        <tbody>
+                            <tr template-row style="display: none">
+                                <!-- mobile -->
+                                <td class="td-mobile visible-xs">
+    
+                                    <div class="pull-right">
+                                    
+                                    </div>
+    
+                                    <h4>Versão
+                                        <span template-field="sequencia"></span>
+                                        <span template-field="ativa" class="glyphicon glyphicon-ok" style="padding:2px;"></span>
+                                        <i class="fa fa-exclamation icone_teste hidden" aria-hidden="true" style="padding:2px;"></i>
+                                    </h4>
+                                    <div class="text-info">
+                                        <span template-field="publicacao"></span>
+                                    </div>
+    
+                                    <div>
+                                        <button class="btn_documentacao_versao btn btn-default">
+                                            Documentação
+                                        </button>
+                                        <button class="btn_restaurar_versao btn btn-default">
+                                            Restaurar Modelagem
+                                        </button>
+                                        <button class="btn_ativar_versao btn btn-default">
+                                            Marcar esta versão como ativa
+                                        </button>
+                                        <button class="btn_versao_teste btn btn-default">
+                                            Marcar esta versão como teste
+                                        </button>
+                                    </div>
+    
+                                </td>
+                                <!-- /mobile -->
+                                <td class="hidden-xs" style="width: 50px;">
+                                    <span template-field="ativa" class="glyphicon glyphicon-ok" style="padding:2px;"></span>
+                                    <i class="fa fa-exclamation icone_teste hidden" aria-hidden="true" style="padding:2px;"></i>
+                                </td>
+                                <td class="hidden-xs" template-field="sequencia">{sequencia}</td>
+                                <td class="hidden-xs" template-field="publicacao">{publicacao}</td>
+                                <td class="hidden-xs">
+                                    <button class="btn_documentacao_versao btn btn-xs btn-default">
+                                        Documentação
+                                    </button>
+                                    <button class="btn_restaurar_versao btn btn-xs btn-default">
+                                        Restaurar Modelagem
+                                    </button>
+                                    <button class="btn_ativar_versao btn btn-xs btn-default">
+                                        Marcar esta versão como ativa
+                                    </button>
+                                    <button class="btn_versao_teste btn btn-xs btn-default">
+                                        Marcar esta versão como teste
+                                    </button>
+                                </td>
+                                <td class="hidden-xs">
+                                    <span class="glyphicon glyphicon-comment" template-field="nova_versao_observacao" data-html="true" style="cursor: pointer;"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+            </div>
+    
+        </div>
+    
+        <div class="panel-footer">
+            <div class="text-right">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
+                <button type="button" class="btn_salvar_processo btn btn-default">
+                    <i class="far fa-save"></i> Salvar
+                </button>
+                <button type="button" class="btn_salvar_processo salvar-e-sair btn btn-default">
+                    <i class="far fa-save"></i> <div class="fa fa-sign-out-alt icon-on-top"></div> Salvar e Sair
+                </button>
+            </div>
+        </div>
+    
+    </div>
+</div>

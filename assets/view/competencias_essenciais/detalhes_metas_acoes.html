@@ -1,0 +1,162 @@
+<!-- MODAL DETALHE -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_area_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_area_detalhes_label">Ações, Metas e Resultados</h4>
+            </div>
+            <div class="modal-body">
+                  <label for="edt_data_base">Informar data inicial para planejamento das ações</label>
+                  <input type="date" class="form-control edt_data_base">
+                  <h4 class="responsabilidade_escolhida"></h4>
+                  <br>
+                  <h4>Defina uma meta SMART para ser atingida em 7 Dias</h4>
+                  <h4>Lorem ipsum dolor quam sit libero. Saepe delectus optio officia nesciunt amet, maiores facilis nihil rerum, deserunt ullam?</h4>
+                  <div class="form-group">
+                      <label for="descricao">Resultado esperado para 7 dias</label> (<span class="data_sete_dias"/>)
+                      <textarea class="form-control edt_acao_sete_dias" name="edt_acao_sete_dias" maxlength="255" rows="2" required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_informativa_sete_dias" name="optradio_sete_dias" value="1">Informativa</label>
+                    </div>
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_percentual_sete_dias" name="optradio_sete_dias" value="2">Percentual</label>
+                    </div>
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_valor_sete_dias" name="optradio_sete_dias" value="3">Valor</label>
+                    </div>
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_sem_acao_sete_dias" name="optradio_sete_dias" value="0" checked>Sem ação</label>
+                    </div>
+                  </div>
+                  <div class="form-group percentual_sete_dias" style="display: none;">
+                    <input type="text" class="form-control edt_percentual_sete_dias" placeholder="Digite o percentual">
+                  </div>
+                  <div class="form-group valor_sete_dias" style="display: none;">
+                    <input type="text" class="form-control edt_valor_sete_dias" placeholder="Digite o Valor">
+                  </div>
+                  <br>
+                  <hr>
+                  <h4>Defina uma meta SMART para ser atingida em 14 Dias</h4>
+                  <h4>Lorem ipsum dolor alias eos a voluptatibus nostrum quis officiis minima non dolore totam, similique accusantium adipisci numquam.</h4>
+                  <div class="form-group">
+                      <label for="descricao">Resultado esperado para 14 dias</label> (<span class="data_catorze_dias"/>)
+                      <textarea class="form-control edt_acao_catorze_dias" name="edt_acao_catorze_dias" maxlength="255" rows="2" required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_informativa_catorze_dias" value="1" name="optradio_catorze_dias" >Informativa</label>
+                    </div>
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_percentual_catorze_dias" value="2" name="optradio_catorze_dias" >Percentual</label>
+                    </div>
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_valor_catorze_dias" value="3" name="optradio_catorze_dias" >Valor</label>
+                    </div>
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_sem_acao_catorze_dias" value="0" name="optradio_catorze_dias"  checked>Sem ação</label>
+                    </div>
+                  </div>
+                  <div class="form-group percentual_catorze_dias" style="display: none;">
+                    <input type="text" class="form-control edt_percentual_catorze_dias" placeholder="Digite o percentual">
+                  </div>
+                  <div class="form-group valor_catorze_dias" style="display: none;">
+                    <input type="text" class="form-control edt_valor_catorze_dias" placeholder="Digite o Valor">
+                  </div>
+                  <br>
+                  <hr>
+                  <h4>Defina uma meta SMART para ser atingida em 21 Dias</h4>
+                  <h4>Lorem ipsum dolor, modi eum exercitationem eveniet ullam, asperiores ducimus qui ex fuga consectetur. Aspernatur, voluptas ipsam omnis?</h4>
+                  <div class="form-group">
+                      <label for="descricao">Resultado esperado para 21 dias</label> (<span class="data_vinte_um_dias"/>)
+                      <textarea class="form-control edt_acao_vinte_um_dias" name="edt_acao_vinte_um_dias" maxlength="255" rows="2" required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_informativa_vinte_um_dias" value="1" name="optradio_vinte_um_dias">Informativa</label>
+                    </div>
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_percentual_vinte_um_dias" value="2" name="optradio_vinte_um_dias">Percentual</label>
+                    </div>
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_valor_vinte_um_dias" value="3" name="optradio_vinte_um_dias">Valor</label>
+                    </div>
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_sem_acao_vinte_um_dias" value="0" name="optradio_vinte_um_dias" checked>Sem ação</label>
+                    </div>
+                  </div>
+                  <div class="form-group percentual_vinte_um_dias" style="display: none;">
+                    <input type="text" class="form-control edt_percentual_vinte_um_dias" placeholder="Digite o percentual">
+                  </div>
+                  <div class="form-group valor_vinte_um_dias" style="display: none;">
+                    <input type="text" class="form-control edt_valor_vinte_um_dias" placeholder="Digite o Valor">
+                  </div>
+                  <br>
+                  <hr>
+                  <h4>Defina uma meta SMART para ser atingida em 28 Dias</h4>
+                  <h4>Lorem ipsum dolor numquam earum dignissimos facere deserunt esse illum temporibus. Consectetur repellendus sunt debitis delectus vero aut aliquam culpa.</h4>
+                  <div class="form-group">
+                      <label for="descricao">Resultado esperado para 28 dias</label> (<span class="data_vinte_oito_dias"/>)
+                      <textarea class="form-control edt_acao_vinte_oito_dias" name="edt_acao_vinte_oito_dias" maxlength="255" rows="2" required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_informativa_vinte_oito_dias" value="1" name="optradio_vinte_oito_dias">Informativa</label>
+                    </div>
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_percentual_vinte_oito_dias" value="2" name="optradio_vinte_oito_dias">Percentual</label>
+                    </div>
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_valor_vinte_oito_dias" value="3" name="optradio_vinte_oito_dias">Valor</label>
+                    </div>
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_sem_acao_vinte_oito_dias" value="0" name="optradio_vinte_oito_dias" checked>Sem ação</label>
+                    </div>
+                  </div>
+                  <div class="form-group percentual_vinte_oito_dias" style="display: none;">
+                    <input type="text" class="form-control edt_percentual_vinte_oito_dias" placeholder="Digite o percentual">
+                  </div>
+                  <div class="form-group valor_vinte_oito_dias" style="display: none;">
+                    <input type="text" class="form-control edt_valor_vinte_oito_dias" placeholder="Digite o Valor">
+                  </div>
+                  <br>
+                  <h3>Resultado esperado para 30 dias</h3>
+                  <h4>Qual o resultado/impacto esperado no seu indicador de performance?</h4>
+                  <div class="form-group">
+                      <label for="descricao">Resultado esperado para 30 dias</label> (<span class="data_trinta_dias"/>)
+                      <textarea
+                      class="form-control edt_acao_trinta_dias" name="edt_acao_trinta_dias" maxlength="255" rows="5" required></textarea>
+                  </div>
+                   <div class="form-group">
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_informativa_trinta_dias" value="1" name="optradio_trinta_dias">Informativa</label>
+                    </div>
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_percentual_trinta_dias" value="2" name="optradio_trinta_dias">Percentual</label>
+                    </div>
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_valor_trinta_dias" value="3" name="optradio_trinta_dias">Valor</label>
+                    </div>
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_sem_acao_trinta_dias" value="0" name="optradio_trinta_dias" checked>Sem ação</label>
+                    </div>
+                  </div>
+                  <div class="form-group percentual_trinta_dias" style="display: none;">
+                    <input type="text" class="form-control edt_percentual_trinta_dias" placeholder="Digite o percentual">
+                  </div>
+                  <div class="form-group valor_trinta_dias" style="display: none;">
+                    <input type="text" class="form-control edt_valor_trinta_dias" placeholder="Digite o Valor">
+                  </div>
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+                <button type="button" class="btn btn-warning btn_avaliar">Analisar</button>
+                <button type="button" class="btn btn-warning btn_salvar_enviar">Salvar e enviar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

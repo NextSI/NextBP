@@ -1,0 +1,382 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Detalhe Empresa</li>
+</ol>
+
+<div class="panel panel-default">
+    <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+        <div class="pull-right ">
+            <div >
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary" style="display: none;">Salvar</button>
+                <button type="button" class="btn_excluir btn btn-danger" style="display: none;">Excluir</button>                
+            </div>
+        </div>    
+        <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+            <li class="active lbl_tab_geral">
+                <a class="tab_dados_gerais" id="tab_dados_gerais" href="#div_dados_gerais" role="tab" data-toggle="tab">Geral</a>
+            </li>
+            <li class="lbl_tab_relatorio">
+                <a class="tab_relatorio" id="tab_relatorio" href="#div_relatorio" role="tab" data-toggle="tab">Layout Relatório</a>
+            </li>
+            <li class="lbl_tab_integracao_next_one">
+                <a class="tab_integracao_next_one" id="tab_integracao_next_one" href="#div_integracao_next_one" role="tab" data-toggle="tab">Integração Next One</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="panel-body">
+        <!-- Tab panes -->
+        <div class="tab-content">
+            
+            <div class="tab-pane active div_dados_gerais" id="div_dados_gerais">
+
+                <div class="row"> 
+                    <div class="col-md-6 div_logo_empresa">
+                        <div class="row"> 
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <span style="padding-top: 7px; padding-bottom: 0px;" ><img style="min-height: 60px; min-width: 105px; max-height: 60px; max-width: 180px; padding:1px; border:1px solid #021a40;" class="carrega_img"/></span> 
+                                </div>
+                            </div>            
+                            <div class="col-md-12">        
+                                <div class="form-group">
+                                    <input type="file" class="files_logo_empresa hidden" name="files[]" accept="image/*"/> 
+                                    <button type="button" class="btn_alterar_logo btn btn-sm btn-default">Alterar Logo</button>
+                                    <button type="button" class="btn_remover_logo btn btn-sm btn-default">Remover Logo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="row">                  
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div><label for="edt_site">Licença</label> <span class="edt_situacao label"></span></div>
+                                    <div class="div_vigencia" style="display: none">
+                                        Vigência de 
+                                        <span class="lbl_vigencia_de"></span>
+                                        até
+                                        <span class="lbl_vigencia_ate"></span>
+                                    </div>
+                                    <div class="div_licenca_retorno" style="display: none"></div>
+                                    <input type="file" class="files_licenca hidden" name="files[]" accept="image/*"/> 
+                                    <button type="button" class="btn_importar_licenca btn btn-sm btn-default">Importar novo arquivo de licença</button>
+                                    <button type="button" class="btn_editar_licenca btn btn-sm btn-default">Editar chave de licença</button>
+                                </div>
+                            </div>                
+                        </div>
+                    </div>
+                </div>
+                <div class="row"> 
+
+                    <div class="col-md-6">
+
+                        <div class="row">      
+                            <div class="col-md-12">            
+                                <div class="form-group">
+                                    <label for="modal_empresa_edt_razao_social">Razão Social</label>
+                                    <span class="text-danger">*</span>                                    
+                                    <input type="text" class="edt_razao_social form-control" id="modal_empresa_edt_razao_social" maxlength="200" placeholder="Razão Social">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">   
+                            <div class="col-md-3">           
+                                <div class="form-group">
+                                    <label for="modal_empresa_chk_padrao">Padrão</label><br>
+                                    <input type="checkbox" class="chk_padrao form-control" id="modal_empresa_chk_padrao" value="">
+                                </div>
+                            </div>
+
+                            <div class="col-md-9">           
+                                <div class="form-group">
+                                    <label for="modal_empresa_edt_nome">Nome Fantasia</label>
+                                    <span class="text-danger">*</span>
+                                    <input type="text" class="edt_nome form-control" id="modal_empresa_edt_nome" maxlength="100" placeholder="Nome Fantasia">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">                  
+                            <div class="col-md-3">       
+                                <div class="div_componente_cep form-group"></div>
+                            </div>                                                        
+                            <div class="col-md-9">                                    
+                                <div class="form-group">
+                                    <label for="edt_endereco">Endereço</label>
+                                    <span class="text-danger">*</span>
+                                    <input type="text" class="edt_endereco form-control" maxlength="80" id="edt_endereco" placeholder="Endereço">
+                                </div>                                                             
+                            </div>                                 
+                        </div>      
+                        <div class="row">   
+                            <div class="col-md-3">                                    
+                                <div class="form-group">
+                                    <label for="edt_numero">Número</label>
+                                    <span class="text-danger">*</span>
+                                    <input type="text" class="edt_numero form-control" maxlength="15" id="edt_numero" placeholder="Número">
+                                </div>                             
+                            </div>                                                                   
+                            <div class="col-md-9">
+                                <div class="form-group">
+                                    <label for="edt_complemento">Complemento</label>
+                                    <input type="text" class="edt_complemento form-control" maxlength="100" id="edt_complemento" placeholder="Nome Fantasia">
+                                </div>                            
+                            </div>                
+                        </div>    
+                        <div class="row">                  
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="edt_bairro">Bairro</label>
+                                    <span class="text-danger">*</span>
+                                    <input type="text" class="edt_bairro form-control" maxlength="60" id="edt_bairro" placeholder="Bairro">
+                                </div>                            
+                            </div>                
+                        </div>    
+                        <div class="row">
+                            <div class="col-md-6">     
+                                <div class="form-group">
+                                    <label>Município</label>
+                                    <span class="text-danger">*</span>
+                                    <div class="input-group"> 
+                                        <input type="text" class="edt_municipio form-control" disabled>
+                                        <span class="input-group-btn">
+                                            <button class="btn_municipio btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                                        </span>
+                                    </div>   
+                                </div>                               
+                            </div>
+                            <div class="col-md-6">   
+                                <div class="form-group">                                 
+                                    <label>País</label>
+                                    <span class="text-danger">*</span>
+                                    <div class="input-group"> 
+                                        <input type="text" class="edt_pais form-control" disabled>
+                                        <span class="input-group-btn">
+                                            <button class="btn_pais btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                                        </span>
+                                    </div>   
+                                </div>   
+                            </div>                
+                        </div>
+
+                    </div> 
+
+                    <div class="col-md-6">                            
+
+                        <div class="row">      
+                            <div class="col-md-12">            
+                                <div class="form-group">
+                                    <label for="modal_empresa_edt_cnpj">CNPJ</label>
+                                    <span class="text-danger">*</span>                                                                        
+                                    <input type="text" class="edt_cnpj cnpj form-control" id="modal_empresa_edt_cnpj" maxlength="20" placeholder="CNPJ">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="edt_telefone1">Telefone 1</label>
+                                    <input type="text" class="edt_telefone1 form-control" maxlength="15" id="edt_telefone1" placeholder="Telefone">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="edt_telefone2">Telefone 2</label>
+                                    <input type="text" class="edt_telefone2 form-control" maxlength="15" id="edt_telefone2" placeholder="Telefone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="edt_telefone3">Telefone 3</label>
+                                    <input type="text" class="edt_telefone3 form-control" maxlength="15" id="edt_telefone3" placeholder="Telefone">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="edt_telefone4">Telefone 4</label>
+                                    <input type="text" class="edt_telefone4 form-control" maxlength="15" id="edt_telefone4" placeholder="Telefone">
+                                </div>
+                            </div>
+                        </div>                         
+                        <div class="row">                  
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="edt_email_principal">E-mail Principal</label>
+                                    <input type="text" class="edt_email_principal form-control" maxlength="60" id="edt_email_principal" placeholder="E-mail Principal">
+                                </div>                            
+                            </div>                
+                        </div>        
+                        <div class="row">                  
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="edt_site">Site</label>
+                                    <input type="text" class="edt_site form-control" maxlength="60" id="edt_site" placeholder="Site">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="edt_dominio_interacao">Domínios para abertura de chamado</label>
+                                    <input type="text" class="edt_dominio_interacao form-control" maxlength="300" id="edt_dominio_interacao" placeholder="exemploa.com.br; exemplob.com.br; exemploc.com.br;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane div_relatorio" id="div_relatorio">
+
+                <div class="row"> 
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="edt_img_marcacao">Marcação</label>
+                            <br>                            
+                            <span class="preview_logo" id="edt_img_marcacao" style="padding-top: 7px; padding-bottom: 0px;">
+                                <img style="min-height: 60px; min-width: 70px; max-height: 60px; max-width: 180px; padding:1px; border:1px solid #021a40;" class="carrega_img_marcacao"/>
+                            </span> 
+                        </div>                        
+                    </div>                                  
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="edt_img_cabecalho">Cabeçalho</label>                        
+                            <br>                            
+                            <span class="preview_logo" id="edt_img_cabecalho" style="padding-top: 7px; padding-bottom: 0px;">
+                                <img style="min-height: 60px; min-width: 70px; max-height: 60px; max-width: 180px; padding:1px; border:1px solid #021a40;" class="carrega_img_cabecalho"/>
+                            </span> 
+                        </div>
+                    </div>  
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="edt_img_rodape">Rodapé</label>                        
+                            <br>                            
+                            <span class="preview_logo" id="edt_img_rodape" style="padding-top: 7px; padding-bottom: 0px;">
+                                <img style="min-height: 60px; min-width: 70px; max-height: 60px; max-width: 180px; padding:1px; border:1px solid #021a40;" class="carrega_img_rodape"/>
+                            </span> 
+                        </div>
+                    </div>              
+                </div>    
+
+                <div class="row"> 
+                    <div class="col-md-4">        
+                        <div class="form-group">
+                            <input type="file" class="files_marcacao hidden" name="files[]" accept="image/*"/> 
+                            <button type="button" class="btn_alterar_logo_marcacao btn btn-sm btn-default">Alterar</button>
+                            <button type="button" class="btn_remover_logo_marcacao btn btn-sm btn-default">Remover</button>                              
+                        </div>
+                    </div>                    
+                    <div class="col-md-4">        
+                        <div class="form-group">
+                            <input type="file" class="files_cabecalho hidden" name="files[]" accept="image/*"/> 
+                            <button type="button" class="btn_alterar_logo_cabecalho btn btn-sm btn-default">Alterar</button>
+                            <button type="button" class="btn_remover_logo_cabecalho btn btn-sm btn-default">Remover</button>                              
+                        </div>
+                    </div>
+                    <div class="col-md-4">        
+                        <div class="form-group">
+                            <input type="file" class="files_rodape hidden" name="files[]" accept="image/*"/> 
+                            <button type="button" class="btn_alterar_logo_rodape btn btn-sm btn-default">Alterar</button> 
+                            <button type="button" class="btn_remover_logo_rodape btn btn-sm btn-default">Remover</button>                             
+                        </div>
+                    </div>                    
+                </div>    
+
+                <div class="row">                  
+                    <div class="col-md-6">                                    
+                        <div class="form-group">
+                            <label for="edt_texto_rodape">Texto Rodapé</label>
+                            <input type="text" class="edt_texto_rodape form-control" maxlength="200" id="edt_texto_rodape" placeholder="Texto Rodapé">
+                        </div>                             
+                    </div>                                        
+                </div>      
+
+            </div>
+            <div class="tab-pane div_integracao_next_one" id="div_integracao_next_one">
+                <div class="row">      
+                    <div class="col-md-3">            
+                        <div class="form-group">
+                            <label for="modal_empresa_edt_erp_grupo">ERP Grupo</label>
+                            <input type="text" class="edt_erp_grupo form-control" id="modal_empresa_edt_erp_grupo" maxlength="50" placeholder="ERP Grupo">
+                        </div>
+                    </div>
+                    <div class="col-md-3">            
+                        <div class="form-group">
+                            <label for="modal_empresa_edt_erp_empresa">ERP Empresa</label>
+                            <input type="text" class="edt_erp_empresa form-control" id="modal_empresa_edt_erp_empresa" maxlength="50" placeholder="ERP Empresa">
+                        </div>
+                    </div>
+                    <div class="col-md-3">            
+                        <div class="form-group">
+                            <label for="modal_empresa_edt_erp_filial">ERP Filial</label>
+                            <input type="text" class="edt_erp_filial form-control" id="modal_empresa_edt_erp_filial" maxlength="50" placeholder="ERP Filial">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel-footer">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 div_vincular">
+            <label for="modal_empresa_chk_padrao">Vincular empresa ao usuário</label>
+            <input type="checkbox" class="chk_vincular_empresa form-control" id="modal_empresa_chk_vincular_empresa" value="">
+        </div>
+        <div class="text-right col-xs-12 col-sm-6 col-md-6 div_btn">
+            <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+            <button type="button" class="btn_salvar btn btn-primary" style="display: none;">Salvar</button>
+            <button type="button" class="btn_excluir btn btn-danger" style="display: none;">Excluir</button>                        
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_empresa_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_empresa_detalhes_label">Empresa</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label for="modal_empresa_edt_nome">Nome</label>
+                    <input type="text" class="edt_nome form-control" id="modal_empresa_edt_nome" maxlength="100">
+                </div>
+
+                <div class="form-group">
+                    <label for="modal_empresa_edt_razao_social">Razão Social</label>
+                    <input type="text" class="edt_razao_social form-control" id="modal_empresa_edt_razao_social" maxlength="200">
+                </div>
+
+                <div class="form-group">
+                    <label for="modal_empresa_edt_cnpj">CNPJ</label>
+                    <input type="text" class="edt_cnpj cnpj form-control" id="modal_empresa_edt_cnpj" maxlength="20">
+                </div>
+                
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+                <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>
+-->

@@ -1,0 +1,154 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Atuação Efetiva</li>
+</ol>
+
+<div class="col-sm-12 col-md-12 col-lg-12">
+
+    <div class="row">
+        <div class="col-sm-12 col-md-4 col-lg-4">
+            <label>Filtrar por código</label> 
+            <div class="form-group">
+                <div class="btn-group">
+                    <div class="input-group" style="width: 100%">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn_filtros_usuario btn btn-default">
+                                <span class="glyphicon glyphicon-filter"></span> 
+                            </button>
+                        </span>
+                        <input type="text" class="form-control edt_pesq_codigo" placeholder="Código" maxlength="10" id="edt_pesq_codigo"/>
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-default btn_pesquisa_codigo">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                            <button type="button" class="btn_hover_trash btn_limpar_filtro btn btn-default ">
+                                <span class="span_trash">Limpar Filtro</span> 
+                                <span class="glyphicon glyphicon-trash"></span> 
+                            </button>   
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-sm-12 col-md-4 col-lg-4 filtro_atividades">
+            <label>Filtrar por Status</label>
+            <div class="form-group">
+                <select id="cbo_status" class="form-control selectpicker cbo_status show-tick" data-live-search="true" title="Filtro por Status">
+                    <option value="-1" selected>Todos</option>
+                    <option value="N">Em Aberto</option>
+                    <option value="S">Encerrado</option>
+                </select>
+            </div>
+        </div>
+
+       <!--  <div class="col-sm-12 col-md-4 col-lg-4 filtro_atividades">
+            <div class="form-group">
+                <select id="cbo_acoes" class="form-control selectpicker cbo_acoes show-tick" data-live-search="true" title="Filtro por Ações">
+                    <option value="-1" selected>Todas</option>
+                    <option value="1">Minhas ações</option>
+                </select>
+            </div>
+        </div> -->
+
+        <div class="col-sm-12 col-md-4 col-lg-4 div_cbo_autor">
+            <label>Filtrar por Responsável</label>
+            <div class="form-group">
+                <select id="cbo_autor" class="form-control selectpicker cbo_autor show-tick" data-live-search="true" title="Filtro por Responsável">
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <button type="button" class="btn_novo btn btn-primary">
+                <span class="glyphicon glyphicon-plus-sign"></span> Nova Matriz de Competências Essenciais
+            </button>
+            <button type="button" class="btn_listar btn btn-default">
+                <span class="glyphicon glyphicon-refresh"></span>
+            </button>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 text-right">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default btn_tutorial">
+                 <span class="glyphicon glyphicon-info-sign"></span>
+              </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div>
+    <div template-box style="display: none;" class="box_atuacao col-md-4 col-sm-6 col-">
+        <div class="box">
+            <div class="actions">
+                <div class="dropdown">
+                  <a href="#" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span class="glyphicon glyphicon-option-vertical menu-vert"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                    <li>
+                        <a class="btn_editar" href="#">
+                            <span class="glyphicon glyphicon-pencil"></span> Editar
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn_excluir" href="#">
+                            <span class="glyphicon glyphicon-trash"></span> Excluir
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn_concluir" href="#">
+                            <span class="glyphicon glyphicon-ok"></span> Concluir
+                        </a>
+                    </li>
+                    <li role="separator" clas="divider"></li>
+                    <li>
+                        <a class="btn_graficos" href="#" style="display:;">
+                            <span class="glyphicon glyphicon-th"></span> Gerar Gráficos
+                        </a>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+            <div class="box-header">
+                <p class="id" template-field="id">{id}</p>
+                <p class="titulo">Competências Essenciais</p>
+            </div>
+            <div class="box-info col-md-12 col-sm-12">
+            <div class="col-md-6 col-sm-6 text-center">
+                        <span template-field="autor">{autor}</span>
+                    </div>
+                    <div class="col-md-6 col-sm-6 text-center">
+                       <span template-field="data_inicio">{data_inicio}</span> 
+                    </div>
+            </div>
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12" style="text-align: left;margin-left: 5px;">
+                        <span template-field="atuacao_info">Atuação Efetiva: N. #1 - Ver. #1</span>
+                    </div>
+                    <div class="col-md-12 col-sm-12" style="text-align: left;margin-left: 5px;">
+                        <span template-field="indicador_info">Indicador: Mix de Vendas</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <b>Responsabilidade</b> <span template-field="descricao">{descricao}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12 col-md-12" style="padding-bottom: 40px; padding-top: 10px;">
+        <div class="row boxes"></div>
+    </div>
+
+</div>
+
+<!-- /LISTAGEM -->

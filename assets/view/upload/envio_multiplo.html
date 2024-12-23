@@ -1,0 +1,254 @@
+
+<!-- LISTAGEM -->
+
+<h3><span class="glyphicon glyphicon-cloud-upload"></span> Envio múltiplo de arquivos</h3>
+<hr />
+
+<!-- Arrastar e soltar arquivo -->
+<div class="div_dropabled_file" style="border:2.5px dashed rgba(51, 51, 51, 0.4); min-height: 150px; background: rgba(255, 255, 255, 0.6);">
+    <div class="pull-top text-center" style="padding-top: 60px;">
+        <span class="btn_input">
+            <span class="text-center text-muted span_normal hidden">
+                <span class="glyphicon glyphicon-file"></span>
+                Arraste e solte o(s) arquivo(s) aqui
+            </span>
+        </span>
+    </div>
+</div>
+
+<!-- Selecionar arquivo -->
+<input type="file" class="edt_files" multiple style="margin: 0 auto; margin-top: 50px;" />
+
+<div class="div_tab_files hidden row" style="padding-top: 15px;">
+
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="margin-bottom: 15px;">
+        <button class="btn btn-primary btn_confirmar">
+            Confirmar
+        </button>
+
+        <button class="btn btn-default btn_cancelar">
+            Cancelar
+        </button>
+
+    </div>
+    
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div class="form-group">
+                    <label for="cbo_opcao_cadastro">Opção de Preencimento</label>
+                    <select id="cbo_opcao_cadastro" class="cbo_opcao_cadastro selectpicker" data-width="100%">
+                        <option value="1">Utilizar o mesmo Assunto, Tipo, Local e Vigência para todos os arquivos</option>
+                        <option value="2" selected>Utilizar Assunto, Tipo, Local e Vigência diferentes para cada arquivo</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 div_esconder hidden">
+                <div class="form-group">
+                    <label for="cbo_assunto_documento_principal">Assunto</label>
+                    <select is="cbo_assunto_documento_principal" class="cbo_assunto_documento_principal selectpicker" data-width="100%" data-live-search="true"></select>
+                </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 div_esconder hidden">
+                <div class="form-group">
+                    <label for="cbo_tipo_documento_principal">Tipo de Documento</label>
+                    <select id="cbo_tipo_documento_principal" class="cbo_tipo_documento_principal selectpicker" data-width="100%" data-live-search="true"></select>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 div_esconder hidden">
+                <div class="form-group">
+                    <label for="cbo_local_armazenamento_principal">Local de Armazenamento</label>
+                    <select id="cbo_local_armazenamento_principal" class="cbo_local_armazenamento_principal selectpicker" data-width="100%" data-live-search="true"></select>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 div_esconder hidden">
+                <div class="form-group">
+                    <label for="edt_data_vigencia_principal">Data de Vigência</label>
+                    
+                    <input type="date" class="form-control edt_data_vigencia_principal" id="edt_data_vigencia_principal" />
+                </div>
+            </div>
+
+        </div>
+        <div class="panel panel-default">
+            <table class="tab_listagem table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <!--MOBILE -->
+                        <th class="visible-xs visible-sm visible-md" width="100%" >Documento</th>
+                        <!--MOBILE -->
+                        <th class="hidden-xs hidden-sm hidden-md" width="14.28%" >Nome Documento</th>
+                        <th class="hidden-xs hidden-sm hidden-md" width="14.28%" >Código</th>
+                        <th class="hidden-xs hidden-sm hidden-md" width="14.28%">Tags</th>
+                        <th class="hidden-xs hidden-sm hidden-md" width="14.28%">Assunto</th>
+                        <th class="hidden-xs hidden-sm hidden-md" width="14.28%">Tipo</th>
+                        <th class="hidden-xs hidden-sm hidden-md" width="14.28%">Local de Armazenamento</th>
+                        <th class="hidden-xs hidden-sm hidden-md" width="14.28%">Observações</th>
+                        <th class="hidden-xs hidden-sm hidden-md" width="14.28%">Data de vigência</th>
+                        <th class="hidden-xs hidden-sm hidden-md" width="5%">&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- itens -->
+                    <tr template-row style="display: none;"  >
+                        <!--MOBILE -->
+                            <td class="visible-xs visible-sm visible-md">
+                                <button type="button" template-button="btn_excluir" class="close hidden-sm hidden-md" aria-hidden="true">&times;</button>
+                                <div class="row">
+                                        
+                                    <div class="col-xs-12 col-sm-6 col-md-4 ">
+                                        <div class="form-group">
+                                            <label for="nome">Nome</label>
+                                            <input type="text" id="nome" class="form-control" template-field="nome" placeholder="Digite o Nome">
+                                        </div>
+                                    </div>
+                                        
+                                    <div class="col-xs-12 col-sm-6 col-md-4 ">
+                                        <div class="form-group">
+                                            <label bosseta for="codigo">Código</label>
+                                            <input type="text" id="codigo" class="form-control" template-field="codigo" placeholder="Digite o Código">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <div class="form-group">
+                                            <label for="tags">Tags</label>
+                                            <input type="text" id="tags" class="form-control" template-field="tags" placeholder="Digite as Tags">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <div class="form-group">
+                                            <label for="modal_central_documentos_arquivo_cbo_assunto">Assunto</label>
+                                            <select id="modal_central_documentos_arquivo_cbo_assunto" template-field="cbo_assunto" class="cbo_assunto form-control">
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <div class="form-group">
+                                            <label for="modal_central_documentos_arquivo_cbo_tipo_documento">Tipo de Documento</label>
+                                            <select id="modal_central_documentos_arquivo_cbo_tipo_documento" template-field="cbo_tipo_documento" class="cbo_tipo_documento form-control">
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <div class="form-group">
+                                            <label for="modal_processo_cbo_local_armazenamento">Local de Armazenamento</label>
+                                            <select id="modal_processo_cbo_local_armazenamento" template-field="cbo_local_armazenamento" class="cbo_local_armazenamento form-control">
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <div class="form-group">
+                                            <label for="observacoes">Observações</label>
+                                            <input type="text" id="observacao" class="form-control" template-field="observacoes" placeholder="Digite as Observações">
+                                        </div>
+                                    </div>
+
+                                    <div class="hidden-xs col-sm-6 col-md-4">
+                                        <div class="form-group pull-rigth" style="padding-top: 20px">
+                                            <button type="button" class="btn btn-default pull-rigth" template-button="btn_excluir">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                        
+                            </td>
+                        <!--MOBILE -->
+
+                        <td class="hidden-xs hidden-sm hidden-md" width="16.66%">
+                            <div class="form-group">
+                                <input type="text" class="form-control" template-field="nome">
+                            </div>
+                        </td>
+                        <td class="hidden-xs hidden-sm hidden-md" width="16.66%">
+                            <div class="form-group">
+                                <input type="text" class="form-control" template-field="codigo">
+                            </div>
+                        </td>
+                        <td class="hidden-xs hidden-sm hidden-md" width="16.66%">
+                            <div class="form-group">
+                                <input type="text" class="form-control" template-field="tags">
+                            </div>
+                        </td>
+                        <td class="hidden-xs hidden-sm hidden-md" width="16.66%">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <select id="modal_central_documentos_arquivo_cbo_assunto" template-field="cbo_assunto" class="cbo_assunto form-control">
+                                    </select>
+                                    <div class="input-group-btn">
+                                        <button type="button" template-button="btn_assunto_visualizar" class="btn_assunto_visualizar btn btn-default">
+                                            <span class="glyphicon glyphicon-info-sign"></span>
+                                        </button>
+                                        <button type="button" template-button="btn_assunto_novo" class="btn_assunto_novo btn btn-default">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="hidden-xs hidden-sm hidden-md" width="16.66%">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <select id="modal_central_documentos_arquivo_cbo_tipo_documento" template-field="cbo_tipo_documento" class="cbo_tipo_documento form-control">
+                                    </select>
+                                    <div class="input-group-btn">
+                                        <button type="button" template-button="btn_tipo_documento_visualizar" class="btn_tipo_documento_visualizar btn btn-default">
+                                            <span class="glyphicon glyphicon-info-sign"></span>
+                                        </button>
+                                        <button type="button" template-button="btn_tipo_documento_novo" class="btn_tipo_documento_novo btn btn-default">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="hidden-xs hidden-sm hidden-md" width="16.66%">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <select id="modal_processo_cbo_local_armazenamento" template-field="cbo_local_armazenamento" class="cbo_local_armazenamento form-control">
+                                    </select>
+                                    <div class="input-group-btn">
+                                        <button type="button" template-button="btn_local_armazenamento_visualizar" class="btn_local_armazenamento_visualizar btn btn-default">
+                                            <span class="glyphicon glyphicon-info-sign"></span>
+                                        </button>
+                                        <button type="button" template-button="btn_local_armazenamento_novo" class="btn_local_armazenamento_novo btn btn-default">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="hidden-xs hidden-sm hidden-md" width="16.66%">
+                            <div class="form-group">
+                                <input type="text" class="form-control" template-field="observacoes">
+                            </div>
+                        </td>
+                        <td class="hidden-xs hidden-sm hidden-md" width="16.66%">
+                            <div class="form-group">
+                                <input type="date" class="form-control" template-field="data_vigencia">
+                            </div>
+                        </td>
+                        <td class="hidden-xs hidden-sm hidden-md" width="5%">
+                            <button type="button" class="btn btn-default" template-button="btn_excluir">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<!-- /LISTAGEM -->

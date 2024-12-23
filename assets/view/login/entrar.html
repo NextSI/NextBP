@@ -1,0 +1,75 @@
+<div style="height: calc(100vh - 150px); width: 100%; display: table;">
+	<div style="display: table-cell; vertical-align: middle;">
+		<div class="text-center">
+			<img class="img_logo" src="" style="max-width: 150px;" />
+		</div>
+	
+		<!-- Enter -->
+		<form class="form-signin" role="form" onsubmit="javascript:return false;" style="padding-bottom: 0px;">
+			
+			<div class="lbl_admin pull-right" style="display:none; margin-bottom: 10px;">
+				<span class="label label-warning">
+					#admin
+				</span>
+			</div>
+	
+		</form>
+	
+		<form class="form-signin form_signin_user form_login_padrao hidden" role="form" onsubmit="javascript:return false;">
+			
+			<div class="form-group text-muted" style="text-align: center;">
+				<h3>Acessar conta</h3>
+			</div>
+	
+			<div class="div_autenticacao" style="display: none;">
+
+				<div>
+					<div class="form-group div_opcoes_usuario">
+						<div id="select_user"></div>
+					</div>
+					<div class="form-group div_opcoes_usuario">
+						<div id="select_ldap_server"></div>
+					</div>
+					<div class="form-group">
+						<div id="username"></div>
+					</div>
+					<div class="form-group" style="margin-bottom: 5px;">
+						<div id="password"></div>
+					</div>
+					<div class="form-group" style="text-align: center;">
+						<div id="dxButtonEsqueciSenha" style="width: 100%; font-size: x-small;"></div>
+					</div>
+				</div>
+	
+				<div style="margin-bottom: 12px;" class="div_opcoes_usuario">
+					<div style="margin-bottom: 5px;" id="checkMemorizarSenha"></div>
+					<br />
+					<div id="checkEntrarAutomaticamente"></div>
+				</div>
+	
+				<div id="dxButtonEntrar" style="width: 100%; margin-bottom: 8px;"></div>
+				<div id="dxButtonEsquecerUsuario" style="width: 100%;"></div>
+			</div>
+		</form>
+
+		<form class="form-signin form_signin_user form_email hidden" role="form" onsubmit="javascript:return false;">
+			<div class="form-group text-muted" style="text-align: center; margin-bottom: 15px;">
+				<h3>Seja bem vindo</h3>
+				<p>Digite seu e-mail para continuar</p>
+			</div>
+
+			<div>
+				<div class="form-group">
+					<div class="email_anonimo"></div>
+				</div>
+			</div>
+
+			<div class="btnLoginAnonimo" style="width: 100%; margin-bottom: 8px;"></div>
+		</form>
+
+		<!-- /Enter -->
+		<div class="text-center text-muted" style="margin-top: 15px;">
+			<span id="version"></span>
+		</div>
+	</div>
+</div>

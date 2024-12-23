@@ -1,0 +1,174 @@
+<div class="modal bs-modal-lg" data-dismiss="modal" tabindex="-1" role="dialog" aria-labelledby="modal_chamado_configuracoes" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_chamado_configuracoes">Configurações de Perfil</h4>
+            </div>
+            <div class="modal-body">
+                <div class="panel panel-default painel_detalhes">
+                    <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                        <div class="pull-right">
+                            <!-- -->
+                        </div>
+                        <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                            <li class="active lbl_tab_padroes_sugestao_perfil">
+                                <a class="menu_padroes_sugestao_perfil" href="#aba_geral" role="tab" data-toggle="tab">
+                                	Padrões de Sugestão de Perfil
+                                </a>
+                            </li>
+							<li class="lbl_tab_seguranca">
+                                <a class="menu_seguranca" href="#aba_configuracoes" role="tab" data-toggle="tab">
+                                	Segurança
+                                </a>
+                            </li>
+                        </ul>
+                    </div> 
+
+                    <div class="panel-body">
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div id="aba_geral" class="active tab-pane">
+				                <div class="row">
+				                    <div class="col-lg-12 col-sm-12">
+										<p>As configurações abaixo serão utilizadas na criação automática de usuários por e-mail ou pelo LDAP.</p>
+				                        <table class="table table-hover">
+											<thead>
+												<tr>
+													<th>Perfil</th>
+													<th>Área</th>
+													<th>Calendário de Trabalho</th>
+													<th>Nível</th>
+													<th>Permissões</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Colaborador</td>
+													<td>
+						                                <select class="form-control select-multi-column cbo_areas_colaborador">
+						                                </select>
+													</td>
+													<td>
+						                                <select class="form-control select-multi-column cbo_calendario_trabalho_colaborador">
+						                                </select>
+													</td>
+													<td>
+						                                <input type="number" min="1" max="100" class="edt_nivel_colaborador form-control">
+													</td>
+													<td>
+														<button type="button" class="btn_permissoes_colaborador btn btn-default">
+							                                <span class="glyphicon glyphicon-lock"></span> Permissões
+							                            </button>
+													</td>
+												</tr>
+												<tr>
+													<td>Cliente</td>
+													<td>
+						                                <select class="form-control select-multi-column cbo_areas_cliente">
+						                                </select>
+													</td>
+													<td>
+						                                <select class="form-control select-multi-column cbo_calendario_trabalho_cliente">
+						                                </select>
+													</td>
+													<td>
+						                                <input type="number" min="1" max="100" class="edt_nivel_cliente form-control">
+													</td>
+													<td>
+														<button type="button" class="btn_permissoes_cliente btn btn-default">
+							                                <span class="glyphicon glyphicon-lock"></span> Permissões
+							                            </button>
+													</td>
+												</tr>
+												<tr>
+													<td>Fornecedor</td>
+													<td>
+						                                <select class="form-control select-multi-column cbo_areas_fornecedor">
+						                                </select>
+													</td>
+													<td>
+						                                <select class="form-control select-multi-column cbo_calendario_trabalho_fornecedor">
+						                                </select>
+													</td>
+													<td>
+						                                <input type="number" min="1" max="100" class="edt_nivel_fornecedor form-control">
+													</td>
+													<td>
+														<button type="button" class="btn_permissoes_fornecedor btn btn-default">
+							                                <span class="glyphicon glyphicon-lock"></span> Permissões
+							                            </button>
+													</td>
+												</tr>
+												<tr>
+													<td>Organização</td>
+													<td>
+						                                <select class="form-control select-multi-column cbo_areas_organizacao">
+						                                </select>
+													</td>
+													<td>
+						                                <select class="form-control select-multi-column cbo_calendario_trabalho_organizacao">
+						                                </select>
+													</td>
+													<td>
+						                                <input type="number" min="1" max="100" class="edt_nivel_organizacao form-control">
+													</td>
+													<td>
+														<button type="button" class="btn_permissoes_organizacao btn btn-default">
+							                                <span class="glyphicon glyphicon-lock"></span> Permissões
+							                            </button>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+				                </div>
+					        </div>
+
+							<div id="aba_configuracoes" class="tab-pane">
+				                <div class="row">
+									<table class="table table-striped" >
+										<tbody>
+											<tr>
+												<td class="text-left"><label>Qtde de dias para expirar senha</label></td>
+												<td class="text-right"><input type="number" min="0" class="form-control edt_qtde_dias_expirar_senha pull-right" style="width: 65px;"></td>
+											</tr>
+											<tr>
+												<td class="text-left"><label>Número de tentativas de login</label></td>
+												<td class="text-right"><input type="number" min="0" class="form-control edt_login_numero_tentativas pull-right" style="width: 65px;"></td>
+											</tr>
+											<tr>
+												<td class="text-left"><label>Tempo de desbloqueio após tentativas inválidas (Em minutos)</label></td>
+												<td class="text-right"><input type="number" min="0" class="form-control edt_minutos_desbloqueio_forca_bruta pull-right" style="width: 65px;"></td>
+											</tr>
+											<tr>
+												<td class="text-left"><label>Tamanho mínimo de caracteres da senha</label></td>
+												<td class="text-right"><input type="number" min="0" class="form-control edt_senha_tamanho_minimo pull-right" style="width: 65px;"></td>
+											</tr>
+											<tr>
+												<td class="text-left"><label>Exigir caracteres maiúsculos e minúsculos na senha</label></td>
+												<td class="text-right"><input type="checkbox" class="form-control checkbox_bootstrap_toggle edt_senha_exigir_maiusculo_e_minusculo pull-right" style="width: 65px;"></td>
+											</tr>
+											<tr>
+												<td class="text-left"><label>Exigir caracteres numéricos na senha</label></td>
+												<td class="text-right"><input type="checkbox" class="form-control checkbox_bootstrap_toggle edt_senha_exigir_numero pull-right" style="width: 65px;"></td>
+											</tr>
+											<tr>
+												<td class="text-left"><label>Exigir caracteres especiais na senha</label></td>
+												<td class="text-right"><input type="checkbox" class="form-control checkbox_bootstrap_toggle edt_senha_exigir_caracter_especial pull-right" style="width: 65px;"></td>
+											</tr>
+										</tbody>
+									</table>
+				                </div>
+					        </div>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>                
+            </div>
+        </div>
+    </div>
+</div>

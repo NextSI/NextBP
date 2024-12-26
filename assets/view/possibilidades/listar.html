@@ -1,0 +1,241 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Possibilidades</li>
+</ol>
+
+<!-- LISTAGEM -->
+<div>
+
+<div class="alert alert-danger mensagem" style="display: none" role="alert"> Pressione <b>Enter</b> para finalizar o cadastro</div>
+
+<!--     <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+        <button type="button" class="btn_novo btn btn-primary">
+            <span class="glyphicon glyphicon-plus-sign"></span> Nova
+        </button>
+        <button type="button" class="btn_listar btn btn-default">
+            <span class="glyphicon glyphicon-refresh"></span>
+        </button>
+    </nav> -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+            <div class="form-group">
+            <p>Selecione uma Área de Foco</p>
+                <select class="form-control selectpicker select_area_foco"  data-live-search="true"></select>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 div_cbo_usuarios hidden">
+            <div class="form-group">
+                <div class="div_componente_usuario form-group"></div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-3">
+            <div class="form-group">
+                <p>Ordenação</p>
+                <select class="form-control selectpicker filtro_ordenacao" data-live-search="true">
+                    <option value="-1" selected disabled>Escolha uma Opção</option>
+                    <option value="1">Ordenar por Classificação</option>
+                    <option value="2">Ordenar por Possibilidade</option>
+                    <option value="3">Ordenar por Impacto</option>
+                </select>
+            </div>
+        </div>
+        <p>&nbsp;</p>
+        <div class="col-xs-8 col-sm-2 col-md-2">
+            <button type="button" class="btn btn-default btn_limpar_filtros">
+                <span class="glyphicon glyphicon-trash"></span> Limpar Filtros
+            </button>
+        </div>
+    </div>
+    <span class="text-muted info_novo_registro">
+        <span class="glyphicon glyphicon-info-sign"></span> Pressione a tecla <strong>"Esc"</strong> para cancelar o registro.
+    </span>
+    <div>
+
+        <table class="tab_listagem table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th class="hidden-xs">N.</th>
+                    <th class="hidden-xs">Possibilidade</th>
+                    <th class="hidden-xs">Autor</th>
+                    <th class="hidden-xs">Classificação <span data-target="#modalClassificacao" data-toggle="modal" class="fa fa-question-circle btn_info"></span></th>
+                    <th class="hidden-xs">Carta de Inovação</th>
+                    <th class="hidden-xs">Status</th>
+                    <th class="hidden-xs">&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- itens -->
+                <tr template-row style="display: none;" class="fix-vertical-align">
+                    <!-- mobile -->
+                    <td class="td-mobile visible-xs">
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn_editar btn btn-default">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </button>
+                                <button type="button" class="btn_excluir btn btn-default">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <h4 template-field="numero">N.</h4>
+                        <h4 template-field="possibilidade">Possibilidade</h4>
+                        <h4 template-field="autor">Autor</h4>
+                        <h4 template-field="classificacao">Classificação</h4>
+                        <h4 template-field="carta_inovacao">&nbsp;</h4>
+                        <h4 template-field="status">&nbsp;</h4>
+                        <h4 template-field="opcoes">&nbsp;</h4>
+                        <!-- <h4 template-field="numero">{numero}</h4>
+                        <h4 template-field="possibilidade"><input class="form-control hidden edt_possibilidade" type="text" data-ativado="false"><span></span></h4>
+                        <h4 template-field="autor"><input class="form-control hidden edt_autor" type="text" data-ativado="false"><span></span></h4>
+                        <h4 template-field="classificacao">
+                            <select class="form-control" name="select_classificacao">
+                                <option value="0" selected disabled>Escolha uma opção</option>
+                                <optgroup label="Impossível">
+                                    <option value="5">5 - Impossível / Alto Impacto</option>
+                                    <option value="6">6 - Impossível / Medio Impacto</option>
+                                    <option value="9">9 - Impossível / Baixo Impacto</option>
+                                </optgroup>
+                                <optgroup label="Difícil">
+                                    <option value="3">3 - Difícil / Alto Impacto</option>
+                                    <option value="4">4 - Difícil / Medio Impacto</option>
+                                    <option value="8">8 - Difícil / Baixo Impacto</option>
+                                </optgroup>
+                                <optgroup label="Possível">
+                                    <option value="1">1 - Possível / Alto Impacto</option>
+                                    <option value="2">2 - Possível / Medio Impacto</option>
+                                    <option value="7">7 - Possível / Baixo Impacto</option>
+                                </optgroup>
+                            </select>
+                        </h4>
+                        <h4 template-field="carta_inovacao">
+                            <button type="button" class="btn_carta_inovacao btn btn-default">
+                                <span class="glyphicon glyphicon-envelope"></span> Carta de Inovação
+                            </button>
+                            <button type="button" class="btn_gerar_chamado btn btn-default hidden">
+                                <span class="glyphicon glyphicon-share"></span> Gerar chamado
+                            </button>
+                        </h4>
+                        <h4 template-field="status">
+                            <span class="label label-danger"></span>
+                        </h4>
+                        <h4 template-field="btn_remove">
+                            <span class="text-warning fa-lg glyphicon glyphicon-trash btn_remove"></span>
+                            <span class="text-warning fa-lg glyphicon glyphicon-floppy-disk btn_salvar" style="display:none;"></span>
+                        </h4> -->
+                    </td>
+                    <!-- /mobile -->
+
+                    <td class="hidden-xs" template-field="numero">{numero}</td>
+                    <td class="hidden-xs" template-field="possibilidade"><input class="form-control hidden edt_possibilidade" type="text" data-ativado="false"><span></span></td>
+                    <td class="hidden-xs" template-field="autor"><input class="form-control hidden edt_autor" type="text" data-ativado="false"><span></span></td>
+                    <td class="hidden-xs" template-field="classificacao">
+                        <select class="form-control" name="select_classificacao">
+                            <option value="0" selected disabled>Escolha uma opção</option>
+                            <optgroup label="Impossível">
+                                <option value="5">5 - Impossível / Alto Impacto</option>
+                                <option value="6">6 - Impossível / Medio Impacto</option>
+                                <option value="9">9 - Impossível / Baixo Impacto</option>
+                            </optgroup>
+                            <optgroup label="Difícil">
+                                <option value="3">3 - Difícil / Alto Impacto</option>
+                                <option value="4">4 - Difícil / Medio Impacto</option>
+                                <option value="8">8 - Difícil / Baixo Impacto</option>
+                            </optgroup>
+                            <optgroup label="Possível">
+                                <option value="1">1 - Possível / Alto Impacto</option>
+                                <option value="2">2 - Possível / Medio Impacto</option>
+                                <option value="7">7 - Possível / Baixo Impacto</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                    <td class="hidden-xs" template-field="carta_inovacao">
+                        <button type="button" class="btn_carta_inovacao btn btn-default">
+                            <span class="glyphicon glyphicon-envelope"></span> Carta de Inovação
+                        </button>
+                        <button type="button" class="btn_gerar_chamado btn btn-default hidden">
+                            <span class="glyphicon glyphicon-share"></span> Gerar chamado
+                        </button>
+                    </td>
+                    <td class="hidden-xs" template-field="status">
+                        <span class="label label-danger"></span>
+                    </td>
+                    <td class="hidden-xs text-center" template-field="btn-remove">
+                        <span class="text-warning fa-lg glyphicon glyphicon-trash btn_remove"></span>
+                        <span class="text-warning fa-lg glyphicon glyphicon-floppy-disk btn_salvar" style="display:none;"></span>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6" class="hidden-xs">
+                    &nbsp;
+                    </td>
+                    <td class="text-right totalizadores"></td>
+                </tr>
+<!--                 <tr class="bg-info nova-possibilidade">
+                    <td>
+                    </td>
+                    <td colspan="5">
+                        <div>Clique aqui para adicionar nova possibilidade</div>
+                    </td>
+                    <td>
+                        <div class="fa fa-plus pull-right"></div>
+                        <div class="clearfix"></div>
+                    </td>
+                </tr> -->
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+<!-- /LISTAGEM -->
+
+<!-- MODAL DE CLASSIFICAÇÕES -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modalClassificacao" aria-hidden="true" id="modalClassificacao">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Classificação</h4>
+            </div>
+            <div class="modal-body">
+                  <h2 style="margin-top:0 !important;">Método Disney</h2>
+                  <p>Adaptado por Net Profit Brasil.</p>
+                  <table class="table">
+                    <thead>
+                      <tr class="active text-left">
+                        <th>CRITÉRIOS</th>
+                        <th class="text-center">A <br> Alto Impacto</th>
+                        <th class="text-center">B <br> Médio Impacto</th>
+                        <th class="text-center">C <br> Baixo Impacto</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="text-center">
+                        <td class="active text-left"><strong>POSSÍVEL</strong></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>7</td>
+                      </tr>
+                      <tr class=" text-center">
+                        <td class="active text-left"><strong>DIFÍCIL</strong></td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>8</td>
+                      </tr>
+                      <tr class=" text-center">
+                        <td class="active text-left"><strong>IMPOSSÍVEL</strong></td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>9</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_excluir btn btn-primary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MODAL DE CLASSIFICAÇÕES -->

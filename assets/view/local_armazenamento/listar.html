@@ -1,0 +1,215 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Locais de armazenamento</li>
+</ol>
+
+<!-- LISTAGEM -->
+<div>
+
+    <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+        <button type="button" class="btn_novo btn btn-primary">
+            <span class="glyphicon glyphicon-plus-sign"></span> Novo
+        </button>
+        <button type="button" class="btn_listar btn btn-default">
+            <span class="glyphicon glyphicon-refresh"></span>
+        </button>
+    </nav>
+
+    <div class="">
+
+        <div class="row" style="margin-bottom: 10px;">
+            <div class="col-md-12">
+                <span class="text-muted" >Utilizado pelo BP: <span class="lbl_uso_disco_armazenamento"></span></span>                   
+            </div>
+        </div>
+
+        <table class="tab_listagem table">
+            <thead>
+                <tr>
+                    <th class="hidden-xs">Nome</th>
+                    <th class="hidden-xs">Diretório</th>
+                    <th class="hidden-xs">Espaço Livre</th>
+                    <th class="hidden-xs">Espaço Total</th>
+                    <th class="hidden-xs text-center">Padrão do Chamados</th>
+                    <th class="hidden-xs text-center">Padrão do Sistema</th>
+                    <th class="hidden-xs text-center">Padrão do Processos</th>
+                    <th class="hidden-xs text-center">Padrão do Documentos</th>
+                    <th class="hidden-xs text-center">Padrão do Projeto</th>
+                    <th class="hidden-xs text-center">Padrão Atendimento Relacionamento</th>
+                    <!--th class="hidden-xs text-center">Tipo</th-->
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- itens -->
+                <tr template-row style="display: none;" template-field="tr_listagem">
+
+                    <!-- MOBILE -->
+                    
+                    <td class="td-mobile visible-xs">
+                        
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn_visualizar btn btn-default">
+                                    <span class="glyphicon glyphicon-eye-open"></span>
+                                </button>
+                                <button type="button" class="btn_editar btn btn-default">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </button>
+                                <button type="button" class="btn_excluir btn btn-default">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <h4 template-field="nome">{descricao}</h4>
+                        <br>
+                        <h4 template-field="diretorio">{diretorio}</h4>
+                        
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-left pull-left">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-left pull-left">
+                                        <span class="text-left">Padrão do Chamados</span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-success text-right pull-right">
+                                        <span class="glyphicon text-right" template-field="padrao_chamados"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right pull-right">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-left pull-left">
+                                        <span class="text-left">Padrão do Sistema</span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-success text-right pull-right">
+                                        <span class="glyphicon text-right" template-field="padrao_sistema"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-left pull-left">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-left pull-left">
+                                        <span class="text-left">Padrão do Projetos</span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-success text-right pull-right">
+                                        <span class="glyphicon text-right" template-field="padrao_projeto"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right pull-right">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-left pull-left">
+                                        <span class="text-left">Padrão do Processos</span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-success text-right pull-right">
+                                        <span class="glyphicon text-right" template-field="padrao_processo"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-left pull-left">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-left pull-left">
+                                        <span class="text-left">Padrão do Documentos</span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-success text-right pull-right">
+                                        <span class="glyphicon text-right" template-field="padrao_documentos"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right pull-right">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-left pull-left">
+                                        <span class="text-left">Padrão Atendimento Relacionamento</span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-success text-right pull-right">
+                                        <span class="glyphicon text-right" template-field="padrao_atendimento_relacionamento"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-left pull-left">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-left pull-left">
+                                        <span class="text-left">Tipo:</span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  text-right pull-right">
+                                        <span class="text-right" template-field="tipo_local"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div-->
+                        
+                    </td>
+                 
+                    <!-- MOBILE -->
+
+                    <td class="hidden-xs" template-field="nome">{nome}</td>
+                    <td class="hidden-xs" template-field="td_diretorio">
+                        <span template-field="diretorio">{diretorio}</span>                          
+                    </td>
+                    <td class="hidden-xs" template-field="td_espaco_livre">
+                        <span template-field="espaco_livre">{espaco_livre}</span>                          
+                    </td>
+                    <td class="hidden-xs" template-field="td_espaco_total">
+                        <span template-field="espaco_total">{espaco_total}</span>
+                    </td>
+                    <td class="hidden-xs text-center text-success">
+                        <span class="glyphicon" template-field="padrao_chamados"></span>
+                    </td>
+                    <td class="hidden-xs text-center text-success">
+                        <span class="glyphicon" template-field="padrao_sistema"></span>
+                    </td>
+                    <td class="hidden-xs text-center text-success">
+                        <span class="glyphicon" template-field="padrao_processos"></span>
+                    </td>
+                    <td class="hidden-xs text-center text-success">
+                        <span class="glyphicon" template-field="padrao_documentos"></span>
+                    </td>
+                    <td class="hidden-xs text-center text-success">
+                        <span class="glyphicon" template-field="padrao_projeto"></span>
+                    </td>
+                    <td class="hidden-xs text-center text-success">
+                        <span class="glyphicon" template-field="padrao_atendimento_relacionamento"></span>
+                    </td>             
+                    <!--td class="hidden-xs text-center ">
+                        <span class="" template-field="tipo_local"></span>
+                    </td-->
+                    <td class="hidden-xs" template-buttons="actions">
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn_editar btn btn-default">
+                                <span class="glyphicon glyphicon-pencil"></span> Editar
+                            </button>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a class="btn_visualizar" href="#">
+                                        Visualizar
+                                    </a></li>
+                                    <li><a class="btn_excluir" href="#">
+                                        Excluir
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<!-- /LISTAGEM -->

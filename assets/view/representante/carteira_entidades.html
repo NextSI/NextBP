@@ -1,0 +1,115 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Carteira de Entidades do Representante</li>
+</ol>
+
+<!-- LISTAGEM -->
+<div>
+
+    <div class="row" style="padding-top:10px;">
+        <div class="col-xs-12 col-sm-3 col-md-1 col-lg-1" style="padding-right:0px;">
+            <div class="btn-group">
+                <button type="button" class="pull-left btn_refresh btn btn-default">
+                    <span class="glyphicon glyphicon-refresh"></span>
+                </button>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" style="padding-left:0px;">
+            <div class="form-group">
+                <select id="cbo_representantes" class="hidden form-control selectpicker cbo_representantes" data-live-search="true">
+                </select>
+            </div>
+        </div>
+    </div>    
+        
+    
+
+    <div class="">
+
+        <table class="tab_listagem table table-striped table-hover">
+            <thead class="hidden-xs">
+                <tr>
+                    <th>Nome Fantasia</th>
+                    <th>Razão Social</th>
+                    <th class="hidden-xs visible-sm hidden-md hidden-lg">Contato</th>
+                    <th class="hidden-sm">E-mail</th>
+                    <th class="hidden-sm">Telefone 1</th>
+                    <th class="hidden-sm">Telefone 2</th>
+                    <th class="hidden-sm">Telefone 3</th>
+                    <th class="hidden-sm">Telefone 4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- itens -->
+                <tr template-row style="display: none;">
+                    
+                    <!--MOBILE-->
+                    <td class="visible-xs">
+                        
+                        <div class="pull-right">
+                            <span class="">E-mail: 
+                            <span template-field="email"></span>
+                            </span>
+                            <br>
+                            <span class="">Telefone 1: 
+                                <span template-field="telefone1"></span>
+                            </span>
+                            <br>
+                            <span class="">Telefone 2: 
+                                <span template-field="telefone2"></span>
+                            </span>
+                            <br>
+                            <span class="">Telefone 3: 
+                                <span template-field="telefone3"></span>
+                            </span>
+                            <br>
+                            <span class="">Telefone 4: 
+                                <span template-field="telefone4"></span>
+                            </span>
+                        </div>
+                        
+                        <span class="label lb_tipo">Cliente</span>
+                        <h4 class="text-info" template-field="nome_fantasia"></h4>
+                        <span class="text-muted" template-field="razao_social"></span>
+                    </td>
+                    <!--MOBILE-->
+
+                    <td class="hidden-xs">  
+                        <span class="label lb_tipo">Cliente</span>                       
+                        <span template-field="nome_fantasia">{nome_fantasia}</span>                          
+                    </td>
+                    <td class="hidden-xs" template-field="razao_social">{razao_social}</td>
+                    <td class="hidden-xs visible-sm">
+                        <span class="">E-mail: 
+                            <span template-field="email"></span>
+                        </span>
+                        <br>
+                        <span class="">Telefone 1: 
+                            <span template-field="telefone1"></span>
+                        </span>
+                        <br>
+                        <span class="">Telefone 2: 
+                            <span template-field="telefone2"></span>
+                        </span>
+                        <br>
+                        <span class="">Telefone 3: 
+                            <span template-field="telefone3"></span>
+                        </span>
+                        <br>
+                        <span class="">Telefone 4: 
+                            <span template-field="telefone4"></span>
+                        </span>
+                    </td>
+                    <td class="hidden-xs hidden-sm" template-field="email">{email}</td>
+                    <td class="hidden-xs hidden-sm" template-field="telefone1">{telefone1}</td>
+                    <td class="hidden-xs hidden-sm" template-field="telefone2">{telefone2}</td>
+                    <td class="hidden-xs hidden-sm" template-field="telefone3">{telefone3}</td>
+                    <td class="hidden-xs hidden-sm" template-field="telefone4">{telefone4}</td>  
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<!-- /LISTAGEM -->

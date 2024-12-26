@@ -1,0 +1,121 @@
+<?php
+
+//
+// APP
+//
+
+// título que aparece na página do navegador
+define('APP_NOME', 'NOME_DO_CLIENTE - Next Business Process'); 
+
+// url que será utilizada nos e-mails com links para o aplicativo
+define('APP_URL', 'http://localhost/');
+
+// url que será utilizada nos e-mails com links externos para o aplicativo
+//define('APP_URL_EXT', 'http://localhost/'); 
+
+// caminho do aplicativo (após o domínio)
+define('APP_URI', '/webservice/index.php/'); 
+
+// utilizado para armazenar arquivos do sistema
+define('APP_DATA', '/var/www/data');
+
+// Define se a senha nas telas, será oculta ou não
+// define('SENHAS_OCULTAS', true);
+
+// Define se a senha salva na base de dados será no formato MD5
+// define('SENHAS_MD5', true);
+
+// utilizado para exibir o trace no retorno de erros para um ip externo
+//define('DEBUG_BUSINESS_EXCEPTION', '192.168.1.0');
+
+// utilizado para gravar em Solicitacao_Atividade.dao.php.log a validação das origens do gateway inclusivo
+//define('DEBUG_SITUACAO_GATEWAY', true);
+
+// utilizado para gravar em SQL_Lento.log as instruções que demorarem mais que X segundos para serem executadas
+//define('DEBUG_SQL_LENTO', true);
+//define('DEBUG_SQL_LENTO_SEGUNDOS', 1);
+
+// utilizado para gravar em Requisicoes_Lentas.log as instruções que demorarem mais que X segundos para serem executadas
+//define('DEBUG_REQUISICAO_LENTA', true);
+//define('DEBUG_REQUISICAO_LENTA_SEGUNDOS', 30);
+
+// utilizado para gravar em Memoria.log a evolução do armazenamento de memória
+//define('LOG_MEMORIA', true);
+
+// usuário de administrador do sistema que será utilizado por JOBs e Helpers
+// do sistema que precisa de usuário com permissão
+define('USER_SYS_ID', 1);
+
+// usuário e senha do painel do administrador de atualizações do Next BP
+// define('PAINEL_ADMIN_USUARIO', 'admin');
+// define('PAINEL_ADMIN_SENHA', 'senha');
+
+// Data de corte na integação de e-mails. Utilizar quando implantar a integração em contas já existentes ou migrações de servidor de e-mail. Evita integrar e-mails já integrados
+//define('DATAHORA_CORTE_INTERAGE_EMAIL', '2017-03-19 23:59:59');
+
+// Ignorar inteirações com e-mails contendo no assunto algum item deste array
+//define('MAIL_IGNORAR_CONTENDO_NO_ASSUNTO', [
+//    '[SPAM]',
+//    'Resposta automática de férias'
+//]);
+
+// Não anexar documento em e-mail caso o arquivo faça exceder o tamanho limite estabelecido
+//define('MAIL_ENVIO_LIMITE_MB', 2);
+
+// Limite do tamanho total dos arquivos a serem compactados ao gerar arquivo zip
+//define('TAMANHO_LIMITE_GERAR_ZIP', '1024M');
+//define('MEMORIA_LIMITE_GERAR_ZIP', '512M');
+
+// Configura o delay que pode existir na execução do Job Scheduler
+//define('JOB_SCHEDULER_DELAY_MINUTO', 5);
+
+$error_log_path = str_replace('/', DIRECTORY_SEPARATOR, __DIR__ . '/../log/error.log');
+ini_set('error_log', $error_log_path);
+
+// Configura o caminho do binário do LibreOffice
+//define('PATH_LIBREOFFICE', 'C:/Program Files/LibreOffice/program/soffice.exe');
+
+// Altera retornos HTTP de código 500 para outro código. Utilizar em possíveis incompatibilidades com integrações.
+// define('HTTP_RESPONSE_CODE_500', 203);
+
+// Altera os parâmetros do tipo texto das requisições HTTP enviadas pelo BP.
+// Deve ser utilizado para burlar firewalls abusivos, que monitoram
+// o conteúdo das requisições e realizam bloqueios inesperados e indesejados.
+// define('WS_PARAMS_BASE64', true);
+
+// Habilitar botão "Cadastre-se" para registro de usuários de clientes com domínios configurados
+//define('USUARIO_CLIENTE_CADASTRESE', true);
+//define('USUARIO_CLIENTE_MENSAGEM_DOMINIO_NAO_ENCONTRADO', '<div>Domínio não encontrado. Entre em contato com os administradores.</div>');
+//define('USUARIO_CLIENTE_MENSAGEM_CODIGO_PARA_AUTENTICACAO', '<div>Olá {nome}. Este é seu código para autenticação:<br><b>{codigo}</b><br></div>');
+
+// API do Next One
+// define('API_NEXT_ONE', 'http://');
+
+// padrão de timezone
+date_default_timezone_set('America/Sao_Paulo');
+
+// desabilita log de erro nas respostas das requisições do webservice
+error_reporting(0);
+
+// habilita log de erro - habilitar para debug
+//error_reporting(E_ALL & ~E_NOTICE);
+
+// Exibe os erros das consultas MySQL na tela do usuário (não afeta o ambiente de desenvolvimento)
+define('SHOW_SQL_ERRORS', false);
+
+//
+// MYSQL
+//
+define('DB_HOST', 'localhost');
+define('DB_PORT', '3306');
+define('DB_NAME', 'next_bp');
+define('DB_USER', 'next_bp');
+define('DB_PASSWORD', '');
+// exemplo de conexão SSL
+// define('DB_OPTIONS', [
+//     PDO::MYSQL_ATTR_SSL_KEY => '/path/to/client-key.pem',
+//     PDO::MYSQL_ATTR_SSL_CERT => '/path/to/client-cert.pem',
+//     PDO::MYSQL_ATTR_SSL_CA => '/path/to/ca-cert.pem',
+//     PDO::MYSQL_ATTR_SSL_CIPHER => 'DHE-RSA-AES256-SHA:AES128-SHA', // opcional
+//     PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => true,
+// ]);

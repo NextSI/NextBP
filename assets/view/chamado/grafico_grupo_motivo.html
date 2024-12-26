@@ -1,0 +1,99 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Grupo de Motivos</li>
+</ol>
+
+<div class="panel panel-default">
+    <div class="panel-heading"  style="margin-bottom: 0px; padding-bottom: 0px;">
+
+        <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+            <div class="form-inline">
+                <div class="navbar-left">
+
+                    <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_data_inicio">
+                    até
+                    <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_data_fim">
+
+                    <button type="button" class="btn btn-primary btn_filtrar">
+
+                        <span class="glyphicon glyphicon-search"></span> Filtrar
+                    </button>
+                    <h4 style="display: inline-block; margin-left: 5px;">Total de chamados registrados neste período: <span class="total_chamados">0</span></h4>
+                   <!--  <button type="button" class="btn btn-default btn_limpar_filtros">
+
+                        <span class="glyphicon glyphicon-trash"></span> Limpar Filtros
+                    </button> -->
+                    
+                </div>
+            </div>
+        </nav>
+
+    </div>
+    <div class="panel-heading div_filtros">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                    <label for="cbo_status">Status</label>
+                    <select class="form-control cbo_status selectpicker" multiple data-actions-box="true" multiple data-selected-text-format="count > 1" title="Selecione o Status" data-deselect-all-text="Nenhum" data-select-all-text="Todos">
+                        <option value="1">Remanescente</option>
+                        <option value="2">Encerrado no prazo</option>
+                        <option value="3">Fora do prazo</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                    <label for="cbo_grupo_motivo">Grupo de Motivo</label>
+                    <select class="form-control cbo_grupo_motivo selectpicker" multiple data-actions-box="true" multiple data-selected-text-format="count > 1" title="Selecione o Grupo Motivo" data-deselect-all-text="Nenhum" data-select-all-text="Todos">
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                    <label for="cbo_motivo">Motivo</label>
+                    <select class="form-control cbo_motivo selectpicker" multiple data-actions-box="true" multiple data-selected-text-format="count > 1" title="Selecione o Motivo" data-deselect-all-text="Nenhum" data-select-all-text="Todos">
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                    <label for="cbo_empresas">Empresa</label>
+                    <select class="form-control cbo_empresas selectpicker" multiple data-actions-box="true" multiple data-selected-text-format="count > 1" title="Selecione a Empresa" data-deselect-all-text="Nenhum" data-select-all-text="Todos">
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<H4 class="chamados_atendidos hidden" style="position: relative;">
+    <span style="position: absolute;font-size: 10px;top: -10px;color: #a2a2a2;">Estatística</span>
+    Chamados atendidos dentro do SLA - <span class="chamados_sla">0%</span>
+</H4>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12"  style="padding-bottom: 30px;">
+            <div class="grafico_grupo_motivo"></div>
+        </div>
+    </div>
+    <div class="row" style="padding-bottom: 30px;">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="grafico_remanescentes"></div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="grafico_no_prazo"></div>
+        </div>
+    </div>
+    <div class="row"  style="padding-bottom: 30px;">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="grafico_fora_do_prazo"></div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="grafico_em_andamento"></div>
+        </div>
+    </div>
+    <div class="row"  style="padding-bottom: 30px;">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="grafico_encerrados_por_responsavel"></div>
+        </div>
+    </div>

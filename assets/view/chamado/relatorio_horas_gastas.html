@@ -1,0 +1,179 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Relatório de Horas Gastas</li>
+</ol>
+
+<!-- LISTAGEM -->
+
+    <div class="panel-heading"  style="margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px;">
+      <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+          <div class="form-inline">
+              <div class="navbar-left">
+                  <input type="date" min="1900-01-01" class="form-control edt_day_start">
+                  até
+                  <input type="date" min="1900-01-01" class="form-control edt_day_end">
+              </div>
+          </div>
+          <div class="pull-right">
+
+            <button type="button" class="btn btn-primary btn_search">
+              <span class="glyphicon glyphicon-search"></span> Filtrar
+            </button>
+
+            <button type="button" class="btn btn-default btn_show_filtros">
+                <span class="glyphicon glyphicon-filter"></span> Filtros
+            </button>
+
+            <button type="button" class="btn btn-default btn_refresh">
+                <span class="glyphicon glyphicon-refresh"></span>
+            </button>
+
+          </div>
+      </nav>
+    </div>
+
+    <div class="row">
+            <div class="col-md-12 col-lg-12 ">
+              <!-- Filtro -->
+              <div class="div_filtros" id="div_filtros" style="display: none;">
+                <div class="row" style="margin-left: 0px; margin-right: 0px">
+
+                  <div class="col-xs-12 col-sm-4 col-md-4 div_filtro_cliente" id="div_filtro_cliente" style="margin-top: 4px; padding-left: 4px;padding-right: 4px;">
+                    <div class="form-group">
+                        <select class="form-control select-multi-column filtro_cliente_id" placeholder="Filtro por cliente"></select>
+                    </div>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-4 col-md-4 div_filtro_prospect" id="div_filtro_prospect" style="margin-top: 4px; padding-left: 4px;padding-right: 4px;">
+                    <div class="form-group">
+                        <select id="filtro_prospect_id" class="form-control selectpicker filtro_prospect_id show-tick" multiple data-live-search="true" title="Filtro por Organização"></select>
+                    </div>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-4 col-md-4 div_filtro_fornecedor" id="div_filtro_fornecedor" style="margin-top: 4px; padding-left: 4px;padding-right: 4px;">
+                    <div class="form-group">
+                        <select id="filtro_fornecedor_id" class="form-control selectpicker filtro_fornecedor_id show-tick" multiple data-live-search="true" title="Filtro por Fornecedor"></select>
+                    </div>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-4 col-md-4 div_filtro_empresa" id="div_filtro_empresa" style="margin-top: 4px; padding-left: 4px;padding-right: 4px;">
+                    <div class="form-group">
+                        <select id="filtro_empresa_id" class="form-control selectpicker filtro_empresa_id show-tick" multiple data-live-search="true" title="Filtro por Empresa"></select>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <!-- /Filtro -->              
+            </div>
+          </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Entidade x Colaborador</h3>
+        </div>
+        <div class="alert hidden div_alert" id="div_alert">
+            <p class="text-muted">Nenhuma hora gasta</p>
+        </div>
+        <div class="panel-body div_lista_geral_cliente">
+
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Colaborador x Entidade</h3>
+        </div>
+        <div class="alert hidden div_alert" id="div_alert">
+            <p class="text-muted">Nenhuma hora gasta </p>
+        </div>
+        <div class="panel-body div_lista_geral_usuario">
+
+        </div>
+      </div>
+
+    <div class="div_template" style="display: none">
+
+      <table class="tab_listagem_cliente table table-striped table-hover">
+          <thead class="bg-primary">
+              <tr>
+                <th template-field="nome_fantasia"></th>
+                <th class="text-right" template-field="total_horas"></th>
+              </tr>
+          </thead>
+          <tbody class="tbody">
+              <tr>
+                <td class="bg-info"><label>Colaboradores</label></td>
+                <td class="bg-info text-right"><label>Horas</label></td>
+              </tr>
+              <tr template-row style="display: none;">
+                  <td template-field="nome_usuario">{nome}</td>
+                  <td class="text-right" template-field="horas"></td>
+              </tr>
+          </tbody>
+          <tfoot class="bg-warning">
+              <td><label>Total de Horas</label></td>
+              <td class="text-right" ><label template-field="total_horas"></label></td>
+          </tfoot>
+      </table>
+
+      <div class="row">
+            <div class="div_grafico_cliente_x_colaborador hidden col-sm-12 col-md-12 col-lg-12">
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="panel div_template_usuario" style="display: none">
+
+      <table class="tab_listagem_usuario table table-striped table-hover">
+          <thead class="bg-primary">
+              <tr>
+                <th template-field="nome_usuario"></th>
+                <th class="text-right" template-field="total_horas"></th>
+              </tr>
+          </thead>
+          <tbody class="tbody">
+              <tr>
+                <td class="bg-info"><label>Entidades</label></td>
+                <td class="bg-info text-right"><label>Horas</label></td>
+              </tr>
+              <tr template-row style="display: none;">
+                  <td template-field="nome_fantasia">{nome}</td>
+                  <td class="text-right" template-field="horas"></td>
+              </tr>
+          </tbody>
+          <tfoot class="bg-warning">
+              <td ><label>Total de Horas</label></td>
+              <td class="text-right" ><label template-field="total_horas"></label></td>
+          </tfoot>
+      </table>
+
+      <div class="row">
+            <div class="div_grafico_colaborador_x_cliente_usuario_cliente hidden col-sm-12 col-md-12 col-lg-12">
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="div_grafico_colaborador_x_cliente_usuario_prospect hidden col-sm-12 col-md-12 col-lg-12">
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="div_grafico_colaborador_x_cliente_usuario_fornecedor hidden col-sm-12 col-md-12 col-lg-12">
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="div_grafico_colaborador_x_cliente_usuario_empresa_filial hidden col-sm-12 col-md-12 col-lg-12">
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- /LISTAGEM -->

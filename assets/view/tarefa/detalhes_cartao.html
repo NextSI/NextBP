@@ -1,0 +1,141 @@
+<div class="row">
+    <div class="col-md-12" style="padding-bottom: 10px;">
+        <button type="submit" class="btn_salvar btn btn-primary hidden">
+            <i class="far fa-save" aria-hidden="true"></i> Salvar
+        </button>
+
+        <button type="button" class="btn_salvar_sair btn btn-primary hidden">
+            <i class="far fa-save" aria-hidden="true"></i>
+            <i class="fa fa-sign-out-alt icon-on-top" aria-hidden="true" style="color: white;"></i> Salvar e Sair
+        </button>
+
+        <button type="submit" class="btn_excluir btn btn-danger pull-right hidden">
+            <i class="fa fa-trash-alt" aria-hidden="true"></i> Excluir
+        </button>
+    </div>
+</div>
+
+<div class="panel panel-default painel_detalhes">
+    <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+        <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+            <li class="active">
+                <a href="javascript:;" role="tab" data-toggle="tab" class="aba_geral">Geral</a>
+            </li>
+            <li>
+                <a href="javascript:;" role="tab" data-toggle="tab" class="aba_historico">Histórico</a>
+            </li>
+            <li>
+                <a href="javascript:;" role="tab" data-toggle="tab" class="aba_referencias">Referências</a>
+            </li>
+            <li>
+                <a href="javascript:;" role="tab" data-toggle="tab" class="aba_formulario_personalizado">Campos Personalizados</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="panel-body">
+        <!-- Tab panes -->
+        <div class="tab-content">
+
+            <div class="active tab-pane conteudo_aba_geral">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="lbl_titulo_cartao">Nome do Cartão</label>
+                                    <div class="dx_textbox_titulo_cartao"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="lbl_responsavel">Responsável</label>
+                                    <div class="dx_dropdown_responsavel"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="lbl_etiqueta">Etiqueta</label>
+                                    <div class="dx_dropdown_etiqueta"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="lbl_lista">Lista</label>
+                                    <div class="dx_selectbox_lista"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="lbl_ordem">Ordem</label>
+                                    <div class="dx_selectbox_ordem"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="lbl_date_prazo">Prazo</label>
+                                    <div class="dx_date_prazo"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="lbl_date_conclusao">Conclusão</label>
+                                    <div class="dx_date_conclusao"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="dx_html_editor_descricao"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane conteudo_aba_historico">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="dx_listagem_historico"></div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="tab-pane conteudo_aba_referencias">
+                <div class="div_componente_referencias"></div>
+            </div>
+
+            <div class="tab-pane conteudo_aba_formulario_personalizado">
+                <div class="form-editor">
+                    
+                    <div class="form-grupos panel-body" style="padding: 0px;">
+                    </div>
+
+                    <div class="form-grupo" template-grupo template-ref="" style="display: none;">
+                        <div>
+                            <h3 class="text-primary lbl_grupo_nome"></h3>
+                        </div>
+
+                    </div>
+
+                    <div class="form-grupo-campo" template-campo template-ref="" style="display: none;">
+                        <div class="div_campo form-group">
+                            <span class="lbl_obrigatorio text-danger">* </span>
+                            <label class="lbl_nome">{Nome}</label>
+                            <div class="div_input">
+                                <!-- elemento do campo -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

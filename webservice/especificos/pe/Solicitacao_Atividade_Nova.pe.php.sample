@@ -1,0 +1,16 @@
+<?php
+
+use \Sys\Util;
+use \Sys\Basic;
+use \Sys\Validation;
+use \Sys\DB;
+
+function solicitacao_atividade_nova_antes($solicitacao_atividade_model) {
+	// ação antes de criar a nova atividade
+	// $solicitacao_atividade_model->observacoes = 'Exemplo PE solicitacao_atividade_nova_antes';
+};
+
+function solicitacao_atividade_nova_depois($solicitacao_atividade_model) {
+	// ação depois de salvar
+	// print_r($solicitacao_atividade_model);
+};

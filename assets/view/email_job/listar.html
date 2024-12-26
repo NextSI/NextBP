@@ -1,0 +1,65 @@
+<div>
+    <button type="button" class="btn_enviar btn btn-primary">
+        <span class="glyphicon glyphicon-send"></span> Enviar todos os e-mails
+    </button>
+    <button type="button" class="btn_limpar_semaforo btn btn-default">
+        Limpar semáforo
+    </button>
+    <button type="button" class="btn_selecionar_todos btn btn-default">
+        Selecionar Todos
+    </button>
+    <button type="button" class="btn_listar btn btn-default">
+        <span class="glyphicon glyphicon-refresh"></span>
+    </button>
+    <button type="button" class="btn_excluir btn btn-danger" style="display: none;">
+        <span class="glyphicon glyphicon-trash"></span> Excluir
+    </button>
+</div>
+
+<!-- LISTAGEM -->
+
+    <!-- Painéis Tab --> 
+<div class="tab-content scrollview"> 
+    <table class="tab_listagem table table-striped table-hover removeSelect small" style="margin-bottom: 0px;">
+        <thead>
+            <tr>
+                <th width="150px">Data</th>
+                <th>De</th>
+                <th>Para</th>
+                <th>Assunto</th>
+                <th class="text-right">Status</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- itens -->
+            <tr template-row style="display: none;">
+                <td template-field="data_solicitacao_envio">{data_solicitacao_envio}</td>
+                <td template-field="de_nome">{de_nome}</td>
+                <td template-field="para">{para}</td>
+                <td template-field="assunto">{assunto}</td>
+                <td class="text-right">
+                    <span template-field="status" class="label label-default">
+                        {status}
+                    </span>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-xs btn-default btn-md btn_visualizar_corpo_email" style="float: right;">
+                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                        &nbsp;Visualizar
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <div style="padding: 10px; padding-bottom: 0px; padding-top: 0; background-color: white;" class="text-center div_carregar_mais hidden">
+            <span class="btn btn-link btn_carregar_mais">
+                <span class="txt_carregar_mais text-primary small">Carregar mais registros</span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<!-- /LISTAGEM -->

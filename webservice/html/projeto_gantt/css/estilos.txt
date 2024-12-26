@@ -1,0 +1,3 @@
+<style type="text/css">
+    .progress,.progressBar{height:20px;border-radius:10px;margin-top:18px}#divGantt{margin-top:10px}.progress{padding:4.4px 8px}.progressBar{position:absolute;left:0;top:0}.progressBarText{position:absolute;top:-3px;right:0;padding-right:5px;padding-top:3px;color:#fff;font-size:12px}
+</style>

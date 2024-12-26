@@ -1,0 +1,59 @@
+<div>
+
+	<div class="row">
+
+		<div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-3">
+			<label for="edt_nome_alcada">Nome da Alçada</label>
+			<input type="text" class="form-control edt_nome_alcada" id="edt_nome_alcada" placeholder="Digite o nome">
+		</div>
+
+		<div class="div_cbo_aprovador col-xs-12 col-sm-6 col-md-4">
+			<label for="cbo_aprovador">Adicionar aprovador</label><br>
+			<select id="cbo_aprovador" class="cbo_aprovador form-control select-multi-column" placeholder="Pesquisar por nome"></select>
+		</div>
+	</div>
+
+	<div style="padding-top: 10px;">
+		<table class="tab_listagem table table-striped table-hover">
+			<thead>
+				<tr>
+					<td>Nível</td>
+					<td>Aprovador</td>
+					<td>Tipo de aprovação</td>
+					<td>&nbsp;</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr template-row style="display: none;">
+					<td style="width: 10%;">
+						<input type="number" template-field="nivel" class="form-control edt_nivel"></input>
+					</td>
+					<td>
+							<span template-field="label_tipo" class="label"></span>
+							<span template-field="aprovador" style="vertical-align: middle"></span>
+					</td>
+					<td>
+						<select template-field="tipo_aprovacao" class="form-control">
+							<option value="1">Apenas um usuário</option>
+							<option value="2">Todos os usuários</option>
+						</select>
+					</td>
+					<td>
+						<button type="button" class="btn btn-default btn_remover_aprovador pull-right">
+							<span class="glyphicon glyphicon-trash"></span>
+							<span class="hidden-xs">Remover</span>
+						</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="panel-footer" style="margin-bottom: 30px;">
+        <div class="text-right">
+            <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+            <button type="button" class="btn_salvar_alteracoes btn btn-primary">Salvar</button>                      
+        </div>
+	</div>
+	
+</div>

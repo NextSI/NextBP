@@ -1,0 +1,439 @@
+<div class="modal bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal_motivos_chamado_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_motivos_chamado_detalhes_label">Motivo de Chamado</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="panel panel-default painel_detalhes">
+
+                    <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                        <div class="pull-right">
+                            <!-- -->
+                        </div>
+                        <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                            <li class="active lbl_tab_geral">
+                                <a id="modal_geral_tab" href="#modal_geral" role="tab" data-toggle="tab">Geral</a>
+                            </li>
+                            <li class="lbl_tab_responsaveis">
+                                <a id="modal_responsaveis_tab" href="#modal_responsaveis" role="tab" data-toggle="tab">Responsáveis</a>
+                            </li>
+                            <li class="lbl_tab_gestao_tempo">
+                                <a id="modal_gestao_tempo_tab" href="#modal_gestao_tempo" role="tab" data-toggle="tab">Gestão de Tempo</a>
+                            </li>
+                            <li class="lbl_tab_configuracoes">
+                                <a id="modal_configuracoes_tab" href="#modal_configuracoes" role="tab" data-toggle="tab">Configurações</a>
+                            </li>
+                            <li class="lbl_tab_formularios">
+                                <a id="modal_formularios_tab" href="#modal_formularios" role="tab" data-toggle="tab">Formulários</a>
+                            </li>
+                            <li class="lbl_tab_projetos">
+                                <a id="modal_projetos_tab" href="#modal_projetos" role="tab" data-toggle="tab">Projetos</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="panel-body">
+                         <!-- Tab panes -->
+                        <div class="tab-content">
+
+                            <div class="tab-pane active " id="modal_geral">
+
+                                <div class="row">  
+                                    <div class="col-md-12">                                           
+                                        <div class="form-group">
+                                            <label for="edt_nome">Nome</label>
+                                            <input type="text" class="edt_nome form-control" id="edt_nome" placeholder="Descrição do motivo">
+                                        </div>
+                                    </div>
+                                </div>    
+                                <div class="row"> 
+                                    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">                                                           
+                                        <div class="form-group">                                                  
+                                            <label for="cbo_cor">Cor</label>
+                                            <span id="cor_exemplo" class="cor_exemplo badge" style="padding-right: 100px; float: right;">&nbsp;</span>
+                                            <select class="cbo_cor form-control" id="cbo_cor">
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">                
+                                        <div class="form-group">
+                                            <label for="edt_nivel">Nível</label>
+                                            <input type="number" min="1" max="100" class="edt_nivel form-control" id="edt_nivel" placeholder="Digite o nível">
+                                        </div>
+                                    </div> 
+
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <div class="form-group">
+                                            <label for="chk_bloqueado">Bloqueado</label> <br />
+                                            <input type="checkbox" class="checkbox_bootstrap_toggle chk_bloqueado" id="chk_bloqueado" />
+                                        </div>
+                                    </div>
+
+                                </div>  
+                            </div>
+
+                            <div class="tab-pane " id="modal_responsaveis">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12" style="margin-bottom: 15px;">
+                                        <div class="div_componente_responsavel_motivo"></div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+                                        <table class="tab_responsaveis table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Responsável</th>
+                                                    <th>&nbsp;</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr template-row style="display: none">
+                                                    <td>
+                                                        <span class="label lb_tipo" template-field="tipo" style="margin-right: 5px;"></span>
+                                                        <span template-field="nome">{nome}</span>
+                                                    </td>
+                                                    <td class="text-right" style="margin-right: 0px; padding-right: 0px">
+                                                        <a class="btn_usuario_remover btn btn-default">
+                                                            <span class="glyphicon glyphicon-trash"></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane " id="modal_gestao_tempo">
+                                <label>Prazo para previsão de retorno</label>
+
+                                <div class="row">
+                                   
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-md-3 col-sm-12 col-lg-3 pull-left">
+                                                    <input type="radio" id="chk_horas_uteis" class="chk_horas_uteis chk_tipo_hora" name="tipo_hora" value="0">
+                                                    <label for="chk_horas_uteis">Horas Úteis</label>
+                                                    
+                                                    <input type="text" class="edt_horas form-control pull-left" id="edt_horas" placeholder="000:00"> 
+                                                </div>
+                                                <div class="col-xs-12 col-md-6 col-sm-12 col-lg-6">
+                                                    <label for="modal_usuario_cbo_calendario_trabalho">Calendário de trabalho</label>
+                                                    <div class="input-group">
+                                                        <select id="modal_usuario_cbo_calendario_trabalho" class="selectpicker cbo_calendario_trabalho form-control">
+                                                        </select>
+                                                    </div>  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                   
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                        <div class="form-group">
+                                            <input type="radio" id="chk_dias_corridos" class="chk_dias_corridos chk_tipo_hora" name="tipo_hora" value="1">
+                                            <label for="chk_dias_corridos">Dias Corridos</label>
+                                            
+
+                                            <input type="number" min="1" max="365" class="edt_dias form-control" id="edt_dias"> 
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <label for="chk_permite_fixar_previsao_retorno">Permite fixar previsão de retorno</label>&nbsp;<div class="dxButtonQuestionPermiteFixarPrevisaoRetorno"></div><br />
+                                            <input type="checkbox"  class="chk_permite_fixar_previsao_retorno checkbox_bootstrap_toggle">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <label for="chk_permite_programar_inicio_sla">Permite programar o início do SLA</label>&nbsp;<div class="dxButtonQuestionPermiteProgramarInicioSLA"></div><br />
+                                            <input type="checkbox"  class="chk_permite_programar_inicio_sla checkbox_bootstrap_toggle">
+                                        </div>
+                                    </div>
+                                </div>  
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <label for="chk_utiliza_encerramento">Encerramento automático de chamado por inatividade</label>&nbsp;<div class="dxButtonQuestionUtilizaResolucaoAtendimento"></div><br />
+                                            <input type="checkbox"  class="chk_utiliza_encerramento checkbox_bootstrap_toggle" id="chk_utiliza_encerramento">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row div_utiliza_encerramento hidden">
+                                   
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            
+                                           
+                                            <div class="row">
+                                                <div class="col-xs-12 col-md-3 col-sm-12 col-lg-3 pull-left">
+                                                    <input type="radio" id="chk_horas_uteis_encerramento" class="chk_horas_uteis_encerramento chk_tipo_config_encerramento" name="chk_tipo_config_encerramento" value="0">
+                                                    <label for="chk_horas_uteis_encerramento">Horas Úteis</label>
+                                                    
+                                                    <input type="text" class="edt_horas_encerramento form-control pull-left" id="edt_horas_encerramento" placeholder="000:00"> 
+                                                </div>
+                                                <div class="col-xs-12 col-md-6 col-sm-12 col-lg-6">
+                                                    <label for="cbo_calendario_trabalho_encerramento">Calendário de trabalho</label>
+                                                    <div class="input-group">
+                                                        <select id="cbo_calendario_trabalho_encerramento" class="selectpicker cbo_calendario_trabalho_encerramento form-control">
+                                                        </select>
+                                                    </div>  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row div_utiliza_encerramento hidden">
+                                   
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                        <div class="form-group">
+                                            <input type="radio" id="chk_dias_corridos_encerramento" class="chk_dias_corridos_encerramento chk_tipo_config_encerramento" name="chk_tipo_config_encerramento" value="1">
+                                            <label for="chk_dias_corridos_encerramento">Dias Corridos</label>
+                                            
+
+                                            <input type="number" min="1" max="365" class="edt_dias_encerramento form-control" id="edt_dias_encerramento"> 
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <label for="chk_utiliza_resolucao_atendimento">Utilizar tempo de resolução de atendimento</label><br />
+                                            <input type="checkbox"  class="chk_utiliza_resolucao_atendimento checkbox_bootstrap_toggle" id="chk_utiliza_resolucao_atendimento">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row div_utiliza_resolucao_atendimento hidden">
+                                   
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                           
+                                            <div class="row">
+                                                <div class="col-xs-12 col-md-6 col-sm-12 col-lg-3 pull-left">
+                                                    <label for="edt_horas_resolucao_atendimento">Horas Úteis</label>
+                                                    <input type="text" class="edt_horas_resolucao_atendimento form-control pull-left" id="edt_horas_resolucao_atendimento" placeholder="000:00"> 
+                                                </div>
+                                                <div class="col-xs-12 col-md-6 col-sm-12 col-lg-6">
+                                                    <label for="cbo_calendario_trabalho_resolucao_atendimento">Calendário de trabalho</label>
+                                                    <div class="input-group">
+                                                        <select id="cbo_calendario_trabalho_resolucao_atendimento" class="selectpicker cbo_calendario_trabalho_resolucao_atendimento form-control">
+                                                        </select>
+                                                    </div>  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="margin-top: 30px;">
+                                    <div id="grid_motivos_entidades" class="grid_motivos_entidades"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-pane " id="modal_configuracoes">
+
+                                <table class="table table-striped table-hover">
+                                    <thead>
+                                        <th colspan="2">
+                                            Segurança e Privacidade
+                                        </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-left"><label for="chk_altera_solicitante">Colaborador pode alterar o Solicitante</label>&nbsp;</td>
+                                            <td class="text-right"><input type="checkbox"  class="chk_altera_solicitante checkbox_bootstrap_toggle" id="chk_altera_solicitante"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <label for="chk_solicitante_chamado_reclassificar_para_qualquer_responsavel">Colaborador Solicitante pode reclassificar chamado para qualquer responsável</label>
+                                                <span class="glyphicon glyphicon-info-sign" title="Esta configuração funciona somente para reclassificações, ou seja, chamados já abertos. Sendo assim não tem efeito na listagem de responsáveis da abertura de chamados."></span>
+                                            </td>
+                                            <td class="text-right"><input type="checkbox"  class="chk_solicitante_chamado_reclassificar_para_qualquer_responsavel checkbox_bootstrap_toggle" id="chk_solicitante_chamado_reclassificar_para_qualquer_responsavel"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><label for="chk_particular">Tornar este motivo privado</label>&nbsp;</td>
+                                            <td class="text-right"><input type="checkbox"  class="chk_particular checkbox_bootstrap_toggle" id="chk_particular"></td>
+                                        </tr>
+                                        <tr class="tr_acesso_supervisor hidden">
+                                            <td class="text-left"><label for="chk_acesso_supervisor">Permitir acesso do supervisor a chamados privados de supervisionados</label>&nbsp;</td>
+                                            <td class="text-right"><input type="checkbox"  class="chk_acesso_supervisor checkbox_bootstrap_toggle" id="chk_acesso_supervisor"></td>
+                                        </tr>
+                                        <tr class="tr_acesso_substituto hidden">
+                                            <td class="text-left"><label for="chk_acesso_substituto">Permitir acesso do substituto a chamados privados de substituídos</label>&nbsp;</td>
+                                            <td class="text-right"><input type="checkbox"  class="chk_acesso_substituto checkbox_bootstrap_toggle" id="chk_acesso_substituto"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <label for="chk_responsavel_chamado_reclassificar_para_qualquer_responsavel">Colaborador Responsável pode reclassificar chamado para qualquer responsável</label>
+                                                <span class="glyphicon glyphicon-info-sign" title="Esta configuração funciona somente para reclassificações, ou seja, chamados já abertos. Sendo assim não tem efeito na listagem de responsáveis da abertura de chamados."></span>
+                                            </td>
+                                            <td class="text-right"><input type="checkbox"  class="chk_responsavel_chamado_reclassificar_para_qualquer_responsavel checkbox_bootstrap_toggle" id="chk_responsavel_chamado_reclassificar_para_qualquer_responsavel"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><label for="chk_colaborador_altera_previsao_retorno">Colaborador Solicitante pode alterar as informações de Previsão de Retorno do chamado</label>&nbsp;</td>
+                                            <td class="text-right"><input type="checkbox"  class="chk_colaborador_altera_previsao_retorno checkbox_bootstrap_toggle" id="chk_colaborador_altera_previsao_retorno"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><label for="chk_publico">Qualquer colaborador poderá abrir um chamado para este motivo</label>&nbsp;</td>
+                                            <td class="text-right"><input type="checkbox"  class="chk_publico checkbox_bootstrap_toggle" id="chk_publico"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><label for="chk_solicitante_encerra">Somente o Solicitante pode encerrar o chamado</label>&nbsp;</td>
+                                            <td class="text-right"><input type="checkbox"  class="chk_solicitante_encerra checkbox_bootstrap_toggle" id="chk_solicitante_encerra"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><label for="chk_admin_encerra">Somente administradores poderão encerrar o chamado</label>&nbsp;</td>
+                                            <td class="text-right"><input type="checkbox"  class="chk_admin_encerra checkbox_bootstrap_toggle" id="chk_admin_encerra"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><label for="chk_obrigatorio_informar_horas">Obrigatório informar horas trabalhadas</label>&nbsp;</td>
+                                            <td class="text-right"><input type="checkbox"  class="chk_obrigatorio_informar_horas checkbox_bootstrap_toggle" id="chk_obrigatorio_informar_horas"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><label for="chk_adicionar_usuario_logado_responsavel">Adicionar usuário logado na listagem de responsáveis</label>&nbsp;</td>
+                                            <td class="text-right"><input type="checkbox"  class="chk_adicionar_usuario_logado_responsavel checkbox_bootstrap_toggle" id="chk_adicionar_usuario_logado_responsavel"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><label for="chk_definir_situacao_aguardando_responsavel">Definir situação "Aguardando Responsável" automaticamente ao selecionar um responsável</label>&nbsp;</td>
+                                            <td class="text-right"><input type="checkbox"  class="chk_definir_situacao_aguardando_responsavel checkbox_bootstrap_toggle" id="chk_definir_situacao_aguardando_responsavel" checked></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <table class="table table-striped table-hover">
+                                    <thead>
+                                        <th colspan="2">
+                                            Notificação
+                                        </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-left"><label for="chk_notificacao_mensagem_reclassificacao_opcional">Notificação de mensagens e reclassificações poderão ser opcionais</label><br></td>
+                                            <td class="text-right"><input type="checkbox" class="chk_notificacao_mensagem_reclassificacao_opcional checkbox_bootstrap_toggle" id="chk_notificacao_mensagem_reclassificacao_opcional" checked></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><label for="chk_notificacao_observacao_interna_opcional">Notificação de observações internas poderão ser opcionais</label><br></td>
+                                            <td class="text-right"><input type="checkbox" class="chk_notificacao_observacao_interna_opcional checkbox_bootstrap_toggle" id="chk_notificacao_observacao_interna_opcional" checked></td>
+                                        </tr>
+                                        <tr class="div_valor_padrao_notificar_envolvolvidos">
+                                            <td class="text-left"><label for="chk_valor_padrao_notificar_envolvolvidos">Valor padrão do campo "Notificar envolvidos"</label><br></td>
+                                            <td class="text-right"><input type="checkbox" class="chk_valor_padrao_notificar_envolvolvidos checkbox_bootstrap_toggle" id="chk_valor_padrao_notificar_envolvolvidos" checked></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left" colspan="2">
+                                                <label for="edt_emails">E-mails de notificação de abertura de chamado</label>
+                                                <textarea style="resize: vertical; min-height: 100px;" cols="30" class="form-control edt_emails" id="edt_emails" maxlength="500" placeholder="email1@exemplo.com; email2@exemplo.com; email3@exemplo.com;"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left" colspan="2">
+                                                <label for="">E-mails de notificação de acompanhamento do chamado</label>
+                                                <textarea style="resize: vertical; min-height: 100px;" cols="30" class="form-control edt_emails_acompanhamento"  id="edt_emails_acompanhamento"  maxlength="500" placeholder="email1@exemplo.com; email2@exemplo.com; email3@exemplo.com;"></textarea>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table> 
+
+                                <table class="table table-striped table-hover">
+                                    <thead>
+                                        <th colspan="2">
+                                            Sugestões
+                                        </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-left"><label for="chk_descricao_motivo_on_assunto">Sugerir descrição do motivo no assunto</label>&nbsp;</td>
+                                            <td class="text-right"><input type="checkbox"  class="chk_descricao_motivo_on_assunto checkbox_bootstrap_toggle" id="chk_descricao_motivo_on_assunto"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left" colspan="2">
+                                                <label for="">Mensagem padrão sugerida no encerramento</label>
+                                                <textarea style="resize: vertical; min-height: 100px;" cols="30" class="form-control edt_mensagem_padrao" maxlength="500"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><label for="chk_sugerir_mensagem_padrao_colaboradores">Sugerir mensagem padrão de encerramento apenas para usuários colaboradores</label><br></td>
+                                            <td class="text-right"><input type="checkbox" class="chk_sugerir_mensagem_padrao_colaboradores checkbox_bootstrap_toggle" id="chk_sugerir_mensagem_padrao_colaboradores" checked></td>
+                                        </tr>
+                                    </tbody>
+                                </table>   
+                            </div>
+                            
+                            <div class="tab-pane frm_formularios" id="modal_formularios">
+                                <table class="table table-striped table-hover">
+                                    <thead>
+                                        <th colspan="2">
+                                            Formulário Personalizado
+                                        </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-left" colspan="2">
+                                                <label for="cbo_formulario_abertura">Na abertura do chamado</label>
+                                                <select id="cbo_formulario_abertura" class="form-control cbo_formulario_abertura">
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left" colspan="2">
+                                                <label for="cbo_formulario_avaliacao">Na avaliação de encerramento</label>
+                                                <select id="cbo_formulario_avaliacao" class="form-control cbo_formulario_avaliacao">
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="tab-pane frm_projetos" id="modal_projetos">
+                                <div style="display: flex; gap: 8px;">
+                                    <input type="checkbox" id="chk_utiliza_apontamento_chamados" class="chk_utiliza_apontamento_chamados checkbox_bootstrap_toggle">
+                                    <label for="chk_utiliza_apontamento_chamados" style="padding-top: 10px;">Utilizar apontamentos em Chamados</label>
+                                </div>
+
+                                <div style="margin-top: 20px; display: flex; gap: 8px;" class="div_registrar_mensagem_apontamento">
+                                    <input type="checkbox" id="chk_registrar_mensagem_apontamento" class="chk_registrar_mensagem_apontamento checkbox_bootstrap_toggle">
+                                    <label for="chk_registrar_mensagem_apontamento" style="padding-top: 10px;">Registrar mensagem de apontamento no Chamado</label>
+                                </div>
+
+                                <div style="margin-top: 20px;" class="div_projeto_apontamento">
+                                    <label for="div_dx_grid_projetos">Projeto de apontamento</label>
+                                    <div id="div_dx_grid_projetos" class="div_dx_grid_projetos"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                
+                                 
+
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+                <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>

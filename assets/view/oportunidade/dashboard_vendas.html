@@ -1,0 +1,257 @@
+<div class="row div_grafico small">
+    <div class="col-md-12">
+        <!-- Filtros -->
+        <div class="row">        
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4 col-lg-3 form-group">                
+                        <label>Funil</label>                 
+                        <select class="select-multi-column cbo_funil_vendas" placeholder="Clique para selecionar"></select>                           
+                    </div>
+                    <div class="col-md-6">                             
+                        <div class="col-md-5 col-lg-4" style="padding-left: 0px;">
+                            <label for="cbo_mes_inicio">Mês/Ano Inicial</label>  
+                            <div class="input-group">                                           
+                                <select class="cbo_mes_inicio form-control" id="cbo_mes_inicio" style="width: 60%">
+                                    <option value="01">Janeiro</option>
+                                    <option value="02">Fevereiro</option>
+                                    <option value="03">Março</option>
+                                    <option value="04">Abril</option>
+                                    <option value="05">Maio</option>
+                                    <option value="06">Junho</option>
+                                    <option value="07">Julho</option>
+                                    <option value="08">Agosto</option>
+                                    <option value="09">Setembro</option>
+                                    <option value="10">Outubro</option>
+                                    <option value="11">Novembro</option>
+                                    <option value="12">Dezembro</option>                        
+                                </select>         
+                                <input type="number" class="edt_ano_inicio form-control" id="edt_ano_inicio" min="2000" max="3000" style="width: 40%">                                               
+                            </div>                    
+                        </div>                        
+                        <div class="col-md-5 col-lg-4" style="">                            
+                            <label for="cbo_mes_fim">Mês/Ano Final</label>  
+                            <div class="input-group">                                           
+                                <select class="cbo_mes_fim form-control" id="cbo_mes_fim" style="width: 60%">
+                                    <option value="01">Janeiro</option>
+                                    <option value="02">Fevereiro</option>
+                                    <option value="03">Março</option>
+                                    <option value="04">Abril</option>
+                                    <option value="05">Maio</option>
+                                    <option value="06">Junho</option>
+                                    <option value="07">Julho</option>
+                                    <option value="08">Agosto</option>
+                                    <option value="09">Setembro</option>
+                                    <option value="10">Outubro</option>
+                                    <option value="11">Novembro</option>
+                                    <option value="12">Dezembro</option>                        
+                                </select>         
+                                <input type="number" class="edt_ano_fim form-control" id="edt_ano_fim" min="2000" max="3000" style="width: 40%">                                               
+                            </div>                    
+                        </div>
+
+                        <div class="col-md-1 form-group" style="padding-top:20px;">                
+                            <button type="button" class="btn btn-primary btn_search" style="margin-top:5px;margin-bottom:5px;">
+                                <span class="glyphicon glyphicon-search"></span> Filtrar
+                            </button>                        
+                        </div>                    
+                    </div>                           
+                </div>
+            </div>
+        </div>            
+        <br>    
+        <div class="row div_oportunidades_totalizadas_status_situacao hidden">
+            <!-- Oportunidades totalizadas por status -->
+            <div class="col-md-2">
+                <div class="row">                
+                    <div class="hidden" template-status>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12"><span class="col-md-12 nome_status"></span></div>
+                            <div style="margin-top: 3px;" class="col-md-12 col-lg-12" align="center"><strong><span class="total_status"></span></strong></div>
+                            <div>&nbsp;</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; background-color: #f0f0f5;">
+                    <label>Status&nbsp;</label>
+                    <span class="glyphicon glyphicon-info-sign info_status" title="Oportunidades em aberto dentro do período informado." data-toggle="tooltip"></span>    
+                </div>                                                
+                <div class="oportunidade_status" style="margin-top: 12px;"></div>                
+            </div>  
+            <!-- Oportunidades totalizas por situação -->
+            <div class="col-md-10" align="center">
+                <div class="col-md-12" style="background-color: #f0f0f5;">
+                    <!-- <label>Oportunidades: </label> -->
+
+                    <strong>
+                        <span class="total_quantidade"></span>&nbsp;
+                        <span class="glyphicon glyphicon-briefcase"></span>&nbsp;
+                        <span class="total_valor">
+                    </strong>
+                </div>
+                <div class="col-md-12" align="center" style="padding-left: 0px; padding-right: 0px;">                
+                    <table class="table">
+                        <tbody>
+                            <tr align="center">
+                                <td style="padding: 0px; border-top: 0px; width: 16.66%;">
+                                    <div style="background-color: #e6e6ff;">
+                                        <div><label>Remanescentes</label></div>    
+                                        <div>
+                                            <strong>
+                                                <span class="remanescentes_quantidade"></span>&nbsp;
+                                                <span class="glyphicon glyphicon-briefcase"></span>&nbsp;
+                                                <span class="remanescentes_valor">
+                                            </strong>
+                                        </div>
+                                    </div>                                                                    
+                                </td>                            
+                                <td style="padding: 0px; border-top: 0px; width: 16.66%;">
+                                    <div style="background-color: #aeeaea;">
+                                        <div><label>Estagnadas</label></div>    
+                                        <div>
+                                            <strong>
+                                                <span class="estagnadas_quantidade"></span>&nbsp;
+                                                <span class="glyphicon glyphicon-briefcase"></span>&nbsp;
+                                                <span class="estagnadas_valor">
+                                            </strong>
+                                        </div>
+                                    </div>                                                                    
+                                </td>
+                                <td style="padding: 0px; border-top: 0px; width: 16.66%;">
+                                    <div style="background-color: #FFFFFF;">
+                                        <div><label>Em Aberto</label></div>    
+                                        <div>
+                                            <strong>
+                                                <span class="em_aberto_quantidade"></span>&nbsp;
+                                                <span class="glyphicon glyphicon-briefcase"></span>&nbsp;
+                                                <span class="em_aberto_valor">
+                                            </strong>
+                                        </div>
+                                    </div>                                                                    
+                                </td>
+                                <td style="padding: 0px; border-top: 0px; width: 16.66%;">
+                                    <div style="background-color: #F2DEDE;">
+                                        <div><label>Atrasadas</label></div>    
+                                        <div>
+                                            <strong>
+                                                <span class="atrasadas_quantidade"></span>&nbsp;
+                                                <span class="glyphicon glyphicon-briefcase"></span>&nbsp;
+                                                <span class="atrasadas_valor">
+                                            </strong>
+                                        </div>
+                                    </div>                                                                    
+                                </td>
+                                <td style="padding: 0px; border-top: 0px; width: 16.66%;">
+                                    <div style="background-color: #FFFFE6;">
+                                        <div><label>Perdidas</label></div>    
+                                        <div>
+                                            <strong>
+                                                <span class="perdidas_quantidade"></span>&nbsp;
+                                                <span class="glyphicon glyphicon-briefcase"></span>&nbsp;
+                                                <span class="perdidas_valor">
+                                            </strong>
+                                        </div>
+                                    </div>                                                                    
+                                </td>
+                                <td style="padding: 0px; border-top: 0px; width: 16.66%;">
+                                    <div style="background-color: #D6F5D6;">
+                                        <div><label>Ganhas</label></div>    
+                                        <div>
+                                            <strong>
+                                                <span class="ganhas_quantidade"></span>&nbsp;
+                                                <span class="glyphicon glyphicon-briefcase"></span>&nbsp;
+                                                <span class="ganhas_valor">
+                                            </strong>
+                                        </div>
+                                    </div>                                                                    
+                                </td> 
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Gráficos de Barra e Pizza (Região de Vendas)-->
+                <div class="col-md-12" style="padding-top: 50px;">
+                    <div class="row">        
+                        <div class="col-md-6 div_grafico_regiao"></div>
+                        <div class="col-md-6 div_grafico_segmento"></div>
+                        <!-- <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 div_grafico_regiao_anual"></div>                 -->
+                    </div>            
+                </div>                            
+            </div> 
+        </div>  
+        <br>
+        <br>
+        <!-- Gráficos Gauge Atingimento de Vendas -->
+        <div class="div_meta hidden">
+            <div style="background-color: #f0f0f5;" align="center">
+                <label>Metas do Funil de Vendas&nbsp;</label>
+                <span class="glyphicon glyphicon-info-sign info_metas" title="% Atigimento de meta considera valor total de oportunidades ganhas e valor da meta." data-toggle="tooltip"></span>    
+            </div>   
+            <div class="col-md-12">&nbsp;</div>
+            <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+                <div class="form-inline">
+                    <div class="navbar-left">
+                        <div class="form-group">
+                            <label>Meta Inicial</label>
+                            <span class="glyphicon glyphicon-info-sign info_metas" title="Informe o período de vigência da meta. Caso o período informado atingir duas metas, os valores das mesmas serão somados." data-toggle="tooltip"></span>    
+                            <br>
+                            <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_meta_inicial" placeholder="Meta Inicial" > 
+                        </div>
+                        <div class="form-group">
+                            <br>
+                            <br>
+                            <label>até</label>
+                        </div>                        
+                        <div class="form-group">
+                            <label>Meta Final</label><br>
+                            <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_meta_final">
+                        </div>
+                        <div class="form-group">
+                            <label>&nbsp;</label><br>
+                            <button type="button" class="btn btn-primary btn_search">
+                                <span class="glyphicon glyphicon-search"></span> Filtrar
+                            </button>
+                        </div>                        
+                    </div>
+                </div>
+            </nav>        
+
+            <div class="col-md-12" align="center">
+                <div class="row">
+                    <div class="div_velocimetro"></div>
+                    <div class="">
+                        <span class="badge info_metas" style="background-color: #DF5353;" title="Total de Oportunidades Ganhas <= 60% da meta" data-toggle="tooltip">Ruim</span>
+                        <span class="badge info_metas" style="background-color: #DDDF0D;" title="Total de Oportunidades Ganhas > 60% e <= 80% da meta" data-toggle="tooltip">Regular</span>
+                        <span class="badge info_metas" style="background-color: #55BF3B;" title="Total de Oportunidades Ganhas > 80% e <= 95% da meta" data-toggle="tooltip">Bom</span>
+                        <span class="badge info_metas" style="background-color: #0000cc;" title="Total de Oportunidades Ganhas > 95% da meta" data-toggle="tooltip">Ótimo</span>
+                    </div>
+                </div>
+            </div>   
+        </div>             
+        <div class="col-md-12" align="center" style="padding-top: 30px;">
+            <div class="row">
+                <div class="col-md-12 div_historico_vendas hidden" style="background-color: #f0f0f5;" align="center">
+                    <label>Histórico de Vendas</label>
+                    <span class="glyphicon glyphicon-info-sign info_metas" title="O gráficos de histórico de vendas consideram a data atual." data-toggle="tooltip"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">&nbsp;</div>
+        <!-- Gráfico de Barras com as vendas dos últimos 3 meses-->
+        <div class="col-md-12">                
+            <div class="row">
+                <div class="text-center">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 div_grafico_trimestral"></div>
+                </div>                    
+            </div>                
+        </div>        
+        <!-- Gráfico de Barras comparando as vendas do ano atual com ano anterior -->
+        <br><br>
+        <div class="col-md-12">&nbsp;</div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 div_grafico_anual"></div>
+        </div>
+    </div>
+</div>
+
+

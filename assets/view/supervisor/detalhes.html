@@ -1,0 +1,128 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Detalhe Supervisor</li>
+</ol>
+<div>
+
+    <div class="row">        
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+            <div class="div_componente_usuario form-group"></div>
+        </div>
+    </div>    
+
+    <div class="row text-right col-md-12" >
+        <span class="glyphicon glyphicon-info-sign text-info"></span>
+        <span class="text-muted small text-right">Clique na coluna de cada módulo para marcar/desmarcar todos.</span>
+    </div>
+
+    <table class="tab_listagem table">
+        <thead>
+            <tr>
+                <th>Supervisionado</th>
+                <th><span style="cursor: pointer" class="th_agenda">Agenda&nbsp;</span></th>
+                <th><span style="cursor: pointer" class="th_tarefa">Tarefa&nbsp;</span></th>
+                <th><span style="cursor: pointer" class="th_chamados">Chamados&nbsp;</span></th>
+                <th><span style="cursor: pointer" class="th_documentos">Documentos&nbsp;</span></th>
+                <th><span style="cursor: pointer" class="th_processos">Processos&nbsp;</span></th>
+                <th><span style="cursor: pointer" class="th_projetos">Projetos&nbsp;</span></th>
+                <th><span style="cursor: pointer" class="th_crm">CRM&nbsp;</span></th>
+                <th><span style="cursor: pointer" class="th_social">Social&nbsp;</span></th>
+                <th><span style="cursor: pointer" class="th_inovacao">Inovação&nbsp;</span></th>
+                <th><span style="cursor: pointer" class="th_empenho">Empenho&nbsp;</span></th>
+                <th><span style="cursor: pointer" class="th_superior_imediato">Subordinado hierárquico&nbsp;</span></th>
+                <th>
+                    <div class="pull-right">
+                        <button type="button" class="btn_add_usuario btn btn-default" style="width: 40px;">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <i class="fa fa-plus icon-on-top" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="btn_add_grupo_usuario btn btn-default" style="width: 40px;">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                            <i class="fa fa-plus icon-on-top" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </th>                
+            </tr>
+        </thead>
+        <tbody>
+            <tr template-row style="display: none;">
+                <td>
+                    <div template-field="nome">{nome}</div>
+                    <div template-field="email" class="text-muted small">{email}</div>
+                </td>
+                <td>
+                    <div>
+                        <input template-field="chk_agenda" type="checkbox" class="checkbox_bootstrap_toggle template_switch">    
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <input template-field="chk_tarefa" type="checkbox" class="checkbox_bootstrap_toggle template_switch">    
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <input template-field="chk_chamados" type="checkbox" class="checkbox_bootstrap_toggle template_switch">    
+                    </div>
+                </td>                                
+                <td>
+                    <div>
+                        <input template-field="chk_documentos" type="checkbox" class="checkbox_bootstrap_toggle template_switch">    
+                    </div>
+                </td>                                                                
+                <td>
+                    <div>
+                        <input template-field="chk_processos" type="checkbox" class="checkbox_bootstrap_toggle template_switch">    
+                    </div>
+                </td>                                
+                <td>
+                    <div>
+                        <input template-field="chk_projetos" type="checkbox" class="checkbox_bootstrap_toggle template_switch">    
+                    </div>
+                </td>                                
+                <td>
+                    <div>
+                        <input template-field="chk_crm" type="checkbox" class="checkbox_bootstrap_toggle template_switch">    
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <input template-field="chk_social" type="checkbox" class="checkbox_bootstrap_toggle template_switch">    
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <input template-field="chk_inovacao" type="checkbox" class="checkbox_bootstrap_toggle template_switch">    
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <input template-field="chk_empenho" type="checkbox" class="checkbox_bootstrap_toggle template_switch">
+                    </div>
+                </td>                                
+                <td>
+                    <div>
+                        <input template-field="chk_superior_imediato" type="checkbox" class="checkbox_bootstrap_toggle template_switch">
+                    </div>
+                </td>                                
+                <td>
+                    <div class="pull-right">
+                        <button type="button" class="btn_usuario_remover btn btn-default">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                    </div>
+                </td>                
+            </tr>                
+        </tbody>
+    </table>
+
+    <div class="panel-footer">
+        <div class="text-right">
+            <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+            <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+            <button type="button" class="btn_excluir btn btn-danger">Excluir</button>                        
+        </div>
+    </div>
+
+</div>
+
+

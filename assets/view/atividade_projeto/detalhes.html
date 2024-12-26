@@ -1,0 +1,916 @@
+<ol class="breadcrumb visible-xs">
+    <li>Projeto</li>
+    <li class="lbl_nome active">Atividade</li>
+</ol>
+<div class="popup"></div>
+<div class="row">
+    <!-- Mobile -->
+    <div class="col-sm-3 col-md-3 col-lg-2 visible-xs visible-sm">
+
+        <div class="panel panel-default">
+            <div class="list-group">
+                <a href="#" class="btn_confirmar list-group-item">
+                    <span class="glyphicon glyphicon-check"></span>
+                    Salvar
+                </a>
+                <a href="#" class="btn_excluir list-group-item list-group-item-danger">
+                    <span class="glyphicon glyphicon-check"></span>
+                    Excluir
+                </a>
+                <a href="#" class="btn_cancelar list-group-item">
+                    Cancelar
+                </a>
+            </div>
+        </div>
+
+        <div class="panel panel-default menu-mobile">
+            <div class="list-group-item menu-mobile-chamado" data-toggle="collapse" data-target=".itens-menu-collapsed" aria-expanded="false">
+              <span class="glyphicon glyphicon-th-list"></span>
+              &nbsp; Menu
+            </div>
+            <div class="list-group itens-menu-collapsed collapse">
+                <a href="#" class="btn_apontamento list-group-item">
+                    <span class="glyphicon glyphicon-time"></span>
+                    Novo Apontamento
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- /Mobile -->
+    <div class="col-sm-3 col-md-3 col-lg-2 hidden-xs hidden-sm floating-menu">
+
+        <div class="panel panel-default">
+            <div class="list-group">
+                <a href="#" class="btn_confirmar list-group-item">
+                    <span class="glyphicon glyphicon-check"></span>
+                    Salvar
+                </a>
+                <a href="#" class="btn_excluir list-group-item list-group-item-danger">
+                    <span class="glyphicon glyphicon-check"></span>
+                    Excluir
+                </a>
+                <a href="#" class="btn_cancelar list-group-item">
+                    Cancelar
+                </a>
+            </div>
+        </div>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default" role="tab">
+            <div class="panel-heading panel-default active" data-parent="#accordion" href="#list-chamados2" aria-expanded="true" aria-controls="list-chamados2"  role="button" data-toggle="collapse">
+                Menu
+            </div>
+            <div class="list-group panel-collapsed collapse in" id="list-chamados2" role="tabpanel" aria-labelledby="list-chamados2">
+                <a href="#" class="btn_apontamento list-group-item">
+                    <span class="glyphicon glyphicon-time"></span>
+                    Novo Apontamento
+                </a>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="col-sm-9 col-md-9 col-lg-10">
+
+        <div class="panel panel-default" style="margin-top: 4px;">
+            <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                <div class="pull-right">
+                    <!-- -->
+                </div>
+                <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                    <li class="active">
+                        <a class="menu_formulario" href="#aba_formulario" role="tab" data-toggle="tab">Geral</a>
+                    </li>
+                    <li>
+                        <a href="#aba_tarefas" class="menu_tarefas" role="tab" data-toggle="tab">Checklist</a>
+                    </li>
+                    <li>
+                        <a class="menu_financeiro" href="#aba_financeiro" role="tab" data-toggle="tab">Financeiro</a>
+                    </li>
+                    <li class="lbl_tab_movimentacao_financeira">
+                        <a class="menu_movimentacao_financeira" href="#movimentacao_financeira" role="tab" data-toggle="tab">Movimentação Financeira</a>
+                    </li>
+                    <li>
+                        <a class="menu_executores" href="#aba_executores" role="tab" data-toggle="tab">Executores</a>
+                    </li>
+                    <li class="hidden">
+                        <a class="menu_custos" href="#aba_custos" role="tab" data-toggle="tab">Custos</a>
+                    </li>
+                    <li class="lbl_tab_predecessora">
+                        <a class="menu_atividade_prdecessoras" href="#aba_atividades_predecessoras" role="tab" data-toggle="tab">Predecessoras</a>
+                    </li>
+                    <li>
+                        <a class="menu_apontamentos" href="#aba_apontamentos" role="tab" data-toggle="tab">Apontamentos</a>
+                    </li>
+                    <li>
+                        <a class="menu_referencias" href="#aba_referencias" role="tab" data-toggle="tab">Referências</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="panel-body">
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+
+                    <div class="tab-pane active aba_formulario" >
+
+                        <div class="form-editor">
+                            <div  class="div_projeto row" style="margin-bottom:10px;">
+                                <div class="col-sm-5">
+                                    <span class="text-info" style="margin-top: 0px;">
+                                        <span class="lbl_projeto_codigo" style="cursor: pointer;"></span>
+                                        -
+                                        <span class="lbl_projeto_nome" style="cursor: pointer;"></span>
+                                    </span>
+                                </div>
+                                <div class="col-sm-4">
+                                    <span class="lbl_cliente_nome text-muted" style="margin-top: 0px;">
+                                    </span>
+                                </div>
+                                <div class="col-sm-3 text-right">
+                                    <span class="lbl_status"></span>
+                                </div>
+                            </div>
+
+                            <div  class="row" style="margin-bottom:10px;">
+                                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                    <label>Código Ativ.</label>
+                                    <input type="text" class="form-control edt_codigo_projeto">
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+                                    <label>Assunto</label>
+
+                                    <div class="input-group">
+                                        <select template-field="template_assunto_planilha"  id="cbo_assunto_projeto" class="cbo_assunto_projeto form-control selectpicker" data-live-search="true">
+                                        </select>
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn_visualizar_assunto btn btn-default">
+                                                <span class="glyphicon glyphicon-info-sign"></span>
+                                            </button>
+                                            <button type="button" class="btn_novo_assunto btn btn-default">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 div_datas">
+                                    <label>Data Solicitação</label>
+                                    <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_data_solicitacao_projeto" id="edt_data_solicitacao_projeto">
+                                </div>
+                            </div>
+
+                            <div class="div_datas">
+
+                                <div class="row" style="margin-bottom:10px;">
+
+                                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 ">
+                                        <label>Tipo Previsão de Início</label>
+                                        <select class="form-control cbo_tipo_previsao_inicio selectpicker">
+                                            <option value="0">O mais breve possível</option>
+                                            <option value="1">Deve iniciar em</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 ">
+                                            <label>Previsão de Início</label>
+                                        <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_previsao_inicio">
+                                    </div>
+                                
+                                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                        <label for="">Prazo Dias</label>
+                                        <input type="number" class="form-control edt_prazo_dias" disabled>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                        <label>Data Prazo</label>
+                                        <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_prazo_projeto">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-bottom:10px;">
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <label>Início Real</label>
+                                    <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_inicio_projeto">
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <label>Conclusão</label>
+                                    <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_conclusao_projeto">
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label>Horas Previstas</label>
+                                    <div class="div_horas_previstas"></div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label>Marco</label><br>
+                                    <input type="checkbox" class="chk_marco checkbox_bootstrap_toggle">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Nome da Atividade</label>
+                                    <input type="text" class="form-control edt_nome_atividade" maxlength="255" placeholder="Digite o nome da atividade.">
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <br>
+
+                            <div class="row" style="margin-bottom:10px;">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <label>Atividade</label>
+                                    <textarea class="form-control txt_atividades" rows="10" maxlength="3000"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row " style="margin-bottom:10px;">
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 div_recursos">
+                                    <label>Responsável</label>
+                                    <select class="form-control  cbo_responsavel_projeto" data-live-search="true" id="cbo_responsavel_projeto">
+                                    </select>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    <label>Atividade Sintética (Pai)</label>
+                                    <select class="form-control cbo_atividade_sinteticas selectpicker" data-live-search="true">
+                                    </select>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 div_classificacao hidden">
+                                    <label>Classificação</label>
+                                    <select class="form-control cbo_classificacao selectpicker" data-live-search="true">
+                                    </select>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 div_porcentagem_peso_atividade hidden">
+                                    <div class="form-group">
+                                        <label>Porcentagem de Peso da Atividade</label>
+                                        <br>
+                                        <div class="dx_peso_atividade"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row" style="margin-bottom:10px;">
+                                <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                                    <label>Observações</label>
+                                    <textarea type="text" class="form-control txt_observacoes" rows="5" maxlength="1000"></textarea>
+                                </div>
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+
+                                    <div class="row">
+                                        <div id="div_conclusao" class="div_conclusao col-xs-8 col-sm-12 col-md-12 col-lg-12">
+
+                                            <label>% Conclusão</label>
+                                            <input id="edt_porcentagem" type="number" step="0.01" min="0" max="100" class="form-control edt_porcentagem">
+
+                                        </div>
+                                        <div class="div_check_email hidden col-xs-8 col-sm-12 col-md-12 col-lg-12" style="padding-top: 10px;">
+                                            <label>Notificar envolvidos por e-mail&nbsp;</label><br>
+                                            <input type="checkbox" class="chk_notificar_envolvidos_email checkbox_bootstrap_toggle">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row" style="margin-bottom:10px;">
+                                <div class="col-xs-12 col-sm-12 col-md-3">
+                                    <div class="form-group">
+                                        <label>Cancelada</label><br>
+                                        <input type="checkbox" class="chk_cancelada checkbox_bootstrap_toggle">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-9">
+                                    <div class="form-group">
+                                        <label>Ignorar horas previstas e realizadas se estiver "Cancelada"</label><br>
+                                        <input type="checkbox" class="chk_tipo_cancelamento_ignorar_prev_real checkbox_bootstrap_toggle">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane aba_financeiro" >
+
+
+                        <div class="form-editor">
+
+                            <select id="cbo_valor_previsto" class="cbo_valor_previsto form-control selectpicker" data-live-search="true">
+                                <option value="0">Utilizar valor/hora por técnico</option>
+                                <option value="1">Utilizar valor/hora por atividade</option>
+                                <option value="2">Informar valores do técnico manualmente</option>
+                            </select>
+
+                            <div class="row"><div class="col-md-12">&nbsp;</div></div>
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 div_valor_hora hidden">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <label>Valor hora</label>
+                                        <input type="text" class="form-control edt_valor_hora_atividade" maxlength="11" placeholder="0,00">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane aba_custos hidden">
+                        <table class="tab_custo_listagem table table-striped table-hover" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th style="padding-left: 0px; padding-right: 0px; ">
+                                            <span>Itens da Atividade</span>
+                                            <div class="pull-right">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-primary btn_incluir_item">
+                                                        <span class="glyphicon glyphicon-plus"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr template-row class="row-fluid " style="display:none;">
+                                        <td style="padding-left: 0px;" >
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-11">
+                                                        <label>Item</label>
+                                                        <div class="form-group">
+                                                            <select class="select-multi-column cbo_item" template-field="cbo_item"></select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-1">
+                                                        <label>&nbsp;</label>
+                                                        <div class="form-group">
+                                                            <button class="btn_deletar_item btn btn-danger pull-right" tabindex="-1">
+                                                                <span class="glyphicon glyphicon-trash"></span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="row">
+
+                                                    <div class="col-md-1">
+                                                        <label>Quant.</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control input_number" template-field="edt_quantidade" style="padding-left: 1px; padding-right: 1px;">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-2">
+                                                        <label>Custo Unit. Orçado</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" template-field="edt_custo_unitario_orcado" style="padding-left: 1px; padding-right: 1px;">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-2" >
+                                                        <label>Custo Unitário Real</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control input_number" template-field="edt_custo_unitario_real" style="padding-left: 1px; padding-right: 1px;">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-2" >
+                                                        <label>Venda Unitária</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control input_number" template-field="edt_venda_unitaria" style="padding-left: 1px; padding-right: 1px;">
+                                                        </div>
+                                                    </div>
+                                       
+                                                    <div class="col-md-2">
+                                                        <label>Venc. Pagamento</label>
+                                                        <div class="form-group">
+                                                            <input type="date" class="form-control" template-field="edt_vencimento_pagamento" style="padding-left: 1px; padding-right: 1px;">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-2">
+                                                        <label>Realizado</label>
+                                                        <div class="form-group">
+                                                            <input type="checkbox" class="form-control template_switch checkbox_bootstrap_toggle" template-field="realizado" style="padding-left: 1px; padding-right: 1px;">
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="col-md-2">
+                                                        <label>Total Custo Orçado</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control input_number" disabled template-field="edt_total_custo_orcado" style="padding-left: 1px; padding-right: 1px;">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-2">
+                                                        <label>Total do Custo Real</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control input_number"  disabled template-field="edt_total_custo_real" style="padding-left: 1px; padding-right: 1px;">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-2 div_valor_ipi">
+                                                        <label>Total de Venda</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control input_number" disabled template-field="edt_total_venda" style="padding-left: 1px; padding-right: 1px;">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                        </table>
+                    </div>
+                    <div class="tab-pane aba_movimentacao_financeira">
+                        <div class="div_componente_movimentacao_financeira"></div>
+                    </div>
+                    <div class="tab-pane aba_executores" >
+
+                         <div class="row">
+
+                            <div class="div_exibir_prazo_agenda">
+                                <div class="col-md-12">
+                                    <input type="checkbox" class="checkbox_bootstrap_toggle template_switch chk_exibir_prazo_agenda">
+                                    <label>Exibir prazo da atividade na agenda</label>
+                                </div>
+                            </div>
+
+                            <div class="row"><div class="col-md-12">&nbsp;</div></div>
+
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 div_cbo_executores">
+                                <div class="dx_selecao_executores"></div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                                <br>
+
+                                <ul class="list-group listagem_executores">
+
+                                    <li class="list-group-item row_dados_executor template_row" style="display: none">
+
+                                        <div class="row">
+
+                                            <div class="div_executor">
+
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <span class="label lb_tipo label-info" template-field="tipo" style="margin-right: 5px" title="Usuário" data-original-title="Usuário"></span>
+                                                        <span template-field="nome"></span>
+                                                        <div style="display: inline; float: right;" class="hidden-xs hidden-sm">
+                                                            <a class="btn btn-primary" template-button="btn_agenda_recorrente">
+                                                                <span class="glyphicon glyphicon-calendar"></span>
+                                                            </a>
+                                                            <a class="btn btn-danger th_btn_excluir" template-button="btn_usuario_remover">
+                                                                <span class="glyphicon glyphicon-trash"></span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+
+                                                <div class="row" style="margin-left: 0;">
+                                                    <div class="col-md-3 th_previsao_inicio">
+                                                        <div class="form-group">
+                                                            <label>Previsão de Início</label>
+                                                            <input type="text" min="1900-01-01" max="2222-12-31" class="form-control" template-field="edt_previsao_inicio_executor">
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-md-3">
+                                                        <div class="form-group">
+                                                            <label>Horas Previstas</label>
+                                                            <div class="div_horas_alocadas" template-field="div_horas_alocadas"></div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <div class="form-group">
+                                                            <label for="edt_horas_dedicadas">Horas dedicadas/dia</label>
+                                                            <input type="text" class="form-control" template-field="edt_horas_dedicadas" placeholder="hh:mm"></input>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-md-3 th_prazo_previsto_executor">
+                                                        <div class="form-group">
+                                                            <label>Prazo Previsto</label>
+                                                            <input type="text" min="1900-01-01" max="2222-12-31" class="form-control" template-field="edt_prazo_previsto_executor"></input>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row" style="margin-left: 0;">
+                                                    <div class="col-md-2 th_valor_hora">
+                                                        <div class="form-group">
+                                                            <label>Valor Hora</label>
+                                                            <input type="text" class="form-control edt_valor_hora" template-field="edt_valor_hora" placeholder="R$ 0000,00"></input>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-md-2 th_valor_total">
+                                                        <div class="form-group">
+                                                            <label>Valor Total</label>
+                                                            <input type="text" class="form-control edt_valor_total" template-field="edt_valor_total" readonly placeholder="R$ 0000,00"></input>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg hidden-xl">
+                                                    <div class="col-md-2">
+                                                        <label>&nbsp;</label>
+                                                        <div class="form-group">
+                                                            <a class="btn btn-primary" template-button="btn_agenda_recorrente">
+                                                                <span class="glyphicon glyphicon-calendar"></span>
+                                                            </a>
+                                                            <a class="btn btn-danger th_btn_excluir" template-button="btn_usuario_remover">
+                                                                <span class="glyphicon glyphicon-trash"></span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="table_agenda_evento hidden">
+                                            <table class="table table-striped">
+                                                <thead class="hidden-xs">
+                                                    <th>Dia</th>
+                                                    <th>Hora</th>
+                                                    <th>Tipo</th>
+                                                    <th>Local</th>
+                                                    <th>
+                                                        <div class="pull-right">
+                                                            <div class="btn-group">
+                                                                <button type="button" class="btn btn-primary btn_incluir_evento_agenda">
+                                                                    <span class="glyphicon glyphicon-plus"></span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </th>
+                                                </thead>
+
+                                                <tbody>
+
+                                                    <div class="pull-right" style="padding-right: 8px; padding-bottom: 10px;">
+                                                        <div class="btn-group visible-xs">
+                                                            <button type="button" class="btn btn-primary btn_incluir_evento_agenda">
+                                                                <span class="glyphicon glyphicon-plus"></span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+
+                                                    <tr template-row="agenda_evento" style="display: none;">
+
+                                                        <!-- mobile -->
+                                                        <td class="td-mobile visible-xs">
+
+                                                            <div class="pull-right">
+                                                                <div class="btn-group">
+                                                                    <button type="button" class="btn_editar btn btn-default">
+                                                                        <span class="glyphicon glyphicon-pencil"></span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+
+                                                            <div >
+                                                                <span class="small" template-field="dia">{dia}</span>&nbsp;
+                                                                <span class="small" template-field="hora_inicio">{hora_inicio}</span> -
+                                                                <span class="small" template-field="hora_fim">{hora_fim}</span>
+                                                            </div>
+
+                                                            <div class="text-info">
+                                                                <span class="small" template-field="tipo_agenda">{tipo_agenda}</span>
+                                                                <br>
+                                                                <span class="small" template-field="local">{local}</span>
+                                                            </div>
+
+                                                        </td>
+                                                        <!-- /mobile -->
+
+                                                        <td class="hidden-xs" template-field="dia">{dia}</td>
+                                                        <td class="hidden-xs">
+                                                            <span class="small text-muted" template-field="hora_inicio">{hora_inicio}</span>
+                                                            <br>
+                                                            <span class="small text-muted" template-field="hora_fim">{hora_fim}</span>
+                                                        </td>
+                                                        <td class="hidden-xs" template-field="tipo_agenda">{tipo_agenda}</td>
+                                                        <td class="hidden-xs" template-field="local">{local}</td>
+                                                        <td class="hidden-xs">
+                                                            <div class="pull-right">
+                                                                <div class="btn-group">
+                                                                    <button type="button" class="btn_editar btn btn-default">
+                                                                        <span class="glyphicon glyphicon-pencil"></span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </li>
+
+                                </ul>
+
+                                <div class="row div_lbl_total_executores">
+                                    <div class="col-md-12">        
+                                        <div class="col-md-offset-3 col-md-3">
+                                            <p class="text-warning lbl_horas_previstas_total" style=" font-weight: bold; font-size: 15px;">Total: 0,00</p>
+                                        </div>
+        
+                                        <div class="col-md-2">
+                                            <p class="text-warning lbl_horas_previstas_saldo_total" style=" font-weight: bold; font-size: 15px;">Total: 0,00</p>
+                                        </div>
+
+                                        <div class="col-md-2">
+                                            <p class="text-warning lbl_valor_total" style=" font-weight: bold; font-size: 15px;">Total: 0,00</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane aba_atividades_predecessoras" >
+
+                        <div class="div_atividades form-group" id="div_atividades">
+
+                            <div class="dx_listagem_atividades_predecessoras"></div>
+
+                            <br>
+                            <div>
+                                <p>
+                                    <b>
+                                        Finish-to-Start (FS)
+                                        <span class="text-muted small">Término para Início</span>
+                                    </b>
+                                    <br>
+                                    O início de um trabalho de uma atividade sucessora depende do término da atividade predecessora.
+                                </p>
+                                <p>
+                                    <b>
+                                        Start-to-Start (SS)
+                                        <span class="text-muted small">Início para Início</span>
+                                    </b>
+                                    <br>
+                                    O início dos trabalhos de uma atividade sucessora depende do início dos trabalhos da atividade predecessora.
+                                </p>
+                                <p>
+                                    <b>
+                                        Finish-to-finish (FF)
+                                        <span class="text-muted small">Término para Término</span>
+                                    </b>
+                                    <br>
+                                    O término dos trabalhos de uma atividade sucessora depende do término dos trabalhos da atividade predecessora.
+                                </p>
+                                <p>
+                                    <b>
+                                        Start-to-Finish (SF)
+                                        <span class="text-muted small">Início para Término</span>
+                                    </b>
+                                    <br>
+                                    O término de uma atividade sucessora é dependente do início da atividade predecessora.
+                                </p>
+                                <p><b>Exemplo:</b><br>"Atividade Predecessora" to "Atividade Sucessora".</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane aba_apontamentos" >
+
+                        <div class="row">
+
+                            <div class="col-xs-12  col-sm-12 col-md-4 col-lg-4 pull-left">
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-default btn_refresh_apontamentos">
+                                        <span class="glyphicon glyphicon-refresh"></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12  col-sm-12 col-md-4 col-lg-4 pull-right">
+                                <div class="form-group text-right">
+                                    <label>Total de Horas:</label>
+                                    &nbsp;
+                                    <span class="total_geral_horas"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div_apontamentos form-group" id="div_apontamentos">
+
+                            <table id="tab_apontamentos" class="table table-striped tab_apontamentos">
+                              <thead class="hidden-xs">
+                                <tr>
+                                    <th>Dia</th>
+                                    <th>Cliente</th>
+                                    <th>Projeto</th>
+                                    <th class="th_executor hidden">Executor</th>
+                                    <th class="text-right">Total de Horas</th>
+                                    <th>&nbsp;</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr template-row style="display: none;" class="" >
+                                    <!-- Mobile -->
+                                    <td class="visible-xs col-xs-12" style="border-top:0px !important;" >
+                                        <div template-field="dia" class="col-xs-4 h4">{dia}</div>
+                                        <div class="col-xs-12 h4" template-field="cliente">{cliente}</div>
+                                        <div class="col-xs-6 h5" template-field="projeto"></div>
+                                        <div class="col-xs-6 small text-muted" template-field="atividade"></div>
+                                        <div class="col-xs-8 h5" template-field="executor">{executor}</div>
+                                        <div class="text-right col-xs-2 h4" template-field="total_horas"></div>
+                                        <div class="col-xs-12" template-buttons="actions" style="margin-bottom:10px;">
+                                          <div class="btn-group pull-right">
+                                            <button type="button" class="btn_visualizar btn btn-default"><span class="glyphicon glyphicon-eye-open"></span></button>
+                                            <button type="button" class="btn_gerar_os btn btn-default"><span class="glyphicon glyphicon-file"></span>O.S.</button>
+                                            <button type="button" class="btn_editar btn btn-default"><span class="glyphicon glyphicon-pencil"></span></button>
+                                            <button type="button" class="btn_excluir btn btn-default"><span class="glyphicon glyphicon-trash"></span></button>
+
+                                          </div>
+                                        </div>
+                                    </td>
+                                    <!--/Mobile -->
+                                    <td template-field="dia"  class="hidden-xs">{dia}</td>
+                                    <td template-field="cliente"  class="hidden-xs">{cliente}</td>
+                                    <td class="hidden-xs">
+                                      <div template-field="projeto"  >
+                                      </div>
+                                      <div template-field="atividade" class="small text-muted hidden-xs">
+                                      </div>
+                                    </td>
+                                    <td template-field="executor" class="hidden-xs">{executor}</td>
+                                    <td class="text-right hidden-xs" template-field="total_horas"></td>
+                                    <td template-buttons="actions" class="hidden-xs">
+                                        <div class="btn-group pull-right">
+                                            <button type="button" class="btn_editar btn btn-default">
+                                                <span class="glyphicon glyphicon-pencil"></span> Editar
+                                            </button>
+                                            <button type="button" class="btn_gerar_os btn btn-default">
+                                                <span class="glyphicon glyphicon-file"></span> O.S.
+                                            </button>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu pull-right">
+                                                    <li><a class="btn_visualizar" href="#">
+                                                        Visualizar
+                                                    </a></li>
+                                                    <li><a class="btn_excluir" href="#">
+                                                        Excluir
+                                                    </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tfoot class="bg-warning">
+                                   <td class="text-right visible-xs col-xs-12" style="border-top:0px !important;" >
+                                      <span class="pull-left">Horas Totais</span>
+                                      <strong template-field="total_geral_horas" class="pull-right"></strong>
+                                      <div class="clearfix"></div>
+                                   </td>
+                                    <td class="hidden-xs">&nbsp;</td>
+                                    <td class="hidden-xs">&nbsp;</td>
+                                    <td class="hidden-xs">&nbsp;</td>
+                                    <td class="text-right hidden-xs"><strong template-field="total_geral_horas"></strong></td>
+                                    <td class="hidden-xs">&nbsp;</td>
+                                </tfoot>
+                              </tbody>
+                            </table>
+                          <div class="alert hidden div_alert_apontamentos" id="div_alert_apontamentos">
+                              <p class="text-muted">Nenhum apontamento encontrado</p>
+                          </div>
+
+                        </div>
+                    </div>
+
+                    <div class="tab-pane aba_tarefas">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            
+                            <div style="display: flex;">
+                                <input type="text" class="form-control edt_nova_tarefa" placeholder="Nova Tarefa" maxlength="100">
+                                <div class="input-group">
+                                    <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_tarefa_data_conclusao" placeholder="Conclusão">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default btn_cancelar_edicao_tarefa hidden" type="button">
+                                            <i class="glyphicon glyphicon-remove"></i>
+                                        </button>
+                                        <button class="btn btn-primary btn_editar_tarefa hidden" type="button">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                        </button>
+                                        <button class="btn btn-primary btn_incluir_tarefa" type="button">
+                                            <i class="glyphicon glyphicon-plus"></i>
+                                        </button>
+                                        <button class="btn btn-primary btn_recarregar_tarefa" type="button">
+                                            <i class="glyphicon glyphicon-refresh"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                                <br>
+                            </div>
+                            
+                            <table class="tab_tarefas_listagem table table-striped table-hover table-bordered table-responsive tabela_padrao_bp" data-table-name="tarefas">
+                                <thead>
+                                    <tr>
+                                        <th class="realizado" width="70px">
+                                            <span class="orderby_realizado orderbypointer" data-asc="" data-ordername="realizado">
+
+                                                Realizado
+                                                &nbsp;
+                                                <span class="fa fa-sort-down icon_orderby hidden fa-fw"></span>
+                                            </span>
+                                        </th>
+                                        <th class="descricao">
+                                            <span class="orderby_descricao orderbypointer" data-asc="" data-ordername="descricao">
+                                                Descrição
+                                                &nbsp;
+                                                <span class="fa fa-sort-down icon_orderby hidden fa-fw"></span>
+                                            </span>
+                                        </th>
+                                        <th class="data_conclusao" width="120px">
+                                            <span class="orderby_data_conclusao orderbypointer" data-asc="" data-ordername="data_conclusao">
+                                                Conclusão
+                                                &nbsp;
+                                                <span class="fa fa-sort-down icon_orderby hidden fa-fw"></span>
+                                            </span>
+                                        </th>
+                                        <th class="acoes" width="80px">
+                                            <span class="orderby_acao orderbypointexr" data-asc="" data-ordername="acao">
+                                                Ação
+                                                &nbsp;
+                                                <span class="fa fa-sort-down icon_orderby hidden fa-fw"></span>
+                                            </span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="sortable">
+                                    <tr class="hidden " template-row>
+                                        <td class="realizado" data-bp-column="realizado" data-bp-column-header="" >
+                                            &nbsp;
+                                            &nbsp;
+                                            <input type="checkbox" class="form-control  checkbox_bootstrap_toggle template_switch" data-size="mini" template-field="realizado">
+                                        </td>
+                                        <td class="descricao" data-bp-column="descricao"  >
+                                            Desenvolver tela
+                                        </td>
+                                        <td class="data_conclusao text-muted" data-bp-column="descricao"  >
+                                            00/00/00
+                                        </td>
+                                        <td class="acao" data-bp-column="acao" >
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary btn-xs btn_editar" title="Editar">
+                                                    <i class="fa fa-pencil-alt fa-fw"></i>
+                                                </button>
+                                                <button class="btn btn-danger btn-xs btn_remover" title="Excluir">
+                                                    <i class="fa fa-trash fa-fw"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <td colspan="4" style="text-align: left; background:#f5f5f5;"><b template-field="totalizador">0</b><span class="" > registros</span></td>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane aba_referencias">
+                        <div class="div_componente_referencias">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

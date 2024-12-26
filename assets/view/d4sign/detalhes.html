@@ -1,0 +1,38 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Documentos</li>
+</ol>
+    
+<div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="panel panel-default painel_detalhes">
+            <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">  
+                        <div class="form-group">
+                            <button class="btn btn-primary btn_solicitar_assinaturas">
+                                <span class="fa fa-address-card"></span>
+                                Solicitar Assinaturas
+                            </button>
+                            <button type="button" class="btn btn-default btn_refresh">
+                                <span class="glyphicon glyphicon-refresh"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body" style="min-height: 700px">
+                <div class="tab-content">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="row" style="margin-top: 10px">
+                            <div class="div_job_scheduler_ativo alert alert-warning" style="display: none;">
+                                <i class="fas fa-exclamation-triangle fa-lg"></i>
+                                É necessário que o Job <code>Sign_Reprocessar_Finalizados_Sem_Download.job.php</code> esteja ativado para que o documento assinado na plataforma D4Sign seja disponibilizado para download no Next BP.
+                                <div class="text-right" permissao="job_scheduler"><a href="#" class="alert-link btn_job_scheduler" >Configurar Job Scheduler</a></div>
+                            </div>
+                            <div id="treelist_historico_documento_d4sign" class="treelist_historico_documento_d4sign"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

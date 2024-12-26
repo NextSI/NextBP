@@ -1,0 +1,14 @@
+<?php
+
+use \Sys\Util;
+use \Sys\Basic;
+use \Sys\Validation;
+use \Sys\DB;
+
+function documento_bloquear_desbloquear_antes($documento_model) {
+
+};
+
+function documento_bloquear_desbloquear_depois($documento_model) {
+    
+};

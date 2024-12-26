@@ -1,0 +1,103 @@
+<div class="modal bs-modal-lg" data-dismiss="modal" tabindex="-1" role="dialog" aria-labelledby="modal_chamado_configuracoes" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_chamado_configuracoes">Configurações de Perfil</h4>
+            </div>
+            <div class="modal-body">
+                <div class="panel panel-default painel_detalhes">
+                    <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                        <div class="pull-right">
+                            <!-- -->
+                        </div>
+                        <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                            <li class="active lbl_tab_padroes_sugestao_perfil">
+                                <a class="menu_padroes_sugestao_perfil" href="#" role="tab" data-toggle="tab">
+                                	Padrões de Perfil
+                                </a>
+                            </li>
+                        </ul>
+                    </div> 
+
+                    <div class="panel-body">
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="active tab-pane aba_geral">
+				                <div class="row">
+				                    <div class="col-lg-12 col-sm-12">
+				                        <table class="table table-hover">
+											<thead>
+												<tr>
+													<th>Perfil</th>
+													<th>Área</th>
+													<th>Calendário de Trabalho</th>
+													<th>Nível</th>
+													<th>Permissões</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Colaborador</td>
+													<td>
+						                                <select class="form-control select-multi-column cbo_areas_colaborador"></select>
+													</td>
+													<td>
+						                                <select class="form-control select-multi-column cbo_calendario_trabalho"></select>
+													</td>
+													<td>
+						                                <input type="number" min="1" max="100" class="edt_nivel_colaborador form-control">
+													</td>
+													<td>
+														<button type="button" class="btn_permissoes_colaborador btn btn-default">
+							                                <span class="glyphicon glyphicon-lock"></span> Permissões
+							                            </button>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+				                </div>
+					        </div>
+					    </div>
+					</div>
+
+					<div class="div_empresa form-group" id="div_empresa">
+						<table class="tab_listagem_empresa table">
+							<thead>
+								<tr>
+									<th>Empresa (Nome)</th>
+									<th>Razão Social</th>
+									<th>
+										<div class="pull-right">
+											<button type="button" class="btn_incluir_empresa btn btn-default">
+												<span class="glyphicon glyphicon-plus"></span>
+											</button>
+										</div>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr template-row style="display: none;">
+									<td template-field="nome_fantasia">{nome_fantasia}</td>
+									<td template-field="razao_social">{razao_social}</td>
+									<td>
+										<div class="pull-right">
+											<button type="button" class="btn_deletar_empresa btn btn-default">
+												<span class="glyphicon glyphicon-trash"></span>
+											</button>
+										</div>
+									</td>
+								</tr>                
+							</tbody>
+						</table>     
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_confirmar btn btn-primary">Confirmar</button>                
+            </div>
+        </div>
+    </div>
+</div>

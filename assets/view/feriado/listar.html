@@ -1,0 +1,79 @@
+<!-- LISTAGEM -->
+<div>
+
+    <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+        <button type="button" class="btn_novo btn btn-primary">
+            <i class="fa fa-plus-square" aria-hidden="true"></i> Novo
+        </button>
+        <button type="button" class="btn_filtrar btn btn-default">
+            <i class="fa fa-filter" aria-hidden="true"></i> Pesquisar
+        </button>
+        <button type="button" class="btn_limpar_filtro btn btn-default ">
+            <i class="fa fa-trash" aria-hidden="true"></i> Limpar Filtros
+        </button>
+        <button type="button" class="btn_listar btn btn-default">
+            <i class="fa fa-sync" aria-hidden="true"></i> Atualizar
+        </button>
+        <a manual="feriado" class="btn btn-default" role="button">
+            <i class="fa fa-question-circle" aria-hidden="true"></i>
+        </a>
+    </nav>
+
+    <div class="table-responsive">
+
+        <table class="tab_listagem table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Nome</th>
+                    <th>Hora início</th>
+                    <th>Hora término</th>
+                    <th>Calendário de trabalho</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- itens -->
+                <tr template-row style="display: none;">
+                    <td template-field="data_feriado">{data_feriado}</td>
+                    <td template-field="nome">{nome}</td>
+                    <td template-field="hora_inicio">{hora_inicio}</td>
+                    <td template-field="hora_fim">{hora_fim}</td>
+                    <td template-field="calendario_trabalho" style="max-width: 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">{calendario_trabalho}</td>
+                    <td template-buttons="actions">
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn_editar btn btn-default">
+                                <span class="glyphicon glyphicon-pencil"></span> Editar
+                            </button>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a class="btn_visualizar" href="#">
+                                        Visualizar
+                                    </a></li>
+                                    <li><a class="btn_excluir" href="#">
+                                        Excluir
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="position: relative; bottom: 20px;">
+            <div style="padding: 10px; padding-bottom: 0px; padding-top: 0; background-color: white;" class="text-center div_carregar_mais hidden">
+                <span class="btn btn-link btn_carregar_mais">
+                    <span class="txt_carregar_mais text-primary"></span>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- /LISTAGEM -->

@@ -1,0 +1,87 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Contatos</li>
+</ol>
+
+<!-- LISTAGEM -->
+<div>
+
+    <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+        <button type="button" class="btn_novo btn btn-primary">
+            <span class="glyphicon glyphicon-plus-sign"></span> Novo
+        </button>
+        <button type="button" class="btn_filtrar btn btn-default btn_margins">
+            <span class="glyphicon glyphicon-filter"></span> Pesquisar
+        </button> 
+        <button type="button" class="btn btn-default btn_limpar_filtro btn_margins">
+            <span class="glyphicon glyphicon-trash"></span> Limpar Filtros
+        </button>
+        <button type="button" class="btn_listar btn btn-default">
+            <span class="glyphicon glyphicon-refresh"></span>
+        </button>
+        <button type="button" class="btn_configuracoes btn btn-default btn_margins btn_margin_buttom hidden">
+            <span class="glyphicon glyphicon-cog"></span> 
+        </button>
+        <button type="button" class="btn_exportar_excel btn btn-default btn_margins btn_margin_buttom">
+            <i class="fa fa-file-excel" aria-hidden="true"></i>
+            <!-- <span class="glyphicon glyphicon-cog"></span>  -->
+        </button>
+    </nav>
+
+    <div class="table-responsive">
+
+        <table class="tab_listagem table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Telefone 1</th>
+                    <th>Telefone 2</th>
+                    <th>Telefone 3</th>
+                    <th>Telefone 4</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- itens -->
+                <tr template-row style="display: none;">
+                    <td template-field="nome">{nome}</td>
+                    <td template-field="email">{email}</td>
+                    <td template-field="telefone1">{telefone1}</td>
+                    <td template-field="telefone2">{telefone2}</td>
+                    <td template-field="telefone3">{telefone3}</td>
+                    <td template-field="telefone4">{telefone4}</td>
+                    <td template-buttons="actions">
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn_editar btn btn-default">
+                                <span class="glyphicon glyphicon-pencil"></span> Editar
+                            </button>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a class="btn_visualizar" href="#">
+                                        Visualizar
+                                    </a></li>
+                                    <li><a class="btn_excluir" href="#">
+                                        Excluir
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="position: relative; bottom: 20px;">
+            <div style="padding: 10px; padding-bottom: 0px; padding-top: 0; background-color: white;" class="text-center div_carregar_mais hidden">
+                <span class="btn btn-link btn_carregar_mais">
+                    <span class="txt_carregar_mais text-primary">Carregar mais registros</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- /LISTAGEM -->

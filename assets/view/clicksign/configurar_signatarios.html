@@ -1,0 +1,66 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Configurar Signatários</li>
+</ol>
+
+<div class="col-xs-12 col-sm-12 col-md-12">
+    <div class="panel panel-default painel_detalhes">
+        <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+            <br>
+        </div>
+        <div class="panel-body">
+            <div class="tab-content">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="row">
+                        <div id="grid_signatarios" class="grid_signatarios">
+                    </div>
+                    <div class="row" style="margin-top: 15px">
+                        <div class="col-md-12">
+                            <input type="checkbox" id="chk_solicitar_assinaturas_ordem" class="form-control checkbox_bootstrap_toggle chk_solicitar_assinaturas_ordem" />
+                            &nbsp;
+                            <label for="chk_solicitar_assinaturas_ordem">Solicitar assinaturas na ordem especificada</label>
+                            <i class="fas fa-question-circle" style="cursor: pointer;" onclick="alert_modal(
+                                'Ordem das Assinaturas',
+                                'Esse recurso faz com que o documento seja assinado na ordem estabelecida antes do envio.'
+                                +'<br>'
+                                +'<br>'
+                                +'Isso quer dizer que <strong>o documento só será enviado ao segundo signatário APÓS a assinatura do primeiro.</strong> Enquanto o primeiro signatário não efetuar a sua assinatura, o documento não segue para as assinaturas seguintes.'
+                                +'<br>'
+                                +'<br>'
+                                +'Deixe esse recurso <strong>desmarcado</strong> para enviar o documento para todos os signatários de uma única vez. Assim, todos poderão assinar o documento ao mesmo tempo.'
+                            )"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 15px">
+                        <div class="col-md-2">
+                            <label for="edt_intervalo_lembrete">Enviar lembrete a cada:</label>
+                            <i class="fas fa-question-circle" style="cursor: pointer;" onclick="alert_modal(
+                                'Lembrete automático',
+                                'Determina se o documento terá a opção de lembretes automáticos ativada. Serão enviados até três lembretes automaticamente.'
+                                +'<br>'
+                                +'<br>'
+                                +'O envio do lembrete é <strong>feito pela plataforma da Clicksign</strong>, e não pelo Next BP.'
+                                +'<br>'
+                                +'<br>'
+                                +'<strong>Atenção, envios por WhatsApp geram custos adicionais a cada envio de lembrete.</strong>'
+                            )"></i>
+                            <select id="edt_intervalo_lembrete" class="edt_intervalo_lembrete form-control">
+                                <option value="0">Desativado</option>
+                                <option value="1">1 dia</option>
+                                <option value="2">2 dias</option>
+                                <option value="3">3 dias</option>
+                                <option value="7">7 dias</option>
+                                <option value="14">14 dias</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 15px">
+                        <div class="form-group" style="margin-left:15px; margin-right:15px">
+                            <label for="lbl_mensagem">Mensagem</label>
+                            <textarea class="txt_mensagem_signatarios" style="width: 100%;" placeholder="Mensagem para os signatários (opcional)" rows="6"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

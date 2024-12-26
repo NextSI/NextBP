@@ -1,0 +1,153 @@
+<div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="panel panel-primary">
+            <div class="pull-right" style="padding: 4px;">
+                <button class="btn btn-sm btn-default btn_refresh">
+                    <span class="glyphicon glyphicon-refresh"></span>
+                </button>
+            </div>
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <span class="fa fa-comment-dots" style="font-size: 20px;"></span>
+                    <span></span>
+                    
+                </h3>    
+            </div>
+            <div class="panel-body">
+              
+                <!--Template publicação mural-->
+                <li class="media" style="padding: 4px; display: none;" template-mensagem contenteditable="false"> 
+                    <div class="dropdown pull-right">
+                            <button class="btn btn-link btn_menu_editar_mensagem hidden"id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu text-primary" aria-labelledby="dLabel">
+                                <li><a class="btn_menu_editar" href="#"><span class=" text-primary">Editar</span></a></li>
+                                <li><a class="btn_menu_excluir text-primary" href="#"><span class=" text-primary">Excluir</span></a></li>
+                            </ul>
+                        </div>
+                    <div class="media-body">
+                        <span class="label label-default pull-right lbl_data_publicacao">{data_publicacao}</span>
+                        <img class="carrega_img_mensagem img-circle"/>
+                        <button class="btn btn-link btn_perfil_usuario">
+                            <span class="text-primary lbl_autor small">{autor}</span>
+                        </button>
+                        <button class="btn btn-link btn_grupo_pagina_inicial">
+                            <span class="label field_lb_grupo"></span>
+                        </button>
+                        <p class="lbl_mensagem" style="padding-top: 5px;">{mensagem}</p>
+                        <div class="imagens_mensagem"></div>  
+                    </div>
+                    
+                    <div class="row hidden div_anexos">
+                        <div class="anexos col-xs-12 col-sm-12 col-md-12">
+                        </div>  
+                    </div>
+                    
+                    <div class="text-left" style="padding: 4px; margin-left: 0px;"> 
+                        <button class="btn btn-link mural_curtir" style="padding: 4px; margin-left: 0px;"> 
+                            <span class="fa fa-thumbs-up" aria-hidden="true" style="font-size: 15px;"></span>
+                            Curtir
+                        </button>
+                        <button class="hidden btn btn-link mural_descurtir" style="padding: 4px; margin-left: 0px;"> 
+                            <span class="fa fa-thumbs-up text-primary" aria-hidden="true" style="font-size: 16px;"></span>
+                            <span>Descurtir</span>
+                        </button>
+                        <button class="btn btn-link mural_comentar" style="padding: 4px; margin-left: 0px;">
+                            &nbsp;<span class="fa fa-comment" aria-hidden="true" style="font-size: 16px;"></span>
+                            Comentar
+                        </button>
+                        <div class="hidden div_mensagem_curtir" style="padding: 4px; margin-left: 0px;">
+                            <a href="#" class="lbl_mensagem_curtir">{mensagem}</a>
+                        </div>
+                    </div>
+
+                    <div class="hidden div_enviar_comentario" style="padding: 4px; margin-left: 0px;" contenteditable="false">
+                        <div id="input_div" class="form-control edt_enviar_comentario" style="min-height: 30px; height: auto; position:relative;">
+                            <div class="cursor_social">
+                            </div>
+                            <div class="content" contenteditable="true"></div>
+                        </div>
+                        
+                        
+                        
+                        <div class="panel panel-default div_marcacao_usuario hidden" style="width: 225px; padding-top:5px; margin-top: 5px;" contenteditable="false">
+                            <div class="hidden" template-marcacao contenteditable="false">
+                                <img class="carrega_img_marcar_usuario img-circle"/>
+                                <button class="btn btn-link btn_marcar_usuario">
+                                    <span class="text-primary lbl_comentario_marcar_usuario small">{autor}</span>
+                                </button>
+                            </div>
+                            <div class="div_marcar" contenteditable="false"></div>
+                        </div>
+
+                    </div>
+                    <!--Template comentário/resposta-->
+                    <div class="row hidden div_comentario text-left" style="padding-left: 15px;" template-comentario>
+                        <hr>
+                        <div class="div_listar_comentario_imagem col-xs-12 col-sm-4 col-md-4">
+                        <img class="carrega_img_comentario img-circle"/>
+                         <button class="btn btn-link btn_perfil_usuario_comentario">
+                            <span class="text-primary lbl_comentario_autor small"><small>{autor}</small></span>
+                        </button>
+                        </div>
+                        
+                        
+                        <div class="div_listar_comentario_comentario col-xs-12 col-sm-4 col-md-4" style="padding-top: 5px;">
+                            <span class="text-primary lbl_comentario_comentarios small"><small>{comentario}</small></span>
+                        </div>
+                        <div class="btn-group div_curtir_comentar_comentario col-xs-12 col-sm-4 col-md-4" style="padding-right: 10px;">
+                            <button class="btn btn-link btn_editar_comentario hidden"> 
+                                <span class="fa fa-pencil-alt" aria-hidden="true" style="font-size: 15px;"></span>   
+                            </button>
+                            <button class="btn btn-link btn_mural_curtir_comentario"> 
+                                <span class="fa fa-thumbs-up" aria-hidden="true" style="font-size: 15px;"></span>   
+                            </button>
+                            <button class="hidden btn btn-link btn_mural_descurtir_comentario"> 
+                                <span class="fa fa-thumbs-up text-primary" aria-hidden="true" style="font-size: 16px;"></span>   
+                            </button>
+                            <a href="#" class="btn link_curtida_comentario" style="padding-top: 4px; padding-left: 1px;"><span class=" lbl_count_curtida_comentario small">{count}</span></a>
+                            <button class="btn btn-link mural_comentar_comentario">
+                                <span class="fa fa-comment" aria-hidden="true" style="font-size: 16px;"></span>
+                            </button>
+                            <button type="button" class="btn btn_excluir close hidden" aria-hidden="true" style="padding-left: 15px; padding-top: 6px;">
+                                &times;
+                            </button> 
+                        </div>
+                        <div class="btn-group div_mostrar_respostas col-xs-12 col-sm-12 col-md-12 hidden">
+                            <button class="btn btn-link btn_mostrar_respostas"> 
+                            </button>
+                        </div>
+                        
+                        <div class="hidden div_enviar_comentario_resposta col-xs-12 col-sm-12 col-md-12" style="padding-top: 10px; padding-bottom: 10px; padding-left: 45px; margin-left: 0px;" contenteditable="false">
+                        
+                            <div id="input_div_resposta" class="form-control edt_enviar_comentario_resposta" style="min-height: 35px; height: auto; position:relative;">
+                                <div class="cursor_social_resposta">
+                                </div>
+                                <div class="content_resposta" contenteditable="true"></div>
+                            </div>
+                        
+                            <div class="panel panel-default div_marcacao_usuario_resposta hidden" style="width: 225px; padding-top:5px; margin-top: 5px;" contenteditable="false">
+                                <div class="hidden" template-marcacao-resposta contenteditable="false">
+                                    <img class="carrega_img_marcar_usuario_resposta img-circle"/>
+                                    <button class="btn btn-link btn_marcar_usuario_resposta">
+                                        <span class="text-primary lbl_comentario_marcar_usuario_resposta small">{autor}</span>
+                                    </button>
+                                </div>
+                                <div class="div_marcar_resposta" contenteditable="false"></div>
+                            </div>
+                        </div>
+                        <div class="comentario_resposta"></div>
+                    </div>
+                    <div class='comentario'></div>  
+                </li>
+                <ul class="media-list list_mural">
+                </ul>
+                <!--Imagem load carregamento-->
+                <div class="text-center div_load">
+                    <img class="img_ajax_loader" src="assets/img/ajax-loader.gif">
+                </div>              
+            </div>
+        </div>
+    </div>    
+</div>

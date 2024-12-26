@@ -1,0 +1,30 @@
+<!-- MODAL DETALHE -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_reprogramar_prazo_label" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_reprogramar_prazo_label">Reprogramar Prazo</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row hidden div_horas_uteis">
+                    <div class="col-md-12 form-group">
+                        <label for="edt_prazo">Prazo</label>
+                        <div class="prazo"></div>
+                    </div>                    
+                </div>
+                <div class="row div_motivo_reprogramacao hidden">
+                    <div class="col-md-12">
+                        <label for="edt_motivo_reprogramacao">Motivo para a reprogramação <span style="color: red;">*</span></label>
+                        <textarea id="edt_motivo_reprogramacao" class="form-control edt_motivo_reprogramacao" rows="5" placeholder="Informe o motivo pelo qual você está reprogramando a atividade..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

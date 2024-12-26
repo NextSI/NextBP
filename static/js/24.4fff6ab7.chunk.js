@@ -1,0 +1,1 @@
+(this.webpackJsonpnext_bp=this.webpackJsonpnext_bp||[]).push([[24],{1265:function(n,t,a){"use strict";a.r(t);var e=a(376),p=a.n(e),s=a(514),c=a.n(s);window.React=p.a,window.ReactDOM=c.a}}]);

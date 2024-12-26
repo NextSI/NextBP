@@ -1,0 +1,109 @@
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_grupo_usuarios_detalhes_label" aria-hidden="true" style="opacity:0;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_grupo_usuarios_detalhes_label">Grupo de Usuários</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label for="modal_grupo_usuarios_edt_nome">Nome</label>
+                    <input type="text" class="edt_nome form-control" id="modal_grupo_usuarios_edt_nome" maxlength="150">
+                </div>
+                
+                <div class="row" style="padding-bottom:10px;">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <input class="form-control edt_nome_usuario" placeholder="Usuários">
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <input class="form-control edt_email_usuario" placeholder="E-mail">
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <select class="form-control select-multi-column cbo_usuarios" style="width: 300px;" placeholder="Adicionar Usuário"></select>
+                    </div>
+                </div>
+                <div class="painel_usuario" id="painel_usuario" style="height: 250px; overflow-y: auto; overflow-x: hidden;">
+                    <table class="tab_listagem table table-striped table-hover">
+                        <tbody>
+                            <tr template-row style="display: none;">
+                                <!--MOBILE-->
+                                <td class="visible-xs">
+                                    <button type="button" class="btn_usuario_remover small close" aria-hidden="true">&times;</button>
+                                    <span  template-field="nome"></span>
+                                    <br>
+                                    <span class="small" template-field="email"></span>
+                                </td>
+                                <!--MOBILE-->
+
+                                <td class="hidden-xs" template-field="nome">{nome}</td>
+                                <td class="hidden-xs small" template-field="email">{email}</td>
+                                <td class="hidden-xs">
+                                    <div class="pull-right">
+                                        <button type="button" class="btn_usuario_remover btn btn-default">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>                
+                            <tr id="tr_carregar_mais" style="display: none;">
+                                <td colspan="3" style="text-align: center;">
+                                    <span class="btn btn-link btn_carregar_mais" style="font-size: 12pt;">
+                                        <span class="txt_carregar_mais text-primary"></span>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modulos">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4" style="padding-bottom: 10px;">
+                            <input class="form-control check_agenda checkbox_bootstrap_toggle" type="checkbox">
+                            Agenda
+                        </div>
+                        <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4" style="padding-bottom: 10px;">
+                            <input class="form-control check_chamados checkbox_bootstrap_toggle" type="checkbox">
+                            Chamados
+                        </div>
+                        <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4" style="padding-bottom: 10px;">
+                            <input class="form-control check_documentos checkbox_bootstrap_toggle" type="checkbox">
+                            Documentos
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4" style="padding-bottom: 10px;">
+                            <input class="form-control check_processos checkbox_bootstrap_toggle" type="checkbox">
+                            Processos
+                        </div>
+                        <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4" style="padding-bottom: 10px;">
+                            <input class="form-control check_projetos checkbox_bootstrap_toggle" type="checkbox">
+                            Projetos
+                        </div>
+                        <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4" style="padding-bottom: 10px;">
+                            <input class="form-control check_crm checkbox_bootstrap_toggle" type="checkbox">
+                            CRM
+                        </div>
+                        <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4" style="padding-bottom: 10px;">
+                            <input class="form-control check_social checkbox_bootstrap_toggle" type="checkbox">
+                            Social
+                        </div>
+                        <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4" style="padding-bottom: 10px;">
+                            <input class="form-control check_inovacao checkbox_bootstrap_toggle" type="checkbox">
+                            Inovação
+                        </div>
+                        <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4" style="padding-bottom: 10px;">
+                            <input class="form-control check_pdca checkbox_bootstrap_toggle" type="checkbox">
+                            PDCA
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+                <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>

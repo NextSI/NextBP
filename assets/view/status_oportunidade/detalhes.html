@@ -1,0 +1,38 @@
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_status_oportunidade_detalhes" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_status_oportunidade_detalhes">Status de Oportunidade</h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="edt_nome">Nome</label>
+                    <input type="text" class="form-control edt_nome" placeholder="Nome do status de oportunidade" maxlength="50">
+                </div>
+                <div class="form-group">                             
+                    <label for="cbo_cor">Cor</label>
+                    <span id="cor_exemplo" class="cor_exemplo badge" style="padding-right: 100px; float: right;">&nbsp;</span>
+                    <select class="cbo_cor form-control" id="cbo_cor">
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="chk_pintar_cartao">Pintar o cartão da oportunidade com a cor selecionada</label><br>
+                    <input type="checkbox" class="chk_pintar_cartao form-control" id="chk_pintar_cartao">
+                </div>
+                <div class="form-group">
+                    <label for="chk_padrao">Status Padrão?</label><br>
+                    <input type="checkbox" class="chk_padrao form-control" id="chk_padrao">
+                </div>
+            </div>
+
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+                <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>

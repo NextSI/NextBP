@@ -1,0 +1,47 @@
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="envNovaVersao" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+				<h4 class="modal-title envNovaVersao">Nova Versão</h4>
+			</div>
+			
+			<div class="modal-body">
+				Informe as mudanças realizadas no processo:
+				<textarea class="form-control edt_observacao" rows="5" maxlength="5000"></textarea>
+
+				<div style="padding-top: 10px;">
+					<td class="text-right">
+						<input type="checkbox" class="checkbox_bootstrap_toggle chk_versao_automacao" id="chk_versao_automacao" checked>
+					</td>
+					<td class="text-left">
+						<label for="chk_versao_automacao">Versão de Automação</label>
+					</td>
+				</div>
+
+				<div style="padding-top: 10px;">
+					<td class="text-right">
+						<input type="checkbox" class="checkbox_bootstrap_toggle chk_versao_documentacao" id="chk_versao_documentacao">
+					</td>
+					<td class="text-left">
+						<label for="chk_versao_documentacao">Versão de Documentação</label>
+					</td>
+				</div>
+
+				<div class="div_ativar_versao" style="padding-top: 10px;">
+					<td class="text-right">
+						<input type="checkbox" class="checkbox_bootstrap_toggle chk_ativar_versao" id="chk_ativar_versao" checked>
+					</td>
+					<td class="text-left">
+						<label for="chk_ativar_versao">Ativar versão</label>
+					</td>
+				</div>
+			</div>
+			
+			<div class="modal-footer">
+				<button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+				<button type="button" class="btn btn-primary btn_confirmar">Publicar nova versão</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

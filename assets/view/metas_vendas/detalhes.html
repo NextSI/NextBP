@@ -1,0 +1,130 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Detalhes Meta</li>
+</ol>
+
+<nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+    <button type="button" class="btn_salvar btn btn-primary">
+        <span class="glyphicon glyphicon-floppy-disk"></span> Salvar
+    </button>                    
+    <button type="button" class="btn_excluir btn btn-danger">
+        <span class="glyphicon glyphicon-floppy-disk"></span> Excluir
+    </button>                                        
+    <button type="button" class="btn_cancelar btn btn-default">
+        <span class="glyphicon glyphicon-remove"></span> Cancelar
+    </button>                    
+</nav>
+
+<div class="row"> 
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="edt_descricao">Descrição</label>
+            <span class="text-danger">*</span>
+            <input type="text" class="edt_descricao form-control" maxlength="150" id="edt_descricao" placeholder="Descrição">
+        </div>                      
+    </div>      
+    <div class="col-md-3 col-lg-2">
+        <div class="form-group">
+            <label for="edt_ini">Início</label>
+            <span class="text-danger">*</span>
+            <input type="date" min="1900-01-01" max="2222-12-31" id="edt_ini" class="edt_ini form-control">
+        </div>
+    </div>
+    <div class="col-md-3 col-lg-2">
+        <div class="form-group">
+            <label for="edt_fim">Fim</label>
+            <span class="text-danger">*</span>
+            <input type="date" min="1900-01-01" max="2222-12-31" id="edt_fim" class="edt_fim form-control">
+        </div>
+    </div>  
+    <div class="col-md-2">
+        <div class="form-group">
+            <label for="cbo_tipo">Tipo</label>
+            <span class="text-danger">*</span>
+            <select class="form-control cbo_tipo" name="cbo_tipo" id="cbo_tipo">
+                <option value="F">Funil de Vendas</option>
+                <option value="R">Representante</option>
+                <option value="E">Evento</option>
+            </select>                        
+        </div>
+    </div>  
+    <div class="col-md-2">
+        <div class="form-group">
+            <label for="edt_valor">Valor</label>
+            <span class="text-danger">*</span>
+            <input type="text" class="edt_valor form-control input_number" id="edt_valor" placeholder="Valor">
+        </div>
+    </div>
+</div>
+
+<div class="div_representantes hidden">
+    <div class="row">
+        <div class="col-md-5"> 
+            <label>Representantes</label>      
+            <div class="form-group">                 
+                <select class="select-multi-column cbo_representante" placeholder="Incluir Representante"></select>
+            </div>
+        </div>
+    </div>
+    <table class="tab_representante table table-striped table-hover table-bordered table-responsive tabela_padrao_bp">
+        <thead>
+            <tr>
+                <th>Representantes</th>
+                <th style="text-align: center;">&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- itens -->
+            <tr template-row style="display: none;">                
+                <td template-field="representante_nome">{Representante}</td>
+                <td class="botoes_acoes" style="text-align: center;">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-danger btn-xs btn_deletar hidden-xs">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                        <button type="button" class="btn btn-danger btn-sm btn_deletar visible-xs">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>    
+</div>
+
+<div class="div_funil_vendas hidden">
+    <div class="row"> 
+        <div class="col-md-5">
+            <label>Funil de Vendas</label>            
+            <div class="form-group">
+                <select class="select-multi-column cbo_funil" placeholder="Incluir Funil de Vendas"></select>
+            </div>
+        </div>
+    </div>
+    <table class="tab_funil_vendas table table-striped table-hover table-bordered table-responsive tabela_padrao_bp">
+        <thead>
+            <tr>
+                <th>Funil de Vendas</th>
+                <th style="text-align: center;">&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- itens -->
+            <tr template-row style="display: none;">                
+                <td template-field="funil_vendas_nome">{Funil}</td>
+                <td class="botoes_acoes" style="text-align: center;">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-danger btn-xs btn_deletar hidden-xs">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                        <button type="button" class="btn btn-danger btn-sm btn_deletar visible-xs">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>        
+
+<div class="dx_grid hidden">
+</div>

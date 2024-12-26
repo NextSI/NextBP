@@ -1,0 +1,48 @@
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_tipo_agenda_detalhes" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_tipo_agenda_detalhes" translate="tipo_agenda.tipo_agenda">Tipo de agenda</h4>
+            </div>
+
+            <div class="modal-body">
+                
+                <div class="form-group">
+                    <label for="edt_nome" translate="tipo_agenda.nome_tipo_agenda">Nome</label>
+                    <input type="text" class="form-control edt_nome" placeholder="Nome do tipo da agenda" maxlength="50">
+                </div>
+                <div class="form-group">                                                  
+                    <label for="cbo_cor" translate="tipo_agenda.cor_tipo_agenda">Cor</label>
+                    <span id="cor_exemplo" class="cor_exemplo badge" style="padding-right: 100px; float: right;">&nbsp;</span>
+                    <select class="cbo_cor form-control" id="cbo_cor">
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="chk_particular" translate="tipo_agenda.particular">Particular</label>
+                    <input type="checkbox" class="checkbox_bootstrap_toggle chk_particular" id="chk_particular">
+                </div>
+                <div class="form-group div_endereco_cliente">                                                  
+                    <label for="chk_endereco_cliente" translate="tipo_agenda.exibir_endereco_cliente">Exibir endereço do Cliente</label>
+                    <input type="checkbox" id="chk_endereco_cliente" class="checkbox_bootstrap_toggle chk_endereco_cliente">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group div_evento_notificar_antes">
+                            <label for="edt_notificar_antes" translate="gestao_agenda.notificar_antes">Notificar Antes</label>
+                            <input type="time" id="edt_notificar_antes" class="edt_notificar_antes form-control" placeholder="hh:mm" data-toggle="tooltip" translate-title="gestao_agenda.notificar_antes_tooltip">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default" translate="modal_cadastro.cancelar">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary" translate="modal_cadastro.salvar">Salvar</button>
+                <button type="button" class="btn_excluir btn btn-danger" translate="modal_cadastro.excluir">Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>

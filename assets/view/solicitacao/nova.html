@@ -1,0 +1,34 @@
+<!-- MODAL DETALHE -->
+<div class="form-group">
+    <input type="text" class="edt_pesquisa form-control" placeholder="Pesquisar">
+</div>
+
+<!-- template-item -->
+<div  class="list-group-item" template-item style="display: none">
+    <div class="pull-right">
+        <button type="button" class="btn btn-xs btn-default btn_favoritar_item" data-toggle="tooltip" data-placement="top" title="Adicionar/Remover dos favoritos">
+            <span class="glyphicon glyphicon-star-empty"></span>
+        </button>
+        <button type="button" class="btn_selecionar btn btn-xs btn-primary">
+            <span class="glyphicon glyphicon-ok"></span>
+            Selecionar
+        </button>
+    </div>
+
+    <div>
+        <span template-field="nome" style="cursor: pointer;">{Processo}</span>
+    </div>
+
+    <p class="list-group-item-text text-info" template-field="instrucao_trabalho">{instrucao_trabalho}</p>
+
+    <p class="list-group-item-text" template-field="versao_processo_atividade_descricao" style="cursor: pointer;">{versao_processo_atividade_descricao}</p>
+
+    <p class="list-group-item-text text-info" template-field="versao_processo_atividade_instrucao_trabalho">{versao_processo_atividade_instrucao_trabalho}</p>
+    
+</div>
+<!-- /template-item -->
+
+<div class="list_processos list-group">
+    
+</div>
+<!-- /MODAL DETALHE -->

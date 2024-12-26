@@ -1,0 +1,736 @@
+<!-- MODAL DETALHE -->
+<div class="modal bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal_processo_atividade_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_processo_atividade_label"><span class="lbl_titulo_atividade"></span> <span class="small">Atividade</span></h4>
+                <div class="lbl_titulo_id pull-left text-muted small" style="left: 12px; position: absolute;"></div>
+            </div>
+            <div class="modal-body">
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                        <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom: 0px; display: flex !important;">
+                            <li class="active lbl_tab_geral">
+                                <a id="modal_processo_atividade_menu_geral" href="#modal_processo_atividade_geral" role="tab" data-toggle="tab">Geral</a>
+                            </li>
+                            <li class="lbl_tab_responsaveis">
+                                <a id="modal_processo_atividade_menu_responsaveis" class="tab_usuario_atividade" href="#modal_processo_atividade_responsaveis" role="tab" data-toggle="tab">Responsáveis</a>
+                            </li>
+                            <li class="lbl_tab_notificacoes">
+                                <a id="modal_processo_atividade_menu_notificacoes" href="#modal_processo_atividade_notificacoes" role="tab" data-toggle="tab">Notificações</a>
+                            </li>
+                            <li class="lbl_tab_gestao_tempo">
+                                <a id="modal_processo_atividade_menu_gestao_tempo" href="#modal_processo_atividade_gestao_tempo" role="tab" data-toggle="tab">Gestão do tempo</a>
+                            </li>
+                            <li class="lbl_tab_fluxo">
+                                <a id="modal_processo_atividade_menu_fluxo" href="#modal_processo_atividade_fluxo" role="tab" data-toggle="tab">Destino</a>
+                            </li>
+                            <li class="lbl_tab_permissoes">
+                                <a id="modal_processo_atividade_menu_permissoes" href="#modal_processo_atividade_permissoes" role="tab" data-toggle="tab">Permissões</a>
+                            </li>
+                            <li class="lbl_tab_acoes">
+                                <a id="modal_processo_atividade_menu_acoes" href="#modal_processo_atividade_acoes" role="tab" data-toggle="tab">Ações</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="panel-body">
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            
+                            <div class="tab-pane active" id="modal_processo_atividade_geral">
+                                
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="modal_processo_atividade_edt_codigo">Código</label>
+                                            <input type="text" class="edt_codigo form-control" id="modal_processo_atividade_edt_codigo" maxlength="255" placeholder="Opcional">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="modal_processo_atividade_edt_descricao">Descrição</label>
+                                            <input type="text" class="edt_descricao form-control" id="modal_processo_atividade_edt_descricao" maxlength="150">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="modal_processo_atividade_cbo_tipo">Tipo</label>
+                                            <select class="cbo_tipo form-control selectpicker" id="modal_processo_atividade_cbo_tipo">
+                                                <option value="0">Início</option>
+                                                <option value="1">Normal</option>
+                                                <option value="2">Fim</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row div_instrucao_trabalho">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="modal_processo_atividade_edt_instrucao_trabalho">Instrução de trabalho</label>
+                                            <textarea class="edt_instrucao_trabalho form-control" width="100%" id="modal_processo_atividade_edt_instrucao_trabalho_atividade" rows="10"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="tab-pane" id="modal_processo_atividade_responsaveis">
+                                
+                                <div class="row responsavel_ativo">
+                                    <div class="col-md-12">
+                                        <table class="tab_usuario_responsavel table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Usuários</th>
+                                                    <th class="lbl_chk_altera_usuario" style="width: 100px">Altera Responsável</th>
+                                                    <th class="lbl_chk_vincular_responsabilidade" style="width: 100px">Vincular/Desvincular Responsabilidade</th>
+                                                    <th class="lbl_chk_cancela_solicitacao" style="width: 100px">Cancela Solicitação</th>
+                                                    <th class="text-right" style="margin-right: 0px; padding-right: 0px; width: 50px">
+                                                        <a class="btn_add_usuario_responsavel btn btn-default">
+                                                            <span class="glyphicon glyphicon-plus"></span>
+                                                        </a>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr template-row style="display: none">
+                                                    <td template-field="nome">{nome}</td>
+                                                    <td>
+                                                        <input template-field="chk_altera_responsavel" class="checkbox_bootstrap_toggle template_switch" type="checkbox">
+                                                    </td>
+                                                    <td>
+                                                        <input template-field="chk_vincular_responsabilidade" class="checkbox_bootstrap_toggle template_switch" type="checkbox">
+                                                    </td>
+                                                    <td>
+                                                        <input template-field="chk_cancela_solicitacao" class="checkbox_bootstrap_toggle template_switch" type="checkbox">
+                                                    </td>
+                                                    <td class="text-right" style="margin-right: 0px; padding-right: 0px">
+                                                        <a class="btn_usuario_remover btn btn-default">
+                                                            <span class="glyphicon glyphicon-trash"></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <div class="row responsavel_ativo">
+                                    <div class="col-md-12">
+                                        <table class="tab_grupo_usuarios_responsavel table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Grupos de Usuários</th>
+                                                    <th class="lbl_chk_altera_usuario" style="width: 100px">Altera Responsável</th>
+                                                    <th class="lbl_chk_vincular_responsabilidade" style="width: 100px">Vincular/Desvincular Responsabilidade</th>
+                                                    <th class="lbl_chk_cancela_solicitacao" style="width: 100px">Cancela Solicitação</th>
+                                                    <th class="text-right" style="margin-right: 0px; padding-right: 0px; width: 50px">
+                                                        <a class="btn_add_grupo_usuarios_responsaveis btn btn-default">
+                                                            <span class="glyphicon glyphicon-plus"></span>
+                                                        </a>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr template-row style="display: none">
+                                                    <td template-field="nome">{nome}</td>
+                                                    <td>
+                                                        <input template-field="chk_grupo_altera_responsavel" class="checkbox_bootstrap_toggle template_switch" type="checkbox">
+                                                    </td>
+                                                    <td>
+                                                        <input template-field="chk_grupo_vincular_responsabilidade" class="checkbox_bootstrap_toggle template_switch" type="checkbox">
+                                                    </td>
+                                                    <td>
+                                                        <input template-field="chk_grupo_cancela_solicitacao" class="checkbox_bootstrap_toggle template_switch" type="checkbox">
+                                                    </td>
+                                                    <td class="text-right" style="margin-right: 0px; padding-right: 0px">
+                                                        <a class="btn_usuario_remover btn btn-default">
+                                                            <span class="glyphicon glyphicon-trash"></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <table class="table table-striped">
+                                    <tr class="div_configuracoes">
+                                        <td class="text-left"><label for="modal_processo_atividade_chk_multiplos_responsaveis">Obrigatório selecionar ao menos um responsável pela solicitação ao enviar atividade antecessora. (Permite selecionar multiplos)</label></td>
+                                        <td class="text-right"><input id="modal_processo_atividade_chk_multiplos_responsaveis" class="chk_multiplos_responsaveis checkbox_bootstrap_toggle" type="checkbox"></td>
+                                    </tr>
+                                    <tr class="div_configuracoes">
+                                        <td class="text-left"><label for="modal_processo_atividade_chk_responsavel_obrigatorio">Obrigatório selecionar um responsável pela solicitação ao enviar atividade antecessora. Caso contrário todos os usuários responsáveis poderão trabalhar com esta solicitação</label></td>
+                                        <td class="text-right"><input id="modal_processo_atividade_chk_responsavel_obrigatorio" class="chk_responsavel_obrigatorio checkbox_bootstrap_toggle" type="checkbox"></td>
+                                    </tr>
+                                    <tr class="div_configuracoes">
+                                        <td class="text-left"><label for="modal_processo_atividade_chk_grupo_responsavel_obrigatorio">Obrigatório selecionar um grupo responsável pela solicitação ao enviar atividade antecessora</label></td>
+                                        <td class="text-right"><input id="modal_processo_atividade_chk_grupo_responsavel_obrigatorio" class="chk_grupo_responsavel_obrigatorio checkbox_bootstrap_toggle" type="checkbox"></td>      
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">
+                                            <label>
+                                                Tornar automaticamente o solicitante do processo o responsável desta atividade
+                                            </label>
+                                            <div class="small text-warning div_observacao_inicio hidden">
+                                                Observação: Esta configuração na atividade inicial é utilizada quando outra atividade envia o fluxo novamente para a atividade inicial. Caso esta configuração esteja marcada como 'Não', todos os solicitantes poderão visualizá-las no caso do fluxo enviar novamente para a atividade inicial.
+                                            </div>
+                                        </td>
+                                        <td class="text-right"><input id="modal_processo_atividade_chk_solicitante_responsavel_obrigatorio" class="chk_solicitante_responsavel_obrigatorio checkbox_bootstrap_toggle" type="checkbox"></td>
+                                    </tr>                            
+                                    <tr class="div_configuracoes">
+                                        <td class="text-left"><label>Tornar responsável por esta atividade o executor de outra atividade</label></td>
+                                        <td class="text-right"><input id="modal_processo_atividade_chk_tornar_executor_responsavel" class="chk_tornar_executor_responsavel checkbox_bootstrap_toggle" type="checkbox"></td>
+                                    </tr>
+                                    <tr class="hidden"></tr>
+                                    <tr class="div_configuracoes div_select_atividade hidden">
+                                        <td colspan="2" style="border-top: none; padding-top: 0px;">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6">
+                                                    <div class="select_atividade"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="div_configuracoes">
+                                        <td class="text-left"><label for="modal_processo_atividade_chk_tornar_superior_imediato_responsavel">Tornar responsável por esta atividade o superior imediato do executor de outra atividade</label></td>
+                                        <td class="text-right"><input id="modal_processo_atividade_chk_tornar_superior_imediato_responsavel" class="chk_tornar_superior_imediato_responsavel checkbox_bootstrap_toggle" type="checkbox"></td>
+                                    </tr>
+                                    <tr class="hidden"></tr>
+                                    <tr class="div_configuracoes div_select_atividade_executor_responsavel hidden">
+                                        <td colspan="2" style="border-top: none; padding-top: 0px;">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6">
+                                                    <div class="select_tornar_superior_imediato_responsavel"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="div_configuracoes">
+                                        <td class="text-left"><label for="modal_processo_atividade_chk_tornar_responsavel_campo_formulario">Tornar responsável por esta atividade o usuário/grupo de campo do formulário</label></td>
+                                        <td class="text-right"><input id="modal_processo_atividade_chk_tornar_responsavel_campo_formulario" class="chk_tornar_responsavel_campo_formulario checkbox_bootstrap_toggle" type="checkbox"></td>
+                                    </tr>
+                                    <tr class="hidden"></tr>
+                                    <tr class="div_configuracoes div_select_responsavel_campo hidden">
+                                        <td colspan="2" style="border-top: none; padding-top: 0px;">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6">
+                                                    <div class="select_responsavel_campo_tipo"></div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6">
+                                                    <div class="select_responsavel_campo_id"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="div_configuracoes">
+                                        <td class="text-left">
+                                            <label for="modal_processo_atividade_chk_responsavel_anonimo">Tornar responsável por esta atividade um usuário anônimo</label>
+                                            <br />
+                                            <small>Um usuário anônimo não precisa estar cadastrado no Next BP. Ele poderá acessar a atividade através de um link gerado pelo próprio sistema no momento que ela for iniciada.</small>
+                                        </td>
+                                        <td class="text-right"><input id="modal_processo_atividade_chk_responsavel_anonimo" class="chk_responsavel_anonimo checkbox_bootstrap_toggle" type="checkbox"></td>
+                                    </tr>
+                                </table>
+
+                                <hr />
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h4 style="margin-top: 0; margin-bottom: 16px;">Notificar Alteração de Responsável:</h4>
+                                    </div>
+                                    <div class="col-md-12" style="margin-bottom: 12px;">
+                                        <input id="chk_notificar_altresponsavel_solicitante" class="chk_notificar_altresponsavel_solicitante checkbox_bootstrap_toggle" type="checkbox">
+                                        <label for="chk_notificar_altresponsavel_solicitante">&nbsp;Solicitante</label>
+                                    </div>
+                                    <div class="col-md-12" style="margin-bottom: 12px;">
+                                        <input id="chk_notificar_altresponsavel_responsavel" class="chk_notificar_altresponsavel_responsavel checkbox_bootstrap_toggle" type="checkbox">
+                                        <label for="chk_notificar_altresponsavel_responsavel">&nbsp;Responsável 
+                                            <i 
+                                                onclick="window.alertaPopUp('Informação', 'Tanto o responsável antigo como o responsável novo serão notificados.')" 
+                                                class="fas fa-info-circle"
+                                                style="cursor: pointer;"
+                                                title="Tanto o responsável antigo como o responsável novo serão notificados."
+                                            >
+                                            </i>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-12" style="margin-bottom: 12px;">
+                                        <input id="chk_notificar_altresponsavel_supervisores" class="chk_notificar_altresponsavel_supervisores checkbox_bootstrap_toggle" type="checkbox">
+                                        <label for="chk_notificar_altresponsavel_supervisores">&nbsp;Supervisores do Processo</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="modal_processo_atividade_notificacoes">
+                               
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <label>Notificações por e-mail no início</label>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="modal_processo_atividade_chk_solicitante">Solicitante</label>
+                                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                        <input id="modal_processo_atividade_chk_notifica_solicitante" class="chk_notifica_solicitante checkbox_bootstrap_toggle" type="checkbox">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6 col_notifica_responsavel">
+                                                <div class="form-group">
+                                                    <label for="modal_processo_atividade_chk_responsavel">Responsável</label>
+                                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                        <input id="modal_processo_atividade_chk_notifica_responsavel" class="chk_notifica_responsavel checkbox_bootstrap_toggle" type="checkbox">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="modal_processo_atividade_edt_emails_notificacao">Outros e-mails</label>
+                                                    
+                                                    <textarea class="edt_emails_notificacao form-control" id="modal_processo_atividade_edt_emails_notificacao" maxlength="1000" rows="4"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 div_informar_emails_terceiros">
+                                                <div class="form-group">
+                                                    <label for="modal_processo_atividade_chk_email_terceiros">Permite informar e-mails de terceiros no início da atividade</label>
+                                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                        <input id="modal_processo_atividade_chk_email_terceiros" class="chk_email_terceiros checkbox_bootstrap_toggle" type="checkbox">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="modal_processo_atividade_chk_email_anexo_inicio">Enviar anexos por e-mail ao iniciar a atividade</label>
+                                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                        <input id="modal_processo_atividade_chk_email_anexo_inicio" class="chk_email_anexo_inicio checkbox_bootstrap_toggle" type="checkbox">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="modal_processo_atividade_chk_email_formulario">Enviar formulário em anexo no e-mail de workflow</label>
+                                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                        <input id="modal_processo_atividade_chk_email_formulario" class="chk_email_formulario checkbox_bootstrap_toggle" type="checkbox">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="modal_processo_atividade_chk_email_corpo_formulario">Enviar formulário no corpo do e-mail de workflow</label>
+                                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                        <input id="modal_processo_atividade_chk_email_corpo_formulario" class="chk_email_corpo_formulario checkbox_bootstrap_toggle" type="checkbox">
+                                                    </div>
+                                                </div>
+                                            </div> 
+
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="modal_processo_atividade_chk_ocultar_numero_no_inicio">Ocultar número da solicitação no e-mail</label>
+                                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                        <input id="modal_processo_atividade_chk_ocultar_numero_no_inicio" class="chk_ocultar_numero_no_inicio checkbox_bootstrap_toggle" type="checkbox">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 div_envio_predecessora">
+                                                <div class="form-group">
+                                                    <label for="modal_processo_atividade_chk_enviar_obs_predecessora">Enviar observações da atividade predecessora no e-mail</label>
+                                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                        <input id="modal_processo_atividade_chk_enviar_obs_predecessora" class="chk_enviar_obs_predecessora checkbox_bootstrap_toggle" type="checkbox">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 div_enviar_email_senha_responsavel">
+                                                <div class="form-group">
+                                                    <label for="modal_processo_atividade_chk_email_usuario_senha_responsavel">Enviar usuário e senha do responsável no e-mail de workflow</label>
+                                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                        <input id="modal_processo_atividade_chk_email_usuario_senha_responsavel" class="chk_email_usuario_senha_responsavel checkbox_bootstrap_toggle" type="checkbox">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-6 div_notificar_email_entrega">
+                                        <label>Notificações por e-mail na entrega</label>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group div_solicitante">
+                                                    <label for="modal_processo_atividade_chk_solicitante_entrega">Solicitante</label>
+                                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                        <input id="modal_processo_atividade_chk_notifica_solicitante_entrega" class="chk_notifica_solicitante_entrega checkbox_bootstrap_toggle" type="checkbox">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6 col_notifica_responsavel">
+                                                <div class="form-group div_responsavel">
+                                                    <label for="modal_processo_atividade_chk_notifica_responsavel_entrega">Responsável</label>
+                                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                        <input id="modal_processo_atividade_chk_notifica_responsavel_entrega" class="chk_notifica_responsavel_entrega checkbox_bootstrap_toggle" type="checkbox">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group div_outros_emails">
+                                                    <label for="modal_processo_atividade_edt_emails_notificacao_entrega">Outros e-mails</label>
+                                                    
+                                                    <textarea class="edt_emails_notificacao_entrega form-control" id="modal_processo_atividade_edt_emails_notificacao_entrega" maxlength="1000" rows="4"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group permitir_informar_emails_terceiros">
+                                                    <label for="modal_processo_atividade_chk_email_terc_entr">Permite Informar e-mails de terceiros na entrega da atividade</label>
+                                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                        <input id="modal_processo_atividade_chk_email_terc_entr" class="chk_email_terc_entr checkbox_bootstrap_toggle" type="checkbox">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group enviar_anexo_no_email_workflow">
+                                                    <label for="modal_processo_atividade_chk_email_formulario_entrega">Enviar formulário em anexo no e-mail de workflow</label>
+                                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                        <input id="modal_processo_atividade_chk_email_formulario_entrega" class="chk_email_formulario_entrega checkbox_bootstrap_toggle" type="checkbox">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group enviar_formulario_corpo_email_workflow">
+                                                    <label for="modal_processo_atividade_chk_email_corpo_formulario_entrega">Enviar formulário no corpo do e-mail de workflow</label>
+                                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                        <input id="modal_processo_atividade_chk_email_corpo_formulario_entrega" class="chk_email_corpo_formulario_entrega checkbox_bootstrap_toggle" type="checkbox">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="modal_processo_atividade_chk_email_anexo">Enviar anexos por e-mail ao entregar a atividade</label>
+                                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                        <input id="modal_processo_atividade_chk_email_anexo" class="chk_email_anexo checkbox_bootstrap_toggle" type="checkbox">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group div_ocultar_solicitacao">
+                                                    <label for="modal_processo_atividade_chk_ocultar_numero_na_entrega">Ocultar número da solicitação no e-mail</label>
+                                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                        <input id="modal_processo_atividade_chk_ocultar_numero_na_entrega" class="chk_ocultar_numero_na_entrega checkbox_bootstrap_toggle" type="checkbox">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group enviar_observacoes_atividade_no_email">
+                                                    <label for="modal_processo_atividade_chk_enviar_obs">Enviar observações da atividade no e-mail</label>
+                                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                        <input id="modal_processo_atividade_chk_enviar_obs" class="chk_enviar_obs checkbox_bootstrap_toggle" type="checkbox">
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="modal_processo_atividade_gestao_tempo">
+                                <label for="modal_processo_atividade_edt_tempo_prazo_execucao">Prazo para executar</label>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        
+                                        <div class="form-group">
+                                            
+                                            <label for="modal_processo_atividade_chk_tempo_prazo_execucao">Horas úteis
+                                                <input style="float: left;margin-right: 2px;" type="radio" class="chk_horas_uteis chk_tipo_hora" name="tipo_hora" value="0" id="modal_processo_atividade_chk_tempo_prazo_execucao"/>
+                                            </label>
+                                            <input type="text" class="edt_tempo_prazo_execucao form-control" id="modal_processo_atividade_edt_tempo_prazo_execucao" placeholder="hhh:mm"> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="modal_processo_atividade_chk_dias_corridos">Dias Corridos
+                                                <input style="float: left;margin-right: 2px;" type="radio" class="chk_dias_corridos chk_tipo_hora" name="tipo_hora" value="1" id="modal_processo_atividade_chk_dias_corridos"/>
+                                            </label>
+                                            <input type="text" class="edt_dias_corridos form-control" id="modal_processo_atividade_edt_dias_corridos" placeholder="dias corridos"> 
+                                        </div>
+                                    </div>
+                                </div>                                
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="modal_processo_atividade_chk_data_referencia">Data de referência
+                                                <input style="float: left;margin-right: 2px;" type="radio" class="chk_data_referencia chk_tipo_hora" name="tipo_hora" value="1" id="modal_processo_atividade_chk_data_referencia"><span class="glyphicon glyphicon-info-sign" style="padding-left: 4px" data-html="true" data-original-title="" title="Dias corridos para Data de Referência"></span>
+                                            </label>
+                                            <input type="text" class="edt_data_referencia form-control" id="modal_processo_atividade_edt_data_referencia" placeholder="Ex: 10 ou -10" data-toggle="tooltip" data-placement="right" title="Dias corridos para Data de Referência"> 
+                                        </div>
+                                    </div>
+                                </div>                                
+                                <div class="row div_chk_predecessora_data">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="radio" class="chk_predecessora_data chk_tipo_hora" name="tipo_hora" value="2"><label>Informar prazo ao concluir atividade predecessora </label></input>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="modal_processo_atividade_chk_acumular_tempo">Acumular tempo gasto</label>
+                                            <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                <input id="modal_processo_atividade_chk_acumular_tempo" class="chk_acumular_tempo checkbox_bootstrap_toggle" type="checkbox">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="modal_processo_atividade_chk_permite_reprogramar">Permite reprogramar</label>
+                                            <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                <input id="modal_processo_atividade_chk_permite_reprogramar" class="chk_permite_reprogramar checkbox_bootstrap_toggle" type="checkbox">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row config_reprogramacao">
+                                    <div class="col-md-3">
+                                        <label for="edt_dias_limite_reprogramacao">
+                                            Limite de dias
+                                            <i class="fas fa-info-circle" title="Limite de dias que o usuário pode reprogramar a atividade"></i>
+                                        </label>
+                                        <input id="edt_dias_limite_reprogramacao" class="form-control edt_dias_limite_reprogramacao" type="number" min="1" placeholder="0" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="modal_processo_atividade_chk_informar_motivo_reprogramacao">Motivo Reprogramação</label>
+                                            <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                <input id="modal_processo_atividade_chk_informar_motivo_reprogramacao" class="chk_informar_motivo_reprogramacao checkbox_bootstrap_toggle" type="checkbox">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row config_reprogramacao">
+                                    <div class="col-md-12">
+                                        <h4>Notificar Reprogramação:</h4>
+                                    </div>
+                                    <div class="col-md-12" style="margin-bottom: 12px;">
+                                        <input id="chk_notificar_reprogramacao_solicitante" class="chk_notificar_reprogramacao_solicitante checkbox_bootstrap_toggle" type="checkbox">
+                                        <label for="chk_notificar_reprogramacao_solicitante">&nbsp;Solicitante</label>
+                                    </div>
+                                    <div class="col-md-12" style="margin-bottom: 12px;">
+                                        <input id="chk_notificar_reprogramacao_responsavel" class="chk_notificar_reprogramacao_responsavel checkbox_bootstrap_toggle" type="checkbox">
+                                        <label for="chk_notificar_reprogramacao_responsavel">&nbsp;Responsável</label>
+                                    </div>
+                                    <div class="col-md-12" style="margin-bottom: 12px;">
+                                        <input id="chk_notificar_reprogramacao_supervisores" class="chk_notificar_reprogramacao_supervisores checkbox_bootstrap_toggle" type="checkbox">
+                                        <label for="chk_notificar_reprogramacao_supervisores">&nbsp;Supervisores do Processo</label>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-3 form-group">
+                                        <label for="modal_processo_atividade_edt_notifica_vencto_horas_antes">Notificar antes do prazo vencer (horas úteis)</label>
+                                        <input type="text" class="edt_notifica_vencto_horas_antes form-control" id="modal_processo_atividade_edt_notifica_vencto_horas_antes" placeholder="hhh:mm">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="modal_processo_atividade_chk_notifica_vencto_solicitante">Solicitante</label>
+                                            <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                <input id="modal_processo_atividade_chk_notifica_vencto_solicitante" class="chk_notifica_vencto_solicitante checkbox_bootstrap_toggle" type="checkbox">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="modal_processo_atividade_chk_notifica_vencto_responsavel">Responsável</label>
+                                            <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                <input id="modal_processo_atividade_chk_notifica_vencto_responsavel" class="chk_notifica_vencto_responsavel checkbox_bootstrap_toggle" type="checkbox">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="modal_processo_atividade_edt_emails_notificacao_vencto">Outros e-mails</label>
+                                            
+                                            <textarea class="edt_emails_notificacao_vencto form-control" id="modal_processo_atividade_edt_emails_notificacao_vencto" maxlength="500" rows="4"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane processo_fluxo" id="modal_processo_atividade_fluxo">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive">
+                                            <table class="tab_fluxo table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Elemento</th>
+                                                        <th width="130px">Permite Retorno</th>
+                                                        <th width="50px" class="text-right" style="margin-right: 0px; padding-right: 0px">
+                                                            <button class="btn_add_fluxo btn btn-default">
+                                                                <span class="glyphicon glyphicon-plus"></span>
+                                                            </button>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr template-row style="display: none">
+                                                        <td>
+                                                            <select template-field="elemento" class="cbo_fluxo_elemento form-control">
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <input class="checkbox_bootstrap_toggle template_switch permite_retorno" type="checkbox">
+                                                        </td>
+                                                        <td class="text-right" style="margin-right: 0px; padding-right: 0px">
+                                                            <button class="btn_fluxo_remover btn btn-default">
+                                                                <span class="glyphicon glyphicon-trash"></span>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="modal_processo_atividade_permissoes">
+                                
+                                <table class="tab_permissoes table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Formulário: <span class="lbl_nome_formulario"></span></th>
+                                            <th class="text-center" style="width: 200px">
+                                                &nbsp;
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr template-row style="display: none">
+                                            <td template-field="nome"></td>
+                                            <td class="text-center">
+                                                <!--input template-field="permitido" type="checkbox" value=""-->
+                                                <select template-field="permissao" class="form-control selectpicker">
+                                                    <option data-icon="glyphicon-eye-close" value="0">Não Exibir</option>
+                                                    <option data-icon="glyphicon-eye-open" value="1">Visualizar</option>
+                                                    <option data-icon="glyphicon-pencil" value="2">Editar</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <table class="table table-striped div_mais_permissoes" style="display: none;">
+                                    <thead>
+                                        <tr>
+                                            <th>Mais Permissões</th>
+                                            <th class="text-center" style="width: 200px">
+                                                &nbsp;
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="div_solicitante_processo_visualiza_formulario" style="display: none;">
+                                            <td>
+                                                <label for="modal_processo_atividade_chk_solicitante_processo_visualiza_formulario">
+                                                    Solicitante do processo poderá visualizar o formulário desta atividade.
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <div class="form-group text-right">
+                                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                        <input id="modal_processo_atividade_chk_solicitante_processo_visualiza_formulario" class="chk_solicitante_processo_visualiza_formulario checkbox_bootstrap_toggle" type="checkbox">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+
+                            <div class="tab-pane" id="modal_processo_atividade_acoes">
+                                
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Ao enviar</th>
+                                            <th class="text-center" style="width: 130px">
+                                                &nbsp;
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label for="modal_processo_atividade_chk_acao_projeto_template">Solicitar novo projeto baseado em template</label>
+                                                <div class="form-group div_porcentagem hidden">
+                                                    <div class="div_porcentagem">
+                                                        Permitir dar continuidade no processo quando o projeto atingir % de conclusão.
+                                                        <input type="number" class="edt_percent_projeto"  min="0" max="100" style="width: 45px" ></input>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group text-right">
+                                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                                        <input id="modal_processo_atividade_chk_acao_projeto_template" class="chk_acao_projeto_template checkbox_bootstrap_toggle" type="checkbox">
+                                                    </div>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>             
+
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

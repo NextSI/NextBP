@@ -1,5 +1,30 @@
 [
     {
+        "versao": "24.62.3",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "\u00c1rea administrativa do Next BP n\u00e3o est\u00e1 acess\u00edvel pelo navegador",
+                "referencia": [
+                    "CHM74079"
+                ],
+                "modulo": "Geral",
+                "hash": "1c9a453d90cf67358668d6c25c229425ce72dc24",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/CHM74079"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste para vis\u00e3o em Kanban no celular funcionar com gestos de deslizar para esquerda e direita",
+                "referencia": [
+                    "CHM74078"
+                ],
+                "modulo": "Processos",
+                "hash": "f6570f4f6d7a6797492739e808388f32de674635",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/CHM74078"
+            }
+        ]
+    },
+    {
         "versao": "24.62.2",
         "itens": [
             {

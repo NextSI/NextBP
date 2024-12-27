@@ -1,5 +1,30 @@
 [
     {
+        "versao": "23.59.67",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na rotina de cancelamento de solicita\u00e7\u00e3o",
+                "referencia": [
+                    "BPM31781"
+                ],
+                "modulo": "Processos",
+                "hash": "b4db9b588a1e5b6b527a28a75ca9a8e826d9e0b6",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM31781"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajustado l\u00f3gica na valida\u00e7\u00e3o de campo obrigat\u00f3rio dentro de tabela em Processos",
+                "referencia": [
+                    "BPM30903"
+                ],
+                "modulo": "Processos",
+                "hash": "cac0e53e32db6b1d307c06b3042a906dadae3332",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM30903"
+            }
+        ]
+    },
+    {
         "versao": "23.59.66",
         "itens": [
             {

@@ -1,0 +1,1388 @@
+<!-- passo a passo das atuações efetivas -->
+<div style="background: #fff; padding: 5px;">
+    
+      <ul class="nav nav-bp steps">
+        <li class="active"><a href="#">1. Responsabilidades</a></li>
+        <li><a href="#">2. Brainstorming (A1)</a></li>
+        <li><a href="#">3. Ações 24 horas (A1)</a></li>
+        <li><a href="#">4. Ações / Iniciativas (A1)</a></li>
+        <li><a href="#">5. Brainstorming (A2)</a></li>
+        <li><a href="#">6. Ações 24 horas (A2)</a></li>
+        <li><a href="#">7. Ações / Iniciativas (A2)</a></li>
+        <li><a href="#">8. Resumo Geral</a></li>
+      </ul>
+
+      <div class="form-group text-right">
+         <div class="row" style="margin-bottom: 0px; padding-bottom: 0px;">
+             <div class="col-xs-12 col-sm-6 col-md-6 pull-right btns_acoes">
+                 <button type="button" class="btn btn-default btn_cancelar">Cancelar</button>
+                 <button type="button" class="btn btn-default btn_voltar hidden">
+                     <span class="glyphicon glyphicon-backward"></span>
+                     Etapa Anterior
+                 </button>
+                 <button type="button" class="btn btn-primary btn_proxima_etapa">
+                     Próxima Etapa
+                     <span class="glyphicon glyphicon-forward"></span>
+                 </button>
+                 <button type="button" class="btn btn-primary btn_confirmar" style="display: none;">Salvar</button>
+                 <button type="button" class="btn btn-primary btn_fechar" style="display: none;">Fechar</button>
+             </div>
+         </div>
+     </div>
+     <span class="label label-default lbl_autor">{autor}</span>
+    <div tipo="etapa">
+
+      <h3 class="titulo_passo">Indicador</h3>
+      <div class="sub_titulo_passo">
+        <span class="glyphicon glyphicon-menu-right"/>
+        <h4 class="nome_indicador"></h4>
+      </div>
+      <div style="border-top: 1px solid #dadada;padding: 3px;background: #f6f6f6;"><b>Função: </b><span class="desc_funcao"></span></div>
+      <div style="padding: 3px;background: #f6f6f6"><b>Missão do Cargo: </b><span class="desc_missao_cargo"></span></div>
+
+      <table class="hpe_layout tabela_responsabilidades table table-striped table-hover">
+        <thead>
+          <tr>
+            <th class="hidden-xs" style="width: 50%;">Responsabilidades</th>
+            <th class="text-center hidden-xs"><button class="btn btn-link btn_info_curva_abc"><span class="glyphicon glyphicon-info-sign" style="font-size: 20px;"></span>Curva ABC</button></th>
+            <th class="text-center center-td hidden-xs"><button class="btn btn-link btn_info_efetividade"><span class="glyphicon glyphicon-info-sign" style="font-size: 20px;"></span>% Efetividade</button></th>
+               <th class="center-td hidden-xs">% Desejado</th>
+            <th class="center-td hidden-xs">% QC </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr template-row style="display: none;">
+            <td>
+              <input type="text" modo_edicao class="form-control" template-field="descricao">
+            </td>
+             <td>
+              <select class="form-control" template-field="select_curva">
+                <option selected></option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+              </select>
+            </td>
+            <td>
+              <input class="center-td form-control" maxlength="3" template-field="efetividade">
+            </td>
+            <td>
+              <input class="center-td form-control" maxlength="3" template-field="desejado">
+            </td> 
+             <td>
+              <div></div>
+            </td>
+          </tr>
+        </tbody>
+         <tfoot>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td class="center-td active media_efetividade">0</td>
+          <td class="center-td active media_desejado">0</td>
+          <td class="center-td active media_qe">0</td>
+        </tfoot>
+      </table>
+    </div>
+
+    <div tipo="etapa">
+      <h3 class="titulo_passo">Responsabilidade classificadas como “A1”, que estrategicamente devemos iniciar nossos trabalhos.</h3>
+      <div class="sub_titulo_passo">
+        <span class="glyphicon glyphicon-menu-right"/>
+        <h4 class="responsabilidade_escolhida"></h4>
+      </div>
+      <h3>Brainstorming de ações</h3>
+      <h4>Quais ações, por menores que sejam, que não estamos fazendo, ou não estamos fazendo de forma adequada, mas se fizéssemos, poderia gerar algum impacto positivo na responsabilidade escolhida? O primeiro passo é realizar o exercício como um processo de Braisntorming.
+      Não deixe de ler a explicação ao lado, pois o perfeito entendimento da mesma, fará total diferença.
+        <button type="button" class="btn btn-default btn_info_acao">
+          <span class="glyphicon glyphicon-question-sign"></span>
+        </button>
+      </h4>
+      <table class="hpe_layout table table-striped table-hover tabela_possibilidades">
+          <tbody>
+              <!-- itens -->
+              <tr>
+                  <td>
+                    <span class="num_linha">1</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">2</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">3</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">4</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">5</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">6</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">7</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">8</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">9</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">10</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+
+    <div tipo="etapa">
+      <h3 class="titulo_passo">Responsabilidade classificadas como “A1”, que estrategicamente devemos iniciar nossos trabalhos.</h3>
+      <div class="sub_titulo_passo">
+        <span class="glyphicon glyphicon-menu-right"/>
+        <h4 class="responsabilidade_escolhida"></h4>
+      </div>
+      <h3>Brainstorming de ações.</h3>
+      <h4>Escolha as ações que você julga serem as mais relevantes e que consigamos iniciar nossa atuação em um curto espaço de tempo, preferencialmente, em até 24 horas (para iniciar alguma coisa, iniciar o primeiro passo). 
+        O número de ações também é relativo e fica a sua escolha
+
+      <button type="button" class="btn btn-default btn_info_acao_24">
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </button>
+      </h4>
+      <table class="hpe_layout table table-striped table-hover tabela_possibilidades_acao">
+          <thead>
+              <tr>
+                  <th style="width: 100%;">&nbsp;</th>
+                  <th>&nbsp;</th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- itens -->
+              <tr>
+                  <td>
+                    <span class="num_linha">1</span>
+                    <input class="form-control" type="text" disabled>
+                  </td>
+                  <td class="text-center">
+                    <span class="check_acao">
+                      <input class="form-control checkbox_bootstrap_toggle" type="checkbox">
+                    </span>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">2</span>
+                    <input class="form-control" type="text" disabled>
+                  </td>
+                  <td class="text-center">
+                    <span class="check_acao">
+                      <input class="form-control checkbox_bootstrap_toggle" type="checkbox">
+                    </span>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">3</span>
+                    <input class="form-control" type="text" disabled>
+                  </td>
+                  <td class="text-center">
+                    <span class="check_acao">
+                      <input class="form-control checkbox_bootstrap_toggle" type="checkbox">
+                    </span>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">4</span>
+                    <input class="form-control" type="text" disabled>
+                  </td>
+                  <td class="text-center">
+                    <span class="check_acao">
+                      <input class="form-control checkbox_bootstrap_toggle" type="checkbox">
+                    </span>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">5</span>
+                    <input class="form-control" type="text" disabled>
+                  </td>
+                  <td class="text-center">
+                    <span class="check_acao">
+                      <input class="form-control checkbox_bootstrap_toggle" type="checkbox">
+                    </span>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">6</span>
+                    <input class="form-control" type="text" disabled>
+                  </td>
+                  <td class="text-center">
+                    <span class="check_acao">
+                      <input class="form-control checkbox_bootstrap_toggle" type="checkbox">
+                    </span>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">7</span>
+                    <input class="form-control" type="text" disabled>
+                  </td>
+                  <td class="text-center">
+                    <span class="check_acao">
+                      <input class="form-control checkbox_bootstrap_toggle" type="checkbox">
+                    </span>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">8</span>
+                    <input class="form-control" type="text" disabled>
+                  </td>
+                  <td class="text-center">
+                    <span class="check_acao">
+                      <input class="form-control checkbox_bootstrap_toggle" type="checkbox">
+                    </span>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">9</span>
+                    <input class="form-control" type="text" disabled>
+                  </td>
+                  <td class="text-center">
+                    <span class="check_acao">
+                      <input class="form-control checkbox_bootstrap_toggle" type="checkbox">
+                    </span>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">10</span>
+                    <input class="form-control" type="text" disabled>
+                  </td>
+                  <td class="text-center">
+                    <span class="check_acao">
+                      <input class="form-control checkbox_bootstrap_toggle" type="checkbox">
+                    </span>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+
+    <div tipo="etapa">
+      <h3 class="titulo_passo">Responsabilidade classificadas como “A1”, que estrategicamente devemos iniciar nossos trabalhos.</h3>
+      <div class="sub_titulo_passo">
+        <span class="glyphicon glyphicon-menu-right"/>
+        <h4 class="responsabilidade_escolhida"></h4>
+      </div>
+      <h3>Ações referentes às Iniciativas</h3>
+      <h4>Descreva melhor suas ações, transformando “Objetivos” em verdadeiras METAS S.M.A.R.T., definindo pequenas metas a serem atingidas a cada semana durante 28 dias e coloque em sua agenda para lembrar e poder medir o planejado x realizado. 
+      </h4>
+      <table class="hpe_layout table table-striped table-hover tabela_acao_possibilidade">
+          <thead>
+              <tr>
+                  <th>&nbsp;</th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- itens -->
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default btn_definir_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default btn_definir_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default btn_definir_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default btn_definir_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default btn_definir_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default btn_definir_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default btn_definir_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default btn_definir_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default btn_definir_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default btn_definir_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+
+    <div tipo="etapa">
+      <h3 class="titulo_passo">Ações, Metas e Resultados (A2)</h3>
+      <div class="sub_titulo_passo">
+        <span class="glyphicon glyphicon-menu-right"/>
+        <h4 class="responsabilidade_escolhida_a2"></h4>
+      </div>
+      <h3>Brainstorming de ações.</h3>
+      <h4>Escolha as ações que você julga serem as mais relevantes e que consigamos iniciar nossa atuação em um curto espaço de tempo, preferencialmente, em até 24 horas (para iniciar alguma coisa, iniciar o primeiro passo). 
+        O número de ações também é relativo e fica a sua escolha
+
+      <button type="button" class="btn btn-default btn_info_acao_24">
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </button>
+      </h4>
+
+      <table class="hpe_layout table table-striped table-hover tabela_possibilidades_a2">
+
+          <tbody>
+              <!-- itens -->
+              <tr>
+                  <td>
+                    <span class="num_linha">1</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">2</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">3</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">4</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">5</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">6</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">7</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">8</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">9</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">10</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+    <div tipo="etapa">
+      <h3 class="titulo_passo">Responsabilidade classificadas como “A2”, que estrategicamente devemos iniciar nossos trabalhos.</h3>
+      <div class="sub_titulo_passo">
+        <span class="glyphicon glyphicon-menu-right"/>
+        <h4 class="responsabilidade_escolhida_a2"></h4>
+      </div>
+      <h3>Brainstorming de ações</h3>
+      <h4>Escolha as ações que você julga serem as mais relevantes e que consigamos iniciar nossa atuação em um curto espaço de tempo, preferencialmente, em até 24 horas (para iniciar alguma coisa, iniciar o primeiro passo). 
+        O número de ações também é relativo e fica a sua escolha
+      </h4>
+      <table class="hpe_layout table table-striped table-hover tabela_possibilidades_acao_a2">
+          <thead>
+              <tr>
+                  <th style="width: 100%;">&nbsp;</th>
+                  <th>&nbsp;</th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- itens -->
+              <tr>
+                  <td>
+                    <span class="num_linha">1</span>
+                    <input class="form-control" type="text" disabled></td>
+                  <td class="text-center">
+                    <span class="check_acao_a2">
+                      <input class="form-control checkbox_bootstrap_toggle" type="checkbox">
+                    </span>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">2</span>
+                    <input class="form-control" type="text" disabled></td>
+                  <td class="text-center">
+                    <span class="check_acao_a2">
+                      <input class="form-control checkbox_bootstrap_toggle" type="checkbox">
+                    </span>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">3</span>
+                    <input class="form-control" type="text" disabled></td>
+                  <td class="text-center">
+                    <span class="check_acao_a2">
+                      <input class="form-control checkbox_bootstrap_toggle" type="checkbox">
+                    </span>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">4</span>
+                    <input class="form-control" type="text" disabled></td>
+                  <td class="text-center">
+                    <span class="check_acao_a2">
+                      <input class="form-control checkbox_bootstrap_toggle" type="checkbox">
+                    </span>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">5</span>
+                    <input class="form-control" type="text" disabled></td>
+                  <td class="text-center">
+                    <span class="check_acao_a2">
+                      <input class="form-control checkbox_bootstrap_toggle" type="checkbox">
+                    </span>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">6</span>
+                    <input class="form-control" type="text" disabled></td>
+                  <td class="text-center">
+                    <span class="check_acao_a2">
+                      <input class="form-control checkbox_bootstrap_toggle" type="checkbox">
+                    </span>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">7</span>
+                    <input class="form-control" type="text" disabled></td>
+                  <td class="text-center">
+                    <span class="check_acao_a2">
+                      <input class="form-control checkbox_bootstrap_toggle" type="checkbox">
+                    </span>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">8</span>
+                    <input class="form-control" type="text" disabled></td>
+                  <td class="text-center">
+                    <span class="check_acao_a2">
+                      <input class="form-control checkbox_bootstrap_toggle" type="checkbox">
+                    </span>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">9</span>
+                    <input class="form-control" type="text" disabled></td>
+                  <td class="text-center">
+                    <span class="check_acao_a2">
+                      <input class="form-control checkbox_bootstrap_toggle" type="checkbox">
+                    </span>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">10</span>
+                    <input class="form-control" type="text" disabled></td>
+                  <td class="text-center">
+                    <span class="check_acao_a2">
+                      <input class="form-control checkbox_bootstrap_toggle" type="checkbox">
+                    </span>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+    
+    <div tipo="etapa">
+      <h3 class="titulo_passo">Responsabilidade classificadas como “A2”, que estrategicamente devemos iniciar nossos trabalhos.</h3>
+      <div class="sub_titulo_passo">
+        <span class="glyphicon glyphicon-menu-right"/>
+        <h4 class="responsabilidade_escolhida_a2"></h4>
+      </div>
+      <h3>Ações referentes às Iniciativas</h3>
+      <h4>Descreva melhor suas ações, transformando “Objetivos” em verdadeiras METAS S.M.A.R.T., definindo pequenas metas a serem atingidas a cada semana durante 28 dias e coloque em sua agenda para lembrar e poder medir o planejado x realizado. 
+      </h4>
+      <table class="hpe_layout table table-striped table-hover tabela_acao_possibilidade_a2">
+          <thead>
+              <tr>
+                  <th>&nbsp;</th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- itens -->
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default btn_definir_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default btn_definir_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default btn_definir_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default btn_definir_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default btn_definir_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default btn_definir_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default btn_definir_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default btn_definir_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default btn_definir_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default btn_definir_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+    <div tipo="etapa">
+        <h4>Função</h4>
+        <span class="desc_funcao"></span>
+        <h4>Missão do cargo</h4>
+        <span class="desc_missao_cargo"></span>
+        <h4>1. Responsabilidades</h4>
+      <table class="hpe_layout tab_responsabilidades_resumo table table-striped table-hover">
+        <thead>
+          <tr>
+            <th class="hidden-xs" style="width: 50%;">Responsabilidades</th>
+            <th class="text-center hidden-xs"><button class="btn btn-link btn_info_curva_abc"><span class="glyphicon glyphicon-info-sign" style="font-size: 20px;"></span>Curva ABC</button></th>
+            <th class="text-center center-td hidden-xs"><button class="btn btn-link btn_info_efetividade"><span class="glyphicon glyphicon-info-sign" style="font-size: 20px;"></span>% Efetividade</button></th>
+               <th class="center-td hidden-xs">% Desejado</th>
+            <th class="center-td hidden-xs">% QC </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr template-row style="display: none;">
+            <td>
+              <input type="text" modo_edicao class="form-control" template-field="descricao">
+            </td>
+             <td>
+              <select class="form-control" template-field="select_curva" readonly>
+                <option selected></option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+              </select>
+            </td>
+            <td>
+              <input class="center-td form-control" maxlength="3" template-field="efetividade" readonly>
+            </td>
+            <td>
+              <input class="center-td form-control" maxlength="3" template-field="desejado" readonly>
+            </td> 
+             <td>
+              <div></div>
+            </td>
+          </tr>
+        </tbody>
+         <tfoot>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td class="center-td active media_efetividade">0</td>
+          <td class="center-td active media_desejado">0</td>
+          <td class="center-td active media_qe">0</td>
+        </tfoot>
+      </table>
+      <h4>2. Brainstorming (A1)</h4>
+      <table class="hpe_layout table table-striped table-hover tabela_possibilidades_resumo_a1">
+          <tbody>
+              <!-- itens -->
+              <tr>
+                  <td>
+                    <span class="num_linha">1</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">2</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">3</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">4</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">5</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">6</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">7</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">8</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">9</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">10</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+      <h4>3. Ações 24 horas (A1)</h4>
+      <table class="hpe_layout table table-striped table-hover tabela_possibilidades_24_resumo_a1">
+        <tbody>
+            <!-- itens -->
+            <tr>
+                <td>
+                  <span class="num_linha">1</span>
+                  <input class="form-control" type="text" maxlength="255">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <span class="num_linha">2</span>
+                  <input class="form-control" type="text" maxlength="255">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <span class="num_linha">3</span>
+                  <input class="form-control" type="text" maxlength="255">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <span class="num_linha">4</span>
+                  <input class="form-control" type="text" maxlength="255">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <span class="num_linha">5</span>
+                  <input class="form-control" type="text" maxlength="255">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <span class="num_linha">6</span>
+                  <input class="form-control" type="text" maxlength="255">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <span class="num_linha">7</span>
+                  <input class="form-control" type="text" maxlength="255">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <span class="num_linha">8</span>
+                  <input class="form-control" type="text" maxlength="255">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <span class="num_linha">9</span>
+                  <input class="form-control" type="text" maxlength="255">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <span class="num_linha">10</span>
+                  <input class="form-control" type="text" maxlength="255">
+                </td>
+            </tr>
+        </tbody>
+      </table>
+      <h4>4. Ações / Iniciativas (A1)</h4>
+      <table class="hpe_layout table table-striped table-hover tabela_acao_possibilidade_resumo_a1">
+          <thead>
+              <tr>
+                  <th>&nbsp;</th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- itens -->
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default ir_para_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default ir_para_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default ir_para_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default ir_para_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default ir_para_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default ir_para_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default ir_para_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default ir_para_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default ir_para_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default ir_para_metas" style="margin: 5px;">Definir metas</button>
+                   <button type="button" class="btn btn-group btn-default dropdown-toggle btn_info_carta">
+                      <span class="glyphicon glyphicon-info-sign"></span>
+                      Informações
+                  </button>
+                  <button class="btn btn-info btn_gerar_agenda hidden" style="margin: 5px;">Gerar agenda</button>
+                  <label class="label lbl_info"></label>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+      <h4>5. Brainstorming (A2)</h4>
+      <table class="hpe_layout table table-striped table-hover tabela_possibilidades_resumo_a2">
+          <tbody>
+              <!-- itens -->
+              <tr>
+                  <td>
+                    <span class="num_linha">1</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">2</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">3</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">4</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">5</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">6</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">7</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">8</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">9</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <span class="num_linha">10</span>
+                    <input class="form-control" type="text" maxlength="255">
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+      <h4>6. Ações 24 horas (A2)</h4>
+      <table class="hpe_layout table table-striped table-hover tabela_possibilidades_24_resumo_a2">
+        <tbody>
+            <!-- itens -->
+            <tr>
+                <td>
+                  <span class="num_linha">1</span>
+                  <input class="form-control" type="text" maxlength="255">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <span class="num_linha">2</span>
+                  <input class="form-control" type="text" maxlength="255">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <span class="num_linha">3</span>
+                  <input class="form-control" type="text" maxlength="255">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <span class="num_linha">4</span>
+                  <input class="form-control" type="text" maxlength="255">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <span class="num_linha">5</span>
+                  <input class="form-control" type="text" maxlength="255">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <span class="num_linha">6</span>
+                  <input class="form-control" type="text" maxlength="255">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <span class="num_linha">7</span>
+                  <input class="form-control" type="text" maxlength="255">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <span class="num_linha">8</span>
+                  <input class="form-control" type="text" maxlength="255">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <span class="num_linha">9</span>
+                  <input class="form-control" type="text" maxlength="255">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <span class="num_linha">10</span>
+                  <input class="form-control" type="text" maxlength="255">
+                </td>
+            </tr>
+        </tbody>
+      </table>
+      <h4>7. Ações / Iniciativas (A2)</h4>
+      <table class="hpe_layout table table-striped table-hover tabela_acao_possibilidade_resumo_a2">
+          <thead>
+              <tr>
+                  <th>&nbsp;</th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- itens -->
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default ir_para_metas" style="margin: 5px;">Ir para definição das metas</button>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default ir_para_metas" style="margin: 5px;">Ir para definição das metas</button>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default ir_para_metas" style="margin: 5px;">Ir para definição das metas</button>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default ir_para_metas" style="margin: 5px;">Ir para definição das metas</button>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default ir_para_metas" style="margin: 5px;">Ir para definição das metas</button>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default ir_para_metas" style="margin: 5px;">Ir para definição das metas</button>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default ir_para_metas" style="margin: 5px;">Ir para definição das metas</button>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default ir_para_metas" style="margin: 5px;">Ir para definição das metas</button>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default ir_para_metas" style="margin: 5px;">Ir para definição das metas</button>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  <label class="lbl_titulo">{possibilidade}</label>
+                  <textarea class="form-control" rows="3" maxlength="255" placeholder="Observações sobre esta tarefa..."></textarea>
+                  <button class="btn btn-default ir_para_metas" style="margin: 5px;">Ir para definição das metas</button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+    <div class="form-group text-right">
+       <div class="row" style="margin-bottom: 0px; padding-bottom: 0px;">
+           <div class="col-xs-12 col-sm-6 col-md-6 pull-right btns_acoes">
+               <button type="button" class="btn btn-default btn_cancelar">Cancelar</button>
+               <button type="button" class="btn btn-default btn_voltar hidden">
+                   <span class="glyphicon glyphicon-backward"></span>
+                   Etapa Anterior
+               </button>
+               <button type="button" class="btn btn-primary btn_proxima_etapa">
+                   Próxima Etapa
+                   <span class="glyphicon glyphicon-forward"></span>
+               </button>
+               <button type="button" class="btn btn-primary btn_confirmar" style="display: none;">Salvar</button>
+               <button type="button" class="btn btn-primary btn_fechar" style="display: none;">Fechar</button>
+           </div>
+       </div>
+   </div>
+
+  <!-- Botões exibidos, quando o usuário estiver acessando por dispositivos móveis -->
+   <div class="form-group text-right">
+     <div class="row" style="margin-bottom: 0px; padding-bottom: 0px;">
+       <div class="col-xs-12 col-sm-6 col-md-6 pull-right btns_bottom" style="display: none;">
+           <button type="button" class="btn btn-default btn_cancelar">
+               <span class="glyphicon glyphicon-remove"></span>
+           </button>
+           <button type="button" class="btn btn-default btn_voltar hidden">
+               <span class="glyphicon glyphicon-backward"></span>
+           </button>
+           <button type="button" class="btn btn-primary btn_proxima_etapa">
+               <span class="glyphicon glyphicon-forward"></span>
+           </button>
+           <button type="button" class="btn btn-primary btn_confirmar" style="display: none;">
+              <span class="glyphicon glyphicon-floppy-disk"></span>
+           </button>
+           <button type="button" class="btn btn-primary btn_fechar" style="display: none;">
+              <span class="glyphicon glyphicon-log-out"></span>
+           </button>
+       </div>
+    </div>
+  </div>   
+
+</div>
+<!-- 
+<label class="pagina">1/11</label> -->

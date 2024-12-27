@@ -1,0 +1,14 @@
+<?php
+
+use \Sys\Util;
+use \Sys\Basic;
+use \Sys\Validation;
+use \Sys\DB;
+
+function oportunidade_aprovacao_antes($oportunidade_orcamento_model, $sessao_model) {
+
+};
+
+function oportunidade_aprovacao_depois($oportunidade_orcamento_model) {
+
+};

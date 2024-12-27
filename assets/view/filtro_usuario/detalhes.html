@@ -1,0 +1,147 @@
+<!-- MODAL DETALHE -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_filtro_personalizado_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_filtro_personalizado_detalhes_label">Filtro Personalizado</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <label for="modal_filtros_edt_descricao">Descrição</label>
+                            <input type="text" class="edt_descricao form-control" id="modal_filtros_edt_descricao" maxlength="150">
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <label for="cbo_campos">Campos</label>
+                            <select class="form-control cbo_campos cbo_campos_escolha selectpicker" data-live-search="true" id="cbo_campos"></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <label for="cbo_operador">Operador</label>
+                            <select class="form-control cbo_operador selectpicker" data-live-search="true" id="cbo_operador">
+                                <option value="">Nenhum</option>
+                                <option value="0">Igual A</option>
+                                <option value="1">Diferente De</option>
+                                <option value="2">Maior Que</option>
+                                <option value="3">Menor Que</option>
+                                <option value="4">Maior ou Igual A</option>
+                                <option value="5">Menor ou Igual A</option>
+                                <option value="6">Contem a Expressão</option>
+                                <option value="7">Pertence ao Conjunto</option>
+                                <option value="8">Não Pertence ao Conjunto</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <input type="radio" id="chk_valor" class="chk_valor chk_opcoes" name="opcoes" value="1">
+                                <label for="chk_valor">Valor</label>
+                            </input>
+                            <input type="radio" id="chk_parametros" class="chk_parametros chk_opcoes" readonly name="opcoes" value="2">
+                                <label for="chk_parametros">Parâmetros</label>
+                            </input>
+
+                            <div class="div_esconder">
+                                <input type="radio" id="chk_campo" class="chk_campo chk_opcoes" name="opcoes" value="3">
+                                    <label for="chk_campo">Campo</label>
+                                </input>
+                            </div>
+                            
+                            <input type="text" class="form-control edt_valor">
+                            <select class="form-control cbo_valor hidden"></select>
+                            <input type="text" class="form-control edt_parametro">
+                            <select class="form-control cbo_campos cbo_campos_valor selectpicker" data-live-search="true" id="cbo_campos_valor"></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row div_esconder" style="padding-bottom:10px;">
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn_e " >
+                                <span class="">E</span>
+                            </button>
+
+                            <button type="button" class="btn btn-default btn_ou" >
+                                <span class="">OU</span>
+                            </button>
+                            <button type="button" class="btn btn-default btn_prtE " >
+                                <span>(</span>
+                            </button>
+                            <button type="button" class="btn btn-default btn_prtD " >
+                                <span class="">)</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 pull-right">
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn_limpa_condicao">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                            <button type="button" class="btn btn-default btn_add_condicao">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row div_esconder">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="form-group">
+                            <textarea class="form-control edt_condicao " rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 hidden" sugestoes-grupo>
+                            <div class="alert alert-info">
+                                <label class='lead'>Sugestões de Campos</label>
+                                <div class="container_sugestoes">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 div_esconder">
+                        <div class="form-group">
+                            <label for="modal_chk_modo_especialista">Modo Especialista</label>
+                            <br>
+                            <input type="checkbox" class="chk_modo_especialista form-control" id="modal_chk_modo_especialista">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <label for="modal_chk_executar_filtro">Executar sempre esse filtro</label>
+                            <br>
+                            <input type="checkbox" class="chk_executar_filtro form-control" id="modal_chk_executar_filtro">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+                <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

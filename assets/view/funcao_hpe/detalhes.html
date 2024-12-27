@@ -1,0 +1,95 @@
+<!-- MODAL DETALHE -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_area_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_area_detalhes_label">Função</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label for="modal_area_edt_nome">Descrição da função</label>
+                    <input type="text" class="edt_nome form-control" id="modal_area_edt_nome" maxlength="200">
+                </div>
+                <div class="form-group">
+                    <label for="modal_area_edt_nome">Missão</label>
+                    <!-- <input type="text"  id="modal_area_edt_nome" maxlength="500"> -->
+                    <textarea class="edt_missao form-control" id="modal_textarea_nome" cols="30" rows="4" maxlength="500"></textarea>
+                </div>
+                <hr>
+                <div class="form-group">
+                    <label for="modal_area_edt_nome">Responsabilidades</label>
+                    <div class="form-group">
+                        <table class="tab_listagem_responsabilidades table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th style="width: 65%;">Descrição</th>
+                                    <th>Efetividade desejada</th>
+                                    <th>
+                                        <div class="pull-right">
+                                            <button type="button" class="btn_incluir_responsabilidade btn btn-default">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr template-row style="display: none;">
+                                    <td template-field="descricao"><input type="text" class="form-control"></td>
+                                    <td template-field="desejado"><input type="number" class="form-control"></td>
+                                    <td>
+                                        <div class="pull-right">
+                                            <button type="button" class="btn_deletar_responsabilidade btn btn-default">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>                
+                            </tbody>
+                        </table>     
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group">
+                    <label for="modal_area_edt_nome">Indicadores</label>
+                    <div class="form-group">
+                        <table class="tab_indicadores table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th style="width: 75%;">Descrição</th>
+                                    <th>
+                                        <div class="pull-right">
+                                            <button type="button" class="btn_incluir_indicador btn btn-default">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr template-row style="display: none;">
+                                    <td template-field="nome"><input type="text" class="form-control"></td>
+                                    <td>
+                                        <div class="pull-right">
+                                            <button type="button" class="btn_deletar_indicador btn btn-default">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>                
+                            </tbody>
+                        </table>     
+                    </div>
+                </div>
+                
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+                <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>

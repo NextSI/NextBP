@@ -1,0 +1,70 @@
+<div class="panel panel-default">
+    <div class="panel-heading"  style="margin-bottom: 0px; padding-bottom: 0px;">
+        <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+            <div class="form-inline">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="div_dt_ini"></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="div_dt_fim"></div>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-primary btn_search">
+                            <span class="glyphicon glyphicon-search"></span> Gerar relatório
+                        </button>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn_exportacao_excel"><span class="glyphicon glyphicon-file"></span></button>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a class="btn_exportacao" href="#">
+                                        PNG
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label>Processos:</label>
+                        <select class="form-control cbo_processos selectpicker" multiple data-actions-box="true" multiple data-selected-text-format="count > 1" title="Selecione o(s) filtro(s)" data-deselect-all-text="Nenhum" data-select-all-text="Todos">
+                        </select>
+                         
+                    </div>
+                </div>
+                <br>-->
+            </div>
+        </nav>
+    </div>
+</div>
+    
+<div class="hidden div_tabelas_relatorio">
+    <div class="row divTabela">
+        <div class="col-md-12 default-col-md-12">
+            <div class="">
+                <label class="tituloTabela"></label>
+                <table class="table table-striped tbl_dados">
+                    <thead>
+                        <tr>
+                            <th width="50% ">Executor</th>
+                            <th width="50% ">Quantidade</th>
+                            <th width="50% ">&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-12 default-col-md-12">
+            <div class="div_grafico">
+            </div>
+        </div>
+    </div>
+</div>

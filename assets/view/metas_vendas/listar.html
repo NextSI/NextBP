@@ -1,0 +1,127 @@
+<!-- LISTAGEM -->
+<div>
+
+    <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+        <button type="button" class="btn_novo btn btn-primary">
+            <i class="fa fa-plus-square" aria-hidden="true"></i> Nova Meta
+        </button>
+        <button type="button" class="btn_listar btn btn-default">
+            <i class="fa fa-sync" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="btn_limpar_filtros btn btn-default">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </button>
+    </nav>
+
+    <div style="padding-bottom: 10px;">
+
+        <table class="tab_listagem table table-striped table-hover table-bordered table-responsive tabela_padrao_bp">
+            <thead>
+                <tr class="filtro_container">
+                    <th class="filtro_descricao">
+                        <input type="text" class="form-control ipt_filtro_descricao" placeholder="Descrição" title="Filtrar por Descrição" data-toggle="tooltip" style="font-size: 9.5px;">
+                    </th>
+                    <th class="data_ini" width="90px">
+                        <div style="position:relative;top:0;left:0;">
+                            
+                            <input type="date" min="1900-01-01" id="ipt_filtro_data_ini" class="ipt_filtro_data_ini form-control">
+
+                        </div>
+                    </th>
+                    <th class="data_fim" width="90px">
+                        <div style="position:relative;top:0;left:0;">
+                            
+                            <input type="date" min="1900-01-01" id="ipt_filtro_data_fim" class="ipt_filtro_data_fim form-control">
+
+                        </div>
+                    </th>
+                    <th class="valor" >
+                        <input type="text" class="form-control ipt_filtro_valor" placeholder="0,00" title="Filtrar por valor" data-toggle="tooltip" style="font-size: 9.5px;">
+                    </th>
+                    <th class="tipo">
+                        <select class="form-control cbo_filtro_tipo" data-live-search="true" multiple data-selected-text-format="count > 1" title="Filtrar por tipo" data-toggle="tooltip" data-actions-box="true" data-deselect-all-text="Nenhum" data-select-all-text="Todos">
+                            <option value="'F'">Funil de vendas</option>
+                            <option value="'R'">Representante</option>
+                        </select>
+                    </th>
+                    <th>&nbsp;</th>
+                </tr>
+                <tr>
+                    <th>Descrição</th>
+                    <th style="width: 80px;">Início</th>
+                    <th style="width: 80px;">Fim</th>
+                    <th style="width: 100px;">Valor</th>
+                    <th style="width: 100px;">Tipo</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- itens -->
+                <tr template-row style="display: none;">   
+
+                    <td class="visible-xs">
+                        <div>
+                            <h4 template-field="descricao">{nome}</h4>
+                            <div class="text-info">
+                                <div template-field="valor" class="text-info"></div>
+                            </div>
+                            <div class="">
+                                <span class="label" template-field="tipo">{tipo}</span>
+                            </div>                            
+                        </div>                        
+                    </td>
+
+                    <td template-field="descricao" class="hidden-xs">{nome}</td>
+                    <td template-field="inicio" class="hidden-xs">{inicio}</td>
+                    <td template-field="fim" class="hidden-xs">{fim}</td>
+                    <td template-field="valor" class="hidden-xs">{valor}</td>
+                    <td class="hidden-xs">
+                        <div class="">
+                            <span class="label" template-field="tipo">{tipo}</span>
+                        </div>
+                    </td>                    
+                    <td class="botoes_acoes" style="width: 50px">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-xs btn_editar hidden-xs">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </button>
+                            <button type="button" class="btn btn-default btn-sm btn_editar visible-xs">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </button>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle btn-xs hidden-xs" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </button>
+                                <button type="button" class="btn btn-default dropdown-toggle btn-sm visible-xs" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a class="btn_visualizar" href="javascript:;">
+                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                        Visualizar
+                                    </a></li>
+                                    <li><a class="btn_excluir" href="javascript:;">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                        Excluir
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="position: relative; bottom: 20px;">
+            <div style="padding: 10px; padding-bottom: 0px; padding-top: 0; background-color: white;" class="text-center div_carregar_mais hidden">
+                <span class="btn btn-link btn_carregar_mais">
+                    <span class="txt_carregar_mais text-primary"></span>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- /LISTAGEM -->

@@ -1,0 +1,110 @@
+<ol class="breadcrumb visible-xs">
+  <li class="active">Dashboard Chamados</li>
+</ol>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading"  style="margin-bottom: 0px; padding-bottom: 0px;">
+
+        <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+            <div class="form-inline">
+                <div class="navbar-left">
+
+                    <input type="date" min="1900-01-01" max="2222-12-31" class="form-control data_inicio">
+                    até
+                    <input type="date" min="1900-01-01" max="2222-12-31" class="form-control data_fim">
+
+                    <button type="button" class="btn btn-primary btn_filtrar">
+
+                        <span class="glyphicon glyphicon-search"></span> Filtrar
+                    </button>
+                    <button type="button" class="btn btn-default btn_limpar_filtros">
+
+                        <span class="glyphicon glyphicon-trash"></span> Limpar Filtros
+                    </button>
+                    
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-4 col-sm-6">
+        <div class="panel panel-primary" style="border: solid 1px white; background:#DDD">
+            <div class="panel-heading">Situação dos chamados</div>
+            
+            <div class="div_grafico_situacao" style="margin-right: 10px;">
+            </div>
+
+            <div class="list-group div_situacao">
+                <a href="#" class="list-group-item hidden template_situacao"></a>  
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6">
+        <div class="panel panel-primary" style="border: solid 1px white; background:#DDD">
+            <div class="panel-heading">Motivo dos chamados</div>
+
+            <div class="div_grafico_motivos" style="margin-right: 10px;">
+
+            </div>
+            
+           <ul class="list-group ul_motivos hidden">
+                <li class="list-group-item">Nenhum chamado em aberto</li>
+           </ul>
+           <div class="list-group div_motivos">
+               <a href="#" class="list-group-item hidden template_motivo"></a>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <div class="col-md-4 col-sm-6">
+        <div class="panel panel-primary">
+
+            <div class="panel-heading" style="padding-top: 0px">
+                <div class="pull-right small">
+                    <select class="form-control cbo_op_chamado" id="cbo_op_chamado" style="margin-top: 3px">
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                    </select>
+                </div>
+                <div style="padding-top: 10px">Previsão de Retorno</div>
+            </div>
+            
+            <ul class="list-group ul_chamados hidden">
+                <li class="list-group-item">Nenhum chamado em aberto</li>   
+            </ul>
+            <div class="list-group div_chamados">
+
+                <a href="#" class="list-group-item hidden template_row">
+                            
+                    <div class="pull-right">
+                        <div class="div_informativo_prazo small"></div>
+                        <div class="text-right"><span id="chamados_atrasados" template-field="usuario_responsavel_nome" class="text-muted small">{usuario_responsavel_nome}</span></div>
+                   </div>
+
+                    <div class="pull-left small">
+                    <div>
+                        <span template-field="chamado_id">{chamado_id}</span>
+                    </div>                     
+                    </div>
+                    <div class="small" style="margin-top: 20px" template-field="assunto">{assunto}</div>
+                    <div class="clearfix"></div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+        
+    </div>
+
+</div>

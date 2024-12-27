@@ -1,0 +1,116 @@
+<!-- MODAL DETALHE -->
+<div class="modal bs-example-modal-xl modal_selecionar" tabindex="-1" role="dialog" aria-labelledby="modal_consulta_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_consulta_detalhes_label">Consulta de Integração</h4>
+                <div class="lbl_titulo_id pull-left text-muted small" style="left: 12px; position: absolute;"></div>
+            </div>
+            <div class="modal-body">
+
+                <div class="panel panel-default painel_detalhes">
+
+                    <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                        <div class="pull-right">
+                            <!-- -->
+                        </div>
+                        <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                            <li class="active lbl_tab_geral">
+                                <a id="modal_consulta_tab" href="#modal_consulta" role="tab" data-toggle="tab">Consulta</a>
+                            </li>
+                            <li class="lbl_tab_resultado hidden">
+                                <a class="lbl_tab_resultado" id="modal_resultado_tab" href="#modal_result" role="tab" data-toggle="tab">Resultado</a>
+                            </li>
+                                                       
+                        </ul>
+                    </div>
+
+                    <div class="panel-body">
+                            <!-- Tab panes -->
+                        <div class="tab-content">
+
+                            <div class="tab-pane  frm_detalhes" id="modal_result">
+
+                                <div class="table-responsive">
+                                    <table class="table_generic table table-striped table-hover">
+                                        <thead>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="text-center div_load">
+                                    <img class="img_ajax_loader" src="assets/img/ajax-loader.gif">
+                                </div>
+                            </div>
+
+                            <div class="tab-pane active  frm_detalhes" id="modal_consulta">
+
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="modal_consulta_edt_nome">Nome</label>
+                                                    <input type="text" class="edt_nome form-control" id="modal_consulta_edt_nome" maxlength="150">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="modal_consulta_cbo_conexao">Conexão da Integração</label>
+                                                    <select  class="cbo_conexao form-control selectpicker" id="modal_consulta_cbo_conexao" >
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 dx_grid_colunas">
+                                            </div>
+
+                                            <div class="col-md-12 div_parametros hidden">
+                                                <div class="dx_listagem_parametros" style="padding-bottom: 35px;"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <textarea class="edt_query form-control" rows="20" style="font-family: Monospace"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="chk_paginacao" >Paginação na consulta</label>
+                                                    <br>
+                                                    <input type="checkbox" id="chk_paginacao" class="form-control chk_paginacao"></input>
+                                                    <br>
+                                                    <span class="small text-muted">Não funciona no MS SQL Server 2008</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_validar btn btn-primary pull-left">Validar</button>
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-default">Salvar</button>
+                <button type="button" class="btn_validar_salvar btn btn-primary">Validar e Salvar</button>
+                <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

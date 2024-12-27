@@ -1,0 +1,135 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Grupo de Ativo</li>
+</ol>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="form-group">
+            <div class="col-md-5">
+                <div class="input-group-btn ">
+                    <button type="button" class="btn_salvar btn btn-primary">
+                        <span class="glyphicon glyphicon-floppy-disk"></span>
+                        <span translate="tela_cadastro.salvar">Salvar</span>
+                    </button>
+                    <button type="button" class="btn_excluir btn btn-danger">
+                        <span class="glyphicon glyphicon-floppy-disk"></span>
+                        <span translate="tela_cadastro.excluir">Excluir</span>
+                    </button>
+                    <button type="button" class="btn_cancelar btn btn-default">
+                        <span class="glyphicon glyphicon-remove"></span>
+                        <span translate="tela_cadastro.cancelar">Cancelar</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="clearfix"><br></div>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="panel panel-default painel_detalhes">
+            <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                <div class="pull-right">
+                    <!-- -->
+                </div>
+                <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                    <li class="active">
+                        <a class="menu_geral" href="#aba_geral" role="tab" data-toggle="tab" translate="grupo_agenda_ativos.aba_geral">Geral</a>
+                    </li>
+                    <li>
+                        <a class="menu_ativos" href="#aba_ativos" role="tab" data-toggle="tab" translate="grupo_agenda_ativos.aba_ativos">Ativos</a>
+                    </li>
+                    <li>
+                        <a class="menu_usuarios" href="#aba_usuarios" role="tab" data-toggle="tab" translate="grupo_agenda_ativos.aba_responsaveis">Responsáveis</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="panel-body">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active aba_geral" >
+                        <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
+                            <div class="form-group">
+                                <label for="edt_nome" translate="grupo_agenda_ativos.nome">Nome</label>
+                                <input id="edt_nome" type="text" class="form-control edt_nome" translate-placeholder="grupo_agenda_ativos.digite_nome" maxlength="100">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane aba_ativos" >
+                        <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
+                            <div class="form-group">
+                                <select name="" id="" class="cbo_agenda_ativo" translate-placeholder="grupo_agenda_ativos.selecione_ativo"></select>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+                            <table class="tab_ativos table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th style="width:80px;" translate="agenda_ativos.codigo">Código</th>
+                                        <th translate="grupo_agenda_ativos.nome">Nome</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr template-row style="display: none">
+                                        <td>
+                                            <span template-field="codigo">{codigo}</span>
+                                        </td>
+                                        <td>
+                                            <span template-field="nome">{nome}</span>
+                                        </td>
+                                        <td class="text-right" style="margin-right: 0px; padding-right: 0px">
+                                            <a class="btn_ativo_remover btn btn-default">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane aba_usuarios" >
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+                                <div class="div_componente_usuario form-group"></div>
+                            </div>
+
+                            <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+                                <table class="tab_responsaveis table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th translate="grupo_agenda_ativos.responsavel_grupo_ativo">Responsável</th>
+                                            <th>Manutenção</th>
+                                            <th>&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr template-row style="display: none">
+                                            <td>
+                                                <span class="label lb_tipo" template-field="tipo" style="margin-right: 5px;"></span>
+                                                <span template-field="nome">{nome}</span>
+                                            </td>
+                                            <td>
+                                                <select template-field="manutencao" class="form-control">
+                                                    <option value="N">Não</option>
+                                                    <option value="P">Somente dos próprios eventos</option>
+                                                    <option value="S">De todos os eventos deste grupo de ativos</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-right" style="margin-right: 0px; padding-right: 0px">
+                                                <a class="btn_usuario_remover btn btn-default">
+                                                    <span class="glyphicon glyphicon-trash"></span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

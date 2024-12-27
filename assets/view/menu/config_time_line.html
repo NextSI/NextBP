@@ -1,0 +1,125 @@
+<!-- MODAL DETALHE -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_config_timeline_label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_config_timeline_label">Configuração da TimeLine</h4>
+            </div>
+            <div class="modal-body">
+    
+                <h4 style="padding-left: 15px; border-bottom: inset;">Minhas Configurações</h4>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group" style="margin-bottom: 0px !important">
+                                    <label for="edt_qtd_dias">Quantidade de dias</label>
+                                    <input id="edt_qtd_dias" class="form-control edt_qtd_dias">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group" style="margin-bottom: 0px !important">
+                                    <label for="check_sem_evento">Exibir dias sem eventos</label>
+                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                        <input id="check_sem_evento" class="check_sem_evento" type="checkbox" value="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="txt_config_gerais" style="padding-left: 15px; border-bottom: inset;">Configurações Gerais</h4>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="row">
+                            <div class="col-xs-12 div_admin_config">
+                                <div class="form-group" style="margin-bottom: 0px !important">
+                                    <label for="chk_chamados">Exibir chamados</label>
+                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                        <input id="chk_chamados" class="chk_chamados" type="checkbox" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 div_admin_config">
+                                <div class="form-group" style="margin-bottom: 0px !important">
+                                    <label for="chk_agenda">Exibir agenda</label>
+                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                        <input id="chk_agenda" class="chk_agenda" type="checkbox" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 div_admin_config">
+                                <div class="form-group" style="margin-bottom: 0px !important">
+                                    <label for="chk_documentos">Exibir documentos pendentes de aprovação</label>
+                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                        <input id="chk_documentos" class="chk_documentos" type="checkbox" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 div_admin_config">
+                                <div class="form-group" style="margin-bottom: 0px !important">
+                                    <label for="chk_documentos">Exibir atividades de PDCA</label>
+                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                        <input id="chk_atividades_pdca" class="chk_atividades_pdca" type="checkbox" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 div_admin_config">
+                                <div class="form-group" style="margin-bottom: 0px !important">
+                                    <label for="chk_documentos">Exibir cartões de tarefas</label>
+                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                        <input id="chk_tarefa_quadro_lista_cartao" class="chk_tarefa_quadro_lista_cartao" type="checkbox" value="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="row">
+                            <div class="col-xs-12 div_admin_config">
+                                <div class="form-group" style="margin-bottom: 0px !important;">
+                                    <label for="chk_atividades_processos">Exibir atividades de processos</label>
+                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                        <input id="chk_atividades_processos" class="chk_atividades_processos" type="checkbox" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 div_admin_config">
+                                <div class="form-group" style="margin-bottom: 0px !important">
+                                    <label for="chk_atividade_projeto">Exibir atividades de projetos </label>
+                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                        <input id="chk_atividade_projeto" class="chk_atividade_projeto" type="checkbox" value="">
+                                        <label for="prazo"><strong translate="timeline.prazo">Prazo</strong></label>
+                                    </div>
+                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                        <input id="chk_previsao_inicio_atividade_projeto" class="chk_previsao_inicio_atividade_projeto" type="checkbox" value="">
+                                        <label for="previsao_inicio"><strong translate="timeline.previsao_inicio">Previsão de Início</strong></label>
+                                    </div>
+                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                        <input id="chk_inicio_real_atividade_projeto" class="chk_inicio_real_atividade_projeto" type="checkbox" value="">
+                                        <label for="inicio_real"><strong translate="timeline.inicio_real">Início Real</strong></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                    
+                    
+                
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

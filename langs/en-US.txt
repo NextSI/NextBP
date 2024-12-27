@@ -1,0 +1,825 @@
+{
+    "lang": {
+
+        "nome": "en-US",
+        "data": "2015-07-28",
+
+        "login": {
+            "entrar": "Enter",
+            "esqueci_senha": "I forgot my password",
+            "login": "Log in",
+            "producao": "Production",
+            "teste": "Test",
+            "selecione": "- Select -",
+            "usuario": "User",
+            "senha": "Password",
+            "memorizar_senha": "Remember Password",
+            "entrar_automaticamente": "Sign in automatically",
+            "esquecer_conta": "Forget account",
+            "esquecer_conta_pergunta": "Are you sure you want to forget this account?",
+            "sim_esquecer_agora": "Yes, forget now",
+            "entrar_com_outro_usuario": "Login with another user",
+            "sua_sessao_expirou": "Your session has expired"
+        },
+
+        "gestao_agenda": {
+            "filtro": "Filter",
+            "filtros": "Filters",
+            "inicio_calendario": "Calendar Start",
+            "fim_calendario": "Calendar End",
+            "evento": "Agenda Event",
+            "novo_evento": "New Event",
+            "editar_evento": "Edit Event",
+            "editar_oportunidade": "Edit Opportunity",
+            "geral": "General",
+            "dia_evento": "Day",
+            "hora_inicio_evento": "Start Time",
+            "hora_fim_evento": "End Time",
+            "tipo_evento": "Event Type",
+            "local_evento": "Event Location",
+            "cor_evento": "Color",
+            "descricao_evento": "Description",
+            "evento_realizado": "Done?",
+            "recorrencia_evento": "Recurrence",
+            "nenhuma_recorrencia": "No Recurrence",
+            "recorrencia_diaria": "Daily Recurrence",
+            "recorrencia_semanal": "Weekly Recurrence",
+            "recorrencia_mensal": "Monthly Recurrence",
+            "recorrencia_anual": "Annual Recurrence",
+            "intervalo_recorrencia": "Recurrence Interval",
+            "comeca_em": "Start",
+            "inicio": "Start",
+            "fim": "End",
+            "termina_apos": "Ends after",
+            "termina_em": "Ends day",
+            "tantas_ocorrencias": "ocurrence(s)",
+            "horas": "Hours",
+            "convidados_evento": "Guests",
+            "responsaveis_evento": "Responsible",
+            "nome_convidado": "Name",
+            "email_convidado": "Email",
+            "enviar_agenda_cliente": "Send Agenda to Client",
+            "mensagem_corpo_email": "Email Body Message",
+            "caracteres": "characters",
+            "limite_caracteres": "limit of",
+            "observacao_usuarios_envolvidos": "The users involved in the Agenda will also receive a copy of the email",
+            "pre_visual_email": "Email preview",
+            "msg_padrao_envio_rel_agenda": "Default message for sending Agenda report to Client by email",
+            "filtro_selecionado_incorreto": "The selected filter is incorrect",
+            "historico_acao_inclusao": "Add",
+            "historico_acao_alteracao": "Edit",
+            "historico_acao_exclusao": "Delete",
+            "historico_acao_visualizacao": "View",
+            "recorrencia_a_cada": "Each",
+            "recorrencia_de_cada": "of each",
+            "recorrencia_diaria_dias": "day(s)",
+            "recorrencia_diaria_todos_dia_semana": "Every day of the week",
+            "recorrencia_semanal_semanas": "week(s) on",
+            "recorrencia_mensal_meses": "month(s)",
+            "recorrencia_mensal_no": "in the",
+            "recorrencia_mensal_primeiro": "First",
+            "recorrencia_mensal_segundo": "Second",
+            "recorrencia_mensal_terceiro": "Third",
+            "recorrencia_mensal_quarto": "Fourth",
+            "recorrencia_mensal_ultimo": "Last",
+            "recorrencia_anual_ano": "year(s)",
+            "recorrencia_anual_em": "In",
+            "recorrencia_anual_dia_pt_br": "Day",
+            "recorrencia_anual_de_ano": "of",
+            "digite_nome_pesquisar": "Type the name to search",
+            "emails_adicionais_email": "email1@example.com; email2@example.com; email3@example.com",
+            "digite_mensagem_corpo_email": "Type the message",
+            "msg_padrao_prezado_cliente": "Dear costumer",
+            "msg_padrao_programacao_agenda": "Here is the agenda's schedule",
+            "msg_padrao_atenciosamente": "Best regards",
+            "preview_email_dia": "Day",
+            "preview_email_inicio": "Start",
+            "preview_email_fim": "End",
+            "preview_email_responsavel": "Responsible",
+            "preview_email_projeto": "Project",
+            "preview_email_local": "Local",
+            "preview_email_descricao": "Description",
+            "preview_email_programacao_agenda_de": "Agenda schedule from",
+            "preview_email_programacao_agenda_ate": "to",
+            "pre_visualizar_eventos_recorrentes": "Preview recurring events",
+            "eventos_recorrentes_serem_criados": "Recurring events to be created",
+            "recorrencia_dia": "Day",
+            "recorrencia_hora_inicio": "Start Time",
+            "recorrencia_hora_fim": "End Time",
+            "recorrencia_gerar": "Generate?",
+            "recorrencia_registros": " records",
+            "recorrencia_por_favor_aguarde": "Please wait...",
+            "recorrencia_registros_sendo_gerados": "Recurring Events are being recorded",
+            "recorrencia_pode_levar_minutos": "Please wait, this may take a few minutes",
+            "recorrencia_excede_calendario": "The requested period exceeds the calendar of hours",
+            "copie_evento": "Copy an event so you can paste it",
+            "nenhum_evento_selecionado": "No selected event",
+            "editar_evento": "Edit",
+            "agenda_recorrente": "Recurring Agenda",
+            "alterar_apenas_este_evento": "Change only this Event",
+            "reprogramar_serie_evento_adiante": "Reprogram the whole ahead recurrence series of this Event",
+            "reprogramar_serie_inicio": "Reprogram the recurrence since the beginning",
+            "aba_historico": "History",
+            "aba_historico_acao": "Action",
+            "aba_historico_detalhes": "Details",
+            "aba_historico_usuario": "User",
+            "aba_historico_dia_acao": "Day",
+            "evento_particular": "Personal Event",
+            "dia_inteiro": "All day",
+            "notificar_antes" : "Notify Before",
+            "notificar_antes_tooltip" : "Please tell me how long before you want to be notified"
+
+        },
+
+        "local_agenda": {
+            "local_agenda": "Agenda Location",
+            "novo_local": "New",
+            "nome_local": "Name",
+            "editar_local_agenda": "Edit",
+            "visualizar_local": "View",
+            "excluir_local": "Delete",
+            "digite_local_agenda_nome": "Type the Agenda Location name"
+        },
+
+        "tipo_agenda": {
+            "tipo_agenda": "Agenda Type",
+            "novo_tipo_agenda": "New",
+            "nome_tipo_agenda": "Name",
+            "cor_tipo_agenda": "Color",
+            "editar_tipo_agenda": "Edit",
+            "visualizar_tipo_agenda": "View",
+            "excluir_tipo_agenda": "Delete",
+            "particular": "Personal",
+            "exibir_endereco_cliente": "Show Client's address"
+        },
+
+        "mensagem_padrao_email_agenda": {
+            "mensagem_padrao_email_agenda": "Default Email Message",
+            "mensagem_envio_relatorio": "Default message for sending schedule report for the customer",
+            "emails_resposta": "Response Emails"
+        },
+
+        "historico_agenda": {
+            "historico_agenda": "Agenda's History",
+            "historico_agenda_filtros": "Filters",
+            "historico_agenda_periodo": "Period Type",
+            "historico_agenda_periodo_dia_agenda": "Agenda day",
+            "historico_agenda_periodo_data_acao": "Action Day",
+            "historico_agenda_inicio": "Start",
+            "historico_agenda_fim": "End",
+            "historico_agenda_agenda_usuario": "Agenda from (User)",
+            "historico_agenda_tipo_acao": "Action Type",
+            "historico_agenda_inclusao": "Add",
+            "historico_agenda_alteracao": "Edit",
+            "historico_agenda_exclusao": "Delete",
+            "historico_agenda_visualizacao": "View",
+            "historico_agenda_acao_usuario": "Action from (User)",
+            "historico_agenda_pesquisar": "Search",
+            "historico_agenda_dia": "Day",
+            "historico_agenda_detalhes": "Details",
+            "historico_agenda_registros": " record(s)",
+            "historico_agenda_visualizado_por": "Event viewed by ",
+            "historico_agenda_editado_por": "Event changed by ",
+            "historico_agenda_adicionado_por": "Event added by ",
+            "historico_agenda_excluido_por": "Event deleted by "
+        },
+
+        "agenda_ativos": {
+            "agenda_ativos": "Assets Agenda",
+            "agenda_ativos_detalhes": "Assets Agenda - Details",
+            "exibir_bloqueados": "Show blocked Assets",
+            "aba_geral": "General",
+            "codigo": "Code",
+            "nome": "Name",
+            "local_agenda": "Agenda Location",
+            "tipo_agenda": "Agenda Type",
+            "acoes": "Actions",
+            "visualizar_ativo": "View",
+            "editar_ativo": "Edit",
+            "excluir_ativo": "Delete",
+            "registros_ativos": " Record(s)",
+            "filtrar_codigo": "Filter by code",
+            "filtrar_nome": "Filter by name",
+            "filtrar_local_agenda": "Filter by Agenda Location",
+            "filtrar_tipo_agenda": "Filter by Agenda Type",
+            "bloqueado": "Blocked?",
+            "digite_codigo": "Type the code",
+            "digite_nome": "Type the name"
+        },
+
+        "grupo_agenda_ativos": {
+            "grupo_agenda_ativos": "Assets Agenda Groups",
+            "nome": "Name",
+            "filtrar_nome": "Filter by name",
+            "acoes": "Actions",
+            "visualizar_grupos_ativos": "View",
+            "editar_grupos_ativos": "Edit",
+            "excluir_grupos_ativos": "Delete",
+            "registros_grupos_ativos": " Record(s)",
+            "aba_geral": "General",
+            "aba_ativos": "Assets",
+            "aba_responsaveis": "Responsibles",
+            "digite_nome": "Type the name",
+            "selecione_ativo": "Select an Asset",
+            "responsavel_grupo_ativo": "Responsible",
+            "selecione_responsavel": "Select the Responsible",
+            "nome_responsavel": "Name"
+        },
+
+        "observacao_interna_chamado": {
+            "observacao_interna": "Internal Observation",
+            "nova_observacao_interna": "New Internal Observation",
+            "sem_permissao": "You have no permission to type an Internal Observation"
+        },
+
+        "anexos": {
+            "anexo": "Attachment",
+            "incluir_mais_um_anexo": "Include one more attachment",
+            "anexo_selecionado": "Attachment selected",
+            "nenhum_anexo_selecionado": "No attachment selected",
+            "anexar_email": "Attach in the Email"
+        },
+
+        "calendario_trabalho": {
+            "calendario_trabalho": "Work Schedule"
+        },
+
+        "cliente": {
+            "cliente": "Client"
+        },
+
+        "fornecedor": {
+            "fornecedor": "Vendor"
+        },
+
+        "organizacao": {
+            "organizacao": "Organization"
+        },
+
+        "empresa": {
+            "empresa": "Company"
+        },
+
+        "projeto": {
+            "projeto": "Project"
+        },
+
+        "atividade_projeto": {
+            "id": "ID",
+            "atividade_projeto": "Project Activity",
+            "predecessora": "Predecessor",
+            "nome_atividade": "Activity Name",
+            "codigo_atividade": "Code",
+            "previsao_inicio": "Start Prediction",
+            "inicio": "Start",
+            "prazo": "Term",
+            "tipo_predecessora": "Predecessor Type",
+            "selecione_predecessora": "Select Predecessor Activities"
+        },
+
+        "grupo_usuarios": {
+            "grupo_usuarios": "Users Group"
+        },
+
+        "usuarios": {
+            "usuarios": "Users",
+            "supervisionados": "Supervised"
+        },
+
+        "opcoes_usuario": {
+            "opcoes_usuario": "User Settings",
+            "alterar_senha": "Change password",
+            "senha_atual": "Current password",
+            "nova_senha": "New password",
+            "repetir_nova_senha": "Rewrite new password"
+        },
+
+        "email": {
+            "acesso_interno": "Internal Access",
+            "acesso_externo": "External Access",
+            "emails": "Emails"
+        },
+
+        "email_novo_usuario": {
+            "bem_vindo": "Welcome to",
+            "senha": "Password",
+            "instrucao_link_externo": "If you wish to change your password, go to User Settings and press the Change Password button",
+            "instrucao_link_interno_senha": "If you wish to change your password after you access",
+            "instrucao_link_interno_botao": "go to User Settings and press the Change Password button",
+            "atenciosamente": "Best regards"
+        },
+        
+        "home": {
+            "administracao": "Administration",
+            "home": "Home",                        
+            "modulos": "Modules",
+            "gestao_chamados": "Called",
+            "gestao_documentos": "Document",
+            "gestao_processos": "Processes",
+            "gestao_projetos": "Project",
+            "cockpit": "Cockpit",
+            "cockpit_atividades_projetos_total": "Project tasks waiting to run",
+            "cockpit_favoritos": "Favorites",
+            "timeline": "Timeline",
+            "mural": "News",
+            "dashboard": "Dashboard",
+            "agenda": "Agenda",
+            "crm_familia_item": "Item Family",
+            "crm_grupo_item": "Item Group",
+            "crm_tipo_item": "Item Type",
+            "crm_item": "Item",
+            "enviar_nova_mensagem": "Send new message",
+            "versao": "Version",
+            "configuracoes": "Settings",
+            "dados_usuario": "User Settings"
+        },
+
+        "generico":{
+            "limpar_filtro": "Clear Filters",
+            "codigo": "Code",
+            "descricao": "Description",
+            "contador_registros": "records",
+            "acao": "Action",
+            "sugerir_codigo_automatico":"Automatically Suggest Codes",
+            "visualizar": "Visualize",
+            "editar": "Edit",
+            "excluir": "Delete",
+            "exibir_bloqueados": "Show Blocked",
+            "salvar": "Save",
+            "cancelar": "Cancel",
+            "sim": "Yes",
+            "nao": "No",
+            "configuracoes":"Settings",
+            "geral": "General",
+            "bloqueado": "Blocked ?",
+            "nome": "Name",
+            "novo": "New",
+            "filtrar": "Filter",
+            "pesquisar":"Pesquisar",
+            "selecionar": "Select",
+            "voltar": "Back",
+            "recuperar_registro": "Retrieve Record",
+            "grupo_usuario": "User Group",
+            "observacoes": "Observations"
+        },
+        "item":{
+            "aba_listar": "Item",
+            "aba_detalhes": "Item Detail",
+            "aba_impostos":"Taxes",
+            "alterar_imagem": "Change Image",
+            "unidade": "Unit",
+            "segunda_unidade": "2ª Unit",
+            "tipo_conversao": "Conversion Type",
+            "divisor": "Divider",
+            "multiplicador":"Multiplier",
+            "fator": "Factor",
+            "preco": "Price",
+            "preco_minimo": "Minimum price",
+            "comissao": "Commission",
+            "custo": "Cost",
+            "porcentagem": "Percentage",
+            "filtrar_por_descricao": "Filter by Description",
+            "alterar_foto": "Change Photo",
+            "alerta_salvo": " saved successfully",
+            "alerta_exclusao": " deleted successfully",
+            "alerta_imposto": "It is not possible to double tax the same tax."
+        },
+        "tipo_item":{
+            "codigo":"Code",
+            "descricao": "Description",
+            "bloqueado": "Blocked ?",
+            "geral": "General",
+            "modulo": "Modules",
+            "placeholder_codigo":"Type the code",
+            "placeholder_descricao":"Type the description",
+            "filtrar_por_codigo": "Filter by Code",
+            "filtrar_por_descricao": "Filter by Description",
+            "aba_listar": "Item Type",
+            "aba_detalhes":"Item Type - Edit",
+            "selecionar_tipo_item": "Select Item Type",
+            "mobile_header_descricao": "Description:",
+            "alerta": "Type ",
+            "alerta_salvo": " item saved successfully" ,
+            "alerta_exclusao": " item deleted successfully"
+            
+        },
+        "grupo_item":{
+            "codigo":"Code",
+            "descricao":"Description",
+            "placeholder_codigo":"Type the code",
+            "placeholder_descricao": "Type the description",
+            "sintetico_pai": "Synthetic Item Group (Parent)",
+            "bloqueado": "Blocked?",
+            "sintetico": "Synthetic",
+            "analitico": "Analysis",
+            "filtrar_por_codigo": "Filter by Code",
+            "filtrar_por_descricao": "Filter by Description",
+            "aba_listar": "Item Group",
+            "aba_detalhes":"Item Group - Edit",
+            "selecionar_tipo_grupo": "Select Item Group",
+            "mobile_header_descricao":"Description: ",
+            "alerta": "Group ",
+            "alerta_salvo": " item saved successfully" ,
+            "alerta_exclusao": " item deleted successfully"
+        },
+        "familia_itens":{
+            "aba_listar": "Item Family",
+            "aba_detalhes":"Item Family - Edit",
+            "sintetico": "Synthetic",
+            "analitico": "Analysis",
+            "codigo":"Code",
+            "descricao":"Description",
+            "placeholder_codigo":"Type the code",
+            "placeholder_descricao": "Type the Description",
+            "filtrar_por_codigo": "Filter by Code",
+            "filtrar_por_descricao": "Filter by Description",
+            "sintetico_pai": "Synthetic Item Family (Parent)",
+            "bloqueado": "Blocked?",
+            "selecionar_familia_item": "Select Item Family",
+            "mobile_header_descricao": "Description: ",
+            "alerta": "Family ",
+            "alerta_salvo": " item saved successfully" ,
+            "alerta_exclusao": " item deleted successfully",
+            "observacoes": "Observations"
+        },
+
+        "solicitacao":{
+            "nova_solicitacao": "New Request",
+            "retornada": "Activity returned",
+            "retornada_cancelar_posteriores": "Activity returned and later canceled",
+            "retornar_atividade_cancelar_posteriores": "Return to this activity and cancel subsequent ones",
+            "retornar_atividade": "Return to this activity",
+            "cancelar_atividade": "Cancel this activity",
+            "cancelar_atividades_selecionadas": "Cancel selected activities",
+            "atividades_canceladas": "Selected activities have been canceled",
+            "restaurar_atividade": "Restore this activity",
+            "restaurar_atividades_selecionadas": "Restore selected activities",
+            "atividades_restauradas": "Selected activities have been restored"
+        },
+        
+        "solicitacao_historico": {
+            "atividade_retornada": "Activity returned",
+            "atividade_cancelada": "Activity canceled",
+            "atividade_restaurada": "Restored activity"
+        },
+        
+        "solicitacao_atividade_mail": {
+            "nova_solicitacao_atividade": "New Activity Request",
+            "retorno_atividade": "Activity Return",
+            "motivo_retorno": "Return motive: ",
+            "conclusao_processo": "Process conclusion",
+            "confirmacao_conclusao_atividade": "Activity conclusion confirmation",
+            "processo": "Process",
+            "atividade": "Activity",
+            "solicitante": "Requester",
+            "responsavel": "Responsible",
+            "prazo": "Deadline",
+            "horas_uteis": "Working Hours",         
+            "login": "Login",
+            "senha": "Password",                                                
+            "atenciosamente": "Best regards",
+            "acesso_interno": "Internal access to the portal to continue the request",
+            "acesso_externo": "External access to the portal to continue the request",
+            "atividade_processo": "Process Activity",
+            "observacao_atividade": "Observations of the activity",
+            "observacao_atividade_anterior": "Observations of the previous activity",
+            "instrucoes_atividade": "Instructions for the activity"
+        },
+
+        "solicitar_senha": {
+            "esqueceu_sua_senha": "Forgot your password?",
+            "usuario": "Username",
+            "email": "E-mail",
+            "cancelar": "Cancel",
+            "solicitar_senha": "Require Password",
+            "receba_sua_senha": "Inform your user and e-mail, you will receive your password in the registered e-mail.",
+            "usuario_invalido": "Invalid username and/or email.",
+            "tempo_senha": "The password was requested for less than 10 minutes, wait for request it again.",
+            "senha": "Password",
+            "atenciosamente": "Best regards",
+            "solicitacao_de_senha": "Password request",
+            "conforme_solicitado": "As requested, below your password ",
+            "ou": "or"
+        },
+
+        "msg_padrao": {
+            "validacao": "Validation"
+        },
+
+        "dia_semana": {
+            "domingo": "Sunday",
+            "segunda": "Monday",
+            "terca": "Tuesday",
+            "quarta": "Wednesday",
+            "quinta": "Thursday",
+            "sexta": "Friday",
+            "sabado": "Saturday",
+            "hoje": "Today",
+            "amanha": "Tomorrow",
+            "um_dia_atras": "A day ago",
+            "dias": "Days",
+            "dias_atras": "Days Ago",
+            "falta": "Lack",
+            "semanas": "Weeks",
+            "uma_semana": "One week",
+            "duas_semanas": "Two weeks",
+            "tres_semanas": "Three weeks",
+            "quatro_semanas": "Four weeks"
+        },
+
+        "meses": {
+            "janeiro": "January",
+            "fevereiro": "February",
+            "marco": "March",
+            "abril": "April",
+            "maio": "May",
+            "junho": "June",
+            "julho": "July",
+            "agosto": "August",
+            "setembro": "September",
+            "outubro": "October",
+            "novembro": "November",
+            "dezembro": "December"
+        },
+
+        "timeline": {
+            "nenhuma_atividade": "No Activity",
+            "atrasados": "Delayed",
+            "chamado": "Called",
+            "processo": "Process",
+            "documento": "Document",
+            "projeto": "Project",
+            "previsao_inicio": "Start Prediction",
+            "prazo": "Deadline",
+            "inicio_real" : "Actual Start",
+            "codigo_documento": "Document Code"
+        },
+
+        "selectpicker": {
+            "opcoes": "Options",
+            "todos": "All",
+            "selecionar": " - Select - ",
+            "nenhum": "None selected",
+            "usuarios": "Users",
+            "local_agenda": "Agenda Location",
+            "tipo_agenda": "Agenda Type"
+        },
+
+        "combobox":{
+            "selecione": "Select",
+            "selecione_cliente": "Select the Client",
+            "selecione_fornecedor": "Select the Vendor",
+            "selecione_organizacao": "Select the Organization",
+            "selecione_empresa": "Select the Company",
+            "col_nome": "Name"
+        },
+
+        "modal_cadastro": {
+            "salvar": "Save",
+            "confirmar": "Confirm",
+            "cancelar": "Cancel",
+            "excluir": "Delete",
+            "enviar": "Send",
+            "fechar": "Close"
+        },
+
+        "modal_validacao": {
+            "validacao": "Validation",
+            "sim": "Yes",
+            "nao": "No",
+            "informe_local_evento": "Event must have a Location",
+            "informe_tipo_evento": "Event must have an informed Type",
+            "cliente_nao_existe": "This Client does not exist",
+            "evento_agenda_data_horario": "There is an Event for this date and hour already, would you like to proceed anyway?"
+        },
+
+        "alert_saved": {
+            "agenda_evento": "Event ",
+            "observacao_interna": "Internal Observation ",
+            "mensagem": "Message",
+            "salvo": " successfully saved",
+            "excluido": " successfully deleted",
+            "eventos_recorrentes_criados": "Recurring events registered",
+            "eventos_recorrentes_nao_criados": "Recurring unrecorded events"
+        },
+
+        "tela_cadastro": {
+            "novo": "new",
+            "editar": "Edit",
+            "visualizar": "View",
+            "salvar": "Save",
+            "confirmar": "Confirm",
+            "cancelar": "Cancel",
+            "excluir": "Delete",
+            "enviar": "Send",
+            "fechar": "Close"
+        },
+
+        "ctrl_ccp": {
+            "copiar": "Copy",
+            "recortar": "Cut",
+            "colar": "Paste"
+        },
+
+        "bootstrap_checkbox": {
+            "sim": "YES",
+            "nao": "NO"
+        },
+
+        "caixa_pesquisa_email": {
+            "emails_pesquisar": "Search",
+            "digite_usuario": "Type the user"
+        },
+
+        "cores": {
+            "vermelho_1": "Red 1",
+            "vermelho_2": "Red 2",
+            "vermelho_3": "Red 3",
+            "vermelho_4": "Red 4",
+            "vermelho_5": "Red 5",
+            "vermelho_6": "Red 6",
+            "vermelho_7": "Red 7",
+            "laranja_1": "Orange 1",
+            "laranja_2": "Orange 2",
+            "laranja_3": "Orange 3",
+            "laranja_4": "Orange 4",
+            "laranja_5": "Orange 5",
+            "laranja_6": "Orange 6",
+            "laranja_7": "Orange 7",
+            "amarelo_1": "Yellow 1",
+            "amarelo_2": "Yellow 2",
+            "amarelo_3": "Yellow 3",
+            "amarelo_4": "Yellow 4",
+            "amarelo_5": "Yellow 5",
+            "amarelo_6": "Yellow 6",
+            "amarelo_7": "Yellow 7",
+            "verde_1": "Green 1",
+            "verde_2": "Green 2",
+            "verde_3": "Green 3",
+            "verde_4": "Green 4",
+            "verde_5": "Green 5",
+            "verde_6": "Green 6",
+            "verde_7": "Green 7",
+            "azul_1": "Blue 1",
+            "azul_2": "Blue 2",
+            "azul_3": "Blue 3",
+            "azul_4": "Blue 4",
+            "azul_5": "Blue 5",
+            "azul_6": "Blue 6",
+            "azul_7": "Blue 7",
+            "roxo_1": "Purple 1",
+            "roxo_2": "Purple 2",
+            "roxo_3": "Purple 3",
+            "roxo_4": "Purple 4",
+            "roxo_5": "Purple 5",
+            "roxo_6": "Purple 6",
+            "roxo_7": "Purple 7",
+            "branco": "White",
+            "cinza_1": "Grey 1",
+            "cinza_2": "Grey 2",
+            "cinza_3": "Grey 3",
+            "cinza_4": "Grey 4",
+            "cinza_5": "Grey 5",
+            "preto": "Black"
+        },
+
+        "limpar_filtros": {
+            "limpar_filtros": "Clear filters"
+        },
+
+        "menu_lateral": {
+            "cadastros": "Records"
+        },
+
+        "validacao_agenda_evento": {
+            "informe_titulo": "Enter the Title",
+            "informe_dia": "Enter the Event day",
+            "informe_local": "Enter the Event location",
+            "informe_usuario": "Enter the Event user",
+            "informe_tipo": "Enter the Event type",
+            "gerenciar_agenda_usuario": "You have no permission to manage the Agenda of this user",
+            "informe_responsaveis": "Enter the responsibles for this Event",
+            "evento_nao_existe": "The Agenda Event does not exist",
+            "campos_filtro_invalidos": "The filter has invalid values, please check them",
+            "hora_inicial_final": "Start Time can not be greater than End Time",
+            "evento_pessoal_ativo": "You can not create a Personal Event on an Asset",
+            "permissao_agenda_pessoal": "You have no permission to view this Event - Perosnal Event."
+        },
+
+        "validacao_local_agenda": {
+            "informe_nome": "Enter the Agenda Location name",
+            "local_nao_existe": "The Agenda Location does not exist"
+        },
+
+        "validacao_tipo_agenda": {
+            "informe_nome": "Enter the Agenda Type name",
+            "informe_cor": "Enter the Agenda Type color",
+            "tipo_nao_existe": "The Agenda Type does not exist"
+        },
+
+        "validacao_agenda_ativo": {
+            "informe_nome": "Enter the Asset name",
+            "informe_local": "Enter the Asset location",
+            "informe_motivo": "Enter the Asset type",
+            "ativo_nao_existe": "The Agenda Asset does not exist"
+        },
+
+        "validacao_agenda_grupos_ativos": {
+            "informe_nome": "Enter the Asset Group name",
+            "grupo_ativo_nao_existe": "The Agenda Asset Group does not exist"
+        },
+
+        "oportunidade_agenda": {
+            "atv_realizada": "Activity Done ?",
+            "exibir_agenda": "Show in Agenda ?"
+        },
+
+        "tipo_agenda_oportunidade": {
+            "exibir_agenda": "Show in Agenda ?"
+        },
+
+        "configuracoes_avaliacao": {
+            "titulo_avaliacao": "Evaluation Settings",
+            "avaliacoes_cliente": "Customer Reviews:",
+            "avaliacoes_colaborador": "Contributors Reviews:",
+            "avaliacoes_fornecedor": "Supplier Reviews:",
+            "avaliacoes_organizacao": "Organization Reviews:"
+        },
+
+        "classificacao_projeto": {
+            "utilizar_classificacao": "Use Project Ratings :",
+            "nome": "Name",
+            "editar": "Edit",
+            "visualizar": "View",
+            "excluir": "Delete",
+            "novo": "New"
+        },
+
+        "classificacao_projeto_detalhes": {
+            "titulo": "Project Classification",
+            "nome": "Name",
+            "cancelar": "Cancel",
+            "salvar": "Save",
+            "excluir": "Delete",
+            "placeholder": "Classification description"
+        },
+
+        "btn_carregar_mais": {
+            "carregar_mais_registros": "Load more records",
+            "aguarde": "Please, wait",
+            "todos_carregados": "All records were loaded"
+        },
+
+        "dxDataGrid": {
+            "editing": {
+                "addRow": "[F2] Add Row",
+				"editRow": "Edit Registry",
+			    "confirmDeleteMessage": "Want to remove the selected records?"
+            },
+            "noDataText": "No Records"
+        },
+
+        "usuario_listar": {
+            "colunas": {
+                "id": "Id"
+                "nome": "Nome",
+                "usuario": "Usuário",
+                "email": "E-mail",
+                "bloqueado": "Bloqueado",
+                "admin": "Administrador",
+                "area": "Área",
+                "tipo_entidade": "Tipo entidade",
+                "calendario_trabalho": "Calendário de trabalho",
+                "cpf": "CPF",
+                "telefone1": "Telefone 1",
+                "telefone2": "Telefone 2",
+                "telefone3": "Telefone 3",
+                "telefone4": "Telefone 4",
+                "entidade": "Entidade"
+            },
+            "botoes_cabecalho": {
+                "hint_usuario": "Adicionar usuário",
+                "hint_refresh": "Recarregar listagem de usuários",
+                "hint_configuracoes": "Configurar preferências"
+            },
+            "botoes": {
+                "hint_permissoes": "Editar permissões do usuário",
+                "hint_editar_usuario": "Editar usuário",
+                "hint_visualizar_usuario": "Visualizar usuário",
+                "hint_enviar_senha_email": "Enviar senha do usuário por e-mail",
+                "hint_copiar_permissoes": "Copiar permissões de outro usuário",
+                "hint_excluir_usuario": "Excluir usuário",
+                "hint_editar_usuarios_selecionados": "Editar usuários selecionados",
+                "hint_visualizar_usuarios_selecionados": "Visualizar usuários selecionados",
+                "hint_excluir_usuarios_selecionados": "Excluir usuários selecionados"
+            }
+        },
+
+        "gateway_destino_evento": {
+            "anyof": "Is any of",
+            "javascript": "JavaScript",
+            "construtor_filtros": "Filter Builder",
+            "tipo_automacao": "Automation Type"
+        }
+    }
+}

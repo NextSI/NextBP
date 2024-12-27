@@ -1,0 +1,254 @@
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_documento_configuracoes_label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_documento_configuracoes_label">Configurações</h4>
+            </div>
+            <div class="modal-body">
+                
+                
+                <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                    <li class="li_tab_geral active">
+                        <a class="documento_configuracoes_geral" href="#li_tab_geral" role="tab" data-toggle="tab">
+                            Geral
+                        </a>
+                    </li>
+                    <li class="li_tab_listagem">
+                        <a href="#li_tab_listagem" role="tab" data-toggle="tab">
+                            Listagem
+                        </a>
+                    </li>
+                    <li class="li_tab_versionamento">
+                        <a class="menu_padroes_sugestao_perfil" href="#li_tab_versionamento" role="tab" data-toggle="tab">
+                            Versionamento
+                        </a>
+                    </li>
+                    <li class="li_tab_aprovacao">
+                        <a class="menu_padroes_sugestao_perfil" href="#li_tab_aprovacao" role="tab" data-toggle="tab">
+                            Aprovação
+                        </a>
+                    </li>
+                    <li class="li_tab_conf_email">
+                        <a class="menu_padroes_sugestao_perfil" href="#li_tab_conf_email" role="tab" data-toggle="tab">
+                            E-mail
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="tab-content" style="margin-top: 10px">
+                    <div role="tabpanel" class="tab-pane active" id="li_tab_geral">
+
+                        <table class="table table-striped" >
+                            <tbody>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_informar_codigo_documento_pasta">Informar código do documento / pasta</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_informar_codigo_documento_pasta form-control" id="modal_documento_configuracoes_chk_informar_codigo_documento_pasta"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_bloquear_reprovados">Permitir bloquear documentos reprovados</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_bloquear_reprovados form-control" id="modal_documento_bloquear_reprovados"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_permitir_codigo_repetido">Permitir códigos repetidos</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_permitir_codigo_repetido form-control" id="modal_documento_configuracoes_chk_permitir_codigo_repetido"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">
+                                        <label for="modal_documento_download_bloqueado">Permitir download de documentos bloqueados</label> <br />
+                                        <button 
+                                            type="button" 
+                                            id="info_documento_bloqueado"
+                                            class="btn btn-link" 
+                                            data-toggle="popover" 
+                                            data-trigger="focus"
+                                            title="Download de documentos bloqueados" 
+                                            data-html="true"
+                                            data-content="Se o documento tiver segurança habilitada, apenas usuários com permissão de 'Segurança' poderão realizar o download. Caso contrário, apenas usuários adminstradores poderão realizar o download."
+                                        >
+                                            Mais informações...
+                                        </button>
+                                    </td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_download_bloqueado form-control" id="modal_documento_download_bloqueado"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_permitir_nomes_iguais">Permitir pastas/documentos com nomes iguais</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_permitir_nomes_iguais form-control" id="modal_documento_configuracoes_chk_permitir_nomes_iguais"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_sugerir_alteracao_nome">Sugerir alteração do nome do arquivo</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_sugerir_alteracao_nome form-control" id="modal_documento_sugerir_alteracao_nome"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_obrigar_vigencia">Tornar data de vigência obrigatório</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_obrigar_vigencia form-control" id="modal_documento_obrigar_vigencia"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">
+                                        <label for="modal_documento_download_nome_documento">Realizar downloads com Nome do Documento ao invés do nome original do arquivo</label>
+                                    </td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_download_nome_documento form-control" id="modal_documento_download_nome_documento"></td>
+                                </tr>
+                            </tbody>
+                            
+                        </table>
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="li_tab_listagem">
+
+                        <table class="table table-striped" >
+                            <tbody>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_assunto_documento">Exibir coluna "Assunto" na listagem</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_assunto_documento form-control" id="modal_documento_configuracoes_chk_assunto_documento"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_codigo_documento_listagem">Exibir coluna "Código" na listagem</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_codigo_documento_listagem form-control" id="modal_documento_configuracoes_chk_codigo_documento_listagem"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_tamanho">Exibir coluna "Tamanho" na listagem</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_tamanho form-control" id="modal_documento_configuracoes_chk_tamanho"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_data_modificacao">Exibir coluna "Modificação" na listagem</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_data_modificacao form-control" id="modal_documento_configuracoes_chk_data_modificacao"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_vigente_ate">Exibir coluna "Vigente até" na listagem</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_vigente_ate form-control" id="modal_documento_configuracoes_chk_vigente_ate"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_situacao_documento">Exibir coluna "Situação" na listagem</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_situacao_documento form-control" id="modal_documento_configuracoes_chk_situacao_documento"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_exibir_tag">Exibir coluna "Tag" na listagem</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_exibir_tag form-control" id="modal_documento_exibir_tag"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_tipo_documento">Exibir coluna "Tipo" na listagem</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_tipo_documento form-control" id="modal_documento_configuracoes_chk_tipo_documento"></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_exibir_documentos_crm">Exibir documentos do CRM na listagem</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_exibir_documentos_crm form-control" id="modal_documento_configuracoes_chk_exibir_documentos_crm"></td>
+                                </tr>
+                            </tbody>
+                            
+                        </table>
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="li_tab_versionamento">
+                        <table class="table table-striped" >
+                            <tbody>
+                                <tr>
+                                    <td class="text-left"><label>Iniciar revisões e versões com o número</label></td>
+                                    <td class="text-right"><input type="number" min="0" class="form-control edt_revisao_numero pull-right" style="width: 57px;"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_permitir_ativar">Permitir alterar revisão ativa</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_permitir_ativar_revisao form-control" id="modal_documento_permitir_ativar"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_permitir_exclusao">Permitir exclusão de revisão</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_permitir_exclusao form-control" id="modal_documento_configuracoes_chk_permitir_exclusao"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_permitir_exclusao_documento">Permitir exclusão de documento</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_permitir_exclusao_documento form-control" id="modal_documento_configuracoes_chk_permitir_exclusao_documento"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_permitir_exclusao_pasta">Permitir exclusão de pasta</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_permitir_exclusao_pasta form-control" id="modal_pasta_configuracoes_chk_permitir_exclusao_pasta"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_permitir_revisao_duplicada">Permitir revisão caso já exista outra</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_permitir_revisao_duplicada form-control" id="modal_documento_configuracoes_chk_permitir_revisao_duplicada"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="li_tab_aprovacao">
+                        <table class="table table-striped" >
+                            <tbody>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_data_aprovacao">Exibir data de aprovação</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_data_aprovacao form-control" id="modal_documento_configuracoes_chk_data_aprovacao"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_permitir_estorno">Permitir estorno da aprovação</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_estorno_aprovacao form-control" id="modal_documento_permitir_estorno"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_obrigar_aprovacao">Tornar aprovação no documento obrigatório</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_obrigar_aprovacao form-control" id="modal_documento_obrigar_aprovacao"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_obrigar_prazo">Tornar prazo de aprovação no documento obrigatório</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_obrigar_prazo form-control" id="modal_documento_obrigar_prazo"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="li_tab_conf_email">
+                        <table class="table table-striped" >
+                            <tbody>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_nova_revisao">Notificar nova revisão</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_nova_revisao form-control" id="modal_documento_configuracoes_chk_nova_revisao"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_nova_versao">Notificar nova versão</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_nova_versao form-control" id="modal_documento_configuracoes_chk_nova_versao"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_doc_aprovado">Notificar documento aprovado</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_doc_aprovado form-control" id="modal_documento_configuracoes_chk_doc_aprovado"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_doc_reprovado">Notificar documento reprovado</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_doc_reprovado form-control" id="modal_documento_configuracoes_chk_doc_reprovado"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_doc_excluido">Notificar documento excluído</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_doc_excluido form-control" id="modal_documento_configuracoes_chk_doc_excluido"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_exclusao_multipla">Notificar exclusão multipla</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_exclusao_multipla form-control" id="modal_documento_configuracoes_chk_exclusao_multipla"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_envio_multiplo">Notificar envio multiplo</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_envio_multiplo form-control" id="modal_documento_configuracoes_chk_envio_multiplo"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_doc_bloqueado">Notificar bloqueio de documento</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_doc_bloqueado form-control" id="modal_documento_configuracoes_chk_doc_bloqueado"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_doc_desbloqueado">Notificar desbloqueio de documento</label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_doc_desbloqueado form-control" id="modal_documento_configuracoes_chk_doc_desbloqueado"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_doc_alteracoes">Notificar alterações no documento </label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_doc_alteracoes form-control" id="modal_documento_configuracoes_chk_doc_alteracoes"></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left"><label for="modal_documento_configuracoes_chk_doc_vigencia">Notificar término de vigência </label></td>
+                                    <td class="text-right"><input type="checkbox" class="checkbox_bootstrap_toggle chk_doc_vigencia form-control" id="modal_documento_configuracoes_chk_doc_vigencia"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>                
+            </div>
+        </div>
+    </div>
+</div>

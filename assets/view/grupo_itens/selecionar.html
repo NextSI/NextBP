@@ -1,0 +1,79 @@
+<div class="modal bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal_grupo_itens_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_grupo_itens_label" translate="grupo_item.selecionar_tipo_grupo"></h4> 
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <label for="modal_grupo_itens_edt_codigo" translate="generico.codigo"></label>
+                            <input type="text" class="edt_codigo form-control" id="modal_grupo_itens_edt_codigo" maxlength="11" translate-placeholder="grupo_item.filtrar_por_codigo">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <label for="modal_grupo_itens_edt_descricao" translate="generico.descricao"></label>
+                            <input type="text" class="edt_descricao form-control" id="modal_grupo_itens_edt_descricao" maxlength="60" translate-placeholder="grupo_item.filtrar_por_descricao">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="tab_listagem table table-striped table-hover table-bordered table-responsive tabela_padrao_bp" data-table-name="grupo_itens_lista">
+                        <thead>
+                            <tr>
+                                <th class="codigo">
+                                    <span class="orderby_codigo orderbypointer" data-asc="" data-ordername="codigo">
+                                        <span translate="generico.codigo"></span>
+                                        &nbsp;
+                                        <span class="fa fa-sort-down icon_orderby hidden fa-fw"></span>
+                                    </span>
+                                </th>
+                                <th class="descricao">
+                                    <span class="orderby_descricao orderbypointer" data-asc="" data-ordername="descricao">
+                                        <span translate="generico.descricao"></span>
+                                        &nbsp;
+                                        <span class="fa fa-sort-down icon_orderby hidden fa-fw"></span>
+                                    </span>
+                                </th>
+                                <th class="acao" style="width:90px;">
+                                    <span class="orderby_acao orderbypointer" data-asc="" data-ordername="acao">
+                                        <span translate="generico.acao"></span>
+                                        &nbsp;
+                                        <span class="fa fa-sort-down icon_orderby hidden fa-fw"></span>
+                                    </span>
+                                </th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hidden" template-row>
+                                <td class="codigo" data-bp-column="codigo" >
+                                </td> 
+                                <td class="descricao" data-bp-column="descricao" data-bp-column-header="grupo_item.mobile_header_descricao">
+                                    <span class="hidden glyphicon glyphicon-triangle-bottom" style="cursor: pointer;" template-button="btn_efect"></span>
+                                    <span class="nome hideextra"></span>
+                                </td>
+                                <td class="acao" data-bp-column="acao">
+                                    <div class="btn btn-primary btn-xs btn_selecionar" translate="generico.selecionar">
+                                        
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <td colspan="3" style="text-align: left; background:#f5f5f5;"><b template-field="totalizador">0</b>&nbsp;<span class="" translate="generico.contador_registros"></span></td>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default" translate="generico.cancelar"></button>
+            </div>
+        </div>
+    </div>
+</div>

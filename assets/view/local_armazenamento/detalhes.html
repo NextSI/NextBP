@@ -1,0 +1,151 @@
+<!-- MODAL DETALHE -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_local_armazenamento_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_local_armazenamento_detalhes_label">Local de armazenamento</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="modal_local_armazenamento_cbo_tipo">Tipo</label>
+                            <br>
+                            <select name="" id="modal_local_armazenamento_cbo_tipo" class="cbo_tipo">
+                                <option value="D">Diretório</option>
+                                <!--option value="F">FTP</option-->
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="tipo_ftp hidden">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="modal_local_armazenamento_edt_endereco">Endereço</label>
+                                <input type="text" class="edt_endereco form-control" id="modal_local_armazenamento_edt_endereco">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="modal_local_armazenamento_edt_porta">Porta</label>
+                            <input type="text" class="edt_porta form-control" id="modal_local_armazenamento_edt_porta" placeholder="21">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="modal_local_armazenamento_edt_usuario">Usuário</label>
+                                <input type="text" class="edt_usuario form-control" id="modal_local_armazenamento_edt_usuario">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="modal_local_armazenamento_edt_senha">Senha</label>
+                                <div class="input-group">
+                                    
+                                    <input type="password" class="edt_senha form-control" id="modal_local_armazenamento_edt_senha">
+                                    <span class="input-group-btn">
+                                        <button class="btn_exibir_senha btn btn-default" type="button" data-show-password="false">
+                                            <span id="" class="ico_senha glyphicon glyphicon-eye-open"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">                
+                        <div class="form-group">
+                            <label for="modal_local_armazenamento_edt_nome">Nome</label>
+                            <input type="text" class="edt_nome form-control" id="modal_local_armazenamento_edt_nome" maxlength="150">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 div_diretorio">                
+                        <div class="form-group">
+                            <label for="modal_local_armazenamento_edt_diretorio">Diretório</label>
+                            <input type="text" class="edt_diretorio form-control" id="modal_local_armazenamento_edt_diretorio" maxlength="150">
+                        </div>
+                    </div>
+                    <div class="col-sm-1 text-danger div_diretorio_ok" hidden>                
+                        <br><br>
+                        <span class="glyphicon glyphicon-thumbs-down"></span>
+                    </div>                    
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="modal_local_armazenamento_chk_padrao_chamados">Padrão para Chamados</label>
+                            <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                <input id="modal_local_armazenamento_chk_padrao_chamados" class="chk_padrao_chamados checkbox_bootstrap_toggle template_switch" type="checkbox" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="modal_local_armazenamento_chk_padrao_sistema">Padrão para Sistema</label>
+                            <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                <input id="modal_local_armazenamento_chk_padrao_sistema" class="chk_padrao_sistema checkbox_bootstrap_toggle template_switch" type="checkbox" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="modal_local_armazenamento_chk_padrao_processos">Padrão para Processos</label>
+                            <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                <input id="modal_local_armazenamento_chk_padrao_processos" class="chk_padrao_processos checkbox_bootstrap_toggle template_switch" type="checkbox" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="modal_local_armazenamento_chk_padrao_documentos">Padrão para Documentos</label>
+                            <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                <input id="modal_local_armazenamento_chk_padrao_documentos" class="chk_padrao_documentos checkbox_bootstrap_toggle template_switch" type="checkbox" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="modal_local_armazenamento_chk_padrao_projeto">Padrão para Projetos</label>
+                            <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                <input id="modal_local_armazenamento_chk_padrao_projeto" class="chk_padrao_projeto checkbox_bootstrap_toggle template_switch" type="checkbox" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="modal_local_armazenamento_chk_padrao_atendimento_relacionamento">Padrão Atendimento e Relacionamento</label>
+                            <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                <input id="modal_local_armazenamento_chk_padrao_atendimento_relacionamento" class="chk_padrao_atendimento_relacionamento checkbox_bootstrap_toggle template_switch" type="checkbox" value="">
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="alert alert-warning alert hidden" conexao>
+                    <div class="col-md-6 pull-left" style="margin-top:1px;">
+                        <i class="fa fa-spinner fa-pulse fa-fw pull-left" style="margin-top:3px;"></i>
+                        <label class="pull-left" for=""><small data-original="Tentando estabelecer conexao">Tentando estabelecer conexao</small></label>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_testar btn btn-primary pull-left hidden">Testar</button>
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+                <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

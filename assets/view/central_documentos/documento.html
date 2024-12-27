@@ -1,0 +1,1039 @@
+<div class="row">
+    <div class="col-md-12" style="padding-bottom: 10px;">
+        <button class="btn_download_revisao_atual btn btn-primary pull-left" style="display: none;">
+            <span class="glyphicon glyphicon-download-alt"></span> Download
+        </button>
+        <div class="btn_group_visualizar_revisao_atual btn-group" style="display: none;">
+            <button class="btn_visualizar_revisao_atual btn btn-primary">
+                <span class="fa fa-window-maximize"></span> Visualizar
+            </button>
+    
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="caret"></span>
+            </button>
+    
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="javascript:;" class="btn_download_revisao_atual_2">
+                        <span class="glyphicon glyphicon-download-alt"></span> Download
+                    </a>
+                </li>
+                <li class="menu_visualizar_revisao_atual_google_docs">
+                    <a href="javascript:;" class="btn_visualizar_revisao_atual_google_docs">
+                        <span class="fa fa-external-link-alt"></span> Visualizar no Google
+                    </a>
+                </li>
+                <!--li class="menu_visualizar_revisao_atual_office_365">
+                    <a href="javascript:;" class="btn_visualizar_revisao_atual_office_365">
+                        <span class="fa fa-external-link-alt"></span> Visualizar no Office 365
+                    </a>
+                </li-->
+
+                <li>
+                    <a href="javascript:;" class="btn_assinaturas_clicksign" style="display: none;">
+                        <span class="fa fa-address-card"></span>
+                        Assinaturas (Clicksign)
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="btn_assinaturas_certsign" style="display: none;">
+                        <span class="fa fa-address-card"></span>
+                        Assinaturas (Certsign)
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="btn_assinaturas_d4sign" style="display: none;">
+                        <span class="fa fa-address-card"></span>
+                        Assinaturas (D4Sign)
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <button type="submit" class="btn_salvar btn btn-primary" style="display: none;">
+            <i class="far fa-save" aria-hidden="true"></i> Salvar
+        </button>
+        <button type="button" class="btn btn-default btn_favoritar_item" data-toggle="tooltip" data-placement="top" title="Adicionar/Remover dos favoritos">
+            <span class="glyphicon glyphicon-star-empty"></span>
+        </button>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+        <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+            <li class="active lbl_tab_geral">
+                <a style="padding-top: 15px; padding-bottom: 15px; padding-right: 5px; padding-left: 5px;" class="menu_geral" href="#" role="tab" data-toggle="tab">Geral</a>
+            </li>
+            <li class="lbl_tab_seguranca">
+                <a style="padding-top: 15px; padding-bottom: 15px; padding-right: 5px; padding-left: 5px;" class="menu_seguranca" href="#" role="tab" data-toggle="tab">Segurança</a>
+            </li>
+            <li class="lbl_tab_observacoes">
+                <a style="padding-top: 15px; padding-bottom: 15px; padding-right: 5px; padding-left: 5px;" class="menu_observacoes" href="#" role="tab" data-toggle="tab">Observações</a>
+            </li>
+            <li class="lbl_tab_aprovacoes">
+                <a style="padding-top: 15px; padding-bottom: 15px; padding-right: 5px; padding-left: 5px;" class="menu_aprovacoes" href="#" role="tab" data-toggle="tab">Aprovações</a>
+            </li>
+            <li class="lbl_tab_distribuicoes">
+                <a style="padding-top: 15px; padding-bottom: 15px; padding-right: 5px; padding-left: 5px;" class="menu_distribuicoes" href="#" role="tab" data-toggle="tab">Distribuições</a>
+            </li>
+            <li class="lbl_tab_revisoes">
+                <a style="padding-top: 15px; padding-bottom: 15px; padding-right: 5px; padding-left: 5px;" class="menu_revisoes" href="#" role="tab" data-toggle="tab">Revisões</a>
+            </li>
+            <li class="lbl_tab_notificacao">
+                <a style="padding-top: 15px; padding-bottom: 15px; padding-right: 5px; padding-left: 5px;" class="menu_notificacao" href="#" role="tab" data-toggle="tab">Notificações</a>
+            </li>
+            <li class="lbl_tab_historico">
+                <a style="padding-top: 15px; padding-bottom: 15px; padding-right: 5px; padding-left: 5px;" class="menu_log" href="#" role="tab" data-toggle="tab">Histórico</a>
+            </li>
+            <li class="lbl_tab_referencias">
+                <a style="padding-top: 15px; padding-bottom: 15px; padding-right: 5px; padding-left: 5px;" class="menu_referencias" href="#" role="tab" data-toggle="tab">Referências</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="panel-body panel_central_documentos">
+        <!-- Tab panes -->
+        <div class="alert alert-danger doc_bloqueado" style="display: none; text-align: center">
+            <span href="#" class="alert-link"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                <strong> Atenção! Este documento está </strong> Bloqueado
+            </span>
+            
+        </div>
+
+        <div class="alert alert-danger doc_rev_reprovado" style="display: none; text-align: center">
+            <span href="#" class="alert-link"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                <strong> Atenção! A ultima revisão deste documento está </strong> Reprovada
+            </span>
+            
+        </div>
+
+        <div class="alert alert-info doc_rev_pendente" style="display: none; text-align: center">
+            <span href="#" class="alert-link"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                <strong> Atenção! A ultima revisão deste documento está </strong> Pendente
+            </span>
+        </div>
+
+        <div class="tab-content content_central_documentos" style="pointer-events: none">
+
+            <div class="active tab-pane painel_geral">
+                <div class="row painel_novo_arquivo">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Arquivo</label>
+                            <div class="div_novo_arquivo"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row painel_nova_revisao" style="display: none">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Nova Revisão</label>
+                            <div class="div_nova_revisao"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <textarea class="form-control edt_observacao_revisao" rows="10" placeholder="Escreva aqui algumas informações sobre o(s) arquivo(s)" style="display:none;" maxlength="500"></textarea>
+                    </div>
+                </div>
+                    <div class="row">
+                    <div class="col-sm-12 col-md-4 div_codigo hidden">
+                        <div class="form-group">
+                            <label for="modal_central_documentos_arquivo_edt_codigo">Código</label>
+                            <input type="text" class="edt_codigo form-control" style="text-transform:uppercase" id="modal_central_documentos_arquivo_edt_codigo" maxlength="50">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-8">
+                        <div class="form-group">
+                            <label for="modal_central_documentos_arquivo_edt_nome">Nome do documento</label>
+                            <input type="text" class="edt_nome form-control" id="modal_central_documentos_arquivo_edt_nome" maxlength="300" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-4">
+                        <div class="form-group">
+                            <label for="modal_central_documentos_arquivo_edt_data_vigencia">Vigente até</label>
+                            <input type="date" class="edt_data_vigencia form-control" id="modal_central_documentos_arquivo_edt_data_vigencia">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="form-group">
+                            <label for="modal_central_documentos_arquivo_edt_validade">Validade da revisão</label>
+                            <input type="number" class="edt_validade form-control" id="modal_central_documentos_arquivo_edt_validade">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="form-group">
+                            <label for="modal_central_documentos_arquivo_cbo_validade_periodo">&nbsp;</label>
+                            <select id="modal_central_documentos_arquivo_cbo_validade_periodo" class="cbo_validade_periodo form-control" required>
+                                <option value="0">Anos</option>
+                                <option value="1">Meses</option>
+                                <option value="2">Dias</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="modal_central_documentos_arquivo_edt_tag">Tags</label>
+                            <input type="text" class="edt_tag form-control" id="modal_central_documentos_arquivo_edt_tag">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="modal_central_documentos_arquivo_cbo_assunto">Assunto</label>
+                            <div class="input-group div_assunto">
+                                <select id="modal_central_documentos_arquivo_cbo_assunto" class="cbo_assunto form-control" required>
+                                </select>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn_assunto_visualizar btn btn-default">
+                                        <span class="glyphicon glyphicon-info-sign"></span>
+                                    </button>
+                                    <button type="button" class="btn_assunto_novo btn btn-default">
+                                        <span class="glyphicon glyphicon-plus"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="modal_central_documentos_arquivo_cbo_tipo_documento">Tipo de documento</label>
+                            <div class="input-group div_tipo_documento">
+                                <select id="modal_central_documentos_arquivo_cbo_tipo_documento" class="cbo_tipo_documento form-control" required>
+                                </select>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn_tipo_documento_visualizar btn btn-default">
+                                        <span class="glyphicon glyphicon-info-sign"></span>
+                                    </button>
+                                    <button type="button" class="btn_tipo_documento_novo btn btn-default">
+                                        <span class="glyphicon glyphicon-plus"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="modal_central_documentos_arquivo_cbo_local_armazenamento">Local de armazenamento</label>
+                            <div class="input-group div_local_armazenamento">
+                                <select id="modal_processo_cbo_local_armazenamento" class="cbo_local_armazenamento form-control" required>
+                                </select>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn_local_armazenamento_visualizar btn btn-default">
+                                        <span class="glyphicon glyphicon-info-sign"></span>
+                                    </button>
+                                    <button type="button" class="btn_local_armazenamento_novo btn btn-default">
+                                        <span class="glyphicon glyphicon-plus"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="dx_selecao_pasta">Pasta</label>
+                        <div id="dx_selecao_pasta" class="dx_selecao_pasta"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane painel_seguranca">
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input id="modal_central_documentos_arquivo_chk_controle_acessos" class="chk_controle_acessos checkbox_bootstrap_toggle" type="checkbox" value="">
+                        <label for="modal_central_documentos_arquivo_chk_controle_acessos">Habilitar controle de acessos</label>
+                    </div>
+                </div>
+
+                <div 
+                    id="info_self_permissions" 
+                    class="text-muted" 
+                    style="margin: 15px 0;" 
+                >
+                    <span class="fa fa-question-circle" aria-hidden="true"></span> 
+                    <span style="cursor: pointer;"
+                        onclick="alert_modal(
+                            'Informativo', 
+                            'Apenas usuários administradores podem alterar as suas próprias permissões e as de outros usuários.'+
+                            '<br /><br />'+
+                            'Veja abaixo mais informações sobre as regras para cada tipo de usuário:'+
+                            '<br /><br />'+
+                            '<strong>Usuários não administradores:</strong>'+
+                            '<ul>'+
+                                '<li>Ao habilitar o controle de acessos, o seu usuário é automaticamente inserido com todas as permissões habilitadas;</li>'+
+                                '<li><strong>Não é permitido</strong> a esse usuário alterar as suas próprias permissões ou se remover da lista de usuários;</li>'+
+                                '<li>Pode alterar as permissões de outros usuários, contanto que tenha a permissão de `Segurança` na pasta ou no documento.</li>'+
+                            '</ul>'+
+                            '<strong>Usuários administradores:</strong>'+
+                            '<ul>'+
+                                '<li>Ao habilitar o controle de acessos, o seu usuário <strong>não é incluído</strong> automaticamente, pois sendo um usuário administrador, as permissões não são aplicadas a ele de qualquer forma;</li>'+
+                                '<li>É permitido alterar as suas próprias permissões e as de outros usuários, assim como se remover da lista de usuários.</li>'+
+                            '</ul>'
+                        )"
+                    >
+                        Por que não consigo alterar as minhas próprias permissões?
+                    </span>
+                </div>
+
+                <div class="div_permissoes row" style="display: none">
+                    <div class="col-md-12">
+
+                        <div class="table-responsive" style="padding-bottom: 0px;">
+                            <table class="tab_permissoes table">
+                                <thead>
+                                    <th>Usuário</th>
+                                    <th style="width: 80px"><span class="lbl_visualizacao">Visualização</span></th>
+                                    <th style="width: 80px"><span class="lbl_download">Download</span></th>
+                                    <th style="width: 80px"><span class="lbl_escrita">Escrita</span></th>
+                                    <th style="width: 80px"><span class="lbl_exclusao">Exclusão</span></th>
+                                    <th style="width: 80px"><span class="lbl_revisao">Revisão</span></th>
+                                    <th style="width: 80px"><span class="lbl_seguranca">Segurança</span></th>
+                                    <th class="text-right" style="width: 80px; margin-right: 0px; padding-right: 0px;">
+                                        <a class="btn_add_usuario btn btn-default">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </a>
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr template-row style="display: none">
+                                        <td>
+                                            <span class="img_usuario fa fa-user" aria-hidden="true"></span>
+                                            <span class="lbl_nome"></span>
+                                        </td>
+                                        <td>
+                                            <input class="chk_visualizacao">
+                                        </td>
+                                        <td>
+                                            <input class="chk_download">
+                                        </td>
+                                        <td>
+                                            <input class="chk_escrita">
+                                        </td>
+                                        <td>
+                                            <input class="chk_exclusao">
+                                        </td>
+                                        <td>
+                                            <input class="chk_revisao">
+                                        </td>
+                                        <td>
+                                            <input class="chk_seguranca">
+                                        </td>
+                                        <td class="text-right" style="margin-right: 0px; padding-right: 0px">
+                                        <a class="btn_usuario_remover btn btn-default">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                        </a>
+                                    </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div_permissoes row" style="display: none">
+                    <div class="col-md-12">
+
+                        <div class="table-responsive">
+                            <table class="tab_permissoes_grupo table" style="padding-bottom: 0px;">
+                                <thead>
+                                    <th>Grupo</th>
+                                    <th style="width: 80px"><span class="lbl_visualizacao">Visualização</span></th>
+                                    <th style="width: 80px"><span class="lbl_download">Download</span></th>
+                                    <th style="width: 80px"><span class="lbl_escrita">Escrita</span></th>
+                                    <th style="width: 80px"><span class="lbl_exclusao">Exclusão</span></th>
+                                    <th style="width: 80px"><span class="lbl_revisao">Revisão</span></th>
+                                    <th style="width: 80px"><span class="lbl_seguranca">Segurança</span></th>
+                                    <th class="text-right" style="width: 80px; margin-right: 0px; padding-right: 0px">
+                                        <a class="btn_add_grupo btn btn-default">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </a>
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr template-row style="display: none">
+                                        <td>
+                                            <span class="img_grupo fa fa-users" aria-hidden="true"></span>
+                                            <span class="lbl_nome"></span>
+                                        </td>
+                                        <td>
+                                            <input class="chk_visualizacao">
+                                        </td>
+                                        <td>
+                                            <input class="chk_download">
+                                        </td>
+                                        <td>
+                                            <input class="chk_escrita">
+                                        </td>
+                                        <td>
+                                            <input class="chk_exclusao">
+                                        </td>
+                                        <td>
+                                            <input class="chk_revisao">
+                                        </td>
+                                        <td>
+                                            <input class="chk_seguranca">
+                                        </td>
+                                        <td class="text-right" style="margin-right: 0px; padding-right: 0px">
+                                        <a class="btn_grupo_remover btn btn-default">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                        </a>
+                                    </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+            
+            <div class="tab-pane painel_observacoes">
+                <textarea class="form-control edt_observacao_novo" rows="10" placeholder="Escreva aqui algumas observações sobre o(s) arquivo(s)." maxlength="1000"></textarea>
+                <div class="edt_observacoes_historico">
+                </div>
+            </div>
+
+            <div class="tab-pane painel_aprovacoes">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="pull-right">
+                            <div class="btn-group" title="Listagem">
+                                <button type="button" class="btn_aprovacoes_historico btn btn-default active">
+                                    <span class="fa fa-clock" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            <div class="btn-group" title="Configurações">
+                                <button type="button" class="btn_aprovacoes_configuracoes btn btn-default">
+                                    <span class="fa fa-cog" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aprovacoes_historico" style="padding-top: 10px;">
+                    <table class="tab_aprovacoes table table-striped table-hover table-bordered table-responsive tabela_padrao_bp">
+                        <thead>
+                            <tr class="filtro_container">
+                                <th class="usuario_nome">
+                                    <select class="form-control cbo_usuario_historico_aprovacoes" data-live-search="true" multiple data-selected-text-format="count > 1" title="Selecione o Usuário" data-toggle="tooltip" data-actions-box="true" data-deselect-all-text="Nenhum" data-select-all-text="Todos">
+                                    </select>
+                                </th>
+                                <th class="recebimento_data">
+                                    <input type="date" class="form-control ipt_recebimento_data" placeholder="Recebido Em" title="Filtrar por data recebida" data-toggle="tooltip">
+                                </th>
+                                <th class="prazo_data">
+                                    <input type="date" class="form-control ipt_prazo_data" placeholder="Prazo para Aprovação" title="Filtrar por data prazo" data-toggle="tooltip">
+                                </th>
+                                <th class="acao_data">
+                                    <input type="date" class="form-control ipt_acao_data" placeholder="Aprovado Em" title="Filtrar por data de aprovação" data-toggle="tooltip">
+                                </th>
+                                <th class="situacao">
+                                    <select class="form-control cbo_situacao_historico_aprovacoes" data-live-search="true" multiple data-selected-text-format="count > 1" title="Situação" data-toggle="tooltip" data-actions-box="true" data-deselect-all-text="Nenhum" data-select-all-text="Todos">
+                                    </select>
+                                </th>
+                                <th class="revisao" >
+                                    <input type="text" class="form-control ipt_revisao_historico_aprovacoes" placeholder="Rev" title="Filtrar por Revisão" data-toggle="tooltip">
+                                </th>
+                                <th class="nivel_alcada">
+                                    <input type="text" class="form-control ipt_nivel_historico_aprovacoes" placeholder="Nivel Alçada" title="Filtrar por Nivel da Alçada" data-toggle="tooltip">
+                                </th>
+                                <th class="consideracoes" width="90px">
+                                    <input type="text" class="form-control ipt_consideracoes_historico_aprovacoes" placeholder="Obs" title="Filtrar pela consideração" data-toggle="tooltip">
+                                </th>
+                                <th class="origem" width="60px">
+                                    <select class="form-control cbo_origem_historico_aprovacoes" data-live-search="true" multiple data-selected-text-format="count > 1" title="Origem" data-toggle="tooltip" data-actions-box="true" data-deselect-all-text="Nenhum" data-select-all-text="Todos">
+                                    </select>
+                                </th>
+                            </tr>
+    
+                            <tr>
+                                <th>Usuário</th>
+                                <th style="text-align: center">Recebido Em</th>
+                                <th style="text-align: center">Prazo para Aprovação</th>
+                                <th style="text-align: center">Aprovado Em</th>
+                                <th >Situação</th>
+                                <th style="text-align: center">Revisão</th>
+                                <th style="text-align: center">Nivel Alçada</th>
+                                <th style="text-align: center">Obs</th>
+                                <th style="text-align: center">Origem</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr template-row style="display: none">
+                                <td class="visible-xs">
+                                    <div class="lbl_usuario"></div>
+                                </td>
+                                <td class="hidden-xs lbl_usuario">{usuario}</td>
+                                <td class="visible-xs">
+                                    <div class="lbl_situacao"></div>
+                                </td>
+    
+                                <td style="text-align: center" class="hidden-xs lbl_dt_inicio_aprovacao">{dt_inicio_aprovacao}</td>
+                                <td style="text-align: center" class="hidden-xs lbl_dt_prazo_aprovacao">{dt_prazo_aprovacao}</td>
+                                <td style="text-align: center" class="hidden-xs lbl_dt_fim_aprovacao">{dt_fim_aprovacao}</td>
+                                <td class="hidden-xs lbl_situacao">{situacao}</td>
+                                <td style="text-align: center" class="hidden-xs lbl_revisao">{revisao}</td>
+                                <td style="text-align: center" class="hidden-xs lbl_nivel_alcada">{nivel_alcada}</td>
+                                <td style="text-align: center" class="hidden-xs lbl_consideracoes">{consideracoes}</td>
+                                <td style="text-align: center" class="hidden-xs lbl_tipo_origem">{tipo_origem}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+    
+                    <div style="position: relative; bottom: 20px;">
+                        <div style="padding: 10px; padding-bottom: 0px; padding-top: 0; background-color: white;" class="text-center div_carregar_mais_aprovacoes hidden">
+                            <span class="btn btn-link btn_carregar_mais_aprovacoes">
+                                <span class="txt_carregar_mais text-primary">Carregar mais registros</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aprovacoes_configuracoes" style="display: none; padding-top: 10px;">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 div_tipo_aprovacao">
+                            <label>Tipo de Aprovação</label>   
+                            <div class="form-group">
+                                <select id="cbo_tipo_aprovacao" class="form-control selectpicker cbo_tipo_aprovacao show-tick" data-live-search="true" title="Tipo de Aprovação">
+                                    <option value="0" selected>Não necessita de aprovação</option>
+                                    <option value="1">Necessita de aprovação manual</option>
+                                    <option value="2">Necessita de aprovação predefinida</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-2 div_edt_prazo_dias hidden">
+                            <div class="form-group">
+                                <label for="modal_central_documentos_arquivo_edt_prazo_dias">Prazo</label>
+                                <input type="number" class="edt_prazo_dias form-control" id="modal_central_documentos_arquivo_edt_prazo_dias">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 div_cbo_selecionar_alcada hidden">
+                            <label>Selecione a Alçada</label>   
+                            <div class="form-group">
+                                <select id="cbo_selecionar_alcada" class="form-control selectpicker cbo_selecionar_alcada show-tick" data-live-search="true" title="Selecione a Alçada">
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="div_cbo_aprovador col-sm-12 col-md-6 hidden">
+                            <label for="cbo_aprovador">Adicionar aprovador</label><br>
+                            <select id="cbo_aprovador" class="cbo_aprovador form-control select-multi-column" placeholder="Pesquisar por nome"></select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="listarAprovadores" style="margin-bottom: 6px;"></div>
+                    </div>
+                
+                </div>
+
+            </div>
+
+            <div class="tab-pane painel_distribuicoes">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="pull-right">
+                            <div class="btn-group" title="Listagem">
+                                <button type="button" class="btn_distribuicoes_historico btn btn-default active">
+                                    <span class="fa fa-clock" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            <div class="btn-group" title="Configurações">
+                                <button type="button" class="btn_distribuicoes_configuracoes btn btn-default">
+                                    <span class="fa fa-cog" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <i class="fas fa-info-circle"></i>
+                        <span>As alterações realizadas nesta tela só entrarão em vigor após gerar uma nova revisão do documento.</span>
+                    </div>
+                </div>
+
+                <div class="distribuicoes_historico" style="padding-top: 10px;">
+                    <div class="dx_listagem_documento_distribuicoes"></div>
+                </div>
+
+                <div class="distribuicoes_configuracoes" style="display: none; padding-top: 10px;">
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <input id="modal_central_documentos_arquivo_chk_copia_controlada" class="chk_copia_controlada checkbox_bootstrap_toggle" type="checkbox" value="">
+                            <label for="modal_central_documentos_arquivo_chk_copia_controlada">Habilitar cópia controlada</label>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <div class="dx_listagem_documento_copia_controlada" style="display: none;"></div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="tab-pane painel_notificacao">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="modal_central_documentos_pasta_chk_notificacao">&nbsp;&nbsp;Notificar por e-mail &nbsp; </label>
+                        <div class="pull-left">
+                            <input id="modal_central_documentos_pasta_chk_notificacao" class="chk_notificacoes checkbox_bootstrap_toggle" type="checkbox" value="">
+
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="row" style="margin-top:15px;">
+                    <div class="col-sm-12">
+                        <label for="">&nbsp;&nbsp;Notificar por e-mail antes do término da vigência &nbsp; </label>
+                        <div class="pull-left">
+                            <input id="modal_central_documentos_pasta_chk_notificar_email_antes" class="chk_notificar_email_antes checkbox_bootstrap_toggle" type="checkbox" value="">
+
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="row div_notificacao_vigencia hidden" style="margin-top:15px;">
+                    <div class="col-sm-12">
+                        <div class="pull-left">
+                            <input id="edt_dias_notitificacao" class="edt_dias_notitificacao form-control" type="number" style="width: 90px;">
+                        </div>
+                        <label for="edt_dias_notitificacao">&nbsp;&nbsp;Qtde dias antes do término da vigência</label>
+                        <span style="display:table;padding-left: 8px;">
+                            <span class="small">*Para ser notificado somente no término da vigência deixe este campo com o valor "0".</small>
+                        </span>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="row hidden" style="margin-top:15px;">
+                    <div class="col-sm-12">
+                        <div class="pull-left">
+                            <input type="checkbox" id="modal_central_documentos_pasta_chk_email_aba_seguranca" class="chk_notificacao_seguranca checkbox_bootstrap_toggle">
+                        </div>
+                        <label for="modal_central_documentos_pasta_chk_email_aba_seguranca ">&nbsp;&nbsp;Enviar e-mail para usuários da ABA Segurança ?
+                        </label>
+
+                        <span style="display:table;padding-left: 8px;">
+                            <span class="small">*Essa opção funciona apenas quando o controle de acesso está habilitado.</small>
+                        </span>
+
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="row hidden" style="margin-top:15px;">
+                    <div class="col-sm-12">
+                        <div class="pull-left">
+                            <input type="checkbox" id="modal_central_documentos_pasta_chk_email_aba_aprovador" class="chk_notificacao_aprovador checkbox_bootstrap_toggle">
+                        </div>
+                        <label for="modal_central_documentos_pasta_chk_email_aba_aprovador">&nbsp;&nbsp;Enviar e-mail para usuários da ABA Aprovação ?&nbsp;</label>
+
+                        <span style="display:table;padding-left: 8px;">
+                            <span class="small">*Essa opção funciona apenas quando o controle de aprovação está habilitado.</small>
+                        </span>
+                    </div>
+                    <div class="clearfix"></div>
+
+                </div>
+
+                <div class="row hidden" style="margin-top: 15px; margin-bottom: 5px;">
+                    <div class="col-sm-12 ">
+                        <label for="modal_central_documentos_pasta_chk_email_usuarios">&nbsp;&nbsp;Outros Usuários?&nbsp;</label>
+                        <div class="pull-left">
+                            <input type="checkbox" id="modal_central_documentos_pasta_chk_email_outros_usuarios" class="chk_notificacao_outros_usuarios checkbox_bootstrap_toggle">
+
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+
+                </div>
+
+                <div class="div_emails_adicionais row hidden">
+                    <div class="col-md-12">
+
+                        <div class="tab_email_usuarios_header table-responsive table" style="padding-bottom: 0px;">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">E-mails</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-left" style="margin-right: 0px; padding-right: 0px;">
+                                            <span>
+                                                <input type="text" class="edt_emails form-control"  style="width:320px;">
+                                                <div class="bp_div_drop" style="width:320px;" data-visible="false">
+                                                    <ul id="ul_emails" style="list-style: none;">
+                                                    </ul>
+
+                                                </div>
+                                            </span>
+                                        </th>
+                                        <th class="text-right" style="margin-right: 0px; padding-right: 0px">
+                                            <a class="btn_add_email btn btn-default">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </a>
+                                        </th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div style="display:block;width:100%; max-height:300px; overflow-x:hidden; overflow-y:auto;padding-right:10px;">
+                            <table class="tab_email_usuarios table">
+                                <tbody >
+                                    <tr template-row class="hidden">
+                                        <td>
+                                            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+                                            <span class="lbl_email">Lorem Ipsum</span>
+                                        </td>
+                                        <td class="text-right" style="margin-right: 0px; padding-right: 0px">
+                                            <a class="btn_remover_email btn btn-default">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane painel_historico">
+
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="cbo_usuario">Filtro por usuário</label>
+                                <select class="select-multi-column cbo_usuario" id="cbo_usuario" placeholder="Digite para pesquisar"></select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="cbo_acao">Filtro por ação</label>
+                                <select id="cbo_acao" class="form-control selectpicker cbo_acao" data-live-search="true">
+                                    <option value="-1" selected>Todas</option>
+                                    <option value="0">Inclusão</option>
+                                    <option value="1">Alteração</option>
+                                    <option value="2">Exclusão</option>
+                                    <option value="3">Movido</option>
+                                    <option value="4">Envio de Revisão</option>
+                                    <option value="5">Visualização</option>
+                                    <option value="6">Aprovado</option>
+                                    <option value="7">Reprovado</option>
+                                    <option value="8">Download</option>
+                                    <option value="9">Revisão Ativada</option>
+                                    <option value="10">Revisão Excluída</option>
+                                    <option value="11">Aprovação Estornada</option>
+                                    <option value="12">Reprovação Estornada</option>
+                                    <option value="13">Bloqueado</option>
+                                    <option value="14">Desbloqueado</option>
+                                    <option value="15">Substituído</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4" style="padding-bottom: 10px;">
+                            <div class="form-group">
+                                <label class="hidden-xs" style="width: 100%;">&nbsp;</label>
+                                <button type="button" class="btn btn-default btn_limpar_filtros">
+                                    <span class="glyphicon glyphicon-refresh"></span> Limpar Filtros
+                                </button>
+                            </div>
+                        </div>
+
+                        <table class="tab_historico table">
+                            <thead>
+                                <th class="hidden-xs">Ação</th>
+                                <th class="hidden-xs">Detalhes</th>
+                                <th class="hidden-xs">Usuário</th>
+                                <th class="hidden-xs">Data</th>
+                            </thead>
+                            <tbody>
+                                <tr template-row style="display: none">
+                                    <td class="visible-xs">
+                                        <div class="lbl_acao"></div>
+                                        <div class="lbl_detalhes"></div>
+                                        <div class="lbl_usuario"></div>
+                                        <div class="lbl_data"></div>
+                                    </td>
+                                    <td class="hidden-xs lbl_acao">{acao}</td>
+                                    <td class="hidden-xs lbl_detalhes">{detalhes}</td>
+                                    <td class="hidden-xs lbl_usuario">{usuario}</td>
+                                    <td class="hidden-xs lbl_data">{data}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <button class="btn_historico_assinatura btn btn-primary pull-right" style="display: none;">
+                        Histórico de Assinaturas
+                    </button>
+                </div>
+
+                <div style="position: relative; bottom: 20px;">
+                    <div style="padding: 10px; padding-bottom: 0px; padding-top: 0;" class="text-center div_carregar_mais_historico hidden">
+                        <span class="btn btn-link btn_carregar_mais_historico">
+                            <span class="txt_carregar_mais text-primary">Carregar mais registros</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane painel_referencias">
+                <div class="div_componente_referencias">
+                </div>
+            </div>
+
+
+            <div class="tab-pane  painel_revisoes" style="font-size: 13px">
+
+                <div id="info_versao_revisao" class="text-muted" style="margin: 15px 0; font-size: 16px;">
+                    <span class="fa fa-question-circle" aria-hidden="true"></span> 
+                    <span style="cursor: pointer;"
+                        onclick="alert_modal(
+                            'Informativo', 
+                            '<strong>Revisão do documento:</strong> a revisão é sempre incrementada quando o envio do arquivo é realizado, independente se foi aprovado ou não.'
+                            +'<br>'
+                            +'<br>'
+                            +'<strong>Versão do documento:</strong> a versão só é incrementada quando a revisão é aprovada. Quando a revisão não precisa de aprovação, a versão é incrementada automaticamente.'
+                        )"
+                    >
+                        Qual a diferença entre Revisão e Versão?
+                    </span>
+                </div>
+
+                <table class="tab_revisoes table table-striped table-hover">
+                    <thead class="hidden-xs">
+                        <th class="visible-xs" colspan="2">Revisão</th>
+                        <th class="hidden-xs" style="width: 12%">Revisão</th>
+                        <th class="hidden-xs th_aprovacao" style="width: 8%">Aprovação</th>
+                        <th class="hidden-xs" style="width: 10%">Versão</th>
+                        <th class="hidden-xs" style="width: 15%">Envio em</th>
+                        <th class="hidden-xs" style="width: 15%">Tamanho</th>
+                        <th class="hidden-xs" style="width: 15%">Autor</th>
+                        <th class="hidden-xs" class="text-center" style="width: 15%; text-align: center;">Observações</th>
+                        <th class="hidden-xs" style="width: 10%">&nbsp;</th>
+                    </thead>
+                    <tbody>
+                        <tr template-row style="display: none">
+                            <td class="visible-xs">
+                                <div class="row">
+                                    <div class="col-xs-2">
+                                        <div class=""><small>Rev.</small></div>
+                                        <div class="lbl_sequencia"></div>
+                                        <div>
+                                            <span class="lbl_ativa label label-success" style="display: none;">Ativa</span>
+                                            <span class="lbl_reprovada label label-danger" style="display: none;">Reprovada</span>
+                                            <span class="lbl_obsoleta label label-warning" style="display: none;">Obsoleta</span>
+                                            <span class="lbl_pendente label label-info" style="display: none;">Pendente</span>
+                                        </div>
+                                        <div class="lbl_versao">
+                                            <small>Versão</small> <br>
+                                            <span style="cursor:pointer;max-width:150px;display: block;white-space: pre;overflow: hidden;" contenteditable="false" >
+                                            {versao}
+                                        </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-10 small">
+
+                                        <div class="btn_group_opcoes btn-group pull-right">
+
+                                            <button type="button" class="btn_submenu btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Opções <span class="caret"></span>
+                                            </button>
+
+                                            <ul class="dropdown-menu">
+                                                <li class="text-muted small disabled">
+                                                    <a href="javascript:;" class="lbl_nome_arquivo"></a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="btn_substituir hidden">
+                                                        <span class="fa fa-cloud-upload-alt"></span> Substituir
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="btn_visualizar">
+                                                        <span class="fa fa-window-maximize"></span> Visualizar
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="btn_download">
+                                                        <span class="fa fa-download"></span> Download
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="btn_ativar_revisao">
+                                                        <span class="fa fa-check-square"></span> Ativar Revisão
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="btn_reenviar_revisao hidden">
+                                                        <span class="far fa-copy"></span> Nova revisão
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="btn_excluir_revisao hidden">
+                                                        <span class="fa fa-trash"></span> Excluir revisão
+                                                    </a>
+                                                </li>
+                                                <li role="separator" class="divider sep_avaliacao" style="display: none;"></li>
+                                                <li style="display: none;">
+                                                    <a href="javascript:;" class="btn_aprovar">
+                                                        <span class="fa fa-thumbs-up"></span> Aprovar
+                                                    </a>
+                                                </li>
+                                                <li style="display: none;">
+                                                    <a href="javascript:;" class="btn_reprovar">
+                                                        <span class="fa fa-thumbs-down"></span> Reprovar
+                                                    </a>
+                                                </li>
+                                                <li style="display: none;">
+                                                    <a href="javascript:;" class="btn_estornar_avaliacao">
+                                                        <span class="fa fa-step-backward"></span> Estornar
+                                                    </a>
+                                                </li>
+                                                <li role="separator" class="divider" style="display: none;"></li>
+                                                <li>
+                                                    <a href="javascript:;" class="btn_gerar_url_download">
+                                                        <span class="fa fa-link"></span> Link para download
+                                                    </a>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+
+                                        <div class="lbl_data_envio">{data_envio}</div>
+                                        <div class="lbl_tamanho">{tamanho}</div>
+                                        <div class="lbl_autor">{autor}</div>
+
+                                        <div class="td_aprovacao">
+                                            <span class="glyphicon glyphicon-thumbs-up text-success lbl_aprovado" style="display: none;"></span>
+                                            <span class="glyphicon glyphicon-thumbs-down text-danger lbl_reprovado" style="display: none;"></span>
+                                            <span class="label label-warning lbl_aprovacao_pendente" style="display: none;">Aprovação pendente</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="hidden-xs ">
+                                <span class="lbl_sequencia" >{sequencia}</span>
+                                <span class="lbl_ativa label label-success" style="display: none;">Ativa</span>
+                                <span class="lbl_reprovada label label-danger" style="display: none;">Reprovada</span>
+                                <span class="lbl_obsoleta label label-warning" style="display: none;">Obsoleta</span>
+                                <span class="lbl_pendente label label-info" style="display: none;">Pendente</span>
+                            </td>
+                            <td class="hidden-xs td_aprovacao">
+                                <div class="div_aprovacao hideextra" data-toggle="tooltip" data-html="true" style="width: 15px;">
+                                    <span class="hideextra glyphicon glyphicon-thumbs-up text-success lbl_aprovado" style="display: none;"></span>
+                                    <span class="glyphicon glyphicon-thumbs-down text-danger lbl_reprovado" style="display: none;"></span>
+                                    <span class="glyphicon glyphicon-time text-info lbl_aprovacao_pendente" style="display: none;"></span>
+                                </div>
+                            </td>
+                            <td class="hidden-xs lbl_versao">
+                                <span style="cursor:pointer;max-width:150px;display: block;white-space: pre;overflow: hidden;" contenteditable="false" >
+                                    {versao}
+                                </span>
+                            </td>
+                            <td class="hidden-xs lbl_data_envio">{data_envio}</td>
+                            <td class="hidden-xs lbl_tamanho">{tamanho}</td>
+                            <td class="hidden-xs lbl_autor">{autor}</td>
+                            <td class="hidden-xs lbl_observacoes text-center"><span class="glyphicon glyphicon-comment" template-field="observacao_revisao"></span></td>
+                            <td class="hidden-xs">
+                                <div class="btn_group_opcoes btn-group pull-right">
+
+                                    <button type="button" class="btn_submenu btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Opções <span class="caret"></span>
+                                    </button>
+
+                                    <ul class="dropdown-menu">
+                                        <li class="text-muted small disabled">
+                                            <a href="javascript:;" class="lbl_nome_arquivo"></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="btn_substituir hidden">
+                                                <span class="fa fa-cloud-upload-alt"></span> Substituir
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="btn_visualizar">
+                                                <span class="fa fa-window-maximize"></span> Visualizar
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="btn_download">
+                                                <span class="fa fa-download"></span> Download
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="btn_ativar_revisao">
+                                                <span class="fa fa-check-square"></span> Ativar Revisão
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="btn_reenviar_revisao hidden">
+                                                <span class="far fa-copy"></span> Nova revisão
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="btn_excluir_revisao hidden">
+                                                <span class="fa fa-trash"></span> Excluir revisão
+                                            </a>
+                                        </li>
+                                        <li role="separator" class="divider sep_avaliacao" style="display: none;"></li>
+                                        <li style="display: none;">
+                                            <a href="javascript:;" class="btn_aprovar">
+                                                <span class="fa fa-thumbs-up"></span> Aprovar
+                                            </a>
+                                        </li>
+                                        <li style="display: none;">
+                                            <a href="javascript:;" class="btn_reprovar">
+                                                <span class="fa fa-thumbs-down"></span> Reprovar
+                                            </a>
+                                        </li>
+                                        <li style="display: none;">
+                                            <a href="javascript:;" class="btn_estornar_avaliacao">
+                                                <span class="fa fa-step-backward"></span> Estornar
+                                            </a>
+                                        </li>
+                                        <li role="separator" class="divider" style="display: none;"></li>
+                                        <li>
+                                            <a href="javascript:;" class="btn_gerar_url_download">
+                                                <span class="fa fa-link"></span> Link para download
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

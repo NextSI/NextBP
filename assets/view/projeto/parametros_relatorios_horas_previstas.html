@@ -1,0 +1,116 @@
+<div class="modal bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal_projeto_selecionar_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_projeto_selecionar_label">Selecionar Projeto</h4>
+            </div>
+            <div class="modal-body">
+                
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label>Clientes</label>
+                            <select class="form-control select-multi-column cbo_cliente" placeholder="Todos">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="colmd-6 col-sm-12">
+                        <div class="form-group">
+                            <label>Projetos</label>
+                            <select class="form-control selectpicker cbo_projeto" data-live-search="true" multiple="" title="---Todos---">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label>Usuários</label>
+                            <select title="---Todos---"  class="form-control cbo_usuarios selectpicker" multiple data-live-search="true" style="margin-top: 5px; margin-right: 200px;">
+                            </select> 
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label>Tipo do Projeto</label>
+                            <select  class="form-control selectpicker cbo_tipo_projetos" data-live-search="true">
+                                <option value="" selected>-- Todos --</option>
+                                <option value="0">Aberto</option>
+                                <option value="1">Fechado</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">  
+                            <label for="">Data de Solicitação da Atividade (Inicial)</label>
+                            <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_inicio">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="">Data de Solicitação da Atividade (Final)</label>
+                            <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_fim">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="">Prazo Inicial da Atividade</label>
+                            <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_inicio_prazo">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="">Prazo Final da Atividade</label>
+                            <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_fim_prazo">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="">Apontamento Inicial da Atividade</label>
+                            <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_inicio_apontamento">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="">Apontamento Final da Atividade</label>
+                            <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_fim_apontamento">
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="">Mostrar Valores Totais</label>
+                            <input type="checkbox" class="chk_mostrar_hora_total">
+                        </div>
+                    </div> -->
+                    <div class="col-md-6 col-sm-12 hidden">
+                        <div class="form-group">
+                            <label for="">Mostrar Projeto</label>
+                            <input type="checkbox" class="chk_mostrar_projeto">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="">Mostrar Valores</label>
+                            <input type="checkbox" class="chk_mostrar_valores">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="">Exibir atividades sem apontamentos</label>
+                            <input type="checkbox" class="chk_exibir_atividades_sem_apontamentos">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="">Visualizar totais parciais</label>
+                            <input type="checkbox" class="chk_visualizar_totais_parciais">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn_cancelar">Cancelar</button>
+                <button type="button" class="btn_pesquisar btn btn-primary">Pesquisar</button>                
+            </div>
+        </div>
+    </div>
+</div>

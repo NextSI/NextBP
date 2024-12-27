@@ -1,0 +1,415 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="pull-right">
+            <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+            <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+            <button type="button" class="btn_excluir btn btn-danger">Excluir</button>                
+        </div>
+    </div>
+</div>
+
+<div class="scrollview panel panel-default" style="margin-bottom: 0px;">
+    <div class="panel-body div_dados_gerais">
+
+        <div class="row"> 
+            <div class="col-md-1">
+                <div class="form-group">
+                    <span class="preview_logo" style="padding-top: 7px; padding-bottom: 0px;" ><img style=" max-height: 60px; max-width: 180px" class="carrega_img"/></span>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="form-group">
+                <span class="anexo_base_button label_mobilefile col-xs-12">
+                    <input type="file" class="files col-xs-12 mobile_inputfile" name="files[]" />
+                    <span class="anexo_base_button_icon glyphicon glyphicon-open"></span>
+                    <!-- <span class="anexo_base_button_text">Nenhum Arquivo Selecionado</span> -->
+                </span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="modal_usuario_chk_bloqueado">Bloqueado</label>
+                    <div style="margin-top:3px; padding-left: 0px; margin-left: 0px;">
+                        <input id="modal_usuario_chk_bloqueado" class="chk_bloqueado checkbox_bootstrap_toggle" type="checkbox" value="">
+                    </div> 
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="chk_alterar_senha_proximo_login">Alterar senha no próximo login</label>
+                    <div style="margin-top: 3px;">
+                        <input type="checkbox" class="chk_alterar_senha_proximo_login form-control checkbox_bootstrap_toggle" id="chk_alterar_senha_proximo_login">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row"> 
+
+            <div class="col-md-6">   
+                <div class="row">
+                    <div class="col-md-2 div_id_usuario">
+                        <div class="form-group">
+                            <label for="modal_usuario_edt_id" class="lbl_id_usuario">Id</label>
+                            <input type="text" class="edt_id form-control" id="modal_usuario_edt_id" maxlength="5"> 
+                        </div>
+                    </div> 
+                    <div class="col-md-10 div_nome_usuario">   
+                        <div class="form-group">
+                            <label for="modal_usuario_edt_nome" class="lbl_nome_usuario" >Nome <span class="campo_obrigatorio" style="color:red">*</span></label>
+                            <input type="text"  required class="edt_nome form-control" id="modal_usuario_edt_nome" maxlength="150">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row"> 
+                    <div class="col-md-12 col-lg-6">   
+                        <div class="form-group">
+                            <label for="modal_usuario_edt_username">Usuário <span class="campo_obrigatorio" style="color:red">*</span></label>
+                            <input type="text" class="edt_username form-control" maxlength="150" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-lg-6">
+                        <div class="form-group" id="modal_usuario_div_senha">                            
+                            <label for="modal_usuario_edt_senha">Senha <span class="campo_obrigatorio" style="color:red">*</span></label>
+                            <div class="input-group">
+                                <input type="password" class="edt_senha form-control" placeholder="Digite a senha" maxlength="150" autocomplete="new-password">
+                                <span class="input-group-btn">
+                                    <button class="btn_exibir_senha btn btn-default" type="button">
+                                        <span id="modal_usuario_ico_password" class="ico_senha glyphicon glyphicon-eye-open"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"> 
+                    <div class="col-md-6">   
+                        <div class="form-group">
+                            <label for="modal_usuario_edt_email">E-mail</label>
+                            <input type="text" class="edt_email form-control" maxlength="150" autocomplete="false">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Usuário LDAP</label>
+                            <div class="input-group">
+                                <select id="cbo_usuario_ldap" class="form-control selectpicker cbo_usuario_ldap show-tick" data-live-search="true" title="Vincular Usuário LDAP">
+                                </select>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn_limpar btn-default">
+                                        <span class="fa fa-trash"></span>
+                                    </button>
+                                </div>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn_listar_usuarios_ldap btn btn-default">
+                                        <span class="fa fa-cloud-download-alt"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                                                     
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="edt_cpf">CPF</label>
+                            <input type="text" class="edt_cpf form-control" maxlength="18" id="edt_cpf" placeholder="CPF">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="edt_codigo_externo">Código Externo</label>
+                            <input type="text" class="edt_codigo_externo form-control" maxlength="50" id="edt_codigo_externo" placeholder="Código Externo">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="modal_usuario_cbo_area" class="modal_usuario_cbo_area">Área<span class="campo_obrigatorio" style="color:red">*</span></label>
+                            <div class="input-group">
+                                <select id="modal_usuario_cbo_area" class="cbo_area form-control">
+                                </select>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn_area_novo btn btn-default">
+                                        <span class="glyphicon glyphicon-plus"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="modal_usuario_cbo_calendario_trabalho" class="modal_usuario_cbo_calendario_trabalho">Calendário de trabalho <span class="campo_obrigatorio" style="color:red">*</span></label>
+                            <div class="input-group">
+                                <select id="modal_usuario_cbo_calendario_trabalho" class="cbo_calendario_trabalho form-control">
+                                </select>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn_calendario_trabalho_novo btn btn-default">
+                                        <span class="glyphicon glyphicon-plus"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="edt_telefone1">Telefone 1</label>
+                            <input type="text" class="edt_telefone1 form-control" maxlength="15" id="edt_telefone1" placeholder="Telefone">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="edt_telefone2">Telefone 2</label>
+                            <input type="text" class="edt_telefone2 form-control" maxlength="15" id="edt_telefone2" placeholder="Telefone">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="edt_telefone3">Telefone 3</label>
+                            <input type="text" class="edt_telefone3 form-control" maxlength="15" id="edt_telefone3" placeholder="Telefone">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="edt_telefone4">Telefone 4</label>
+                            <input type="text" class="edt_telefone4 form-control" maxlength="15" id="edt_telefone4" placeholder="Telefone">
+                        </div>
+                    </div>
+                </div>  
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="edt_data_nascimento">Data de Nascimento</label>
+                            <input type="date" class="edt_data_nascimento form-control" id="edt_data_nascimento" placeholder="Data de Nascimento">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="edt_data_admissao">Data de Admissão</label>
+                            <input type="date" class="edt_data_admissao form-control" id="edt_data_admissao" placeholder="Data de Admissão">
+                        </div>
+                    </div>
+                </div>
+
+                <label>Grupos do Usuário</label>
+                <div class="div_grupo_usuarios">
+                </div>
+
+                <div class="form-group div_grupo_motivo" id="div_grupo_motivo">
+                    <div>
+                         <table id='tbl_grupo_motivo' class="table-responsive table tab_listagem_grupo_motivo">
+                            <thead align="right">
+
+                                <th>Grupo de motivo do chamado</th>
+                                <th>
+                                    <div class="pull-right">
+                                        <button type="button" class="btn_incluir_grupo_motivo btn btn-default">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                    </div>
+                                </th>
+                                
+                            </thead>
+                            <tbody>
+                                <tr template-row style="display: none;">
+                                    <td template-field="nome_grupo_motivo">{nome_grupo_motivo}</td>
+                                    <td>
+                                        <div class="pull-right">
+                                            <button type="button" class="btn_deletar_grupo_motivo btn btn-default">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr> 
+                            </tbody>
+                        </table>
+                    </div> 
+                </div>
+            </div>                
+
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-2 div_chk_admin hidden">
+                        <div class="form-group">
+                            <label for="modal_usuario_chk_admin">
+                                Administrador
+                            </label>
+                            <div style="margin-top:3px; padding-left: 0px; margin-left: 0px;">
+                                <input id="modal_usuario_chk_admin" class="chk_admin checkbox_bootstrap_toggle" type="checkbox" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group" id="div_nivel">
+                            <label for="edt_nivel">Nível <span class="campo_obrigatorio" style="color:red">*</span></label>
+                            <input type="number" min="1" max="365" class="edt_nivel form-control" id="edt_nivel" placeholder="Digite o nível">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="cbo_tipo" class="lbl_tipo">Tipo<span class="campo_obrigatorio" style="color:red">*</span></label>
+                            <select class="cbo_tipo form-control" id="cbo_tipo">
+                                <option value="">Nenhum</option>
+                                <option value="2">Colaborador</option>
+                                <option value="1" selected>Cliente</option>
+                                <option value="4">Fornecedor</option>
+                                <option value="5">Organização</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-3">
+                        <div class="form-group">
+                            <label>Idioma</label>
+                            <select id="cbo_idiomas" class="cbo_idiomas form-control"></select>                        
+                        </div>           
+                    </div>            -->
+                </div>    
+
+
+                 <div class="div_empresa form-group" id="div_empresa">
+                    <table class="tab_listagem_empresa table">
+                        <thead>
+                            <tr>
+                                <th>Empresa (Nome)<span class="campo_obrigatorio" style="color:red">*</span></th>
+                                <th>Razão Social</th>
+                                <th>
+                                    <div class="pull-right">
+                                        <button type="button" class="btn_incluir_empresa btn btn-default">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr template-row style="display: none;">
+                                <td template-field="nome_fantasia">{nome_fantasia}</td>
+                                <td template-field="razao_social">{razao_social}</td>
+                                <td>
+                                    <div class="pull-right">
+                                        <button type="button" class="btn_deletar_empresa btn btn-default">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>                
+                        </tbody>
+                    </table>     
+                </div>
+
+
+
+                <div class="div_cliente form-group" id="div_cliente">
+                    <table class="tab_listagem_cliente table">
+                        <thead>
+                            <tr>
+                                <th>Cliente (Nome) <span class="campo_obrigatorio" style="color:red">*</span></th>
+                                <th>Razão Social</th>
+                                <th>
+                                    <div class="pull-right">
+                                        <button type="button" class="btn_incluir_cliente btn btn-default">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr template-row style="display: none;">
+                                <td template-field="nome_fantasia">{nome_fantasia}</td>
+                                <td template-field="razao_social">{razao_social}</td>
+                                <td>
+                                    <div class="pull-right">
+                                        <button type="button" class="btn_deletar_cliente btn btn-default">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>                
+                        </tbody>
+                    </table>     
+                </div>  
+
+                <div class="div_fornecedor form-group" id="div_fornecedor">
+                    <table class="tab_listagem_fornecedor table">
+                        <thead>
+                            <tr>
+                                <th>Fornecedor (Nome)<span class="campo_obrigatorio" style="color:red">*</span></th>
+                                <th>Razão Social</th>
+                                <th>
+                                    <div class="pull-right">
+                                        <button type="button" class="btn_incluir_fornecedor btn btn-default">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr template-row style="display: none;">
+                                <td template-field="nome_fantasia">{nome_fantasia}</td>
+                                <td template-field="razao_social">{razao_social}</td>
+                                <td>
+                                    <div class="pull-right">
+                                        <button type="button" class="btn_deletar_fornecedor btn btn-default">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>                
+                        </tbody>
+                    </table>     
+                </div>  
+
+                <div class="div_prospect form-group" id="div_prospect">
+                    <table class="tab_listagem_prospect table">
+                        <thead>
+                            <tr>
+                                <th>Organização (Nome)<span class="campo_obrigatorio" style="color:red">*</span></th>
+                                <th>Razão Social</th>
+                                <th>
+                                    <div class="pull-right">
+                                        <button type="button" class="btn_incluir_prospect btn btn-default">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr template-row style="display: none;">
+                                <td template-field="nome_fantasia">{nome_fantasia}</td>
+                                <td template-field="razao_social">{razao_social}</td>
+                                <td>
+                                    <div class="pull-right">
+                                        <button type="button" class="btn_deletar_prospect btn btn-default">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>                
+                        </tbody>
+                    </table>     
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="edt_assinatura">Assinatura E-mail</label>
+                            <textarea 
+                                class="form-control edt_assinatura" name="edt_assinatura" placeholder="Assinatura E-mail" rows="2" required></textarea>
+                        </div>                                
+                    </div>                                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

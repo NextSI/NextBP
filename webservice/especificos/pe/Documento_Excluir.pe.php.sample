@@ -1,0 +1,14 @@
+<?php
+
+use \Sys\Util;
+use \Sys\Basic;
+use \Sys\Validation;
+use \Sys\DB;
+
+function documento_excluir_antes($documento_model) {
+
+};
+
+function documento_excluir_depois($documento_model) {
+
+};

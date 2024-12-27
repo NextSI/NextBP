@@ -1,0 +1,150 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Relatório de Horas Previstas X Realizadas</li>
+</ol>
+
+<!-- LISTAGEM -->
+<div>
+
+    <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+        <div class="btn-group" style="padding-right: 10px;">
+            <div class="btn-group">
+                <button type="button" class="btn_parametros btn btn-primary">
+                    <span class="glyphicon glyphicon-filter"></span> Parâmetros
+                </button>
+                <button type="button" class="btn btn-default btn_excel">
+                    <span class="fa fa-file-excel"></span> Gerar Excel
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="div_relatorios">
+
+    </div>
+
+    <div class="panel div_template" style="display: none; padding-top: 0; padding-bottom: 0px">
+        <table class="tab_body table table-striped table-hover">
+            <thead class="tab_cabecalho">
+              <tr>
+                <th template-field="cliente_nome" colspan="2" style="font-size: 30px;"></th>
+                <th class="text-left" style="min-width: 135px;"></th>
+                <th class="text-left" style="min-width: 135px;"></th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+                <th class="text-right valor_hora"></th>
+                <th class="text-right valor_previsto"></th>
+                <th class="text-right valor_trabalhado"></th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+              </tr>
+              <tr>
+                   <th template-field="projeto_nome" rowspan="2" colspan="2" style="font-size: 30px;"></th>
+                   <th class="text-center" style="min-width: 135px;">Total Horas do Projeto</th>
+                   <th class="text-center" style="min-width: 135px;">Total Horas Trabalhadas</th>
+                   <th class="text-center">Saldo Horas Geral</th>
+                   <th class="text-center">Total Valor Previsto</th>
+                   <th class="text-center">Total Valor Trabalhado</th>
+                   <th class="text-center">Saldo Valor Geral</th>
+                   <th class="text-center"></th>
+                   <th class="text-right valor_hora"></th>
+                   <th class="text-right valor_previsto"></th>
+                   <th class="text-right valor_trabalhado"></th>
+                   <th class="text-center"></th>
+                   <th class="text-center"></th>
+                   <th class="text-center"></th>   
+              </tr>
+              <tr>
+                   <th class="text-center" template-field="total_horas_projeto"></th>
+                   <th class="text-center" style="min-width: 135px;" template-field="total_horas_trabalhadas"></th>
+                   <th class="text-center" style="min-width: 135px;" template-field="total_horas_geral"></th>
+                   <th class="text-center" template-field="total_valor_previsto"></th>
+                   <th class="text-center" template-field="total_valor_trabalhado"></th>
+                   <th class="text-center" template-field="saldo_valor_geral"></th>
+                   <th class="text-center"></th>
+                   <th class="text-right valor_hora"></th>
+                   <th class="text-right valor_previsto"></th>
+                   <th class="text-right valor_trabalhado"></th>
+                   <th class="text-center"></th>
+                   <th class="text-center"></th>
+                   <th class="text-center"></th>
+              </tr>
+             </thead>
+             <tbody>
+             <tr class="texto_template" style="display: none;">
+                <td class="text-left"><small>Apontamento</small></td>
+                <td class="text-left" style="min-width: 135px;"><small>Técnico</small></td>
+                <td class="text-left" style="min-width: 135px;"><small>Responsável</small></td>
+                <td class="text-center"><small>Descrição da Atividade</small></td>
+                <td class="text-center"><small>Descrição do Apontamento</small></td>
+                <td class="text-center"><small>Horas Trabalhadas</small></td>
+                <td class="text-center"><small>Horas Traslado</small></td>
+                <td class="text-center"><small>Horas Previstas</small></td>
+                <td class="text-center"><small>Horas Totais</small></td>
+                <td class="text-right valor_hora"><small>Valor Hora</small></td>
+                <td class="text-right valor_previsto"><small>Valor Previsto</small></td>
+                <td class="text-right valor_trabalhado"><small>Valor Trabalhado</small></td>
+                <td class="text-center"><small>Data Solicitação</small></td>
+                <td class="text-center"><small>Data Início</small></td>
+                <td class="text-center"><small>Data Prazo</small></td>
+              </tr>
+              <tr template-row="row_atividade" style="display: none;">
+                   <th template-field="atividade_nome"></th>
+                   <td class="text-left" style="min-width: 135px;">Horas Previstas: <span template-field="horas_previstas_atividade"></span></td>
+                   <td class="text-left" style="min-width: 135px;">Horas Trabalhadas: <span template-field="horas_trabalhadas_atividade"></span></td>
+                   <td class="text-left">Saldo Horas: <span template-field="saldo_horas_atividade"></span></td>
+                   <td class="text-left">Valor Previsto: <span template-field="valor_previsto_atividade"></span></td>
+                   <td class="text-left">Valor Trabalhado: <span template-field="valor_trabalhado_atividade"></span></td>
+                   <td class="text-left">Saldo Valor: <span template-field="saldo_valor_atividade"></span></td>
+                   <td class="text-center"></td>
+                   <td class="text-center"></td>
+                   <td class="text-right valor_hora"></td>
+                   <td class="text-right valor_previsto"></td>
+                   <td class="text-right valor_trabalhado"></td>
+                   <td class="text-center"></td>
+                   <td class="text-center"></td>
+                   <td class="text-center"></td>
+              </tr>
+              <tr template-row="row_apontamento" style="display: none;">
+                 <td class="text-left hidden-xs" template-field="apontamento"></td>
+                    <td class="text-left hidden-xs" template-field="tecnico"></td>
+                    <td class="text-left hidden-xs" template-field="responsavel"></td>
+                    <td class="text-center hidden-xs">
+                        <span class="glyphicon glyphicon-comment" template-field="descricao_atividade" data-html="true"></span>
+                    </td>
+                    <td class="text-center hidden-xs">
+                        <span class="glyphicon glyphicon-comment" template-field="descricao" data-html="true"></span>
+                    </td>
+                    <td class="text-center hidden-xs small" template-field="horas_trabalhadas"></td>
+                    <td class="text-center hidden-xs small" template-field="horas_traslado"></td>
+                    <td class="text-center hidden-xs small" template-field="horas_previstas"></td>
+                    <td class="text-center hidden-xs small" template-field="horas_totais"></td>
+                    <td class="text-right hidden-xs valor_hora small" template-field="valor_hora"></td>
+                    <td class="text-right hidden-xs valor_previsto small" template-field="valor_previsto"></td>
+                    <td class="text-right hidden-xs valor_trabalhado small" template-field="valor_trabalhado"></td>
+                    <td class="text-center hidden-xs small small" template-field="data_solicitacao"></td>
+                    <td class="text-center hidden-xs small" template-field="data_inicio"></td>
+                    <td class="text-center hidden-xs small" template-field="data_prazo"></td>
+              </tr>
+              <tr class="tab_foot bg-warning" style="display: none;">
+                <td class="text-left bg-warning">Totais</td>
+                <td class="bg-warning">&nbsp;</td>
+                <td class="bg-warning">&nbsp;</td>
+                <td class="bg-warning">&nbsp;</td>
+                <td class="bg-warning">&nbsp;</td>
+                <td class="text-center small bg-warning" template-field="horas_trabalhadas_total">000:00</td>
+                <td class="text-center small bg-warning" template-field="horas_traslado_total">000:00</td>
+                <td class="bg-warning">&nbsp;</td>
+                <td class="text-center small bg-warning" template-field="horas_totais_total">000:00</td>
+                <td class="bg-warning">&nbsp;</td>
+                <td class="bg-warning">&nbsp;</td>
+                <td class="text-right small bg-warning valor_trabalhado_total" template-field="valor_trabalhado_total">R$0,00</td>
+              </tr>
+             </tbody>
+         </table>
+    </div>
+</div>
+<!-- /LISTAGEM -->

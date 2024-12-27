@@ -1,0 +1,7 @@
+order deny,allow
+
+# Bloqueia acessos
+deny from all
+
+# Libera acesso para a Next SI
+allow from 179.174.56.168

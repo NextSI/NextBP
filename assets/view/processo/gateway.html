@@ -1,0 +1,119 @@
+<!-- MODAL DETALHE -->
+<div class="modal bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal_processo_gateway_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_processo_gateway_label">Gateway <span class="lbl_titulo_gateway small"></span></h4>
+                <div class="lbl_titulo_id pull-left text-muted small" style="left: 12px; position: absolute;"></div>
+            </div>
+            <div class="modal-body">
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                        <div class="pull-right">
+                            <!-- -->
+                        </div>
+                        <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                            <li class="active lbl_tab_geral">
+                                <a id="modal_processo_gateway_menu_geral" href="#modal_processo_gateway_geral" role="tab" data-toggle="tab">Geral</a>
+                            </li>
+                            <li class="lbl_tab_fluxo">
+                                <a id="modal_processo_gateway_menu_fluxo" href="#modal_processo_gateway_fluxo" role="tab" data-toggle="tab">Destino</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="panel-body">
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            
+                            <div class="tab-pane active" id="modal_processo_gateway_geral">
+                                
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <label for="modal_processo_gateway_edt_descricao">Descrição</label>
+                                            <input type="text" class="edt_descricao form-control" id="modal_processo_gateway_edt_descricao" maxlength="150">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="modal_processo_gateway_cbo_tipo">Tipo</label>
+                                            <select class="cbo_tipo form-control selectpicker" id="modal_processo_gateway_cbo_tipo">
+                                                <option value="0">Exclusivo</option>
+                                                <option value="1">Paralelo</option>
+                                                <option value="2">Inclusivo</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>                            
+                            </div>
+
+                            <div class="tab-pane" id="modal_processo_gateway_fluxo">
+                                
+                                <div class="form-group">
+                                    <label for="chk_bloqueio_decisao">Bloquear alteração de decisão do gateway</label>
+                                    <div class="checkbox" style="margin-top:0px; padding-left: 0px; margin-left: 0px;">
+                                        <input type="checkbox" class="checkbox_bootstrap_toggle chk_bloqueio_decisao form-control">
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <table class="tab_fluxo table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Elemento</th>
+                                                    <th class="coluna_opcional hidden" width="130px">Opcional<span class="glyphicon glyphicon-question-sign" title="Utilizado em gateways inclusivos"></span></th>
+                                                    <th class="evento" width="50px">&nbsp;</th>
+                                                    <th width="50px" class="text-right" style="margin-right: 0px; padding-right: 0px">
+                                                        <button class="btn_add_fluxo btn btn-default">
+                                                            <span class="glyphicon glyphicon-plus"></span>
+                                                        </button>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr template-row style="display: none">
+                                                    <td>
+                                                        <select template-field="elemento" class="cbo_fluxo_elemento form-control">
+                                                        </select>
+                                                    </td>
+                                                    <td class="coluna_opcional hidden">
+                                                        <input template-field="opcional">
+                                                    </td>
+                                                    <td class="text-right evento" style="margin-right: 0px; padding-right: 0px">
+                                                        <button class="btn_evento btn btn-default">
+                                                            <span class="glyphicon glyphicon-wrench"></span>
+                                                        </button>
+                                                    </td>
+                                                    <td class="text-right" style="margin-right: 0px; padding-right: 0px">
+                                                        <button class="btn_fluxo_remover btn btn-default">
+                                                            <span class="glyphicon glyphicon-trash"></span>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>             
+
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

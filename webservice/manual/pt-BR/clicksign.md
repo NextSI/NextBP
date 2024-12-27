@@ -1,0 +1,66 @@
+# Clicksign - Assinatura Eletrônica de Documentos
+
+No Next BP existe a possibilidade de integração com a ferramenta Clicksign de assinaturas eletrônicas.
+
+## Onde eu configuro meu "Clicksign" com o Next BP?
+
+**Para habilitar esta integração é necessário que você (administrador do sistema) possua uma conta com API de integração ativa no Clicksign.**
+
+Posteriormente, no menu de Configurações você deverá configurar a comunicação com o Clicksign. Segue exemplo abaixo:
+
+* Configurações > Clicksign Assinaturas
+
+![]([PATH_IMG]/BPM2218_clicksign_assinaturas.png)
+
+Onde:
+
+* Clicksing API URL: Endereço utilizado pela API do clicksign
+
+* Access Token: Token gerado pelo Clicksign para realizar requisições na API
+
+* Diretório para armazenamento: Nome do diretório que será criado dentro do Clicksign 
+
+* Wenhook URL Next BP: Chave de segurança para validar se o usuário tem permissão para consumir a API e permitir o acesso dos Webhooks(disponibilizado pelo Clicksign)
+
+* Habilitar assinaturas de documentos com o Clicksign: permite ou não realizar o envio de documentos ao clicksign para solicitar a assinatura eletrônica
+
+## Como eu solicito a assinatura de documentos?
+
+Caso a opção "Habilitar assinaturas de documentos com o Clicksign" esteja igual a "Sim", então ao entrar no módulo GED e pressionar o botão direito em cima de um documento será exibido o menu "Clicksign (Assinaturas)".
+
+![]([PATH_IMG]/BPM2218_menu_clicksign.png)
+
+Ao clicar no novo menu o usuário será direcionado a tela de Histórico de Integrações pertinentes ao documento em questão.
+
+![]([PATH_IMG]/BPM2218_historico_documentos.png)
+
+Onde:
+
+* Data de Envio: Data de Envio do documento ao Clicksign
+* Situação do Documento: Como está a situação do documento (assinaturas) no Clicksign. (Andamento, Cancelado ou Pendente)
+* Nome do arquivo
+* Signatário: Nome do(s) Signatário(s) para aprovação ou rejeição do documento
+* A última coluna contém 2 botões exibidos em momentos distintos, sendo:
+    * Enquanto o documento estiver com a situação Andamento será possível efetuar o cancelamento do mesmo.
+    * Caso o documento tenha sindo Finalizado ou Cancelado (ou seja, aprovado/rejeitado por todos) será possível efetuar o download do mesmo
+
+Essa tela também possibilita ao usuário um botão para inserção dos signatários para o documento (Botão Solicitar Assinaturas). Clicando nesse botão o usuário irá se deparar com a tela abaixo:
+
+![]([PATH_IMG]/BPM2218_solicitar_assinaturas.png)
+
+Onde:
+
+* Email: email do signatário que irá realizar a aprovação
+* Assinar como: tipo da assinatura
+* Autenticar como: tipo de autenticação (Email ou SMS)
+* Nome Completo
+* CPF
+* Data de Nascimento
+
+Nas solicitações de Processo foi desenvolvido um novo botão para que seja possível efetuar também a assinatura do documento, onde seu comportamento é o mesmo presente no GED.
+
+![]([PATH_IMG]/BPM2218_solicitacao_signatarios.png)
+
+## Considerações Finais:
+
+Documentos com extensões diferentes de doc, docx ou pdf não permitirão a comunicação com o Clicksign pois o mesmo só trabalha com esses três padrões de extensão de arquivo

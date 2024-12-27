@@ -1,0 +1,42 @@
+<div class="modal bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal_feriado_parametros_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_feriado_parametros_label">Pesquisar Feriado</h4>
+            </div>
+            <div class="modal-body">
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="edt_nome_feriado">Nome do feriado</label>
+                            <input  type="text" class="form-control edt_nome_feriado" name="nome_feriado">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group div_calendario_trabalho hidden">
+                            <label for="cbo_calendario_trabalho">Calendário de trabalho</label><br />
+                            <div class="btn-group" style="width: 100%">
+                                <select class="form-control cbo_calendario_trabalho" data-live-search="true" multiple data-selected-text-format="count > 1" title="Selecione o calendário" data-toggle="tooltip" data-actions-box="true" data-deselect-all-text="Nenhum" data-select-all-text="Todos">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="edt_data_feriado">Data do feriado</label>
+                            <input  type="date" min="1900-01-01" class="form-control edt_data_feriado" name="edt_data_feriado">                             
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_pesquisar btn btn-primary">Pesquisar</button>                
+            </div>
+        </div>
+    </div>
+</div>

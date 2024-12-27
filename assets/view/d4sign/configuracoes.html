@@ -1,0 +1,81 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">Configurações</div>
+    <div class="panel-body">
+        
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                
+                <div class="form-group">
+                    <label for="cbo_api_url">D4Sign API URL:</label>
+                    <select id="cbo_api_url" class="form-control cbo_api_url">
+                        <option value="https://secure.d4sign.com.br/api/v1/">https://secure.d4sign.com.br/api/v1/</option>
+                        <option value="https://sandbox.d4sign.com.br/api/v1/">https://sandbox.d4sign.com.br/api/v1/</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="lbl_access_token">Token:</label>
+                    <input id="edt_access_token" type="text" class="form-control edt_token" maxlength="500"> 
+                </div>
+
+                <div class="form-group">
+                    <label for="lbl_crypt_key">Crypt Key:</label>
+                    <input id="edt_crypt_key" type="text" class="form-control edt_crypt_key" maxlength="500"> 
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-xs-12">
+
+                        <div class="form-group">
+                            <label for="cbo_cofre">Cofre:</label>
+                            <div class="input-group">
+                                <select id="cbo_cofre" class="form-control cbo_cofre">
+                                </select>
+                                <span class="input-group-btn">
+                                    <button class="form-control btn_listar_cofres" type="button">
+                                        <img src="assets/img/icones_bp/process.svg" data-original-title="" title="" style="cursor: pointer;">
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="form-group">
+                    <label for="edt_cofre">Cofre:</label>
+                    <div class="input-group">
+                        <input id="edt_cofre" type="text" class="form-control edt_cofre" maxlength="500">
+                        <span class="input-group-btn">
+                            <button class="form-control btn_retornar_cofre" type="button"><img src="assets/img/icones_bp/process.svg" data-original-title="" title="" style="cursor: pointer;"></button>
+                        </span>
+                    </div>
+                </div> -->
+
+                <div class="form-group">
+                    <label>Webhook URL Next BP:</label>
+                    <div class="lbl_webhook_url_nextbp"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="edt_hmac_sha256_secret">Webhook HMAC SHA256 Secret:</label>
+                    <input id="edt_hmac_sha256_secret" type="text" class="form-control edt_hmac_sha256_secret" maxlength="500">
+                </div>
+
+                <hr />
+                <div class="form-group">
+                    <label for="chk_ativo">Habilitar assinaturas de documentos com o D4Sign</label><br>
+                    <input id="chk_ativo" type="checkbox" class="chk_ativo checkbox_bootstrap_toggle">
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <div class="panel-footer">
+        <button class="btn_salvar btn btn-primary">Salvar</button>
+        <a manual="d4sign" class="btn btn-default" role="button">
+            <span class="glyphicon glyphicon-question-sign"></span> Ajuda
+        </a>
+    </div>
+</div>

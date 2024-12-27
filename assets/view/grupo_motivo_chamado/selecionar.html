@@ -1,0 +1,50 @@
+<div class="modal bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal_produto_selecionar_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_produto_selecionar_label">Selecionar Grupo de Motivo do Chamado</h4> 
+            </div>
+            <div class="modal-body">
+           
+                <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <label for="modal_grupo_edt_nome">Nome do Grupo de Motivo</label>
+                            <input type="text" class="edt_nome_grupo form-control" id="modal_grupo_edt_nome" maxlength="45" placeholder="Filtro por Nome do Grupo de Motivo">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="table-responsive">
+                    <table class="tab_listagem table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>                            
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- itens -->
+                            <tr template-row style="display: none;">
+                                <td template-field="nome">{nome}</td>                            
+                                <td template-buttons="actions">
+                                    <div class="btn-group pull-right">
+                                        <button type="button" class="btn_selecionar btn btn-primary">
+                                            <span class="glyphicon glyphicon-ok"></span> Selecionar
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,107 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Faturamento do Projeto</li>
+</ol>
+
+<div class="row">     
+    <div class="col-sm-9 col-md-9 col-lg-10">
+        <div class="row" style="margin-bottom:10px">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <label for="edt_tecnico_de">Técnico de</label>
+                <div class="input-group">
+                    <input type="text" class="form-control edt_tecnico_de" placeholder="Digite o código do técnico" maxlength="50">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default busca_tecnico" type="button"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>                   
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <label for="edt_tecnico_ate">Técnico até</label>
+              <div class="input-group">
+                    <input type="text" class="form-control edt_tecnico_ate" placeholder="Digite o código do técnico" maxlength="50">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default  busca_tecnico" type="button"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>                
+            </div>
+        </div>  
+        <div class="row" style="margin-bottom:10px">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <label for="select_cliente_de">Cliente de</label>
+                <div class="input-group">
+                        <input type="text" class="form-control edt_cliente_de" placeholder="Digite o código do cliente" maxlength="50">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default busca_cliente" type="button"><i class="fa fa-search"></i></button>
+                        </span>
+                </div>                   
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <label for="select_cliente_ate">Cliente até</label>
+              <div class="input-group">
+                        <input type="text" class="form-control edt_cliente_ate" placeholder="Digite o código do cliente" maxlength="50">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default  busca_cliente" type="button"><i class="fa fa-search"></i></button>
+                        </span>
+                </div>                
+            </div>
+        </div>
+        <div class="row" style="margin-bottom:10px">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <label for="edt_projeto_de">Projeto de</label>
+                <div class="input-group">
+                        <input type="text" class="form-control edt_projeto_de" placeholder="Digite o código do Projeto" maxlength="50">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default busca_projeto" type="button"><i class="fa fa-search"></i></button>
+                        </span>
+                </div>                   
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <label for="edt_projeto_ate">Projeto até</label>
+              <div class="input-group">
+                        <input type="text" class="form-control edt_projeto_ate" placeholder="Digite o código do Projeto" maxlength="50">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default  busca_projeto" type="button"><i class="fa fa-search"></i></button>
+                        </span>
+                </div>                
+            </div>
+        </div>          
+
+        <div class="row" style="margin-bottom:10px">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <label>Data Inicial</label>
+                <input type="date" class="form-control edt_data_inicio">
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <label>Data Final</label>
+                <input type="date" class="form-control edt_data_fim">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="form-group col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <label for="modal_tipo_projetos_select_tipo_projeto">Tipo do Projeto</label>
+                <select id="modal_tipo_projetos_select_tipo_projeto" class="cbo_tipo_projeto form-control selectpicker" data-live-search="true">
+                    <option value="0">Aberto</option>
+                    <option value="1">Fechado</option>
+                    <option selected value="-1">Ambos</option>
+                </select>
+            </div>
+            <div class="form-group col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <label for="modal_tipo_projetos_select_mostrar_atividades">Mostrar Atividades</label>
+                <input class="form-control check_acao checkbox_bootstrap_toggle chk_mostrar_atividades" type="checkbox"></td>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <button type="button" class="btn btn-default btn_fechar">
+                    <span class="glyphicon glyphicon-remove"></span> Fechar
+                </button>
+                <button type="button" class="btn btn-primary btn_gera_relatorio">
+                    <span class="glyphicon glyphicon-search"></span> Gerar Relatório
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

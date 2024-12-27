@@ -1,0 +1,223 @@
+<div class="modal bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal_configuracao_email_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_configuracao_email_detalhes_label">Configuração de E-mail</h4>
+            </div>
+            <div class="modal-body">
+
+
+                <div class="panel panel-default painel_detalhes">
+
+                    <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                        <div class="pull-right">
+                            <!-- -->
+                        </div>
+                        <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                            <li class="active lbl_tab_geral">
+                                <a id="modal_geral_tab" href="#modal_geral" role="tab" data-toggle="tab">Contas</a>
+                            </li>
+                            <li class="lbl_tab_interacao">
+                                <a id="modal_interacao_tab" href="#modal_interacao" role="tab" data-toggle="tab">Interações</a>
+                            </li>
+                            <li class="lbl_tab_envio">
+                                <a id="modal_envio_tab" href="#modal_envio" role="tab" data-toggle="tab">Envio</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="panel-body">
+                         <!-- Tab panes -->
+                        <div class="tab-content">
+
+                            <div class="tab-pane active  frm_detalhes" id="modal_geral">
+
+                                <div class="row" style="margin-bottom:15px;">                
+                                    <div class="col-md-6 col-sm-6">                                        
+                                        <div class="form-group ">
+                                            <label>E-mail</label>
+                                            <input id='edt_email' class="edt_email form-control" type="text" placeholder="Digite o E-mail">
+                                        </div>                                 
+                                    </div>
+                                    
+                                </div>                
+                                <div class="row">                                
+                                    <div class="col-md-6 col-sm-6">  
+                                        <div class="form-group" align="center">
+                                            <label><u>Configurações de Envio</u></label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Protocolo</label>
+                                            <select id='cbo_envio_protocolo' class="cbo_envio_protocolo form-control">
+                                                <option value="smtp">smtp</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <input for="chk_smtp_requer_autenticacao" type="checkbox" class="chk_smtp_requer_autenticacao template_switch">&nbsp;<label id="chk_smtp_requer_autenticacao">Requer autenticação</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Usuario</label>
+                                            <input id='edt_smtp_usuario' class="edt_smtp_usuario form-control" placeholder="Digite o SMTP Usuario">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Senha</label>
+                                            <div class="input-group">
+                                                <input type="password" class="edt_smtp_senha form-control" id="edt_smtp_senha" placeholder="Digite a Senha SMTP">
+                                                <span class="input-group-btn" autocomplete="new-password">
+                                                    <button id="smtp_btn" class="btn btn-default" type="button">
+                                                        <span id="ico_smtp_senha" class="glyphicon glyphicon-eye-open"></span>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Endereço</label>
+                                            <input id='edt_smtp_endereco' class="edt_smtp_endereco form-control" type="text" placeholder="Digite o Endereço SMTP">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Porta</label>
+                                            <input id='edt_smtp_porta' class="edt_smtp_porta form-control" type="text" placeholder="Digite a Porta SMTP">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Segurança</label>
+                                            <select id='cbo_smtp_seguranca' class="cbo_smtp_seguranca form-control">
+                                                <option value="">Nenhum</option>
+                                                <option value="tls">tls</option>
+                                                <option value="ssl">ssl</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="button" class="btn_testar_conexao_smtp btn btn-default">
+                                                <span class="glyphicon glyphicon-send"></span>
+                                                Testar Envio
+                                            </button>
+                                        </div>
+                                    </div>                                                              
+                                    <div class="col-md-6 col-sm-6">  
+                                        <div class="form-group" align="center">
+                                            <label><u>Configurações de Leitura</u></label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Protocolo</label>
+                                            <select id='cbo_leitura_protocolo' class="cbo_leitura_protocolo form-control">
+                                                <option value="pop3">pop3</option>
+                                                <option value="imap">imap</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Usuario</label>
+                                            <input id='edt_pop_usuario' class="edt_pop_usuario form-control" placeholder="Digite o Usuario">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Senha</label>
+                                            <div class="input-group">
+                                                <input type="password" class="edt_pop_senha form-control" id="edt_pop_senha" placeholder="Digite a Senha">
+                                                <span class="input-group-btn" autocomplete="new-password">
+                                                    <button id="pop_btn" class="btn btn-default" type="button">
+                                                        <span id="ico_pop_senha" class="glyphicon glyphicon-eye-open"></span>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Endereço</label>
+                                            <input id='edt_pop_endereco' class="edt_pop_endereco form-control" type="text" placeholder="Digite o Endereço">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Porta</label>
+                                            <input id='edt_pop_porta' class="edt_pop_porta form-control" type="text" placeholder="Digite a Porta">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Segurança</label>
+                                            <select id='cbo_pop_seguranca' class="cbo_pop_seguranca form-control">
+                                                <option value="">Nenhum</option>
+                                                <option value="ssl">ssl</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="button" class="btn_testar_conexao_pop btn btn-default">
+                                                <span class="glyphicon glyphicon-eye-open"></span>
+                                                Testar Leitura
+                                            </button>
+                                        </div>
+                                    </div>                                                              
+                                </div> 
+                            </div>
+                            
+
+                            <div class="tab-pane frm_detalhes" id="modal_interacao">
+                                <table class="table table_interacao" >
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-left"><label for="chk_ignorar_emails_antigos">Ignorar e-mails antigos</label></td>
+                                            <td class="text-right"><input id="chk_ignorar_emails_antigos" class="chk_ignorar_emails_antigos checkbox_bootstrap_toggle" type="checkbox"></input></td>
+                                        </tr>
+                                        <tr class="div_quantidade_dias_email_antigo hidden">
+                                            <td class="text-left"><label for="edt_quantidade_dias_email_antigo">Quantidade de dias à considerar e-mail como antigo</label></td>
+                                            <td class="text-right"><input id="edt_quantidade_dias_email_antigo" type="number" min="0" max="999" class="form-control edt_quantidade_dias_email_antigo pull-right" style="width: 60px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><label for="chk_notificacao">Apagar e-mails de notificação do servidor (postmaster / mailer-daemon)</label></td>
+                                            <td class="text-right"><input type="checkbox" id="chk_notificacao" class="checkbox_bootstrap_toggle chk_notificacao"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><label for="chk_emails_desconhecidos">Apagar e-mails de usuários desconhecidos</label></td>
+                                            <td class="text-right"><input type="checkbox" id="chk_emails_desconhecidos" class="checkbox_bootstrap_toggle chk_emails_desconhecidos"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><label for="chk_emails_agenda">Apagar e-mails de resposta de agenda</label></td>
+                                            <td class="text-right"><input type="checkbox" id="chk_emails_agenda" class="checkbox_bootstrap_toggle chk_emails_agenda"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><label for="chk_abertura_chamado">Apagar e-mails de abertura de chamado</label></td>
+                                            <td class="text-right"><input type="checkbox" id="chk_abertura_chamado" class="checkbox_bootstrap_toggle chk_abertura_chamado"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><label for="chk_interacao_chamado">Apagar e-mails de interação de chamado</label></td>
+                                            <td class="text-right"><input type="checkbox" id="chk_interacao_chamado" class="checkbox_bootstrap_toggle chk_interacao_chamado"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><label for="chk_enviar_email_usuario_sem_cadastro">Enviar e-mail de usuário inválido ao remetente</label></td>
+                                            <td class="text-right"><input type="checkbox" id="chk_enviar_email_usuario_sem_cadastro" class="checkbox_bootstrap_toggle chk_enviar_email_usuario_sem_cadastro"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left"><label for="chk_enviar_email_usuario_sem_cadastro_para">Enviar e-mail de usuário inválido para:</label></td>
+                                            <td class="text-right"><input type="checkbox" id="chk_enviar_email_usuario_sem_cadastro_para" class="checkbox_bootstrap_toggle chk_enviar_email_usuario_sem_cadastro_para"></td>
+                                        </tr>
+                                        <tr class="div_lista_emails hidden">
+                                            <td class="text-left"><label for="edt_lista_emails">Informe os e-mails:</label></td>
+                                            <td class="text-right">
+                                                <textarea id="edt_lista_emails" class="edt_lista_emails form-control" rows="4" cols="50" style="resize: vertical; width: 100%;"
+                                                    placeholder="email1@exemplo.com; email2@exemplo.com; email3@exemplo.com; email4@exemplo.com; email5@exemplo.com; email6@exemplo.com">
+                                                </textarea>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div role="tabpanel" class="tab-pane" id="modal_envio">
+                                <table class="table table-striped" >
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-left"><label>Apagar e-mail após quantas tentativas</label>&nbsp;<i class="fa fa-info-circle i_ajuda_apagar_x_tentativas" aria-hidden="true"></i></td>
+                                            <td class="text-right"><input type="number" min="0" max="999" class="form-control edt_deletar_email_numero_tentativa pull-right" style="width: 65px;"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>               
+
+            </div>
+
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>

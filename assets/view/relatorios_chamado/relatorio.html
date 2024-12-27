@@ -1,0 +1,554 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Relatório de Chamados</li>
+</ol>
+
+<div class="panel panel-default">
+    <div class="panel-heading"  style="margin-bottom: 0px; padding-bottom: 0px;">
+
+        <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+            <div class="form-inline">
+                <div class="navbar-left">
+                    Data de Abertura de
+                    <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_day_start">
+                    até
+                    <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_day_end">
+
+                    <button type="button" class="btn btn-primary btn_search">
+                        <span class="glyphicon glyphicon-search"></span> Gerar relatório
+                    </button>
+
+                </div>
+            </div>
+            <div class="pull-right">
+                <div class="form-group">
+                    <div class="btn-group" style="padding-right: 10px;">
+                      <div class="btn-group">
+                          <button type="button" class="btn btn-default btn_config hidden">
+                            <span class="glyphicon glyphicon-cog"></span>
+                          </button>
+                      </div>
+                      <div class="btn-group">
+                          <button type="button" class="btn btn-default btn_pdf">
+                            <span class="glyphicon glyphicon-file"></span>
+                          </button>
+                      </div>
+                      <div class="btn-group">
+                          <button type="button" class="btn btn-default btn_add_filtro">
+                            <span class="glyphicon glyphicon-filter"></span>
+                          </button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="panel-heading div_filtros" style="display:none;">
+        <div class="row">
+             <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                    <select  class="form-control select-multi-column cbo_cliente" style="margin-top: 5px; margin-right: 200px;" placeholder="Filtro por cliente">
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                    <select class="form-control selectpicker cbo_fornecedor" data-live-search="true" style="margin-top: 5px; margin-right: 200px;">
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                    <select class="form-control selectpicker cbo_prospect" data-live-search="true" style="margin-top: 5px; margin-right: 200px;">
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                    <select class="form-control selectpicker cbo_motivo" data-live-search="true" style="margin-top: 5px; margin-right: 200px;">
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                    <select class="form-control selectpicker cbo_solicitante" data-live-search="true" style="margin-top: 5px; margin-right: 200px;">
+                    </select>
+                </div>
+            </div>
+             <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                    <select class="form-control selectpicker cbo_responsavel" data-live-search="true" style="margin-top: 5px; margin-right: 200px;">
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                    <select class="form-control selectpicker cbo_empresa" data-live-search="true" style="margin-top: 5px; margin-right: 200px;">
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 div_classificacao hidden">
+                <div class="form-group">
+                    <select class="form-control selectpicker cbo_classificacao" data-live-search="true" style="margin-top: 5px; margin-right: 200px;">
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 div_grupo_motivo ">
+                <div class="form-group">
+                    <select class="form-control selectpicker cbo_grupo_motivo" data-live-search="true" style="margin-top: 5px; margin-right: 200px;">
+                    </select>
+                    <span class="text-muted">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        <small>Motivos de chamados que estão inclusos no Grupo de Motivos filtrado</small>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="hidden div_tabelas_relatorio">
+
+    <div class="row div_empresa hidden">
+        <div class="col-sm-8 col-md-8 col-lg-8">
+            <div class="">
+                <label>Número de chamados por Empresa</label>
+                <table class="table table-striped tbl_empresa">
+                    <thead>
+                        <tr>
+                            <th width="50% ">Empresa</th>
+                            <th width="50% ">Quantidade</th>
+                            <th width="50% ">&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- itens -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="div_grafico_empresa hidden">
+
+            </div>
+        </div>
+    </div>
+    
+    <br>
+    <div class="row div_chamados_por_area">
+        <div class="col-sm-8 col-md-8 col-lg-8">
+            <div class="">
+                <label>Número de Chamados Abertos por Área</label>
+                <table class="table table-striped tbl_chamados_por_area">
+                    <thead>
+                        <tr>
+                            <th width="50%">Área</th>
+                            <th width="50%">Quantidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="div_grafico_pizza_chamados_por_area">
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row div_cliente hidden">
+        <div class="col-sm-8 col-md-8 col-lg-8">
+            <div class="">
+                <label>Número de chamados por Cliente</label>
+                <table class="table table-striped tbl_cliente">
+                    <thead>
+                        <tr>
+                            <th width="50% ">Cliente</th>
+                            <th width="10% ">Quantidade</th>
+                            <th width="10% ">Quantidade SLA</th>
+                            <th width="25% ">Chamados encerrados no prazo do SLA(%)</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- itens -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="div_grafico_cliente hidden">
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row div_fornecedor hidden">
+        <div class="col-sm-8 col-md-8 col-lg-8">
+            <div class="">
+                <label>Número de chamados por Fornecedor</label>
+                <table class="table table-striped tbl_fornecedor">
+                    <thead>
+                        <tr>
+                            <th width="50% ">Fornecedor</th>
+                            <th width="50% ">Quantidade</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- itens -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="div_grafico_fornecedor hidden">
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row div_prospect hidden">
+        <div class="col-sm-8 col-md-8 col-lg-8">
+            <div class="">
+                <label>Número de chamados por Organização</label>
+                <table class="table table-striped tbl_prospect">
+                    <thead>
+                        <tr>
+                            <th width="50% ">Organização</th>
+                            <th width="50% ">Quantidade</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- itens -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="div_grafico_prospect hidden">
+
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="row div_solicitante hidden">
+        <div class="col-sm-8 col-md-8 col-lg-8">
+            <div class="">
+                <label>Número de chamados por Solicitante</label>
+                <table class="table table-striped tbl_solicitante">
+                    <thead>
+                        <tr>
+                            <th width="50% ">Solicitante</th>
+                            <th width="50% ">Quantidade</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- itens -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="div_grafico_solicitante hidden">
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row div_responsavel hidden">
+        <div class="col-sm-8 col-md-8 col-lg-8">
+            <div class="">
+                <label>Número de chamados por Responsável</label>
+                <table class="table table-striped tbl_responsavel">
+                    <thead>
+                        <tr>
+                            <th width="40%">Responsável</th>
+                            <th width="5%">Encerrados</th>
+                            <th width="15%">%Enc.</th>
+                            <th width="5%">Abertos</th>
+                            <th width="25%">%Abt.</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- itens -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="div_grafico_responsavel hidden">
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row div_motivo hidden">
+        <div class="col-sm-8 col-md-8 col-lg-8">
+            <div class="">
+                <label>Número de chamados por Motivo</label>
+                <table class="table table-striped tbl_motivo">
+                    <thead>
+                        <tr>
+                            <th width="50% ">Motivo</th>
+                            <th width="50% ">Quantidade</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- itens -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="div_grafico_motivo hidden">
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row div_classificacao hidden">
+        <div class="col-sm-8 col-md-8 col-lg-8">
+            <div class="">
+                <label>Número de chamados por Classificação</label>
+                <table class="table table-striped tbl_classificacao">
+                    <thead>
+                        <tr>
+                            <th width="50% ">Classificação</th>
+                            <th width="50% ">Quantidade</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- itens -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="div_grafico_classificacao hidden">
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="div_tempo_medio hidden">
+
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="">
+                    <label>Tempo médio de resposta/execução por Motivo</label>
+                    <table class="table table-striped tbl_tempo_medio_execucao">
+                        <thead>
+                            <tr>
+                                <th width="50% ">Motivo</th>
+                                <th width="25% ">Tempo médio de resposta por Motivo</th>
+                                <th width="25% ">Tempo médio de execução por Motivo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- itens -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="div_grafico_tempo_medio_resposta hidden col-sm-12 col-md-12 col-lg-12">
+
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="div_grafico_tempo_medio_execucao col-sm-12 col-md-12 col-lg-12">
+
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="row div_grupo_motivo">
+        <div class="col-sm-8 col-md-8 col-lg-8">
+            <div class="">
+                <label>Número de chamados por Grupo de Motivo</label>
+                <table class="table table-striped tbl_grupo_motivo">
+                    <thead>
+                        <tr>
+                            <th width="50% ">Grupo de Motivo</th>
+                            <th width="50% ">Quantidade</th>
+                            <th width="50% ">&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- itens -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="div_grafico_grupo_motivo">
+
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row div_avaliacao">
+        <div class="col-sm-8 col-md-8 col-lg-8">
+            <div class="">
+                <label>Número de chamados avaliados</label>
+                <table class="table table-striped tbl_avaliacao">
+                    <thead>
+                        <tr>
+                            <th width="50% ">Avaliação</th>
+                            <th width="50% ">Quantidade</th>
+                            <th width="50% ">&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- itens -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="div_grafico_avaliacao">
+
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row div_avaliacao_cliente">
+        <div class="col-sm-8 col-md-8 col-lg-8">
+            <div class="">
+                <label>Número de chamados avaliados por cliente</label>
+                <table class="table table-striped tbl_avaliacao_cliente">
+                    <thead>
+                        <tr>
+                            <th width="33.3% ">Cliente</th>
+                            <th width="33.3% ">Avaliação</th>
+                            <th width="33.3% ">Quantidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- itens -->
+
+
+                        <!-- itens -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="div_grafico_avaliacao_cliente">
+
+            </div>
+        </div>
+    </div>
+
+        <div class="row div_avaliacao_empresa">
+        <div class="col-sm-8 col-md-8 col-lg-8">
+            <div class="">
+                <label>Número de chamados avaliados por empresa</label>
+                <table class="table table-striped tbl_avaliacao_empresa">
+                    <thead>
+                        <tr>
+                            <th width="33.3% ">Empresa</th>
+                            <th width="33.3% ">Avaliação</th>
+                            <th width="33.3% ">Quantidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- itens -->
+
+
+                        <!-- itens -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="div_grafico_avaliacao_empresa">
+
+            </div>
+        </div>
+    </div>
+
+        <div class="row div_avaliacao_fornecedor">
+        <div class="col-sm-8 col-md-8 col-lg-8">
+            <div class="">
+                <label>Número de chamados avaliados por fornecedor</label>
+                <table class="table table-striped tbl_avaliacao_fornecedor">
+                    <thead>
+                        <tr>
+                            <th width="33.3% ">Fornecedor</th>
+                            <th width="33.3% ">Avaliação</th>
+                            <th width="33.3% ">Quantidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- itens -->
+
+
+                        <!-- itens -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="div_grafico_avaliacao_fornecedor">
+
+            </div>
+        </div>
+    </div>
+
+        <div class="row div_avaliacao_organizacao">
+        <div class="col-sm-8 col-md-8 col-lg-8">
+            <div class="">
+                <label>Número de chamados avaliados por organizacao</label>
+                <table class="table table-striped tbl_avaliacao_organizacao">
+                    <thead>
+                        <tr>
+                            <th width="33.3% ">Organização</th>
+                            <th width="33.3% ">Avaliação</th>
+                            <th width="33.3% ">Quantidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- itens -->
+
+
+                        <!-- itens -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="div_grafico_avaliacao_organizacao">
+
+            </div>
+        </div>
+    </div>
+
+</div>

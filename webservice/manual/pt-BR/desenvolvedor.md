@@ -42,4 +42,5 @@
  * [Ponto de Entrada: Definir Responsável de Atividade de Processo](?i=pt-BR&p=dev_pe_definir_responsavel_atividade_processo)
  * [Ponto de Entrada: Gerar Novas Solicitações ao Salvar e Enviar uma Atividade](?i=pt-BR&p=dev_pe_gerar_novas_solicitacoes_ao_salvar_e_enviar_uma_atividade)
  * [Ponto de Entrada: Gerar Novas Atividades ao Salvar e Enviar uma Atividade](?i=pt-BR&p=dev_pe_gerar_novas_atividades_ao_salvar_e_enviar_uma_atividade)
+ * [Ponto de Entrada: Alterar Opções de Campos de Formulários em Solicitação de Processo](?i=pt-BR&p=dev_pe_alterar_opcoes_de_campos_de_solicitacao_de_processo)
  * [PDCA - 5W2H: Novo PDCA e inclusão de atividades](?i=pt-BR&p=dev_php_pdca)

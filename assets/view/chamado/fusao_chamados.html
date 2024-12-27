@@ -1,0 +1,203 @@
+<div class="modal bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modfusaoChamadoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title titulo_chamado_modal" id="modfusaoChamadoLabel">Fusão de Chamados</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="cbo_chamado">Selecione o chamado</label><br>
+                            <select class="select-multi-column cbo_chamado" id="cbo_chamado" placeholder="Digite o código do chamado + [Enter] para pesquisar "></select>
+                        </div>
+                    </div>
+
+                    <br>
+<!--                     <label class="alerta hidden">* Esse processo pode demorar alguns minutos.
+                        <span class="fa fa-spinner fa-pulse fa-fw"></span>
+                    </label> -->
+                    <table class="table table-striped tab_chamados">
+                        <tbody>
+                            <tr template-row style="display: none;">
+                                <!-- MOBILE -->
+                                <td class="visible-xs">
+                                    <div class="pull-right" >
+
+                                        <div class="pull-right btn-group">
+                                            <button type="button" class="btn_excluir_da_fusao btn btn-default" tooltip="Excluir Chamado da Fusão" title="Excluir Chamado da Fusão">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </button>
+
+                                        </div>
+
+
+                                        <br>
+                                        <div class="text-right text-muted" style="padding-top: 15px;">
+                                            <div>
+                                                <span class="label lb_tipo">Cliente</span>
+                                                <span template-field="cliente_fornecedor" class="">{cliente_fornecedor}</span>
+                                            </div>
+                                            <div template-field="motivo"></div>
+                                        </div>
+                                    </div>
+                                    <h4 style="padding-left: 12px;" template-field="id"></h4>
+                                    <div class="small text-left col-xs-12 pull-left">
+                                        <img src="" template-img="situacao">
+                                        <span template-field="situacao"></span>
+                                        <div class="row">
+                                            <div class="col-xs-12 small text-muted">
+                                                <div class="div_informativo_prazo_mobile small" style="width: 160px; float: right"></div>
+                                            </div>
+                                        </div>  
+            
+                                        <div class="row">
+                                            <div class="col-xs-12 small">
+                                                <div class="hidden small" template-field="div_inatividade" style="width: 160px; float: right">
+                                                    <div style="width: 150px; padding-top:5px;">
+                                                        <div style="display: flex; flex-flow: row-reverse;">
+                                                            <div style="font-weight: bold; padding-left: 10px; padding-right: 0px;">
+                                                                <div class="text text-default text-warning" title="tempo inativo" template-field="tempo_inativo" style="font: inherit; width: 100%;">0:00</div>
+                                                            </div>
+                                                            <div>
+                                                                <div class="text-right text-warning" >Tempo Inativo</div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="progress div_progress bar_progresso" template-field="div_progress_inatividade" style="margin-bottom: 0px; height: 12px;">
+                                                                <div class="progress-bar progress-bar-striped progress-bar-warning bar_progresso hidden" template-field="bar_progresso_inatividade" style="width: 0%;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="row">
+                                            <div class="col-xs-12 small">
+                                                <div class="hidden small" template-field="div_aguardando_resposta" style="width: 160px; float: right">
+                                                    <div style="width: 150px; padding-top:5px;">
+                                                        <div style="display: flex; flex-flow: row-reverse;">
+                                                            <div style="padding-left: 10px; padding-right: 0px;">
+                                                                <span template-field="tempo_aguardando_resolucao" data-toggle="tooltip" title="tempo em andamento" style="padding-right: 4px;"></span>
+                                                                <span class="hidden" template-field="tempo_restante_resolucao" data-toggle="tooltip" title="Tempo Restante" style="font-weight: bold;"></span>
+                                                            </div>
+                                                            <div>
+                                                                <div class="text-right text-warning" >
+                                                                    <span class="text-danger" data-situacao-sla></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="progress div_progress bar_progresso" template-field="div_progress_aguardando" style="margin-bottom: 0px; height: 12px;">
+                                                                <div class="progress-bar progress-bar-striped progress-bar-warning bar_progresso hidden" template-field="bar_progresso_aguardando" style="width: 0%; font-size: xx-small;">
+                                                                    <div template-field="bar_progresso_aguardando_percentual" style="margin-top: -2px;"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <!-- MOBILE -->
+
+                                <td template-field="id" class="hidden-xs" style="width: 24%;"></td>
+                                <td class="hidden-xs" style="width: 24%;">
+                                    <span class="label lb_tipo">Cliente</span>
+                                    <span template-field="cliente_fornecedor">{cliente_fornecedor}</span>
+                                    <img style="height: 20px; width: 20px" class="imagem_responsavel pull-left"/>
+                                    <span template-field="solicitante"></span>
+                                    <img style="height: 20px; width: 20px;" class="imagem_solicitante pull-left"/>
+                                </td>
+                                <td class="hidden-xs" style="width: 24%;">
+                                    <div template-field="motivo"></div>
+                                </td>
+
+
+                                <td class="small text-right hidden-xs col-md-2" style="width: 24%;">
+                                    <img src="" template-img="situacao">
+                                    <span template-field="situacao"></span>
+                                    <div class="row small">
+                                        <div class="col-xs-12">
+                                            <div class="div_informativo_prazo small" style="width: 160px; float: right"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row small">
+                                        <div class="col-xs-12">
+                                            <div class="hidden small" template-field="div_inatividade" style="width: 160px; float: right">
+                                                <div style="width: 150px; padding-top:5px;">
+                                                    <div style="display: flex; flex-flow: row-reverse;">
+                                                        <div style="font-weight: bold; padding-left: 10px; padding-right: 0px;">
+                                                            <div class="text text-default text-warning" title="tempo inativo" template-field="tempo_inativo" style="font: inherit; width: 100%;">0:00</div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="text-right text-warning" >Tempo Inativo</div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="progress div_progress bar_progresso" template-field="div_progress_inatividade" style="margin-bottom: 0px; height: 12px;">
+                                                            <div class="progress-bar progress-bar-striped progress-bar-warning bar_progresso hidden" template-field="bar_progresso_inatividade" style="width: 0%;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row small">
+                                        <div class="col-xs-12">
+                                            <div class="hidden small" template-field="div_aguardando_resposta" style="width: 160px; float: right">
+                                                <div style="width: 150px; padding-top:5px;">
+                                                    <div style="display: flex; flex-flow: row-reverse;">
+                                                        <div style="padding-left: 10px; padding-right: 0px;">
+                                                            <span template-field="tempo_aguardando_resolucao" data-toggle="tooltip" title="tempo em andamento" style="padding-right: 4px;"></span>
+                                                            <span class="hidden" template-field="tempo_restante_resolucao" data-toggle="tooltip" title="Tempo Restante" style="font-weight: bold;"></span>
+                                                        </div>
+                                                        <div>
+                                                            <div class="text-right text-warning" >
+                                                                <span class="text-danger" data-situacao-sla></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="progress div_progress bar_progresso" template-field="div_progress_aguardando" style="margin-bottom: 0px; height: 12px;">
+                                                            <div class="progress-bar bar_progresso hidden" template-field="bar_progresso_aguardando" style="width: 0%; font-size: xx-small;">
+                                                                <div template-field="bar_progresso_aguardando_percentual" style="margin-top: -3px;"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td template-field="detalhes" class="text-right hidden-xs" style="width: 4%;">
+                                    <div class="btn-group-vertical">
+                                        <button type="button" class="btn_excluir_da_fusao btn btn-default" tooltip="Excluir Chamado da Fusão" title="Excluir Chamado da Fusão">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <label class="alerta hidden">* Esse processo pode demorar alguns minutos.
+                    <span class="fa fa-spinner fa-pulse fa-fw"></span>
+                </label>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_confirmar btn btn-primary">Confirmar Fusão</button>
+            </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->

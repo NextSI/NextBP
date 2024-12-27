@@ -1,0 +1,80 @@
+<div class="modal bs-modal-md" tabindex="-1" role="dialog" aria-labelledby="modal_motivo_configuracoes_label" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_motivo_configuracoes_label">Abertura por e-mail</h4>
+            </div>
+            <div class="modal-body">    
+
+                <div class="row">
+                    <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+                        <div class="form-group">
+                            <label for="">Cliente</label>
+                            <select class="select-multi-column cbo_motivo_cliente" tipo-config="cliente" placeholder="Selecione o Motivo"></select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+                        <div class="form-group">
+                            <label for="">Fornecedor</label>
+                            <select class="select-multi-column cbo_motivo_fornecedor" tipo-config="fornecedor" placeholder="Selecione o Motivo"></select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+                        <div class="form-group">
+                            <label for="">Organização</label>
+                            <select class="select-multi-column cbo_motivo_organizacao" tipo-config="organizacao" placeholder="Selecione o Motivo"></select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+                        <div class="form-group">
+                            <label for="">Colaborador</label>
+                            <select class="select-multi-column cbo_motivo_colaborador" tipo-config="colaborador" placeholder="Selecione o Motivo"></select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+                        <div class="form-group">
+                            <label for="">Todos</label>
+                            <select class="select-multi-column cbo_motivo_todos" tipo-config="todos" placeholder="Selecione o Motivo"></select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+                        <div class="form-group">
+                            <label for="chk_cadastrar_usuarios_automaticamente">Cadastrar novos usuário automaticamente ao receber e-mails de domínios do cadastro de clientes, fornecedores ou organizações</label>
+                            <input type="checkbox" class="chk_cadastrar_usuarios_automaticamente checkbox_bootstrap_toggle" id="chk_cadastrar_usuarios_automaticamente">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-md-12 col-sm-12 col-lg-12 padrao_usuario hidden">
+                        <label for="cbo_area">Área padrão do usuário criado</label>
+                        <div class="input-group">
+                            <select id="cbo_area" class="cbo_area form-control">
+                            </select>
+                            <!-- <div class="input-group-btn">
+                                <button type="button" class="btn_area_novo btn btn-default">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 col-md-12 col-sm-12 col-lg-12 padrao_usuario hidden">
+                        <label for="cbo_calendario_trabalho">Calendário de trabalho padrão do usuário criado</label>
+                        <div class="input-group">
+                            <select id="cbo_calendario_trabalho" class="cbo_calendario_trabalho form-control">
+                            </select>
+                            <!-- <div class="input-group-btn">
+                                <button type="button" class="btn_calendario_trabalho_novo btn btn-default">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>                
+            </div>
+        </div>
+    </div>
+</div>
+

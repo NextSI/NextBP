@@ -1,0 +1,178 @@
+<div class="panel panel-default">
+    <div class="panel-heading"  style="margin-bottom: 0px; padding-bottom: 0px;">
+        <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+            <div class="form-inline">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="div_dt_ini"></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="div_dt_fim"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-control cbo_processos selectpicker" data-width="100%" multiple data-actions-box="true" multiple data-selected-text-format="count > 1" title="Filtrar Processos" data-deselect-all-text="Nenhum" data-select-all-text="Todos">
+                        </select>
+                    </div>
+                    <div class="col-md-4 text-right">
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-primary btn_search">
+                                <span class="glyphicon glyphicon-search"></span> Gerar relatório
+                            </button>
+                            <button type="button" class="btn btn-default btn_exportacao_excel"><span class="glyphicon glyphicon-file"></span></button>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a class="btn_exportacao" href="#">
+                                        PNG
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <input type="checkbox" class="chk_considerar_atividade_tipo_inicio template_switch"/>
+                        <label>
+                            Considerar atividades "Início"
+                            <span class="glyphicon glyphicon-info-sign" title='Afeta os indicadores "Número de entregas de atividades por responsável", "Atividades entregues por processo", "Horas Previstas X Horas Realizadas" e "Dias Previstos X Dias Realizados".'></span>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="checkbox" class="chk_considerar_atividade_tipo_fim template_switch"/>
+                        <label>
+                            Considerar atividades "Fim"
+                            <span class="glyphicon glyphicon-info-sign" title='Afeta os indicadores "Número de entregas de atividades por responsável", "Atividades entregues por processo", "Horas Previstas X Horas Realizadas" e "Dias Previstos X Dias Realizados".'></span>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="checkbox" class="chk_considerar_atividade_retornada template_switch"/>
+                        <label>
+                            Considerar atividades retornadas
+                            <span class="glyphicon glyphicon-info-sign" title='Afeta os indicadores "Número de entregas de atividades por responsável" e "Atividades entregues por processo".'></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+    
+<div class="hidden div_tabelas_relatorio">
+        
+    <div class="row">
+        <div class="col-md-8 default-col-md-8">
+            <label>Número de Solicitações por Processo</label>
+            <table class="table table-striped tbl_solicitacoes_por_processo">
+                <thead>
+                    <tr>
+                        <th width="50% ">Processo</th>
+                        <th width="50% ">Quantidade</th>
+                        <th width="50% ">&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="col-md-4 default_col-md-4">
+            <div class="div_grafico_solicitacoes_por_processo"></div>
+        </div>
+    </div>
+
+    <div class="row div_solicitacoes_por_solicitante">
+        <div class="col-md-8 default-col-md-8">
+            <div class="">
+                <label>Número de Solicitações por Solicitante</label>
+                <table class="table table-striped tbl_solicitacoes_por_solicitante">
+                    <thead>
+                        <tr>
+                            <th width="50% ">Solicitante</th>
+                            <th width="50% ">Quantidade</th>
+                            <th width="50% ">&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-4 default_col-md-4">
+            <div class="div_grafico_solicitacoes_por_solicitante">
+
+            </div>
+        </div>
+    </div>  
+
+    <div class="row div_solicitacoes_entregues_por_usuario">
+        <div class="col-md-8 default-col-md-8">
+            <div class="">
+                <label>Número de entregas de atividades por responsável</label>
+                <table class="table table-striped tbl_solicitacoes_entregues_por_usuario">
+                    <thead>
+                        <tr>
+                            <th width="50% ">Responsável</th>
+                            <th width="50% ">Quantidade</th>
+                            <th width="50% ">&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-4 default_col-md-4">
+            <div class="div_grafico_solicitacoes_entregues_por_usuario">
+            </div>
+        </div>
+    </div>
+
+    <div class="div_agrupado_tabelas">
+        
+    </div>
+    <div class="row">
+        <div class="col-md-12 div_grafico_solicitacoes_horas_previstas_x_realizadas">
+            
+        </div>
+    </div>  
+    
+    <div class="row">
+        <div class="col-md-12 div_grafico_solicitacoes_dias_previstos_x_gasto">
+            
+        </div>
+    </div>   
+       
+
+
+    <div class="row">
+        <div class="col-md-12" style="padding-top: 20px;">
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th style="width: 20%"><div class="alert alert-info" style="text-align: center">Abertas</div></th>
+                    <th style="width: 20%"><div class="alert alert-info" style="text-align: center">Andamento</div></th>
+                    <th style="width: 20%"><div class="alert alert-danger" style="text-align: center">Canceladas</div></th>
+                    <th style="width: 20%"><div class="alert alert-success" style="text-align: center">Finalizadas</div></th>
+                    <th style="width: 20%"><div class="alert alert-warning" style="text-align: center">Remanescentes</div></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td class="qtde_abertas" style="text-align: center"></td>
+                    <td class="qtde_andamento" style="text-align: center"></td>
+                    <td class="qtde_canceladas" style="text-align: center"></td>
+                    <td class="qtde_finalizadas" style="text-align: center"></td>
+                    <td class="qtde_remanescentes" style="text-align: center"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12" style="padding-bottom: 35px;">
+            <div class="dx_grafico_solicitacoes_por_status" style="height: 800px; background-color: #fff"></div>
+        </div>
+    </div>
+
+</div>

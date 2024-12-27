@@ -1,0 +1,45 @@
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_fechamento_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_fechamento_label">{titulo}</h4>
+            </div>
+            <div class="modal-body">
+
+                  <table class="tab_listagem table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th class="hidden-xs">Usuário</th>
+                            <th class="hidden-xs">Valor</th>
+                            <th class="hidden-xs">Valor Atual</th>
+                            <th class="hidden-xs">Data alteração</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- itens -->
+                        <tr template-row style="display: none;">
+                            <!-- mobile -->
+                            <td class="td-mobile visible-xs">
+                                <h4 template-field="usuario">{usuario}</h4>
+                                <h4 template-field="valor">{valor}</h4>
+                                <h4 template-field="valor_atual">{valor_atual}</h4>
+                                <h4 template-field="data_alteracao">{data_alteracao}</h4>
+                            </td>
+                            <!-- /mobile -->
+                            <td class="hidden-xs" template-field="usuario">{usuario}</td>
+                            <td class="hidden-xs" template-field="valor">{valor}</td>
+                            <td class="hidden-xs" template-field="valor_atual">{valor_atual}</td>
+                            <td class="hidden-xs" template-field="data_alteracao">{data_alteracao}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Fechar</button>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,59 @@
+<!-- LISTAGEM -->
+<div>
+
+    <div class="row div_menu hidden">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Nome da Entidade</label>
+                <div class="input-group">
+                    <div class="div_component_cbo_clientes"></div>
+                    <div class="input-group-btn div_btn_detalhes_entidade">
+                        <button type="button" class="btn btn-default btn_detalhes_entidade">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="edt_nome_menu_personalizado">Selecione o Módulo</label><br />
+                <select class="form-control cbo_modulo" data-live-search="true" multiple data-selected-text-format="count > 1" title="Selecione o Módulo" data-toggle="tooltip" data-actions-box="true" data-deselect-all-text="Nenhum" data-select-all-text="Todos">
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12" style="padding-bottom: 50px; overflow-x: hidden;">
+
+        <div style="padding: 10px; padding-bottom: 0px; padding-top: 0;" class="text-center div_carregar_mais_futuro">
+            <span class="btn btn-link btn_carregar_mais_futuro">
+                <span class="txt_carregar_mais text-primary"></span>
+            </span>
+        </div>
+
+        <section class="cd-timeline cd-container section_body hidden">
+            <div class="cd-timeline-block template_div" style="display: none;">
+                <div class="cd-timeline-img"></div>
+    
+                <div class="cd-timeline-content">
+                    <h2 template-field="title" style="margin: 0px;">{title}</h2>
+                    <div class="div_detalhes" style="display: none;"></div>
+                    <a class="btn_editar cd-read-more">Detalhes</a>
+                    <span class="cd-date" template-field="data_ocorrencia">
+                        <i class="fa fa-calendar" aria-hidden="true" style="padding-right: 5px;"></i>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <div style="padding: 10px; padding-bottom: 0px; padding-top: 0;" class="text-center div_carregar_mais">
+            <span class="btn btn-link btn_carregar_mais">
+                <span class="txt_carregar_mais text-primary"></span>
+            </span>
+        </div>
+    </div>
+
+</div>
+
+<!-- /LISTAGEM -->

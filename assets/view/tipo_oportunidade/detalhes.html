@@ -1,0 +1,91 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Detalhes Item</li>
+</ol>
+<div class="row">
+    <div class="col-sm-3 col-md-3 col-lg-2">
+        <div class="panel panel-default">
+            <div class="list-group">
+                <a href="#" class="btn_salvar list-group-item">
+                <span class="glyphicon glyphicon-floppy-disk"></span>
+                Salvar
+                </a>
+                <a href="#" class="btn_excluir list-group-item list-group-item-danger">
+                <span class="glyphicon glyphicon-check"></span>
+                Excluir
+                </a>                
+                <a href="#" class="btn_cancelar list-group-item">
+                <span class="glyphicon glyphicon-remove"></span>
+                Cancelar
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-9 col-md-9 col-lg-10">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="edt_codigo">Código</label>
+                    <input type="text" class="edt_codigo form-control" maxlength="6" id="edt_codigo" placeholder="Código">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="form-group">
+                    <label for="edt_descricao">Descrição</label>
+                    <span class="text-danger">*</span>
+                    <input type="text" class="edt_descricao form-control" maxlength="150" id="edt_descricao" placeholder="Descrição">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="chk_padrao">Padrão ?</label>
+                    <div style="margin-top: 3px;">
+                        <input type="checkbox" class="chk_padrao form-control" id="chk_padrao">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <br>
+        <div class="row">
+            <div class="col-md-8 col-lg-6"> 
+                <label>Incluir Item</label>                       
+                <select class="select-multi-column cbo_item" placeholder="Digite o item para relacionar"></select>                                                
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="div_item form-group" id="div_item">
+                    <table class="tab_listagem_item table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>
+                                    <div class="pull-right">
+                                        <button type="button" class="btn_incluir_item hidden btn btn-default">
+                                        <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr template-row style="display: none;">
+                                <td template-field="item">{nome}</td>
+                                <td template-buttons="actions">
+                                    <div class="btn-group pull-right">                                
+                                        <button type="button" class="btn_deletar_item btn btn-danger">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

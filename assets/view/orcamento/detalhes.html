@@ -1,0 +1,223 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Detalhes Orçamento</li>
+</ol>
+
+<div class=" div_tudo">
+
+    <div class="row">
+
+        <div class="col-md-3 col-lg-2 floating-menu -xs -sm">
+            <div class="panel panel-default">
+                <div class="list-group">
+                    <a href="#" class=" btn_aprovar list-group-item">
+                        <span class="glyphicon glyphicon-thumbs-up"></span> 
+                        Aprovar
+                    </a>
+                    <a href="#"  class=" btn_reprovar list-group-item">
+                        <span class="glyphicon glyphicon-thumbs-down"></span> 
+                        Reprovar
+                    </a>
+                    <a href="#"  class=" btn_excluir list-group-item">
+                        <span class="glyphicon glyphicon-trash"></span> 
+                        Excluir
+                    </a>
+                </div>
+            </div>     
+            <div class="panel panel-default">
+                <div class="list-group">
+                    <a href="#" class=" btn_visualizar_email list-group-item">
+                        <span class="glyphicon glyphicon-envelope"></span> 
+                        Visualizar e-mail
+                    </a>
+                    <a href="#"  class=" btn_imprimir list-group-item">
+                        <span class="glyphicon glyphicon-download-alt"></span> 
+                        Orçamento PDF
+                    </a>                    
+                </div>
+            </div>     
+        </div>    
+
+        <div class="col-md-9 col-lg-10">
+
+            <div class="panel panel-default panel_cabecalho">
+
+                <h4 class="div_numero_orcamento" style=" margin-left: 10px;">Orçamento #1522 30/07/2015</h4>            
+
+                <form role="form" style="padding: 10px;">
+
+                    <div class="row">
+                                                                    
+                        <div class="col-md-4">
+                            <div class="form-group" style="margin-bottom: 0px;">
+                                <label style="margin-bottom: 0px;" class="lb_entidade">Cliente</label>
+                                <p id="p_cliente" class="form-control-static p_cliente" style="padding-top: 0px;padding-bottom: 0px;">WQS</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group" style="margin-bottom: 0px;">
+                                <label style="margin-bottom: 0px;">Representante</label>
+                                <p id="p_representante" class="form-control-static p_representante" style="padding-top: 0px;padding-bottom: 0px;">Marco Zanaro</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group" style="margin-bottom: 0px;">
+                                <label style="margin-bottom: 0px;">Valor Total</label>
+                                <p id="p_valor" class="form-control-static p_valor" style="padding-top: 0px;padding-bottom: 0px;">500,00</p>
+                            </div>
+                        </div>
+                                 
+                    </div>
+
+                    <div class="row">
+                                                                    
+                        <div class="col-md-4">
+                            <div class="form-group" style="margin-bottom: 0px;">
+                                <label style="margin-bottom: 0px;">Condição de Pagamento</label>
+                                <p id="p_condicao_pagamento" class="form-control-static p_condicao_pagamento" style="padding-top: 0px;padding-bottom: 0px;">A VISTA</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group" style="margin-bottom: 0px;">
+                                <label style="margin-bottom: 0px;">Frete</label>
+                                <p id="p_frete" class="form-control-static p_frete" style="padding-top: 0px;padding-bottom: 0px;">Remetente</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group" style="margin-bottom: 0px;">
+                                <label style="margin-bottom: 0px;">Data Entrega</label>
+                                <p id="p_entrega" class="form-control-static p_entrega" style="padding-top: 0px;padding-bottom: 0px;">01/01/2016</p>
+                            </div>
+                        </div>
+                                 
+                    </div>
+                    
+                </form>
+
+            </div>
+
+
+            <div class="div_itens">        
+                <table class="tab_listagem_orcamento table table-striped table-hover">
+                    <thead>
+                        <tr class="hidden-xs hidden-sm">
+                            <th>Código</th>
+                            <th class="hidden divs_edt_codigo_entidade">Cód.Entidade</th>
+                            <th>Item</th>
+                            <th>Quant.</th>                            
+                            <th>Preço Venda</th>
+                            <th>Preço Custo</th>
+                            <th>Lucro (R$)</th>
+                            <th>Margem de lucro (%)</th>
+                            <th class="desconto">Desc.%</th>                            
+                            <th class="ipi">I.P.I.%</th>
+                            <th class="valor_ipi">Vlr. I.P.I.</th>                            
+                            <th class="total">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr template-row style="display: none;" class="row-fluid">
+
+                            <!-- mobile --> 
+                            <td class="td-mobile visible-xs visible-sm">           
+
+                                <h4 template-field="item_descricao">{item_descricao}</h4>
+
+                                <div class="text-info">
+                                    <span>Código: </span>
+                                    <span template-field="codigo">{codigo}</span>
+                                </div>
+
+                                <div class="text-info hidden divs_edt_codigo_entidade">
+                                    <span>Cód.Entidade: </span>
+                                    <span template-field="codigo_entidade">{codigo_entidade}</span>
+                                </div>
+
+                                <div class="text-info">
+                                    <span>Quant.: </span>    
+                                    <span template-field="quantidade">{quantidade}</span>
+                                </div>
+
+                                <div class="text-info">
+                                    <span>Preço Venda: </span>    
+                                    <span template-field="preco">{preco}</span>
+                                </div>
+
+                                <div class="text-info">
+                                    <span>Preço Custo: </span>    
+                                    <span template-field="custo">{custo}</span>
+                                </div>
+
+                                <div class="text-info">
+                                    <span>Lucro: </span>    
+                                    <span template-field="lucro">{lucro}</span>
+                                </div>
+
+                                <div class="text-info">
+                                    <span>Margem Lucro: </span>    
+                                    <span template-field="margem_lucro">{margem_lucro}</span>
+                                </div>
+
+                                <div class="text-info">
+                                    <span>Desc.: </span>    
+                                    <span template-field="desconto">{desconto}</span>
+                                </div>
+
+                                <div class="text-info">
+                                    <span>Ipi</span>    
+                                    <span template-field="total">{ipi}</span>
+                                </div>
+
+                                <div class="text-info">
+                                    <span>Vlr.IPI:</span>    
+                                    <span template-field="total">{valor_ipi}</span>
+                                </div>
+
+                                <div class="text-info">
+                                    <span>Total:</span>    
+                                    <span template-field="total">{total}</span>
+                                </div>
+
+                            </td>
+
+
+                            <!-- mobile -->
+
+                            <!-- desktop -->
+                            <td class="hidden-xs hidden-sm" template-field="codigo">{codigo}</td>
+                            <td class="hidden-xs hidden-sm hidden divs_edt_codigo_entidade" template-field="codigo_entidade">{codigo_entidade}</td>
+                            <td class="hidden-xs hidden-sm" template-field="item_descricao">{item_descricao}</td>
+                            <td class="hidden-xs hidden-sm" template-field="quantidade">{quantidade}</td>                            
+                            <td class="hidden-xs hidden-sm" template-field="preco">{preco}</td>
+                            <td class="hidden-xs hidden-sm" template-field="custo">{custo}</td>
+                            <td class="hidden-xs hidden-sm" template-field="lucro">{lucro}</td>
+                            <td class="hidden-xs hidden-sm" template-field="margem_lucro">{margem_lucro}</td>
+                            <td class="hidden-xs hidden-sm desconto" template-field="desconto">{desconto}</td>
+                            <td class="hidden-xs hidden-sm ipi" template-field="ipi">{ipi}</td>
+                            <td class="hidden-xs hidden-sm valor_ipi" template-field="valor_ipi">{valor_ipi}</td>
+                            <td class="hidden-xs hidden-sm" template-field="total">{total}</td>                            
+                            <!-- desktop -->
+
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pull-right">
+                    <h4 class="text-right lb_subtotal"></h4>  
+                    <h4 class="text-right lb_valor_desconto"></h4>
+                    <h4 class="text-right lb_valor_ipi"></h4>
+                    <h4 class="text-right lb_valor_total"></h4>
+                    <h4 class="text-right lbl_valor_lucro_bruto"></h4>
+                    <h4 class="text-right lbl_percentual_lucro"></h4>
+                </div>
+                
+            </div>            
+
+        </div>
+            
+    </div>
+
+</div>

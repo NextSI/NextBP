@@ -1,0 +1,911 @@
+{
+    "lang": {
+
+        "nome": "pt-BR",
+        "data": "2015-07-28",
+
+        "login": {
+            "entrar": "Entrar",
+            "esqueci_senha": "Esqueci minha senha",
+            "login": "Log in",
+            "producao": "Produção",
+            "teste": "Teste",
+            "selecione": "- Selecione -",
+            "usuario": "Usuário",
+            "senha": "Senha",
+            "memorizar_senha": "Memorizar senha",
+            "entrar_automaticamente": "Entrar automaticamente",
+            "esquecer_conta": "Esquecer conta",
+            "esquecer_conta_pergunta": "Tem certeza que deseja esquecer esta conta?",
+            "sim_esquecer_agora": "Sim, esquecer agora",
+            "entrar_com_outro_usuario": "Entrar com outro usuário",
+            "sua_sessao_expirou": "Sua Sessão Expirou"
+        },
+
+        "gestao_agenda": {
+            "filtro": "Filtro",
+            "filtros": "Filters",
+            "inicio_calendario": "Calendário Início",
+            "fim_calendario": "Calendário Fim",
+            "evento": "Evento",
+            "novo_evento": "Novo Evento",
+            "editar_evento": "Editar Evento",
+            "editar_oportunidade": "Editar Oportunidade",
+            "geral": "Geral",
+            "dia_evento": "Dia",
+            "hora_inicio_evento": "Hora início",
+            "hora_fim_evento": "Hora fim",
+            "tipo_evento": "Tipo de Agenda",
+            "local_evento": "Local da Agenda",
+            "cor_evento": "Cor",
+            "descricao_evento": "Descrição",
+            "evento_realizado": "Realizado?",
+            "recorrencia_evento": "Recorrência",
+            "nenhuma_recorrencia": "Nenhuma",
+            "recorrencia_diaria": "Diário",
+            "recorrencia_semanal": "Semanal",
+            "recorrencia_mensal": "Mensal",
+            "recorrencia_anual": "Anual",
+            "intervalo_recorrencia": "Intervalo da Recorrência",
+            "comeca_em": "Começa em",
+            "inicio": "Início",
+            "fim": "Fim",
+            "termina_apos": "Termina após",
+            "termina_em": "Termina dia",
+            "tantas_ocorrencias": "ocorrência(s)",
+            "horas": "Horas",
+            "convidados_evento": "Convidados",
+            "responsaveis_evento": "Responsáveis",
+            "nome_convidado": "Nome",
+            "email_convidado": "E-Mail",
+            "enviar_agenda_cliente": "Enviar Agenda para um Cliente",
+            "mensagem_corpo_email": "Mensagem do corpo do E-Mail",
+            "caracteres": "caracteres",
+            "limite_caracteres": "limite de",
+            "observacao_usuarios_envolvidos": "Os usuários envolvidos na Agenda também receberão uma cópia do E-Mail",
+            "pre_visual_email": "Pré-Visualização do E-Mail",
+            "msg_padrao_envio_rel_agenda": "Mensagem padrão para envio de relatorio de agenda para o cliente por E-Mail",
+            "filtro_selecionado_incorreto": "O filtro selecionado está incorreto",
+            "historico_acao_inclusao": "Inclusão",
+            "historico_acao_alteracao": "Alteração",
+            "historico_acao_exclusao": "Exclusão",
+            "historico_acao_visualizacao": "Visualização",
+            "recorrencia_a_cada": "A cada",
+            "recorrencia_de_cada": "de cada",
+            "recorrencia_diaria_dias": "dia(s)",
+            "recorrencia_diaria_todos_dia_semana": "Todos os dias da semana",
+            "recorrencia_semanal_semanas": "semana(s) no",
+            "recorrencia_mensal_meses": "mês(es)",
+            "recorrencia_mensal_no": "no",
+            "recorrencia_mensal_primeiro": "Primeiro(a)",
+            "recorrencia_mensal_segundo": "Segundo(a)",
+            "recorrencia_mensal_terceiro": "Terceiro(a)",
+            "recorrencia_mensal_quarto": "Quarto(a)",
+            "recorrencia_mensal_ultimo": "Último(a)",
+            "recorrencia_anual_ano": "ano(s)",
+            "recorrencia_anual_em": "Em",
+            "recorrencia_anual_dia_pt_br": "dia",
+            "recorrencia_anual_de_ano": "de",
+            "digite_nome_pesquisar": "Digite o nome para pesquisar",
+            "emails_adicionais_email": "email1@exemplo.com; email2@exemplo.com; email3@exemplo.com",
+            "digite_mensagem_corpo_email": "Digite a mensagem",
+            "msg_padrao_prezado_cliente": "Prezado cliente",
+            "msg_padrao_programacao_agenda": "Segue programação de agenda",
+            "msg_padrao_atenciosamente": "Atenciosamente",
+            "preview_email_dia": "Dia",
+            "preview_email_inicio": "Inicio",
+            "preview_email_fim": "Fim",
+            "preview_email_responsavel": "Responsável",
+            "preview_email_projeto": "Projeto",
+            "preview_email_local": "Local",
+            "preview_email_descricao": "Descrição",
+            "preview_email_programacao_agenda_de": "Programação de agenda de",
+            "preview_email_programacao_agenda_ate": "à",
+            "pre_visualizar_eventos_recorrentes": "Pré-visualizar eventos recorrentes",
+            "eventos_recorrentes_serem_criados": "Eventos recorrentes a serem criados",
+            "recorrencia_dia": "Dia",
+            "recorrencia_hora_inicio": "Hora Início",
+            "recorrencia_hora_fim": "Hora Fim",
+            "recorrencia_gerar": "Gerar?",
+            "recorrencia_registros": " registros",
+            "recorrencia_por_favor_aguarde": "Por favor, aguarde...",
+            "recorrencia_registros_sendo_gerados": "Eventos recorrentes estão sendo registrados",
+            "recorrencia_pode_levar_minutos": "Aguarde, esse procedimento pode levar alguns minutos",
+            "recorrencia_excede_calendario": "O período solicitado excede o calendário de horas",
+            "copie_evento": "Copie um evento para poder cola-lo",
+            "nenhum_evento_selecionado": "Nenhum evento selecionado",
+            "agenda_recorrente": "Agenda Recorrente",
+            "alterar_apenas_este_evento": "Alterar apenas este evento",
+            "reprogramar_serie_evento_adiante": "Reprogramar toda a série da recorrência, deste Evento adiante",
+            "reprogramar_serie_inicio": "Reprogramar a recorrência desde o início",
+            "aba_historico": "Histórico",
+            "aba_historico_acao": "Ação",
+            "aba_historico_detalhes": "Detahes",
+            "aba_historico_usuario": "Usuário",
+            "aba_historico_dia_acao": "Dia",
+            "evento_particular": "Evento Particular",
+            "dia_inteiro": "Dia inteiro",
+            "notificar_antes" : "Notificar Antes",
+            "notificar_antes_tooltip" : "Informe quanto tempo antes você deseja ser notificado"
+        },
+
+        "local_agenda": {
+            "local_agenda": "Local de Agenda",
+            "id": "#",
+            "nome": "Nome",
+            "info_digite_nome": "Digite o nome do Local da Agenda"
+        },
+
+        "tipo_agenda": {
+            "tipo_agenda": "Tipo de Agenda",
+            "novo_tipo_agenda": "Novo",
+            "nome_tipo_agenda": "Nome",
+            "cor_tipo_agenda": "Cor",
+            "editar_tipo_agenda": "Editar",
+            "visualizar_tipo_agenda": "Visualizar",
+            "excluir_tipo_agenda": "Excluir",
+            "particular": "Particular",
+            "exibir_endereco_cliente": "Exibir endereço do Cliente"
+        },
+
+        "mensagem_padrao_email_agenda": {
+            "mensagem_padrao_email_agenda": "Mensagem Padrão de E-mail",
+            "mensagem_envio_relatorio": "Mensagem padrão para envio de relatorio de agenda para o cliente por e-mail",
+            "emails_resposta": "E-mails de resposta",
+            "emails_pesquisar": "E-mails"
+        },
+
+        "historico_agenda": {
+            "historico_agenda": "Histórico da Agenda",
+            "historico_agenda_filtros": "Filtros",
+            "historico_agenda_periodo": "Tipo de Período",
+            "historico_agenda_periodo_dia_agenda": "Dia da Agenda",
+            "historico_agenda_periodo_data_acao": "Dia da Ação",
+            "historico_agenda_inicio": "Início",
+            "historico_agenda_fim": "Fim",
+            "historico_agenda_agenda_usuario": "Agenda do (Usuário)",
+            "historico_agenda_tipo_acao": "Ação",
+            "historico_agenda_inclusao": "Inclusão",
+            "historico_agenda_alteracao": "Alteração",
+            "historico_agenda_exclusao": "Exclusão",
+            "historico_agenda_visualizacao": "Visualização",
+            "historico_agenda_acao_usuario": "Ação do (Usuário)",
+            "historico_agenda_pesquisar": "Pesquisar",
+            "historico_agenda_dia": "Dia",
+            "historico_agenda_detalhes": "Detalhes",
+            "historico_agenda_registros": " registro(s)",
+            "historico_agenda_visualizado_por": "Evento visualizado por ",
+            "historico_agenda_editado_por": "Evento editado por ",
+            "historico_agenda_adicionado_por": "Evento adicionado por ",
+            "historico_agenda_excluido_por": "Evento excluído por "
+        },
+
+        "agenda_ativos": {
+            "agenda_ativos": "Agenda de Ativos",
+            "agenda_ativos_detalhes": "Agenda de Ativos - Detalhes",
+            "exibir_bloqueados": "Exibir bloqueados",
+            "aba_geral": "Geral",
+            "codigo": "Código",
+            "nome": "Nome",
+            "local_agenda": "Local da Agenda",
+            "tipo_agenda": "Motivo",
+            "acoes": "Ações",
+            "visualizar_ativo": "Visualizar",
+            "editar_ativo": "Editar",
+            "excluir_ativo": "Excluir",
+            "registros_ativos": " Registro(s)",
+            "filtrar_codigo": "Filtrar por código",
+            "filtrar_nome": "Filtrar por nome",
+            "filtrar_local_agenda": "Filtrar por Local de Agenda",
+            "filtrar_tipo_agenda": "Filtrar por Tipo de Agenda",
+            "bloqueado": "Bloqueado?",
+            "digite_codigo": "Digite o código",
+            "digite_nome": "Digite o nome"
+        },
+
+        "grupo_agenda_ativos": {
+            "grupo_agenda_ativos": "Grupos de Agenda de Ativos",
+            "nome": "Nome",
+            "filtrar_nome": "Filtrar por nome",
+            "acoes": "Ações",
+            "visualizar_grupos_ativos": "Visualizar",
+            "editar_grupos_ativos": "Editar",
+            "excluir_grupos_ativos": "Excluir",
+            "registros_grupos_ativos": " Registro(s)",
+            "aba_geral": "Geral",
+            "aba_ativos": "Ativos",
+            "aba_responsaveis": "Responsáveis",
+            "digite_nome": "Digite o nome",
+            "selecione_ativo": "Selecione um Ativo",
+            "responsavel_grupo_ativo": "Responsável",
+            "selecione_responsavel": "Selecione o Responsável",
+            "nome_responsavel": "Nome"
+        },
+
+        "observacao_interna_chamado": {
+            "observacao_interna": "Observação Interna",
+            "nova_observacao_interna": "Nova Observação Interna",
+            "sem_permissao": "Você não tem permissão para enviar uma observação interna"
+        },
+
+        "anexos": {
+            "anexo": "Anexo",
+            "incluir_mais_um_anexo": "Incluir mais um anexo",
+            "anexo_selecionado": "Anexo selecionado",
+            "nenhum_anexo_selecionado": "Nenhum anexo selecionado",
+            "anexar_email": "Anexar no E-Mail"
+        },
+
+        "calendario_trabalho": {
+            "calendario_trabalho": "Calendário de Trabalho"
+        },
+
+        "cliente": {
+            "cliente": "Cliente"
+        },
+
+        "fornecedor": {
+            "fornecedor": "Fornecedor"
+        },
+
+        "organizacao": {
+            "organizacao": "Organização"
+        },
+
+        "empresa": {
+            "empresa": "Empresa"
+        },
+
+        "projeto": {
+            "projeto": "Projeto"
+        },
+
+        "atividade_projeto": {
+            "id": "ID",
+            "atividade_projeto": "Atividade Projeto",
+            "predecessora": "Predecessora",
+            "nome_atividade": "Nome da Atividade",
+            "codigo_atividade": "Código",
+            "previsao_inicio": "Previsão de Início",
+            "inicio": "Início",
+            "prazo": "Prazo",
+            "tipo_predecessora": "Tipo de Predecessora",
+            "selecione_predecessora": "Selecione Atividades Predecessoras"
+        },
+
+        "grupo_usuarios": {
+            "grupo_usuarios": "Grupo de Usuários"
+        },
+
+        "usuarios": {
+            "usuarios": "Usuários",
+            "supervisionados": "Supervisionados"
+        },
+
+        "opcoes_usuario": {
+            "opcoes_usuario": "Dados do Usuário",
+            "alterar_senha": "Alterar senha",
+            "senha_atual": "Senha atual",
+            "nova_senha": "Nova senha",
+            "repetir_nova_senha": "Repetir nova senha"
+        },
+
+        "email": {
+            "acesso_interno": "Acesso Interno",
+            "acesso_externo": "Acesso Externo",
+            "emails": "Emails"
+        },
+
+        "email_novo_usuario": {
+            "bem_vindo": "Seja bem vindo ao ",
+            "senha": "Senha",
+            "instrucao_link": "Caso deseje alterar sua senha, acesse o menu Opções do Usuário e acione o botão Alterar Senha.",
+            "atenciosamente": "Atenciosamente"
+        },
+
+        "home": {
+            "administracao": "Administração",
+            "home": "Home",
+            "modulos": "Módulos",
+            "gestao_chamados": "Chamados",
+            "gestao_documentos": "Documentos",
+            "gestao_processos": "Processos",
+            "gestao_projetos": "Projetos ",
+            "cockpit": "Cockpit",
+            "cockpit_atividades_projetos_total": "Atividades de projeto aguardando execução",
+            "cockpit_favoritos": "Favoritos",
+            "timeline": "Timeline",
+            "mural": "Social",
+            "dashboard": "Dashboard",
+            "agenda": "Agenda",
+            "crm_familia_item": "Familia itens",
+            "crm_grupo_item": "Grupo itens",
+            "crm_tipo_item": "Tipo itens",
+            "crm_item": "Item",
+            "enviar_nova_mensagem": "Enviar nova mensagem",
+            "versao": "Versão",
+            "configuracoes": "Configurações",
+            "dados_usuario": "Dados do Usuário",
+            "gestao_tarefas": "Tarefas"
+        },
+
+        "generico":{
+            "limpar_filtro": "Limpar Filtros",
+            "codigo": "Código",
+            "descricao": "Descricao",
+            "contador_registros": "registros",
+            "acao": "Ação",
+            "sugerir_codigo_automatico":"Sugerir código automaticamente",
+            "visualizar": "Visualizar",
+            "download": "Download",
+            "editar": "Editar",
+            "excluir": "Excluir",
+            "exibir_bloqueados": "Exibir Bloqueados",
+            "salvar": "Salvar",
+            "cancelar": "Cancelar",
+            "sim": "Sim",
+            "nao": "Não",
+            "configuracoes": "Configurações",
+            "geral": "Geral",
+            "bloqueado": "Bloqueado?",
+            "nome": "Nome",
+            "novo": "Novo" ,
+            "adicionar": "Adicionar" ,
+            "filtrar":"Filtrar",
+            "pesquisar": "Pesquisar",
+            "selecionar": "Selecionar",
+            "voltar": "Voltar",
+            "recarregar": "Recarregar",
+            "recuperar_registro": "Recuperar Registro",
+            "apagar_registro": "Apagar registro",
+            "salvar_registro": "Salvar registro",
+            "grupo_usuario": "Grupo de Usuário",
+            "questionar_apagar_registro": "Tem certeza de que deseja excluir este registro?",
+            "questionar_salvar_registro": "Tem certeza de que deseja salvar as alterações neste registro?",
+            "questionar_sair_sem_salvar_registro": "Tem certeza de que deseja sair sem salvar as alterações neste registro?",
+            "observacoes": "Observações"
+        },
+        "item":{
+            "aba_listar" : "Item",
+            "aba_detalhes": "Item Detalhes",
+            "aba_impostos": "Impostos",
+            "alterar_imagem": "Alterar Imagem",
+            "unidade": "Unidade",
+            "segunda_unidade": "2ª Unidade",
+            "tipo_conversao": "Tipo Conversão",
+            "divisor": "Divisor",
+            "multiplicador": "Multiplicador",
+            "fator": "Fator",
+            "preco": "Preço",
+            "preco_minimo": "Preço Minímo",
+            "comissao": "Comissão",
+            "custo": "Custo",
+            "porcentagem": "Porcentagem",
+            "filtrar_por_descricao": "Filtrar por descrição",
+            "alterar_foto": "Alterar Foto",
+            "alerta_salvo": " salvo com sucesso",
+            "alerta_exclusao": " excluido com sucesso",
+            "alerta_imposto": "Não é possível cadastrar duas vezes o mesmo imposto.",
+            "peso_bruto": "Peso Bruto",
+            "peso_liquido": "Peso Líquido"
+        },
+        "tipo_item":{
+            "codigo": "Código",
+            "descricao": "Descrição",
+            "bloqueado": "Bloqueado?",
+            "geral": "Geral",
+            "modulo": "Modulo",
+            "placeholder_codigo": "Digite o código",
+            "placeholder_descricao": "Digite a descrição",
+            "filtrar_por_codigo": "Filtrar por código",
+            "filtrar_por_descricao": "Filtrar por descrição",
+            "aba_listar": "Tipo Item",
+            "aba_detalhes": "Tipo Item - Detalhes ",
+            "selecionar_tipo_item": "Selecionar Tipo Item",
+            "mobile_header_descricao": "Descrição:",
+            "alerta": "Tipo Item ",
+            "alerta_salvo": "salvo com sucesso.",
+            "alerta_exclusao":"excluido com sucesso."
+        },
+        "grupo_item":{
+            "codigo":"Código",
+            "descricao": "Descrição",
+            "placeholder_codigo": "Digite o código",
+            "placeholder_descricao": "Digite a descrição",
+            "sintetico_pai": "Grupo Item Sintética (Pai)",
+            "bloqueado":"Bloqueado?",
+            "sintetico": "Sintético",
+            "analitico": "Análitico",
+            "filtrar_por_codigo": "Filtrar por código",
+            "filtrar_por_descricao": "Filtrar por descrição",
+            "aba_listar":"Grupo Item",
+            "aba_detalhes":"Grupo Item - Detalhes",
+            "selecionar_tipo_grupo":"Selecionar Grupo Item",
+            "mobile_header_descricao":"Descrição: ",
+            "alerta": "Grupo Item ",
+            "alerta_salvo":"salvo com sucesso."
+        },
+        "familia_itens":{
+            "aba_listar":"Familia Item",
+            "aba_detalhes":"Familia Item - Detalhes",
+            "sintetico":"Sintético",
+            "analitico":"Análitico",
+            "codigo": "Código",
+            "descricao": "Descrição",
+            "placeholder_codigo": "Digite o código",
+            "placeholder_descricao": "Digite a descrição",
+            "filtrar_por_codigo": "Filtrar por código",
+            "filtrar_por_descricao": "Filtrar por descrição",
+            "sintetico_pai": "Familia Item Sintética (Pai)",
+            "bloqueado": "Bloqueado?",
+            "selecionar_familia_item": "Select Item Family",
+            "mobile_header_descricao": "Description: ",
+            "alerta":"Familia Item " ,
+            "alerta_salvo": "salvo com sucesso.",
+            "alerta_exclusao":"excluido com sucesso.",
+            "observacoes":"Observações"
+        },
+
+        "solicitacao": {
+            "nova_solicitacao": "Nova Solicitação",
+            "retornada": "Atividade retornada",
+            "retornada_cancelar_posteriores": "Atividade retornada e suas posteriores canceladas",
+            "retornar_atividade_cancelar_posteriores": "Retornar para esta atividade e cancelar as posteriores",
+            "retornar_atividade": "Retornar para esta atividade",
+            "cancelar_atividade": "Cancelar esta atividade",
+            "cancelar_atividades_selecionadas": "Cancelar atividades selecionadas",
+            "atividades_canceladas": "Atividades selecionadas foram canceladas",
+            "restaurar_atividade": "Restaurar esta atividade",
+            "restaurar_atividades_selecionadas": "Restaurar atividades selecionadas",
+            "atividades_restauradas": "Atividades selecionadas foram restauradas"
+        },
+
+        "solicitacao_historico": {
+            "atividade_retornada": "Atividade retornada",
+            "atividade_cancelada": "Atividade cancelada",
+            "atividade_restaurada": "Atividade restaurada",
+            "gateway_cancelado": "Gateway cancelado"
+        },
+        
+        "solicitacao_atividade_mail": {
+            "nova_solicitacao_atividade": "Nova Solicitação de Atividade",
+            "retorno_atividade": "Retorno de Atividade",
+            "cancelada": "Cancelada",
+            "motivo_cancelamento": "Motivo Cancelamento",
+            "cancelado_por": "Cancelado Por",
+            "motivo_retorno": "Motivo do retorno: ",
+            "conclusao_processo": "Conclusão do Processo",
+            "confirmacao_conclusao_atividade": "Confirmação de conclusão da atividade",
+            "notificacao_prazo": "Próximo ao prazo de entrega",
+            "processo": "Processo",
+            "atividade": "Atividade",
+            "solicitante": "Solicitante",
+            "responsavel": "Responsável",
+            "prazo": "Prazo",
+            "horas_uteis": "Horas Úteis",
+            "login": "Login",
+            "senha": "Senha",
+            "atenciosamente": "Atenciosamente",
+            "acesso_interno": "Acesso interno ao portal para dar continuidade à solicitação",
+            "acesso_externo": "Acesso externo ao portal para dar continuidade à solicitação",
+            "atividade_processo": "Atividade Processo",
+            "observacao_atividade": "Observações da atividade",
+            "observacao_atividade_anterior": "Observações da atividade anterior",
+            "instrucoes_atividade": "Instruções para a atividade"
+        },
+
+        "solicitar_senha": {
+            "esqueceu_sua_senha": "Esqueceu sua senha?",
+            "usuario": "Usuário",
+            "email": "E-mail",
+            "cancelar": "Cancelar",
+            "solicitar_senha": "Solicitar Senha",
+            "receba_sua_senha": "Informe seu usuário e e-mail, você receberá sua senha no e-mail cadastrado.",
+            "usuario_invalido": "Usuário e/ou e-mail inválido(s).",
+            "tempo_senha": "Foi solicitada a senha há menos de 10 minutos, aguarde para solicita-la novamente.",
+            "senha": "Senha",
+            "atenciosamente": "Atenciosamente",
+            "solicitacao_de_senha": "Solicitação de Senha",
+            "conforme_solicitado": "Conforme solicitado, segue abaixo sua senha para acesso.",
+            "resetar_senha": "Para confirmar a troca de senha, clique no link abaixo e aguarde receber a nova senha por e-mail.",
+            "sua_senha_alterada": "Sua senha foi alterada.",
+            "aguarde_senha_email": "Confira a caixa de entrada do seu e-mail, nela você irá receber sua nova senha.",
+            "nao_possivel_altera_senha": "Não foi possível alterar a senha.",
+            "alterar_senha_expirou": "Este link expirou. Solicite uma nova senha através do \"Esqueci minha senha\" e verifique sua caixa de entrada de e-mails.",
+            "ou": "ou"
+        },
+
+        "msg_padrao": {
+            "validacao": "Validação"
+        },
+
+        "dia_semana": {
+            "domingo": "Domingo",
+            "segunda": "Segunda-Feira",
+            "terca": "Terça-Feira",
+            "quarta": "Quarta-Feira",
+            "quinta": "Quinta-Feira",
+            "sexta": "Sexta-Feira",
+            "sabado": "Sabado",
+            "hoje": "Hoje",
+            "amanha": "Amanhã",
+            "um_dia_atras": "um dia atrás",
+            "dias": "dias",
+            "dias_atras": "dias atrás",
+            "falta": "faltam",
+            "semanas": "Semanas",
+            "uma_semana": "Uma semana",
+            "duas_semanas": "Duas semanas",
+            "tres_semanas": "Três semanas",
+            "quatro_semanas": "Quatro semanas"
+        },
+
+        "meses": {
+            "janeiro": "Janeiro",
+            "fevereiro": "Fevereiro",
+            "marco": "Março",
+            "abril": "Abril",
+            "maio": "Maio",
+            "junho": "Junho",
+            "julho": "Julho",
+            "agosto": "Agosto",
+            "setembro": "Setembro",
+            "outubro": "Outubro",
+            "novembro": "Novembro",
+            "dezembro": "Dezembro"
+        },
+
+        "meses_abreviado": {
+            "janeiro": "Jan",
+            "fevereiro": "Fev",
+            "marco": "Mar",
+            "abril": "Abr",
+            "maio": "Mai",
+            "junho": "Jun",
+            "julho": "Jul",
+            "agosto": "Ago",
+            "setembro": "Set",
+            "outubro": "Out",
+            "novembro": "Nov",
+            "dezembro": "Dez"
+        },
+
+        "timeline": {
+            "nenhuma_atividade": "Nenhuma Atividade",
+            "atrasados": "Atrasados",
+            "chamado": "Chamado",
+            "processo": "Processo",
+            "documento": "Documento",
+            "projeto": "Projeto",
+            "previsao_inicio": "Previsão de Início",
+            "prazo": "Prazo",
+            "inicio_real" : "Início Real",
+            "codigo_documento": "Código Documento",
+            "tarefa": "Tarefa"
+        },
+
+        "selectpicker": {
+            "opcoes": "Opções",
+            "todos": "Todos",
+            "selecionar": " - Selecione - ",
+            "nenhum": "Nenhum",
+            "usuarios": "Usuários",
+            "local_agenda": "Local",
+            "tipo_agenda": "Motivo"
+        },
+
+        "combobox":{
+            "selecione": "Selecione",
+            "selecione_cliente": "Selecione o Cliente",
+            "selecione_fornecedor": "Selecione o Fornecedor",
+            "selecione_organizacao": "Selecione a Organização",
+            "selecione_empresa": "Selecione a Empresa",
+            "col_nome": "Nome"
+        },
+
+        "modal_cadastro": {
+            "salvar": "Salvar",
+            "confirmar": "Confirmar",
+            "cancelar": "Cancelar",
+            "excluir": "Excluir",
+            "enviar": "Enviar",
+            "fechar": "Fechar"
+        },
+
+        "modal_validacao": {
+            "validacao": "Validação",
+            "sim": "Sim",
+            "nao": "Não",
+            "informe_local_evento": "Informe o Local",
+            "informe_tipo_evento": "Informe o Tipo de Agenda",
+            "cliente_nao_existe": "Cliente não existe",
+            "evento_agenda_data_horario": "Já existe evento para esta data e horário, deseja prosseguir?"
+        },
+
+        "alert_saved": {
+            "agenda_evento": "Evento ",
+            "observacao_interna": "Observação Interna ",
+            "mensagem": "Mensagem",
+            "salvo": " salvo com sucesso",
+            "excluido": " excluído com sucesso",
+            "eventos_recorrentes_criados": "Eventos recorrentes registrados",
+            "eventos_recorrentes_nao_criados": "Eventos recorrentes não registrados",
+            "registro_excluido": "registro excluído com sucesso"
+        },
+
+        "tela_cadastro": {
+            "novo": "Novo",
+            "editar": "Editar",
+            "visualizar": "Visualizar",
+            "salvar": "Salvar",
+            "confirmar": "Confirmar",
+            "cancelar": "Cancelar",
+            "excluir": "Excluir",
+            "enviar": "Enviar",
+            "fechar": "Fechar"
+        },
+
+        "ctrl_ccp": {
+            "copiar": "Copiar",
+            "recortar": "Recortar",
+            "colar": "Colar"
+        },
+
+        "bootstrap_checkbox": {
+            "sim": "SIM",
+            "nao": "NÃO"
+        },
+
+        "caixa_pesquisa_email": {
+            "emails_pesquisar": "Pesquisar",
+            "digite_usuario": "Digite o usuário"
+        },
+
+        "cores": {
+            "vermelho_1": "Vermelho 1",
+            "vermelho_2": "Vermelho 2",
+            "vermelho_3": "Vermelho 3",
+            "vermelho_4": "Vermelho 4",
+            "vermelho_5": "Vermelho 5",
+            "vermelho_6": "Vermelho 6",
+            "vermelho_7": "Vermelho 7",
+            "laranja_1": "Laranja 1",
+            "laranja_2": "Laranja 2",
+            "laranja_3": "Laranja 3",
+            "laranja_4": "Laranja 4",
+            "laranja_5": "Laranja 5",
+            "laranja_6": "Laranja 6",
+            "laranja_7": "Laranja 7",
+            "amarelo_1": "Amarelo 1",
+            "amarelo_2": "Amarelo 2",
+            "amarelo_3": "Amarelo 3",
+            "amarelo_4": "Amarelo 4",
+            "amarelo_5": "Amarelo 5",
+            "amarelo_6": "Amarelo 6",
+            "amarelo_7": "Amarelo 7",
+            "verde_1": "Verde 1",
+            "verde_2": "Verde 2",
+            "verde_3": "Verde 3",
+            "verde_4": "Verde 4",
+            "verde_5": "Verde 5",
+            "verde_6": "Verde 6",
+            "verde_7": "Verde 7",
+            "azul_1": "Azul 1",
+            "azul_2": "Azul 2",
+            "azul_3": "Azul 3",
+            "azul_4": "Azul 4",
+            "azul_5": "Azul 5",
+            "azul_6": "Azul 6",
+            "azul_7": "Azul 7",
+            "roxo_1": "Roxo 1",
+            "roxo_2": "Roxo 2",
+            "roxo_3": "Roxo 3",
+            "roxo_4": "Roxo 4",
+            "roxo_5": "Roxo 5",
+            "roxo_6": "Roxo 6",
+            "roxo_7": "Roxo 7",
+            "branco": "Branco",
+            "cinza_1": "Cinza 1",
+            "cinza_2": "Cinza 2",
+            "cinza_3": "Cinza 3",
+            "cinza_4": "Cinza 4",
+            "cinza_5": "Cinza 5",
+            "preto": "Preto"
+        },
+
+        "limpar_filtros": {
+            "limpar_filtros": "Limpar filtros"
+        },
+
+        "menu_lateral": {
+            "cadastros": "Cadastros"
+        },
+
+        "validacao_agenda_evento": {
+            "informe_titulo": "Informe o titulo",
+            "informe_dia": "Informe o dia do Evento",
+            "informe_local": "Informe o local do Evento",
+            "informe_usuario": "Informe o usuário do Evento",
+            "informe_tipo": "Informe o tipo do Evento",
+            "gerenciar_agenda_usuario": "Você não tem permissão para gerenciar a Agenda deste usuário",
+            "informe_responsaveis": "Informe os responsáveis por Evento",
+            "evento_nao_existe": "Evento de Agenda não existe",
+            "campos_filtro_invalidos": "O filtro possui valores inválidos, por favor verifique",
+            "hora_inicial_final": "A Hora Inicial não pode ser menor que a Hora Final",
+            "evento_pessoal_ativo": "Não é possível criar um Evento Pessoal em um Ativo",
+            "permissao_agenda_pessoal": "Sem permissão para visualizar o evento - Evento Pessoal."
+        },
+
+        "validacao_local_agenda": {
+            "informe_nome": "Informe o nome do Local de Agenda",
+            "local_nao_existe": "Local de Agenda não existe"
+        },
+
+        "validacao_tipo_agenda": {
+            "informe_nome": "Informe o nome do Tipo de Agenda",
+            "informe_cor": "Informe a cor do Tipo de Agenda",
+            "tipo_nao_existe": "Tipo de Agenda não existe"
+        },
+
+        "validacao_agenda_ativo": {
+            "informe_nome": "Informe o nome do Ativo",
+            "informe_local": "Informe o local do Ativo",
+            "informe_motivo": "Informe o motivo do Ativo",
+            "ativo_nao_existe": "Ativo de Agenda não existe"
+        },
+
+        "validacao_agenda_grupos_ativos": {
+            "informe_nome": "Informe o nome do Grupo de Ativos",
+            "grupo_ativo_nao_existe": "Grupo de Ativos da Agenda não existe"
+        },
+
+        "oportunidade_agenda": {
+            "atv_realizada": "Atividade Concluida?",
+            "exibir_agenda": "Exibir na Agenda?"
+        },
+
+        "tipo_agenda_oportunidade": {
+            "exibir_agenda": "Exibir na Agenda ?"
+        },
+
+        "configuracoes_avaliacao": {
+            "titulo_avaliacao": "Configurações de Avaliação",
+            "avaliacoes_cliente": "Permitir avaliações de Clientes:",
+            "avaliacoes_colaborador": "Permitir avaliações de Colaboradores:",
+            "avaliacoes_fornecedor": "Permitir avaliações de Fornecedores:",
+            "avaliacoes_organizacao": "Permitir avaliações de Organizações:"
+        },
+
+        "classificacao_projeto": {
+            "utilizar_classificacao": "Utilizar classificações de Projeto :",
+            "nome": "Nome",
+            "editar": "Editar",
+            "visualizar": "Visualizar",
+            "excluir": "Excluir",
+            "novo": "Novo"
+        },
+
+        "classificacao_projeto_detalhes": {
+            "titulo": "Classificação de Projeto",
+            "nome": "Nome",
+            "cancelar": "Cancelar",
+            "salvar": "Salvar",
+            "excluir": "Excluir",
+            "placeholder": "Descrição da classificação"
+        },
+
+        "btn_carregar_mais": {
+            "carregar_mais_registros": "Carregar mais registros",
+            "aguarde": "Por favor, aguarde",
+            "todos_carregados": "Todos os registros foram carregados"
+        },
+
+        "dxDataGrid": {
+            "editing": {
+                "addRow": "[F2] Adicionar Linha",
+				"editRow": "Editar Registro",
+			    "confirmDeleteMessage": "Deseja remover o(s) registro(s) selecionados?"
+            },
+            "noDataText": "Sem registros"
+        },
+
+        "usuario_listar": {
+            "colunas": {
+                "id": "Id",
+                "nome": "Nome",
+                "usuario": "Usuário",
+                "email": "E-mail",
+                "bloqueado": "Bloqueado",
+                "admin": "Administrador",
+                "area": "Área",
+                "tipo_entidade": "Tipo entidade",
+                "calendario_trabalho": "Calendário de trabalho",
+                "cpf": "CPF",
+                "telefone1": "Telefone 1",
+                "telefone2": "Telefone 2",
+                "telefone3": "Telefone 3",
+                "telefone4": "Telefone 4",
+                "entidade": "Entidade",
+                "ultimo_acesso": "Último Acesso"
+            },
+            "botoes_cabecalho": {
+                "hint_usuario": "Adicionar usuário",
+                "hint_refresh": "Recarregar listagem de usuários",
+                "hint_configuracoes": "Configurar preferências"
+            },
+            "botoes": {
+                "hint_permissoes": "Editar permissões do usuário",
+                "hint_editar_usuario": "Editar usuário",
+                "hint_visualizar_usuario": "Visualizar usuário",
+                "hint_enviar_senha_email": "Enviar senha do usuário por e-mail",
+                "hint_copiar_permissoes": "Copiar permissões de outro usuário",
+                "hint_excluir_usuario": "Excluir usuário",
+                "hint_editar_usuarios_selecionados": "Editar usuários selecionados",
+                "hint_visualizar_usuarios_selecionados": "Visualizar usuários selecionados",
+                "hint_excluir_usuarios_selecionados": "Excluir usuários selecionados"
+            }
+        },
+
+        "area": {
+            "area": "Área",
+            "id": "#",
+            "nome": "Nome",
+            "info_digite_nome": "Digite o nome da Área"
+        },
+
+        "apontamento_despesa_projeto": {
+            "km_rodado": "KM Rodado",
+            "pedagio": "Pedágio",
+            "refeicao": "Refeição",
+            "outras_despesas": "Outras Despesas",
+            "descricao_da_despesa": "Descrição da Despesa",
+            "observacoes": "Observação da Despesa"
+        },
+
+        "gateway_destino_evento":{
+            "anyof": "Algum dos",
+            "javascript": "JavaScript",
+            "construtor_filtros": "Construtor de filtros",
+            "tipo_automacao": "Tipo da Automação"
+        },
+
+        "tarefa": {
+            "titulo_quadro": "Listagem de Quadros",
+            "titulo_etiqueta": "Listagem de Etiquetas",
+            "etiqueta": "Etiqueta",
+            "acessar_quadro": "Acessar Quadro",
+            "gerenciar_equipe": "Gerenciar Equipe",
+            "alterar_imagem": "Alterar Imagem",
+            "filtro_nome": "Filtrar por nome do cartão",
+            "filtro_responsavel": "Filtrar por responsável",
+            "filtro_etiqueta": "Filtrar por etiqueta",
+            "filtro_situacao": "Filtrar por situação",
+            "formulario_vinculado": "Formulário Vínculado"
+        },
+
+        "documento": {
+            "codigo": "Código",
+            "nome": "Nome",
+            "aprovador_nome": "Aprovador",
+            "prazo": "Prazo Execução",
+            "tag": "Tag",
+            "assunto": "Assunto",
+            "tipo": "Tipo",
+            "revisao": "Revisão",
+            "tipo_pendencia": "Tipo Pendência",
+            "situacao": "Situação",
+            "tamanho": "Tamanho",
+            "modificacao": "Modificação",
+            "vigente_ate": "Vigente até",
+            "observacoes": "Obs.",
+            "aprovar": "Aprovar",
+            "reprovar": "Reprovar",
+            "marcar_realizado": "Marcar como Realizado",
+            "substituir_arquivo": "Substituir Arquivo",
+            "pasta": "Pasta",
+            "recebimento_data": "Data Recebimento",
+            "data_aprovacao_alcada": "Data Execução",
+            "situacao_prazo": "Situação Prazo"
+        }
+    }
+}

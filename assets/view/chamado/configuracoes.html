@@ -1,0 +1,146 @@
+<div class="modal bs-modal-md" tabindex="-1" role="dialog" aria-labelledby="modal_chamado_configuracoes" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_chamado_configuracoes">Configurações</h4>
+            </div>
+            <div class="modal-body">                
+                
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <th colspan="2">
+                            Notificação
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-left">
+                                <label for="chk_chamado_email_todas_mensagens">Nos e-mails de notificação, exibir todas as mensagens do chamado.</label>
+                                <div class="small text-warning">Atenção: Quando ativado, os e-mails poderão atingir grandes tamanhos por conterem muitas mensagens, consumindo muita banda do servidor de e-mails.</div>
+                            </td>
+                            <td class="text-right">
+                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_chamado_email_todas_mensagens" id="chk_chamado_email_todas_mensagens">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">
+                                <label for="chk_chamado_email_em_nome_do_usuario_da_mensagem">Nos e-mails de notificação, utilizar o nome do usuário que enviou a mensagem como o nome do autor do e-mail.</label>
+                            </td>
+                            <td class="text-right">
+                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_chamado_email_em_nome_do_usuario_da_mensagem" id="chk_chamado_email_em_nome_do_usuario_da_mensagem">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <th colspan="2">
+                            Sugestões
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-left">
+                                <label for="chk_sugerir_situacao">Sugerir situação do chamado em novas mensagens</label>
+                            </td>
+                            <td class="text-right">
+                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_sugerir_situacao" id="chk_sugerir_situacao">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">
+                                <label for="chk_sugerir_situacao_reclassificao">Sugerir situação do chamado em reclassificações</label>
+                            </td>
+                            <td class="text-right">
+                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_sugerir_situacao_reclassificao" id="chk_sugerir_situacao_reclassificao">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">
+                                <label for="chk_sugerir_email">Sugerir e-mails adicionais ao abrir um chamado por atividade de projeto ou processo</label>
+                            </td>
+                            <td class="text-right">
+                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_sugerir_email" id="chk_sugerir_email">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">
+                                <label for="chk_sugerir_entidade_usuario_logado">Sugerir entidade do usuário na abertura do chamado</label>
+                            </td>
+                            <td class="text-right">
+                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_sugerir_entidade_usuario_logado" id="chk_sugerir_entidade_usuario_logado">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">
+                                <label for="chk_chamado_classificacoes">Utilizar classificações do chamado</label>
+                            </td>
+                            <td class="text-right">
+                                <input type="checkbox" class="checkbox_bootstrap_toggle chk_chamado_classificacoes">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <th colspan="2">
+                            Formatação
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-left">
+                                <label for="chk_sugerir_situacao">Formatar campo Horas Trabalhadas com:</label>
+                            </td>
+                            <td class="text-right">
+                                <select class="edt_mascara_horas_trabalhadas form-control" id="edt_mascara_horas_trabalhadas">
+                                    <option value="000:00">000:00</option>
+                                    <option value="00:00">00:00</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <th colspan="2">
+                            SLA Tempo de Reação
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div>
+                                    <label for="selecao_motivo_sla">Contabilizar tempo de reação do SLA ao reclassificar para:</label>
+                                    <div id="selecao_tipo_motivo"></div>
+                                </div>
+
+                                <br />
+
+                                <div class='div_selecao_motivos'>
+                                    <label for="selecao_motivo_sla">Selecione os motivos:</label>
+                                    <div id="selecao_motivo_sla"></div>
+                                    
+                                </div>
+
+                                <br />
+
+                                <span class="fa fa-info-circle"></span>
+                                <span style="font-size: 12px;">O Motivo de Chamado precisa ter o SLA ativado em suas configurações.</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+              
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>                
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,578 @@
+<ol class="breadcrumb visible-xs">
+   <li class="active">Detalhe Organização</li>
+</ol>
+<div class="panel panel-default">
+<div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+   <div class="pull-right ">
+      <div >
+        <button type="button" class="btn btn-default btn_historico_entidade">
+            <i class="fa fa-history" aria-hidden="true"></i>
+        </button>
+         <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+         <button type="button" class="btn_salvar btn btn-primary" style="display: none;">Salvar</button>
+         <button type="button" class="btn_excluir btn btn-danger" style="display: none;">Excluir</button>                
+      </div>
+   </div>
+   <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+      <li class="active">
+         <a class="menu_geral" href="#" role="tab" data-toggle="tab">Geral</a>
+      </li>
+      <li>
+         <a class="menu_vendas" href="#" role="tab" data-toggle="tab">Vendas</a>
+      </li>
+      <li>
+         <a class="menu_contatos" href="#" role="tab" data-toggle="tab">Contatos</a>
+      </li>
+      <li>
+         <a class="menu_personalizado" href="#" role="tab" data-toggle="tab">Campos Personalizados</a>
+      </li>  
+   </ul>
+</div>
+<div class="panel-body">
+<!-- Tab panes -->
+<div class="tab-content">
+   <div class="tab-pane active aba_geral">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="form-group">
+               <span class="preview_logo" style="padding-top: 7px; padding-bottom: 0px;" ><img style="min-height: 60px; min-width: 60px; max-height: 60px; max-width: 180px; padding:1px; border:1px solid #021a40;" class="carrega_img"/></span> 
+            </div>
+         </div>
+         <div class="col-md-12">
+            <div class="form-group">
+               <input type="file" class="files hidden" name="files[]" accept="image/*"/> 
+               <button type="button" class="btn_alterar_logo btn btn-primary">Alterar Logo</button>
+               <button type="button" class="btn_remover_logo btn btn-primary">Remover Logo</button>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <!--<div class="col-md-2">
+            <div class="panel panel-default">
+                <div class="list-group">
+                    <a href="#" class="btn_salvar list-group-item">
+                        <span class="glyphicon glyphicon-floppy-disk"></span>
+                        Salvar alterações
+                    </a>
+                    <a href="#" class="btn_cancelar list-group-item">
+                        <span class="glyphicon glyphicon-remove"></span>
+                        Cancelar alterações
+                    </a>
+                </div>
+            </div>        
+            </div> -->        
+         <div class="col-md-6">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label for="edt_codigo">Código</label>
+                     <span class="text-danger">*</span>
+                     <input type="text" class="edt_codigo form-control" maxlength="50" id="edt_codigo" placeholder="Código">
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label for="edt_unidade">Unidade</label>
+                     <span class="text-danger">*</span>
+                     <input type="text" class="edt_unidade form-control" maxlength="2" id="edt_unidade" placeholder="Unidade">
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="form-group">
+                     <label for="edt_razao_social">Razão Social</label>
+                     <span class="razao_social_obrig text-danger">*</span>
+                     <input type="text" class="edt_razao_social form-control" maxlength="80" id="edt_razao_social" placeholder="Razão Social">
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="form-group">
+                     <label for="edt_nome">Nome Fantasia</label>
+                     <span class="nome_fantasia_obrig text-danger">*</span>
+                     <input type="text" class="edt_nome form-control" maxlength="80" id="edt_nome" placeholder="Nome Fantasia">
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-3">
+                  <div class="form-group">
+                     <label for="chk_bloqueado">Bloqueado ?</label>
+                     <div style="margin-top: 3px;">
+                        <input type="checkbox" class="chk_bloqueado form-control" id="chk_bloqueado">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="form-group">
+                     <label>Tipo Pessoa</label>
+                     <span class="tipo_obrig text-danger">*</span>
+                     <select class="form-control cbo_tipo_pessoa">
+                        <option value="J">Jurídica</option>
+                        <option value="F">Física</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="col-md-5">
+                  <div class="form-group">
+                     <label>Tipo Cadastro</label>
+                     <span class="tipo_obrig text-danger">*</span>
+                     <select class="form-control cbo_tipo_cadastro">
+                        <option value="F">Consumidor Final</option>
+                        <option value="R">Revendedor</option>
+                        <option value="S">Solidário</option>
+                        <option value="E">Exportação</option>
+                        <option value="N">Não contribuinte</option>
+                     </select>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">       
+                    <div class="div_componente_cep form-group"></div>
+                </div> 
+               <div class="col-md-9">
+                  <div class="form-group">
+                     <label for="edt_endereco">Endereço</label>
+                     <span class="endereco_obrig text-danger">*</span>
+                     <input type="text" class="edt_endereco form-control" maxlength="80" id="edt_endereco" placeholder="Endereço">
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-3">
+                  <div class="form-group">
+                     <label for="edt_numero">Número</label>
+                     <span class="numero_obrig text-danger">*</span>
+                     <input type="text" class="edt_numero form-control" maxlength="15" id="edt_numero" placeholder="Número">
+                  </div>
+               </div>
+               <div class="col-md-9">
+                  <div class="form-group">
+                     <label for="edt_complemento">Complemento</label>
+                     <input type="text" class="edt_complemento form-control" maxlength="100" id="edt_complemento" placeholder="Complemento">
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="form-group">
+                     <label for="edt_bairro">Bairro</label>
+                     <span class="bairro_obrig text-danger">*</span>
+                     <input type="text" class="edt_bairro form-control" maxlength="60" id="edt_bairro" placeholder="Bairro">
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label>Município</label>
+                     <span class="municipio_obrig text-danger">*</span>                                             
+                     <div class="input-group"> 
+                        <input type="text" class="edt_municipio form-control" disabled>
+                        <div class="edt_uf input-group-addon"></div>
+                        <span class="input-group-btn">
+                           <button class="btn_municipio btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                        </span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label>País</label>
+                     <span class="pais_obrig text-danger">*</span>
+                     <div class="input-group"> 
+                        <input type="text" class="edt_pais form-control" disabled>
+                        <span class="input-group-btn">
+                        <button class="btn_pais btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                        </span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6">
+            <!--<div class="row">
+               <div class="col-md-12">   
+                   <div class="form-group">                                 
+                       <label>País</label>
+                       <div class="input-group"> 
+                           <input type="text" class="edt_pais form-control" disabled>
+                           <span class="input-group-btn">
+                               <button class="btn_pais btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                           </span>
+                       </div>   
+                   </div>   
+               </div>
+               </div> -->
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label for="edt_cnpj">CNPJ/CPF</label>
+                     <span class="cnpj_obrig text-danger">*</span>
+                     <div class="div_componente_cnpj"></div>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label for="edt_inscricao_estadual">Inscrição Estadual</label>
+                     <span class="inscricao_estadual_obrig text-danger">*</span>
+                     <input type="text" class="edt_inscricao_estadual form-control" maxlength="18" id="edt_inscricao_estadual" placeholder="IE">
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label for="edt_id_estrangeiro">ID Estrangeiro</label>
+                     <input type="text" class="edt_id_estrangeiro form-control" maxlength="20" id="edt_id_estrangeiro" placeholder="ID Estrangeiro">
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label for="edt_incricao_municipal">Inscrição Municipal</label>
+                     <input type="text" class="edt_incricao_municipal form-control" maxlength="15" id="edt_incricao_municipal" placeholder="IM">
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label>Tipo de Orgão</label>
+                     <select class="form-control cbo_tipo_orgao">
+                        <option value="N">Normal</option>
+                        <option value="M">MEI</option>
+                        <option value="O">Órgão Público</option>
+                        <option value="S">Simples Nacional</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label>Dt.Fundação</label>
+                     <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_data_fundacao"> 
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label for="edt_telefone1">Telefone 1</label>
+                     <input type="text" class="edt_telefone1 form-control" maxlength="15" id="edt_telefone1" placeholder="Telefone">
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label for="edt_telefone2">Telefone 2</label>
+                     <input type="text" class="edt_telefone2 form-control" maxlength="15" id="edt_telefone2" placeholder="Telefone">
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label for="edt_telefone3">Telefone 3</label>
+                     <input type="text" class="edt_telefone3 form-control" maxlength="15" id="edt_telefone3" placeholder="Telefone">
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label for="edt_telefone4">Telefone 4</label>
+                     <input type="text" class="edt_telefone4 form-control" maxlength="15" id="edt_telefone4" placeholder="Telefone">
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="form-group">
+                     <label for="edt_site">Site</label>
+                     <input type="text" class="edt_site form-control" maxlength="60" id="edt_site" placeholder="Site">
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="form-group">
+                     <label for="edt_email_principal">E-mail Principal</label>
+                     <input type="text" class="edt_email_principal form-control" maxlength="60" id="edt_email_principal" placeholder="E-mail Principal">
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="form-group">
+                     <label for="edt_email_agenda">E-mail de recebimento da agenda</label>
+                     <input type="text" class="edt_email_agenda form-control" maxlength="500" id="edt_email_agenda" placeholder="email1@exemplo.com; email2@exemplo.com; email3@exemplo.com;">
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                 <div class="form-group">
+                     <label for="edt_dominio_interacao">Domínios para abertura de chamado</label>
+                     <input type="text" class="edt_dominio_interacao form-control" maxlength="300" id="edt_dominio_interacao" placeholder="exemploa.com.br; exemplob.com.br; exemploc.com.br;">
+                 </div>
+             </div>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-12">
+            <div class="form-group">
+               <label for="edt_observacoes">Observações</label>        
+               <textarea class="edt_observacoes form-control" id="edt_observacoes" maxlength="500" rows="4"></textarea>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="tab-pane aba_contatos">
+      <br>
+      <div class="row">
+         <div class="col-md-6"> 
+            <label>Relacionar Contato</label>                       
+            <select class="select-multi-column cbo_contatos"></select>                                                
+         </div>
+      </div>
+      <br>
+      <div class="row">
+         <div class="col-md-12">
+            <div class="div_contato form-group" id="div_contato">
+               <table class="tab_listagem_contato table">
+                  <thead>
+                     <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Telefone 1</th>
+                        <th>Telefone 2</th>
+                        <th>Telefone 3</th>
+                        <th>Telefone 4</th>
+                        <th>
+                           <div class="pull-right">
+                              <button type="button" class="btn_incluir_contato hidden btn btn-default">
+                              <span class="glyphicon glyphicon-plus"></span>
+                              </button>
+                           </div>
+                        </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr template-row style="display: none;">
+                        <td template-field="nome">{nome}</td>
+                        <td template-field="email">{email}</td>
+                        <td template-field="telefone1">{telefone1}</td>
+                        <td template-field="telefone2">{telefone2}</td>
+                        <td template-field="telefone3">{telefone3}</td>
+                        <td template-field="telefone4">{telefone4}</td>
+                        <td template-buttons="actions">
+                           <div class="btn-group pull-right">                                
+                              <button type="button" class="btn_editar_contato btn btn-default">
+                              <span class="glyphicon glyphicon-pencil"></span>
+                              </button>                                        
+                              <button type="button" class="btn_deletar_contato btn btn-default">
+                              <span class="glyphicon glyphicon-trash"></span>
+                              </button>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="tab-pane aba_vendas">
+      <div class="row">
+         <div class="col-md-2">
+            <div class="form-group">
+               <label>Classificação</label>
+               <select class="form-control cbo_classificacao">
+                  <option value="L">Lead</option>
+                  <option value="S">Suspect</option>
+                  <option value="P">Organização</option>
+               </select>
+            </div>
+         </div>
+         <div class="col-md-3">
+            <div class="form-group">
+               <label for="chk_bloqueado">Qualificado ?</label>
+               <div style="margin-top: 3px;">
+                  <input type="checkbox" class="chk_qualificado form-control" id="chk_qualificado">
+               </div>
+            </div>
+         </div>
+      </div>                   
+      <div class="row">
+         <div class="col-md-12">
+            <div class="panel panel-default">
+               <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                  <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                     <li class="active">
+                        <a class="menu_segmentos" href="#" role="tab" data-toggle="tab">Segmentos</a>
+                     </li>
+                     <li>
+                        <a class="menu_representantes" href="#" role="tab" data-toggle="tab">Representantes</a>
+                     </li>
+                     <li>
+                        <a class="menu_regiao_vendas" href="#" role="tab" data-toggle="tab">Região de Vendas</a>
+                     </li>
+                     <li>
+                        <a class="menu_tabela_preco" href="#" role="tab" data-toggle="tab">Tabela de Preço</a>
+                    </li>                               
+                    <li>
+                        <a class="menu_condicao_pagamento" href="#" role="tab" data-toggle="tab">Condição de Pagamento</a>
+                    </li>  
+                  </ul>
+               </div>
+               <div class="panel-body">
+                  <div class="tab-content">
+                     <div class="tab-pane aba_segmentos active">
+                        <div class="div_segmento form-group" id="div_segmento">
+                           <table class="tab_listagem_segmento table">
+                              <thead>
+                                 <tr>
+                                    <th>Segmento</th>
+                                    <th>
+                                       <div class="pull-right">
+                                          <button type="button" class="btn_incluir_segmento btn btn-default">
+                                          <span class="glyphicon glyphicon-plus"></span>
+                                          </button>
+                                       </div>
+                                    </th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr template-row style="display: none;">
+                                    <td template-field="nome_segmento">{nome_segmento}</td>
+                                    <td>
+                                       <div class="pull-right">
+                                          <button type="button" class="btn_deletar_segmento btn btn-default">
+                                          <span class="glyphicon glyphicon-trash"></span>
+                                          </button>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                     <div class="tab-pane aba_representantes">
+                        <br>
+                        <div class="row">
+                           <div class="col-md-6"> 
+                              <label>Incluir Representante</label>                       
+                              <select class="select-multi-column cbo_representante" placeholder="Digite o nome"></select>                                                
+                           </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                           <div class="col-md-12">
+                              <div class="div_representante form-group" id="div_representante">
+                                 <table class="tab_listagem_representante table">
+                                    <thead>
+                                       <tr>
+                                          <th>Nome</th>
+                                          <th>E-mail</th>
+                                          <th>
+                                             <div class="pull-right">
+                                                <button type="button" class="btn_incluir_representante hidden btn btn-default">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                                </button>
+                                             </div>
+                                          </th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr template-row style="display: none;">
+                                          <td template-field="nome">{nome}</td>
+                                          <td template-field="email">{email}</td>
+                                          <td template-buttons="actions">
+                                             <div class="btn-group pull-right">                                
+                                                <button type="button" class="btn_deletar_representante btn btn-default">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                                </button>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane aba_regiao_vendas">
+                        <br>
+                        <div class="row">
+                           <div class="col-md-6"> 
+                              <label>Incluir Região de Vendas</label>                       
+                              <select class="select-multi-column cbo_regiao_venda" placeholder="Digite o nome da região"></select>                                                
+                           </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                           <div class="col-md-12">
+                              <div class="div_regiao_venda form-group" id="div_regiao_venda">
+                                 <table class="tab_listagem_regiao_venda table">
+                                    <thead>
+                                       <tr>
+                                          <th width="80%">Nome</th>
+                                          <th style="text-align:right;">Padrão ?</th>
+                                          <th>
+                                             <div class="pull-right">
+                                                <button type="button" class="btn_incluir_regiao_venda hidden btn btn-default">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                                </button>
+                                             </div>
+                                          </th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr template-row style="display: none;">
+                                          <td template-field="nome">{nome}</td>
+                                          <td align="right">
+                                             <div class="checkbox">
+                                                <input template-field="chk_padrao" type="checkbox" class="chk_padrao form-group checkbox_bootstrap_toggle template_switch">
+                                                
+                                             </div>
+                                          </td>
+                                          <td template-buttons="actions">
+                                             <div class="btn-group pull-right">                                
+                                                <button type="button" class="btn_deletar_regiao_venda btn btn-default">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                                </button>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane aba_tabela_preco">
+                        <div class="div_componente_tabela_preco"></div> 
+                    </div>
+
+                    <div class="tab-pane aba_condicao_pagamento">
+                        <div class="div_componente_condicao_pagamento"></div> 
+                    </div>
+                </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="tab-pane aba_personalizado">    
+      <div class="form-editor">
+         <div class="row">
+             <div class="col-md-12">
+                 <div class="divFormularioPersonalizado"></div>
+             </div>
+         </div>
+      </div>
+    </div>
+   <!--<div class="panel-footer">
+      <div class="text-right">
+         <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+         <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+         <button type="button" class="btn_excluir btn btn-danger">Excluir</button>                        
+      </div>
+   </div> -->
+</div>

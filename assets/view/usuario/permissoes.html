@@ -1,0 +1,1271 @@
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_permissoes_detalhes_label" aria-hidden="true">
+     <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_permissoes_detalhes_label">Permissões</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label for="modal_permissoes_edt_nome">Usuário</label>
+                    <input type="text" class="edt_nome form-control" id="modal_permissoes_edt_nome" read-only="read-only">
+                </div>
+                <div class="form-group div_empresa hidden">
+                    <label for="modal_permissoes_cbo_empresa">Empresa</label>
+                    <select template-field="template_assunto_planilha"  id="cbo_empresa" class="cbo_empresa form-control selectpicker" data-live-search="true">
+                        
+                    </select>
+                </div>
+
+
+                <div class="panel panel-default painel_detalhes">
+                    <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                        <div class="pull-right">
+                            <!-- -->
+                        </div>
+                        <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                            <li class="active lbl_tab_sistema">
+                                <a class = "menu_sistema" href="#" role="tab" data-toggle="tab">Sistema</a>
+                            </li>
+                            <li class="lbl_tab_agenda">
+                                <a class = "menu_agenda" href="#" role="tab" data-toggle="tab">
+                                    Agenda
+                                </a>
+                            </li>
+                            <li class="lbl_tab_processos">
+                                <a class = "menu_processos" href="#" role="tab" data-toggle="tab">
+                                    Processos
+                                </a>
+                            </li>
+                            <li class="lbl_tab_documentos">
+                                <a class = "menu_documentos" href="#" role="tab" data-toggle="tab">
+                                    Documentos
+                                </a>
+                            </li>
+
+                            <li class="lbl_tab_projetos">
+                                <a class = "menu_projetos" href="#"  role="tab" data-toggle="tab">
+                                    Projetos
+                                </a>
+                            </li>
+                            <li class="lbl_tab_pdca">
+                                <a class = "menu_pdca" href="#"  role="tab" data-toggle="tab">
+                                    PDCA | 5W2H
+                                </a>
+                            </li>
+                            <li class="lbl_tab_chamados">
+                                <a class = "menu_chamados" href="#" role="tab" data-toggle="tab">
+                                    Chamados
+                                </a>
+                            </li>
+                            <li class="lbl_tab_relacionamento">
+                                <a class = "menu_relacionamento" href="#" role="tab" data-toggle="tab">
+                                    Atendimento e Relacionamento
+                                </a>
+                            </li>
+                            <li class="lbl_tab_rede_social">
+                                <a class = "menu_social" href="#"  role="tab" data-toggle="tab">
+                                    Rede Social
+                                </a>
+                            </li>
+                            <!--li class="lbl_tab_gestao_empenho">
+                                <a class = "menu_gestao_empenho" href="#"  role="tab" data-toggle="tab">
+                                    Gestão de Empenho
+                                </a>
+                            </li>
+                            <li class="lbl_tab_gestao_inovacao">
+                                <a class = "menu_gestao_inovacao" href="#"  role="tab" data-toggle="tab">
+                                    Gestão de Inovação
+                                </a>
+                            </li-->
+                            <li class="lbl_tab_especificos" style="display:none;">
+                                <a class="menu_especificos" href="#"  role="tab" data-toggle="tab">
+                                    Específicos
+                                </a>
+                            </li>
+                            <!--li class="lbl_tab_minhas_metas_hpe">
+                                <a class = "menu_minhas_metas_hpe" href="#"  role="tab" data-toggle="tab">
+                                    Minhas Metas
+                                </a>
+                            </li-->
+                            <li class="lbl_tab_gestao_tarefas">
+                                <a class = "menu_gestao_tarefas" href="#"  role="tab" data-toggle="tab">
+                                    Gestão de Tarefas
+                                </a>
+                            </li>
+                            <li class="lbl_tab_central_pendencias">
+                                <a class = "menu_central_pendencias" href="#"  role="tab" data-toggle="tab">
+                                    Central de Pendências
+                                </a>
+                            </li>
+                            <li class="lbl_tab_gestao_cubos">
+                                <a class = "menu_gestao_cubos" href="#"  role="tab" data-toggle="tab">
+                                    Gestão de Cubos
+                                </a>
+                            </li>
+                            <li class="lbl_tab_ead_plataforma">
+                                <a class = "menu_ead_plataforma" href="#"  role="tab" data-toggle="tab">
+                                    EAD Plataforma
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="panel-body">
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+
+                            <div class="tab-pane active painel_sistema" id="modal_usuario_permissoes_sistema">
+                                <table class="tab_sistema table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Sistema</th>
+                                            <th class="text-center" style="width: 80px">
+                                                &nbsp;
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody_sistema">
+                                        <tr>
+                                            <td>Usuários</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="usuario">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Grupo de usuários</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="grupo_usuarios">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Áreas</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="areas">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Calendários de trabalho</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="calendario_trabalho">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Conexão e Consulta de Integração</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="conexao_integracao">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Clicksign Assinaturas Configurações</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="clicksign_configuracoes">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Certsign Assinaturas Configurações</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="certsign_configuracoes">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>D4Sign Assinaturas Configurações</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="d4sign_configuracoes">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Menu Personalizado</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="menu_personalizado">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sessões</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="sessoes">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Supervisores</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="supervisor">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Substitutos</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="substituto">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Empresas</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="empresa">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Locais de armazenamento</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="local_armazenamento">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Saída de E-mails</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="emails">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Configuração de E-mails</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="configuracao_email">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mural Mensagens</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="mural_mensagem">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mural de Clientes</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="mural_mensagem_clientes">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mural de Fornecedores</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="mural_mensagem_fornecedores">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cliente</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="chk_cliente checkbox_bootstrap_toggle" value="cliente">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cliente Somente Leitura</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="chk_cliente_somente_leitura checkbox_bootstrap_toggle" value="cliente_somente_leitura">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Organizações</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="chk_prospect checkbox_bootstrap_toggle" value="prospect">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Organizações Somente Leitura</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="chk_prospect_somente_leitura checkbox_bootstrap_toggle" value="prospect_somente_leitura">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fornecedor</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="chk_fornecedor checkbox_bootstrap_toggle" value="fornecedor">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fornecedor Somente Leitura</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="chk_fornecedor_somente_leitura checkbox_bootstrap_toggle" value="fornecedor_somente_leitura">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Job Scheduler</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="job_scheduler">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Temas</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="temas">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Municípios</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="municipio">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>País</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="pais">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Compartilhamento de Tabelas</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="compartilhamento_tabelas">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Servidores LDAP</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="servidor_ldap">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Importação de Usuários</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="importacao_ldap">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Feriados</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="feriados">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="tab-pane painel_gestao_processos" id="modal_usuario_permissoes_gestao_processos">
+
+                                <table class="tab_gestao_processos table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Gestão de Processos</th>
+                                            <th class="text-center" style="width: 80px">
+                                                <input type="checkbox" value="gestao_processos" class="chk_gestao_processos checkbox_bootstrap_toggle">
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody_gestao_processos">
+                                        <tr>
+                                            <td>Categorias de processos</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="categoria_processos">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Templates Word de Solicitações</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="solicitacao_template_word">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Formulário</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="formulario">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Processo</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="processo">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Relatório de Indicadores</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="relatorio_processo">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Relatório de Produtividade</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="relatorio_produtividade">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Relatório de Atividade de Processo</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="relatorio_atividade_processo">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_processos_administrador_entidade">
+                                            <td>Administrador de Processos da Entidade</td>
+                                            <td>
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="processo_administrador_entidade">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                            <div class="tab-pane painel_gestao_documentos" id="modal_usuario_permissoes_gestao_documentos">
+
+                                <table class="tab_gestao_documentos table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Gestão de Documentos</th>
+                                            <th class="text-center" style="width: 80px">
+                                                <input type="checkbox" value="gestao_documentos" class="chk_gestao_documentos checkbox_bootstrap_toggle">
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody_gestao_documentos">
+                                        <tr class="tr_assunto">
+                                            <td>Assuntos</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="assunto">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_tipo_documento">
+                                            <td>Tipos de documentos</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="tipo_documento">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_versoes_documento">
+                                            <td>Visualizar versões dos documentos</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="versoes_documento">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_alcada_aprovadores">
+                                            <td>Edição alçada de aprovadores</td>
+                                            <td class="text_center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="alcada_aprovadores">
+                                            </td>
+                                        <tr>
+                                        <tr class="tr_substituir_revisao">
+                                            <td>Substituir documentos</td>
+                                            <td class="text_center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="substituir_revisao">
+                                            </td>
+                                        <tr>
+                                        <tr class="tr_motivo_bloqueio">
+                                            <td>Edição motivo de bloqueio</td>
+                                            <td class="text_center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="motivo_bloqueio">
+                                            </td>
+                                        <tr>
+                                        <tr class="tr_relatorio_vigencia">
+                                            <td>Relatório de vigência</td>
+                                            <td class="text_center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="relatorio_vigencia">
+                                            </td>
+                                        <tr>
+                                        <tr class="tr_local_distribuicao">
+                                            <td>Locais de distribuição</td>
+                                            <td class="text_center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="local_distribuicao">
+                                            </td>
+                                        <tr>
+                                        <tr class="tr_lixeira_documentos">
+                                            <td>Lixeira de Documentos</td>
+                                            <td class="text_center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="lixeira_documentos">
+                                            </td>
+                                        <tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                            <div class="tab-pane painel_gestao_agenda" id="modal_usuario_permissoes_gestao_agenda">
+
+                                <table class="tr_agenda tab_gestao_agenda table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Agenda</th>
+                                            <th class="tr_agenda text-center" style="width: 80px">
+                                                <input type="checkbox" value="agenda" class="chk_agenda checkbox_bootstrap_toggle">
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tr_agenda tbody_gestao_agenda">
+
+                                        <tr class="tr_agenda_grupo_usuario">
+                                            <td>Visualizar Agendas do Grupos do Usuário</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="chk_agenda_grupo_usuarios checkbox_bootstrap_toggle" value="agenda_grupo_usuario">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_todas_agendas">
+                                            <td>Visualizar Todas as Agendas</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="chk_todas_agendas checkbox_bootstrap_toggle" value="agenda_todas">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_manutencao_agenda">
+                                            <td>Manutenção Agenda</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="chk_manutencao_agenda_todas checkbox_bootstrap_toggle" value="manutencao_agenda">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_manutencao_propria_agenda">
+                                            <td>Manutenção da própria Agenda</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="chk_manutencao_agenda_propria checkbox_bootstrap_toggle" value="manutencao_propria_agenda">
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr class="tr_visualizar_historico">
+                                            <td>Visualizar Histórico</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="chk_visualizar_historico checkbox_bootstrap_toggle" value="visualizar_historico">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_tipo_agenda">
+                                            <td>Tipo de Agenda</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="tipo_agenda">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_locais_agenda">
+                                            <td>Locais de Agenda</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="locais_agenda">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_mensagem_agenda">
+                                            <td>Mensagem Padrão do E-mail</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="mensagem_agenda">
+                                            </td>
+                                        </tr>
+
+                                        <tr class="tr_manutencao_agenda_ativo">
+                                            <td>Manutenção Agenda Ativo</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="chk_manutencao_agenda_ativo checkbox_bootstrap_toggle" value="manutencao_agenda_ativo">
+                                            </td>
+                                        </tr>
+
+                                        <tr class="tr_agenda_ativo">
+                                            <td>Agenda Ativos</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="chk_agenda_ativo checkbox_bootstrap_toggle" value="agenda_ativo">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_agenda_grupo_ativos">
+                                            <td>Agenda Grupo Ativos</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="chk_agenda_grupo_ativos checkbox_bootstrap_toggle" value="agenda_grupo_ativo">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                            <div class="tab-pane painel_gestao_projetos" id="modal_usuario_permissoes_gestao_projetos">
+
+                                <table class="tab_gestao_projetos table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Gestão de Projetos</th>
+                                            <th class="text-center" style="width: 80px">
+                                                <input type="checkbox" value="gestao_projetos" class="chk_gestao_projetos checkbox_bootstrap_toggle">
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody_gestao_projetos">
+                                        <tr>
+                                            <td>Configurações do módulo</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="config_modulo_projetos">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Criação de Projetos</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="criacao_projetos">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Assuntos</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="assunto_projeto">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cores por % de conclusão</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="cores_atividades_execucao">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Status Projeto</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="status_projeto">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cores por % de saldo</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="cores_atividades_saldo">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Layout Relatório Posicionamento</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="layout_rel_posicionamento">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Técnicos</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="tecnicos">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Apontamento de Atividades</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="apontamento_atividade">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Apontamento de Despesas</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="apontamento_despesa">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Apontamento em projetos fechados</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="apontamento_projetos_fechado">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Administrador apontamento de Atividades</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="admin_apontamento_atividade">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Administrador apontamento de Despesas</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="admin_apontamento_despesa">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Classificação</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="projeto_atividade_classificacao">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Relatório de Horas Gastas</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="relatorio_horas_gastas">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Relatório Horas Previstas X Realizadas</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="relatorio_horas_previstas_x_realizadas">
+                                            </td>
+                                        </tr>
+
+                                       <tr>
+                                            <td>Categoria de Projeto</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="categoria_projeto">
+                                            </td>
+                                        </tr>
+
+                                       <tr>
+                                            <td>Despesas Cliente</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="despesas_cliente">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Faturamento do Projeto</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="faturamento_projeto">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Relatório Consulta de Apontamentos</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="relatorio_apontamento_tecnico">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Classificação de Projetos</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="projeto_classificacao">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Itens</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="item">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tipo Itens</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="tipo_itens">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Grupo Itens</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="grupo_itens">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Familia Itens</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="familia_itens">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Unidade de Medida</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="unidade_medida">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                            <div class="tab-pane painel_gestao_pdca" id="modal_usuario_permissoes_pdca">
+
+                                <table class="tab_pdca table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>PDCA | 5W2H</th>
+                                            <th class="text-center" style="width: 80px">
+                                                <input type="checkbox" value="pdca" class="chk_pdca checkbox_bootstrap_toggle">
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody_pdca">
+                                        <tr>
+                                            <td>Categorias de PDCA</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="chk_cateogorias_pdca checkbox_bootstrap_toggle" value="categorias_pdca">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                            <div class="tab-pane painel_gestao_chamados" id="modal_usuario_permissoes_gestao_chamados">
+
+                                <table class="tab_gestao_chamados table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Gestão de Chamados</th>
+                                            <th class="text-center" style="width: 80px">
+                                                <input type="checkbox" value="gestao_chamados" class="chk_gestao_chamados checkbox_bootstrap_toggle">
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody_gestao_chamados">
+                                        <tr class="tr_nota_avaliacao">
+                                            <td>Classificação de Avaliação</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="nota_avaliacao">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_classificacao_chamado">
+                                            <td>Classificação de Chamado</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="chamado_classificacao">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_grupo_motivos">
+                                            <td>Grupo de Motivos</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="grupo_motivo_chamado">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_motivos_chamado">
+                                            <td>Motivos de Chamado</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="chamado_motivo">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_reclassificar_chamado">
+                                            <td>Reclassificar Chamado</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="reclassificar_chamado">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_relatorio">
+                                            <td>Relatório</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="chamados_relatorio">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_altera_responsavel">
+                                            <td>Cliente/Fornecedor escolhe Responsável</td>
+                                            <td>
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="altera_responsavel">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_agenda_contatos">
+                                            <td>Agenda de Contatos</td>
+                                            <td>
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="agenda_contatos">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_chamado_prioridades">
+                                            <td>Prioridades do Chamado</td>
+                                            <td>
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="chamado_prioridades">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_chamado_fundir_chamados">
+                                            <td>Fundir Chamados</td>
+                                            <td>
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="chamado_fusao">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_chamado_administrador_entidade">
+                                            <td>Administrador de Chamados da Entidade (Visualiza e Interage)</td>
+                                            <td>
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="chamado_administrador_entidade">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_chamado_chamado_percentual_conclusao">
+                                            <td>% de conclusão</td>
+                                            <td>
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="chamado_percentual_conclusao">
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_edicao_horas_trabalhadas">
+                                            <td>Edição das Horas Trabalhadas</td>
+                                            <td>
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="edicao_horas_trabalhadas">
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                            <div class="tab-pane painel_gestao_relacionamento" id="modal_usuario_permissoes_gestao_relacionamento">
+
+                                <table class="tab_gestao_relacionamento table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Gestão de Atendimento e Relacionamento</th>
+                                            <th class="text-center" style="width: 80px">
+                                                <input type="checkbox" value="gestao_relacionamento" class="chk_gestao_relacionamento checkbox_bootstrap_toggle">
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody_gestao_relacionamento">
+                                        <tr>
+                                            <td>Oportunidades</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="oportunidade">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Organizações</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="chk_prospect checkbox_bootstrap_toggle" value="prospect">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Organizações Somente Leitura</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="chk_prospect_somente_leitura checkbox_bootstrap_toggle" value="prospect_somente_leitura">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Contatos</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="contatos">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Funções do Contato</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="funcao">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Funil de vendas</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="funil_vendas">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Itens</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="item">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tipo Itens</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="tipo_itens">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Grupo Itens</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="grupo_itens">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Familia Itens</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="familia_itens">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cores de itens</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="cores_itens">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tabela de Preços</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="tabela_precos">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tipo de Oportunidade</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="tipo_oportunidade">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Representantes</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="representantes">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Regiões de Vendas</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="regioes_vendas">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Segmentos</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="segmentos">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tipo Evento Agenda</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="tipo_agenda_oportunidade">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Aprovação de Orçamentos</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="aprovacao_orcamentos">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Condição de pagamento</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="condicao_pagamento">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Unidade de Medida</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="unidade_medida">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Status de Oportunidade</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="status_oportunidade">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Motivos de perda de negócio</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="motivo_perda_negocio">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Origem</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="oportunidade_origem">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Dashboard de Representantes</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="dashboard_representantes">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dashboard de Clientes</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="dashboard_clientes">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dashboard de Vendas</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="dashboard_vendas">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Metas</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="metas_vendas">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Templates Word de Orçamentos</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="orcamento_template_word">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Restringir orçamentos como PDF</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="restringir_orcamento_pdf">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tipo de Moeda</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="tipo_moeda">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                            <div class="tab-pane painel_rede_social" id="modal_usuario_permissoes_rede_social">
+
+                                <table class="tab_rede_social table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Rede Social</th>
+                                            <th class="text-center" style="width: 80px">
+                                                <input type="checkbox" value="rede_social" class="chk_rede_social checkbox_bootstrap_toggle">
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody_rede_social">
+                                        <tr>
+                                            <td>Grupos</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="grupo_rede_social">
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                            <!--div class="tab-pane painel_gestao_empenho" id="modal_usuario_permissoes_gestao_empenho">
+
+                                <table class="tab_gestao_empenho table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Gestão de Empenho</th>
+                                            <th class="text-center" style="width: 80px">
+                                                <input type="checkbox" value="gestao_empenho" class="chk_gestao_empenho checkbox_bootstrap_toggle">
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody_gestao_empenho">
+                                        <tr>
+                                            <td>Atuação Efetiva</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" value="atuacao_efetiva" class="checkbox_bootstrap_toggle">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Competências Essenciais</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" value="competencias_essenciais" class="checkbox_bootstrap_toggle">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Funções HPE</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" value="funcoes_hpe" class="checkbox_bootstrap_toggle">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                            <div class="tab-pane painel_gestao_inovacao" id="modal_usuario_permissoes_gestao_inovacao">
+
+                                <table class="tab_gestao_inovacao table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Gestão de Inovação</th>
+                                            <th class="text-center" style="width: 80px">
+                                                <input type="checkbox" value="gestao_inovacao" class="chk_gestao_inovacao checkbox_bootstrap_toggle">
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody_gestao_inovacao">
+                                        <tr>
+                                            <td>Área de Foco</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" value="area_foco" class="checkbox_bootstrap_toggle">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Possibilidades</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" value="possibilidades" class="checkbox_bootstrap_toggle">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                            <div class="tab-pane painel_minhas_metas_hpe" id="modal_usuario_permissoes_minhas_metas_hpe">
+
+                                <table class="tab_minhas_metas_hpe table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Minhas Metas</th>
+                                            <th class="text-center" style="width: 80px">
+                                                <input type="checkbox" value="minhas_metas_hpe" class="chk_minhas_metas_hpe checkbox_bootstrap_toggle">
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody_minhas_metas_hpe">
+                                    </tbody>
+                                </table>
+
+                            </div-->
+
+                            <div class="tab-pane painel_especificos" id="modal_usuario_permissoes_especificos">
+                                
+                                <table class="tab_especificos table table-striped">
+                                    <tbody class="tbody_especificos">
+                                        
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                            <div class="tab-pane painel_gestao_tarefas" id="modal_usuario_permissoes_gestao_tarefas">
+
+                                <table class="tab_gestao_tarefas table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Gestão de Tarefas</th>
+                                            <th class="text-center" style="width: 80px">
+                                                <input type="checkbox" value="gestao_tarefas" class="chk_gestao_tarefas checkbox_bootstrap_toggle">
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody_gestao_tarefas">
+                                        <tr>
+                                            <td>Etiquetas</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" value="etiquetas" class="checkbox_bootstrap_toggle">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="tab-pane painel_central_pendencias" id="modal_usuario_permissoes_central_pendencias">
+
+                                <table class="tab_central_pendencias table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Central de Pendências</th>
+                                            <th class="text-center" style="width: 80px">&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody_central_pendencias">
+                                        <tr>
+                                            <td>Administrador da Central de Pendências</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" value="admin_central_pendencias" class="checkbox_bootstrap_toggle">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                            <div class="tab-pane painel_gestao_cubos" id="modal_usuario_permissoes_gestao_cubos">
+
+                                <table class="tab_gestao_cubos table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Gestão de Cubos</th>
+                                            <th class="text-center" style="width: 80px">
+                                                <input type="checkbox" value="gestao_cubos" class="chk_gestao_cubos checkbox_bootstrap_toggle">
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody_gestao_cubos">
+                                        <tr>
+                                            <td>Criação de Cubos</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" value="cricao_cubos" class="checkbox_bootstrap_toggle">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="tab-pane painel_ead_plataforma" id="modal_usuario_permissoes_ead_plataforma">
+
+                                <table class="tab_ead_plataforma table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>EAD Plataforma</td>
+                                            <th class="text-center" style="width: 80px">
+                                                <input type="checkbox" class="chk_ead_plataforma checkbox_bootstrap_toggle" value="ead_plataforma">
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody_ead_plataforma">
+                                        <tr class="tr_ead_plataforma_configuracoes">
+                                            <td>EAD Plataforma Configurações</td>
+                                            <td class="text-center">
+                                                <input type="checkbox" class="checkbox_bootstrap_toggle" value="ead_plataforma_configuracoes">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+                <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>

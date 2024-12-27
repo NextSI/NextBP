@@ -1,0 +1,261 @@
+<ol class="breadcrumb visible-xs visible-sm">
+    <li class="active">Orçamentos</li>
+</ol>
+
+<!-- LISTAGEM -->
+
+<div>
+
+    <!--mobile-->
+    <div class="col-md-12 floating-menu visible-xs visible-sm">
+
+        <div class="panel-group panel_filtros" id="accordion" role="tablist" aria-multiselectable="true">
+
+            <div class="panel panel-default" role="tab">
+                <div class="panel-heading panel-default active" data-parent="#accordion" href="#list-aguardando_aprovacao" aria-expanded="true" aria-controls="list-aguardando_aprovacao" role="button" data-toggle="collapse">
+                    Orçamentos
+                </div>
+                <div class="list-group panel-collapse collapsed in" id="list-aguardando_aprovacao" role="tabpanel" aria-labelledby="list-aguardando_aprovacao">
+                    <a href="#" class="list_aguardando_aprovacao list-group-item active">
+                        <span class="lbl_total_aguardando_aprovacao badge"></span>
+                        <span class="glyphicon glyphicon-pushpin"></span>
+                        Aguardando Aprovação
+                    </a>
+                    <a href="#" class="list_aprovados list-group-item">
+                        <span class="lbl_total_aprovados badge"></span>                        
+                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                        Aprovados
+                    </a>
+                    <a href="#" class="list_reprovados list-group-item">
+                        <span class="lbl_total_reprovados badge"></span>                                                
+                        <span class="glyphicon glyphicon-thumbs-down"></span>
+                        Reprovados
+                    </a>
+                    <a href="#" class="list_todas list-group-item">
+                        <span class="lbl_total badge"></span>
+                        <span class="glyphicon glyphicon-th-list"></span>
+                        Todas
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!--/mobile-->
+
+    <div class="col-md-3 col-lg-2 floating-menu hidden-xs hidden-sm">
+
+        <div class="panel-group panel_filtros" id="accordion" role="tablist" aria-multiselectable="true">
+
+            <div class="panel panel-default" role="tab">
+                <div class="panel-heading panel-default active" data-parent="#accordion" href="#list-aguardando_aprovacao" aria-expanded="true" aria-controls="list-aguardando_aprovacao" role="button" data-toggle="collapse">
+                    Orçamentos
+                </div>
+                <div class="list-group panel-collapse collapsed in" id="list-aguardando_aprovacao" role="tabpanel" aria-labelledby="list-aguardando_aprovacao">
+                    <a href="#" class="list_aguardando_aprovacao list-group-item active">
+                        <span class="lbl_total_aguardando_aprovacao badge"></span>
+                        <span class="glyphicon glyphicon-pushpin"></span>
+                        Aguardando Aprovação
+                    </a>
+                    <a href="#" class="list_aprovados list-group-item">
+                        <span class="lbl_total_aprovados badge"></span>                        
+                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                        Aprovados
+                    </a>
+                    <a href="#" class="list_reprovados list-group-item">
+                        <span class="lbl_total_reprovados badge"></span>                                                
+                        <span class="glyphicon glyphicon-thumbs-down"></span>
+                        Reprovados
+                    </a>
+                    <a href="#" class="list_todas list-group-item">
+                        <span class="lbl_total badge"></span>
+                        <span class="glyphicon glyphicon-th-list"></span>
+                        Todas
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="div_listagem col-sm-12 col-md-9 col-lg-10">
+
+        <div class="row">
+
+            <div class="col-sm-4 col-md-3 col-lg-2 ">
+                <div class="form-group">
+                    <label for="edt_ini">Data Inicial</label>
+                    <input type="date" min="1900-01-01" max="2222-12-31" id="edt_ini" class="edt_ini form-control">
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-3 col-lg-2 ">
+                <div class="form-group">
+                    <label for="edt_fim">Data Final</label>
+                    <input type="date" min="1900-01-01" max="2222-12-31" id="edt_fim" class="edt_fim form-control">
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-md-3 col-lg-2 hidden-xs hidden-sm">
+                <label>&nbsp;</label>
+                <div class="form-group">
+                    <button type="button" class="btn btn-default btn_refresh">                 
+                        <span class="glyphicon glyphicon-refresh"></span>
+                        Listar 
+                    </button>  
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-8 cold-lg-6"> 
+                <label>Entidade</label>
+                <div class="form-group">                       
+                    <div class="div_component_cbo_clientes"></div>                                           
+                </div>    
+            </div>
+
+        </div>
+
+        <div class="row visible-xs visible-sm">
+
+            <div class="col-sm-4 col-md-3 col-lg-2">
+                <div class="form-group">
+                    <button type="button" class="btn btn-default btn_refresh">                 
+                        <span class="glyphicon glyphicon-refresh"></span>
+                        Listar 
+                    </button>  
+                </div>
+            </div>
+
+        </div>            
+
+		<table class="tab_listagem table table-striped table-hover">
+            <tbody>
+                <tr template-row style="display: none;" class="row-fluid">
+
+                    <!-- mobile -->
+                    <td class="td-mobile visible-xs visible-sm">
+                        
+                        <!--<div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn_imprimir_orcamento btn btn-default" data-toggle="tooltip" title="Download do orçamento">
+                                    <span class="glyphicon glyphicon-file"></span>
+                                </button>        
+                                <button type="button" class="btn_enviar_email hidden btn btn-primary" data-toggle="tooltip" title="Reenviar e-mail">
+                                    <span class="glyphicon glyphicon-send"></span>
+                                </button>
+                            </div>
+                        </div> -->
+
+                        <div class="pull-right">
+                            <button type="button" class="btn_visualizar_itens btn btn-primary" data-toggle="tooltip" title="Visualizar itens de orçamento">
+                                <span class="glyphicon glyphicon-folder-open"></span>
+                            </button>                                                        
+                        </div>
+
+                        <h4 template-field="oportunidade_orcamento_id">{oportunidade_orcamento_id}</h4>
+
+                        <div class="text-info">
+                            <span template-field="oportunidade_id"></span> <br />
+                            <span template-field="insert_hora"></span>
+                        </div>
+
+                        <br>
+                        <div>
+                            <span class="label entidade_tipo">{entidade_tipo}</span>
+                            <span template-field="entidade_nome">{entidade_nome}></span>
+                            <br>
+                            <span template-field="representante_nome" class="small text-muted">{representante_nome}></span>                         
+                        </div>
+
+                        <br>
+                        <div>
+                            <span template-field="oportunidade_nome">{oportunidade_nome}></span>
+                            <br>
+                            <span template-field="valor_total" class="small text-muted">{valor_total}></span>                         
+                        </div>
+
+                        <br>
+                        <div>
+                            <div>
+                                <span class="label label-warning lb_situacao">
+                                    Aguardando aprovação
+                                </span>
+                            </div>
+                            <div><span class="small text-muted lb_data"></span></div>
+                            <div><span class="small text-muted lb_nome_usuario"></span></div>
+                            <div><span class="small text-muted lb_justificativa"></span></div>
+
+                        </div>
+
+                        <!--<div class="text-info">
+                            <span template-field="total"></span>
+                        </div>
+
+                        <div>
+                            <span class="label label-warning lb_situacao">
+                                Aguardando aprovação
+                            </span>
+                        </div>
+
+                        <div><span class="small text-muted lb_data"></span></div>
+                        <div><span class="small text-muted lb_nome_usuario"></span></div>
+                        <div><span class="small text-muted lb_justificativa"></span></div> -->                                           
+
+
+                    </td>
+                    <!-- mobile -->
+
+                    <td class="hidden-xs hidden-sm">
+                        <span template-field="oportunidade_orcamento_id">{oportunidade_orcamento_id}></span>
+                        <br>
+                        <span template-field="oportunidade_id" class="small text-muted">{oportunidade_id}></span>
+                        <br>
+                        <span template-field="insert_hora" class="small text-muted">{insert_hora}></span>                         
+                    </td>
+                
+                    <td class="hidden-xs hidden-sm">
+                        <span class="label entidade_tipo">{entidade_tipo}</span>
+                        <span template-field="entidade_nome">{entidade_nome}></span>
+                        <br>
+                        <span template-field="representante_nome" class="small text-muted">{representante_nome}></span>                         
+                    </td>
+
+                    <td class="hidden-xs hidden-sm">
+                        <span template-field="oportunidade_nome">{oportunidade_nome}></span>
+                        <br>
+                        <span template-field="valor_total" class="small text-muted">{valor_total}></span>                         
+                    </td>
+
+                    <td class="hidden-xs hidden-sm" width="200px">
+                        <div>
+                            <span class="label label-warning lb_situacao">
+                                Aguardando aprovação
+                            </span>
+                        </div>
+
+                        <div><span class="small text-muted lb_data"></span></div>
+                        <div><span class="small text-muted lb_nome_usuario"></span></div>
+                        <div><span class="small text-muted lb_justificativa"></span></div>
+                    </td>                                                                                
+
+                    <td template-field="detalhes" class="text-right hidden-xs hidden-sm">
+                        <button type="button" class="btn_visualizar_itens btn btn-primary" data-toggle="tooltip" title="Visualizar itens de orçamento">
+                            <span class="glyphicon glyphicon-folder-open"></span>
+                        </button>                                                        
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<!-- /LISTAGEM -->

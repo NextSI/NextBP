@@ -1,0 +1,182 @@
+    <div class="col-sm-12 col-md-12 col-lg-12" style="padding-left: 0;">
+        <button type="button" class="btn_nova_despesa btn btn-primary">
+            <span class="glyphicon glyphicon-plus-sign"></span>
+            Nova Despesa
+        </button>
+        <button type="button" class="list_minhas_pendencias btn btn-default">
+            <span class="glyphicon glyphicon-pushpin"></span> 
+            Minhas Despesas
+        </button>
+        <button type="button" class="hidden list_supervisionados btn btn-default">
+            <span class="glyphicon glyphicon-tasks"></span> 
+            Supervisionados
+        </button>
+        <button type="button" class="hidden list_todas btn btn-default">
+            <span class="glyphicon glyphicon-tasks"></span> 
+            Todos
+        </button>
+   </div>
+
+<div class="row">
+    
+    <div class="div_table_listagem col-sm-12 col-md-12 col-lg-12">
+
+        <div class="panel-heading" style="margin-bottom: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px;">
+            <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+                <div class="form-inline">
+                    <div class="navbar-left">
+                        <input type="date" min="1900-01-01" class="form-control edt_day_start">
+                        até
+                        <input type="date" min="1900-01-01" class="form-control edt_day_end">
+
+                        <button type="button" class="btn btn-primary btn_search">
+                          <span class="glyphicon glyphicon-search"></span> Filtrar
+                        </button>
+                    </div>
+                </div>    
+            </nav>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 div_tecnico">          
+                <div class="form-group">
+                    <select class="form-control selectpicker cbo_filtro_tecnico" data-live-search="true"></select>
+                </div>
+            </div>                        
+            <div class="col-xs-12 col-sm-6 col-md-6">          
+                <div class="form-group">
+                    <select class="form-control select-multi-column cbo_filtro_cliente" placeholder="Filtro por Cliente"></select>
+                </div>
+            </div>            
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">          
+                <div class="form-group">
+                    <button type="button" class="btn btn-default btn_refresh">
+                        <span class="glyphicon glyphicon-refresh"></span>
+                    </button>
+                    <button type="button" class="btn btn-default btn_config hidden">
+                        <span class="glyphicon glyphicon-cog"></span>
+                    </button>                    
+                    <button type="button" class="btn btn-default btn_limpa_filtro">                        
+                        <span class="glyphicon glyphicon-trash"></span>
+                        Limpar Filtros 
+                    </button>        
+                    <button type="button" class="btn btn-default btn_gerar_relatorio">                    
+                        <span class="glyphicon glyphicon-file"></span>
+                        Gerar Relatório
+                    </button>                            
+                </div>
+            </div>  
+        </div>              
+        
+        <div class="panel panel-default">      
+
+            <table class="tab_listagem table table-striped small">
+                <thead class="hidden-xs">
+                    <tr>
+                        <th width="70px">#</th>                        
+                        <th>Data</th>
+                        <th>Técnico</th>
+                        <th>Cliente</th>
+                        <th class="text-right hidden-xs hidden-md">KM Rodado</th>
+                        <th class="text-right hidden-xs hidden-md">KM Valor</th>
+                        <th class="text-right hidden-xs hidden-md">Total KM</th>
+                        <th class="text-right hidden-xs hidden-md">Pedágio</th>
+                        <th class="text-right hidden-xs hidden-md">Refeição</th>
+                        <th class="text-right hidden-xs hidden-md">Outras Despesas</th>
+                        <th width="150px">&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr template-row style="display: none;">
+                        <td class="visible-xs col-xs-12" style="border-top:0px !important;" >
+                            <div class="col-xs-12 h4"template-field="id" template-pag="apontamento_despesas-id" data-title="#" data-title-after="">{id}</div>
+                            <div class="col-xs-8 h4" class="col-xs-4 h4">
+                                <div template-field="dia">{dia}</div>
+                                <div class="text-muted small" template-field="dia_semana" style="white-space: nowrap">{dia_semana}</div>
+                            </div>
+                            <div class="col-xs-6 h4" template-field="tecnico">{tecnico}</div>
+                            <div class="col-xs-12 h4" template-field="cliente">{cliente}</div>
+                            <div class="col-xs-12" template-field="km_rodado" template-pag="apontamento_despesas" data-title="KM Rodado">{km_rodado}</div>
+                            <div class="col-xs-12" template-field="km_valor" template-pag="apontamento_despesas" data-title="KM Valor R$">{km_valor}</div>
+                            <div class="col-xs-12" template-field="valor" template-pag="apontamento_despesas" data-title="Total KM R$">{valor}</div>
+                            <div class="col-xs-12" template-field="pedagio" template-pag="apontamento_despesas" data-title="Pedágio R$">{pedagio}</div>
+                            <div class="col-xs-12" template-field="refeicao" template-pag="apontamento_despesas" data-title="Refeição R$">{refeicao}</div>
+                            <div class="col-xs-12" template-field="outras_despesas" template-pag="apontamento_despesas" data-title="Outras Despesas R$">{outras_despesas}</div>
+                            <div class="col-xs-12" template-buttons="actions" style="margin-bottom:10px;">
+                              <div class="btn-group pull-right">
+                                <button type="button" class="btn_visualizar btn btn-default"><span class="glyphicon glyphicon-eye-open"></span>&nbsp;Visualizar</button>
+                                <button type="button" class="btn_editar btn btn-default"><span class="glyphicon glyphicon-pencil"></span></button>
+                                <button type="button" class="btn_excluir btn btn-default"><span class="glyphicon glyphicon-trash"></span></button>
+                              </div>
+                            </div>
+                        </td>
+                        <td class="hidden-xs" template-field="id">{id}</td>                        
+                        <td class="hidden-xs">
+                            <div template-field="dia">{dia}</div>
+                            <div class="text-muted small" template-field="dia_semana" style="white-space: nowrap">{dia_semana}</div>
+                        </td>
+                        <td class="hidden-xs" template-field="tecnico">{tecnico}</td>
+                        <td class="hidden-xs" template-field="cliente">{cliente}</td>
+                        <td class="text-right hidden-xs hidden-md" template-field="km_rodado">{km_rodado}</td>
+                        <td class="text-right hidden-xs hidden-md" template-field="km_valor">{km_valor}</td>
+                        <td class="text-right hidden-xs hidden-md" template-field="valor">{valor}</td>
+                        <td class="text-right hidden-xs hidden-md" template-field="pedagio">{pedagio}</td>
+                        <td class="text-right hidden-xs hidden-md" template-field="refeicao">{refeicao}</td>
+                        <td class="text-right hidden-xs hidden-md" template-field="outras_despesas">{outras_despesas}</td>
+                        <td class="hidden-xs" template-buttons="actions">
+                            <div class="btn-group pull-right">                          
+                                <button type="button" class="btn_editar btn btn-default">
+                                    <span class="glyphicon glyphicon-pencil"></span> Editar
+                                </button>                        
+                                <div class="btn-group">                                
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a class="btn_visualizar" href="#">
+                                            Visualizar
+                                        </a></li>
+                                        <li><a class="btn_excluir" href="#">
+                                            Excluir
+                                        </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>                                                                                  
+                    </tr>
+                </tbody>
+                <tfoot class="bg-warning row-fluid visible-xs visible-xs-block">
+                     <td class="pull-left visible-xs visible-xs-block col-xs-12 " style="border-top:0px !important;" >
+                        <td class="text-left small visible-xs">KM Rodado <strong template-field="total_km_rodado"></strong></td>
+                        <td class="text-left small visible-xs">KM Valor <strong template-field="total_km_valor"></strong></td>
+                        <td class="text-left small visible-xs">Total Pedágio <strong template-field="total_valor"></strong></td>
+                        <td class="text-left small visible-xs">Total Pedágio <strong template-field="total_pedagio"></strong></td>
+                        <td class="text-left small visible-xs">Total Refeição <strong template-field="total_refeicao"></strong></td>
+                        <td class="text-left small visible-xs">Total Outras Despesas <strong template-field="total_outras_despesas"></strong></td>
+                   </td>
+                </tfoot>
+                <tfoot class="bg-warning  hidden-xs">
+                   
+                    <td class="hidden-xs" colspan="3"><strong template-field="total_geral"></strong></td>
+                    <td class="hidden-xs">&nbsp;</td>                
+                    <td class="text-right hidden-xs hidden-md"><strong template-field="total_km_rodado"></strong></td>
+                    <td class="text-right hidden-xs hidden-md"><strong template-field="total_km_valor"></strong></td>
+                    <td class="text-right hidden-xs hidden-md"><strong template-field="total_valor"></strong></td>
+                    <td class="text-right hidden-xs hidden-md"><strong template-field="total_pedagio"></strong></td>
+                    <td class="text-right hidden-xs hidden-md"><strong template-field="total_refeicao"></strong></td>
+                    <td class="text-right hidden-xs hidden-md"><strong template-field="total_outras_despesas"></strong></td>
+                    <td class="hidden-xs">&nbsp;</td>                
+                </tfoot>                
+            </table>
+
+        </div>    
+
+    </div>
+
+</div>
+
+
+

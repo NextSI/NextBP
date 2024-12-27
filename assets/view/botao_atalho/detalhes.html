@@ -1,0 +1,119 @@
+<!-- MODAL DETALHE -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_atalho_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_atalho_detalhes_label">Botão de Atalho</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+                    <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+                        <div class="form-group">
+                            <label for="modal_atalho_edt_nome">Nome</label>
+                            <input type="text" class="edt_nome form-control" id="modal_atalho_edt_nome" maxlength="150">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+                        <div class="form-group">
+                            <label for="cbo_tela">Tela</label>
+                            <select class="form-control cbo_tela " id="cbo_tela" data-size="10" data-live-search="true">
+                                <optgroup class="opt_chamado" label="Chamados">
+                                    
+                                </optgroup>
+                                <optgroup class="opt_documento" label="Documentos">
+
+                                </optgroup>
+                                <optgroup class="opt_processo" label="Processos">
+
+                                </optgroup>
+                                <optgroup class="opt_projeto" label="Projeto">
+
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+                        <table class="table table-striped tbl_opcoes">
+                            <thead>
+                                <tr>
+                                    <th class="hidden-xs" width="45%">Opções</th>
+                                    <th class="hidden-xs" width="45%">&nbsp;</th>
+                                    <th width="10%" class="text-right hidden-xs">
+                                        <button type="button" class="pull-right btn_add_option btn btn-default">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                    </th>
+                                    <th width="100%" class="text-right visible-xs">
+                                        <button type="button" style="width:100%;" class="pull-right btn_add_option btn btn-default">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                            Incluir
+                                        </button>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr template-row style="display: none;">
+
+                                    <!-- MOBILE -->
+                                    <td class="visible-xs">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-12">
+                                                <div class="form-group">
+                                                    <select class="form-control" template-select="cbo_opcoes" data-size="5" data-live-search="true"></select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xs-12 col-md-12">
+                                                <div class="form-group">
+                                                    <select class="form-control" template-select="cbo_valor" data-size="5" data-live-search="true"></select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xs-12 col-md-12">
+                                                <div class="form-group">
+                                                    <button type="button" class="btn_remover btn btn-default form-control">
+                                                        <span class="glyphicon glyphicon-trash"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <!-- MOBILE -->
+
+                                    <td class="hidden-xs" width="45%" >
+                                        <div class="form-group">
+                                            <select class="form-control" template-select="cbo_opcoes" data-size="5" data-live-search="true"></select>
+                                        </div>
+                                    </td>
+                                    <td class="hidden-xs" width="45%" >
+                                        <div class="form-group">
+                                            <select class="form-control" template-select="cbo_valor" data-size="5" data-live-search="true"></select>
+                                        </div>
+                                    </td>
+                                    <td width="10%" class="text-right hidden-xs">
+                                        <button type="button" class="btn_remover btn btn-default form-control">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Ok</button>
+                <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

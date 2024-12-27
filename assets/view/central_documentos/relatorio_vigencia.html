@@ -1,0 +1,97 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Áreas</li>
+</ol>
+
+<!-- LISTAGEM -->
+<div>
+
+    <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+        <div class="btn-group" style="padding-right: 10px;">
+            <div class="btn-group">
+                <button type="button" class="btn_parametros btn btn-primary">
+                    <span class="glyphicon glyphicon-filter"></span> Parâmetros
+                </button>
+                <button type="button" class="btn btn-default btn_excel">
+                    <span class="fa fa-file-excel"></span> Gerar Excel
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div >
+        <table class="tab_listagem table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th class="hidden-xs">Código</th>
+                    <th class="hidden-xs">Nome</th>
+                    <th style="text-align: center" class="hidden-xs">Data Vigência</th>
+                    <th style="text-align: center" class="hidden-xs">Vigência</th>
+                    <th style="text-align: center" class="hidden-xs detalhes_reprova">Data Reprova</td>
+                    <th style="text-align: center" class="hidden-xs detalhes_reprova">Motivo Reprova</td>
+                    <th style="text-align: center" class="hidden-xs detalhes_reprova">Usuário Reprova</td>
+                    <th style="text-align: center" class="hidden-xs">Autor Revisão</td>
+                    <th style="text-align: center" class="hidden-xs">Situação</th>
+                    <th style="text-align: center" class="hidden-xs">Caminho Pasta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- itens -->
+                <tr template-row style="display: none;">
+
+                    <!-- mobile -->
+                    <td class="td-mobile visible-xs">
+                        
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn_editar btn btn-default">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </button>
+                                <button type="button" class="btn_excluir btn btn-default">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <h4 template-field="codigo">Código</h4>
+                        <h4 template-field="nome">Nome</h4>
+                        <h4 template-field="data_vigencia">Data Vigência</h4>
+                        <h4 template-field="vigencia">Vigência</h4>
+                        <h4 template-field="data_reprova">Data Reprova</h4>
+                        <h4 template-field="motivo_reprova">Motivo Reprova</h4>
+                        <h4 template-field="usuario_reprova">Usuário Reprova</h4>
+                        <h4 template-field="autor_revisao">Autor Revisão</h4>
+                        <h4 template-field="situacao">Situação</h4>
+                        <h4 template-field="pasta">Pasta</h4>
+                    </td>
+                    <!-- /mobile -->
+
+                    <td class="hidden-xs" template-field="codigo">{codigo}</td>
+                    <td class="hidden-xs" template-field="nome">{nome}</td>
+                    <td style="text-align: center"class="hidden-xs" template-field="data_vigencia">{data_vigencia}</td>
+                    <td style="text-align: center" class="hidden-xs" template-field="vigencia">{vigencia}</td>
+                    <td style="text-align: center"class="hidden-xs detalhes_reprova" template-field="data_reprova">{data_reprova}</td>
+                    <td style="text-align: center"class="hidden-xs detalhes_reprova" template-field="motivo_reprova">{motivo_reprova}</td>
+                    <td style="text-align: center"class="hidden-xs detalhes_reprova" template-field="usuario_reprova">{usuario_reprova}</td>
+                    <td style="text-align: center"class="hidden-xs" template-field="autor_revisao">{autor_revisao}</td>
+                    <td style="text-align: center" class="hidden-xs" template-field="situacao">{situacao}</td>
+                    <td style="text-align: center" class="hidden-xs" template-field="pasta">{pasta}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="position: relative; bottom: 20px;">
+            <div style="padding: 10px; padding-bottom: 0px; padding-top: 0; background-color: white;" class="text-center div_carregar_mais hidden">
+                <span class="btn btn-link btn_carregar_mais">
+                    <span class="txt_carregar_mais text-primary">Carregar mais registros</span>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <div class="small text-info">
+        * Documentos que não possuem data de vigência não serão exibidos nesta listagem
+    </div> -->
+
+</div>
+
+<!-- /LISTAGEM -->

@@ -1,0 +1,72 @@
+ <!-- Avaliar chamado -->
+    <div class="modal" tabindex="-1" role="dialog" aria-labelledby="avaliaChaModLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+            <h4 class="modal-title hidden encerra_text">Encerramento do chamado</h4>
+            <h4 class="modal-title hidden avalia_text">Avaliação do chamado</h4>
+          </div>
+          <div class="modal-body">
+
+            <form id="frmAvaliaChamado" role="form"  method="post" enctype="multipart/form-data">
+
+                <input type="hidden" name="chamado_id" class="chamado_id">
+                <input type="hidden" name="redirect">
+                
+                <div class="form-group hidden div_notas">
+                    <label for="nota_avaliacao_id">Referente ao atendimento realizado, você ficou:</label>
+                    <select class="form-control nota_avaliacao_id" id="nota_avaliacao_id" name="nota_avaliacao_id">
+                    </select>
+                </div>
+
+                <div class="clearfix"></div>
+                  <textarea class="form-control edt_msg_encerramento" name="descricao" id="descricao" placeholder="Digite uma mensagem referente ao encerramento do chamado" rows="5" ></textarea>
+
+                <div class="div_horas_trabalhadas hidden">
+                    <div class="form-group" style="margin-top: 10px;">
+                        <label>Horas Trabalhadas</label>
+                        <input type="text" class="form-control edt_horas_trabalhadas" id="" placeholder="000:00"></input>
+                    </div>
+                </div>
+
+            </form>
+            
+            <!-- ANEXO BASE -->
+            <div id="anexo_base" class="row div_anexos_row hidden">
+              <div class="col-md-8 col-sm-8">
+                <label class="anexo_base_label" for="anexo_base_input"></label>
+                <span class="anexo_base_button label_mobilefile col-xs-12">
+                  <input class="anexo_base_input col-xs-12 mobile_inputfile" type="file">
+                  <span class="btn_input">
+                    <span class="hidden">text</span>
+                    <span class="anexo_base_button_icon2 glyphicon glyphicon-open text-primary"></span>
+                    <span class="anexo_base_input_text" style="float:none !important;">Nenhum Arquivo Selecionado</span>
+                  </span>
+            
+                </span>
+              </div>
+              <div class="col-md-4 col-sm-4">
+                <label> Anexar no e-mail <input class="checkbox" value="true"></input></label>
+              </div>
+            </div>
+
+            <div class="panel panel-warning">
+              <div id="anexos" class="panel-body div_anexos">
+              </div>
+              <div class="panel-footer">
+                <button type="button" class="btn btn-default btn-sm btn_anexo">
+                  <span class="glyphicon glyphicon-paperclip"></span> Incluir mais um anexo
+                </button>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+            <button type="button" class="btn btn-primary hidden btn_registra_avaliacao" >Registrar avaliação</button>
+            <button type="button" class="btn btn-primary hidden btn_encerramento" >Encerrar Chamado</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->

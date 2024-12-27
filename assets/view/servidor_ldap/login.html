@@ -1,0 +1,25 @@
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_alterar_senha_label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="max-width: 330px;">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 translate="" class="modal-title" id="modal_alterar_senha_label">Autenticação LDAP</h4>
+            </div>
+            <div class="modal-body" style="background: #ddd;">
+                <label>Servidor</label>
+                <select id="cbo_servidor_ldap" class="cbo_servidor_ldap form-control"></select>
+                <br>
+                <label>Usuário</label>
+                <input type="text" name="username" class="edt_usuario_ldap form-control" placeholder="Usuário" translate-placeholder="login.usuario_ldap" maxlength="50">
+                <br>
+                <label>Senha</label>
+                <input type="password" name="password" class="edt_senha_ldap form-control" placeholder="Senha" translate-placeholder="login.senha_ldap" maxlength="50" required>
+                <input type="submit" class="hidden">
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_autenticar btn btn-primary">Autenticar</button>
+            </div>
+        </div>
+    </div>
+</div>

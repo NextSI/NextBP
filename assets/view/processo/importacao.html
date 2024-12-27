@@ -1,0 +1,130 @@
+<div class="modal modal_importacao_processo" tabindex="-1" role="dialog" aria-labelledby="label_modal_importacao_processo" aria-hidden="true">
+    <div class="modal-dialog modal-xl" tabindex="-1">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn_cancelar close"  aria-hidden="true">&times;</button>
+                    <h4 class="modal-title label_modal_importacao_processo" >Importação de Processo</h4>
+                </div>
+
+                <div class="modal-body modal-fixo">
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <div class="div_dropabled_file " style="position: relative; border:2.5px dashed rgba(51, 51, 51, 0.4); min-height: 200px;text-align: center">
+                                <input class="file_importacao_processo" style="position: absolute;width: 100%;height: 100%;opacity: 0;" type="file" accept=".nbpm">
+                                <span style="line-height: 170px;font-family: Arial;">Arraste seu arquivo aqui ou clique nesta área.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Select Basic -->
+                            
+                    <div class="row form-group">
+                        <div class="col-md-6">
+                            <label class="control-label" for="modal_processo_cbo_categoria_processos">
+                                Categoria
+                            </label>
+                            <div class="input-group">
+                                <select id="modal_processo_cbo_categoria_processos" class="cbo_categoria_processos form-control">
+                                </select>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn_categoria_processos_visualizar btn btn-default">
+                                        <span class="glyphicon glyphicon-info-sign"></span>
+                                    </button>
+                                    <button type="button" class="btn_categoria_processos_recarregar btn btn-default">
+                                        <span class="glyphicon glyphicon-refresh"></span>
+                                    </button>
+                                    <button type="button" class="btn_categoria_processos_novo btn btn-default">
+                                        <span class="glyphicon glyphicon-plus"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="control-label" for="modal_processo_cbo_calendario_trabalho">
+                                Calendário de trabalho
+                            </label>
+                            <div class="input-group">
+                                <select id="modal_processo_cbo_calendario_trabalho" class="cbo_calendario_trabalho form-control">
+                                </select>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn_calendario_trabalho_visualizar btn btn-default">
+                                        <span class="glyphicon glyphicon-info-sign"></span>
+                                    </button>
+                                    <button type="button" class="btn_calendario_trabalho_recarregar btn btn-default">
+                                        <span class="glyphicon glyphicon-refresh"></span>
+                                    </button>
+                                    <button type="button" class="btn_calendario_trabalho_novo btn btn-default">
+                                        <span class="glyphicon glyphicon-plus"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-md-12 div_pasta hidden">
+                            <label>Armazenar anexos em</label>
+                            <div class="div_componente_pasta"></div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <table class="tab_listagem_anexo table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Grupo</th>
+                                        <th>Campo</th>
+                                        <th>Assunto</th>
+                                        <th>Assunto BP</th>
+                                        <th>Tipo Documento</th>
+                                        <th>Tipo Documento BP</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="assunto_importacao" template-row style="display:none;">
+                                        <td template-field="grupo"></td>
+                                        <td template-field="campo"></td>
+                                        <td template-field="assunto" class="assunto"></td>
+                                        <td>
+                                            <div class="div_componente_assunto"></div>
+                                        </td>
+                                        <td template-field="tipo_documento"></td>
+                                        <td><div class="div_componente_tipo_documento"></div></td>
+                                       
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <table class="tab_listagem table table-striped table-hover">
+                                <thead>
+                                    <tr class="">
+                                        <th>Nome</th>
+                                        <th>Usuário BP</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- itens -->
+                                    <tr class="usuario_importacao" template-row style="display: none;">
+                                        <td class=" nome" template-field="nome">{nome}</td>
+                        
+                                        <td>
+                                            <div class="div_componente_usuario"></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn_cancelar" translate="modal_cadastro.cancelar">Cancelar</button>
+                    <button type="submit" class="btn btn-primary btn_salvar" translate="modal_cadastro.salvar">Confirmar</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    

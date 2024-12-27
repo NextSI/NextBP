@@ -1,0 +1,370 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Detalhes Tabela de Preços</li>
+</ol>
+
+<div class="row"> 
+
+    <!--<div class="col-sm-2 col-md-2 col-lg-2 hidden">
+
+        <div class="panel panel-default">
+            <div class="list-group">
+                <a href="#" class="btn_salvar list-group-item">
+                    <span class="glyphicon glyphicon-floppy-disk"></span>
+                    Salvar
+                </a>
+                <a href="#" class="btn_excluir list-group-item list-group-item-danger">
+                    <span class="glyphicon glyphicon-check"></span>
+                    Excluir
+                </a>                
+                <a href="#" class="btn_cancelar list-group-item">
+                    <span class="glyphicon glyphicon-remove"></span>
+                    Cancelar
+                </a>
+            </div>
+        </div>    
+
+    </div>    -->
+
+    <!--<div class="col-sm-10 col-md-10 col-lg-10"> -->
+
+    <div class="col-sm-12 col-md-12 col-lg-12">               
+
+        <div class="row">
+
+            <div class="col-md-5">
+                <div class="input-group-btn">
+                    <button type="button" class="btn_salvar btn btn-primary">
+                        <span class="glyphicon glyphicon-floppy-disk"></span> Salvar
+                    </button>                    
+                    <button type="button" class="btn_excluir btn btn-danger">
+                        <span class="glyphicon glyphicon-floppy-disk"></span> Excluir
+                    </button>                                        
+                    <button type="button" class="btn_cancelar btn btn-default">
+                        <span class="glyphicon glyphicon-remove"></span> Cancelar
+                    </button>                    
+                </div>
+            </div>
+
+            <!--<div class="col-md-1" style="padding-right: 0px;">
+                <div class="form-group">
+                    <button type="button" class="btn_salvar btn btn-default">
+                        <span class="glyphicon glyphicon-floppy-disk"></span> Salvar
+                    </button>                    
+                </div>                            
+            </div>       
+            <div class="col-md-1" style="padding-left: 0px;">
+                <div class="form-group">
+                    <button type="button" class="btn_salvar btn btn-default">
+                        <span class="glyphicon glyphicon-remove"></span> Cancelar
+                    </button>                    
+                </div>                            
+            </div>     -->               
+
+        </div>
+
+        <br>
+
+        <div class="row">                  
+
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="edt_codigo">Código</label>
+                    <input type="text" class="edt_codigo form-control" maxlength="10" id="edt_codigo" placeholder="Código">
+                </div>                            
+            </div>
+
+            <div class="col-md-8">
+                <div class="form-group">
+                    <label for="edt_descricao">Descrição</label>
+                    <span class="text-danger">*</span>
+                    <input type="text" class="edt_descricao form-control" maxlength="150" id="edt_descricao" placeholder="Descrição">
+                </div>                            
+            </div>       
+
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="chk_bloqueado">Bloqueado ?</label>
+                    <div style="margin-top: 3px;">
+                        <input type="checkbox" class="chk_bloqueado form-control" id="chk_bloqueado">
+                    </div>
+                </div>
+            </div>
+
+        </div>  
+
+        <div class="row">                  
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Região de Vendas</label>                       
+                    <select class="select-multi-column cbo_regiao_vendas"></select>                                                                    
+                </div>                            
+            </div> 
+            
+            <div class="col-lg-3 col-md-2 col-sm-6 col-xs-6">
+                <div class="form-group">
+                    <label for="edt_ini">Data Inicial</label>
+                    <input type="date" min="1900-01-01" max="2222-12-31" id="edt_ini" class="edt_ini form-control">
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-2 col-sm-6 col-xs-6">
+                <div class="form-group">
+                    <label for="edt_fim">Data Final</label>
+                    <input type="date" min="1900-01-01" max="2222-12-31" id="edt_fim" class="edt_fim form-control">
+                </div>
+            </div>
+
+        </div>  
+
+        <div>
+    
+            <!-- filtros -->
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-group">
+                        <div class="btn-group">
+                            <div class="input-group" style="width: 100%">
+                                <input type="text" class="form-control edt_filtro_descricao" placeholder="Filtrar itens da tabela por Descrição/Código" maxlength="50"/>
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-default btn_filtra_descricao">
+                                        <span class="glyphicon glyphicon-search"></span>
+                                    </button>
+                                    <button type="button" class="btn_limpar_filtro btn btn-default ">
+                                        <span class="glyphicon glyphicon-trash"></span> Limpar Filtro
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">  
+                    <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                        <li class="active">
+                            <a class="menu_item" href="#" role="tab" data-toggle="tab">Item</a>
+                        </li>                                
+                        <li>
+                            <a class="menu_entidade" href="#" role="tab" data-toggle="tab">Entidade</a>
+                        </li>                                                                 
+                    </ul>
+                </div>
+            
+                <div class="panel-body">
+            
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+            
+            
+                        <div class="tab-pane active aba_item">
+            
+                            <div class="row"> 
+                                <div class="col-md-12">
+                                    <!-- filtros -->
+                                    <table class="tab_listagem table">
+                                        <thead>                    
+
+                                            <tr>
+
+                                                <!-- notebook -->
+                                                <th class="col-md-4 hidden-sm hidden-xs">Item</th>
+                                                <th width="100px" class="hidden-sm hidden-xs divs_edt_codigo_entidade hidden">Cód. Entidade</th>
+                                                <th width="100px" class="hidden-sm hidden-xs">Preço Base</th>
+                                                <th width="100px" class="hidden-sm hidden-xs">Qtde Min.</th>
+                                                <th width="100px" class="hidden-sm hidden-xs">Qtde Max.</th>
+                                                <th width="100px" class="hidden-sm hidden-xs">Preço Min.</th>
+                                                <th width="100px" class="hidden-sm hidden-xs">Preço Max.</th>
+                                                <th width="100px" class="coluna_desconto hidden-sm hidden-xs">% Desc Max</th>
+                                                <th width="100px" class="hidden-sm hidden-xs coluna_desconto">Preço Desc.</th>
+                                                <th class="hidden-sm hidden-xs" style="padding-left: 0px; padding-right: 0px;">
+                                                    <div class="pull-right">
+                                                        <button type="button" class="btn_incluir_item btn btn-primary">
+                                                            <span class="glyphicon glyphicon-plus"></span>
+                                                        </button>
+                                                    </div>
+                                                </th>
+                                                <!-- notebook -->
+
+                                                <!-- mobile -->
+                                                <th class="hidden-lg hidden-md" style="padding-left: 0px; padding-right: 0px;">
+                                                    <div class="pull-right">
+                                                        <button type="button" class="btn_incluir_item btn btn-primary">
+                                                            <span class="glyphicon glyphicon-plus"></span>
+                                                        </button>
+                                                    </div>                            
+                                                </th> 
+                                                <!-- mobile -->
+
+                                            </tr>                    
+
+                                        </thead>
+                                        <tbody>
+                                            <tr template-row class="row-fluid" style="display: none;">
+
+                                                <!-- mobile -->
+                                                <td style="padding-left: 0px; padding-right: 0px;">
+                                                    <div class="form-group">
+                                                        <label class="hidden-lg hidden-md">Item</label>
+                                                        <div class="input-group">
+                                                            <select class="select-multi-column" template-field="cbo_item"></select>
+                                                        </div>
+                                                    </div> 
+                                                    <div class="form-group hidden-lg hidden-md divs_edt_codigo_entidade hidden">
+                                                        <label>Cód. Entidade</label>
+                                                        <input type="text" class="form-control" template-field="edt_codigo_entidade" style="padding-left: 1px; padding-right: 1px;" maxlength="50">
+                                                    </div>
+                                                    <div class="form-group hidden-lg hidden-md">
+                                                        <label>Preço Base</label>
+                                                        <input type="text" class="form-control input_number" template-field="edt_preco_base" style="padding-left: 1px; padding-right: 1px;">
+                                                    </div>
+                                                    <div class="form-group hidden-lg hidden-md">
+                                                        <label>Qtde. Min.</label>
+                                                        <input type="text" class="form-control input_number" template-field="edt_qtde_minima" style="padding-left: 1px; padding-right: 1px;">
+                                                    </div>
+                                                    <div class="form-group hidden-lg hidden-md">
+                                                        <label>Qtde. Max.</label>
+                                                        <input type="text" class="form-control input_number" template-field="edt_qtde_maxima" style="padding-left: 1px; padding-right: 1px;">
+                                                    </div>
+                                                    <div class="form-group hidden-lg hidden-md">
+                                                        <label>Preço Min.</label>
+                                                        <input type="text" class="form-control input_number" template-field="edt_preco_minimo" style="padding-left: 1px; padding-right: 1px;">
+                                                    </div>
+                                                    <div class="form-group hidden-lg hidden-md">
+                                                        <label>Preço Max.</label>
+                                                        <input type="text" class="form-control input_number" template-field="edt_preco_maximo" style="padding-left: 1px; padding-right: 1px;">
+                                                    </div>
+                                                    <div class="coluna_desconto form-group hidden-lg hidden-md">
+                                                        <label>%Desconto</label>
+                                                        <input type="text" class="form-control input_number" template-field="edt_desconto" style="padding-left: 1px; padding-right: 1px;">
+                                                    </div>
+                                                    <div class="coluna_desconto form-group hidden-lg hidden-md">
+                                                        <label>Preço Desc.</label>
+                                                        <input type="text" class="form-control input_number" template-field="edt_preco_desconto" style="padding-left: 1px; padding-right: 1px;">
+                                                    </div>
+
+                                                    <div class="pull-right hidden-lg hidden-md">
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn_deletar_item btn btn-default">
+                                                                <span class="glyphicon glyphicon-trash"></span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+
+                                                </td>  
+                                                <!-- mobile -->  
+
+                                                <!-- desktop -->
+                                                <td class="hidden-sm hidden-xs divs_edt_codigo_entidade hidden">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" template-field="edt_codigo_entidade" style="padding-left: 1px; padding-right: 1px;" maxlength="50">
+                                                    </div>
+                                                </td>
+                                                <td class="hidden-sm hidden-xs">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control input_number" template-field="edt_preco_base" style="padding-left: 1px; padding-right: 1px;">
+                                                    </div>
+                                                </td>
+                                                <td class="hidden-sm hidden-xs">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control input_number" template-field="edt_qtde_minima" style="padding-left: 1px; padding-right: 1px;">
+                                                    </div>
+                                                </td>
+                                                <td class="hidden-sm hidden-xs">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control input_number" template-field="edt_qtde_maxima" style="padding-left: 1px; padding-right: 1px;">
+                                                    </div>
+                                                </td>
+                                                <td class="hidden-sm hidden-xs">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control input_number" template-field="edt_preco_minimo" style="padding-left: 1px; padding-right: 1px;">
+                                                    </div>
+                                                </td>
+                                                <td class="hidden-sm hidden-xs">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control input_number" template-field="edt_preco_maximo" style="padding-left: 1px; padding-right: 1px;">
+                                                    </div>
+                                                </td>
+                                                <td class="coluna_desconto hidden-sm hidden-xs">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control input_number" template-field="edt_desconto" style="padding-left: 1px; padding-right: 1px;">
+                                                    </div>
+                                                </td>
+                                                <td class="hidden-sm hidden-xs coluna_desconto">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control input_number" template-field="edt_preco_desconto" style="padding-left: 1px; padding-right: 1px;">
+                                                    </div>
+                                                </td>
+                                                <td style="padding-left: 0px; padding-right: 0px;" class="hidden-sm hidden-xs">
+                                                    <div class="pull-right">
+                                                        <button type="button" class="btn_deletar_item btn btn-default">
+                                                            <span class="glyphicon glyphicon-trash"></span>
+                                                        </button>
+                                                    </div>
+                                                </td> 
+                                                <!-- desktop -->
+
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+
+                                    <div class="text-center div_carregar_mais hidden" style="padding-bottom: 20px;">
+                                        <span class="btn btn-link btn_carregar_mais" style="font-size: 12pt;">
+                                            <span class="txt_carregar_mais text-primary"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane aba_entidade">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Entidade</label>                       
+                                    <div class="div_component_cbo_clientes"></div>                                                                
+                                </div>  
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="div_entidadeform-group" id="div_entidade">
+                                            <table class="tab_listagem_entidade table" ref="tab_listagem_entidade">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Nome</th>
+                                                        <th>
+                                                            <div class="pull-right">
+                                                                <button type="button" class="btn_incluir_entidade hidden btn btn-default">
+                                                                <span class="glyphicon glyphicon-plus"></span>
+                                                                </button>
+                                                            </div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr template-row style="display: none;">
+                                                        <td template-field="nome">{nome}</td>
+                                                        <td template-buttons="actions">
+                                                            <div class="btn-group pull-right">                                
+                                                                <button type="button" class="btn_deletar_entidade btn btn-default">
+                                                                    <span class="glyphicon glyphicon-trash"></span>
+                                                                </button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>   
+                                </div>                       
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        
+    </div>    
+
+</div>    
+        

@@ -1,0 +1,82 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Grupo Item</li>
+</ol>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="form-group">
+            <div class="col-md-5">
+                <div class="input-group-btn ">  
+                    <button type="button" class="btn_salvar btn btn-primary">
+                        <span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;
+                        <span translate="generico.salvar"></span>
+                    </button>
+                    <button type="button" class="btn_excluir btn btn-danger">
+                        <span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;
+                        <span translate="generico.excluir"></span>
+                    </button>
+                    <button type="button" class="btn_cancelar btn btn-default">
+                        <span class="glyphicon glyphicon-remove"></span>&nbsp;
+                        <span translate="generico.cancelar"></span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="clearfix"><br></div>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="panel panel-default painel_detalhes">
+            <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                <div class="pull-right">
+                    <!-- -->
+                </div>
+                <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                    <li class="active lbl_tab_geral">
+                        <a class="tab_geral" id="modal_projeto_geral_tab" href="#" role="tab" data-toggle="tab" translate="generico.geral"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="panel-body">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active form_geral" id="">
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+                            <div class="form-group">
+                                <label for="" translate="generico.codigo"></label>
+                                <input type="text" class="edt_codigo form-control" translate-placeholder="grupo_item.placeholder_codigo" maxlength="50">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
+                            <div class="form-group">
+                                <label for="edt_descricao" translate="grupo_item.descricao"></label>
+                                <input id="edt_descricao" type="text" class="form-control edt_descricao" translate-placeholder="grupo_item.placeholder_descricao" maxlength="100">
+                            </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                            <div class="form-group">
+                                <label for="" translate="grupo_item.sintetico_pai"></label>
+                                <div>
+                                    <select id="cbo_grupo_item_pai" class="cbo_grupo_item_pai">
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
+                            <div class="form-group">
+                                <label for="cbo_motivo" translate="grupo_item.bloqueado"></label><br>
+                                <input type="checkbox" class="chk_bloqueado checkbox_bootstrap_toggle">
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

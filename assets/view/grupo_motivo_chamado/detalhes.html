@@ -1,0 +1,56 @@
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_grupo_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_grupo_detalhes_label">Grupo de Motivos</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label for="edt_nome">Nome do Grupo</label>
+                    <input type="text" class="edt_nome form-control" id="edt_nome" placeholder="Nome do grupo de motivo do chamado" maxlength="50">
+                </div>
+                
+                <table class="tab_listagem table-responsive table">
+                    <thead align="right">
+                        <tr>
+                            <th>Motivos</th>
+                            <th>&nbsp;</th>
+                            <th>
+                                <div class="pull-right">
+                                    <button type="button" class="btn_add_grupo btn btn-primary">
+                                        <span class="glyphicon glyphicon-plus"></span>
+                                    </button>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr template-row style="display: none;">
+                            <td>
+                                <select class="cbo_motivo form-control"></select>
+                            </td>
+                            <td>
+                                <span template-field='motivo_bloqueado'></span>
+                            </td>
+                            <td>                            
+                                <div class="pull-right">
+                                    <button type="button" class="btn_del_grupo btn btn-primary">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>                
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+                <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>

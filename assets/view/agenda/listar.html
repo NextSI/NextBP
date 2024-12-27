@@ -1,0 +1,87 @@
+<div class="reset-container">
+
+	<div class="frozen">
+			<div class="wrapper">	
+				<table class="table table-striped table-bordered tbl_agenda" style="margin-bottom: 0px;">
+					<thead>
+						<tr>
+							<th class="menu_header">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-default btn_filtro">
+										 <span class="glyphicon glyphicon-filter"></span> <span translate="gestao_agenda.filtro"></span>
+									</button>
+									<button type="button" class="btn btn-sm btn-default btn_email_cliente" permissao="gestao_projetos">
+										 <span class="glyphicon glyphicon-envelope"></span>
+									</button>
+									<button type="button" class="btn btn-sm btn-default btn_refresh">
+										 <span class="glyphicon glyphicon-refresh"></span>
+									</button>
+									<a manual="agenda" class="btn btn-sm btn-default" role="button">
+										<span class="glyphicon glyphicon-question-sign"></span>
+									</a>
+								</div>
+							</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<!-- EVENTOS DA AGENDA - LINHA USUÁRIO / COLUNA DIA -->
+					</tbody>
+				</table>
+		</div>
+		<br>
+	</div>
+</div>
+
+<ul id="context_menu_agenda" class="dropdown-menu ul_context_menu_agenda" role="menu" aria-labelledby="context_menu_agenda" style="cursor: pointer;">
+	<li role="presentation">
+		<a role="menuitem" tabindex="-1" href="#" data-context-menu="copiar" translate="ctrl_ccp.copiar">
+			Copiar
+		</a>
+	</li>
+	<li role="presentation" class="divider"></li>
+	<li role="presentation">
+		<a role="menuitem" tabindex="-1" href="#" data-context-menu="editar" translate="tela_cadastro.editar">
+			Editar
+		</a>
+	</li>
+</ul>
+
+<ul id="context_menu_dia" class="dropdown-menu context_menu_dia" role="menu" aria-labelledby="context_menu_dia" style="cursor: pointer;">
+	<li role="presentation">
+		<a class="opt_copiar" role="menuitem" tabindex="-1" data-context-menu="copiar" translate="ctrl_ccp.copiar">
+			Copiar
+		</a>
+	</li>
+	<li role="presentation">
+		<a class="opt_colar" role="menuitem" tabindex="-1"  data-context-menu="colar" translate="ctrl_ccp.colar">
+			Colar
+		</a>
+	</li>
+	<li role="presentation" class="divider"></li>
+	<li role="presentation">
+		<a class="opt_novo" role="menuitem" tabindex="-1" data-context-menu="novo" translate="gestao_agenda.novo_evento">
+			Novo Evento
+		</a>
+	</li>
+	<li role="presentation">
+		<a class="opt_editar" role="menuitem" tabindex="-1" data-context-menu="editar" translate="gestao_agenda.editar_evento">
+			Editar Evento
+		</a>
+	</li>
+	<li role="presentation">
+		<a class="opt_realizado" role="menuitem" tabindex="-1" data-context-menu="realizado">
+			Marcar como realizado
+		</a>
+	</li>
+</ul>
+
+<ul id="context_menu_oportunidade" class="dropdown-menu context_menu_oportunidade" role="menu" aria-labelledby="context_menu_oportunidade" >
+	<li role="presentation">
+		<a role="menuitem" tabindex="-1" data-context-menu="editar_oportunidade" translate="gestao_agenda.editar_oportunidade">
+			Editar Oportunidade
+		</a>
+	</li>
+</ul>
+
+

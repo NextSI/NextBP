@@ -1,0 +1,10 @@
+<?php
+
+use \Sys\Util;
+use \Sys\Basic;
+use \Sys\Validation;
+use \Sys\DB;
+
+function processo_solicitacao_formulario_pdf_antes($solicitacao_atividade, $solicitacao, $formulario) {
+    
+};

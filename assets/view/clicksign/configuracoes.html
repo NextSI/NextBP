@@ -1,0 +1,51 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">Configurações</div>
+    <div class="panel-body">
+        
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                
+                <div class="form-group">
+                    <label for="cbo_api_url">Clicksing API URL:</label>
+                    <select id="cbo_api_url" class="form-control cbo_api_url">
+                        <option value="https://app.clicksign.com">https://app.clicksign.com</option>
+                        <option value="https://sandbox.clicksign.com">https://sandbox.clicksign.com</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="edt_access_token">Access Token:</label>
+                    <input id="edt_access_token" type="text" class="form-control edt_access_token" maxlength="500"> 
+                </div>
+
+                <div class="form-group">
+                    <label for="edt_diretorio">Diretório para armazenamento:</label>
+                    <input id="edt_diretorio" type="text" class="form-control edt_diretorio" maxlength="500">
+                </div>
+
+                <div class="form-group">
+                    <label>Webhook URL Next BP:</label>
+                    <div class="lbl_webhook_url_nextbp"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="edt_hmac_sha256_secret">Webhook HMAC SHA256 Secret:</label>
+                    <input id="edt_hmac_sha256_secret" type="text" class="form-control edt_hmac_sha256_secret" maxlength="500">
+                </div>
+
+                <div class="form-group">
+                    <label for="chk_ativo">Habilitar assinaturas de documentos com o Clicksign</label><br>
+                    <input id="chk_ativo" type="checkbox" class="chk_ativo checkbox_bootstrap_toggle">
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <div class="panel-footer">
+        <button class="btn_salvar btn btn-primary">Salvar</button>
+        <a manual="clicksign" class="btn btn-default" role="button">
+            <span class="glyphicon glyphicon-question-sign"></span> Ajuda
+        </a>
+    </div>
+</div>

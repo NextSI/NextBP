@@ -1,0 +1,206 @@
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_agenda_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_agenda_detalhes_label">Detalhe Evento</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="panel panel-default painel_detalhes">
+                    <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                        <div class="pull-right">
+                            <!-- -->
+                        </div>
+                        <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                            <li class="active lbl_tab_geral">
+                                <a class="menu_geral" href="#aba_geral" role="tab" data-toggle="tab" translate="gestao_agenda.geral">Geral</a>
+                            </li>
+                            <li class="lbl_tab_convidados hidden">
+                                <a class="menu_convidados" href="#aba_convidados" role="tab" data-toggle="tab">Convidados</a>
+                            </li>
+                            <li class="lbl_tab_emails_acompanhamento">
+                                <a class="menu_emails_acompanhamento" href="#aba_emails_convidados" role="tab" data-toggle="tab">E-mails de acompanhamento</a>
+                            </li>
+                        </ul>
+                    </div>
+
+    
+                    <div class="panel-body">
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+
+                            <div class="active tab-pane aba_geral" id="aba_geral">
+                                <div class="row">                  
+            
+                                    <div class="col-md-12"> 
+                                        <div class="form-group">                
+                                            <label>Oportunidade</label>    
+                                            <input type="text" class="edt_descricao_oportunidade form-control" maxlength="150" id="edt_descricao_oportunidade" placeholder="Descrição" readonly>
+                                        </div>    
+                                    </div>
+                
+                                </div>             
+                
+                                <div class="row">                  
+                
+                                    <div class="col-md-12"> 
+                                        <div class="form-group">                
+                                            <label>Tipo de Evento</label>    
+                                            <span class="text-danger">*</span>                   
+                                            <select class="select-multi-column cbo_tipo_agenda" placeholder="Tipo Agenda" required></select>                                                
+                                        </div>    
+                                    </div>
+                
+                                </div>             
+                
+                                <div class="row">
+                
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="edt_descricao">Descrição</label>
+                                            <span class="text-danger">*</span>                   
+                                            <input type="text" class="edt_descricao form-control" maxlength="150" id="edt_descricao" placeholder="Descrição" required>
+                                        </div>
+                                    </div>
+                
+                                </div>
+                
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="edt_observacoes">Observações</label>
+                                            <textarea 
+                                                class="form-control edt_observacoes" name="edt_observacoes" placeholder="Observações" rows="2" required></textarea>
+                                        </div>                                
+                                    </div>                                
+                                </div>        
+                
+                                <div class="row">
+                
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="edt_data">Data</label>
+                                            <span class="text-danger">*</span>                   
+                                            <input type="date" min="1900-01-01" max="2222-12-31" id="edt_data" class="edt_data form-control" required>
+                                        </div>
+                                    </div>
+                
+                                    <div class="col-md-3">
+                                        <div class="form-group">                            
+                                            <label for="edt_hora">Hora inicial</label>
+                                            <span class="text-danger">*</span>                   
+                                            <input type="time" id="edt_hora" class="edt_hora form-control" placeholder="hh:mm" required>
+                                        </div>
+                                    </div>
+                
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="edt_duracao">Hora final</label>
+                                            <span class="text-danger">*</span>                   
+                                            <input type="time" id="edt_duracao" class="edt_duracao form-control" placeholder="hh:mm" required>
+                                        </div>
+                                    </div>    
+                
+                                    <div class="col-md-3 div_translado hidden">
+                                        <div class="form-group">
+                                            <label for="edt_translado">Translado</label>
+                                            <input type="time" id="edt_translado" class="edt_translado form-control" placeholder="hh:mm">
+                                        </div>
+                                    </div>
+                
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                        <div class="form-group">
+                                            <label for="chk_notificar_envolvidos">Notificar envolvidos</label><br>
+                                            <input type="checkbox" class="chk_notificar_envolvidos checkbox_bootstrap_toggle" id="chk_notificar_envolvidos">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                        <div class="form-group">
+                                            <label for="chk_realizado">Atividade realizada</label><br>
+                                            <input type="checkbox" class="chk_realizado checkbox_bootstrap_toggle" id="chk_realizado">
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                        <div class="form-group">
+                                            <label for="chk_exibir">Exibir na agenda</label><br>
+                                            <input type="checkbox" class="chk_exibir checkbox_bootstrap_toggle" id="chk_exibir">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="tab-pane aba_convidados" id="aba_convidados">
+
+                                <div class="row">
+                                    <div class="col-md-12 div_convidados"> 
+
+                                        <table class="tab_convidados table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nome</th>
+                                                    <th>Convidado</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr template-row style="display: none">
+
+                                                    <td>
+                                                        <img style="height: 40px; width: 40px" class="carrega_img"/>
+                                                        <span style="padding-left: 10px;" class="tipo_agenda"></span>
+                                                        <span></span>
+                                                        <span class="descricao"></span>
+                                                    </td>
+                
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <div>
+                                                                <input class="chk_convidado"></input>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="tab-pane aba_emails_convidados" id="aba_emails_convidados">
+                                <span class="text-muted">
+                                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    Os e-mails adicionados nesta seção receberão a notificação do evento com o arquivo <em>invite.ics</em>, mesmo que não estejam cadastrados no Next BP.
+                                </span>
+                                
+                                <div class="grid_emails_acompanhamento" style="margin-top: 15px;"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+                <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,148 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Enviar e-mail</li>
+</ol>
+
+<div class="row"> 
+
+    <div class="col-sm-3 col-md-3 col-lg-2 div_actions">
+
+        <div class="panel panel-default div_btn_confirmar">
+            <div class="list-group">
+                <a href="#" class="btn_confirmar list-group-item">
+                    <span class="glyphicon glyphicon-send"></span>
+                    <span class="span_confirmar">Salvar e Enviar</span>
+                </a>            
+            </div>
+        </div>    
+
+        <div class="panel panel-default">
+            <div class="list-group">
+                <a href="#" class="btn_salvar list-group-item">
+                    <span class="glyphicon glyphicon-floppy-disk"></span>
+                    <span class="span_salvar">Salvar Alterações</span>
+                </a>                
+                <a href="#" class="btn_cancelar list-group-item">
+                    <span class="glyphicon glyphicon-remove"></span>
+                    Cancelar
+                </a>
+            </div>
+        </div>    
+
+    </div>        
+
+    <div class="col-sm-9 col-md-9 col-lg-10">   
+
+        <div class="row div_enviar_orcamento">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="chk_orcamento_email">Enviar orçamento por e-mail</label>&nbsp;
+                    <input id="chk_orcamento_email" class="chk_orcamento_email" type="checkbox" value="">
+                </div>
+            </div>                                                        
+        </div>                                                        
+
+        <div class="div_corpo_email">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Assunto</label>
+                        <input type="text" class="edt_assunto form-control" maxlength="150" id="edt_assunto" placeholder="Assunto">
+                    </div>    
+                </div>    
+            </div>        
+
+            <!--<div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Remetente</label>
+                        <input type="text" class="edt_remetente form-control" id="edt_remetente" placeholder="Remetente">
+                    </div>    
+                </div>    
+            </div> -->
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Destinatários</label>
+                        <input type="text" class="edt_destinatarios form-control" id="edt_destinatarios" placeholder="Destinatários">
+                    </div>    
+                </div>    
+            </div>        
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="edt_assinatura">Mensagem</label>
+                        <textarea 
+                            class="form-control edt_assinatura" name="edt_assinatura" rows="2" required></textarea>
+                    </div>                                
+                </div>                                
+            </div>    
+
+            <div class="row hidden div_anexos_carregados">
+                <div class="anexos col-xs-12 col-sm-12 col-md-12">
+                </div>
+            </div>
+
+            <div class="row div_anexos_download_row">
+
+                <div class="col-md-12">
+
+                    <!-- Download de anexos -->
+                    <div class="row hidden div_anexos_download">
+                        <div class="anexos_download col-xs-12 col-sm-12 col-md-12"></div>
+                    </div>              
+
+                    <br>
+
+                </div>   
+
+            </div>            
+
+            <div class="row">
+
+                <div class="col-md-12">
+                
+                    <!-- ANEXOS -->
+                    <div class="panel panel-info panel_anexos" style="margin-top: 10px">
+                        <div id="anexos" class="panel-body div_anexos"></div>
+                        <div class="panel-footer">
+                            <button type="button" class="btn btn-default btn-sm btn_anexo">
+                                <span class="glyphicon glyphicon-paperclip"></span> Incluir mais um anexo
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ANEXO BASE -->
+                    <div id="anexo_base" class="row div_anexos_row hidden" style="padding-bottom: 30px;">                                    
+                        <div class="col-md-12 col-sm-12">                        
+                            <label class="anexo_base_label" for="anexo_base_button_icon2" style="display: table !important; float:none !important;"></label>
+                            <input class="anexo_base_input mobile_inputfile" type="file" style="top: 28px;">
+                            <span class="capture_photo glyphicon glyphicon-camera hidden"></span>
+                            <span class="btn_input">
+                                <span class="hidden">text</span>
+                                <span class="anexo_base_button_icon2 glyphicon glyphicon-open text-primary"></span>
+                                <span class="anexo_base_input_text">Nenhum Arquivo Selecionado</span>
+                            </span>
+                        </div>                    
+                    </div>
+
+                </div>                    
+
+            </div>   
+
+        </div>                                              
+
+        <div class="row">
+            <div class="col-md-7">
+                <button type="button" class="btn_confirmar hidden btn btn-primary">
+                    <span class="glyphicon glyphicon-ok"></span> Confirmar
+                </button>
+            </div>                                
+        </div>        
+
+    </div>        
+
+</div>    
+        

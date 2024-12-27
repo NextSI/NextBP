@@ -1,0 +1,68 @@
+<!-- MODAL DETALHE -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_area_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_area_detalhes_label">Ações, Metas e Resultados</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                  <table class="tab_objetivo table table-striped table-hover">
+                      <thead>
+                          <tr>
+                              <th>Desdobramento</th>
+                              <th>Tipo</th>
+                              <th>Valor</th>
+                              <th>Início</th>
+                              <th>Fim</th>
+                              <th>
+                                  <div class="pull-right">
+                                      <button type="button" class="btn_incluir_objetivo btn btn-default">
+                                          <span class="glyphicon glyphicon-plus"></span>
+                                      </button>
+                                  </div>
+                              </th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr template-row style="display: none;">
+                              <td template-field="descricao"><input type="text" class="form-control" maxlength="255"></td>
+                              <td template-field="tipo">
+                                <select class="select-multi-column form-control cbo_tipo">
+                                  <option selected disabled>Selecione o tipo</option>
+                                  <option value="1">Informativo</option>
+                                  <option value="2">Percentual</option>
+                                  <option value="3">Valor</option>
+                                </select>
+                              </td>
+                              <td template-field="valor">
+                                <input type="text" class="form-control">
+                              </td>
+                              <td template-field="data_inicio">
+                                <input type="date" class="form-control">
+                              </td>
+                              <td template-field="data_fim">
+                                <input type="date" class="form-control">
+                              </td>
+                              <td>
+                                  <div class="pull-right">
+                                      <button type="button" class="btn_deletar_objetivo btn btn-default">
+                                          <span class="glyphicon glyphicon-trash"></span>
+                                      </button>
+                                  </div>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+            </div>
+
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

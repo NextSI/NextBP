@@ -1,0 +1,51 @@
+<!-- MODAL DETALHE -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_area_detalhes_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_area_detalhes_label">Ações, Metas e Resultados</h4>
+            </div>
+            <div class="modal-body">
+                  <!-- <h4 class="responsabilidade_escolhida"></h4> -->
+                  <br>
+                  <h4>Objetivo do Indicador</h4>
+                  <h4>Objetivo do Indicador</h4>
+                  <div class="form-group">
+                      <label for="descricao">Objetivo</label> <!-- (<span class="data_sete_dias"/>) -->
+                      <textarea class="form-control edt_acao_sete_dias" name="edt_acao_sete_dias" maxlength="255" rows="2" required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_informativa_sete_dias" name="optradio_sete_dias" value="1">Informativo</label>
+                    </div>
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_percentual_sete_dias" name="optradio_sete_dias" value="2">Percentual</label>
+                    </div>
+                    <div class="radio-inline">
+                      <label><input type="radio" class="radio_valor_sete_dias" name="optradio_sete_dias" value="3">Valor</label>
+                    </div>
+                    <!-- <div class="radio-inline">
+                      <label><input type="radio" class="radio_sem_acao_sete_dias" name="optradio_sete_dias" checked value="0">Sem ação</label>
+                    </div> -->
+                  </div>
+                  <div class="form-group percentual_sete_dias" style="display: none;">
+                    <input type="text" class="form-control edt_percentual_sete_dias" placeholder="Digite o percentual">
+                  </div>
+                  <div class="form-group valor_sete_dias" style="display: none;">
+                    <input type="text" class="form-control edt_valor_sete_dias" placeholder="Digite o Valor">
+                  </div>
+                  <br>
+                  <hr>
+
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+<!--                 <button type="button" class="btn btn-warning btn_avaliar">Analisar</button>
+<button type="button" class="btn btn-warning btn_salvar_enviar">Salvar e enviar</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

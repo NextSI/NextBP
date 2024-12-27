@@ -1,0 +1,630 @@
+<div class="modal modal_evento_agenda modal_evento" id="modal_evento_agenda" tabindex="-1" role="dialog" aria-labelledby="label_modal_evento_agenda" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button btn_cancelar" class="btn_cancelar close" aria-hidden="true">×</button>
+                <h4 class="modal-title label_modal_evento_agenda" id="label_modal_evento_agenda"></h4>
+            </div>
+
+            <div class="modal-body">
+
+
+                <div class="panel panel-default painel_detalhes">
+                    <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+                        <div class="pull-right">
+                            <!-- -->
+                        </div>
+                        <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                            <li class="active lbl_tab_geral">
+                                <a class="menu_geral" href="#" role="tab" data-toggle="tab" translate="gestao_agenda.geral">Geral</a>
+                            </li>
+                            <li class="lbl_tab_recorrencia">
+                                <a class="menu_recorrencia" href="#" role="tab" data-toggle="tab" translate="gestao_agenda.recorrencia_evento">Recorrência</a>
+                            </li>
+                            <li class="lbl_tab_convidados">
+                                <a class="menu_convidados" href="#" role="tab" data-toggle="tab" translate="gestao_agenda.convidados_evento">Convidados</a>
+                                <a class="menu_responsavel hidden" href="#" role="tab" data-toggle="tab" translate="gestao_agenda.responsaveis_evento">Responsáveis</a>
+                            </li>
+                            <li class="lbl_tab_emails_acompanhamento">
+                                <a class="menu_emails_acompanhamento" href="#" role="tab" data-toggle="tab">E-mails de acompanhamento</a>
+                            </li>
+                            <li class="lbl_tab_historico hidden">
+                                <a class="menu_historico" href="#" role="tab" data-toggle="tab" translate="gestao_agenda.aba_historico">Histórico</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="panel-body">
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+
+                            <div class="active tab-pane aba_geral">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="edt_evento_dia" translate="gestao_agenda.dia_evento">Dia</label><span class="campo_obrigatorio" style="color:red"> *</span>
+                                            <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_evento_dia" name="edt_dia">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="chk_dia_inteiro" translate="gestao_agenda.dia_inteiro">Dia inteiro</label>
+                                            <input type="checkbox" id="chk_dia_inteiro" class="chk_dia_inteiro checkbox_bootstrap_toggle">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group div_evento_inicio">
+                                            <label for="edt_evento_inicio" translate="gestao_agenda.hora_inicio_evento">Hora início</label><span class="campo_obrigatorio" style="color:red"> *</span>
+                                            <input type="time" id="edt_evento_inicio" class="edt_evento_inicio form-control" placeholder="hh:mm">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group div_evento_fim">
+                                            <label for="edt_evento_fim" translate="gestao_agenda.hora_fim_evento">Fim</label><span class="campo_obrigatorio" style="color:red"> *</span>
+                                            <input type="time" id="edt_evento_fim" class="edt_evento_fim form-control" placeholder="hh:mm">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group div_evento_notificar_antes">
+                                            <label for="edt_evento_notificar_antes" translate="gestao_agenda.notificar_antes">Notificar Antes</label>
+                                            <input type="time" id="edt_evento_notificar_antes" class="edt_evento_notificar_antes form-control" placeholder="hh:mm" data-toggle="tooltip" translate-title="gestao_agenda.notificar_antes_tooltip">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="div_info_feriado text-danger" style="margin: 5px 0 15px 0; display: none; cursor: pointer;">
+                                    <i class="fa fa-info-circle"></i>
+                                    <span>Atenção! Há um feriado marcado para o dia selecionado.</span>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="cbo_evento_tipo_agenda" translate="gestao_agenda.tipo_evento">Tipo Agenda</label><span class="campo_obrigatorio" style="color:red"> *</span>
+                                            <select id="cbo_evento_tipo_agenda" class="cbo_evento_tipo_agenda form-control">
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 div_local_agenda">
+                                        <div class="form-group">
+                                            <label for="cbo_evento_local" translate="gestao_agenda.local_evento">Local</label><span class="campo_obrigatorio" style="color:red"> *</span>
+                                            <select id="cbo_evento_local" class="cbo_evento_local form-control">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="div_dados_projeto">
+
+                                    <div class="form-group">
+                                        <label>Entidade</label>
+                                        <div class="div_component_cbo_clientes"></div>
+                                    </div>
+
+                                    <div class="form-group div_projeto hidden">
+                                        <label translate="projeto.projeto">Projeto</label>
+                                        <select id="cbo_evento_projeto" class="form-control cbo_evento_projeto select-multi-column" placeholder="Pesquisar por projeto"></select>
+                                    </div>
+
+                                    <div class="row form-group hidden div_atividade_projeto">
+                                        <div class="col-md-12 col-sm-12 col-lg-12">
+                                            <label translate="atividade_projeto.atividade_projeto">Atividade do Projeto</label>
+                                            <div class="div_componente_atividades"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Titulo <span class="campo_obrigatorio" style="color:red">*</span></label>
+                                    <input type="text"  required class="edt_titulo form-control" maxlength="150">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="edt_evento_descricao" translate="gestao_agenda.descricao_evento">Descrição</label>
+                                    <textarea class="edt_descricao form-control edt_evento_descricao" placeholder="" rows="5" maxlength="3000"></textarea>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="chk_realizado" translate="gestao_agenda.evento_realizado">Realizado?</label><br>
+                                    <div>
+                                        <input type="checkbox" class="chk_realizado checkbox_bootstrap_toggle" id="chk_realizado">
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="chk_notificar_envolvidos">Notificar envolvidos</label><br>
+                                    <div>
+                                        <input type="checkbox" class="chk_notificar_envolvidos checkbox_bootstrap_toggle" id="chk_notificar_envolvidos">
+                                    </div>
+                                </div>
+
+                                <div class="form-group div_valor hidden">
+                                    <label for="edt_valor">Informe o valor</label><br>
+                                    <div>
+                                        <input type="text" class="form-control edt_valor_atuacao hidden"/>
+                                        <input type="text" class="form-control edt_valor_competencia hidden"/>
+                                    </div>
+                                </div>
+
+                                <div class="form-group div_percentual hidden">
+                                    <label for="edt_percentual">Informe o percentual alcançado</label><br>
+                                    <div>
+                                        <input type="text" class="form-control edt_percentual_atuacao hidden"/>
+                                        <input type="text" class="form-control edt_percentual_competencia hidden"/>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="tab-pane aba_historico" style="height: 450px; overflow-y: auto; overflow-x: hidden;">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <table class="tab_historico table">
+                                            <thead class="hidden-xs">
+                                                <th translate="gestao_agenda.aba_historico_acao">Ação</th>
+                                                <th translate="gestao_agenda.aba_historico_detalhes">Detalhes</th>
+                                                <th translate="gestao_agenda.aba_historico_usuario">Usuário</th>
+                                                <th translate="gestao_agenda.aba_historico_dia_acao">Data</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr template-row style="display: none">
+                                                    <!-- MOBILE -->
+                                                    <td class="visible-xs">
+                                                        <div class="pull-right">
+                                                            <span class="lbl_acao">{acao}</span>
+                                                            <br>
+                                                            <span class="lbl_usuario">{usuario}</span>
+                                                            <br>
+                                                            <span class="lbl_data">{data}</span>
+                                                        </div>
+                                                        <div class="pull-left">
+                                                            <span class="lbl_detalhes">{detalhes}</span>
+                                                        </div>
+                                                    </td>
+                                                    <!-- MOBILE -->
+                                                    <td class="lbl_acao hidden-xs">{acao}</td>
+                                                    <td class="lbl_detalhes hidden-xs">{detalhes}</td>
+                                                    <td class="lbl_usuario hidden-xs">{usuario}</td>
+                                                    <td class="lbl_data hidden-xs">{data}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="text-center div_load">
+                                            <img class="img_ajax_loader" src="assets/img/ajax-loader.gif">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="tab-pane aba_recorrencia">
+
+                                <div class="col-md-4 div_radio_tipo_recorrencia">
+
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="opt_radio_tipo_recorrencia" value="0">
+                                            <span translate="gestao_agenda.nenhuma_recorrencia">Nenhuma</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="opt_radio_tipo_recorrencia" value="1">
+                                            <span translate="gestao_agenda.recorrencia_diaria">Diário</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="opt_radio_tipo_recorrencia" value="2">
+                                            <span translate="gestao_agenda.recorrencia_semanal">Semanal</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="opt_radio_tipo_recorrencia" value="3">
+                                            <span translate="gestao_agenda.recorrencia_mensal">Mensal</span>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="opt_radio_tipo_recorrencia" value="4">
+                                            <span translate="gestao_agenda.recorrencia_anual">Anual</span>
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-9 panel panel-info div_diario hidden">
+                                    <fieldset>
+                                       <legend>Periodicidade da Agenda</legend> 
+                                        <div class="radio">
+                                            <div class="form-inline">
+                                                <label>
+                                                    <input type="radio" name="opt_radio_diario" value="1">
+                                                    <span translate="gestao_agenda.recorrencia_a_cada">A cada</span>
+                                                </label>&nbsp;&nbsp;
+                                                <input class="form-control edt_quantidade_diario" style="width: 50px;" type="text" name="" value=""> 
+                                                &nbsp;&nbsp;<span translate="gestao_agenda.recorrencia_diaria_dias">dia(s)</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="opt_radio_diario" value="2">
+                                                <span translate="gestao_agenda.recorrencia_diaria_todos_dia_semana">Todos os dias da semana</span>
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-md-9 panel panel-info div_semanal hidden">
+
+                                    <fieldset>
+                                        <legend>Periodicidade da Agenda</legend> 
+                                        <div class="radio">
+                                            <div class="form-inline">
+                                                <span translate="gestao_agenda.recorrencia_a_cada">A cada</span> &nbsp;&nbsp;
+                                                <input class="form-control edt_quantidade_semanal" style="width: 50px;" type="text" name="" value="">
+                                                &nbsp;&nbsp;<span translate="gestao_agenda.recorrencia_semanal_semanas">semana(s) no(a):</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="chk_semanal">
+
+                                            <input class="template_switch chk_mensal_domingo" type="checkbox">
+                                            <span translate="dia_semana.domingo">Domingo</span>
+
+                                            <br>
+
+                                            <input class="template_switch chk_mensal_segunda" type="checkbox">
+                                            <span translate="dia_semana.segunda">Segunda</span>
+
+                                            <br>
+
+                                            <input class="template_switch chk_mensal_terca"   type="checkbox">
+                                            <span translate="dia_semana.terca">Terça</span>
+
+                                            <br>
+
+                                            <input class="template_switch chk_mensal_quarta"  type="checkbox">
+                                            <span translate="dia_semana.quarta">Quarta</span>
+
+                                            <br>
+
+                                            <input class="template_switch chk_mensal_quinta"  type="checkbox">
+                                            <span translate="dia_semana.quinta">Quinta</span>
+
+                                            <br>
+
+                                            <input class="template_switch chk_mensal_sexta"   type="checkbox">
+                                            <span translate="dia_semana.sexta">Sexta</span>
+
+                                            <br>
+
+                                            <input class="template_switch chk_mensal_sabado"  type="checkbox">
+                                            <span translate="dia_semana.sabado">Sábado</span>
+                                        </div>
+
+                                    </fieldset>
+
+                                    <br>
+
+                                </div>
+
+                                <div class="col-md-9 panel panel-info div_mensal hidden">
+                                    <fieldset>
+                                        <legend>Periodicidade da Agenda</legend> 
+                                        <div class="radio">
+                                            <div class="form-inline">
+                                                <label>
+                                                    <input type="radio" name="opt_radio_mensal" value="1">
+                                                    <span translate="gestao_agenda.dia_evento">Dia</span>
+                                                </label>
+                                                &nbsp;&nbsp;
+                                                <input class="form-control edt_dia_mes" style="width: 50px;" type="text" name="" value="">
+                                                &nbsp;&nbsp;<span translate="gestao_agenda.recorrencia_de_cada">de cada</span>&nbsp;&nbsp;
+                                                <input class="form-control edt_qtde_mes" style="width: 50px;" type="text" name="" value="">
+                                                &nbsp;&nbsp;<span translate="gestao_agenda.recorrencia_mensal_meses">mês(meses)</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="radio">
+                                            <div class="form-inline">
+                                                <label>
+                                                    <input type="radio" name="opt_radio_mensal" value="2">
+                                                    <span translate="gestao_agenda.recorrencia_mensal_no">No(a)</span>
+                                                </label>&nbsp;&nbsp;
+                                                <select class="form-control cbo_numero_da_semana">
+                                                    <option value="1" translate="gestao_agenda.recorrencia_mensal_primeiro">Primeiro(a)</option>
+                                                    <option value="2" translate="gestao_agenda.recorrencia_mensal_segundo">Segundo(a)</option>
+                                                    <option value="3" translate="gestao_agenda.recorrencia_mensal_terceiro">Terceiro(a)</option>
+                                                    <option value="4" translate="gestao_agenda.recorrencia_mensal_quarto">Quarto(a)</option>
+                                                    <option value="5" translate="gestao_agenda.recorrencia_mensal_ultimo">Último(a)</option>
+                                                </select>
+
+                                                <select class="form-control cbo_dia_semana">
+                                                    <option value="8" translate="gestao_agenda.dia_evento">Dia</option>
+                                                    <option value="1" translate="dia_semana.domingo">Domingo</option>
+                                                    <option value="2" translate="dia_semana.segunda">Segunda-feira</option>
+                                                    <option value="3" translate="dia_semana.terca">Terça-feira</option>
+                                                    <option value="4" translate="dia_semana.quarta">Quarta-feira</option>
+                                                    <option value="5" translate="dia_semana.quinta">Quinta-feira</option>
+                                                    <option value="6" translate="dia_semana.sexta">Sexta-feira</option>
+                                                    <option value="7" translate="dia_semana.sabado">Sábado</option>
+                                                </select>
+                                                &nbsp;<span translate="gestao_agenda.recorrencia_de_cada">de cada</span>&nbsp;
+
+                                                <input class="form-control edt_mensal_qtde" style="width: 50px;" type="text" name="" value="">
+                                                <span translate="gestao_agenda.recorrencia_mensal_meses">mês(meses)</span>
+
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                </div>
+
+                                <div class="col-md-9 panel panel-info div_anual hidden">
+                                    <fieldset>
+                                        <legend>Periodicidade da Agenda</legend> 
+                                        <div class="radio">
+                                            <div class="form-inline">
+                                                <label>
+                                                    <input type="radio" name="opt_radio_anual" value="1">
+                                                    <span translate="gestao_agenda.recorrencia_a_cada">A cada</span>
+                                                </label>&nbsp;&nbsp;
+                                                <input class="form-control edt_quantidade_ano" style="width: 50px;" type="text" name="" value="">
+                                                &nbsp;&nbsp;<span translate="gestao_agenda.recorrencia_anual_ano">ano(s)</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="radio">
+                                            <div class="form-inline">
+                                                <label>
+                                                    <input type="radio" name="opt_radio_anual" value="2">
+                                                    <span translate="gestao_agenda.recorrencia_anual_em">Em:</span>
+                                                </label>&nbsp;&nbsp;
+                                                <select class="form-control cbo_anual_meses">
+                                                    <option value="1"  translate="meses.janeiro">Janeiro</option>
+                                                    <option value="2"  translate="meses.fevereiro">Fevereiro</option>
+                                                    <option value="3"  translate="meses.marco">Março</option>
+                                                    <option value="4"  translate="meses.abril">Abril</option>
+                                                    <option value="5"  translate="meses.maio">Maio</option>
+                                                    <option value="6"  translate="meses.junho">Junho</option>
+                                                    <option value="7"  translate="meses.julho">Julho</option>
+                                                    <option value="8"  translate="meses.agosto">Agosto</option>
+                                                    <option value="9"  translate="meses.setembro">Setembro</option>
+                                                    <option value="10" translate="meses.outubro">Outubro</option>
+                                                    <option value="11" translate="meses.novembro">Novembro</option>
+                                                    <option value="12" translate="meses.dezembro">Dezembro</option>
+                                                </select>
+                                                &nbsp;
+                                                <span translate="gestao_agenda.dia_evento"></span>&nbsp;
+                                                <input class="form-control edt_anual_dia" style="width: 50px;" type="text" name="" value="">&nbsp;
+                                            </div>
+                                        </div>
+
+
+                                        <div class="radio">
+                                            <div class="form-inline">
+                                                <label>
+                                                    <input type="radio" name="opt_radio_anual" value="3">
+                                                    <span translate="gestao_agenda.recorrencia_mensal_no">No(a)</span>
+                                                </label>
+                                                &nbsp;&nbsp;
+                                                <select class="form-control cbo_anual_numero_da_semana">
+                                                    <option value="1" translate="gestao_agenda.recorrencia_mensal_primeiro">Primeiro(a)</option>
+                                                    <option value="2" translate="gestao_agenda.recorrencia_mensal_segundo">Segundo(a)</option>
+                                                    <option value="3" translate="gestao_agenda.recorrencia_mensal_terceiro">Terceiro(a)</option>
+                                                    <option value="4" translate="gestao_agenda.recorrencia_mensal_quarto">Quarto(a)</option>
+                                                    <option value="5" translate="gestao_agenda.recorrencia_mensal_ultimo">Último(a)</option>
+                                                </select>
+
+                                                <select class="form-control cbo_anual_dia_semana">
+                                                    <option value="8" translate="gestao_agenda.dia_evento">Dia</option>
+                                                    <option value="1" translate="dia_semana.domingo">Domingo</option>
+                                                    <option value="2" translate="dia_semana.segunda">Segunda-feira</option>
+                                                    <option value="3" translate="dia_semana.terca">Terça-feira</option>
+                                                    <option value="4" translate="dia_semana.quarta">Quarta-feira</option>
+                                                    <option value="5" translate="dia_semana.quinta">Quinta-feira</option>
+                                                    <option value="6" translate="dia_semana.sexta">Sexta-feira</option>
+                                                    <option value="7" translate="dia_semana.sabado">Sábado</option>
+                                                </select>
+                                                &nbsp;
+                                                <span translate="gestao_agenda.recorrencia_anual_de_ano">de</span>
+                                                &nbsp;
+
+                                                <select class="form-control cbo_anual_meses2">
+                                                    <option value="1"  translate="meses.janeiro">Janeiro</option>
+                                                    <option value="2"  translate="meses.fevereiro">Fevereiro</option>
+                                                    <option value="3"  translate="meses.marco">Março</option>
+                                                    <option value="4"  translate="meses.abril">Abril</option>
+                                                    <option value="5"  translate="meses.maio">Maio</option>
+                                                    <option value="6"  translate="meses.junho">Junho</option>
+                                                    <option value="7"  translate="meses.julho">Julho</option>
+                                                    <option value="8"  translate="meses.agosto">Agosto</option>
+                                                    <option value="9"  translate="meses.setembro">Setembro</option>
+                                                    <option value="10" translate="meses.outubro">Outubro</option>
+                                                    <option value="11" translate="meses.novembro">Novembro</option>
+                                                    <option value="12" translate="meses.dezembro">Dezembro</option>
+                                                </select>
+
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-md-12 div_intervalo_recorrencia_geral">
+
+                                        <div class="panel panel-info ">
+
+                                            <div class="panel-heading" translate="gestao_agenda.intervalo_recorrencia">Intervalo de recorrência</div>
+
+                                            <div class="row">
+
+                                                <div class="col-md-5">
+                                                    <br>
+                                                    <div class="form-inline">
+                                                        <label for="edt_data_inicial"> &nbsp;&nbsp;<span translate="gestao_agenda.comeca_em">Começa em</span> &nbsp;</label>
+                                                        <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_data_inicial">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-7 div_intervalo_recorrencia">
+
+                                                    <div class="radio">
+                                                        <div class="form-inline">
+                                                            <label>
+                                                                <input type="radio" name="opt_tipo_intervalo_recorrencia" value="1">
+                                                                <span translate="gestao_agenda.termina_apos">Termina após</span>
+                                                            </label>&nbsp;&nbsp;
+                                                            <input class="form-control edt_intervalo_recorrencia_quantidade_dias" style="width: 50px;" type="text" value="">&nbsp;&nbsp;<span translate="gestao_agenda.tantas_ocorrencias">ocorrências</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <br>
+
+                                                    <div class="radio">
+                                                        <div class="form-inline">
+                                                            <label>
+                                                                <input type="radio" name="opt_tipo_intervalo_recorrencia" value="2">
+                                                                <span translate="gestao_agenda.termina_em">Termina dia</span>
+                                                            </label>&nbsp;&nbsp;
+                                                            <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_data_final">
+                                                        </div>
+                                                    </div>
+
+                                                    <br>
+
+                                                    <div class="radio div_horas">
+                                                        <div class="form-inline">
+                                                            <label>
+                                                                <input type="radio" name="opt_tipo_intervalo_recorrencia" value="3">
+                                                                <span translate="gestao_agenda.horas">Horas</span>
+                                                            </label>&nbsp;&nbsp;
+                                                            <input type="text" class="form-control edt_horas_recorrencia" placeholder="000:00" style="width: 80px;">
+                                                            &nbsp;
+                                                            <strong translate="calendario_trabalho.calendario_trabalho">Calendário de Trabalho</strong>
+                                                            <input type="checkbox" class="checkbox_bootstrap_toggle template_switch chk_utiliza_calendario_trabalho">
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tab-pane aba_convidados">
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="div_componente_convidado"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <table class="table table-striped tbl_agenda_usuario">
+                                        <thead>
+                                            <tr>
+                                                <th template-desc-data style="display: none;" class="hidden-xs" translate="gestao_agenda.nome_convidado">Nome</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td template-dados style="display: none;">
+                                                    <div>
+                                                        <span template-cliente></span>
+                                                    </div>
+                                                    <div>
+                                                        <span template-hora-inicio></span>
+                                                    </div>
+                                                    <div>
+                                                        <span template-hora-fim></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <table class="table table-striped tb_convidados">
+                                            <thead>
+                                                <tr>
+                                                    <th class="hidden-xs" translate="gestao_agenda.nome_convidado">Nome</th>
+                                                    <th class="hidden-xs" translate="gestao_agenda.email_convidado">E-mail</th>
+                                                    <th>&nbsp;</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr template-row="convidados" style="display: none;">
+                                                    <!-- MOBILE -->
+                                                    <td class="visible-xs">
+                                                        <button type="button"  template-button="btn_remover" class="close pull-rigth" aria-hidden="true">&times;</button>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <h4 template-field="nome">{nome}</h4>
+                                                                <span template-field="email"></span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <!-- MOBILE -->
+                                                    <td class="hidden-xs" template-field="nome"></td>
+                                                    <td class="hidden-xs" template-field="email"></td>
+                                                    <td class="hidden-xs">
+                                                        <button type="button" template-button="btn_remover" class="btn btn-default pull-right">
+                                                            <span class="glyphicon glyphicon-trash"></span>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane aba_emails_acompanhamento">
+                                <span class="text-muted">
+                                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    Os e-mails adicionados nesta seção receberão a notificação do evento com o arquivo <em>invite.ics</em>, mesmo que não estejam cadastrados no Next BP.
+                                </span>
+                                
+                                <div id="grid_emails_acompanhamento"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="modal-footer">
+                <div class="pull-left">
+                    <button type="button" class="btn btn-danger btn_excluir" translate="modal_cadastro.excluir">Excluir</button>
+                </div>
+
+                <button type="button" class="btn_cancelar btn_ok btn btn-default" translate="modal_cadastro.cancelar">Cancelar</button>
+                <button type="button" class="btn btn-primary btn_confirmar" translate="modal_cadastro.salvar">Salvar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

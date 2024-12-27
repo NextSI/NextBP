@@ -1,0 +1,113 @@
+<style>
+    @media (max-width: 1024px) {
+        .div_base {
+            display: block !important;
+        }
+        .div_mensagem {
+            height: 300px !important;
+            width: 100% !important;
+        }
+        .div_opcoes {
+            width: 100% !important;
+            padding-top: 8px !important;
+            padding-left: 4px !important;
+            padding-right: 4px !important;
+        }
+    }
+</style>
+<div class="div_base" style="display: flex; ">
+    <div style="width: calc(100vw - 400px); height: calc(100vh - 50px);" class="div_mensagem">
+        <textarea class="edt_mensagem form-control" id="modal_mural_mensagem_nova_edt_mensagem" rows="10"></textarea>
+    </div>
+    <div style="width: 400px; height: calc(100vh - 80px); padding-left: 16px; padding-right: 10px;" class="div_opcoes">
+        <div class="form-group div_usuario">
+            <label for="modal_mural_mensagem_nova_edt_usuario">Autor</label>
+            <input class="edt_usuario form-control" id="modal_mural_mensagem_nova_edt_usuario"></input>
+        </div>         
+        <div class="div_tipo">
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <label>Quem pode visualizar?</label>
+                    <select class="cbo_tipo form-control selectpicker" data-live-search="true">
+                        <option value="">Todos</option>
+                        <option value="2">Colaboradores</option>
+                        <option value="1">Clientes</option>
+                        <option value="4">Fornecedores</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                
+                <div class="col-md-12 form-group">
+                    <label>Data de Publicação</label>
+                    <div class="dx_data_publicacao"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 10px">
+            <div class="div_mensagem_publica col-xs-12 col-md-12 col-lg-12 form-group" style="display: none; display: flex; justify-content: flex-start;">
+                <div class="chk_mensagem_publica" style="margin-right: 5px;"></div>
+                <label>Mensagem pública</label>
+            </div>
+            <div class="col-xs-12 col-md-12 col-lg-12 form-group" style="display: flex; justify-content: flex-start;">
+                <div class="chk_permite_comentario" style="margin-right: 5px;"></div>
+                <label>Permitir comentários nesta mensagem</label>
+            </div>
+            <div class="col-xs-12 col-md-12 col-lg-12 form-group" style="display: flex; justify-content: flex-start;">
+                <div class="chk_votacao" style="margin-right: 5px;"></div>
+                <label>Votação</label>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-xs-12 col-sm-12 col-md-12 div_votacao">
+            </div>
+        </div>
+        
+        <div class="clearfix"></div>
+
+        <div class="row hidden div_anexos_carregados">
+            <div class="anexos col-xs-12 col-sm-12 col-md-12">
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-12">
+            
+                <!-- ANEXOS -->
+                <div class="panel_anexos" style="margin-top: 0px">
+                    <div id="anexos" class="div_anexos" style="display: block;">
+                    </div>
+                </div>
+
+                <!-- ANEXO BASE -->
+                <div class="input-group btn-group div_anexos_row hidden" style="margin-top: 0px; margin-right: 0px; width: 100%;">
+
+                    <!--div class="pull-left">
+                        <i class="fas fa-paperclip"></i>&nbsp;
+                    </div-->
+                    <div class="anexo_base_input_text" style="margin: 0px; padding-top: 0px;">Nenhum Arquivo Selecionado</div>
+                    <input class="anexo_base_input" type="file" style="display: none;">
+                    <div class="pull-right">
+                        <a class="btn_remover_anexo" href="#" style="padding-top: 0px;">
+                            <i class="fas fa-times"></i>
+                        </a>
+                        
+                    </div>
+                    <!--<div class="col-md-4 col-sm-4">
+                        <label> Anexar no e-mail  <input class="checkbox" value="true"></input></label>
+                    </div> -->
+                    <div class="clearfix"></div>
+                </div>
+
+            </div>                    
+
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div>
+            <div class="form-group div_toolbar"></div>
+        </div>
+    </div>
+</div>

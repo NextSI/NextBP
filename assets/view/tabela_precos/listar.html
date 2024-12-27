@@ -1,0 +1,125 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Tabela de Preços</li>
+</ol>
+
+<!-- LISTAGEM -->
+<div>
+
+    <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+        <button type="button" class="btn_novo btn btn-primary somente_leitura">
+            <span class="glyphicon glyphicon-plus-sign "></span> Novo
+        </button>
+        <button type="button" class="btn_listar btn btn-default">
+            <span class="glyphicon glyphicon-refresh"></span> 
+        </button>
+        <button type="button" class="hidden btn_configuracao btn btn-default">
+            <span class="glyphicon glyphicon-cog"></span>
+        </button>
+    </nav>
+
+    <!-- filtros -->
+    <div class="row">
+        <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="form-group">
+                <div class="btn-group">
+                    <div class="input-group" style="width: 100%">
+                        <input type="text" class="form-control edt_filtro_descricao" placeholder="Filtrar por Descrição" maxlength="10"/>
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-default btn_filtra_descricao">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                            <button type="button" class="btn_limpar_filtro btn btn-default ">
+                                <span class="span_trash">Limpar Filtro</span> 
+                                <span class="glyphicon glyphicon-trash"></span> 
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- filtros -->
+
+    <div class="div_listagem">
+
+		<table class="tab_listagem table table-striped table-hover">
+            <thead>
+                <tr class="hidden-xs">
+                    <th>Descrição</th>
+                    <th>Região de Vendas</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr template-row style="display: none;" class="row-fluid">
+
+                    <!-- mobile -->
+                    <td class="td-mobile visible-xs">
+                        
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="somente_leitura btn_editar btn btn-default">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </button>
+                                <button type="button" class="somente_leitura btn_excluir btn btn-default">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                                <button type="button" class="somente_visualizar hidden btn_visualizar btn btn-default">
+                                    <span class="glyphicon glyphicon-eye-open"></span> 
+                                </button> 
+                            </div>
+                        </div>
+
+                        <h4 template-field="descricao">Descrição</h4>
+                        <div class="text-info">
+                            <span class="label lb_tipo">C</span>                                            
+                            <span template-field="entidade_nome"></span>
+                        </div>
+                        <div class="text-info">
+                            <span template-field="regiao_vendas_nome"></span>
+                        </div>
+                        
+                    </td>
+                    <!-- mobile -->                    
+
+                    <td template-field="descricao" class="hidden-xs">{descricao}</td>
+                    <td template-field="regiao_vendas_nome" class="hidden-xs">{regiao_vendas_nome}</td>
+                    <td template-buttons="actions" class="hidden-xs">
+                        <div class="btn-group pull-right">                            
+                            <button type="button" class="somente_leitura btn_editar btn btn-default">
+                                <span class="glyphicon glyphicon-pencil"></span> Editar
+                            </button>
+                            <button type="button" class="somente_visualizar hidden btn_visualizar btn btn-default">
+                                <span class="glyphicon glyphicon-eye-open"></span> Visualizar
+                            </button>                      
+                            <div class="btn-group somente_leitura">                                
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right somente_leitura">
+                                    <li><a class="btn_visualizar somente_leitura" href="#">
+                                        Visualizar
+                                    </a></li>
+                                    <li><a class="btn_excluir somente_leitura" href="#">
+                                        Excluir
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>                                                          
+
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="padding-bottom: 20px;" class="text-center div_carregar_mais hidden">
+            <span class="btn btn-link btn_carregar_mais" style="font-size: 12pt;">
+                <span class="txt_carregar_mais text-primary"></span>
+            </span>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- /LISTAGEM -->

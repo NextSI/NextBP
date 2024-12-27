@@ -1,0 +1,75 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Sessões</li>
+</ol>
+
+<!-- LISTAGEM -->
+<div>
+
+    <nav class="navbar" role="navigation" style="margin: 0px; padding: 0px;">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="form-group">
+                    <button type="button" class="btn_destruir btn btn-primary">
+                        <span class="glyphicon glyphicon-fire"></span> <span class="txt_singular">Destruir sessão</span> <span class="txt_plural">Destruir sessões</span> 
+                    </button>
+                    <button type="button" class="btn_selecionar btn btn-default">
+                        <span class="glyphicon glyphicon-ok"></span> Selecionar tudo
+                    </button>
+                    <button type="button" class="btn_deselecionar btn btn-default">
+                        <span class="glyphicon glyphicon-remove"></span> Limpar seleções
+                    </button>
+                    <button type="button" class="btn_listar btn btn-default">
+                        <span class="glyphicon glyphicon-refresh"></span> Atualizar sessões
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group pull-right">
+                    <label for="chk_manutencao">Manutenção:</label>
+                    <input type="checkbox" id="chk_manutencao" class="chk_manutencao checkbox_bootstrap_toggle">
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 10px;">
+            <div class="col-md-12">
+                <span class="text-success">Usuários online:</span> <span class="lbl_usuarios_com_sessoes_ativas label label-success"></span>
+
+                <span class="text-muted" style="padding-left: 16px;">Sessões:</span> <span class="lbl_qtd label label-default"></span>
+
+                <div class="pull-right">
+                    <span class="text-muted">Última atualização:</span> <span class="data_updt text-muted"></span>
+                </div>                    
+            </div>
+        </div>
+    </nav>
+
+    <!-- Painéis Tab -->
+    <div class="tab-content"> 
+        <div class="tab-pane active" id="tab_sessoes">
+            <div class="table-responsive">
+                <table class="tab_listagem table table-striped table-hover removeSelect">
+                    <thead>
+                        <tr>
+                            <th width="150px">Nome</th>
+                            <th>E-mail</th>
+                            <th>Início</th>
+                            <th>Ultimo ping</th>
+                            <th>IP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- itens -->
+                        <tr template-row style="display: none;">
+                            <td template-field="nome">{Nome}</td>
+                            <td template-field="email">{e-mail}</td>
+                            <td template-field="inicio">{inicio}</td>
+                            <td template-field="ultimo_ping">{ultimo_ping}</td>
+                            <td template-field="ip">{ip}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /LISTAGEM -->

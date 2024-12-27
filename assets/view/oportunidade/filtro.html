@@ -1,0 +1,102 @@
+<div class="modal bs-modal-md" tabindex="-1" role="dialog" aria-labelledby="modal_agenda_contatos_parametros_label" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal_agenda_contatos_parametros_label">Filtrar Oportunidade</h4>
+                </div>
+                <div class="modal-body">   
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="" class="small">Oportunidade</label>
+                            <select class="form-control cbo_tipo_oportunidade" data-live-search="true" id="cbo_tipo_oportunidade">
+                                <option value="2">Minhas Oportunidades</option>
+                                <option value="12">Oportunidades Acompanhamento</option>
+                                <option value="1">Todas Oportunidades</option>
+                            </select>
+                        </div>
+                    </div>   
+                    <div class="row">
+                        <div class="col-md-12">   
+                            <hr />      
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="" class="small">Entidade</label>
+                                <div class="div_component_cbo_clientes"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="" class="small">Data Início</label>
+                                <input type="date" class="form-control edt_ini">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="" class="small">Data Fim</label>
+                                <input type="date" class="form-control edt_fim">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row div_representante">
+                        <div class="col-md-12">
+                            <label for="" class="small">Responsável</label>
+                            <select class="form-control cbo_filtro_representante" data-live-search="true" multiple data-selected-text-format="count > 1" title="Selecione o usuário" data-toggle="tooltip" data-actions-box="true" data-deselect-all-text="Nenhum" data-select-all-text="Todos">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 div_situacao_orcamento" style="padding-top:10px;">
+                            <label for="">Situação do Orçamento</label>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <select class="form-control cbo_filtro_situacao_orcamento selectpicker show-tick" multiple data-size="3" data-width="334px" title="Filtro Situação Orçamento" data-live-search="true" id="cbo_filtro_situacao_orcamento">
+                                        <optgroup class="todos" label="Opções">
+                                            <option class="opt_todos" selected>Todos</option>
+                                        </optgroup>
+                                        <optgroup class="option_group_situacao_orcamento" label="Situação Orçamento"></optgroup>
+                                    </select><!--.cbo_filtro_situacao_orcamento-->
+                                </div>
+                            </div>
+                        </div><!--.col-md-12-->
+                        <div class="clearfix"></div><!--.clearfix-->
+                    </div>
+    
+                    <div class="row" style="margin-top:15px">
+                        <div class="col-md-6">
+                            <label for="" class="small">Tipo de Data</label>
+                            <div class="cbo_tipo_periodo dropup"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="" class="small">Situação</label>
+                            <div class="cbo_situacao dropup"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="bottom: 0px;">
+                    <button type="button" class="btn btn-danger btn-sm btn_cancelar " style="float:left">
+                        Cancelar
+                    </button>
+                    <button class="btn btn-primary btn-sm btn_limpar_filtro" type="button" style="float:left">
+                        <i class="fa fa-trash fa-fw"></i>Limpar Filtros
+                    </button>
+                    <button class="btn btn-success btn-sm btn_aplicar_filtro" type="button" style="float:center">
+                        <i class="fa fa-filter fa-fw"></i>Aplicar Filtros
+                    </button>
+                    <div class="btn-group" style="float:right">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Configurações <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" style="float: right">
+                            <li class="btn_filtro_personalizado"><a href="#">Configurar Filtro</a></li>
+                            <li class="btn_configurar_filtros"><a href="#">Configurar Parâmetros</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

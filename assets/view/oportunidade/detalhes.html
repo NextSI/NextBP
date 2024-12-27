@@ -1,0 +1,1270 @@
+<style>
+    .contato_item:hover .contato_botoes {
+        display: inline !important;
+    }
+</style>
+<ul id="oportunidade_documentos_context_menu_arquivo" class="dropdown-menu context_menu_arquivo" role="menu" aria-labelledby="oportunidade_documentos_context_menu_arquivo" >
+    <li role="presentation">
+        <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_download" data-context-menu="download">
+            <span class="glyphicon glyphicon-download-alt"></span>
+            Download do Arquivo
+        </a>
+    </li>
+    <li role="presentation">
+        <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_nova_revisao" data-context-menu="nova_revisao">
+            <span class="glyphicon glyphicon-cloud-upload"></span>
+            Enviar Nova Revisão
+        </a>
+    </li>
+    <li role="presentation">
+        <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_excluir_documento" data-context-menu="excluir">
+            <span class="glyphicon glyphicon-trash"></span>
+            Excluir
+        </a>
+    </li>
+    <li role="presentation" class="divider"></li>
+    <li role="presentation">
+        <a role="menuitem" tabindex="-1" href="javascript:;" class="btn_propriedades" data-context-menu="propriedades">
+            <span class="glyphicon glyphicon-pencil"></span>
+            Propriedades
+        </a>
+    </li>
+</ul>
+
+<div class="row">
+
+    <div class="col-sm-12 col-md-12 col-lg-12">
+
+        <div class="form-group">
+
+            <div class="input-group-btn">
+                <button type="button" class="btn_salvar btn btn-primary">
+                    <span class="glyphicon glyphicon-floppy-disk"></span> Salvar
+                </button>
+                <button type="button" class="btn_excluir btn btn-danger">
+                    <span class="glyphicon glyphicon-floppy-disk"></span> Excluir
+                </button>
+                <button type="button" class="btn_oportunidade btn btn-default">
+                    Mais detalhes
+                </button>
+                <button type="button" class="btn_cancelar btn btn-default">
+                    <span class="glyphicon glyphicon-remove"></span> Cancelar
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div> 
+
+<!--Template-->
+<div class="scrollview"> 
+
+    <div class="col-sm-12 col-md-3 div_oportunidade">        
+
+    <!--<div class="col-sm-9 col-md-9 col-lg-10"> -->
+
+        <div class="row div_representante">                  
+
+            <div class="col-md-12"> 
+                <div class="form-group">                
+                    <label>Representante</label>    
+                    <span class="text-danger">*</span>                   
+                    <select class="select-multi-column cbo_representante" placeholder="Nome do Representante"></select>
+                </div>    
+            </div>
+
+        </div>             
+
+        <div class="row div_representante2 hidden">                  
+
+            <div class="col-md-12"> 
+                <div class="form-group">                
+                    <label>Representante 2</label>    
+                    <select class="select-multi-column cbo_representante2" placeholder="Nome do Representante 2"></select>
+                </div>    
+            </div>
+
+        </div>             
+
+        <div class="row div_entidade">  
+            <div class="col-md-12">  
+                <div class="form-group">
+                    <label>Nome da entidade</label>
+                    <span class="text-danger">*</span>
+                    <div class="input-group">
+                            <div class="input-group-btn div_btn_detalhes_entidade">
+                                <button type="button" class="btn btn-default btn_detalhes_entidade">
+                                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                </button>
+                                <button type="button" class="btn btn-default btn_historico_entidade">
+                                    <i class="fa fa-history" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        <div class="div_component_cbo_clientes"></div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        
+        <div class="row div_detalhes_entidade hidden form-group">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div>
+                    <span class="text-muted tipo_entidade text"></span>
+                </div>
+                <div>
+                    <span class="text-muted codigo_unidade_entidade text"></span>
+                </div>
+                <div>
+                    <span class="text-muted cnpj_entidade text"></span>
+                </div>
+                <div>
+                    <a class="text-muted email_entidade text"></a>
+                </div>
+                <div>
+                    <a class="text-muted telefone1_entidade text"></a>
+                </div>
+                <div>
+                    <a class="text-muted telefone2_entidade text"></a>
+                </div>
+                <div>
+                    <a class="text-muted telefone3_entidade text"></a>
+                </div>
+                <div>
+                    <a class="text-muted telefone4_entidade text"></a>
+                </div>
+                <div>
+                    <span class="text-muted cep_entidade text"></span>
+                </div>
+                <div>
+                    <span class="text-muted endereco_entidade text"></span>
+                </div>
+            </div>
+            <div class="div_detalhes_entidade_editar pull-right" style="padding-bottom:5px;">
+                <button class="btn btn-link">Editar</button>
+            </div>                          
+        </div>  
+
+        <div class="row div_contato">
+                
+            <div class="col-md-12">  
+                <div class="form-group">
+                    <label>Nome do contato</label>                       
+                    <span class="text-danger">*</span>
+                    <div class="input-group">
+                        <div class="input-group-btn div_btn_detalhes_contato">
+                            <button type="button" class="btn btn-default btn_detalhes_contato">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <select class="select-multi-column cbo_contatos" placeholder="Nome do contato"></select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row div_detalhes_contato hidden form-group">                
+            <div class="div_detalhes_contato_editar pull-right" style="padding-bottom:5px;">
+                <button class="btn btn-link">Editar</button>
+            </div>                 
+        </div>       
+        
+        <div class="row div_nome_oportunidade">                  
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="edt_nome_oportunidade">Nome da oportunidade</label>
+                    <span class="text-danger">*</span>
+                    <input type="text" class="edt_nome_oportunidade form-control" maxlength="150" id="edt_nome_oportunidade" placeholder="Nome da oportunidade">
+                </div>                            
+            </div>       
+
+        </div>         
+
+        <div class="row div_tipo_oportunidade">                  
+
+            <div class="col-md-12"> 
+                <div class="form-group">                
+                    <label>Tipo de oportunidade</label>    
+                    <span class="text-danger">*</span>                   
+                    <select class="form-control selectpicker cbo_tipo_oportunidade" data-live-search="true"></select>                                                
+                </div>    
+            </div>
+
+        </div>         
+
+        <div class="row div_funil">                  
+
+            <div class="col-md-12"> 
+                <div class="form-group">                
+                    <label>Funil</label>        
+                    <span class="text-danger">*</span>               
+                    <select class="select-multi-column cbo_funil" placeholder="Funil"></select>                                                
+                </div>    
+            </div>
+
+        </div>         
+
+        <div class="row div_etapa_funil">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>Etapa do funil</label>
+                    <span class="text-danger">*</span>
+                    <select id="cbo_etapa" class="form-control selectpicker cbo_etapa" data-live-search="true"></select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row hidden div_origem">                  
+
+            <div class="col-md-12"> 
+                <div class="form-group">                
+                    <label>Origem</label>                       
+                    <select class="select-multi-column cbo_origem" placeholder="Origem"></select>                                                                    
+                </div>    
+            </div>
+
+        </div>     
+
+        <div class="row div_data_fechamento hidden">
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="edt_data_fechamento">Data Fechamento</label>
+                    <input type="date" min="1900-01-01" max="2222-12-31" id="edt_data_fechamento" class="edt_data_fechamento form-control">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row div_tipo_moeda">
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="edt_tipo_moeda">Tipo da moeda</label>
+                    <div class="div_componente_tipo_moeda"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row div_valor_negocio">
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="edt_valor_negocio">Valor do negócio</label>
+                    <input type="text" class="edt_valor_negocio form-control input_number " id="edt_valor_negocio" placeholder="Valor do negócio">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row div_situacao">
+
+            <div class="col-md-12 hidden">
+                <div class="form-group">
+                    <label for="cbo_situacao">Situação</label>
+                    <select class="form-control cbo_situacao" name="cbo_situacao" id="cbo_situacao">
+                        <option value="A">Aberto</option>
+                        <option value="G">Ganho</option>
+                        <option value="P">Perdido</option>
+                    </select>                        
+                </div>
+            </div>
+
+        </div>
+
+    </div>   
+
+    <div class="col-md-9 div_panel">        
+
+        <div class="panel panel-default">
+
+            <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+
+                <ul class="nav nav-tabs nav_oportunidade" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                </ul>
+
+            </div>
+
+            <div class="panel-body">
+
+                <div class="tab-content">
+
+                    <div class="tab-pane aba_itens">
+
+                        <div>
+
+                            <div class="row">                  
+
+                                <div class="col-md-6 div_tabela_preco">
+                                    <div class="form-group">
+                                        <label>Tabela de Preço</label>
+                                        <span class="text-danger"></span>
+                                        <select class="select-multi-column cbo_tabela_preco" placeholder="Tabela de Preço"></select>
+                                    </div>    
+                                </div>
+
+                                <!--<div class="col-md-1"> 
+                                    <label>&nbsp;</label>
+                                    <div class="form-group">                
+                                        <button type="button" class="btn_atualizar_itens btn btn-default" >
+                                            <span class="glyphicon glyphicon-refresh"></span>
+                                        </button>                                        
+                                    </div>    
+                                </div> -->
+
+                            </div>       
+
+                            <div class="div_itens_oportunidade">
+                                <table class="tab_listagem table table-striped table-hover" width="100%">
+
+                                    <thead>                    
+
+                                        <tr>
+                                            
+                                            <th style="padding-left: 0px; padding-right: 0px; ">
+                                                
+                                                <span>Itens da Oportunidade</span>                                                                                                
+                                                <div class="pull-right">                                                    
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-primary btn_incluir_item">
+                                                            <span class="glyphicon glyphicon-plus"></span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                            </th>
+
+                                        </tr>                    
+
+                                    </thead> 
+
+                                    <tbody>
+
+                                        <tr  template-row class="row-fluid itens_oportunidade" style="display: none;">
+
+                                            <td style="padding-left: 0px;">
+                                                
+                                                <div class="row div_linha">                                                                       
+
+                                                    <!--<div class="col-md-9 col-lg-10"> -->
+                                                    <div class="col-md-10">
+                                                        <label>Item</label>
+                                                        <div class="form-group">
+                                                            <select class="select-multi-column" template-field="cbo_item"></select>                                                
+                                                        </div> 
+                                                    </div>   
+
+                                                    <div class="col-md-2">
+                                                        <label>&nbsp;</label>     
+                                                        <div class="form-group text-right">                                                   
+                                                            <button class="btn_detalhes_item btn btn-default" tabindex="-1" title="Editar Observações" style="display: none;">
+                                                                <span class="glyphicon glyphicon glyphicon-align-justify"></span>
+                                                            </button> 
+                                                            <button class="btn_deletar_item btn btn-danger" tabindex="-1" title="Remover Item">
+                                                                <span class="glyphicon glyphicon-trash"></span>
+                                                            </button>               
+                                                        </div>                                                                                                         
+                                                    </div>                                                            
+
+                                                </div>                                                    
+
+                                                <div class="row">
+
+                                                    <div class="col-md-2 div_prazo_dias" >
+                                                        <label>Prazo/Dias</label>
+                                                        <div class="form-group">
+                                                            <input type="number" min="0" class="form-control edt_prazo_dias" template-field="edt_prazo_dias" style="padding-left: 1px; padding-right: 1px;" placeholder="0">
+                                                        </div>                               
+                                                    </div>
+                                
+                                                    <div class="col-md-2 div_quantidade">
+                                                        <label template-field="edt_unidade_medida">Quantidade</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control input_number quantidade_item" template-field="edt_quantidade" style=" padding-left: 1px; padding-right: 1px;">
+                                                        </div>                                                        
+                                                    </div>                                                                         
+
+                                                    <div class="col-md-2 div_preco_unitario">
+                                                        <label>Preço R$</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control input_number preco_unitario" template-field="edt_preco" style="padding-left: 1px; padding-right: 1px;">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-2 div_perc_desconto" >
+                                                        <label>Desconto %</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control input_number" template-field="edt_perc_desconto" style="padding-left: 1px; padding-right: 1px;">
+                                                        </div>                                                        
+                                                    </div>
+
+                                                    <div class="col-md-2 div_vlr_desconto_item" >
+                                                        <label>Desconto R$</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control input_number vlr_desconto_item" template-field="edt_vlr_desconto_item" style="padding-left: 1px; padding-right: 1px;">
+                                                        </div>                                                        
+                                                    </div>
+
+                                                    <div class="col-md-2 div_preco_unitario_com_desconto">
+                                                        <label>Preço c/ desconto R$</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control input_number" disabled template-field="edt_preco_unitario_com_desconto" style="padding-left: 1px; padding-right: 1px;">
+                                                        </div>                                                        
+                                                    </div>
+                                                    
+                                                    <div class="col-md-2 div_vlr_desconto_oportunidade" >
+                                                        <label>Desconto Oportunidade R$</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control input_number vlr_desconto_oportunidade_item_rateio" disabled template-field="edt_vlr_desconto_oportunidade_item_rateio" style="padding-left: 1px; padding-right: 1px;">
+                                                        </div>                               
+                                                    </div>                                                        
+
+                                                    <div class="col-md-2 div_perc_ipi" >
+                                                        <label>I.P.I %</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control input_number" disabled template-field="edt_perc_ipi" style="padding-left: 1px; padding-right: 1px;">
+                                                        </div>                                                        
+                                                    </div>     
+
+                                                    <div class="col-md-2 div_valor_ipi">
+                                                        <label>I.P.I R$</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control input_number" disabled template-field="edt_valor_ipi" style="padding-left: 1px; padding-right: 1px;">
+                                                        </div>                                                                                                                
+                                                    </div>     
+
+                                                    <div class="col-md-2 div_total">
+                                                        <label>Total R$</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control input_number total_item" template-field="edt_total" style="padding-left: 1px; padding-right: 1px;">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-2 div_custo">
+                                                        <label>Preço de Custo R$</label>
+                                                        <div class="form-group">
+
+                                                            <input type="text" class="form-control input_number custo" template-field="edt_custo" style="padding-left: 1px; padding-right: 1px;" disabled>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-2 div_percentual_lucro_bruto">
+                                                        <label>Lucro Bruto %</label>
+                                                        <div class="form-group">
+
+                                                            <input type="text" class="form-control input_number percentual_lucro_bruto" template-field="edt_percentual_lucro_bruto" style="padding-left: 1px; padding-right: 1px;" disabled>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-2 div_valor_lucro_bruto">
+                                                        <label>Lucro Bruto R$</label>
+                                                        <div class="form-group">
+
+                                                            <input type="text" class="form-control input_number valor_lucro_bruto" template-field="edt_valor_lucro_bruto" style="padding-left: 1px; padding-right: 1px;" disabled>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <!-- Atenção: Ordem dos inputs definida pela Genial Pet -->
+                                                    <div class="col-md-2 div_quantidade_unidade_medida2">
+                                                        <label template-field="edt_unidade_medida2">Qtde</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control input_number" template-field="edt_quantidade_unidade_medida2" style="padding-left: 1px; padding-right: 1px;">
+                                                        </div>                                                        
+                                                    </div>                                             
+                                                    <!-- Atenção: Ordem dos inputs definida pela Genial Pet -->   
+                                                    
+                                                    <!-- Atenção: Solicitação da Mezzani CHM15254 -->
+                                                    <div class="col-md-2 div_codigo_pedido_item">
+                                                        <label>Código Pedido</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control input_number" template-field="edt_codigo_pedido_item" style="padding-left: 1px; padding-right: 1px;">
+                                                        </div>                                                        
+                                                    </div>   
+                                                    
+                                                
+                                                </div>
+
+                                            </td>                                   
+
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                            <div class="pull-right">                                                    
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-primary btn_incluir_item">
+                                        <span class="glyphicon glyphicon-plus"></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <br /><br />
+
+                            <div class="row">
+                                <div class="col-md-2" >
+                                    <label>SubTotal R$</label>
+                                    <div class="form-group">
+                                        <input type="text" disabled class="form-control input_number edt_subtotal">
+                                    </div>                                                        
+                                </div>
+
+                                <div class="col-md-2 div_total_desconto_item">
+                                    <label>Desconto Itens R$</label>
+                                    <div class="form-group">
+                                        <input type="text" disabled class="form-control input_number edt_total_desconto_item">
+                                    </div>                                                        
+                                </div>
+
+                                <div class="col-md-2 div_perc_total_desconto_oportunidade">
+                                    <label>Desconto Oportunidade %</label>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control input_number edt_perc_total_desconto_oportunidade">
+                                    </div>                                                        
+                                </div>
+
+                                <div class="col-md-2 div_total_desconto_oportunidade">
+                                    <label>Desconto Oportunidade R$</label>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control input_number edt_total_desconto_oportunidade">
+                                    </div>                                                        
+                                </div>
+
+                                <div class="col-md-2 div_total_ipi">
+                                    <label>I.P.I</label>
+                                    <div class="form-group">
+                                        <input type="text" disabled class="form-control input_number edt_total_ipi">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <label>Total R$</label>
+                                    <div class="form-group">
+                                        <input type="text" disabled class="form-control input_number edt_valor_total">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 div_lucro_bruto_total hidden">
+                                    <label>Lucro Bruto R$</label>
+                                    <div class="form-group">
+                                        <input type="text" disabled class="form-control input_number edt_valor_lucro_bruto_total">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 div_lucro_bruto_total hidden">
+                                    <label>Lucro Bruto %</label>
+                                    <div class="form-group">
+                                        <input type="text" disabled class="form-control input_number edt_percentual_lucro_bruto_total">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>   
+
+                        <div class="clearfix"></div>
+
+                        <div class="form-group hidden-md hidden-lg">
+
+                            <div class="input-group-btn">
+                                <button type="button" class="btn_salvar btn btn-primary pull-right">
+                                    <span class="glyphicon glyphicon-floppy-disk"></span> Salvar
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="row"></div>
+                        <hr>
+
+                        <div class="row div_motivo_desconto hidden">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="edt_motivo_desconto">Motivo de desconto</label>
+                                    <textarea class="form-control edt_motivo_desconto" name="edt_motivo_desconto" rows="4" placeholder="Digite o motivo do desconto indicado na Oportunidade"></textarea>
+                                </div>   
+                            </div>   
+                        </div>
+
+                        <div class="row div_condicao_pagamento">                  
+
+                            <div class="col-md-5"> 
+                                <div class="form-group">                
+                                    <label>Condição de Pagamento</label>    
+                                    <span class="text-danger"></span>                   
+                                    <select class="select-multi-column cbo_condicao_pagamento" placeholder="Digite a condição de pagamento"></select>
+                                </div>    
+                            </div>
+
+                        </div>       
+
+                        <div class="row div_condicao_pagamento_obs">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="edt_observacao_condicao_pagamento">Observação de Pagamento</label>
+                                    <textarea class="form-control edt_observacao_condicao_pagamento" name="edt_observacao_condicao_pagamento" rows="4" placeholder="Digite a observação de condição de pagamento"></textarea>
+                                </div>   
+                            </div>   
+                        </div>
+
+                        <div class="row div_frete">
+
+                            <div class="col-md-3">
+                                <label>Tipo Frete</label>                                                                                                                              
+                                <div class="form-group">
+                                    <select class="selectpicker cbo_tipo_frete">
+                                        <option value="D">Destinatário (FOB)</option>
+                                        <option value="R">Remetente (CIF)</option>
+                                        <option value="T">Terceiros</option>
+                                        <option value="S">Sem Frete</option>
+                                    </select>       
+                                </div>
+                            </div>
+
+                            <div class="col-md-1"></div>
+
+                            <div class="col-md-8"> 
+                                <div class="form-group">                
+                                    <label>Transportador</label>    
+                                    <span class="text-danger"></span>                   
+                                    <select class="select-multi-column cbo_transportador" placeholder="Informe o Transportador"></select>
+                                </div>    
+                            </div>
+
+                        </div>
+
+                        <div class="row div_frete_obs">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="edt_observacao_frete">Observação Frete</label>
+                                    <textarea class="form-control edt_observacao_frete" name="edt_observacao_frete" rows="4" placeholder="Digite a observação do frete"></textarea>
+                                </div>   
+                            </div>   
+                        </div>
+
+                        <div class="row div_entrega">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Dt. Entrega</label>
+                                    <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_data_entrega"> 
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row div_entrega_obs">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="edt_observacao_entrega">Observação Entrega</label>
+                                    <textarea class="form-control edt_observacao_entrega" name="edt_observacao_entrega" rows="4" placeholder="Digite a observação da entrega"></textarea>
+                                </div>   
+                            </div>   
+                        </div>
+
+                        <div class="row div_obs">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="edt_observacao">Observação</label>
+                                    <textarea class="form-control edt_observacao" name="edt_observacao" rows="4" placeholder="Digite a observação"></textarea>
+                                </div>   
+                            </div>   
+                        </div>
+
+                        <div class="row div_obs_nf">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="edt_observacao_nf">Observação Nota Fiscal</label>
+                                    <textarea class="form-control edt_observacao_nf" name="edt_observacao_nf" rows="4" placeholder="Digite a observação da nota fiscal"></textarea>
+                                </div>   
+                            </div>   
+                        </div>
+
+                        <div class="row div_validade_orcamento">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Dt. Validade Orçamento</label>
+                                    <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_validade_orcamento"> 
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pull-right">
+                            <button type="button" class="btn_gerar_orcamento btn btn-primary">
+                                <span class="glyphicon glyphicon-ok"></span> Gerar Orçamento
+                            </button>
+                        </div>
+                                                
+                    </div>
+
+                    <div class="tab-pane aba_agenda">      
+
+                        <div class="row">
+
+                            <div class="col-md-4"> 
+                                <div class="form-group">                                    
+                                    <button type="button" class="btn_nova_agenda btn btn-primary">
+                                        <span class="glyphicon glyphicon-plus-sign"></span> Novo Evento
+                                    </button>
+                                    <button type="button" class="btn_recarrega_eventos btn btn-default">
+                                        <span class="glyphicon glyphicon-refresh"></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>        
+
+                        <div class="row">
+
+                            <div class="col-md-12 div_body"> 
+
+                                <ul class="list-group template-ul" style="display: none;">
+
+                                    <li class="list-group-item panel panel-info">
+
+                                        <div class="row">
+
+                                            <div class="col-md-12">                                                                                        
+                                                <span class="nome_usuario"></span>
+                                                <span> - </span>                                                
+                                                <span class="data_hora small text-muted"></span>
+                                                <span class="data_previsao label pull-right"></span>
+                                                <br>
+                                                <span class="insert_hora small text-muted"></span>                                                                                            
+                                            </div>
+
+                                            <div class="col-md-12">              
+                                                <div class="pull-right">
+                                                    <span class="pull-right" template-field="solicitante"></span>
+                                                </div>
+                                                <img style="height: 40px; width: 40px" class="carrega_img"/>
+                                                <span style="padding-left: 10px;" class="tipo_agenda"></span>
+                                                <span> - </span>
+                                                <span class="descricao"></span>   
+                                                <br>    
+                                                <span class="observacao small text-muted"></span>
+                                                    
+                                                <div class="btn-group pull-right hidden-xs"> 
+                                                    
+                                                    <button class="btn_excluir_agenda btn btn-danger pull-right">
+                                                        <span class="glyphicon glyphicon-trash"></span>
+                                                    </button>
+
+                                                    <button class="btn_editar btn btn-primary pull-right">
+                                                        <span class="glyphicon glyphicon-pencil"></span>
+                                                    </button>
+
+                                                    <button type="button" class="btn btn-success chk_realizado" title="Clique aqui para alterar a situação" tooltip="Clique aqui para alterar a situação">
+                                                        <span class="span_texto"></span>
+                                                        <span class="glyphicon glyphicon-thumbs-up span_realizado"></span>
+                                                    </button>
+
+                                                </div>                        
+
+                                                <div class="visible-xs">
+                                                    
+                                                    <div class="btn-group"> 
+
+                                                        <button class="btn_excluir_agenda btn btn-danger pull-right">
+                                                            <span class="glyphicon glyphicon-trash"></span>
+                                                        </button>                                                        
+
+                                                        <button class="btn_editar btn btn-primary pull-right">
+                                                            <span class="glyphicon glyphicon-calendar"></span>
+                                                        </button>
+
+                                                        <button type="button" class="btn btn-success chk_realizado" title="Clique aqui para alterar a situação" tooltip="Clique aqui para alterar a situação">
+                                                            <span class="span_texto"></span>
+                                                            <span class="glyphicon glyphicon-thumbs-up span_realizado"></span>
+                                                        </button>
+
+                                                    </div>                                                                        
+
+                                                </div>
+                                                
+                                            </div>                        
+
+                                        </div>                            
+                                    
+                                    </li>                                    
+
+                                </ul>
+                            
+                            </div>
+
+                        </div>                            
+
+                    </div>                        
+
+                    <div class="tab-pane aba_orcamentos">
+                        <div>        
+                            <table class="tab_listagem_orcamento table table-striped table-hover">
+                                <thead>
+                                    <tr class="hidden-xs hidden-sm">
+                                        <th>#</th>
+                                        <th>Data</th>
+                                        <th>Valor</th>
+                                        <th>&nbsp;</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr template-row style="display: none;" class="row-fluid">
+
+                                        <!-- mobile -->
+                                        <td class="td-mobile visible-xs visible-sm">
+                                            
+                                            <div class="pull-right">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn_gerar_word btn btn-default" data-toggle="tooltip" title="Exportar orçamento">
+                                                        <i class="fas fa-file-export"></i>
+                                                    </button>
+                                                    <button type="button" class="btn_imprimir_orcamento btn btn-default" data-toggle="tooltip" title="Download do orçamento">
+                                                        <span class="glyphicon glyphicon-file"></span>
+                                                    </button>
+                                                    <button type="button" class="btn_enviar_email hidden btn btn-primary" data-toggle="tooltip" title="Reenviar e-mail">
+                                                        <span class="glyphicon glyphicon-send"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <h4 template-field="oportunidade_orcamento_id">{oportunidade_orcamento_id}</h4>
+                                            <div class="text-info">
+                                                <span template-field="insert_hora"></span>
+                                            </div>
+                                            <div class="text-info">
+                                                <span template-field="total"></span>
+                                            </div>
+
+                                            <div>
+                                                <span class="label label-warning lb_situacao">
+                                                    Aguardando aprovação
+                                                </span>
+                                            </div>
+
+                                            <div><span class="small text-muted lb_data"></span></div>
+                                            <div><span class="small text-muted lb_nome_usuario"></span></div>
+                                            <div><span class="small text-muted lb_justificativa"></span></div>                                            
+
+
+                                        </td>
+                                        <!-- mobile -->
+
+                                        <!-- desktop -->
+                                        <td class="hidden-xs hidden-sm" template-field="oportunidade_orcamento_id">{oportunidade_orcamento_id}</td>
+                                        <td class="hidden-xs hidden-sm" template-field="insert_hora">{insert_hora}</td>
+                                        <td class="hidden-xs hidden-sm" template-field="total">{total}</td>
+                                        <td class="hidden-xs hidden-sm">
+                                            <div>
+                                                <span class="label label-warning lb_situacao">
+                                                    Aguardando aprovação
+                                                </span>
+                                            </div>
+                                            <div><span class="small text-muted lb_data"></span></div>
+                                            <div><span class="small text-muted lb_nome_usuario"></span></div>
+                                            <div><span class="small text-muted lb_justificativa"></span></div>
+                                            <div><span class="small text-muted lb_sem_email"></span></div>
+                                        </td>                                                                                
+                                        <td class="hidden-xs hidden-sm" template-buttons="actions">
+                                            <div class="btn-group pull-right">                            
+                                                <button type="button" class="btn_aprovar hidden btn btn-success" data-toggle="tooltip" title="Aprovar Orçamento">
+                                                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                                                </button>        
+                                                <button type="button" class="btn_reprovar hidden btn btn-danger" data-toggle="tooltip" title="Reprovar Orçamento">
+                                                    <span class="glyphicon glyphicon-thumbs-down"></span>
+                                                </button>
+                                                <button type="button" class="btn_gerar_word btn btn-default" data-toggle="tooltip" title="Exportar orçamento">
+                                                    <i class="fas fa-file-export"></i>
+                                                </button>
+                                                <button type="button" class="btn_imprimir_orcamento btn btn-default" data-toggle="tooltip" title="Download do orçamento">
+                                                    <span class="glyphicon glyphicon-file"></span>
+                                                </button>                                                        
+                                                <button type="button" class="btn_enviar_email hidden btn btn-primary" data-toggle="tooltip" title="Enviar e-mail">
+                                                    <span class="glyphicon glyphicon-send"></span>
+                                                </button>                                                                                                                                       
+                                            </div>
+                                        </td>
+                                        <!-- desktop -->
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>     
+
+                    <div class="tab-pane aba_status">  
+
+                        <div class="row">
+
+                            <div class="col-md-4"> 
+                                <div class="form-group">                                    
+                                    <button type="button" class="btn_novo_status btn btn-primary">
+                                        <span class="glyphicon glyphicon-plus-sign"></span> Novo Status
+                                    </button>
+                                    <button type="button" class="btn_refresh_status btn btn-default">
+                                        <span class="glyphicon glyphicon-refresh"></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>        
+
+                        <div>        
+                            <table class="tab_listagem_status table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Status</th>
+                                        <th>Inclusão</th>
+                                        <th>Fechamento</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr template-row style="display: none;" class="row-fluid">
+
+                                        <!-- desktop -->
+                                        <td >
+
+                                            <div>
+                                                <span class="label" template-field="status"></span>
+                                            </div>
+
+                                        </td>
+
+                                        <td  template-field="data_inclusao">{data_inclusao}</td>  
+
+                                        <td  template-field="data_fechamento">{data_fechamento}</td>  
+
+                                        <td template-field="detalhes" class="text-right">
+                                            <button type="button" class="btn_excluir_status btn btn-danger" tooltip="Excluir Status" title="Excluir Status">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </button>
+                                        </td>
+
+                                        <!-- desktop -->                                        
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>                        
+
+                    <div class="tab-pane aba_observacoes">
+
+                        <div class="row">
+
+                            <div class="col-md-4"> 
+                                <div class="form-group">                                    
+                                    <button type="button" class="btn_nova_mensagem btn btn-primary">
+                                        <span class="glyphicon glyphicon-plus-sign"></span> Nova Mensagem
+                                    </button>
+                                    <button type="button" class="btn_nova_mensagem_refresh btn btn-default">
+                                        <span class="glyphicon glyphicon-refresh"></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>        
+
+                        <div class="row">
+
+                            <div class="col-md-12 div_body_observacoes"> 
+
+                                <ul class="list-group template-ul" style="display: none;">
+
+                                    <li class="list-group-item panel panel-info">
+
+                                        <div class="row">
+
+                                            <div class="col-md-12"> 
+                                                <span class="small text-muted data_hora"></span>
+                                                <div class="pull-right">
+                                                    <span class="nome_usuario"></span>
+                                                    <img style="height: 20px; width: 20px" class="carrega_img"/> 
+                                                </div>                                                                                       
+                                            </div>
+                            
+                                        </div>                            
+
+                                        <div class="row">                         
+
+                                            <div class="col-md-10"> 
+                                                <span class="mensagem"></span>
+                                            </div>
+
+                                            <div class="col-md-2"> 
+                                                <div class="btn-group pull-right">
+                                                    <button type="button" class="btn_editar_obs btn btn-default btn-primary">
+                                                        <i class="fa fa-pencil-alt" aria-hidden="true"></i>
+                                                    </button>
+                                                    <!-- <button type="button" class="btn_excluir_obs btn btn-default btn-danger">
+                                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                                    </button> -->
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                                            <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu pull-right" style="height: 100px;">
+                                                            <li>
+                                                                <a class="btn_excluir_obs" href="#">
+                                                                    <i class="fa fa-trash" aria-hidden="true"></i> Excluir
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>            
+
+                                        </div>                            
+                                    
+                                    </li>                                    
+
+                                </ul>
+                            
+                            </div>
+
+                        </div>                            
+
+                    </div>
+
+                    <div class="tab-pane aba_historico">
+
+                        <div>        
+                            <table class="tab_listagem_historico table table-striped table-hover">
+                                <thead>
+                                    <tr class="hidden-xs hidden-sm">
+                                        <th>Data</th>
+                                        <th>Usuário</th>
+                                        <th>Operação</th>
+                                        <th>Informação</th>
+                                        <th>Valor Anterior</th>
+                                        <th>Novo Valor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr template-row style="display: none;" class="row-fluid">
+
+                                        <!-- mobile -->
+                                        <td class="td-mobile visible-xs visible-sm">
+                                            
+                                            <div>
+                                                <span class="label" template-field="acao">                                                    
+                                                </span>
+                                            </div>
+
+                                            <div class="text-info small">
+                                                <span template-field="insert_hora"></span>
+                                                <span template-field="usuario_insert"></span>
+                                            </div>
+
+                                            <div class="text-info">
+                                                <span template-field="coluna"></span>
+                                            </div>
+                                            
+                                            <div class="small">
+                                                <span template-field="" class="text-info">Valor Anterior:</span>
+                                                <span template-field="valor_anterior"></span>
+                                            </div>
+
+                                            <div class="small">
+                                                <span template-field="" class="text-info">Novo Valor:</span>
+                                                <span template-field="valor_novo"></span>
+                                            </div>
+
+                                            <!--<div class="text-info">
+                                                <span template-field="total"></span>
+                                            </div>
+
+                                            <div>
+                                                <span class="label label-warning lb_situacao">
+                                                    Aguardando aprovação
+                                                </span>
+                                            </div> -->
+
+
+                                        </td>
+                                        <!-- mobile -->
+
+                                        <!-- desktop -->
+                                        <td class="hidden-xs hidden-sm" template-field="insert_hora">{insert_hora}</td>
+                                        <td class="hidden-xs hidden-sm" template-field="usuario_insert">{usuario_insert}</td>
+
+                                        <td class="hidden-xs hidden-sm">
+
+                                            <div>
+                                                <span class="label" template-field="acao">                                                    
+                                                </span>
+                                            </div>
+
+                                        </td>
+
+                                        <td class="hidden-xs hidden-sm" template-field="coluna"></td>                            
+                                        <td class="hidden-xs hidden-sm" template-field="valor_anterior">{valor_anterior}</td>
+                                        <td class="hidden-xs hidden-sm" template-field="valor_novo">{valor_novo}</td>                                        
+                                        <!-- desktop -->
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div style="position: relative; bottom: 20px;">
+                                <div style="padding: 10px; padding-bottom: 0px; padding-top: 0; background-color: white;" class="text-center div_carregar_mais hidden">
+                                    <span class="btn btn-link btn_carregar_mais">
+                                        <span class="txt_carregar_mais text-primary">Carregar mais registros</span>
+                                    </span>
+                                </div>
+                            </div>                            
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane aba_personalizado">
+                        <div class="form-editor">
+                            
+                            <div class="form-grupos panel-body" style="padding: 0px;">
+                            </div>
+
+                            <div class="form-grupo" template-grupo template-ref="" style="display: none;">
+                                <div>
+                                    <h3 class="text-primary lbl_grupo_nome"></h3>
+                                </div>
+
+                            </div>
+
+                            <div class="form-grupo-campo" template-campo template-ref="" style="display: none;">
+                                <div class="div_campo form-group">
+                                    <span class="lbl_obrigatorio text-danger">* </span>
+                                    <label class="lbl_nome">{Nome}</label>
+                                    <div class="div_input">
+                                        <!-- elemento do campo -->
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane aba_referencias">
+                        <div class="div_componente_referencias"></div>
+                    </div>
+                    
+                    <div class="tab-pane aba_convidados">
+
+                        <div class="row">
+
+                            <div class="col-md-6"> 
+                                <div class="form-group">                
+                                    <select class="select-multi-column cbo_convidados" placeholder="Digite o nome do representante"></select>
+                                </div>    
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-12 div_convidados"> 
+
+                                <!--<ul class="list-group template-ul" style="display: none;">-->
+                                <ul class="list-group template-ul" style="display: none;">
+
+                                    <li class="list-group-item panel panel-info">
+
+                                        <div class="row">
+
+                                            <div class="col-md-12">              
+    
+                                                <img style="height: 40px; width: 40px" class="carrega_img"/>
+                                                <span style="padding-left: 10px;" class="tipo_agenda"></span>
+                                                <span></span>
+                                                <span class="descricao"></span>       
+                                                    
+                                                <div class="btn-group pull-right hidden-xs"> 
+
+                                                    <button class="btn_excluir_agenda btn btn-danger pull-right">
+                                                        <span class="glyphicon glyphicon-trash"></span>
+                                                    </button>
+
+                                                    <button class="btn_visualizar btn btn-primary pull-right">
+                                                        <span class="glyphicon glyphicon-folder-open"></span>
+                                                    </button>
+
+
+                                                </div>                        
+
+                                                <div class="visible-xs">
+                                                    
+                                                    <div class="btn-group"> 
+
+                                                        <button class="btn_excluir_agenda btn btn-da
+                                                        nger pull-right">
+                                                            <span class="glyphicon glyphicon-trash"></span>
+                                                        </button>                                                        
+
+                                                        <button class="btn_visualizar btn btn-primary pull-right">
+                                                            <span class="glyphicon glyphicon-folder-open"></span>
+                                                        </button>
+
+                                                    </div>                                                                        
+
+                                                </div>
+                                                
+                                            </div>                        
+
+                                        </div>                            
+                                    
+                                    </li>                                    
+
+                                </ul>
+                            
+                            </div>
+
+                        </div>                            
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>        
+
+    </div>    
+
+    <div class="col-sm-12 col-md-12 col-lg-12">               
+        
+        <div class="row">
+
+            <div class="col-sm-12 col-md-12 col-lg-12">
+
+                <div class="form-group">
+
+                    <div class="input-group-btn" style="padding-bottom: 15px">
+                        <button type="button" class="btn_salvar btn btn-primary">
+                            <span class="glyphicon glyphicon-floppy-disk"></span> Salvar
+                        </button>
+                        <button type="button" class="btn_excluir btn btn-danger">
+                            <span class="glyphicon glyphicon-floppy-disk"></span> Excluir
+                        </button>
+                        <button type="button" class="btn_oportunidade btn btn-default">
+                            <span class="glyphicon glyphicon-menu-hamburger"></span> Mostrar Oportunidade
+                        </button>
+                        <button type="button" class="btn_cancelar btn btn-default">
+                            <span class="glyphicon glyphicon-remove"></span> Cancelar
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>            
+        
+    </div> 
+
+</div>

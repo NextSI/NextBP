@@ -1,0 +1,58 @@
+<div class="modal bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal_contato_selecionar_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_contato_selecionar_label">Selecionar Contato</h4> 
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+
+                    <div class="col-md-6 col-sm-6" style="padding-right: 5px;">
+                        <div class="form-group">
+                            <label for="modal_contato_edt_nome_contato">Contato (Nome)</label>
+                            <input type="text" class="edt_nome_contato form-control" id="modal_contato_edt_nome_contato" maxlength="45" placeholder="Filtro por Contato">
+                        </div>
+                    </div>
+
+                    <div class="col-md-1 col-sm-1" style="padding-left: 0px;">
+                        <div class="form-group">
+                            <label>&nbsp;</label><br>
+                            <button type="button" class="btn btn-primary btn_novo">Novo</button>                    
+                        </div>
+                    </div>
+
+                </div> 
+
+                <div class="table-responsive">
+                    <table class="tab_listagem table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Contato</th>                            
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- itens -->
+                            <tr template-row style="display: none;">
+                                <td template-field="nome_contato">{nome_contato}</td>                            
+                                <td template-buttons="actions">
+                                    <div class="btn-group pull-right">
+                                        <button type="button" class="btn_selecionar btn btn-primary">
+                                            <span class="glyphicon glyphicon-ok"></span> Selecionar
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>

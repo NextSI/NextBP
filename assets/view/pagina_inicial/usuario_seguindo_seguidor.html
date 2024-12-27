@@ -1,0 +1,38 @@
+<!-- MODAL DETALHE -->
+<div class="modal modal_teste" tabindex="-1" role="dialog" aria-labelledby="modal_usuario_curtida_label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title titulo" id="modal_usuario_curtida_label"></h4>
+            </div>
+            
+            <div class="modal-body modal_carregar_curtida" style="height: 400px; overflow-y: auto;">
+
+                <table class="tab_listagem table">
+                    <tbody>
+                        <tr template-row style="display: none;">
+                            <td template-field="img_usuario_curtida" class="link_perfil" style="cursor: pointer;"><img class="carrega_img" style=" height: 60px; width: 60px"/></td>
+                            <td class="link_perfil" style="cursor: pointer;"><label class="text-center link_perfil" template-field="nome_usuario_curtida" style="padding-top: 20px;">{nome_usuario}</label></td>
+                            <td>
+                                <button class="btn btn-link btn_seguir hidden" style="padding-top: 15px;">
+                                    <span class="small fa fa-user-plus text-primary" style="font-size: 25px;"></span>
+                                </button>
+                                <button class="btn btn-link btn_deixar_seguir hidden" style="padding-top: 15px;">
+                                    <span class="small fa fa-user-times text-primary" style="font-size: 25px;"></span>
+                                </button>
+                            </td>
+                        </tr>          
+                    </tbody>
+                </table>
+               <div class="text-center div_load">
+                    <img class="img_ajax_loader" src="assets/img/ajax-loader.gif">
+                </div>                    
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+                <button type="button" class="btn_cancelar btn btn-default btn-primary">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

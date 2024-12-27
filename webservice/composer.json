@@ -1,0 +1,25 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^6.0",
+        "bacon/bacon-qr-code": "^1.0",
+        "jpgraph/jpgraph": "^4.0",
+        "michelf/php-markdown": "^1.8",
+        "tecnickcom/tcpdf": "^6.2",
+        "setasign/fpdi": "^2.3.7",
+        "setasign/fpdf": "^1.8",
+        "phpoffice/phpspreadsheet": "1.25.2",
+        "php-ffmpeg/php-ffmpeg": "^0.11.1",
+        "cache/filesystem-adapter": "^1.0",
+        "ralouphie/mimey": "^2.1",
+        "box/spout": "^3.1",
+        "phpoffice/phpword": "^0.18.3",
+        "pear/http_request2": "^2.5",
+        "firebase/php-jwt": "^6.3"
+    },
+    "replace": {
+        "symfony/polyfill-php80": "*"
+    },
+    "config": {
+        "platform-check": false
+    }
+}

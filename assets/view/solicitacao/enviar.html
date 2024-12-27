@@ -1,0 +1,124 @@
+<!-- MODAL DETALHE -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal_solicitacao_enviar_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modal_solicitacao_enviar_label">
+                    <span class="lbl_nome_atividade">{nome_atividade}</span>
+                </h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="body_default">
+
+                    <div class="div_email_terceiro_entrega form-group" style="display: none;">
+                        Notificar terceiros por e-mail referente ao término desta atividade:
+                        <input type="text" class="edt_email_terceiro_entrega form-control" placeholder="email1@exemplo.com; email2@exemplo.com; email3@exemplo.com;" maxlength="500">
+                    </div>
+    
+                    <p class="lbl_proximas_atividades">Próximas atividades do processo</p>
+    
+                    <p class="lbl_nenhuma_atividade">Não existe próxima atividade no fluxo</p>
+    
+                    <!-- template-item -->
+                    <div class="list-group-item" template-item style="display: none">
+                        
+                        <div class="row">
+                            <div class="div_elemento col-xs-12">
+                                
+                                <div class="div_elemento_opcional pull-right">
+                                    <input class="chk_elemento_opcional hidden">
+                                </div>
+                                
+                                <p class="div_elemento_detalhe list-group-item-heading" style="margin-bottom: 0px">
+                                    <b><span class="lbl_elemento_descricao">{atividade_descricao}</span></b>
+                                    <small><span class="label lbl_elemento_tipo">{atividade_tipo}</span></small>
+                                </p>
+    
+                                <div class="div_gateway_exclusivo_destino form-group">
+                                    <select class="cbo_gateway_exclusivo_destino form-control" data-live-search="true">
+                                    </select>
+                                </div>
+    
+                                <div class="div_elemento_responsavel form-group">
+                                    <div class="dropdown_responsavel"></div>
+                                </div>
+    
+                                <div class="div_elemento_grupo_responsavel form-group">
+                                    Grupo de Usuário Responsável
+                                    <select class="cbo_elemento_grupo_responsavel form-control" data-live-search="true">
+                                    </select>
+                                </div>
+    
+                                <div class="row">
+                                    <div class="col-sm-5 col-md-5">
+                                        <div class="div_previsao_retorno form-group hidden">
+                                            Prazo da próxima atividade
+                                            <div class="form-control edt_prazo"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+    
+                                <div class="div_email_terceiro form-group">
+                                    Notificar terceiros por e-mail referente ao inicio desta próxima atividade:
+                                    <input type="text" class="edt_email_terceiro form-control" placeholder="email1@exemplo.com; email2@exemplo.com; email3@exemplo.com;" maxlength="500">
+                                </div>
+    
+                                <!-- destinos do items -->
+                                <div class="div_destinos list-group">
+    
+                                </div>
+
+                                <div class="div_emails_responsaveis_anonimos hidden form-group">
+                                    <span class="text-muted">
+                                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                        Os e-mails adicionados nesta seção receberão o link de acesso à atividade, sem a necessidade de estarem logados no Next BP
+                                    </span>
+                                    
+                                    <div class="grid_emails_responsaveis_anonimos"></div>
+                                </div>
+    
+                            </div>
+                        </div>
+    
+                    </div>
+                    <!-- /template-item -->
+    
+                    <div class="list_destinos list-group">
+                        
+                    </div>
+                </div>
+
+                <div class="div_solicitacao_salva hidden">
+                    <div class="text-center">
+                        <h4 class="num_solicitacao"></h4>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="desc_processo"></h4>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="nome_atividade"></h4>
+                    </div>
+                    <p class="text-center">Enviada com sucesso!</p>
+                </div>
+
+            </div>
+            <div class="modal-footer" style="bottom: 0px;">
+
+                <div class="btns_default">
+                    <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+                    <button type="button" class="btn_confirmar btn btn-primary">Confirmar</button>
+                </div>
+
+                <div class="div_atividade_concluida hidden">
+                    <button type="button" class="btn_download_form hidden btn btn-warning">Download do Formulário</button>
+                    <button type="button" class="btn_ok btn btn-primary">OK</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL DETALHE -->

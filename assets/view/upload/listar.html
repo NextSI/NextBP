@@ -1,0 +1,75 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active">Uploads Pendentes</li>
+</ol>
+
+
+<div class="row">
+    
+    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <button type="button" class="btn btn-default btn_limpar" data-toggle="tooltip" title="Limpar Lista">
+            <span class="glyphicon glyphicon-trash"></span> Limpar fila
+        </button>
+    </div>
+
+</div>
+
+<div style="margin-top: 15px;">
+    <h4>
+        <span class="info_icone"></span>
+        Enviando arquivo
+        <span class="info_num_arquivo">0</span>
+        de
+        <span class="info_total_arquivos">0</span>
+        <small>(<span class="info_nome_arquivo"></span>)</small>
+    </h4>
+</div>
+
+<!-- LISTAGEM -->
+<div class="row" style="padding-top:15px;">
+    
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <table class="tab_listagem table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th class="hidden-xs" width="25%">Nome</th>
+                    <th class="hidden-xs" width="25%">Mime Type</th>
+                    <th class="hidden-xs" width="25%">Tamanho</th>
+                    <th class="hidden-xs" width="25%">&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <!-- itens -->
+                <tr template-row style="display: none;">
+                    <!-- MOBILE -->
+                    <td class="td-mobile visible-xs">
+                        <h4 class="small" template-field="nome">Nome</h4>
+                        <div class="visible-xs text-info">
+                            <div class="small" template-field="mime_type"></div>
+                            <div class="small" template-field="tamanho"></div>
+                        </div>
+                        <div class="visible-xs lbl_leitura progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-primary" role="progressbar">
+                            </div>
+                        </div>
+                    </td>
+                    <!-- MOBILE -->
+
+                    <td class="hidden-xs" width="25%" template-field="nome">{nome}</td>
+                    <td class="hidden-xs" width="25%" template-field="mime_type">{mime_type}</td>
+                    <td class="hidden-xs" width="25%" template-field="tamanho">{tamanho}</td>
+                    <td class="hidden-xs" width="25%">
+                        <div class="lbl_leitura progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-primary" role="progressbar">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<!-- /LISTAGEM -->

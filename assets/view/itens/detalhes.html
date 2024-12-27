@@ -1,0 +1,278 @@
+<ol class="breadcrumb visible-xs">
+    <li class="active" translate="item.aba_detalhes"></li>
+</ol>
+<div class="row">
+<div class="col-sm-3 col-md-3 col-lg-2">
+    <div class="panel panel-default">
+        <div class="list-group">
+            <a href="#" class="btn_salvar list-group-item">
+            <span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;
+            <span translate="generico.salvar"></span>
+            </a>
+            <a href="#" class="btn_excluir list-group-item list-group-item-danger">
+            <span class="glyphicon glyphicon-check"></span>&nbsp;
+            <span translate="generico.excluir"></span>
+            </a>
+            <a href="#" class="btn_cancelar list-group-item">
+            <span class="glyphicon glyphicon-remove"></span>&nbsp;
+            <span translate="generico.cancelar"></span>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="col-sm-9 col-md-9 col-lg-10">
+    <div class="panel panel-default painel_detalhes">
+        <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
+            <div class="pull-right">
+                <!-- -->
+            </div>
+            <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+                <li class="active lbl_tab_geral">
+                    <a class="tab_geral" id="modal_projeto_geral_tab" href="#" role="tab" data-toggle="tab" translate="generico.geral"></a>
+                </li>
+                <li class="lbl_tab_impostos">
+                    <a class="tab_impostos" id="modal_projeto_impostos_tab" href="#" role="tab" data-toggle="tab" translate="item.aba_impostos"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="panel-body">
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active form_geral" id="">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <span class="preview_logo" style="padding-top: 7px; padding-bottom: 0px;" ><img style="min-height: 60px; min-width: 60px; max-height: 60px; max-width: 180px; padding:1px; border:1px solid #021a40;" class="carrega_img"/></span>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="file" class="files hidden" name="files[]" accept="image/*"/>
+                                <button type="button" class="btn_alterar_logo btn btn-primary" translate="item.alterar_imagem"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="edt_codigo" translate="generico.codigo"></label>
+                                <input type="text" class="edt_codigo form-control" maxlength="50" id="edt_codigo" translate-placeholder="generico.codigo">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="edt_nickname">Nickname</label>
+                                <input type="text" class="edt_nickname form-control" maxlength="45" id="edt_nickname" placeholder="Nickname">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label translate="generico.bloqueado"></label>
+                                <div style="margin-top: 3px;">
+                                    <input type="checkbox" class="chk_bloqueado checkbox_bootstrap_toggle">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label for="edt_descricao" translate="generico.descricao"></label>
+                                <span class="text-danger">*</span>
+                                <input type="text" class="edt_descricao form-control" maxlength="150" id="edt_descricao" translate-placeholder="generico.descricao">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="cbo_unidade_medida1" translate="item.unidade"></label>
+                                <select id="cbo_unidade_medida1" class="form-control cbo_unidade_medida1"  data-live-search="true"></select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="cbo_unidade_medida2" translate="item.segunda_unidade"></label>
+                                <select id="cbo_unidade_medida2" class="form-control cbo_unidade_medida2"  data-live-search="true"></select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="cbo_tipo_conversao" translate="item.tipo_conversao"></label>
+                                <select id="cbo_tipo_conversao" class="form-control cbo_tipo_conversao" data-live-search="true">
+                                    <option value="D" translate="item.divisor">Divisor</option>
+                                    <option value="M" translate="item.multiplicador">Multiplicador</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="edt_fator_conversao" translate="item.fator"></label>
+                                <input type="text" class="edt_fator_conversao form-control" id="edt_fator_conversao" placeholder="0,00">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="edt_preco" translate="item.preco"></label>
+                                <input type="text" class="edt_preco form-control" id="edt_preco" placeholder="0,00">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="edt_preco_minimo" translate="item.preco_minimo"></label>
+                                <input type="text" class="edt_preco_minimo form-control" id="edt_preco_minimo" placeholder="0,00">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="edt_comissao" translate="item.comissao"></label>
+                                <input type="text" class="edt_comissao form-control" id="edt_comissao" placeholder="0,00">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="edt_custo" translate="item.custo"></label>
+                                <input type="text" class="edt_custo form-control" id="edt_custo" placeholder="0,00">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="edt_peso_bruto" translate="item.peso_bruto"></label>
+                                <input type="text" class="edt_peso_bruto form-control" id="edt_peso_bruto" placeholder="0,00">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="edt_peso_liquido" translate="item.peso_liquido"></label>
+                                <input type="text" class="edt_peso_liquido form-control" id="edt_peso_liquido" placeholder="0,00">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 col-sm-6 col-xs-12">
+                            <div class="form-group" tipo-item>
+                                <label for="" translate="tipo_item.aba_listar"></label><br>
+                                <div class="input-group">
+                                    <input type="text" class="form-control edt_tipo_itens" readonly>
+                                    <div class="input-group-btn">
+                                        <div class="btn-group">
+                                            <div class="btn btn-default btn-selecionar ">
+                                                <span class="fa fa-search"></span>
+                                            </div>
+
+                                            <div class="btn btn-primary btn-remover hidden">
+                                                <span class="fa fa-times"></span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-sm-6 col-xs-12">
+                            <div class="form-group" grupo-item>
+                                <label for="" translate="grupo_item.aba_listar"></label><br>
+                                <div class="input-group">
+                                    <input type="text" class="form-control edt_grupo_itens" readonly>
+                                    <div class="input-group-btn">
+                                        <div class="btn-group">
+                                            <div class="btn btn-default btn-selecionar">
+                                                <span class="fa fa-search"></span>
+                                            </div>
+
+                                            <div class="btn btn-primary btn-remover hidden">
+                                                <span class="fa fa-times"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-sm-6 col-xs-12">
+                            <div class="form-group" familia-item>
+                                <label for="" translate="familia_itens.aba_listar"></label><br>
+                                <div class="input-group">
+                                    <input type="text" class="form-control edt_familia_itens" readonly>
+                                    <div class="input-group-btn">
+                                        <div class="btn-group">
+                                            <div class="btn btn-default btn-selecionar">
+                                                <span class="fa fa-search"></span>
+                                            </div>
+
+                                            <div class="btn btn-primary btn-remover hidden">
+                                                <span class="fa fa-times"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-sm-6 col-xs-12 div_cor_item hidden">
+                            <div class="form-group">
+                                <label for="dx_dropdown_cor_item">Cor do item</label>
+                                <i class="fa fa-info-circle" data-toggle="tooltip" title="A cor de fundo e cor da fonte que serão exibidas na seleção do item na Oportunidade"></i>
+                                <div id="dx_dropdown_cor_item" class="dx_dropdown_cor_item"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-12 col-sm-6 col-xs-12">
+                            <div class="form-group" familia-item>
+                                <label for="txt_observacoes" translate="familia_itens.observacoes"></label><br>
+                                <textarea type="text" class="form-control txt_observacoes" id="txt_observacoes" rows="15" maxlength="8000"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane form_impostos" id="">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <table class="tab_impostos table table-striped table-hover">
+                                <thead class="">
+                                    <tr>
+                                        <th class="hidden-xs" translate="generico.codigo"></th>
+                                        <th class="hidden-xs" translate="generico.nome"></th>
+                                        <th class="hidden-xs" translate="item.porcentagem"></th>
+                                        <th class="hidden-xs">
+                                            <button type="button" class="pull-right btn_add_impostos btn btn-default">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr template-row style="display: none;">
+                                        <!-- MOBILE -->
+                                        <td class="td-mobile visible-xs">
+                                            <button type="button" class="close"template-button="btn_remover" aria-hidden="true">&times;</button>
+                                            <div class="pull-right" style="padding-top:15px;">
+                                                <div class="text-muted text-right">
+                                                    <span template-field="porcentagem">{porcentagem}</span>
+                                                </div>
+                                            </div>
+                                            <div class="text-info">
+                                                <span template-field="codigo">{codigo}</span>
+                                            </div>
+                                            <h4 template-field="nome">{nome}</h4>
+                                        </td>
+                                        <!-- MOBILE -->
+                                        <td class="hidden-xs" template-field="codigo">{codigo}</td>
+                                        <td class="hidden-xs" template-field="nome">{nome}</td>
+                                        <td class="hidden-xs" template-field="porcentagem">{porcentagem}</td>
+                                        <td class="hidden-xs">
+                                            <button type="button" class="pull-right btn btn-default" template-button="btn_remover">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -14,14 +14,29 @@ jobs:
     - name: 📂 Sync files PortalHomolog
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ${{ secrets.ftp_host_portalhomolog }}
-        username: ${{ secrets.ftp_username_portalhomolog }}
-        password: ${{ secrets.ftp_password_portalhomolog }}
+        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
+        username: ${{ secrets.FTP_USERNAME_PORTALHOMOLOG }}
+        password: ${{ secrets.FTP_PASSWORD_PORTALPRODHOMOLOG }}
         server-dir: ./homolog/
 
     - name: 🔗 Call API after deploy PortalHomolog
       run: |
         curl -X POST https://portalhomolog.nextsi.com.br/webservice/cli.php?argv=-dbu \
+        -H "Content-Type: application/json" \
+        -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
+        -d '{"status": "success", "message": "FTP deploy complete"}'
+    
+    - name: 📂 Sync files PortalProd
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
+        username: ${{ secrets.FTP_USERNAME_PORTALPROD }}
+        password: ${{ secrets.FTP_PASSWORD_PORTALPRODHOMOLOG }}
+        server-dir: ./
+
+    - name: 🔗 Call API after deploy PortalProd
+      run: |
+        curl -X POST https://portal.nextsi.com.br/webservice/cli.php?argv=-dbu \
         -H "Content-Type: application/json" \
         -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
         -d '{"status": "success", "message": "FTP deploy complete"}'

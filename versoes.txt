@@ -1,5 +1,40 @@
 [
     {
+        "versao": "24.64.1",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Exibi\u00e7\u00e3o de Atividades Anal\u00edticas na Sele\u00e7\u00e3o de Predecessoras no browse",
+                "referencia": [
+                    "BPM31470"
+                ],
+                "modulo": "Projetos",
+                "hash": "6aae6f3505b6fe1ec6b5aa930bdc74aedc347bba",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM31470"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Cria\u00e7\u00e3o e atribui\u00e7\u00e3o das etiquetas \u00e0s oportunidades, filtro na tela de Kanban",
+                "referencia": [
+                    "BPM28995"
+                ],
+                "modulo": "CRM",
+                "hash": "f79fb0097fa59d202f14565276d45c0d3df1f6d8",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM28995"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Revers\u00e3o da inclus\u00e3o da coluna \"refer\u00eancias\" na Central de Pend\u00eancias",
+                "referencia": [
+                    "BPM26778"
+                ],
+                "modulo": "Central de Pend\u00eancias",
+                "hash": "1fbdc584f2e85a7aa001058b96aec7e8f499fe2d",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM26778-1"
+            }
+        ]
+    },
+    {
         "versao": "24.63.1",
         "itens": [
             {

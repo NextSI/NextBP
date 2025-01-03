@@ -471,6 +471,7 @@
             "nova_solicitacao_atividade": "Nova Solicitação de Atividade",
             "retorno_atividade": "Retorno de Atividade",
             "cancelada": "Cancelada",
+            "excluida": "Excluida",
             "motivo_cancelamento": "Motivo Cancelamento",
             "cancelado_por": "Cancelado Por",
             "motivo_retorno": "Motivo do retorno: ",

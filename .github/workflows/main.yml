@@ -14,9 +14,9 @@ jobs:
     - name: 📂 Sync files PortalDemo
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ${{ secrets.ftp_host_portalhomolog }}
-        username: ${{ secrets.ftp_username_portalhomolog }}
-        password: ${{ secrets.ftp_password_portalhomolog }}
+        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
+        username: ${{ secrets.FTP_USERNAME_PORTALHOMOLOG }}
+        password: ${{ secrets.FTP_PASSWORD_PORTALPRODHOMOLOG }}
         server-dir: ./
 
     - name: 🔗 Call API after deploy PortalDemo

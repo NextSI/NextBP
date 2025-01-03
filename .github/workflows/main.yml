@@ -21,7 +21,7 @@ jobs:
 
     - name: 🔗 Call API after deploy PortalDemo
       run: |
-        curl -X POST https://demo.nextsi.com.br/webservice/cli.php?argv=-dbu \
+        curl -X POST ${{secrets.FTP_URL_DBU_DEMO}} \
         -H "Content-Type: application/json" \
         -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
         -d '{"status": "success", "message": "FTP deploy complete"}'

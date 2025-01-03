@@ -2391,11 +2391,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Central-Pendencias-DAO.html#method_left_join_grupo_usuarios_responsavel"
         },                {
-            "fqsen": "\\Central_Pendencias_DAO\u003A\u003Aatualizar_referencias\u0028\u0029",
-            "name": "atualizar_referencias",
-            "summary": "",
-            "url": "classes/Central-Pendencias-DAO.html#method_atualizar_referencias"
-        },                {
             "fqsen": "\\Central_Pendencias_DAO\u003A\u003A\u0024pendencias_aguardando_commit",
             "name": "pendencias_aguardando_commit",
             "summary": "",
@@ -13065,11 +13060,6 @@ Search.appendIndex(
             "name": "verifica_permissao_excluir",
             "summary": "",
             "url": "classes/Referencia-DAO.html#method_verifica_permissao_excluir"
-        },                {
-            "fqsen": "\\Referencia_DAO\u003A\u003Aobter_string_referencias\u0028\u0029",
-            "name": "obter_string_referencias",
-            "summary": "",
-            "url": "classes/Referencia-DAO.html#method_obter_string_referencias"
         },                {
             "fqsen": "\\Regiao_Vendas_DAO",
             "name": "Regiao_Vendas_DAO",
@@ -29810,6 +29800,11 @@ Search.appendIndex(
             "name": "ordem",
             "summary": "",
             "url": "classes/Oportunidade-Model.html#property_ordem"
+        },                {
+            "fqsen": "\\Oportunidade_Model\u003A\u003A\u0024etiquetas",
+            "name": "etiquetas",
+            "summary": "",
+            "url": "classes/Oportunidade-Model.html#property_etiquetas"
         },                {
             "fqsen": "\\Oportunidade_Model\u003A\u003A\u0024observacao_nf",
             "name": "observacao_nf",

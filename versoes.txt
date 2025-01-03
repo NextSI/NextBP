@@ -1,5 +1,20 @@
 [
     {
+        "versao": "23.59.68",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Exibi\u00e7\u00e3o de Atividades Anal\u00edticas na Sele\u00e7\u00e3o de Predecessoras no browse",
+                "referencia": [
+                    "BPM31470"
+                ],
+                "modulo": "Projetos",
+                "hash": "055f2de742e59a78141cc62ab990014c1998d3e0",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM31470"
+            }
+        ]
+    },
+    {
         "versao": "23.59.67",
         "itens": [
             {

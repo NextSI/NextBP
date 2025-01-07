@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.64.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na Edi\u00e7\u00e3o de Oportunidades com Etiquetas Atribu\u00eddas",
+                "referencia": [
+                    "BPM32374"
+                ],
+                "modulo": "CRM",
+                "hash": "fc162705bdc952a5b38a2aadf45eb7afba0ac2e0",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM32374"
+            }
+        ]
+    },
+    {
         "versao": "24.64.1",
         "itens": [
             {

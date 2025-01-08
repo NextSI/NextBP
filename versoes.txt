@@ -1,5 +1,20 @@
 [
     {
+        "versao": "23.59.69",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ortogr\u00e1fico na mensagem de anivers\u00e1rios",
+                "referencia": [
+                    "BPM32481"
+                ],
+                "modulo": "Home",
+                "hash": "6cf90e59292ed9838e851540ee776454f0dc7e93",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM32481"
+            }
+        ]
+    },
+    {
         "versao": "23.59.68",
         "itens": [
             {

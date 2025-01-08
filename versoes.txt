@@ -1,5 +1,30 @@
 [
     {
+        "versao": "24.64.3",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ortogr\u00e1fico na mensagem de anivers\u00e1rios",
+                "referencia": [
+                    "BPM32481"
+                ],
+                "modulo": "Home",
+                "hash": "6dd74ebad7921f57347f62d6f69f6fb53a16604d",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM32481"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na exibi\u00e7\u00e3o de texto SQL na edi\u00e7\u00e3o de consulta de integra\u00e7\u00e3o",
+                "referencia": [
+                    "BPM32108"
+                ],
+                "modulo": "Processos",
+                "hash": "6dd74ebad7921f57347f62d6f69f6fb53a16604d",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM32108"
+            }
+        ]
+    },
+    {
         "versao": "24.64.2",
         "itens": [
             {

@@ -1,5 +1,30 @@
 [
     {
+        "versao": "24.64.4",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na rotina de consulta de integra\u00e7\u00e3o",
+                "referencia": [
+                    "BPM32504"
+                ],
+                "modulo": "Processos",
+                "hash": "e9842680b61a8f103a6749d072bd645d11c01a62",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM32504"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajustes na valida\u00e7\u00e3o de campos obrigat\u00f3rios em formul\u00e1rios customizados",
+                "referencia": [
+                    "BPM32454"
+                ],
+                "modulo": "Cadastros",
+                "hash": "e452010d880e510080aa3b4a4d6463ae8e607bec",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM32454"
+            }
+        ]
+    },
+    {
         "versao": "24.64.3",
         "itens": [
             {

@@ -1,5 +1,40 @@
 [
     {
+        "versao": "24.65.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Adicionadas colunas \"Bloqueado\", \"Possui Restri\u00e7\u00e3o\" e \"Efetivado\" para clientes, organiza\u00e7\u00f5es e fornecedores.",
+                "referencia": [
+                    "CHM74280"
+                ],
+                "modulo": "Geral",
+                "hash": "e94740a4678b153428fe9d47f82844ae18bbf99b",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/CHM74280"
+            },
+            {
+                "tipo": "C",
+                "descricao": "PDCA cadastro de equipe",
+                "referencia": [
+                    "BPM32819"
+                ],
+                "modulo": "PDCA",
+                "hash": "b722344e40737793b092fef822fda42ef00fa3e4",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM32819"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Op\u00e7\u00e3o \"Oculto\" de campos de tabela n\u00e3o est\u00e1 funcionando.",
+                "referencia": [
+                    "BPM32107"
+                ],
+                "modulo": "Processos",
+                "hash": "3fc1429a5caf55072265e6e6ce5b4001fdcd7ab6",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM32107"
+            }
+        ]
+    },
+    {
         "versao": "24.64.5",
         "itens": [
             {

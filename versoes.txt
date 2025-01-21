@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.64.5",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na rotina de verifica\u00e7\u00e3o de permiss\u00e3o de anexos em chamados",
+                "referencia": [
+                    "BPM32111"
+                ],
+                "modulo": "Chamados",
+                "hash": "51632e4b04ddd71ffeb772c8b36af290c929de99",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM32111"
+            }
+        ]
+    },
+    {
         "versao": "24.64.4",
         "itens": [
             {

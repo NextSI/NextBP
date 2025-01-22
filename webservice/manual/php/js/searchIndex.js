@@ -11731,6 +11731,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Parametro-Compartilhado-DAO.html#method_get_CRM"
         },                {
+            "fqsen": "\\Parametro_Compartilhado_DAO\u003A\u003Aset_PROCESSO\u0028\u0029",
+            "name": "set_PROCESSO",
+            "summary": "",
+            "url": "classes/Parametro-Compartilhado-DAO.html#method_set_PROCESSO"
+        },                {
+            "fqsen": "\\Parametro_Compartilhado_DAO\u003A\u003Aget_PROCESSO\u0028\u0029",
+            "name": "get_PROCESSO",
+            "summary": "",
+            "url": "classes/Parametro-Compartilhado-DAO.html#method_get_PROCESSO"
+        },                {
             "fqsen": "\\Parametro_Compartilhado_DAO\u003A\u003Acontroller\u0028\u0029",
             "name": "controller",
             "summary": "",
@@ -19981,6 +19991,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Categoria-Processos-Model.html#method_validation"
         },                {
+            "fqsen": "\\Categoria_Processos_Model\u003A\u003A\u0024empresa_filial_id",
+            "name": "empresa_filial_id",
+            "summary": "",
+            "url": "classes/Categoria-Processos-Model.html#property_empresa_filial_id"
+        },                {
             "fqsen": "\\Categoria_Processos_Model\u003A\u003A\u0024nome",
             "name": "nome",
             "summary": "",
@@ -25616,6 +25631,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Etiqueta-Model.html#method_validation"
         },                {
+            "fqsen": "\\Etiqueta_Model\u003A\u003A\u0024empresa_filial_id",
+            "name": "empresa_filial_id",
+            "summary": "",
+            "url": "classes/Etiqueta-Model.html#property_empresa_filial_id"
+        },                {
             "fqsen": "\\Etiqueta_Model\u003A\u003A\u0024pai_tabela",
             "name": "pai_tabela",
             "summary": "",
@@ -26070,6 +26090,11 @@ Search.appendIndex(
             "name": "FORMULARIO_TABELA_TIPO_LINHA_EXATO",
             "summary": "",
             "url": "classes/Formulario-Model.html#constant_FORMULARIO_TABELA_TIPO_LINHA_EXATO"
+        },                {
+            "fqsen": "\\Formulario_Model\u003A\u003A\u0024empresa_filial_id",
+            "name": "empresa_filial_id",
+            "summary": "",
+            "url": "classes/Formulario-Model.html#property_empresa_filial_id"
         },                {
             "fqsen": "\\Formulario_Model\u003A\u003A\u0024nome",
             "name": "nome",
@@ -31301,6 +31326,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Parametro-Compartilhado-Model.html#constant_EMPENHO"
         },                {
+            "fqsen": "\\Parametro_Compartilhado_Model\u003A\u003APROCESSO",
+            "name": "PROCESSO",
+            "summary": "",
+            "url": "classes/Parametro-Compartilhado-Model.html#constant_PROCESSO"
+        },                {
             "fqsen": "\\Parametro_Consulta_Integracao_Model",
             "name": "Parametro_Consulta_Integracao_Model",
             "summary": "",
@@ -32140,6 +32170,11 @@ Search.appendIndex(
             "name": "PROCESSO_PERIODICIDADE_SABADO",
             "summary": "",
             "url": "classes/Processo-Model.html#constant_PROCESSO_PERIODICIDADE_SABADO"
+        },                {
+            "fqsen": "\\Processo_Model\u003A\u003A\u0024empresa_filial_id",
+            "name": "empresa_filial_id",
+            "summary": "",
+            "url": "classes/Processo-Model.html#property_empresa_filial_id"
         },                {
             "fqsen": "\\Processo_Model\u003A\u003A\u0024nome",
             "name": "nome",
@@ -34301,6 +34336,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Solicitacao-Model.html#constant_TIPO_LISTAGEM_KANBAN"
         },                {
+            "fqsen": "\\Solicitacao_Model\u003A\u003A\u0024empresa_filial_id",
+            "name": "empresa_filial_id",
+            "summary": "",
+            "url": "classes/Solicitacao-Model.html#property_empresa_filial_id"
+        },                {
             "fqsen": "\\Solicitacao_Model\u003A\u003A\u0024usuario_id",
             "name": "usuario_id",
             "summary": "",
@@ -35355,6 +35395,11 @@ Search.appendIndex(
             "name": "validation",
             "summary": "",
             "url": "classes/Solicitacao-Template-Word-Model.html#method_validation"
+        },                {
+            "fqsen": "\\Solicitacao_Template_Word_Model\u003A\u003A\u0024empresa_filial_id",
+            "name": "empresa_filial_id",
+            "summary": "",
+            "url": "classes/Solicitacao-Template-Word-Model.html#property_empresa_filial_id"
         },                {
             "fqsen": "\\Solicitacao_Template_Word_Model\u003A\u003A\u0024nome",
             "name": "nome",

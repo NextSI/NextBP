@@ -1,5 +1,60 @@
 [
     {
+        "versao": "23.59.70",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "PDCA cadastro de equipe",
+                "referencia": [
+                    "BPM32819"
+                ],
+                "modulo": "PDCA",
+                "hash": "1a50c3eaae003f5a355dce3079a8aa2e51ffcf43",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM32819"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajustes na valida\u00e7\u00e3o de campos obrigat\u00f3rios em formul\u00e1rios customizados",
+                "referencia": [
+                    "BPM32454"
+                ],
+                "modulo": "Cadastros",
+                "hash": "f6a0b2388334c795a93fd27474158b1e6cd6e1e3",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM32454"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na rotina de verifica\u00e7\u00e3o de permiss\u00e3o de anexos em chamados",
+                "referencia": [
+                    "BPM32111"
+                ],
+                "modulo": "Chamados",
+                "hash": "977d24df67839f0c04a7ae77a89dd2847cd516ca",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM32111"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Op\u00e7\u00e3o \"Oculto\" de campos de tabela n\u00e3o est\u00e1 funcionando.",
+                "referencia": [
+                    "BPM32107"
+                ],
+                "modulo": "Processos",
+                "hash": "8fab17851e562a053a0ef05c6d85190da7490a1e",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM32107"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Quadro - Reorganiza\u00e7\u00e3o de Listas (Colunas) n\u00e3o respeita a opera\u00e7\u00e3o realizada",
+                "referencia": [
+                    "BPM31934"
+                ],
+                "modulo": "Tarefas",
+                "hash": "d04287f54a5c9390ffe03eab06575963552700e7",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM31934"
+            }
+        ]
+    },
+    {
         "versao": "23.59.69",
         "itens": [
             {

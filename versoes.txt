@@ -1,5 +1,40 @@
 [
     {
+        "versao": "24.66.1",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Quadro - Reorganiza\u00e7\u00e3o de Listas (Colunas) n\u00e3o respeita a opera\u00e7\u00e3o realizada",
+                "referencia": [
+                    "BPM31934"
+                ],
+                "modulo": "Tarefas",
+                "hash": "240bdcdf361a1dd78d2f387a832c74a4e3a218f5",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM31934"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Compartilhamento de tabelas do m\u00f3dulo processos",
+                "referencia": [
+                    "BPM24534"
+                ],
+                "modulo": "Processos",
+                "hash": "a6b21e2f84d28f3aa2d38530069f9602d9f496d3",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM24534"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Adicionada coluna \"Etiquetas\" nas listagens de solicita\u00e7\u00f5es",
+                "referencia": [
+                    "BPM24534"
+                ],
+                "modulo": "Processos",
+                "hash": "a6b21e2f84d28f3aa2d38530069f9602d9f496d3",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM24534-1"
+            }
+        ]
+    },
+    {
         "versao": "24.65.1",
         "itens": [
             {

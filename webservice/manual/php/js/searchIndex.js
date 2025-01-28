@@ -9651,6 +9651,21 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Log-Documento-DAO.html#constant_RESTAURADO"
         },                {
+            "fqsen": "\\Log_Processo_DAO",
+            "name": "Log_Processo_DAO",
+            "summary": "",
+            "url": "classes/Log-Processo-DAO.html"
+        },                {
+            "fqsen": "\\Log_Processo_DAO\u003A\u003Asalvar\u0028\u0029",
+            "name": "salvar",
+            "summary": "",
+            "url": "classes/Log-Processo-DAO.html#method_salvar"
+        },                {
+            "fqsen": "\\Log_Processo_DAO\u003A\u003Alistar\u0028\u0029",
+            "name": "listar",
+            "summary": "",
+            "url": "classes/Log-Processo-DAO.html#method_listar"
+        },                {
             "fqsen": "\\Mensagem_DAO",
             "name": "Mensagem_DAO",
             "summary": "",
@@ -12465,6 +12480,11 @@ Search.appendIndex(
             "name": "listar",
             "summary": "Listagem\u0020dos\u0020projetos",
             "url": "classes/Projeto-DAO.html#method_listar"
+        },                {
+            "fqsen": "\\Projeto_DAO\u003A\u003Alistar_dados_complementares\u0028\u0029",
+            "name": "listar_dados_complementares",
+            "summary": "",
+            "url": "classes/Projeto-DAO.html#method_listar_dados_complementares"
         },                {
             "fqsen": "\\Projeto_DAO\u003A\u003Alistar_apontamentos\u0028\u0029",
             "name": "listar_apontamentos",
@@ -18506,6 +18526,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Atividade-Projeto-Model.html#property_chamado_responsavel_anterior"
         },                {
+            "fqsen": "\\Atividade_Projeto_Model\u003A\u003A\u0024codigo_pai",
+            "name": "codigo_pai",
+            "summary": "",
+            "url": "classes/Atividade-Projeto-Model.html#property_codigo_pai"
+        },                {
+            "fqsen": "\\Atividade_Projeto_Model\u003A\u003A\u0024gerado",
+            "name": "gerado",
+            "summary": "",
+            "url": "classes/Atividade-Projeto-Model.html#property_gerado"
+        },                {
             "fqsen": "\\Atividade_Projeto_Tarefa_Model",
             "name": "Atividade_Projeto_Tarefa_Model",
             "summary": "",
@@ -18645,6 +18675,16 @@ Search.appendIndex(
             "name": "equipe_projeto",
             "summary": "",
             "url": "classes/Atividade-Sintetica-Projeto-Model.html#property_equipe_projeto"
+        },                {
+            "fqsen": "\\Atividade_Sintetica_Projeto_Model\u003A\u003A\u0024classificacao_projeto_atividade_id",
+            "name": "classificacao_projeto_atividade_id",
+            "summary": "",
+            "url": "classes/Atividade-Sintetica-Projeto-Model.html#property_classificacao_projeto_atividade_id"
+        },                {
+            "fqsen": "\\Atividade_Sintetica_Projeto_Model\u003A\u003A\u0024gerado",
+            "name": "gerado",
+            "summary": "",
+            "url": "classes/Atividade-Sintetica-Projeto-Model.html#property_gerado"
         },                {
             "fqsen": "\\Atuacao_Efetiva_Model",
             "name": "Atuacao_Efetiva_Model",
@@ -28446,6 +28486,51 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Log-Documento-Model.html#property_documento_pasta_destino_id"
         },                {
+            "fqsen": "\\Log_Processo_Model",
+            "name": "Log_Processo_Model",
+            "summary": "",
+            "url": "classes/Log-Processo-Model.html"
+        },                {
+            "fqsen": "\\Log_Processo_Model\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Construtor\u0020do\u0020Parametro_Compartilhado",
+            "url": "classes/Log-Processo-Model.html#method___construct"
+        },                {
+            "fqsen": "\\Log_Processo_Model\u003A\u003Avalidation\u0028\u0029",
+            "name": "validation",
+            "summary": "Valida\u00E7\u00E3o\u0020dos\u0020dados\u0020do\u0020model\nVerifica\u0020se\u0020o\u0020valor\u0020das\u0020vari\u00E1veis\u0020do\u0020model\u0020est\u00E1\u0020v\u00E1lidos",
+            "url": "classes/Log-Processo-Model.html#method_validation"
+        },                {
+            "fqsen": "\\Log_Processo_Model\u003A\u003APROCESSO_ACAO_INCLUIDO",
+            "name": "PROCESSO_ACAO_INCLUIDO",
+            "summary": "",
+            "url": "classes/Log-Processo-Model.html#constant_PROCESSO_ACAO_INCLUIDO"
+        },                {
+            "fqsen": "\\Log_Processo_Model\u003A\u003APROCESSO_ACAO_ALTERADO",
+            "name": "PROCESSO_ACAO_ALTERADO",
+            "summary": "",
+            "url": "classes/Log-Processo-Model.html#constant_PROCESSO_ACAO_ALTERADO"
+        },                {
+            "fqsen": "\\Log_Processo_Model\u003A\u003APROCESSO_ACAO_EXCLUIDO",
+            "name": "PROCESSO_ACAO_EXCLUIDO",
+            "summary": "",
+            "url": "classes/Log-Processo-Model.html#constant_PROCESSO_ACAO_EXCLUIDO"
+        },                {
+            "fqsen": "\\Log_Processo_Model\u003A\u003APROCESSO_OPERACAO_ATIVIDADE",
+            "name": "PROCESSO_OPERACAO_ATIVIDADE",
+            "summary": "",
+            "url": "classes/Log-Processo-Model.html#constant_PROCESSO_OPERACAO_ATIVIDADE"
+        },                {
+            "fqsen": "\\Log_Processo_Model\u003A\u003APROCESSO_OPERACAO_GATEWAY",
+            "name": "PROCESSO_OPERACAO_GATEWAY",
+            "summary": "",
+            "url": "classes/Log-Processo-Model.html#constant_PROCESSO_OPERACAO_GATEWAY"
+        },                {
+            "fqsen": "\\Log_Processo_Model\u003A\u003APROCESSO_OPERACAO_SUPERVISORES",
+            "name": "PROCESSO_OPERACAO_SUPERVISORES",
+            "summary": "",
+            "url": "classes/Log-Processo-Model.html#constant_PROCESSO_OPERACAO_SUPERVISORES"
+        },                {
             "fqsen": "\\Mensagem_Model",
             "name": "Mensagem_Model",
             "summary": "Estrutura\u0020de\u0020dados\u0020de\u0020uma\u0020\u00C1rea",
@@ -32535,6 +32620,31 @@ Search.appendIndex(
             "name": "atividade_responsavel_automatico_id",
             "summary": "",
             "url": "classes/Processo-Gateway-Model.html#property_atividade_responsavel_automatico_id"
+        },                {
+            "fqsen": "\\Processo_Gateway_Model\u003A\u003A\u0024alterado",
+            "name": "alterado",
+            "summary": "",
+            "url": "classes/Processo-Gateway-Model.html#property_alterado"
+        },                {
+            "fqsen": "\\Processo_Gateway_Model\u003A\u003A\u0024permissoes_formulario",
+            "name": "permissoes_formulario",
+            "summary": "",
+            "url": "classes/Processo-Gateway-Model.html#property_permissoes_formulario"
+        },                {
+            "fqsen": "\\Processo_Gateway_Model\u003A\u003A\u0024evento_enviar",
+            "name": "evento_enviar",
+            "summary": "",
+            "url": "classes/Processo-Gateway-Model.html#property_evento_enviar"
+        },                {
+            "fqsen": "\\Processo_Gateway_Model\u003A\u003A\u0024filtro_evento_enviar",
+            "name": "filtro_evento_enviar",
+            "summary": "",
+            "url": "classes/Processo-Gateway-Model.html#property_filtro_evento_enviar"
+        },                {
+            "fqsen": "\\Processo_Gateway_Model\u003A\u003A\u0024tipo_automacao",
+            "name": "tipo_automacao",
+            "summary": "",
+            "url": "classes/Processo-Gateway-Model.html#property_tipo_automacao"
         },                {
             "fqsen": "\\Projeto_Model",
             "name": "Projeto_Model",

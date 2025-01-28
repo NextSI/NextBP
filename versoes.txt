@@ -1,5 +1,40 @@
 [
     {
+        "versao": "24.67.1",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na Importa\u00e7\u00e3o de Template de Projeto",
+                "referencia": [
+                    "BPM32404"
+                ],
+                "modulo": "Projetos",
+                "hash": "fc9a92c6f40e4f1fea5dd05b19a623111bcf6441",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM32404"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste perform\u00e1tico na listagem de projetos",
+                "referencia": [
+                    "BPM31310"
+                ],
+                "modulo": "Projetos",
+                "hash": "09972bc3f41cdccfcd68c9bf5e069bb56993e1da",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM31310"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Criar um hist\u00f3rico que seja poss\u00edvel verificar inclus\u00e3o e exclus\u00e3o de supervisores",
+                "referencia": [
+                    "BPM27130"
+                ],
+                "modulo": "Processos",
+                "hash": "c1b3c4e58c8e9d1cdb493fefea09d02e47c59131",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM27130"
+            }
+        ]
+    },
+    {
         "versao": "24.66.1",
         "itens": [
             {

@@ -100,3 +100,63 @@ jobs:
         -H "Content-Type: application/json" \
         -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
         -d '{"status": "success", "message": "FTP deploy complete"}'
+        
+    - name: 📂 Sync files 000348 Hlg
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
+        username: ${{ secrets.FTP_USERNAME_000348 }}
+        password: ${{ secrets.FTP_PASSWORD_000348 }}
+        server-dir: ./homolog/
+
+    - name: 🔗 Call API after deploy 000348 Hlg
+      run: |
+        curl -X POST ${{ secrets.FTP_URL_DBU_000348_HLG }} \
+        -H "Content-Type: application/json" \
+        -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
+        -d '{"status": "success", "message": "FTP deploy complete"}'
+
+    - name: 📂 Sync files 000348
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
+        username: ${{ secrets.FTP_USERNAME_000348 }}
+        password: ${{ secrets.FTP_PASSWORD_000348 }}
+        server-dir: ./
+
+    - name: 🔗 Call API after deploy 000348
+      run: |
+        curl -X POST ${{ secrets.FTP_URL_DBU_000348 }} \
+        -H "Content-Type: application/json" \
+        -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
+        -d '{"status": "success", "message": "FTP deploy complete"}'
+
+    - name: 📂 Sync files 000353 Hlg
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
+        username: ${{ secrets.FTP_USERNAME_000353 }}
+        password: ${{ secrets.FTP_PASSWORD_000353 }}
+        server-dir: ./homolog/
+
+    - name: 🔗 Call API after deploy 000353 Hlg
+      run: |
+        curl -X POST ${{ secrets.FTP_URL_DBU_000353_HLG }} \
+        -H "Content-Type: application/json" \
+        -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
+        -d '{"status": "success", "message": "FTP deploy complete"}'
+
+    - name: 📂 Sync files 000353
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
+        username: ${{ secrets.FTP_USERNAME_000353 }}
+        password: ${{ secrets.FTP_PASSWORD_000353 }}
+        server-dir: ./
+
+    - name: 🔗 Call API after deploy 000353
+      run: |
+        curl -X POST ${{ secrets.FTP_URL_DBU_000353 }} \
+        -H "Content-Type: application/json" \
+        -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
+        -d '{"status": "success", "message": "FTP deploy complete"}'

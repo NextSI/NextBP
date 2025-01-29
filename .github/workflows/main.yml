@@ -70,3 +70,33 @@ jobs:
         -H "Content-Type: application/json" \
         -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
         -d '{"status": "success", "message": "FTP deploy complete"}'
+
+    - name: 📂 Sync files 000347 Hlg
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
+        username: ${{ secrets.FTP_USERNAME_000347 }}
+        password: ${{ secrets.FTP_PASSWORD_000347 }}
+        server-dir: ./homolog/
+
+    - name: 🔗 Call API after deploy 000347 Hlg
+      run: |
+        curl -X POST ${{ secrets.FTP_URL_DBU_000347_HLG }} \
+        -H "Content-Type: application/json" \
+        -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
+        -d '{"status": "success", "message": "FTP deploy complete"}'
+
+    - name: 📂 Sync files 000347
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
+        username: ${{ secrets.FTP_USERNAME_000347 }}
+        password: ${{ secrets.FTP_PASSWORD_000347 }}
+        server-dir: ./
+
+    - name: 🔗 Call API after deploy 000347
+      run: |
+        curl -X POST ${{ secrets.FTP_URL_DBU_000347 }} \
+        -H "Content-Type: application/json" \
+        -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
+        -d '{"status": "success", "message": "FTP deploy complete"}'

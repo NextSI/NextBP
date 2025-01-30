@@ -21,7 +21,7 @@ jobs:
 
     - name: 🔗 Call API after deploy PortalHomolog
       run: |
-        curl -X POST ${{ secrets.FTP_URL_DBU_HOMOLOG }} \
+        curl -f -X POST "${{ secrets.FTP_URL_DBU_HOMOLOG }}${{ secrets.SUFIXO_DBU_API }}" \
         -H "Content-Type: application/json" \
         -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
         -d '{"status": "success", "message": "FTP deploy complete"}'
@@ -36,7 +36,7 @@ jobs:
 
     - name: 🔗 Call API after deploy PortalProd
       run: |
-        curl -X POST ${{ secrets.FTP_URL_DBU_PROD }} \
+        curl -X POST "${{ secrets.FTP_URL_DBU_PROD }}${{ secrets.SUFIXO_DBU_API }}" \
         -H "Content-Type: application/json" \
         -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
         -d '{"status": "success", "message": "FTP deploy complete"}'
@@ -51,7 +51,7 @@ jobs:
 
     - name: 🔗 Call API after deploy 000205 Hlg
       run: |
-        curl -X POST ${{ secrets.FTP_URL_DBU_000205_HLG }} \
+        curl -X POST "${{ secrets.FTP_URL_DBU_000205_HLG }}${{ secrets.SUFIXO_DBU_API }}" \
         -H "Content-Type: application/json" \
         -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
         -d '{"status": "success", "message": "FTP deploy complete"}'
@@ -66,7 +66,7 @@ jobs:
 
     - name: 🔗 Call API after deploy 000205
       run: |
-        curl -X POST ${{ secrets.FTP_URL_DBU_000205 }} \
+        curl -X POST "${{ secrets.FTP_URL_DBU_000205 }}${{ secrets.SUFIXO_DBU_API }}" \
         -H "Content-Type: application/json" \
         -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
         -d '{"status": "success", "message": "FTP deploy complete"}'
@@ -81,7 +81,7 @@ jobs:
 
     - name: 🔗 Call API after deploy 000347 Hlg
       run: |
-        curl -X POST ${{ secrets.FTP_URL_DBU_000347_HLG }} \
+        curl -X POST "${{ secrets.FTP_URL_DBU_000347_HLG }}${{ secrets.SUFIXO_DBU_API }}" \
         -H "Content-Type: application/json" \
         -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
         -d '{"status": "success", "message": "FTP deploy complete"}'
@@ -96,7 +96,7 @@ jobs:
 
     - name: 🔗 Call API after deploy 000347
       run: |
-        curl -X POST ${{ secrets.FTP_URL_DBU_000347 }} \
+        curl -X POST "${{ secrets.FTP_URL_DBU_000347 }}${{ secrets.SUFIXO_DBU_API }}" \
         -H "Content-Type: application/json" \
         -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
         -d '{"status": "success", "message": "FTP deploy complete"}'
@@ -111,7 +111,7 @@ jobs:
 
     - name: 🔗 Call API after deploy 000348 Hlg
       run: |
-        curl -X POST ${{ secrets.FTP_URL_DBU_000348_HLG }} \
+        curl -X POST "${{ secrets.FTP_URL_DBU_000348_HLG }}${{ secrets.SUFIXO_DBU_API }}" \
         -H "Content-Type: application/json" \
         -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
         -d '{"status": "success", "message": "FTP deploy complete"}'
@@ -126,7 +126,7 @@ jobs:
 
     - name: 🔗 Call API after deploy 000348
       run: |
-        curl -X POST ${{ secrets.FTP_URL_DBU_000348 }} \
+        curl -X POST "${{ secrets.FTP_URL_DBU_000348 }}${{ secrets.SUFIXO_DBU_API }}" \
         -H "Content-Type: application/json" \
         -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
         -d '{"status": "success", "message": "FTP deploy complete"}'
@@ -141,7 +141,7 @@ jobs:
 
     - name: 🔗 Call API after deploy 000353 Hlg
       run: |
-        curl -X POST ${{ secrets.FTP_URL_DBU_000353_HLG }} \
+        curl -X POST "${{ secrets.FTP_URL_DBU_000353_HLG }}${{ secrets.SUFIXO_DBU_API }}" \
         -H "Content-Type: application/json" \
         -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
         -d '{"status": "success", "message": "FTP deploy complete"}'
@@ -156,7 +156,7 @@ jobs:
 
     - name: 🔗 Call API after deploy 000353
       run: |
-        curl -X POST ${{ secrets.FTP_URL_DBU_000353 }} \
+        curl -X POST "${{ secrets.FTP_URL_DBU_000353 }}${{ secrets.SUFIXO_DBU_API }}" \
         -H "Content-Type: application/json" \
         -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
         -d '{"status": "success", "message": "FTP deploy complete"}'

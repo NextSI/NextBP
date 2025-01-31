@@ -17661,6 +17661,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Apontamento-Projeto-Model.html#property_chamado_entidade_nome"
         },                {
+            "fqsen": "\\Apontamento_Projeto_Model\u003A\u003A\u0024porcentagem",
+            "name": "porcentagem",
+            "summary": "",
+            "url": "classes/Apontamento-Projeto-Model.html#property_porcentagem"
+        },                {
+            "fqsen": "\\Apontamento_Projeto_Model\u003A\u003A\u0024antes",
+            "name": "antes",
+            "summary": "",
+            "url": "classes/Apontamento-Projeto-Model.html#property_antes"
+        },                {
             "fqsen": "\\Apontamento_Projeto_Atividade_Model",
             "name": "Apontamento_Projeto_Atividade_Model",
             "summary": "",

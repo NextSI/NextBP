@@ -2656,21 +2656,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Central-Pendencias-Processo-Solicitacao-Atividade-DAO.html#method_reprocessar"
         },                {
-            "fqsen": "\\Central_Pendencias_Projeto_DAO",
-            "name": "Central_Pendencias_Projeto_DAO",
-            "summary": "",
-            "url": "classes/Central-Pendencias-Projeto-DAO.html"
-        },                {
-            "fqsen": "\\Central_Pendencias_Projeto_DAO\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/Central-Pendencias-Projeto-DAO.html#method___construct"
-        },                {
-            "fqsen": "\\Central_Pendencias_Projeto_DAO\u003A\u003Aprocessar\u0028\u0029",
-            "name": "processar",
-            "summary": "",
-            "url": "classes/Central-Pendencias-Projeto-DAO.html#method_processar"
-        },                {
             "fqsen": "\\Central_Pendencias_Projeto_Atividade_DAO",
             "name": "Central_Pendencias_Projeto_Atividade_DAO",
             "summary": "",
@@ -5641,6 +5626,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Documento-Distribuicao-Controlada-DAO.html#method_preencher"
         },                {
+            "fqsen": "\\Documento_Distribuicao_Controlada_DAO\u003A\u003Ausuarios_distribuicao_manual\u0028\u0029",
+            "name": "usuarios_distribuicao_manual",
+            "summary": "",
+            "url": "classes/Documento-Distribuicao-Controlada-DAO.html#method_usuarios_distribuicao_manual"
+        },                {
             "fqsen": "\\Documento_Motivo_Bloqueio_DAO",
             "name": "Documento_Motivo_Bloqueio_DAO",
             "summary": "Realiza\u0020a\u0020persist\u00EAncia\u0020e\u0020consultas\u0020de\u0020dados\u0020relacionados\u0020\u00E0\u0020Motivo\u0020de\u0020Bloqueio.",
@@ -6165,6 +6155,11 @@ Search.appendIndex(
             "name": "girar_imagem",
             "summary": "",
             "url": "classes/Documento-Revisao-DAO.html#method_girar_imagem"
+        },                {
+            "fqsen": "\\Documento_Revisao_DAO\u003A\u003Adistribuir_revisao\u0028\u0029",
+            "name": "distribuir_revisao",
+            "summary": "",
+            "url": "classes/Documento-Revisao-DAO.html#method_distribuir_revisao"
         },                {
             "fqsen": "\\Documento_Revisao_Assinatura_DAO",
             "name": "Documento_Revisao_Assinatura_DAO",
@@ -24446,6 +24441,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Documento-Distribuicao-Controlada-Model.html#property_data_confirmacao"
         },                {
+            "fqsen": "\\Documento_Distribuicao_Controlada_Model\u003A\u003A\u0024local_distribuicao_id",
+            "name": "local_distribuicao_id",
+            "summary": "",
+            "url": "classes/Documento-Distribuicao-Controlada-Model.html#property_local_distribuicao_id"
+        },                {
             "fqsen": "\\Documento_Motivo_Bloqueio_Model",
             "name": "Documento_Motivo_Bloqueio_Model",
             "summary": "Estrutura\u0020de\u0020dados\u0020de\u0020uma\u0020\u00C1rea",
@@ -34370,6 +34370,11 @@ Search.appendIndex(
             "name": "validation",
             "summary": "",
             "url": "classes/Solicitacao-Model.html#method_validation"
+        },                {
+            "fqsen": "\\Solicitacao_Model\u003A\u003Asituacao_str\u0028\u0029",
+            "name": "situacao_str",
+            "summary": "",
+            "url": "classes/Solicitacao-Model.html#method_situacao_str"
         },                {
             "fqsen": "\\Solicitacao_Model\u003A\u003AMINHAS_ATIVIDADES_PENDENTES",
             "name": "MINHAS_ATIVIDADES_PENDENTES",

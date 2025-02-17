@@ -1,5 +1,30 @@
 [
     {
+        "versao": "23.59.72",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o obrigatoriedade do c\u00f3digo na cria\u00e7\u00e3o de pastas",
+                "referencia": [
+                    "BPM33755"
+                ],
+                "modulo": "Documentos",
+                "hash": "18e8243e54e4c61655e12417b1f2751b47b3b3ad",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM33755"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na Edi\u00e7\u00e3o do Cabe\u00e7alho de Projetos",
+                "referencia": [
+                    "BPM31497"
+                ],
+                "modulo": "Projetos",
+                "hash": "cf0fb2a3c57e46ffe76bf3f759e7ba498ed46a39",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM31497"
+            }
+        ]
+    },
+    {
         "versao": "23.59.71",
         "itens": [
             {

@@ -2726,21 +2726,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Central-Pendencias-Processo-Solicitacao-Atividade-DAO.html#method_reprocessar"
         },                {
-            "fqsen": "\\Central_Pendencias_Projeto_DAO",
-            "name": "Central_Pendencias_Projeto_DAO",
-            "summary": "",
-            "url": "classes/Central-Pendencias-Projeto-DAO.html"
-        },                {
-            "fqsen": "\\Central_Pendencias_Projeto_DAO\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/Central-Pendencias-Projeto-DAO.html#method___construct"
-        },                {
-            "fqsen": "\\Central_Pendencias_Projeto_DAO\u003A\u003Aprocessar\u0028\u0029",
-            "name": "processar",
-            "summary": "",
-            "url": "classes/Central-Pendencias-Projeto-DAO.html#method_processar"
-        },                {
             "fqsen": "\\Central_Pendencias_Projeto_Atividade_DAO",
             "name": "Central_Pendencias_Projeto_Atividade_DAO",
             "summary": "",

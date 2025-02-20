@@ -881,7 +881,8 @@
             "filtro_responsavel": "Filtrar por responsável",
             "filtro_etiqueta": "Filtrar por etiqueta",
             "filtro_situacao": "Filtrar por situação",
-            "formulario_vinculado": "Formulário Vínculado"
+            "formulario_vinculado": "Formulário Vínculado",
+            "duplicar_quadro": "Duplicar Quadro"
         },
 
         "documento": {

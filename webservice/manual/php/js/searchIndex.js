@@ -14746,6 +14746,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tarefa-Quadro-DAO.html#method_valida_particular"
         },                {
+            "fqsen": "\\Tarefa_Quadro_DAO\u003A\u003Aduplicar_quadro\u0028\u0029",
+            "name": "duplicar_quadro",
+            "summary": "",
+            "url": "classes/Tarefa-Quadro-DAO.html#method_duplicar_quadro"
+        },                {
             "fqsen": "\\Tarefa_Quadro_Lista_DAO",
             "name": "Tarefa_Quadro_Lista_DAO",
             "summary": "Realiza\u0020a\u0020persist\u00EAncia\u0020e\u0020consultas\u0020de\u0020dados\u0020relacionados\u0020\u00E0\u0020Lista.",

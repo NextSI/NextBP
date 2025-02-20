@@ -1,5 +1,50 @@
 [
     {
+        "versao": "24.70.1",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste no fluxo de processos envolvendo gateways",
+                "referencia": [
+                    "CHM74317"
+                ],
+                "modulo": "Nome do M\u00f3dulo",
+                "hash": "9b5d84072be1545e243a836353d63ea63c8df033",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/CHM74317"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Altera\u00e7\u00e3o na op\u00e7\u00e3o Permitir Abertura Manual para processos",
+                "referencia": [
+                    "BPM32839"
+                ],
+                "modulo": "Processos",
+                "hash": "fa7edeefa7bbc424bedb442ac318254eb9a5e7ce",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM32839"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na ordena\u00e7\u00e3o do Gr\u00e1fico de Gantt",
+                "referencia": [
+                    "BPM32747"
+                ],
+                "modulo": "Projetos",
+                "hash": "45eff7657b01f5c2fa9a2f97c8d849b55a709319",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM32747"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Bot\u00e3o para clonagem de quadros de tarefas",
+                "referencia": [
+                    "BPM32078"
+                ],
+                "modulo": "Tarefas",
+                "hash": "8ec37c73ef69e35eac102589b529497619929b5e",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM32078"
+            }
+        ]
+    },
+    {
         "versao": "24.69.1",
         "itens": [
             {

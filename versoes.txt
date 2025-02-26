@@ -1,5 +1,60 @@
 [
     {
+        "versao": "23.59.73",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao realizar download de documento de formul\u00e1rio de processos",
+                "referencia": [
+                    "CHM74545"
+                ],
+                "modulo": "Processos",
+                "hash": "7a37d2b18de4f5bb23fa4d994d81b3120b838e4d",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/CHM74545"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste perform\u00e1tico no filtro de atividades de solicita\u00e7\u00f5es via link e refer\u00eancias",
+                "referencia": [
+                    "CHM74484"
+                ],
+                "modulo": "Processo",
+                "hash": "608f990af7297f719b01249827b64752e0be0007",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/CHM74484"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na Sele\u00e7\u00e3o de Representantes",
+                "referencia": [
+                    "BPM34322"
+                ],
+                "modulo": "CRM",
+                "hash": "70a9704c899a9f99fed8049f3e20015cea51bf69",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM34322"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na listagem de pend\u00eancias de supervisionado na Timeline",
+                "referencia": [
+                    "BPM34127"
+                ],
+                "modulo": "Timeline",
+                "hash": "81a0a4d2df928cc3633ef25e59a6a25962326e2c",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM34127"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o acesso ao formul\u00e1rio no PE de cancelamento da solicita\u00e7\u00e3o",
+                "referencia": [
+                    "BPM34017"
+                ],
+                "modulo": "Processos",
+                "hash": "cd7f50dbf058be261e515ee8c84ccaddb36e8548",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM34017"
+            }
+        ]
+    },
+    {
         "versao": "23.59.72",
         "itens": [
             {

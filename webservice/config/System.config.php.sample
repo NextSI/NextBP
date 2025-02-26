@@ -22,6 +22,9 @@ define('APP_DATA', '/var/www/data');
 // Define se a senha nas telas, será oculta ou não
 // define('SENHAS_OCULTAS', true);
 
+// Define se a tela de login exibe as opções de salvar o usuário no navegador
+// define('LOGIN_EXIBIR_OPCAO_SALVAR_USUARIO', true);
+
 // Define se a senha salva na base de dados será no formato MD5
 // define('SENHAS_MD5', true);
 

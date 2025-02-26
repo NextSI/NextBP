@@ -32441,6 +32441,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Solicitacao-Model.html#property_situacao"
         },                {
+            "fqsen": "\\Solicitacao_Model\u003A\u003A\u0024update_hora",
+            "name": "update_hora",
+            "summary": "",
+            "url": "classes/Solicitacao-Model.html#property_update_hora"
+        },                {
+            "fqsen": "\\Solicitacao_Model\u003A\u003A\u0024update_usuario_id",
+            "name": "update_usuario_id",
+            "summary": "",
+            "url": "classes/Solicitacao-Model.html#property_update_usuario_id"
+        },                {
             "fqsen": "\\Solicitacao_Model\u003A\u003A\u0024documento_pasta_id",
             "name": "documento_pasta_id",
             "summary": "",

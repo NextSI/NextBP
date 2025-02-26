@@ -1,5 +1,100 @@
 [
     {
+        "versao": "24.71.1",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao realizar download de documento de formul\u00e1rio de processos",
+                "referencia": [
+                    "CHM74545"
+                ],
+                "modulo": "Processos",
+                "hash": "d6b71e078fdecae1b7ba2439ad06b79b86e9cd76",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/CHM74545"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste perform\u00e1tico no filtro de atividades de solicita\u00e7\u00f5es via link e refer\u00eancias",
+                "referencia": [
+                    "CHM74484"
+                ],
+                "modulo": "Processo",
+                "hash": "e882075d549ccbdd727b53ee054a19445845bdf6",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/CHM74484"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Configura\u00e7\u00e3o para permitir salvar credencias do usu\u00e1rio no navegador",
+                "referencia": [
+                    "CHM74395"
+                ],
+                "modulo": "Geral",
+                "hash": "b7d6ac3e3021055812ad7286744a1dc843ba82d5",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/CHM74395"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na Sele\u00e7\u00e3o de Representantes",
+                "referencia": [
+                    "BPM34322"
+                ],
+                "modulo": "CRM",
+                "hash": "ba8b390fc668a496e0c8fd7c0ab431216cefc135",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM34322"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na exibi\u00e7\u00e3o da Tag Inativo na listagem de processos",
+                "referencia": [
+                    "BPM34131"
+                ],
+                "modulo": "Processos",
+                "hash": "ff18627b850ec10077702d45baae74e26467801b",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM34131"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na listagem de pend\u00eancias de supervisionado na Timeline",
+                "referencia": [
+                    "BPM34127"
+                ],
+                "modulo": "Timeline",
+                "hash": "9deb149a1260f542974287f2375de5d487c12dbc",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM34127"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o acesso ao formul\u00e1rio no PE de cancelamento da solicita\u00e7\u00e3o",
+                "referencia": [
+                    "BPM34017"
+                ],
+                "modulo": "Processos",
+                "hash": "aaa369dea536a11f2aded13fd3e9edc5ea530c26",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM34017"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Inclus\u00e3o de avalia\u00e7\u00f5es de chamados no e-mail de agenda di\u00e1ria",
+                "referencia": [
+                    "BPM33418"
+                ],
+                "modulo": "Chamados",
+                "hash": "caa6a60f6961dee3be57b42e2c8bd2d981500314",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM33418"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Inclus\u00e3o da ordena\u00e7\u00e3o na listagem de etiquetas dentro do m\u00f3dulo de tarefas",
+                "referencia": [
+                    "BPM32786"
+                ],
+                "modulo": "Tarefas",
+                "hash": "acc981f8aa791e9a9b956328dc6b8300cb7af756",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM32786"
+            }
+        ]
+    },
+    {
         "versao": "24.70.1",
         "itens": [
             {

@@ -28,6 +28,9 @@ define('APP_DATA', '/var/www/data');
 // Define se a senha salva na base de dados será no formato MD5
 // define('SENHAS_MD5', true);
 
+// utilizado para exibir o trace no retorno de erros
+define('TRACE_BUSINESS_EXCEPTION', false);
+
 // utilizado para exibir o trace no retorno de erros para um ip externo
 //define('DEBUG_BUSINESS_EXCEPTION', '192.168.1.0');
 

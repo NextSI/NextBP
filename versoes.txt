@@ -1,5 +1,30 @@
 [
     {
+        "versao": "24.71.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na edi\u00e7\u00e3o do atalho de uma pasta",
+                "referencia": [
+                    "BPM34032"
+                ],
+                "modulo": "Documentos",
+                "hash": "f7ce4927051a7d40bf1ce7933d8a35f11752c01f",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM34032"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na exporta\u00e7\u00e3o do XML de Projetos (para MS Project)",
+                "referencia": [
+                    "BPM33781"
+                ],
+                "modulo": "Projetos",
+                "hash": "53bc37352c43b9203dd10f31ea9cd5acf87e1a08",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM33781"
+            }
+        ]
+    },
+    {
         "versao": "24.71.1",
         "itens": [
             {

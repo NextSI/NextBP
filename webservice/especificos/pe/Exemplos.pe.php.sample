@@ -89,6 +89,8 @@ PE::add('solicitacao_atividade_consultar_situacao_gateway_paralelo', function($s
 PE::add('processo_solicitacao_formulario_pdf_antes', function($solicitacao_atividade, $solicitacao, $formulario) { ... });
 
 // Projeto
+PE::add('projeto_salvar_antes', function(&$projeto_model) { ... });
+PE::add('projeto_salvar_depois', function($projeto_model) { ... });
 PE::add('apontamento_projeto_salvar_antes', function($apontamento_projeto_model) { ... });
 PE::add('apontamento_projeto_salvar_depois', function($apontamento_projeto_model) { ... });
 PE::add('apontamento_projeto_dinamico_iniciar_antes', function($atividade_projeto_model) { ... });

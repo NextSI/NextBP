@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title>Next BP 24.71.2</title>
+            <title>Next BP 24.72.1</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../">
@@ -25,7 +25,7 @@
     </head>
 <body id="top">
     <header class="phpdocumentor-header phpdocumentor-section">
-    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">Next BP 24.71.2</a></h1>
+    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">Next BP 24.72.1</a></h1>
     <input class="phpdocumentor-header__menu-button" type="checkbox" id="menu-button" name="menu-button" />
     <label class="phpdocumentor-header__menu-icon" for="menu-button">
         <i class="fas fa-bars"></i>
@@ -588,6 +588,12 @@ Fonte: https://pt.wikipedia.org/wiki/Objeto_de_acesso_a_dados</p>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Atividade-Projeto-DAO.html#method_isExecutor">isExecutor()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Atividade-Projeto-DAO.html#method_lista_executores">lista_executores()</a>
     <span>
                                 &nbsp;: mixed    </span>
@@ -619,6 +625,13 @@ Fonte: https://pt.wikipedia.org/wiki/Objeto_de_acesso_a_dados</p>
 </dt>
 <dd>Função que retorna as baselines geradas dinamicamente para o projeto, da tabela também criada dinamicamente
 A tabela é criada com o nome prj_baseline_ID_DO_PROJETO</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Atividade-Projeto-DAO.html#method_listar_projeto_quadro_atividades">listar_projeto_quadro_atividades()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+<dd>Listagem das atividades do Projetos para exibição no Kanban</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Atividade-Projeto-DAO.html#method_listar_todas_atividades">listar_todas_atividades()</a>
@@ -684,6 +697,12 @@ A tabela é criada com o nome prj_baseline_ID_DO_PROJETO</dd>
 </dt>
 <dd>Preenche o model da atividade
 Função utilizada pelo função popular.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Atividade-Projeto-DAO.html#method_projeto_quadro_atividades">projeto_quadro_atividades()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Sys-Basic.html#method_ReadBodyParams">ReadBodyParams()</a>
@@ -4072,6 +4091,54 @@ Função utilizada pelo função popular.</dd>
         class="phpdocumentor-element
             -method
             -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_isExecutor">
+        isExecutor()
+        <a href="classes/Atividade-Projeto-DAO.html#method_isExecutor" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Atividade_Projeto.dao.php"><a href="files/src-webservice-dao-atividade-projeto-dao.html"><abbr title="src/webservice/dao/Atividade_Projeto.dao.php">Atividade_Projeto.dao.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">6919</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">isExecutor</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$usuario_id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$atividade_projeto_id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$usuario_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$atividade_projeto_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
                                                         "
 >
     <h4 class="phpdocumentor-element__name" id="method_lista_executores">
@@ -4377,6 +4444,90 @@ A tabela é criada com o nome prj_baseline_ID_DO_PROJETO</p>
     
 
     
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_listar_projeto_quadro_atividades">
+        listar_projeto_quadro_atividades()
+        <a href="classes/Atividade-Projeto-DAO.html#method_listar_projeto_quadro_atividades" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Atividade_Projeto.dao.php"><a href="files/src-webservice-dao-atividade-projeto-dao.html"><abbr title="src/webservice/dao/Atividade_Projeto.dao.php">Atividade_Projeto.dao.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">7014</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Listagem das atividades do Projetos para exibição no Kanban</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">listar_projeto_quadro_atividades</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$projeto_id</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$atividade_simplificada</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$responsavel_nome_filtro</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$dx_params</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$status_atividade</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$projeto_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>busca por projeto,
+$atividade_simplificada busca por parte do nome da atividade do Projeto.
+$responsavel_nome_filtro busca pelo nome do executor/ responsável da atividade.
+$dx_params parametros do DevExtreme para paginação.
+$status_atividade Status das atividades a serem listadas.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$atividade_simplificada</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$responsavel_nome_filtro</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$dx_params</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$status_atividade</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Retorno um array com o resultado da consulta</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -5049,6 +5200,82 @@ Função utilizada pelo função popular.</p>
 
             </section>
 
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_projeto_quadro_atividades">
+        projeto_quadro_atividades()
+        <a href="classes/Atividade-Projeto-DAO.html#method_projeto_quadro_atividades" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Atividade_Projeto.dao.php"><a href="files/src-webservice-dao-atividade-projeto-dao.html"><abbr title="src/webservice/dao/Atividade_Projeto.dao.php">Atividade_Projeto.dao.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">6939</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">projeto_quadro_atividades</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$projeto_id</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$atividade_simplificada</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$responsavel_nome_filtro</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$skip</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$take</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$indice_listagem</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$projeto_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$atividade_simplificada</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$responsavel_nome_filtro</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$skip</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$take</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$indice_listagem</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+    
 </article>
                     <article
         class="phpdocumentor-element
@@ -6681,11 +6908,13 @@ Caso o ID seja informado, o sistema irá atualizar o registro.</p>
                                             <li><a href="classes/Atividade-Projeto-DAO.html#method_insert">insert()</a></li>
                                             <li><a href="classes/Atividade-Projeto-DAO.html#method_insert_dxtreelist">insert_dxtreelist()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_instance_token">instance_token()</a></li>
+                                            <li><a href="classes/Atividade-Projeto-DAO.html#method_isExecutor">isExecutor()</a></li>
                                             <li><a href="classes/Atividade-Projeto-DAO.html#method_lista_executores">lista_executores()</a></li>
                                             <li><a href="classes/Atividade-Projeto-DAO.html#method_lista_grupo_executores">lista_grupo_executores()</a></li>
                                             <li><a href="classes/Atividade-Projeto-DAO.html#method_listar">listar()</a></li>
                                             <li><a href="classes/Atividade-Projeto-DAO.html#method_listar_favoritos">listar_favoritos()</a></li>
                                             <li><a href="classes/Atividade-Projeto-DAO.html#method_listar_prj_baselines_atividade">listar_prj_baselines_atividade()</a></li>
+                                            <li><a href="classes/Atividade-Projeto-DAO.html#method_listar_projeto_quadro_atividades">listar_projeto_quadro_atividades()</a></li>
                                             <li><a href="classes/Atividade-Projeto-DAO.html#method_listar_todas_atividades">listar_todas_atividades()</a></li>
                                             <li><a href="classes/Atividade-Projeto-DAO.html#method_listar_todas_atividades_gantt">listar_todas_atividades_gantt()</a></li>
                                             <li><a href="classes/Atividade-Projeto-DAO.html#method_listar_todos_executores">listar_todos_executores()</a></li>
@@ -6696,6 +6925,7 @@ Caso o ID seja informado, o sistema irá atualizar o registro.</p>
                                             <li><a href="classes/Sys-Basic.html#method_LoadPDF">LoadPDF()</a></li>
                                             <li><a href="classes/Atividade-Projeto-DAO.html#method_popular">popular()</a></li>
                                             <li><a href="classes/Atividade-Projeto-DAO.html#method_preencher">preencher()</a></li>
+                                            <li><a href="classes/Atividade-Projeto-DAO.html#method_projeto_quadro_atividades">projeto_quadro_atividades()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_ReadBodyParams">ReadBodyParams()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_ReadDxParams">ReadDxParams()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_ReadFile">ReadFile()</a></li>

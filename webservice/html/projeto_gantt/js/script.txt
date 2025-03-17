@@ -3,7 +3,6 @@ const PROJETO_STATUS = { ANDAMENTO: 1, CONCLUIDO: 2, NAO_INICIADO: 3, CANCELADO:
 const PROJETO_STATUS_ATIVIDADES = { PROGRAMADO: 1, ANDAMENTO: 2, CONCLUIDO: 3, NAO_INICIADO: 4, ATRASADO: 5, CANCELADA: 6 };
 window.onload = function () { renderizarGantt({dadosGantt}) };
 function renderizarGantt(a) { 
-    a = JSON.parse(a);
     DevExpress.localization.locale("pt-BR");
     $("#gantt").dxGantt({
         tasks: { dataSource: a.tasks },
@@ -149,17 +148,6 @@ function renderizarGantt(a) {
 
 			$(taskTitle).appendTo(taskWrapper);
 
-			const taskRow = $("<div>")
-				.addClass("taskRow")
-				.css({
-					padding: '0px',
-					'font-size': '10px',
-					'padding-left': '2px'
-				})
-				.text(recursos ? recursos : '');
-
-			$(taskRow).appendTo(taskWrapper);
-
             const progress = $("<div>")
 				  .addClass("progress")
 				  .addClass("div-progress")
@@ -178,6 +166,45 @@ function renderizarGantt(a) {
 
             $(customTaks).appendTo(t)
 
+        },
+        taskTooltipContentTemplate: function(task, container) {
+            var ganttInstance = $("#gantt").dxGantt("instance");
+            var resources = ganttInstance.option("resources.dataSource");
+            var resourceAssignments = ganttInstance.option("resourceAssignments.dataSource");
+
+            function formatDateTime(date) {
+                return new Date(date).toLocaleString("pt-BR", {
+                    day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit"
+                }).replace(",", "");
+            }
+
+            var $customTooltip = $("<div>").css({
+                "background-color": "rgba(0, 0, 0, 0.65)", "color": "#fff", "padding": "10px", "border-radius": "5px",
+                "max-width": "250px", "font-family": "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif", "font-size": "12px"
+            });
+
+            $("<div>").css({ "font-size": "13px", "font-weight": "bold", "margin-bottom": "5px" })
+                .text(task.title).appendTo($customTooltip);
+
+            $("<div>").css({ "margin-bottom": "2px" })
+                .html("<strong>Iniciar:</strong> " + formatDateTime(task.start)).appendTo($customTooltip);
+            
+            $("<div>").css({ "margin-bottom": "2px" })
+                .html("<strong>Encerrar:</strong> " + formatDateTime(task.end)).appendTo($customTooltip);
+            
+            $("<div>").html("<strong>Progresso:</strong> " + task.progress + "%").appendTo($customTooltip);
+
+            var assignments = resourceAssignments.filter(a => a.taskId == task.id);
+            var resourceNames = assignments.map(a => {
+                var resource = resources.find(r => r.id == a.resourceId);
+                return resource ? resource.text : null;
+            }).filter(n => n !== null);
+
+            if (resourceNames.length > 0) {
+                $("<div>").html("<strong>Executores:</strong> " + resourceNames.join(", ")).appendTo($customTooltip);
+            }
+
+            return $customTooltip;
         }
     })
 }

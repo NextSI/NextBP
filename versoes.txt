@@ -1,5 +1,30 @@
 [
     {
+        "versao": "23.59.74",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao gerar PDF de solicita\u00e7\u00e3o de processos",
+                "referencia": [
+                    "BPM34960"
+                ],
+                "modulo": "Processos",
+                "hash": "9a5421fa264e4d5efd2cf869999e38874d6ccf2a",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM34960"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na edi\u00e7\u00e3o do atalho de uma pasta",
+                "referencia": [
+                    "BPM34032"
+                ],
+                "modulo": "Documentos",
+                "hash": "fbba3df544476f976c633f1763c339f36d7e1a24",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM34032"
+            }
+        ]
+    },
+    {
         "versao": "23.59.73",
         "itens": [
             {

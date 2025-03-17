@@ -1,5 +1,100 @@
 [
     {
+        "versao": "24.72.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Adicionado ponto de entrada ao salvar um projeto",
+                "referencia": [
+                    "CHM74804"
+                ],
+                "modulo": "Projetos",
+                "hash": "f3d6ca7d53e209193a946723efd27ae359693dbc",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/CHM74804"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste perform\u00e1tico no job de c\u00e1lculo do SLA de chamados",
+                "referencia": [
+                    "BPM34995"
+                ],
+                "modulo": "Chamados",
+                "hash": "811b27281654d6fe38bb2abb739058ce9172c475",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM34995"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao gerar PDF de solicita\u00e7\u00e3o de processos",
+                "referencia": [
+                    "BPM34960"
+                ],
+                "modulo": "Processos",
+                "hash": "9452adcab3e59dc45860de78e1ac02493305065e",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM34960"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Altera\u00e7\u00e3o de Layout de relat\u00f3rio Gantt",
+                "referencia": [
+                    "BPM33858"
+                ],
+                "modulo": "Projetos",
+                "hash": "378dd7cad0c7b6c4d92c86f5c6a43117f3094c9a",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM33858"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na Sele\u00e7\u00e3o de Refer\u00eancias",
+                "referencia": [
+                    "BPM33716"
+                ],
+                "modulo": "Projetos",
+                "hash": "5c259ca264d900ec8b5a84aae9baf669097657bc",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM33716"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Melhoria na listagem de itens",
+                "referencia": [
+                    "BPM29515"
+                ],
+                "modulo": "CRM",
+                "hash": "f98d01a4b97f8e89111a3f8b63ede6c71aa6d779",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM29515"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Cria\u00e7\u00e3o de Kanban para Visualiza\u00e7\u00e3o e Consulta das Atividades do Projeto.",
+                "referencia": [
+                    "BPM21544"
+                ],
+                "modulo": "Projetos",
+                "hash": "da8956faa7dd74e09ea436c7bb9418a31bb8a806",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM21544"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Adicionar coluna \"Executor\" nas atividades de processo",
+                "referencia": [
+                    "BPM19918"
+                ],
+                "modulo": "Processos",
+                "hash": "949f4332ac234bfd68ac1b92be700f3f084e0399",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM19918"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Criar filtro de chamados (Meus Chamados como Respons\u00e1vel)",
+                "referencia": [
+                    "BPM13496"
+                ],
+                "modulo": "Chamados",
+                "hash": "404a7012e4d278b46e295006ed3a6d7409a70000",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM13496"
+            }
+        ]
+    },
+    {
         "versao": "24.71.2",
         "itens": [
             {

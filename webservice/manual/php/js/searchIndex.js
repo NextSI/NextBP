@@ -1151,6 +1151,21 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Atividade-Projeto-DAO.html#method_listar_favoritos"
         },                {
+            "fqsen": "\\Atividade_Projeto_DAO\u003A\u003AisExecutor\u0028\u0029",
+            "name": "isExecutor",
+            "summary": "",
+            "url": "classes/Atividade-Projeto-DAO.html#method_isExecutor"
+        },                {
+            "fqsen": "\\Atividade_Projeto_DAO\u003A\u003Aprojeto_quadro_atividades\u0028\u0029",
+            "name": "projeto_quadro_atividades",
+            "summary": "",
+            "url": "classes/Atividade-Projeto-DAO.html#method_projeto_quadro_atividades"
+        },                {
+            "fqsen": "\\Atividade_Projeto_DAO\u003A\u003Alistar_projeto_quadro_atividades\u0028\u0029",
+            "name": "listar_projeto_quadro_atividades",
+            "summary": "Listagem\u0020das\u0020atividades\u0020do\u0020Projetos\u0020para\u0020exibi\u00E7\u00E3o\u0020no\u0020Kanban",
+            "url": "classes/Atividade-Projeto-DAO.html#method_listar_projeto_quadro_atividades"
+        },                {
             "fqsen": "\\Atividade_Projeto_Tarefa_DAO",
             "name": "Atividade_Projeto_Tarefa_DAO",
             "summary": "",
@@ -12601,6 +12616,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Projeto-DAO.html#method_exportar_msproject"
         },                {
+            "fqsen": "\\Projeto_DAO\u003A\u003AisGerente\u0028\u0029",
+            "name": "isGerente",
+            "summary": "",
+            "url": "classes/Projeto-DAO.html#method_isGerente"
+        },                {
             "fqsen": "\\Projeto_Atividade_Classificacao_DAO",
             "name": "Projeto_Atividade_Classificacao_DAO",
             "summary": "",
@@ -20580,6 +20600,11 @@ Search.appendIndex(
             "name": "CHAMADOS_ACOMPANHAMENTO",
             "summary": "",
             "url": "classes/Chamado-Model.html#constant_CHAMADOS_ACOMPANHAMENTO"
+        },                {
+            "fqsen": "\\Chamado_Model\u003A\u003AMEUS_CHAMADOS_RESPONSAVEL",
+            "name": "MEUS_CHAMADOS_RESPONSAVEL",
+            "summary": "",
+            "url": "classes/Chamado-Model.html#constant_MEUS_CHAMADOS_RESPONSAVEL"
         },                {
             "fqsen": "\\Chamado_Model\u003A\u003AFILTRO_DATA_ABERTURA",
             "name": "FILTRO_DATA_ABERTURA",
@@ -38825,16 +38850,6 @@ Search.appendIndex(
             "name": "GetAnexoByFormulario",
             "summary": "Responsav\u00E9l\u0020por\u0020buscar\u0020os\u0020dados\u0020de\u0020anexos\u0020e\u0020carregar\u0020para\u0020o\u0020formulario",
             "url": "classes/Sys-Util.html#method_GetAnexoByFormulario"
-        },                {
-            "fqsen": "\\Sys\\Util\u003A\u003AisGerente\u0028\u0029",
-            "name": "isGerente",
-            "summary": "",
-            "url": "classes/Sys-Util.html#method_isGerente"
-        },                {
-            "fqsen": "\\Sys\\Util\u003A\u003AisExecutor\u0028\u0029",
-            "name": "isExecutor",
-            "summary": "",
-            "url": "classes/Sys-Util.html#method_isExecutor"
         },                {
             "fqsen": "\\Sys\\Util\u003A\u003Axml_format_time\u0028\u0029",
             "name": "xml_format_time",

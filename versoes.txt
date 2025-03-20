@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.72.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste no job de c\u00e1lculo do SLA de chamados",
+                "referencia": [
+                    "BPM34995"
+                ],
+                "modulo": "Chamados",
+                "hash": "0e5957894f827a69f075ea67acd9274e72756f2c",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM34995-2"
+            }
+        ]
+    },
+    {
         "versao": "24.72.1",
         "itens": [
             {

@@ -362,3 +362,39 @@ jobs:
           cat response.txt
           exit 1
         fi
+
+    - name: 🔗 Call API after deploy 000234 Hlg
+      run: |
+        RESPONSE_CODE=$(curl -X POST "${{ secrets.FTP_URL_DBU_000234_HLG }}${{ secrets.SUFIXO_DBU_API }}" \
+          -H "Content-Type: application/json" \
+          -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
+          -d '{"status": "success", "message": "FTP deploy complete"}' \
+          -w "%{http_code}" -o response.txt -s)
+        
+        if [ "$RESPONSE_CODE" -ne 200 ]; then
+          echo "❌ API call failed with status code $RESPONSE_CODE"
+          cat response.txt
+          exit 1
+        fi
+
+    - name: 📂 Sync files 000234
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
+        username: ${{ secrets.FTP_USERNAME_000234 }}
+        password: ${{ secrets.FTP_PASSWORD_000234 }}
+        server-dir: ./
+
+    - name: 🔗 Call API after deploy 000234
+      run: |
+        RESPONSE_CODE=$(curl -X POST "${{ secrets.FTP_URL_DBU_000234 }}${{ secrets.SUFIXO_DBU_API }}" \
+          -H "Content-Type: application/json" \
+          -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
+          -d '{"status": "success", "message": "FTP deploy complete"}' \
+          -w "%{http_code}" -o response.txt -s)
+        
+        if [ "$RESPONSE_CODE" -ne 200 ]; then
+          echo "❌ API call failed with status code $RESPONSE_CODE"
+          cat response.txt
+          exit 1
+        fi

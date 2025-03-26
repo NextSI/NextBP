@@ -1,5 +1,40 @@
 [
     {
+        "versao": "24.74.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Ajuste na Cria\u00e7\u00e3o de Tipo de Documento e Assunto na Tela de Formul\u00e1rios",
+                "referencia": [
+                    "BPM35402"
+                ],
+                "modulo": "Processos",
+                "hash": "bb4758e570c196ea593814c9834ac2331bfd4645",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM35402"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Inclus\u00e3o de solicita\u00e7\u00e3o de leitura de e-mails enviados pelo chamado",
+                "referencia": [
+                    "BPM28093"
+                ],
+                "modulo": "Chamados",
+                "hash": "1109289e085977b6413d24a5b609f7c2d60be2d0",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM28093"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Possibilidade de selecionar mais de um Grupo de Motivo no cadastro de usu\u00e1rios",
+                "referencia": [
+                    "BPM18785"
+                ],
+                "modulo": "Configura\u00e7\u00f5es",
+                "hash": "26fb271bc5e834c74b699db926eee1079d0fc397",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM18785"
+            }
+        ]
+    },
+    {
         "versao": "24.73.1",
         "itens": [
             {

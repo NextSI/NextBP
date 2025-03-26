@@ -9831,6 +9831,51 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Mensagem-Documento-DAO.html#method_preencher"
         },                {
+            "fqsen": "\\Mensagem_Historico_Leitura_Email_DAO",
+            "name": "Mensagem_Historico_Leitura_Email_DAO",
+            "summary": "",
+            "url": "classes/Mensagem-Historico-Leitura-Email-DAO.html"
+        },                {
+            "fqsen": "\\Mensagem_Historico_Leitura_Email_DAO\u003A\u003Ainsert\u0028\u0029",
+            "name": "insert",
+            "summary": "",
+            "url": "classes/Mensagem-Historico-Leitura-Email-DAO.html#method_insert"
+        },                {
+            "fqsen": "\\Mensagem_Leitura_Email_DAO",
+            "name": "Mensagem_Leitura_Email_DAO",
+            "summary": "",
+            "url": "classes/Mensagem-Leitura-Email-DAO.html"
+        },                {
+            "fqsen": "\\Mensagem_Leitura_Email_DAO\u003A\u003Ainsert\u0028\u0029",
+            "name": "insert",
+            "summary": "",
+            "url": "classes/Mensagem-Leitura-Email-DAO.html#method_insert"
+        },                {
+            "fqsen": "\\Mensagem_Leitura_Email_DAO\u003A\u003Aupdate\u0028\u0029",
+            "name": "update",
+            "summary": "",
+            "url": "classes/Mensagem-Leitura-Email-DAO.html#method_update"
+        },                {
+            "fqsen": "\\Mensagem_Leitura_Email_DAO\u003A\u003Apreencher\u0028\u0029",
+            "name": "preencher",
+            "summary": "",
+            "url": "classes/Mensagem-Leitura-Email-DAO.html#method_preencher"
+        },                {
+            "fqsen": "\\Mensagem_Leitura_Email_DAO\u003A\u003Alistar_por_hash\u0028\u0029",
+            "name": "listar_por_hash",
+            "summary": "",
+            "url": "classes/Mensagem-Leitura-Email-DAO.html#method_listar_por_hash"
+        },                {
+            "fqsen": "\\Mensagem_Leitura_Email_DAO\u003A\u003Alistar_por_mensagem\u0028\u0029",
+            "name": "listar_por_mensagem",
+            "summary": "",
+            "url": "classes/Mensagem-Leitura-Email-DAO.html#method_listar_por_mensagem"
+        },                {
+            "fqsen": "\\Mensagem_Leitura_Email_DAO\u003A\u003Alistar_lidas_por_mensagem\u0028\u0029",
+            "name": "listar_lidas_por_mensagem",
+            "summary": "",
+            "url": "classes/Mensagem-Leitura-Email-DAO.html#method_listar_lidas_por_mensagem"
+        },                {
             "fqsen": "\\Mensagem_Listas_Discussao_DAO",
             "name": "Mensagem_Listas_Discussao_DAO",
             "summary": "",
@@ -21311,6 +21356,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Chamado-Model.html#property_notificacao_observacao_interna_opcional"
         },                {
+            "fqsen": "\\Chamado_Model\u003A\u003A\u0024confirmar_leitura_email",
+            "name": "confirmar_leitura_email",
+            "summary": "",
+            "url": "classes/Chamado-Model.html#property_confirmar_leitura_email"
+        },                {
             "fqsen": "\\Chamado_Model\u003A\u003A\u0024valor_padrao_notificar_envolvolvidos",
             "name": "valor_padrao_notificar_envolvolvidos",
             "summary": "",
@@ -21680,6 +21730,11 @@ Search.appendIndex(
             "name": "obrigatorio_informar_horas",
             "summary": "",
             "url": "classes/Chamado-Motivo-Model.html#property_obrigatorio_informar_horas"
+        },                {
+            "fqsen": "\\Chamado_Motivo_Model\u003A\u003A\u0024confirmar_leitura_email",
+            "name": "confirmar_leitura_email",
+            "summary": "",
+            "url": "classes/Chamado-Motivo-Model.html#property_confirmar_leitura_email"
         },                {
             "fqsen": "\\Chamado_Motivo_Model\u003A\u003A\u0024notificacao_mensagem_reclassificacao_opcional",
             "name": "notificacao_mensagem_reclassificacao_opcional",
@@ -25366,6 +25421,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Email-Job-Model.html#property_responder_para"
         },                {
+            "fqsen": "\\Email_Job_Model\u003A\u003A\u0024confirmar_leitura_email",
+            "name": "confirmar_leitura_email",
+            "summary": "",
+            "url": "classes/Email-Job-Model.html#property_confirmar_leitura_email"
+        },                {
+            "fqsen": "\\Email_Job_Model\u003A\u003A\u0024hash_leitura_email",
+            "name": "hash_leitura_email",
+            "summary": "",
+            "url": "classes/Email-Job-Model.html#property_hash_leitura_email"
+        },                {
             "fqsen": "\\Email_Job_Model\u003A\u003A\u0024conteudo_ics",
             "name": "conteudo_ics",
             "summary": "",
@@ -28761,6 +28826,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Mensagem-Model.html#property_notificacao_mensagem_reclassificacao"
         },                {
+            "fqsen": "\\Mensagem_Model\u003A\u003A\u0024confirmar_leitura_email",
+            "name": "confirmar_leitura_email",
+            "summary": "",
+            "url": "classes/Mensagem-Model.html#property_confirmar_leitura_email"
+        },                {
             "fqsen": "\\Mensagem_Model\u003A\u003A\u0024observacoes",
             "name": "observacoes",
             "summary": "",
@@ -28810,6 +28880,66 @@ Search.appendIndex(
             "name": "mensagem_id",
             "summary": "",
             "url": "classes/Mensagem-Documento-Model.html#property_mensagem_id"
+        },                {
+            "fqsen": "\\Mensagem_Historico_Leitura_Email_Model",
+            "name": "Mensagem_Historico_Leitura_Email_Model",
+            "summary": "",
+            "url": "classes/Mensagem-Historico-Leitura-Email-Model.html"
+        },                {
+            "fqsen": "\\Mensagem_Historico_Leitura_Email_Model\u003A\u003Avalidation\u0028\u0029",
+            "name": "validation",
+            "summary": "",
+            "url": "classes/Mensagem-Historico-Leitura-Email-Model.html#method_validation"
+        },                {
+            "fqsen": "\\Mensagem_Historico_Leitura_Email_Model\u003A\u003A\u0024hash_leitura_email",
+            "name": "hash_leitura_email",
+            "summary": "",
+            "url": "classes/Mensagem-Historico-Leitura-Email-Model.html#property_hash_leitura_email"
+        },                {
+            "fqsen": "\\Mensagem_Historico_Leitura_Email_Model\u003A\u003A\u0024data_hora",
+            "name": "data_hora",
+            "summary": "",
+            "url": "classes/Mensagem-Historico-Leitura-Email-Model.html#property_data_hora"
+        },                {
+            "fqsen": "\\Mensagem_Historico_Leitura_Email_Model\u003A\u003A\u0024email",
+            "name": "email",
+            "summary": "",
+            "url": "classes/Mensagem-Historico-Leitura-Email-Model.html#property_email"
+        },                {
+            "fqsen": "\\Mensagem_Leitura_Email_Model",
+            "name": "Mensagem_Leitura_Email_Model",
+            "summary": "",
+            "url": "classes/Mensagem-Leitura-Email-Model.html"
+        },                {
+            "fqsen": "\\Mensagem_Leitura_Email_Model\u003A\u003Avalidation\u0028\u0029",
+            "name": "validation",
+            "summary": "",
+            "url": "classes/Mensagem-Leitura-Email-Model.html#method_validation"
+        },                {
+            "fqsen": "\\Mensagem_Leitura_Email_Model\u003A\u003A\u0024hash_leitura_email",
+            "name": "hash_leitura_email",
+            "summary": "",
+            "url": "classes/Mensagem-Leitura-Email-Model.html#property_hash_leitura_email"
+        },                {
+            "fqsen": "\\Mensagem_Leitura_Email_Model\u003A\u003A\u0024mensagem_id",
+            "name": "mensagem_id",
+            "summary": "",
+            "url": "classes/Mensagem-Leitura-Email-Model.html#property_mensagem_id"
+        },                {
+            "fqsen": "\\Mensagem_Leitura_Email_Model\u003A\u003A\u0024email",
+            "name": "email",
+            "summary": "",
+            "url": "classes/Mensagem-Leitura-Email-Model.html#property_email"
+        },                {
+            "fqsen": "\\Mensagem_Leitura_Email_Model\u003A\u003A\u0024data_hora_envio",
+            "name": "data_hora_envio",
+            "summary": "",
+            "url": "classes/Mensagem-Leitura-Email-Model.html#property_data_hora_envio"
+        },                {
+            "fqsen": "\\Mensagem_Leitura_Email_Model\u003A\u003A\u0024data_hora_leitura",
+            "name": "data_hora_leitura",
+            "summary": "",
+            "url": "classes/Mensagem-Leitura-Email-Model.html#property_data_hora_leitura"
         },                {
             "fqsen": "\\Mensagem_Listas_Discussao_Model",
             "name": "Mensagem_Listas_Discussao_Model",
@@ -36791,11 +36921,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Usuario-Model.html#property_nivel"
         },                {
-            "fqsen": "\\Usuario_Model\u003A\u003A\u0024arr_grupo_motivo",
-            "name": "arr_grupo_motivo",
-            "summary": "",
-            "url": "classes/Usuario-Model.html#property_arr_grupo_motivo"
-        },                {
             "fqsen": "\\Usuario_Model\u003A\u003A\u0024grupo_usuarios",
             "name": "grupo_usuarios",
             "summary": "",
@@ -37040,6 +37165,11 @@ Search.appendIndex(
             "name": "cargo_descricao",
             "summary": "",
             "url": "classes/Usuario-Model.html#property_cargo_descricao"
+        },                {
+            "fqsen": "\\Usuario_Model\u003A\u003A\u0024grupo_motivo_chamado",
+            "name": "grupo_motivo_chamado",
+            "summary": "",
+            "url": "classes/Usuario-Model.html#property_grupo_motivo_chamado"
         },                {
             "fqsen": "\\Usuario_Cliente_Model",
             "name": "Usuario_Cliente_Model",

@@ -1,86 +1,76 @@
-<div class="modal bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal_usuario_selecionar_label" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="modal_usuario_selecionar_label">Selecionar Usuário</h4>
+<div class="panel panel-default painel_detalhes" style="-webkit-box-shadow: none; box-shadow: none;">
+    <div class="panel-body">
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="row">
+                <div class="col-md-3 col-sm-3">
+                    <div class="form-group">
+                        <label for="modal_chk_admin">Admin</label>
+                        <input type="checkbox" class="modal_chk_admin checkbox_bootstrap_toggle" id="modal_chk_admin">
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="form-group">
+                        <label for="modal_chk_analista">Colaborador</label>
+                        <input type="checkbox" class="modal_chk_analista checkbox_bootstrap_toggle" id="modal_chk_analista">
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="form-group">
+                        <label for="modal_chk_cliente">Cliente</label>
+                        <input type="checkbox" class="modal_chk_cliente checkbox_bootstrap_toggle" id="modal_chk_cliente">
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="form-group">
+                        <label for="modal_chk_fornecedor">Fornecedor</label>
+                        <input type="checkbox" class="modal_chk_fornecedor checkbox_bootstrap_toggle" id="modal_chk_fornecedor">
+                    </div>
+                </div>                
             </div>
-            <div class="modal-body">
-                
-                <div class="row">
-                    <div class="col-md-3 col-sm-3">
-                        <div class="form-group">
-                            <label for="modal_chk_admin">Admin</label>
-                            <input type="checkbox" class="modal_chk_admin checkbox_bootstrap_toggle" id="modal_chk_admin">
-                        </div>
+
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="form-group">
+                        <label for="modal_usuario_edt_nome">Nome</label>
+                        <input type="text" class="edt_nome form-control" id="modal_usuario_edt_nome" maxlength="50" placeholder="Filtro por nome">
                     </div>
-                    <div class="col-md-3 col-sm-3">
-                        <div class="form-group">
-                            <label for="modal_chk_analista">Colaborador</label>
-                            <input type="checkbox" class="modal_chk_analista checkbox_bootstrap_toggle" id="modal_chk_analista">
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3">
-                        <div class="form-group">
-                            <label for="modal_chk_cliente">Cliente</label>
-                            <input type="checkbox" class="modal_chk_cliente checkbox_bootstrap_toggle" id="modal_chk_cliente">
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3">
-                        <div class="form-group">
-                            <label for="modal_chk_fornecedor">Fornecedor</label>
-                            <input type="checkbox" class="modal_chk_fornecedor checkbox_bootstrap_toggle" id="modal_chk_fornecedor">
-                        </div>
-                    </div>                
                 </div>
 
-                <div class="row">
-                    <div class="col-md-6 col-sm-6">
-                        <div class="form-group">
-                            <label for="modal_usuario_edt_nome">Nome</label>
-                            <input type="text" class="edt_nome form-control" id="modal_usuario_edt_nome" maxlength="50" placeholder="Filtro por nome">
-                        </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="form-group">
+                        <label for="modal_usuario_edt_email">E-mail</label>
+                        <input type="text" class="edt_email form-control" id="modal_usuario_edt_email" maxlength="50" placeholder="Filtro por e-mail">
                     </div>
-
-                    <div class="col-md-6 col-sm-6">
-                        <div class="form-group">
-                            <label for="modal_usuario_edt_email">E-mail</label>
-                            <input type="text" class="edt_email form-control" id="modal_usuario_edt_email" maxlength="50" placeholder="Filtro por e-mail">
-                        </div>
-                    </div>            
-                </div>
-
-                <div class="table-responsive">
-                    <table class="tab_listagem table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th>Nome</th>
-                                <th>E-mail</th>
-                                <th>Tipo</th>                                
-                                <th>&nbsp;</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- itens -->
-                            <tr template-row style="display: none;">
-                                <td template-field="nome">{nome}</td>
-                                <td template-field="email">{e-mail}</td>
-                                <td template-field="tipo_descricao">{tipo_descricao}</td>                                
-                                <td template-buttons="actions">
-                                    <div class="btn-group pull-right">
-                                        <button type="button" class="btn_selecionar btn btn-primary">
-                                            <span class="glyphicon glyphicon-ok"></span> Selecionar
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
+                </div>            
             </div>
-            <div class="modal-footer" style="bottom: 0px;">
-                <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
+
+            <div class="table-responsive">
+                <table class="tab_listagem table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Tipo</th>                                
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- itens -->
+                        <tr template-row style="display: none;">
+                            <td template-field="nome">{nome}</td>
+                            <td template-field="email">{e-mail}</td>
+                            <td template-field="tipo_descricao">{tipo_descricao}</td>                                
+                            <td template-buttons="actions">
+                                <div class="btn-group pull-right">
+                                    <button type="button" class="btn_selecionar btn btn-primary">
+                                        <span class="glyphicon glyphicon-ok"></span> Selecionar
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

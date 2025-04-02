@@ -82,11 +82,16 @@ Para mais detalhes sobre a API, acesse a [Documentação da API Webservice]([PAT
 Podemos gerar uma URL utilizando tokens privados para que o navegador de um usuário possa se logar automaticamente com o Next BP.
 Exemplo: você possui uma aplicação própria e gostaria que sua aplicação redirecione o usuário para o Next BP sem a necessidade que o mesmo realize o login novamente.
 
-Para isso é necessário utilizar o token obtido no exemplo do tópico anterior. Através deste token podemos gerar um token público através da requisição:
+Para isso, utilize o token obtido no exemplo do tópico anterior. É requisito que o usuário deste token possua permissão de administrador.
+
+Utilize [API de obter token público para um determinado usuário]([PATH_SWAGGER]#/Login/post_webservice_index_php_login_obter_token_publico_usuario_) através da requisição:
 ```
-curl -X GET --header "X-Auth-Token: b4a6effed6f69833607868b18ba9da46" http://[endereço Next BP]/webservice/index.php/login/obter_token_publico/
+curl --location 'http://[endereço Next BP]/webservice/index.php/login/obter_token_publico_usuario/' \
+--header 'X-Auth-Token: b4a6effed6f69833607868b18ba9da46' \
+--form 'usuario_id="4"'
 ```
 
+Retorno:
 ```
 {
   "token_publico":"afc4f6a2cc04b7758d4a362fe25baf91"
@@ -94,7 +99,6 @@ curl -X GET --header "X-Auth-Token: b4a6effed6f69833607868b18ba9da46" http://[en
 ```
 
 Posteriormente encaminhamos o usuário para o link do Next BP passando o token público como parâmetro: `http://[endereço Next BP]/#/auth/afc4f6a2cc04b7758d4a362fe25baf91`
-
 
 Por questões de segurança um token público só pode ser utilizado uma vez. Após seu uso ele é automaticamente destruído.
 
@@ -104,74 +108,76 @@ Exemplo: `http://[endereço Next BP]/#/auth/[token público]/processo/novo/[proc
 Caso você não deseje realizar a autenticação automática mas gostaria que após o login seja realizada uma ação, então remova o trecho `/auth/[token público]`.
 Exemplo: `http://[endereço Next BP]/#/processo/novo/[processo.id]`
 
-## Veja a lista completa de possibilidades:
+Veja a lista completa de possibilidades a seguir.
 
-### Abre janela de novo processo
+# URL de ação
+
+## Abre janela de novo processo
 `http://[endereço Next BP]/#/processo/novo/[processo.id]`
 
-### Abre janela de listagem de solicitações processos
+## Abre janela de listagem de solicitações processos
 `http://[endereço Next BP]/#/processo/listar/todas`
 
 `http://[endereço Next BP]/#/processo/listar/[numero da solicitacao]`
 
-### Abre janela do detalhe da solicitação processo com visão da atividade
+## Abre janela do detalhe da solicitação processo com visão da atividade
 `http://[endereço Next BP]/#/processo/[solicitacao_atividade.id]`
 `http://[endereço Next BP]/#/solicitacao_atividade/[solicitacao_atividade.id]`
 
-### Abre janela do detalhe da solicitação processo com visão da solicitação (Gestor)
+## Abre janela do detalhe da solicitação processo com visão da solicitação (Gestor)
 `http://[endereço Next BP]/#/solicitacao/[solicitacao_atividade.id]`
 
-### Abre janela de listagem de agendas
+## Abre janela de listagem de agendas
 `http://[endereço Next BP]/#/agenda`
 
-### Abre janela do detalhe da agenda
+## Abre janela do detalhe da agenda
 `http://[endereço Next BP]/#/agenda/[agenda_evento.id]`
 
-### Abre janela de aprovações pendentes de documentos
+## Abre janela de aprovações pendentes de documentos
 `http://[endereço Next BP]/#/documento/aprovacao`
 
-### Abre janela de dos arquivos de uma pasta
+## Abre janela de dos arquivos de uma pasta
 `http://[endereço Next BP]/#/documento/pasta/[documento_pasta.id]`
 
-### Abre janela de detalhes do documento
+## Abre janela de detalhes do documento
 `http://[endereço Next BP]/#/documento/detalhe/[documento.id]`
 
-### Abre janela de detalhes da pasta
+## Abre janela de detalhes da pasta
 `http://[endereço Next BP]/#/documento/detalhe/pasta/[documento_pasta.id]`
 
-### Abre janela de listagem de chamados
+## Abre janela de listagem de chamados
 `http://[endereço Next BP]/#/chamado/listar`
 
-### Abre janela de novo chamado
+## Abre janela de novo chamado
 `http://[endereço Next BP]/#/chamado/novo`
 
-### Abre janela de detalhes do chamado
+## Abre janela de detalhes do chamado
 `http://[endereço Next BP]/#/chamado/[chamado.id]`
 
-### Abre janela de listagem de projetos
+## Abre janela de listagem de projetos
 `http://[endereço Next BP]/#/projeto/listar`
 
-### Abre janela de listagem de atividades de projeto
+## Abre janela de listagem de atividades de projeto
 `http://[endereço Next BP]/#/projeto/atividades/[projeto.id]`
 
-### Abre janela de detalhes da atividades de projeto
+## Abre janela de detalhes da atividades de projeto
 `http://[endereço Next BP]/#/projeto/atividade/[projeto_atividade.id]`
 
-### Abre janela de listagem de oportunidades
+## Abre janela de listagem de oportunidades
 `http://[endereço Next BP]/#/oportunidade`
 
-### Abre janela de nova oportunidade
+## Abre janela de nova oportunidade
 `http://[endereço Next BP]/#/oportunidade/nova/[funil_vendas.id]`
 
-### Abre janela de aprovações pendentes de orçamento
+## Abre janela de aprovações pendentes de orçamento
 `http://[endereço Next BP]/#/oportunidade/aprovacao`
 
-### Abre janela de detalhes da oportunidade
+## Abre janela de detalhes da oportunidade
 `http://[endereço Next BP]/#/oportunidade/detalhes/[oportunidade.id]`
 
-### Abre janela de atividades do PDCA
+## Abre janela de atividades do PDCA
 `http://[endereço Next BP]/#/pdca/[pdca.id]/[pdca_atividade.id]`
 
-### Modo embarcado
+# Modo embarcado
 Adicione `embedded` aos parâmetros da URL para carregar o Next BP embutido em outro sistema, sem que os menus do BP sejam carregados.
-`http://[endereço Next BP]/#/auth/[token público]/hpe_atuacao_efetiva/embedded`
+`http://[endereço Next BP]/#/auth/[token público]/chamado/listar/embedded`

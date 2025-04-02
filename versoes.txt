@@ -1,5 +1,40 @@
 [
     {
+        "versao": "24.75.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Ajustes na URL de login autom\u00e1tico",
+                "referencia": [
+                    "CHM74899"
+                ],
+                "modulo": "API",
+                "hash": "49ae3806b98572a4b3a32da803c8ce26791de0c7",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/CHM74899"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Ajuste na rotina de preencher o nome do executor",
+                "referencia": [
+                    "BPM35529"
+                ],
+                "modulo": "Processos",
+                "hash": "39cefb4268286a383256df4aa73d38760ed0ba09",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM35529"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na rotina da edi\u00e7\u00e3o de formul\u00e1rio",
+                "referencia": [
+                    "BPM34723"
+                ],
+                "modulo": "Processos",
+                "hash": "3ed293173c600f5b66980127ec84e0c9c2403c89",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM34723"
+            }
+        ]
+    },
+    {
         "versao": "24.74.1",
         "itens": [
             {

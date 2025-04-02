@@ -88,6 +88,11 @@ App.PE.Lang_load_depois = function() {
     // App.lang.home.gestao_chamados = "Tarefas";
 }
 
+App.PE.Solicitacao_Atividade_Salvar_Antes = function(main, form, post_salvar) {
+    // salva
+    post_salvar();
+}
+
 App.PE.Solicitacao_Atividade_Salvar_Enviar_Antes = function(main, callback_enviar) {
     // abrir tela "Enviar"
     callback_enviar();

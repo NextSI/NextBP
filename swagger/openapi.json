@@ -137,11 +137,11 @@
                   "senha": {
                     "type": "string",
                     "description": "Base64 da senha",
-                    "example": "MTIzbXVkYXI="
+                    "example": "ZXhlbXBsbw=="
                   },
                   "servidor_ldap_id": {
                     "type": "number",
-                    "example": "-28362269"
+                    "example": "0"
                   }
                 }
               }
@@ -802,30 +802,7 @@
           "Login"
         ],
         "summary": "obter_token_publico",
-        "requestBody": {
-          "content": {
-            "multipart/form-data": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "documento_revisao_id": {
-                    "type": "integer",
-                    "example": "50214954"
-                  }
-                }
-              }
-            }
-          }
-        },
         "parameters": [
-          {
-            "name": "X-Emp",
-            "in": "header",
-            "schema": {
-              "type": "string"
-            },
-            "example": "{{X-Emp}}"
-          },
           {
             "name": "X-Auth-Token",
             "in": "header",
@@ -860,53 +837,70 @@
                   "type": "string",
                   "example": "application/json; charset=utf-8"
                 }
-              },
-              "Date": {
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "example": {
+                  "token_publico": "81460a1e966cb59ace4bf2252401f9fb"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/webservice/index.php/login/obter_token_publico_usuario/": {
+      "post": {
+        "tags": [
+          "Login"
+        ],
+        "summary": "obter_token_publico_usuario",
+        "parameters": [
+          {
+            "name": "X-Auth-Token",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{X-Auth-Token}}"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "multipart/form-data"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          },
+          {
+            "name": "usuario_id",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": "10"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Content-Type": {
                 "schema": {
                   "type": "string",
-                  "example": "Tue, 16 Nov 2021 12:41:09 GMT"
-                }
-              },
-              "Server": {
-                "schema": {
-                  "type": "string",
-                  "example": "Apache/2.4.51 (Debian)"
-                }
-              },
-              "X-Powered-By": {
-                "schema": {
-                  "type": "string",
-                  "example": "PHP/7.3.32"
-                }
-              },
-              "Access-Control-Allow-Origin": {
-                "schema": {
-                  "type": "string",
-                  "example": "*"
-                }
-              },
-              "Access-Control-Allow-Headers": {
-                "schema": {
-                  "type": "string",
-                  "example": "*"
-                }
-              },
-              "Content-Length": {
-                "schema": {
-                  "type": "integer",
-                  "example": "52"
-                }
-              },
-              "Keep-Alive": {
-                "schema": {
-                  "type": "string",
-                  "example": "timeout=5, max=100"
-                }
-              },
-              "Connection": {
-                "schema": {
-                  "type": "string",
-                  "example": "Keep-Alive"
+                  "example": "application/json; charset=utf-8"
                 }
               }
             },

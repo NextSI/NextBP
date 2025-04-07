@@ -1,5 +1,30 @@
 [
     {
+        "versao": "23.59.76",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Ajustes na URL de login autom\u00e1tico",
+                "referencia": [
+                    "CHM74899"
+                ],
+                "modulo": "API",
+                "hash": "309c47c266915744fd73a2eef1ac1e2fb301048e",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/CHM74899"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Ajuste na Cria\u00e7\u00e3o de Tipo de Documento e Assunto na Tela de Formul\u00e1rios",
+                "referencia": [
+                    "BPM35402"
+                ],
+                "modulo": "Processos",
+                "hash": "cd04db336e098f0712cd6096bdd6aa0edbc74dbc",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM35402"
+            }
+        ]
+    },
+    {
         "versao": "23.59.75",
         "itens": [
             {

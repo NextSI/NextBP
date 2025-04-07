@@ -121,10 +121,10 @@
                   "senha": {
                     "type": "string",
                     "description": "Base64 da senha",
-                    "example": "MTIzbXVkYXI="
+                    "example": "ZXhlbXBsbw=="
                   },
                   "servidor_ldap_id": {
-                    "type": "integer",
+                    "type": "number",
                     "example": "0"
                   }
                 }
@@ -132,15 +132,34 @@
             }
           }
         },
-        "security": [
+        "parameters": [
           {
-            "noauthAuth": []
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "multipart/form-data"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
           }
         ],
         "responses": {
           "200": {
             "description": "OK",
             "headers": {
+              "Content-Type": {
+                "schema": {
+                  "type": "string",
+                  "example": "application/json; charset=utf-8"
+                }
+              },
               "Date": {
                 "schema": {
                   "type": "string",
@@ -149,13 +168,13 @@
               },
               "Server": {
                 "schema": {
-                  "type": "number",
+                  "type": "string",
                   "example": "Apache/2.4.51 (Debian)"
                 }
               },
               "X-Powered-By": {
                 "schema": {
-                  "type": "number",
+                  "type": "string",
                   "example": "PHP/7.3.32"
                 }
               },
@@ -187,12 +206,6 @@
                 "schema": {
                   "type": "string",
                   "example": "Keep-Alive"
-                }
-              },
-              "Content-Type": {
-                "schema": {
-                  "type": "string",
-                  "example": "application/json; charset=utf-8"
                 }
               }
             },
@@ -773,30 +786,7 @@
           "Login"
         ],
         "summary": "obter_token_publico",
-        "requestBody": {
-          "content": {
-            "multipart/form-data": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "documento_revisao_id": {
-                    "type": "integer",
-                    "example": "4"
-                  }
-                }
-              }
-            }
-          }
-        },
         "parameters": [
-          {
-            "name": "X-Emp",
-            "in": "header",
-            "schema": {
-              "type": "string"
-            },
-            "example": "{{X-Emp}}"
-          },
           {
             "name": "X-Auth-Token",
             "in": "header",
@@ -804,60 +794,28 @@
               "type": "string"
             },
             "example": "{{X-Auth-Token}}"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "multipart/form-data"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
           }
         ],
         "responses": {
           "200": {
             "description": "OK",
             "headers": {
-              "Date": {
-                "schema": {
-                  "type": "string",
-                  "example": "Tue, 16 Nov 2021 12:41:09 GMT"
-                }
-              },
-              "Server": {
-                "schema": {
-                  "type": "number",
-                  "example": "Apache/2.4.51 (Debian)"
-                }
-              },
-              "X-Powered-By": {
-                "schema": {
-                  "type": "number",
-                  "example": "PHP/7.3.32"
-                }
-              },
-              "Access-Control-Allow-Origin": {
-                "schema": {
-                  "type": "string",
-                  "example": "*"
-                }
-              },
-              "Access-Control-Allow-Headers": {
-                "schema": {
-                  "type": "string",
-                  "example": "*"
-                }
-              },
-              "Content-Length": {
-                "schema": {
-                  "type": "integer",
-                  "example": "52"
-                }
-              },
-              "Keep-Alive": {
-                "schema": {
-                  "type": "string",
-                  "example": "timeout=5, max=100"
-                }
-              },
-              "Connection": {
-                "schema": {
-                  "type": "string",
-                  "example": "Keep-Alive"
-                }
-              },
               "Content-Type": {
                 "schema": {
                   "type": "string",
@@ -879,20 +837,13 @@
         }
       }
     },
-    "/webservice/index.php/time_line/listar/": {
-      "get": {
+    "/webservice/index.php/login/obter_token_publico_usuario/": {
+      "post": {
         "tags": [
-          "Timeline"
+          "Login"
         ],
+        "summary": "obter_token_publico_usuario",
         "parameters": [
-          {
-            "name": "X-Emp",
-            "in": "header",
-            "schema": {
-              "type": "string"
-            },
-            "example": "{{X-Emp}}"
-          },
           {
             "name": "X-Auth-Token",
             "in": "header",
@@ -902,529 +853,48 @@
             "example": "{{X-Auth-Token}}"
           },
           {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "multipart/form-data"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          },
+          {
             "name": "usuario_id",
             "in": "query",
             "schema": {
               "type": "integer"
             },
-            "example": 123
-          },
-          {
-            "name": "qtd_dias",
-            "in": "query",
-            "schema": {
-              "type": "integer"
-            },
-            "example": 7
-          },
-          {
-            "name": "exibir_dias_sem_evento",
-            "in": "query",
-            "schema": {
-              "type": "boolean"
-            },
-            "example": true
+            "example": "10"
           }
         ],
         "responses": {
           "200": {
-            "description": "A propriedade `timeline` contém uma lista de cartões com suas propriedades específicas. Para diferenciar cada tipo, utilize a propriedade `timeline_modulo`: 1 - CHAMADO, 2 - PROCESSO, 3 - PROJETO, 4 - DOCUMENTO, 5 - CRM, 6 - AGENDA, 10 - PDCA, 11 - TAREFAS",
+            "description": "OK",
+            "headers": {
+              "Content-Type": {
+                "schema": {
+                  "type": "string",
+                  "example": "application/json; charset=utf-8"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object"
                 },
                 "example": {
-                  "timeline": [
-                    {
-                      "agenda_evento_id": "1",
-                      "excluido": "N",
-                      "usuario_id": "1",
-                      "agenda_tipo_id": "4",
-                      "agenda_tipo_cor": "#FF9900",
-                      "agenda_tipo_nome": "Reunião",
-                      "agenda_tipo_particular": "N",
-                      "agenda_tipo_exibir_endereco_cliente": "N",
-                      "cliente_id": null,
-                      "cliente_nome": null,
-                      "cliente_cidade": null,
-                      "cliente_bairro": null,
-                      "cliente_endereco": null,
-                      "cliente_numero": null,
-                      "fornecedor_cidade": null,
-                      "fornecedor_bairro": null,
-                      "fornecedor_endereco": null,
-                      "fornecedor_numero": null,
-                      "prospect_cidade": null,
-                      "prospect_bairro": "",
-                      "prospect_endereco": "",
-                      "prospect_numero": "",
-                      "fornecedor_id": null,
-                      "fornecedor_nome": null,
-                      "prospect_id": "1",
-                      "prospect_nome": "TESTE",
-                      "empresa_id": null,
-                      "empresa_nome": null,
-                      "projeto_id": null,
-                      "projeto_nome": null,
-                      "projeto_codigo": null,
-                      "dia": "2023-02-06",
-                      "hora_inicio": "10:00:00",
-                      "hora_fim": "12:00:00",
-                      "agenda_local_id": "2",
-                      "agenda_local_nome": "Escritório",
-                      "descricao": "Reunião para definição das próximas etapas",
-                      "projeto_atividade_id": null,
-                      "atividade_projeto_nome": null,
-                      "atividade_projeto_codigo": null,
-                      "realizado": "N",
-                      "agenda_ativo_id": null,
-                      "convidado": "N",
-                      "convidado_evento": "N",
-                      "nome_ativo_reservado": null,
-                      "insert_usuario_id": "1",
-                      "insert_usuario_nome": "Admin",
-                      "notificar_antes": "03:00:00",
-                      "notificado_bp": "N",
-                      "permissao_manutencao_agenda_ativo": null,
-                      "agenda_tipo_cor_texto": "#fff",
-                      "timeline_dia": "2023-02-06",
-                      "timeline_prazo": "2023-02-06 10:00:00",
-                      "timeline_modulo": 6,
-                      "atrasado": "N"
-                    },
-                    {
-                      "id": "1",
-                      "tarefa_quadro_lista_id": "1",
-                      "nome_lista": "Lista A",
-                      "tarefa_quadro_id": "1",
-                      "nome_quadro": "Quadro de Tarefas",
-                      "nome": "Tarefa 1",
-                      "data_prazo": "2023-02-07 10:00:00",
-                      "data_conclusao": null,
-                      "situacao": "3",
-                      "possui_descricao": "N",
-                      "ordem": "0",
-                      "arr_etiqueta": [],
-                      "referencias": [],
-                      "timeline_dia": "2023-02-07",
-                      "timeline_prazo": "2023-02-07 10:00:00",
-                      "timeline_modulo": 11,
-                      "atrasado": "N"
-                    },
-                    {
-                      "id": "1",
-                      "chamado_id": "1",
-                      "id_md5": "d54320568ecc313505870f8d63cb2f94",
-                      "excluido": "N",
-                      "insert_hora": "2023-02-06 09:07:13",
-                      "update_hora": "2023-02-06 09:11:33",
-                      "delete_hora": null,
-                      "insert_usuario_id": "1",
-                      "update_usuario_id": "1",
-                      "delete_usuario_id": null,
-                      "cliente_id": null,
-                      "fornecedor_id": null,
-                      "prospect_id": null,
-                      "somente_solicitante_encerra": "N",
-                      "somente_admin_encerra": "N",
-                      "chamado_motivo_altera_solicitante": "S",
-                      "chamado_motivo_descricao_on_assunto": "N",
-                      "chamado_motivo_utiliza_apontamento_chamado": "N",
-                      "chamado_motivo_projeto_apontamento_id": null,
-                      "usuario_encerramento_id": null,
-                      "nota_avaliacao_id": null,
-                      "nota_avaliacao_nome": null,
-                      "formulario_chamado_avaliacao_id": null,
-                      "data_avaliacao": null,
-                      "usuario_avaliacao_id": null,
-                      "usuario_responsavel_id": "1",
-                      "usuario_responsavel_nome": "Admin",
-                      "solicitante_id": "1",
-                      "usuario_solicitante_nome": "Admin",
-                      "usuario_cliente_nome": null,
-                      "usuario_empresa_nome": "Admin",
-                      "usuario_fornecedor_nome": null,
-                      "usuario_prospect_nome": null,
-                      "foto_usuario_cliente": null,
-                      "foto_usuario_fornecedor": null,
-                      "foto_usuario_prospect": null,
-                      "foto_usuario_empresa": null,
-                      "usuario_solicitante_foto_id": null,
-                      "foto_usuario_responsavel": null,
-                      "data_abertura": "2023-02-06 09:11:40",
-                      "data_encerramento": null,
-                      "situacao": "1",
-                      "assunto": "Dúvida sobre cálculo de ICMS em SP",
-                      "exibir_avaliacao": "N",
-                      "formulario_avaliacao_id": null,
-                      "formulario_abertura_id": null,
-                      "data_previsao_retorno": "2023-02-08 09:07:00",
-                      "solicitante_pode_alterar_previsao_retorno": "S",
-                      "chamado_empresa_filial_id": "1",
-                      "chamado_prioridade_id": "2",
-                      "prioridade_nome": "Normal",
-                      "ordem": "2",
-                      "cliente_nome": null,
-                      "fornecedor_nome": null,
-                      "prospect_nome": null,
-                      "empresa_filial_nome": "Thiago Bighetti",
-                      "chamado_motivo_id": "1",
-                      "motivo": "Atendimento Técnico",
-                      "motivo_cor": "#FF6666",
-                      "grupo_motivo_id": null,
-                      "grupo_motivo_nome": null,
-                      "sugerir_mensagem_padrao_colaboradores": "S",
-                      "mensagem_padrao": null,
-                      "horas_trabalhadas": "00:00:00",
-                      "classificacao_chamado_id": null,
-                      "classificacao_nome": null,
-                      "horas_previsao_retorno": null,
-                      "tipo_gestao_tempo": "2",
-                      "horas_uteis": null,
-                      "calendario_trabalho_id_param": null,
-                      "notificacao_mensagem_reclassificacao_opcional": "N",
-                      "valor_padrao_notificar_envolvolvidos": "S",
-                      "projeto_atividade_descricao": null,
-                      "projeto_nome": null,
-                      "tipo": "E",
-                      "codigo_entidade": null,
-                      "entidade_nome": "Thiago Bighetti",
-                      "entidade_id": "1",
-                      "entidade_logo_id": null,
-                      "entidade_telefone1": null,
-                      "entidade_telefone2": null,
-                      "entidade_telefone3": null,
-                      "entidade_telefone4": null,
-                      "usuario_abertura_id": "1",
-                      "usuario_cliente_id": null,
-                      "usuario_fornecedor_id": null,
-                      "usuario_prospect_id": null,
-                      "usuario_empresa_id": "1",
-                      "ultima_mensagem_data_envio": "2023-02-06 09:11:40",
-                      "sla_tempo_reacao": null,
-                      "sla_tempo_resolucao": null,
-                      "sla_tempo_total": null,
-                      "sla_tempo_solicitante": null,
-                      "sla_tempo_encerrado": null,
-                      "projeto_atividade_id": null,
-                      "apontamento_projeto_id": null,
-                      "status_apontamento": null,
-                      "timeline_dia": "2023-02-08",
-                      "timeline_prazo": "2023-02-08 09:07:00",
-                      "timeline_modulo": 1,
-                      "atrasado": "N"
-                    },
-                    {
-                      "solicitacao_atividade_id": "21",
-                      "usuario_solicitacao_atividade_id": "1",
-                      "usuario_solicitacao_atividade_nome": "Admin",
-                      "numero": "2",
-                      "data": "2023-02-06 09:13:01",
-                      "observacoes": null,
-                      "tipo_prazo_execucao": "0",
-                      "dias_prazo_execucao": "0",
-                      "dia_prazo_execucao": null,
-                      "grupo_usuarios_responsaveis_id": null,
-                      "versao_processo_id": "11",
-                      "processo_id": "3",
-                      "processo_nome": "Frisokar - Viagem",
-                      "atividade_descricao": "Inicio",
-                      "processo_atividade_id": "13",
-                      "usuario_solicitacao_id": "1",
-                      "usuario_solicitacao_nome": "Admin",
-                      "usuario_responsavel_nome": "[U] Admin",
-                      "entrega": null,
-                      "retorno": null,
-                      "retorno_motivo": null,
-                      "retorno_solicitacao_atividade_id": null,
-                      "cancelada": "N",
-                      "cliente_id": null,
-                      "cliente_nome": null,
-                      "origem_retorno": null,
-                      "origem_retorno_motivo": null,
-                      "tempo_prazo_execucao": "24:00:00",
-                      "data_finalizacao": null,
-                      "descricao": null,
-                      "solicitacao_id": "275",
-                      "data_inicio_atividade": "2023-02-06 09:13:01",
-                      "prazo_execucao": "2023-02-09 09:13:00",
-                      "situacao": "0",
-                      "solicitacao_situacao": "3",
-                      "usuario_grupos_responsavel_atividade": "[U] Admin",
-                      "sa_solicitacao_id": null,
-                      "sa_usuario_id": null,
-                      "cancelamento_hora_atividade": null,
-                      "diff_datas": null,
-                      "acesso_supervisor": true,
-                      "supervisor_permite_edicao": true,
-                      "permissao_acesso": true,
-                      "timeline_dia": "2023-02-09",
-                      "timeline_prazo": "2023-02-09 09:13:00",
-                      "timeline_modulo": 2,
-                      "atrasado": "N"
-                    },
-                    {
-                      "id": "1",
-                      "projeto_id": "3",
-                      "codigo": "1.4.7",
-                      "atividade_simplificada": "Revisão dos eletrodutos",
-                      "assunto_projetos_id": null,
-                      "assunto": null,
-                      "consultor_id": "1",
-                      "consultor_nome": "Admin",
-                      "email_consultor": "admin@nextsi.com.br",
-                      "calendario_consultor_id": "1",
-                      "responsavel_id": null,
-                      "responsavel_nome": null,
-                      "email_responsavel": null,
-                      "previsao_inicio": "2023-02-10 00:00:00",
-                      "inicio": null,
-                      "prazo": null,
-                      "conclusao": null,
-                      "observacoes": "",
-                      "data_solicitacao": null,
-                      "ordem": "1",
-                      "porcentagem": "0.00",
-                      "horas_previstas": "01:00:00",
-                      "valor_hora": "0.00",
-                      "excluido": "N",
-                      "data_estimada": "2023-02-06 10:58:00",
-                      "projeto_atividade_sintetica_pai_id": null,
-                      "projeto_nome": "Instalação Elétrica Industrial",
-                      "projeto_template": "N",
-                      "cliente_id": "1",
-                      "cliente_nome": "Cliente X",
-                      "projeto_codigo": "PRJ0001",
-                      "iniciado": "N",
-                      "entregue": "N",
-                      "status_atividade": "4",
-                      "projeto_apontamento_por": "0",
-                      "predecessoras": [],
-                      "sucessoras": [],
-                      "apontamento": [],
-                      "apontamento_pendente": null,
-                      "prazo_estimado": "2023-02-06 10:58:47",
-                      "diff_datas": "",
-                      "timeline_modulo": 3,
-                      "atrasado": "N",
-                      "timeline_dia": "2023-02-10",
-                      "timeline_prazo": "2023-02-10 00:00:00"
-                    },
-                    {
-                      "timeline_dia": "2023-02-11",
-                      "timeline_prazo": "2023-02-11 00:00:00"
-                    },
-                    {
-                      "timeline_dia": "2023-02-12",
-                      "timeline_prazo": "2023-02-12 00:00:00"
-                    },
-                    {
-                      "documento_aprovacao_alcada_id": "1",
-                      "documento_id": "2",
-                      "documento_revisao_id": "4",
-                      "usuario_id": "1",
-                      "situacao": "1",
-                      "nome": "Provisão Financeira para Viagem.nbpf",
-                      "assunto_id": "2",
-                      "codigo": "001",
-                      "assunto_descricao": "Sistema",
-                      "assunto_controle_acessos": "N",
-                      "tipo_documento_id": "2",
-                      "tipo_documento_nome": "Sistema",
-                      "tipo_documento_controle_acessos": "N",
-                      "local_armazenamento_id": "1",
-                      "documento_pasta_id": "2",
-                      "path": "Raiz/Aprovação",
-                      "revisao_sequencia": "1",
-                      "revisao_data_envio": "2023-02-06 09:16:36",
-                      "revisao_tamanho": "100765",
-                      "revisao_nome": "Provisão Financeira para Viagem.nbpf",
-                      "mime_type": "text/plain",
-                      "hash_md5": "7a36c9c75fd55205969cf7e8597867d0",
-                      "controle_acessos": "N",
-                      "chamado_id": null,
-                      "mensagem_id": null,
-                      "midia": "N",
-                      "tag": null,
-                      "data_aprovacao": null,
-                      "recebimento_data": "2023-02-06 09:16:36",
-                      "prazo_data": "2023-02-13 09:16:36",
-                      "data_aprovacao_alcada": null,
-                      "aprovacao": null,
-                      "nome_usuario": "Admin",
-                      "nivel": "1",
-                      "nome_autor": "Admin",
-                      "qtde_revisoes_pendentes": "0",
-                      "documento_revisao_reprovar_id": null,
-                      "revisoes_reprovadas": null,
-                      "ultima_versao": null,
-                      "aprovacao_atrasada": "0",
-                      "timeline_modulo": 4,
-                      "atrasado": "N",
-                      "timeline_dia": "2023-02-13",
-                      "timeline_prazo": "2023-02-13 09:16:36"
-                    },
-                    {
-                      "oportunidade_agenda_id": "1",
-                      "excluido": "N",
-                      "insert_hora": "2023-02-06 09:56:28",
-                      "update_hora": null,
-                      "delete_hora": null,
-                      "insert_usuario_id": "1",
-                      "update_usuario_id": null,
-                      "delete_usuario_id": null,
-                      "tipo_agenda_oportunidade_id": "1",
-                      "tipo_agenda_oportunidade_descricao": "Reunião",
-                      "descricao": "Apresentação da nova linha de produtos",
-                      "observacoes": "",
-                      "data": "2023-02-14",
-                      "dia": "2023-02-14",
-                      "hora_inicio": "14:00:00",
-                      "translado": null,
-                      "duracao": "14:30:00",
-                      "atividade_realizada": "N",
-                      "representante_usuario_id": "1",
-                      "oportunidade_id": "1",
-                      "responsavel_nome": "Admin",
-                      "entidade_tipo": "O",
-                      "entidade_id": "1",
-                      "entidade_nome": "TESTE",
-                      "agenda_tipo_id": "CRM",
-                      "timeline_dia": "2023-02-14",
-                      "timeline_prazo": "2023-02-14 14:00:00",
-                      "timeline_modulo": 5,
-                      "atrasado": "N"
-                    },
-                    {
-                      "pdca_atividade_id": "1",
-                      "situacao": "5",
-                      "ordem": "1",
-                      "que": "Aprimoramento técnico",
-                      "porque": "Aumentar qualidade do serviço",
-                      "quem": "1",
-                      "onde": "Curso técnico",
-                      "data_inicio": "2023-02-15",
-                      "data_fim": "2023-12-23",
-                      "data_conclusao": null,
-                      "como": "",
-                      "quanto": "0",
-                      "conclusao": "0",
-                      "observacao": null,
-                      "pdca_id": "1",
-                      "pdca_numero": "PDCA001",
-                      "pdca_objetivo": "Aprimoramento t&eacute;cnico",
-                      "pdca_data_inicio": "2023-02-13",
-                      "pdca_data_fim": "2023-02-14",
-                      "pdca_progresso": "0",
-                      "pdca_situacao": "Não Iniciado",
-                      "pdca_situacao_id": "0",
-                      "timeline_modulo": 10,
-                      "atrasado": "N",
-                      "timeline_dia": "2023-02-15",
-                      "timeline_prazo": "2023-02-15 00:00:00"
-                    },
-                    {
-                      "pdca_atividade_id": "1",
-                      "situacao": "5",
-                      "ordem": "1",
-                      "que": "Aprimoramento técnico",
-                      "porque": "Aumentar qualidade do serviço",
-                      "quem": "1",
-                      "onde": "Curso técnico",
-                      "data_inicio": "2023-02-15",
-                      "data_fim": "2023-12-23",
-                      "data_conclusao": null,
-                      "como": "",
-                      "quanto": "0",
-                      "conclusao": "0",
-                      "observacao": null,
-                      "pdca_id": "1",
-                      "pdca_numero": "PDCA001",
-                      "pdca_objetivo": "Aprimoramento t&eacute;cnico",
-                      "pdca_data_inicio": "2023-02-13",
-                      "pdca_data_fim": "2023-02-14",
-                      "pdca_progresso": "0",
-                      "pdca_situacao": "Não Iniciado",
-                      "pdca_situacao_id": "0",
-                      "timeline_modulo": 10,
-                      "atrasado": "N",
-                      "timeline_dia": "2023-12-23",
-                      "timeline_prazo": "2023-12-23 00:00:00"
-                    }
-                  ],
-                  "cockpit": {
-                    "cardCockpitAgendaTotal": 1,
-                    "cardCockpitAgendaHoje": 1,
-                    "cardCockpitAgendaAtrasadas": 0,
-                    "cardCockpitChamadosTotal": 1,
-                    "cardCockpitChamadosHoje": 0,
-                    "cardCockpitChamadosAtrasados": 0,
-                    "cardCockpitDocumentosTotal": 1,
-                    "cardCockpitDocumentosHoje": 0,
-                    "cardCockpitDocumentosAtrasados": 0,
-                    "cardCockpitProcessosTotal": 18,
-                    "cardCockpitProcessosHoje": 0,
-                    "cardCockpitProcessosAtrasados": 0,
-                    "cardCockpitProjetosTotal": 1,
-                    "cardCockpitProjetosHoje": 0,
-                    "cardCockpitProjetosAtrasados": 0,
-                    "cardCockpitOportunidadesHoje": "0",
-                    "cardCockpitOportunidadesTotal": "1",
-                    "cardCockpitOportunidadesAtrasadas": 1,
-                    "cardCockpitPDCAAtrasados": 0,
-                    "cardCockpitPDCATotal": "1",
-                    "cardCockpitPDCAHoje": 0,
-                    "cardCockpitCartoesTotal": "2",
-                    "cardCockpitCartoesHoje": 0,
-                    "cardCockpitCartoesAtrasados": 0
-                  },
-                  "dashboard_representante": {
-                    "representante_id": "1",
-                    "excluido": "N",
-                    "insert_hora": "2023-02-03 11:26:29",
-                    "update_hora": null,
-                    "delete_hora": null,
-                    "insert_usuario_id": "1",
-                    "update_usuario_id": null,
-                    "delete_usuario_id": null,
-                    "nome_fantasia": "Admin",
-                    "razao_social": "",
-                    "email_principal": "",
-                    "telefone1": "",
-                    "telefone2": "",
-                    "telefone3": "",
-                    "telefone4": "",
-                    "logo_id": null,
-                    "codigo": "01",
-                    "unidade": "00",
-                    "cnpj": "",
-                    "bloqueado": "N",
-                    "visualizar_cliente": "N",
-                    "visualizar_organizacao": "N",
-                    "visualizar_contato": "N",
-                    "nome": "Admin",
-                    "email": "admin@nextsi.com.br",
-                    "foto_id": null,
-                    "usuario_id": "1",
-                    "tipo_representante": "E",
-                    "notificar_outras_entidades": "N",
-                    "metas_eventos": [],
-                    "qtd_abertas_periodo": "1",
-                    "valor_abertas_periodo": "10.00",
-                    "qtd_andamento": "1",
-                    "valor_andamento": "10.00",
-                    "qtd_ganho": "0",
-                    "valor_ganho": null,
-                    "qtd_perdido": "0",
-                    "valor_perdido": null,
-                    "qtd_estagnados": "0",
-                    "valor_estagnados": null,
-                    "qtd_atrasados": "0",
-                    "valor_atrasados": null,
-                    "eficiencia": 0
-                  },
-                  "meta_representante": []
+                  "token_publico": "81460a1e966cb59ace4bf2252401f9fb"
                 }
               }
             }

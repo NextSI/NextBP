@@ -1,5 +1,40 @@
 [
     {
+        "versao": "24.76.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Ajuste na rotina de marcar checklist de atividade de projeto",
+                "referencia": [
+                    "BPM36180"
+                ],
+                "modulo": "Projetos",
+                "hash": "54ca956ae9fab7816ab0a73bba22b9f8b8dfedb4",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM36180"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na popup de atividade",
+                "referencia": [
+                    "BPM36152"
+                ],
+                "modulo": "Processos",
+                "hash": "2a702653066d4a56b8815dbfe5812f7c6cae410c",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM36152"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Ajuste na rotina de salvar quadro de tarefa",
+                "referencia": [
+                    "BPM35959"
+                ],
+                "modulo": "Tarefas",
+                "hash": "682b67b45bb876869c52331cf05aa8b565d30bb1",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM35959"
+            }
+        ]
+    },
+    {
         "versao": "24.75.1",
         "itens": [
             {

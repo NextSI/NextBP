@@ -21,17 +21,33 @@ jobs:
 
     - name: 🔗 Call API after deploy PortalHomolog
       run: |
+        echo "📡 Chamando API de atualização de banco..."
         RESPONSE_CODE=$(curl -X POST "${{ secrets.FTP_URL_DBU_HOMOLOG }}${{ secrets.SUFIXO_DBU_API }}" \
           -H "Content-Type: application/json" \
           -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
           -d '{"status": "success", "message": "FTP deploy complete"}' \
           -w "%{http_code}" -o response.txt -s)
-        
+    
+        echo "🔍 HTTP Response Code: $RESPONSE_CODE"
+    
+        RESPONSE_BODY=$(cat response.txt)
+        echo "📄 API Response:"
+        echo "$RESPONSE_BODY"
+    
+        # Verifica se o código é 200
         if [ "$RESPONSE_CODE" -ne 200 ]; then
           echo "❌ API call failed with status code $RESPONSE_CODE"
-          cat response.txt
           exit 1
         fi
+    
+        # Verifica se a resposta contém a frase esperada
+        if [[ "$RESPONSE_BODY" != *"Atualizacao de estrutura procedimentos e funcoes do banco de dados concluida"* ]]; then
+          echo "❌ Resposta inesperada da API!"
+          echo "🔎 Esperado: 'Atualizacao de estrutura procedimentos e funcoes do banco de dados concluida'"
+          exit 1
+        fi
+    
+        echo "✅ API chamada com sucesso e retorno confirmado."
     
     - name: 📂 Sync files PortalProd
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5

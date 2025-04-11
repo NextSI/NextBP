@@ -12,127 +12,127 @@ jobs:
       matrix:
         include:
           - nome: PortalHomolog
-            username: FTP_USERNAME_PORTALHOMOLOG
-            password: FTP_PASSWORD_PORTALHOMOLOG
+            username_secret: FTP_USERNAME_PORTALHOMOLOG
+            password_secret: FTP_PASSWORD_PORTALHOMOLOG
             dir: ./homolog/
             api: FTP_URL_DBU_HOMOLOG
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: PortalProd
-            username: FTP_USERNAME_PORTALPROD
-            password: FTP_PASSWORD_PORTALPROD
+            username_secret: FTP_USERNAME_PORTALPROD
+            password_secret: FTP_PASSWORD_PORTALPROD
             dir: ./
             api: FTP_URL_DBU_PROD
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000205 Homolog
-            username: FTP_USERNAME_000205
-            password: FTP_PASSWORD_000205
+            username_secret: FTP_USERNAME_000205
+            password_secret: FTP_PASSWORD_000205
             dir: ./homolog/
             api: FTP_URL_DBU_000205_HLG
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000205 Prod
-            username: FTP_USERNAME_000205
-            password: FTP_PASSWORD_000205
+            username_secret: FTP_USERNAME_000205
+            password_secret: FTP_PASSWORD_000205
             dir: ./
             api: FTP_URL_DBU_000205
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000347 Homolog
-            username: FTP_USERNAME_000347
-            password: FTP_PASSWORD_000347
+            username_secret: FTP_USERNAME_000347
+            password_secret: FTP_PASSWORD_000347
             dir: ./homolog/
             api: FTP_URL_DBU_000347_HLG
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000347 Prod
-            username: FTP_USERNAME_000347
-            password: FTP_PASSWORD_000347
+            username_secret: FTP_USERNAME_000347
+            password_secret: FTP_PASSWORD_000347
             dir: ./
             api: FTP_URL_DBU_000347
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000348 Homolog
-            username: FTP_USERNAME_000348
-            password: FTP_PASSWORD_000348
+            username_secret: FTP_USERNAME_000348
+            password_secret: FTP_PASSWORD_000348
             dir: ./homolog/
             api: FTP_URL_DBU_000348_HLG
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000348 Prod
-            username: FTP_USERNAME_000348
-            password: FTP_PASSWORD_000348
+            username_secret: FTP_USERNAME_000348
+            password_secret: FTP_PASSWORD_000348
             dir: ./
             api: FTP_URL_DBU_000348
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000353 Homolog
-            username: FTP_USERNAME_000353
-            password: FTP_PASSWORD_000353
+            username_secret: FTP_USERNAME_000353
+            password_secret: FTP_PASSWORD_000353
             dir: ./homolog/
             api: FTP_URL_DBU_000353_HLG
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000353 Prod
-            username: FTP_USERNAME_000353
-            password: FTP_PASSWORD_000353
+            username_secret: FTP_USERNAME_000353
+            password_secret: FTP_PASSWORD_000353
             dir: ./
             api: FTP_URL_DBU_000353
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000333 Homolog
-            username: FTP_USERNAME_000333
-            password: FTP_PASSWORD_000333
+            username_secret: FTP_USERNAME_000333
+            password_secret: FTP_PASSWORD_000333
             dir: ./homolog/
             api: FTP_URL_DBU_000333_HLG
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000333 Prod
-            username: FTP_USERNAME_000333
-            password: FTP_PASSWORD_000333
+            username_secret: FTP_USERNAME_000333
+            password_secret: FTP_PASSWORD_000333
             dir: ./
             api: FTP_URL_DBU_000333
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000335 Homolog
-            username: FTP_USERNAME_000335
-            password: FTP_PASSWORD_000335
+            username_secret: FTP_USERNAME_000335
+            password_secret: FTP_PASSWORD_000335
             dir: ./homolog/
             api: FTP_URL_DBU_000335_HLG
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000335 Prod
-            username: FTP_USERNAME_000335
-            password: FTP_PASSWORD_000335
+            username_secret: FTP_USERNAME_000335
+            password_secret: FTP_PASSWORD_000335
             dir: ./
             api: FTP_URL_DBU_000335
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000226 Homolog
-            username: FTP_USERNAME_000226
-            password: FTP_PASSWORD_000226
+            username_secret: FTP_USERNAME_000226
+            password_secret: FTP_PASSWORD_000226
             dir: ./homolog/
             api: FTP_URL_DBU_000226_HLG
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000226 Prod
-            username: FTP_USERNAME_000226
-            password: FTP_PASSWORD_000226
+            username_secret: FTP_USERNAME_000226
+            password_secret: FTP_PASSWORD_000226
             dir: ./
             api: FTP_URL_DBU_000226
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000234 Homolog
-            username: FTP_USERNAME_000234_HLG
-            password: FTP_PASSWORD_000234_HLG
+            username_secret: FTP_USERNAME_000234_HLG
+            password_secret: FTP_PASSWORD_000234_HLG
             dir: ./
             api: FTP_URL_DBU_000234_HLG
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000234 Prod
-            username: FTP_USERNAME_000234
-            password: FTP_PASSWORD_000234
+            username_secret: FTP_USERNAME_000234
+            password_secret: FTP_PASSWORD_000234
             dir: ./
             api: FTP_URL_DBU_000234
             server: FTP_HOST_PORTALPRODHOMOLOG

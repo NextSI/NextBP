@@ -33,19 +33,14 @@
             <div class="tab-pane active" id="modal_processo_atividade_geral">
                 
                 <div class="row">
-                    <div class="col-md-2">
-                        <div class="form-group">
-                            <label for="modal_processo_atividade_edt_codigo">Código</label>
-                            <input type="text" class="edt_codigo form-control" id="modal_processo_atividade_edt_codigo" maxlength="255" placeholder="Opcional">
-                        </div>
-                    </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="modal_processo_atividade_edt_descricao">Descrição</label>
-                            <input type="text" class="edt_descricao form-control" id="modal_processo_atividade_edt_descricao" maxlength="150">
+                            <label for="modal_processo_atividade_edt_atividade_id">Id</label>
+                            <input type="text" class="edt_atividade_id form-control" id="modal_processo_atividade_edt_atividade_id" readonly maxlength="10">
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="modal_processo_atividade_cbo_tipo">Tipo</label>
                             <select class="cbo_tipo form-control selectpicker" id="modal_processo_atividade_cbo_tipo">
@@ -53,6 +48,25 @@
                                 <option value="1">Normal</option>
                                 <option value="2">Fim</option>
                             </select>
+                        </div>
+                    </div>     
+                   
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="modal_processo_atividade_edt_codigo">Código</label>
+                            <input type="text" class="edt_codigo form-control" id="modal_processo_atividade_edt_codigo" maxlength="255" placeholder="Opcional">
+                        </div>
+                    </div>   
+                </div>   
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="modal_processo_atividade_edt_descricao">Descrição</label>
+                            <input type="text" class="edt_descricao form-control" id="modal_processo_atividade_edt_descricao" maxlength="150">
                         </div>
                     </div>
                 </div>

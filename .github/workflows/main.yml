@@ -25,12 +25,12 @@ jobs:
             api: FTP_URL_DBU_PROD
             server: FTP_HOST_PORTALPRODHOMOLOG
 
-          # - nome: 000205 Homolog
-          #   username_secret: FTP_USERNAME_000205
-          #   password_secret: FTP_PASSWORD_000205
-          #   dir: ./homolog/
-          #   api: FTP_URL_DBU_000205_HLG
-          #   server: FTP_HOST_PORTALPRODHOMOLOG
+          - nome: 000205 Homolog
+            username_secret: FTP_USERNAME_000205
+            password_secret: FTP_PASSWORD_000205
+            dir: ./homolog/
+            api: FTP_URL_DBU_000205_HLG
+            server: FTP_HOST_PORTALPRODHOMOLOG
 
           # - nome: 000205 Prod
           #   username_secret: FTP_USERNAME_000205

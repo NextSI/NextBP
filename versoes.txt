@@ -1,5 +1,70 @@
 [
     {
+        "versao": "24.76.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Exibi\u00e7\u00e3o do ID da Atividade na Modelagem de Processos",
+                "referencia": [
+                    "BPM36308"
+                ],
+                "modulo": "Processos",
+                "hash": "b33a72713cb4c32bfc25c07fa21538a8f5d96bed",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM36308"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o de conflito entre abas na renderiza\u00e7\u00e3o do diagrama",
+                "referencia": [
+                    "BPM36220"
+                ],
+                "modulo": "Processos",
+                "hash": "ca2855c7a3917f765013090de290b3043353b460",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM36220"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na navega\u00e7\u00e3o em formato de pastas",
+                "referencia": [
+                    "BPM36176"
+                ],
+                "modulo": "Documentos",
+                "hash": "23eaddf651a15fe6474c29493453e2c33158ea3a",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM36176"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Valida\u00e7\u00e3o de entidades no login",
+                "referencia": [
+                    "BPM35943"
+                ],
+                "modulo": "Chamados",
+                "hash": "b703fb1d3835fa1943a62102e240cbdddbc809ca",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM35943"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na filtragem por status no Kanban via Scroll",
+                "referencia": [
+                    "BPM35831"
+                ],
+                "modulo": "Processos",
+                "hash": "e09b6d36b0ca4f9a716bcc421cd14f25e6122a5f",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM35831"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Falha na valida\u00e7\u00e3o de campos Ocultos na adi\u00e7\u00e3o de linhas em tabela de Formul\u00e1rios.",
+                "referencia": [
+                    "BPM35542"
+                ],
+                "modulo": "Processos",
+                "hash": "3c98befc1f0be9b0b4b578fbf41d9e0e1e37eaff",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM35542"
+            }
+        ]
+    },
+    {
         "versao": "24.76.1",
         "itens": [
             {

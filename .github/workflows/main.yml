@@ -2,415 +2,160 @@ on:
   push:
     branches:
       - 24@8.2
+
 name: 🚀 Deploy on push versão 24 PHP 8.2
+
 jobs:
-  web-deploy:
-    name: 🎉 Deploy v24 PHP 8.2
+  deploy:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - nome: PortalHomolog
+            sigla: PORTALHOMOLOG
+            dir: ./homolog/
+            api: FTP_URL_DBU_HOMOLOG
+            server: FTP_HOST_PORTALPRODHOMOLOG
+
+          - nome: PortalProd
+            sigla: PORTALPROD
+            dir: ./
+            api: FTP_URL_DBU_PROD
+            server: FTP_HOST_PORTALPRODHOMOLOG
+
+          - nome: 000205 Homolog
+            sigla: 000205
+            dir: ./homolog/
+            api: FTP_URL_DBU_000205_HLG
+            server: FTP_HOST_PORTALPRODHOMOLOG
+
+          - nome: 000205 Prod
+            sigla: 000205
+            dir: ./
+            api: FTP_URL_DBU_000205
+            server: FTP_HOST_PORTALPRODHOMOLOG
+
+          - nome: 000347 Homolog
+            sigla: 000347
+            dir: ./homolog/
+            api: FTP_URL_DBU_000347_HLG
+            server: FTP_HOST_PORTALPRODHOMOLOG
+
+          - nome: 000347 Prod
+            sigla: 000347
+            dir: ./
+            api: FTP_URL_DBU_000347
+            server: FTP_HOST_PORTALPRODHOMOLOG
+
+          - nome: 000348 Homolog
+            sigla: 000348
+            dir: ./homolog/
+            api: FTP_URL_DBU_000348_HLG
+            server: FTP_HOST_PORTALPRODHOMOLOG
+
+          - nome: 000348 Prod
+            sigla: 000348
+            dir: ./
+            api: FTP_URL_DBU_000348
+            server: FTP_HOST_PORTALPRODHOMOLOG
+
+          - nome: 000353 Homolog
+            sigla: 000353
+            dir: ./homolog/
+            api: FTP_URL_DBU_000353_HLG
+            server: FTP_HOST_PORTALPRODHOMOLOG
+
+          - nome: 000353 Prod
+            sigla: 000353
+            dir: ./
+            api: FTP_URL_DBU_000353
+            server: FTP_HOST_PORTALPRODHOMOLOG
+
+          - nome: 000333 Homolog
+            sigla: 000333
+            dir: ./homolog/
+            api: FTP_URL_DBU_000333_HLG
+            server: FTP_HOST_PORTALPRODHOMOLOG
+
+          - nome: 000333 Prod
+            sigla: 000333
+            dir: ./
+            api: FTP_URL_DBU_000333
+            server: FTP_HOST_PORTALPRODHOMOLOG
+
+          - nome: 000335 Homolog
+            sigla: 000335
+            dir: ./homolog/
+            api: FTP_URL_DBU_000335_HLG
+            server: FTP_HOST_PORTALPRODHOMOLOG
+
+          - nome: 000335 Prod
+            sigla: 000335
+            dir: ./
+            api: FTP_URL_DBU_000335
+            server: FTP_HOST_PORTALPRODHOMOLOG
+
+          - nome: 000226 Homolog
+            sigla: 000226
+            dir: ./homolog/
+            api: FTP_URL_DBU_000226_HLG
+            server: FTP_HOST_PORTALPRODHOMOLOG
+
+          - nome: 000226 Prod
+            sigla: 000226
+            dir: ./
+            api: FTP_URL_DBU_000226
+            server: FTP_HOST_PORTALPRODHOMOLOG
+
+          - nome: 000234 Homolog
+            sigla: 000234_HLG
+            dir: ./
+            api: FTP_URL_DBU_000234_HLG
+            server: FTP_HOST_PORTALPRODHOMOLOG
+
+          - nome: 000234 Prod
+            sigla: 000234
+            dir: ./
+            api: FTP_URL_DBU_000234
+            server: FTP_HOST_PORTALPRODHOMOLOG
+
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v4
-    
-    - name: 📂 Sync files PortalHomolog
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
-        username: ${{ secrets.FTP_USERNAME_PORTALHOMOLOG }}
-        password: ${{ secrets.FTP_PASSWORD_PORTALPRODHOMOLOG }}
-        server-dir: ./homolog/
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
 
-    - name: 🔗 Call API after deploy PortalHomolog
-      run: |
-        echo "📡 Chamando API de atualização de banco..."
-        RESPONSE_CODE=$(curl -X POST "${{ secrets.FTP_URL_DBU_HOMOLOG }}${{ secrets.SUFIXO_DBU_API }}" \
-          -H "Content-Type: application/json" \
-          -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
-          -d '{"status": "success", "message": "FTP deploy complete"}' \
-          -w "%{http_code}" -o response.txt -s)
-    
-        echo "🔍 HTTP Response Code: $RESPONSE_CODE"
-    
-        RESPONSE_BODY=$(cat response.txt)
-        echo "📄 API Response:"
-        echo "$RESPONSE_BODY"
-    
-        # Verifica se o código é 200
-        if [ "$RESPONSE_CODE" -ne 200 ]; then
-          echo "❌ API call failed with status code $RESPONSE_CODE"
-          exit 1
-        fi
-    
-        # Verifica se a resposta contém a frase esperada
-        if [[ "$RESPONSE_BODY" != *"Atualizacao de estrutura procedimentos e funcoes do banco de dados concluida"* ]]; then
-          echo "❌ Resposta inesperada da API!"
-          echo "🔎 Esperado: 'Atualizacao de estrutura procedimentos e funcoes do banco de dados concluida'"
-          exit 1
-        fi
-    
-        echo "✅ API chamada com sucesso e retorno confirmado."
-    
-    - name: 📂 Sync files PortalProd
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
-        username: ${{ secrets.FTP_USERNAME_PORTALPROD }}
-        password: ${{ secrets.FTP_PASSWORD_PORTALPRODHOMOLOG }}
-        server-dir: ./
+      - name: 📂 Sync files ${{ matrix.nome }}
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets[matrix.server] }}
+          username: ${{ secrets['FTP_USERNAME_' + matrix.sigla] }}
+          password: ${{ secrets['FTP_PASSWORD_' + matrix.sigla] }}
+          server-dir: ${{ matrix.dir }}
 
-    - name: 🔗 Call API after deploy PortalProd
-      run: |
-        RESPONSE_CODE=$(curl -X POST "${{ secrets.FTP_URL_DBU_PROD }}${{ secrets.SUFIXO_DBU_API }}" \
-          -H "Content-Type: application/json" \
-          -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
-          -d '{"status": "success", "message": "FTP deploy complete"}' \
-          -w "%{http_code}" -o response.txt -s)
-        
-        if [ "$RESPONSE_CODE" -ne 200 ]; then
-          echo "❌ API call failed with status code $RESPONSE_CODE"
-          cat response.txt
-          exit 1
-        fi
-    
-    - name: 📂 Sync files 000205 Hlg
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
-        username: ${{ secrets.FTP_USERNAME_000205 }}
-        password: ${{ secrets.FTP_PASSWORD_000205 }}
-        server-dir: ./homolog/
+      - name: 🔗 Call API after deploy ${{ matrix.nome }}
+        run: |
+          echo "📡 Chamando API para ${{ matrix.nome }}"
 
-    - name: 🔗 Call API after deploy 000205 Hlg
-      run: |
-        RESPONSE_CODE=$(curl -X POST "${{ secrets.FTP_URL_DBU_000205_HLG }}${{ secrets.SUFIXO_DBU_API }}" \
-          -H "Content-Type: application/json" \
-          -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
-          -d '{"status": "success", "message": "FTP deploy complete"}' \
-          -w "%{http_code}" -o response.txt -s)
-        
-        if [ "$RESPONSE_CODE" -ne 200 ]; then
-          echo "❌ API call failed with status code $RESPONSE_CODE"
-          cat response.txt
-          exit 1
-        fi
+          RESPONSE_CODE=$(curl -X POST "${{ secrets[matrix.api] }}${{ secrets.SUFIXO_DBU_API }}" \
+            -H "Content-Type: application/json" \
+            -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
+            -d '{"status": "success", "message": "FTP deploy complete"}' \
+            -w "%{http_code}" -o response.txt -s)
 
-    - name: 📂 Sync files 000205
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
-        username: ${{ secrets.FTP_USERNAME_000205 }}
-        password: ${{ secrets.FTP_PASSWORD_000205 }}
-        server-dir: ./
+          echo "🔍 HTTP Response Code: $RESPONSE_CODE"
 
-    - name: 🔗 Call API after deploy 000205
-      run: |
-        RESPONSE_CODE=$(curl -X POST "${{ secrets.FTP_URL_DBU_000205 }}${{ secrets.SUFIXO_DBU_API }}" \
-          -H "Content-Type: application/json" \
-          -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
-          -d '{"status": "success", "message": "FTP deploy complete"}' \
-          -w "%{http_code}" -o response.txt -s)
-        
-        if [ "$RESPONSE_CODE" -ne 200 ]; then
-          echo "❌ API call failed with status code $RESPONSE_CODE"
-          cat response.txt
-          exit 1
-        fi
+          RESPONSE_BODY=$(cat response.txt)
+          echo "📄 API Response:"
+          echo "$RESPONSE_BODY"
 
-    - name: 📂 Sync files 000347 Hlg
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
-        username: ${{ secrets.FTP_USERNAME_000347 }}
-        password: ${{ secrets.FTP_PASSWORD_000347 }}
-        server-dir: ./homolog/
+          if [ "$RESPONSE_CODE" -ne 200 ]; then
+            echo "❌ API call failed with status code $RESPONSE_CODE"
+            exit 1
+          fi
 
-    - name: 🔗 Call API after deploy 000347 Hlg
-      run: |
-        RESPONSE_CODE=$(curl -X POST "${{ secrets.FTP_URL_DBU_000347_HLG }}${{ secrets.SUFIXO_DBU_API }}" \
-          -H "Content-Type: application/json" \
-          -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
-          -d '{"status": "success", "message": "FTP deploy complete"}' \
-          -w "%{http_code}" -o response.txt -s)
-        
-        if [ "$RESPONSE_CODE" -ne 200 ]; then
-          echo "❌ API call failed with status code $RESPONSE_CODE"
-          cat response.txt
-          exit 1
-        fi
+          if [[ "$RESPONSE_BODY" != *"Atualizacao de estrutura procedimentos e funcoes do banco de dados concluida"* ]]; then
+            echo "❌ Resposta inesperada da API!"
+            echo "🔎 Esperado: 'Atualizacao de estrutura procedimentos e funcoes do banco de dados concluida'"
+            exit 1
+          fi
 
-    - name: 📂 Sync files 000347
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
-        username: ${{ secrets.FTP_USERNAME_000347 }}
-        password: ${{ secrets.FTP_PASSWORD_000347 }}
-        server-dir: ./
-
-    - name: 🔗 Call API after deploy 000347
-      run: |
-        RESPONSE_CODE=$(curl -X POST "${{ secrets.FTP_URL_DBU_000347 }}${{ secrets.SUFIXO_DBU_API }}" \
-          -H "Content-Type: application/json" \
-          -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
-          -d '{"status": "success", "message": "FTP deploy complete"}' \
-          -w "%{http_code}" -o response.txt -s)
-        
-        if [ "$RESPONSE_CODE" -ne 200 ]; then
-          echo "❌ API call failed with status code $RESPONSE_CODE"
-          cat response.txt
-          exit 1
-        fi
-        
-    - name: 📂 Sync files 000348 Hlg
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
-        username: ${{ secrets.FTP_USERNAME_000348 }}
-        password: ${{ secrets.FTP_PASSWORD_000348 }}
-        server-dir: ./homolog/
-
-    - name: 🔗 Call API after deploy 000348 Hlg
-      run: |
-        RESPONSE_CODE=$(curl -X POST "${{ secrets.FTP_URL_DBU_000348_HLG }}${{ secrets.SUFIXO_DBU_API }}" \
-          -H "Content-Type: application/json" \
-          -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
-          -d '{"status": "success", "message": "FTP deploy complete"}' \
-          -w "%{http_code}" -o response.txt -s)
-        
-        if [ "$RESPONSE_CODE" -ne 200 ]; then
-          echo "❌ API call failed with status code $RESPONSE_CODE"
-          cat response.txt
-          exit 1
-        fi
-
-    - name: 📂 Sync files 000348
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
-        username: ${{ secrets.FTP_USERNAME_000348 }}
-        password: ${{ secrets.FTP_PASSWORD_000348 }}
-        server-dir: ./
-
-    - name: 🔗 Call API after deploy 000348
-      run: |
-        RESPONSE_CODE=$(curl -X POST "${{ secrets.FTP_URL_DBU_000348 }}${{ secrets.SUFIXO_DBU_API }}" \
-          -H "Content-Type: application/json" \
-          -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
-          -d '{"status": "success", "message": "FTP deploy complete"}' \
-          -w "%{http_code}" -o response.txt -s)
-        
-        if [ "$RESPONSE_CODE" -ne 200 ]; then
-          echo "❌ API call failed with status code $RESPONSE_CODE"
-          cat response.txt
-          exit 1
-        fi
-
-    - name: 📂 Sync files 000353 Hlg
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
-        username: ${{ secrets.FTP_USERNAME_000353 }}
-        password: ${{ secrets.FTP_PASSWORD_000353 }}
-        server-dir: ./homolog/
-
-    - name: 🔗 Call API after deploy 000353 Hlg
-      run: |
-        RESPONSE_CODE=$(curl -X POST "${{ secrets.FTP_URL_DBU_000353_HLG }}${{ secrets.SUFIXO_DBU_API }}" \
-          -H "Content-Type: application/json" \
-          -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
-          -d '{"status": "success", "message": "FTP deploy complete"}' \
-          -w "%{http_code}" -o response.txt -s)
-        
-        if [ "$RESPONSE_CODE" -ne 200 ]; then
-          echo "❌ API call failed with status code $RESPONSE_CODE"
-          cat response.txt
-          exit 1
-        fi
-
-    - name: 📂 Sync files 000353
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
-        username: ${{ secrets.FTP_USERNAME_000353 }}
-        password: ${{ secrets.FTP_PASSWORD_000353 }}
-        server-dir: ./
-
-    - name: 🔗 Call API after deploy 000353
-      run: |
-        RESPONSE_CODE=$(curl -X POST "${{ secrets.FTP_URL_DBU_000353 }}${{ secrets.SUFIXO_DBU_API }}" \
-          -H "Content-Type: application/json" \
-          -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
-          -d '{"status": "success", "message": "FTP deploy complete"}' \
-          -w "%{http_code}" -o response.txt -s)
-        
-        if [ "$RESPONSE_CODE" -ne 200 ]; then
-          echo "❌ API call failed with status code $RESPONSE_CODE"
-          cat response.txt
-          exit 1
-        fi
-
-    - name: 📂 Sync files 000333 Hlg
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
-        username: ${{ secrets.FTP_USERNAME_000333 }}
-        password: ${{ secrets.FTP_PASSWORD_000333 }}
-        server-dir: ./homolog/
-
-    - name: 🔗 Call API after deploy 000333 Hlg
-      run: |
-        RESPONSE_CODE=$(curl -X POST "${{ secrets.FTP_URL_DBU_000333_HLG }}${{ secrets.SUFIXO_DBU_API }}" \
-          -H "Content-Type: application/json" \
-          -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
-          -d '{"status": "success", "message": "FTP deploy complete"}' \
-          -w "%{http_code}" -o response.txt -s)
-        
-        if [ "$RESPONSE_CODE" -ne 200 ]; then
-          echo "❌ API call failed with status code $RESPONSE_CODE"
-          cat response.txt
-          exit 1
-        fi
-
-    - name: 📂 Sync files 000333
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
-        username: ${{ secrets.FTP_USERNAME_000333 }}
-        password: ${{ secrets.FTP_PASSWORD_000333 }}
-        server-dir: ./
-
-    - name: 🔗 Call API after deploy 000333
-      run: |
-        RESPONSE_CODE=$(curl -X POST "${{ secrets.FTP_URL_DBU_000333 }}${{ secrets.SUFIXO_DBU_API }}" \
-          -H "Content-Type: application/json" \
-          -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
-          -d '{"status": "success", "message": "FTP deploy complete"}' \
-          -w "%{http_code}" -o response.txt -s)
-        
-        if [ "$RESPONSE_CODE" -ne 200 ]; then
-          echo "❌ API call failed with status code $RESPONSE_CODE"
-          cat response.txt
-          exit 1
-        fi
-
-    - name: 📂 Sync files 000335 Hlg
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
-        username: ${{ secrets.FTP_USERNAME_000335 }}
-        password: ${{ secrets.FTP_PASSWORD_000335 }}
-        server-dir: ./homolog/
-
-    - name: 🔗 Call API after deploy 000335 Hlg
-      run: |
-        RESPONSE_CODE=$(curl -X POST "${{ secrets.FTP_URL_DBU_000335_HLG }}${{ secrets.SUFIXO_DBU_API }}" \
-          -H "Content-Type: application/json" \
-          -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
-          -d '{"status": "success", "message": "FTP deploy complete"}' \
-          -w "%{http_code}" -o response.txt -s)
-        
-        if [ "$RESPONSE_CODE" -ne 200 ]; then
-          echo "❌ API call failed with status code $RESPONSE_CODE"
-          cat response.txt
-          exit 1
-        fi
-
-    - name: 📂 Sync files 000335
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
-        username: ${{ secrets.FTP_USERNAME_000335 }}
-        password: ${{ secrets.FTP_PASSWORD_000335 }}
-        server-dir: ./
-
-    - name: 🔗 Call API after deploy 000335
-      run: |
-        RESPONSE_CODE=$(curl -X POST "${{ secrets.FTP_URL_DBU_000335 }}${{ secrets.SUFIXO_DBU_API }}" \
-          -H "Content-Type: application/json" \
-          -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
-          -d '{"status": "success", "message": "FTP deploy complete"}' \
-          -w "%{http_code}" -o response.txt -s)
-        
-        if [ "$RESPONSE_CODE" -ne 200 ]; then
-          echo "❌ API call failed with status code $RESPONSE_CODE"
-          cat response.txt
-          exit 1
-        fi
-        
-    - name: 📂 Sync files 000226 Hlg
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
-        username: ${{ secrets.FTP_USERNAME_000226 }}
-        password: ${{ secrets.FTP_PASSWORD_000226 }}
-        server-dir: ./homolog/
-
-    - name: 🔗 Call API after deploy 000226 Hlg
-      run: |
-        RESPONSE_CODE=$(curl -X POST "${{ secrets.FTP_URL_DBU_000226_HLG }}${{ secrets.SUFIXO_DBU_API }}" \
-          -H "Content-Type: application/json" \
-          -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
-          -d '{"status": "success", "message": "FTP deploy complete"}' \
-          -w "%{http_code}" -o response.txt -s)
-        
-        if [ "$RESPONSE_CODE" -ne 200 ]; then
-          echo "❌ API call failed with status code $RESPONSE_CODE"
-          cat response.txt
-          exit 1
-        fi
-
-    - name: 📂 Sync files 000226
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
-        username: ${{ secrets.FTP_USERNAME_000226 }}
-        password: ${{ secrets.FTP_PASSWORD_000226 }}
-        server-dir: ./
-
-    - name: 🔗 Call API after deploy 000226
-      run: |
-        RESPONSE_CODE=$(curl -X POST "${{ secrets.FTP_URL_DBU_000226 }}${{ secrets.SUFIXO_DBU_API }}" \
-          -H "Content-Type: application/json" \
-          -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
-          -d '{"status": "success", "message": "FTP deploy complete"}' \
-          -w "%{http_code}" -o response.txt -s)
-        
-        if [ "$RESPONSE_CODE" -ne 200 ]; then
-          echo "❌ API call failed with status code $RESPONSE_CODE"
-          cat response.txt
-          exit 1
-        fi
-
-    - name: 🔗 Call API after deploy 000234 Hlg
-      run: |
-        RESPONSE_CODE=$(curl -X POST "${{ secrets.FTP_URL_DBU_000234_HLG }}${{ secrets.SUFIXO_DBU_API }}" \
-          -H "Content-Type: application/json" \
-          -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
-          -d '{"status": "success", "message": "FTP deploy complete"}' \
-          -w "%{http_code}" -o response.txt -s)
-        
-        if [ "$RESPONSE_CODE" -ne 200 ]; then
-          echo "❌ API call failed with status code $RESPONSE_CODE"
-          cat response.txt
-          exit 1
-        fi
-
-    - name: 📂 Sync files 000234
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_HOST_PORTALPRODHOMOLOG }}
-        username: ${{ secrets.FTP_USERNAME_000234 }}
-        password: ${{ secrets.FTP_PASSWORD_000234 }}
-        server-dir: ./
-
-    - name: 🔗 Call API after deploy 000234
-      run: |
-        RESPONSE_CODE=$(curl -X POST "${{ secrets.FTP_URL_DBU_000234 }}${{ secrets.SUFIXO_DBU_API }}" \
-          -H "Content-Type: application/json" \
-          -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
-          -d '{"status": "success", "message": "FTP deploy complete"}' \
-          -w "%{http_code}" -o response.txt -s)
-        
-        if [ "$RESPONSE_CODE" -ne 200 ]; then
-          echo "❌ API call failed with status code $RESPONSE_CODE"
-          cat response.txt
-          exit 1
-        fi
+          echo "✅ Deploy e atualização do banco de dados realizados com sucesso para ${{ matrix.nome }}"

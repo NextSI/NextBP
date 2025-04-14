@@ -1,5 +1,30 @@
 [
     {
+        "versao": "24.77.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Ajuste no hist\u00f3rico da entidade",
+                "referencia": [
+                    "BPM36490"
+                ],
+                "modulo": "Cadastros",
+                "hash": "8d62af9e1bedb1a56f832f0f1415cf8012d08329",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM36490"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Ajuste na rotina de download de template",
+                "referencia": [
+                    "BPM36238"
+                ],
+                "modulo": "Processos",
+                "hash": "0567a3fb85b466e63c1c493ee9aca324768e0304",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM36238"
+            }
+        ]
+    },
+    {
         "versao": "24.76.2",
         "itens": [
             {

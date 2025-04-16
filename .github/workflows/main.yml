@@ -155,14 +155,14 @@ jobs:
             api: FTP_URL_DBU_000234
             server: FTP_HOST_PORTALPRODHOMOLOG
 
-          - nome: 000240 Homolog
-            tipo: sftp
-            port: FTP_PORT_000240
-            username_secret: FTP_USERNAME_000240
-            password_secret: FTP_PASSWORD_000240
-            dir: /var/www/html/homolog/
-            api: FTP_URL_DBU_000240
-            server: FTP_HOST_000240
+          # - nome: 000240 Homolog
+          #   tipo: sftp
+          #   port: FTP_PORT_000240
+          #   username_secret: FTP_USERNAME_000240
+          #   password_secret: FTP_PASSWORD_000240
+          #   dir: /var/www/html/homolog/
+          #   api: FTP_URL_DBU_000240
+          #   server: FTP_HOST_000240
 
     steps:
       - name: 🚚 Get latest code

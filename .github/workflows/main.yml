@@ -12,6 +12,7 @@ jobs:
       matrix:
         include:
           - nome: PortalHomolog
+            tipo: ftp
             username_secret: FTP_USERNAME_PORTALHOMOLOG
             password_secret: FTP_PASSWORD_PORTALPRODHOMOLOG
             dir: ./homolog/
@@ -19,6 +20,7 @@ jobs:
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: PortalProd
+            tipo: ftp
             username_secret: FTP_USERNAME_PORTALPROD
             password_secret: FTP_PASSWORD_PORTALPRODHOMOLOG
             dir: ./
@@ -26,6 +28,7 @@ jobs:
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000205 Homolog
+            tipo: ftp
             username_secret: FTP_USERNAME_000205
             password_secret: FTP_PASSWORD_000205
             dir: ./homolog/
@@ -33,6 +36,7 @@ jobs:
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000205 Prod
+            tipo: ftp
             username_secret: FTP_USERNAME_000205
             password_secret: FTP_PASSWORD_000205
             dir: ./
@@ -40,6 +44,7 @@ jobs:
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000347 Homolog
+            tipo: ftp
             username_secret: FTP_USERNAME_000347
             password_secret: FTP_PASSWORD_000347
             dir: ./homolog/
@@ -47,6 +52,7 @@ jobs:
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000347 Prod
+            tipo: ftp
             username_secret: FTP_USERNAME_000347
             password_secret: FTP_PASSWORD_000347
             dir: ./
@@ -54,6 +60,7 @@ jobs:
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000348 Homolog
+            tipo: ftp
             username_secret: FTP_USERNAME_000348
             password_secret: FTP_PASSWORD_000348
             dir: ./homolog/
@@ -61,6 +68,7 @@ jobs:
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000348 Prod
+            tipo: ftp
             username_secret: FTP_USERNAME_000348
             password_secret: FTP_PASSWORD_000348
             dir: ./
@@ -68,6 +76,7 @@ jobs:
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000353 Homolog
+            tipo: ftp
             username_secret: FTP_USERNAME_000353
             password_secret: FTP_PASSWORD_000353
             dir: ./homolog/
@@ -75,6 +84,7 @@ jobs:
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000353 Prod
+            tipo: ftp
             username_secret: FTP_USERNAME_000353
             password_secret: FTP_PASSWORD_000353
             dir: ./
@@ -82,6 +92,7 @@ jobs:
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000333 Homolog
+            tipo: ftp
             username_secret: FTP_USERNAME_000333
             password_secret: FTP_PASSWORD_000333
             dir: ./homolog/
@@ -89,6 +100,7 @@ jobs:
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000333 Prod
+            tipo: ftp
             username_secret: FTP_USERNAME_000333
             password_secret: FTP_PASSWORD_000333
             dir: ./
@@ -96,6 +108,7 @@ jobs:
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000335 Homolog
+            tipo: ftp
             username_secret: FTP_USERNAME_000335
             password_secret: FTP_PASSWORD_000335
             dir: ./homolog/
@@ -103,6 +116,7 @@ jobs:
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000335 Prod
+            tipo: ftp
             username_secret: FTP_USERNAME_000335
             password_secret: FTP_PASSWORD_000335
             dir: ./
@@ -110,6 +124,7 @@ jobs:
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000226 Homolog
+            tipo: ftp
             username_secret: FTP_USERNAME_000226
             password_secret: FTP_PASSWORD_000226
             dir: ./homolog/
@@ -117,6 +132,7 @@ jobs:
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000226 Prod
+            tipo: ftp
             username_secret: FTP_USERNAME_000226
             password_secret: FTP_PASSWORD_000226
             dir: ./
@@ -124,6 +140,7 @@ jobs:
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000234 Homolog
+            tipo: ftp
             username_secret: FTP_USERNAME_000234_HLG
             password_secret: FTP_PASSWORD_000234_HLG
             dir: ./
@@ -131,23 +148,45 @@ jobs:
             server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000234 Prod
+            tipo: ftp
             username_secret: FTP_USERNAME_000234
             password_secret: FTP_PASSWORD_000234
             dir: ./
             api: FTP_URL_DBU_000234
             server: FTP_HOST_PORTALPRODHOMOLOG
 
+          - nome: 000240 Homolog
+            tipo: sftp
+            port: FTP_PORT_000240
+            username_secret: FTP_USERNAME_000240
+            password_secret: FTP_PASSWORD_000240
+            dir: /var/www/html/homolog/
+            api: FTP_URL_DBU_000240
+            server: FTP_HOST_000240
+
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v4
 
       - name: 📂 Sync files ${{ matrix.nome }}
+        if: matrix.tipo == 'ftp'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets[matrix.server] }}
           username: ${{ secrets[matrix.username_secret] }}
           password: ${{ secrets[matrix.password_secret] }}
           server-dir: ${{ matrix.dir }}
+        
+      - name: 📂 Sync via SFTP ${{ matrix.nome }}
+        if: matrix.tipo == 'sftp'
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets[matrix.server] }}
+          username: ${{ secrets[matrix.username_secret] }}
+          key: ${{ secrets[matrix.password_secret] }}
+          port: ${{ secrets[matrix.port] }}
+          source: ./
+          target: ${{ matrix.dir }}
 
       - name: 🔗 Call API after deploy ${{ matrix.nome }}
         run: |

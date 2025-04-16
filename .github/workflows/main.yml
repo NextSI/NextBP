@@ -183,7 +183,7 @@ jobs:
         with:
           host: ${{ secrets[matrix.server] }}
           username: ${{ secrets[matrix.username_secret] }}
-          key: ${{ secrets[matrix.password_secret] }}
+          password: ${{ secrets[matrix.password_secret] }}
           port: ${{ secrets[matrix.port] }}
           source: ./
           target: ${{ matrix.dir }}

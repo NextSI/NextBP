@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.77.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Corrigido o comportamento do campo \"Email\" nos signat\u00e1rios",
+                "referencia": [
+                    "BPM36568"
+                ],
+                "modulo": "Documentos",
+                "hash": "3c36cb8538e13ee915cd9b66164df7683dae7913",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM36568"
+            }
+        ]
+    },
+    {
         "versao": "24.77.1",
         "itens": [
             {

@@ -1,5 +1,22 @@
 [
     {
+        "versao": "24.77.3",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na rotina de salvar pastas",
+                "referencia": [
+                    "BPM34626",
+                    "35538",
+                    "35541"
+                ],
+                "modulo": "Documentos (GED)",
+                "hash": "f0272a8243b859c1ca824bf993c9204c71156bf1",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM34626"
+            }
+        ]
+    },
+    {
         "versao": "24.77.2",
         "itens": [
             {

@@ -1,0 +1,35 @@
+<?php
+
+use \Sys\Basic;
+use \Sys\DB;
+use \Sys\Validation;
+use \Sys\Util;
+use \Sys\App;
+
+/**
+ * As funções abaixo são executadas a partir da tela Projetos > Atividades por Usuário, nos eventos de iniciar, pausar e entregar uma atividade.
+ */
+
+function apontamento_projeto_dinamico_iniciar_antes($atividade_projeto_model) {
+    // Ação executada antes de iniciar uma atividade
+}
+
+function apontamento_projeto_dinamico_iniciar_depois($atividade_projeto_model) {
+    // Ação executada depois de iniciar uma atividade
+}
+
+function apontamento_projeto_dinamico_pausar_antes($atividade_projeto_model) {
+    // Ação executada antes de pausar uma atividade
+}
+
+function apontamento_projeto_dinamico_pausar_depois($atividade_projeto_model) {
+    // Ação executada depois de pausar uma atividade
+}
+
+function apontamento_projeto_dinamico_entregar_antes($atividade_projeto_model) {
+    // Ação executada antes de entregar uma atividade
+}
+
+function apontamento_projeto_dinamico_entregar_depois($atividade_projeto_model) {
+    // Ação executada depois de entregar uma atividade
+}

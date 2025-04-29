@@ -1,0 +1,11 @@
+define([], function() {
+
+	var Atividade_Projeto_Detalhes_Listar_Documentos_PE = function(main) {
+	    'use strict';
+	    
+	    console.log('Atividade_Projeto_Detalhes_Listar_Documentos_PE');
+	    console.log(main);
+	}
+
+	return Atividade_Projeto_Detalhes_Listar_Documentos_PE;
+});

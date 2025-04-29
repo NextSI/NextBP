@@ -1,5 +1,64 @@
 [
     {
+        "versao": "23.59.77",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Corrigido o comportamento do campo \"Email\" nos signat\u00e1rios",
+                "referencia": [
+                    "BPM36568"
+                ],
+                "modulo": "Documentos",
+                "hash": "e6b647d017d99d389759fe57678c3e698e2a4346",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM36568"
+            },
+            {
+                "tipo": "C",
+                "descricao": "lida\u00e7\u00e3o de entidades no login",
+                "referencia": [
+                    "BPM35943"
+                ],
+                "modulo": "Chamados",
+                "hash": "18993243a59b6f8f4507fb66cdd4be1ad732296b",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM35943"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Falha na valida\u00e7\u00e3o de campos Ocultos na adi\u00e7\u00e3o de linhas em tabela de Formul\u00e1rios.",
+                "referencia": [
+                    "BPM35542"
+                ],
+                "modulo": "Processos",
+                "hash": "0876590556926afb28cc5a0e5f45e00293207dcb",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM35542"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajustes perform\u00e1ticos na rotina de salvar pasta",
+                "referencia": [
+                    "BPM34626",
+                    "BPM35538",
+                    "BPM35541"
+                ],
+                "modulo": "Documentos (GED)",
+                "hash": "950ca10ec82a7fafb945ad02331f0bc83053d650",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM35538"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na rotina de salvar pastas",
+                "referencia": [
+                    "BPM34626",
+                    "35538",
+                    "35541"
+                ],
+                "modulo": "Documentos (GED)",
+                "hash": "84279de8c8e4237097ba174139c8b9953388ad4a",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM34626"
+            }
+        ]
+    },
+    {
         "versao": "23.59.76",
         "itens": [
             {

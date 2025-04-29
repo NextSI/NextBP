@@ -1,5 +1,20 @@
 [
     {
+        "versao": "23.59.78",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao importar atividades de projetos de planilha do Excel",
+                "referencia": [
+                    "BPM37519"
+                ],
+                "modulo": "Projetos",
+                "hash": "c29edbf01e426859d81c3b1eb7f3a9b13858c791",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM37519"
+            }
+        ]
+    },
+    {
         "versao": "23.59.77",
         "itens": [
             {

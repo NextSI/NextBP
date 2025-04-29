@@ -3,7 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'b703fb1d3835fa1943a62102e240cbdddbc809ca',
+        'reference' => '3c36cb8538e13ee915cd9b66164df7683dae7913',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         '__root__' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'b703fb1d3835fa1943a62102e240cbdddbc809ca',
+            'reference' => '3c36cb8538e13ee915cd9b66164df7683dae7913',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -388,8 +388,8 @@
         'psr/cache-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '^1.0',
-                1 => '2.0|3.0',
+                0 => '2.0|3.0',
+                1 => '^1.0',
             ),
         ),
         'psr/clock' => array(
@@ -482,8 +482,8 @@
         'psr/simple-cache-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '^1.0',
-                1 => '1.0|2.0|3.0',
+                0 => '1.0|2.0|3.0',
+                1 => '^1.0',
             ),
         ),
         'ralouphie/getallheaders' => array(

@@ -1,0 +1,5 @@
+/* Aqui você pode adicionar suas clases css customizadas */
+
+.dx-scheduler-timeline > * .dx-scheduler-cell-sizes-vertical {
+    height: 1500px !important;
+}

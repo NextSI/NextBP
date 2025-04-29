@@ -1,0 +1,11 @@
+define([], function() {
+
+	var Oportunidade_Detalhes_Novo_PE = function(main) {
+	    'use strict';
+
+	    console.log('Oportunidade_Detalhes_Novo_PE');
+	    console.log(main);
+	}
+
+	return Oportunidade_Detalhes_Novo_PE;
+});

@@ -1,0 +1,11 @@
+<?php
+
+use \Sys\Util;
+use \Sys\Basic;
+use \Sys\Validation;
+use \Sys\DB;
+
+function solicitacao_atividade_consultar_situacao_gateway_paralelo($solicitacao_model, $versao_processo_gateway_id, &$qtde_origens_gateway_paralelo, &$total_atividades_aguardando_envio) {
+    // ao consultar as atividades relacionadas com o gateway paralelo
+    
+};

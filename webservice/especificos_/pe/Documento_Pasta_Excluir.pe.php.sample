@@ -1,0 +1,14 @@
+<?php
+
+use \Sys\Util;
+use \Sys\Basic;
+use \Sys\Validation;
+use \Sys\DB;
+
+function documento_pasta_excluir_antes($documento_pasta_model) {
+
+};
+
+function documento_pasta_excluir_depois($documento_pasta_model) {
+
+};

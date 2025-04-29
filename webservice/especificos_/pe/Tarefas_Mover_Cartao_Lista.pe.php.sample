@@ -1,0 +1,31 @@
+<?php
+
+use \Sys\Basic;
+use \Sys\DB;
+use \Sys\Validation;
+use \Sys\Util;
+use \Sys\App;
+
+/**
+ * As funções abaixo são executadas a partir do módulo Tarefas, quando um cartão é movido de uma lista para outra diferente
+ */
+
+function tarefas_mover_cartao_lista_antes($tarefa_quadro_lista_cartao_model) {
+    // Ação executada antes de mover um cartão para outra lista diferente
+    
+    /**
+     * Lista onde o cartão estava: $tarefa_quadro_lista_cartao_model->tarefa_quadro_lista_id_old;
+     * 
+     * Lista para onde o cartão foi movido: $tarefa_quadro_lista_cartao_model->tarefa_quadro_lista_id;
+     */
+}
+
+function tarefas_mover_cartao_lista_depois($tarefa_quadro_lista_cartao_model) {
+    // Ação executada depois de mover um cartão para outra lista diferente
+
+    /**
+     * Lista onde o cartão estava: $tarefa_quadro_lista_cartao_model->tarefa_quadro_lista_id_old;
+     * 
+     * Lista para onde o cartão foi movido: $tarefa_quadro_lista_cartao_model->tarefa_quadro_lista_id;
+     */
+}

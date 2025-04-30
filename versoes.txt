@@ -1,5 +1,60 @@
 [
     {
+        "versao": "24.78.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Atualiza\u00e7\u00e3o de componentes na tela de Apontamentos",
+                "referencia": [
+                    "BPM7399"
+                ],
+                "modulo": "Projetos",
+                "hash": "d19a393253553b0aa74a0970d092ac38c20d6d0a",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM7399"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na edi\u00e7\u00e3o de usu\u00e1rio, sele\u00e7\u00e3o de grupos de usu\u00e1rios",
+                "referencia": [
+                    "BPM38170"
+                ],
+                "modulo": "Geral",
+                "hash": "5ec48d0fd542b13721b0e8ad5ddba87dd15615bb",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38170"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Salvar e restaurar estado do cockpit ao abrir a aba da central de pend\u00eancias",
+                "referencia": [
+                    "BPM37681"
+                ],
+                "modulo": "Central de Pend\u00eancias",
+                "hash": "8e27d8e0d37e7aa1000d978b82c101babf038269",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM37681"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na rotina de ordenar abas de oportunidades no funil de vendas",
+                "referencia": [
+                    "BPM37495"
+                ],
+                "modulo": "CRM",
+                "hash": "d8ceb6768c2bf73df420321dab31724bea1b4193",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM37495"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na rotina de salvar atividade de projetos",
+                "referencia": [
+                    "BPM35616"
+                ],
+                "modulo": "Projetos",
+                "hash": "e4f0fa3d3a7ab234c4e37aa0e1741217c5da8eae",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM35616"
+            }
+        ]
+    },
+    {
         "versao": "24.77.5",
         "itens": [
             {

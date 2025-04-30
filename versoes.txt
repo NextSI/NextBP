@@ -1,5 +1,40 @@
 [
     {
+        "versao": "23.59.79",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na edi\u00e7\u00e3o de usu\u00e1rio, sele\u00e7\u00e3o de grupos de usu\u00e1rios",
+                "referencia": [
+                    "BPM38170"
+                ],
+                "modulo": "Geral",
+                "hash": "4cd700cea9b48f46d7571521ab8dcae980945e5d",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38170"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na rotina de ordenar abas de oportunidades no funil de vendas",
+                "referencia": [
+                    "BPM37495"
+                ],
+                "modulo": "CRM",
+                "hash": "94586bbd2cdf495c1022f80130a2feb7b6d303bc",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM37495"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na rotina de salvar atividade de projetos",
+                "referencia": [
+                    "BPM35616"
+                ],
+                "modulo": "Projetos",
+                "hash": "944ac579b287c5ddb81415fdeae278cb5d16a750",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM35616"
+            }
+        ]
+    },
+    {
         "versao": "23.59.78",
         "itens": [
             {

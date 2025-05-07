@@ -1,5 +1,50 @@
 [
     {
+        "versao": "24.78.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao cancelar solicita\u00e7\u00e3o de processo para gravar o motivo do cancelamento",
+                "referencia": [
+                    "BPM38254"
+                ],
+                "modulo": "Processo",
+                "hash": "47798e93079c20430ca2d4b542e63113d137c770",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38254"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao selecionar projetos em edi\u00e7\u00e3o de apontamentos de projetos",
+                "referencia": [
+                    "BPM38248"
+                ],
+                "modulo": "Projeto",
+                "hash": "4a44b1a066dbabc20dd94d273c6c205ed6c9a581",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38248"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao salvar documentos de processos",
+                "referencia": [
+                    "BPM38227"
+                ],
+                "modulo": "Processos",
+                "hash": "117a5853219abaf22b0e5b7ee627c4637de4efa2",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38227"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na rotina de mudar o status da oportunidade",
+                "referencia": [
+                    "BPM37798"
+                ],
+                "modulo": "CRM",
+                "hash": "48421790228390dd7da4c09edd3d983fb3977740",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM37798"
+            }
+        ]
+    },
+    {
         "versao": "24.78.1",
         "itens": [
             {
@@ -322,7 +367,7 @@
                 "referencia": [
                     "BPM35337"
                 ],
-                "modulo": "Nome do M\u00f3dulo",
+                "modulo": "Processos",
                 "hash": "99a34985a8a4c670db19350ae90b2a2514d09917",
                 "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM35337"
             },

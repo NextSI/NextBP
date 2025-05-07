@@ -22956,6 +22956,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Documento-Model.html#property_arquivo"
         },                {
+            "fqsen": "\\Documento_Model\u003A\u003A\u0024arquivo_validacao_tamanho",
+            "name": "arquivo_validacao_tamanho",
+            "summary": "",
+            "url": "classes/Documento-Model.html#property_arquivo_validacao_tamanho"
+        },                {
             "fqsen": "\\Documento_Model\u003A\u003A\u0024chamado_id",
             "name": "chamado_id",
             "summary": "",
@@ -23810,6 +23815,11 @@ Search.appendIndex(
             "name": "arquivo",
             "summary": "",
             "url": "classes/Documento-Revisao-Model.html#property_arquivo"
+        },                {
+            "fqsen": "\\Documento_Revisao_Model\u003A\u003A\u0024arquivo_validacao_tamanho",
+            "name": "arquivo_validacao_tamanho",
+            "summary": "",
+            "url": "classes/Documento-Revisao-Model.html#property_arquivo_validacao_tamanho"
         },                {
             "fqsen": "\\Documento_Revisao_Model\u003A\u003A\u0024aprovacao",
             "name": "aprovacao",
@@ -36585,6 +36595,11 @@ Search.appendIndex(
             "name": "getJSON",
             "summary": "",
             "url": "classes/Sys-Validation.html#method_getJSON"
+        },                {
+            "fqsen": "\\Sys\\Validation\u003A\u003AcriarValidacaoComunicacao\u0028\u0029",
+            "name": "criarValidacaoComunicacao",
+            "summary": "",
+            "url": "classes/Sys-Validation.html#method_criarValidacaoComunicacao"
         },                {
             "fqsen": "\\Sys\\Validation\u003A\u003AVALID_NOTICE",
             "name": "VALID_NOTICE",

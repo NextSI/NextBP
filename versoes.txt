@@ -1,5 +1,40 @@
 [
     {
+        "versao": "23.59.80",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao cancelar solicita\u00e7\u00e3o de processo para gravar o motivo do cancelamento",
+                "referencia": [
+                    "BPM38254"
+                ],
+                "modulo": "Processo",
+                "hash": "e6372881dfc1b2d61795635463aa3050bb51658b",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38254"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao salvar documentos de processos",
+                "referencia": [
+                    "BPM38227"
+                ],
+                "modulo": "Processos",
+                "hash": "08bdc2fff2047e6eaf68623d697b7f129afcd11c",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38227"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na rotina de mudar o status da oportunidade",
+                "referencia": [
+                    "BPM37798"
+                ],
+                "modulo": "CRM",
+                "hash": "731ace7767d084b297c1d7a87db5e5c66fda2195",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM37798"
+            }
+        ]
+    },
+    {
         "versao": "23.59.79",
         "itens": [
             {

@@ -1,9 +1,0 @@
-<?php
-
-use \Sys\Util;
-use \Sys\Basic;
-use \Sys\Validation;
-use \Sys\DB;
-
-function apontamento_ordem_servico_html_pdf(&$html) {    
-};

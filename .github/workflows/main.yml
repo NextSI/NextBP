@@ -176,6 +176,8 @@ jobs:
           username: ${{ secrets[matrix.username_secret] }}
           password: ${{ secrets[matrix.password_secret] }}
           server-dir: ${{ matrix.dir }}
+          exclude: |
+            webservice/especificos_
         
       - name: 📂 Sync via SFTP ${{ matrix.nome }}
         if: matrix.tipo == 'sftp'

@@ -1,7 +1,0 @@
-order deny,allow
-
-# Bloqueia acessos
-deny from all
-
-# Libera acesso para um IP
-# allow from 179.174.56.168

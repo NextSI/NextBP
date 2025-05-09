@@ -67,6 +67,7 @@ PE::add('documento_nova_revisao_antes', function($documento_revisao_model, $docu
 PE::add('documento_nova_revisao_depois', function($documento_revisao_model, $documento_model, $documento_pasta_model) { ... });
 PE::add('documento_excluir_antes', function($documento_model) { ... });
 PE::add('documento_excluir_depois', function($documento_model) { ... });
+PE::add('documento_download_antes', function(&$documento_revisao_model, &$documento_model, &$arquivo) { ... });
 
 // Processos
 PE::add('solicitacao_atividade_enviar_commit', function($solicitacao_atividade_model) { ... });

@@ -1,5 +1,30 @@
 [
     {
+        "versao": "24.79.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Ajuste na sele\u00e7\u00e3o de grupo de usu\u00e1rios e grupo de motivos de chamado no cadastro de usu\u00e1rios",
+                "referencia": [
+                    "BPM38431"
+                ],
+                "modulo": "Geral",
+                "hash": "30d63acc616136f8aec2b31bd7539917256056b3",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38431"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao realizar duplo clique no documento da central de documentos",
+                "referencia": [
+                    "BPM35464"
+                ],
+                "modulo": "Documentos",
+                "hash": "dcde76e30d17e96785ee15514c357de69e91247e",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM35464"
+            }
+        ]
+    },
+    {
         "versao": "24.78.2",
         "itens": [
             {

@@ -7161,6 +7161,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Fila-Evento-Projeto-Importar-Template-DAO.html#method_executar"
         },                {
+            "fqsen": "\\Fila_Evento_RD_Station_Webhook_Mkt_DAO",
+            "name": "Fila_Evento_RD_Station_Webhook_Mkt_DAO",
+            "summary": "",
+            "url": "classes/Fila-Evento-RD-Station-Webhook-Mkt-DAO.html"
+        },                {
+            "fqsen": "\\Fila_Evento_RD_Station_Webhook_Mkt_DAO\u003A\u003Aexecutar\u0028\u0029",
+            "name": "executar",
+            "summary": "",
+            "url": "classes/Fila-Evento-RD-Station-Webhook-Mkt-DAO.html#method_executar"
+        },                {
             "fqsen": "\\Filtro_Usuario_DAO",
             "name": "Filtro_Usuario_DAO",
             "summary": "",
@@ -8356,6 +8366,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Funil-Vendas-DAO.html#method_listar"
         },                {
+            "fqsen": "\\Funil_Vendas_DAO\u003A\u003Amapeamento_colunas\u0028\u0029",
+            "name": "mapeamento_colunas",
+            "summary": "",
+            "url": "classes/Funil-Vendas-DAO.html#method_mapeamento_colunas"
+        },                {
             "fqsen": "\\Funil_Vendas_DAO\u003A\u003Aupdate\u0028\u0029",
             "name": "update",
             "summary": "",
@@ -8460,6 +8475,11 @@ Search.appendIndex(
             "name": "listar",
             "summary": "",
             "url": "classes/Funil-Vendas-Etapa-DAO.html#method_listar"
+        },                {
+            "fqsen": "\\Funil_Vendas_Etapa_DAO\u003A\u003Amapeamento_colunas\u0028\u0029",
+            "name": "mapeamento_colunas",
+            "summary": "",
+            "url": "classes/Funil-Vendas-Etapa-DAO.html#method_mapeamento_colunas"
         },                {
             "fqsen": "\\Funil_Vendas_Etapa_DAO\u003A\u003Aalterar_ordem_etapa\u0028\u0029",
             "name": "alterar_ordem_etapa",
@@ -13096,6 +13116,81 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prospect-Representante-DAO.html#method_salvar"
         },                {
+            "fqsen": "\\RD_Station_Webhook_Mkt_DAO",
+            "name": "RD_Station_Webhook_Mkt_DAO",
+            "summary": "",
+            "url": "classes/RD-Station-Webhook-Mkt-DAO.html"
+        },                {
+            "fqsen": "\\RD_Station_Webhook_Mkt_DAO\u003A\u003Alistar\u0028\u0029",
+            "name": "listar",
+            "summary": "",
+            "url": "classes/RD-Station-Webhook-Mkt-DAO.html#method_listar"
+        },                {
+            "fqsen": "\\RD_Station_Webhook_Mkt_DAO\u003A\u003Asalvar\u0028\u0029",
+            "name": "salvar",
+            "summary": "",
+            "url": "classes/RD-Station-Webhook-Mkt-DAO.html#method_salvar"
+        },                {
+            "fqsen": "\\RD_Station_Webhook_Mkt_DAO\u003A\u003Aexiste\u0028\u0029",
+            "name": "existe",
+            "summary": "",
+            "url": "classes/RD-Station-Webhook-Mkt-DAO.html#method_existe"
+        },                {
+            "fqsen": "\\RD_Station_Webhook_Mkt_DAO\u003A\u003Ainsert\u0028\u0029",
+            "name": "insert",
+            "summary": "",
+            "url": "classes/RD-Station-Webhook-Mkt-DAO.html#method_insert"
+        },                {
+            "fqsen": "\\RD_Station_Webhook_Mkt_DAO\u003A\u003Aupdate\u0028\u0029",
+            "name": "update",
+            "summary": "",
+            "url": "classes/RD-Station-Webhook-Mkt-DAO.html#method_update"
+        },                {
+            "fqsen": "\\RD_Station_Webhook_Mkt_DAO\u003A\u003Aexcluir\u0028\u0029",
+            "name": "excluir",
+            "summary": "",
+            "url": "classes/RD-Station-Webhook-Mkt-DAO.html#method_excluir"
+        },                {
+            "fqsen": "\\RD_Station_Webhook_Mkt_DAO\u003A\u003Apopular\u0028\u0029",
+            "name": "popular",
+            "summary": "",
+            "url": "classes/RD-Station-Webhook-Mkt-DAO.html#method_popular"
+        },                {
+            "fqsen": "\\RD_Station_Webhook_Mkt_DAO\u003A\u003Apreencher\u0028\u0029",
+            "name": "preencher",
+            "summary": "",
+            "url": "classes/RD-Station-Webhook-Mkt-DAO.html#method_preencher"
+        },                {
+            "fqsen": "\\RD_Station_Webhook_Mkt_DAO\u003A\u003Aprocessar_evento\u0028\u0029",
+            "name": "processar_evento",
+            "summary": "",
+            "url": "classes/RD-Station-Webhook-Mkt-DAO.html#method_processar_evento"
+        },                {
+            "fqsen": "\\RD_Station_Webhook_Mkt_DAO\u003A\u003Asalvar_contato\u0028\u0029",
+            "name": "salvar_contato",
+            "summary": "",
+            "url": "classes/RD-Station-Webhook-Mkt-DAO.html#method_salvar_contato"
+        },                {
+            "fqsen": "\\RD_Station_Webhook_Mkt_DAO\u003A\u003Asalvar_prospect\u0028\u0029",
+            "name": "salvar_prospect",
+            "summary": "",
+            "url": "classes/RD-Station-Webhook-Mkt-DAO.html#method_salvar_prospect"
+        },                {
+            "fqsen": "\\RD_Station_Webhook_Mkt_DAO\u003A\u003Asalvar_oportunidade\u0028\u0029",
+            "name": "salvar_oportunidade",
+            "summary": "",
+            "url": "classes/RD-Station-Webhook-Mkt-DAO.html#method_salvar_oportunidade"
+        },                {
+            "fqsen": "\\RD_Station_Webhook_Mkt_DAO\u003A\u003Aobtem_webhook\u0028\u0029",
+            "name": "obtem_webhook",
+            "summary": "",
+            "url": "classes/RD-Station-Webhook-Mkt-DAO.html#method_obtem_webhook"
+        },                {
+            "fqsen": "\\RD_Station_Webhook_Mkt_DAO\u003A\u003Aexiste_contato_integrado\u0028\u0029",
+            "name": "existe_contato_integrado",
+            "summary": "",
+            "url": "classes/RD-Station-Webhook-Mkt-DAO.html#method_existe_contato_integrado"
+        },                {
             "fqsen": "\\Referencia_DAO",
             "name": "Referencia_DAO",
             "summary": "Realiza\u0020a\u0020persist\u00EAncia\u0020e\u0020consultas\u0020de\u0020dados\u0020relacionados\u0020\u00E0\u0020Referencias.",
@@ -13211,6 +13306,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Regiao-Vendas-DAO.html#method_alterar_pai"
         },                {
+            "fqsen": "\\Regiao_Vendas_DAO\u003A\u003Alistar_representantes\u0028\u0029",
+            "name": "listar_representantes",
+            "summary": "",
+            "url": "classes/Regiao-Vendas-DAO.html#method_listar_representantes"
+        },                {
             "fqsen": "\\Representante_DAO",
             "name": "Representante_DAO",
             "summary": "",
@@ -13291,6 +13391,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Representante-DAO.html#method_listar"
         },                {
+            "fqsen": "\\Representante_DAO\u003A\u003Amapeamento_colunas\u0028\u0029",
+            "name": "mapeamento_colunas",
+            "summary": "",
+            "url": "classes/Representante-DAO.html#method_mapeamento_colunas"
+        },                {
             "fqsen": "\\Representante_DAO\u003A\u003Alistar_entidades_by_representante\u0028\u0029",
             "name": "listar_entidades_by_representante",
             "summary": "",
@@ -13315,6 +13420,11 @@ Search.appendIndex(
             "name": "get_ids",
             "summary": "",
             "url": "classes/Representante-DAO.html#method_get_ids"
+        },                {
+            "fqsen": "\\Representante_DAO\u003A\u003Alistar_usuario_by_representante\u0028\u0029",
+            "name": "listar_usuario_by_representante",
+            "summary": "",
+            "url": "classes/Representante-DAO.html#method_listar_usuario_by_representante"
         },                {
             "fqsen": "\\Segmento_DAO",
             "name": "Segmento_DAO",
@@ -15340,6 +15450,11 @@ Search.appendIndex(
             "name": "alterar_padrao",
             "summary": "",
             "url": "classes/Tipo-Oportunidade-DAO.html#method_alterar_padrao"
+        },                {
+            "fqsen": "\\Tipo_Oportunidade_DAO\u003A\u003Aobter_padrao\u0028\u0029",
+            "name": "obter_padrao",
+            "summary": "",
+            "url": "classes/Tipo-Oportunidade-DAO.html#method_obter_padrao"
         },                {
             "fqsen": "\\Tipo_Oportunidade_DAO\u003A\u003Asalvar_itens\u0028\u0029",
             "name": "salvar_itens",
@@ -30586,6 +30701,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Oportunidade-Agenda-Model.html#property_representante_usuario_id"
         },                {
+            "fqsen": "\\Oportunidade_Agenda_Model\u003A\u003A\u0024representante_email",
+            "name": "representante_email",
+            "summary": "",
+            "url": "classes/Oportunidade-Agenda-Model.html#property_representante_email"
+        },                {
             "fqsen": "\\Oportunidade_Agenda_Model\u003A\u003A\u0024exibir_agenda",
             "name": "exibir_agenda",
             "summary": "",
@@ -33971,6 +34091,36 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prospect-Model.html#property_cliente_efetivado_id"
         },                {
+            "fqsen": "\\RD_Station_Webhook_Mkt_Model",
+            "name": "RD_Station_Webhook_Mkt_Model",
+            "summary": "",
+            "url": "classes/RD-Station-Webhook-Mkt-Model.html"
+        },                {
+            "fqsen": "\\RD_Station_Webhook_Mkt_Model\u003A\u003Avalidation\u0028\u0029",
+            "name": "validation",
+            "summary": "",
+            "url": "classes/RD-Station-Webhook-Mkt-Model.html#method_validation"
+        },                {
+            "fqsen": "\\RD_Station_Webhook_Mkt_Model\u003A\u003A\u0024webhook_url",
+            "name": "webhook_url",
+            "summary": "",
+            "url": "classes/RD-Station-Webhook-Mkt-Model.html#property_webhook_url"
+        },                {
+            "fqsen": "\\RD_Station_Webhook_Mkt_Model\u003A\u003A\u0024funil_vendas_id",
+            "name": "funil_vendas_id",
+            "summary": "",
+            "url": "classes/RD-Station-Webhook-Mkt-Model.html#property_funil_vendas_id"
+        },                {
+            "fqsen": "\\RD_Station_Webhook_Mkt_Model\u003A\u003A\u0024funil_vendas_etapa_id",
+            "name": "funil_vendas_etapa_id",
+            "summary": "",
+            "url": "classes/RD-Station-Webhook-Mkt-Model.html#property_funil_vendas_etapa_id"
+        },                {
+            "fqsen": "\\RD_Station_Webhook_Mkt_Model\u003A\u003A\u0024representante_id",
+            "name": "representante_id",
+            "summary": "",
+            "url": "classes/RD-Station-Webhook-Mkt-Model.html#property_representante_id"
+        },                {
             "fqsen": "\\Referencia_Model",
             "name": "Referencia_Model",
             "summary": "Estrutura\u0020de\u0020dados\u0020de\u0020uma\u0020Refer\u00EAncia",
@@ -34160,6 +34310,21 @@ Search.appendIndex(
             "name": "observacao",
             "summary": "",
             "url": "classes/Regiao-Vendas-Model.html#property_observacao"
+        },                {
+            "fqsen": "\\Regiao_Vendas_Model\u003A\u003A\u0024observacoes",
+            "name": "observacoes",
+            "summary": "",
+            "url": "classes/Regiao-Vendas-Model.html#property_observacoes"
+        },                {
+            "fqsen": "\\Regiao_Vendas_Model\u003A\u003A\u0024regiao_vendas_pai_id",
+            "name": "regiao_vendas_pai_id",
+            "summary": "",
+            "url": "classes/Regiao-Vendas-Model.html#property_regiao_vendas_pai_id"
+        },                {
+            "fqsen": "\\Regiao_Vendas_Model\u003A\u003A\u0024regiao_vendas_pai_descricao",
+            "name": "regiao_vendas_pai_descricao",
+            "summary": "",
+            "url": "classes/Regiao-Vendas-Model.html#property_regiao_vendas_pai_descricao"
         },                {
             "fqsen": "\\Regiao_Vendas_Model\u003A\u003A\u0024arr_representante",
             "name": "arr_representante",
@@ -34415,6 +34580,16 @@ Search.appendIndex(
             "name": "notificar_outras_entidades",
             "summary": "",
             "url": "classes/Representante-Model.html#property_notificar_outras_entidades"
+        },                {
+            "fqsen": "\\Representante_Model\u003A\u003A\u0024tipo_operacao",
+            "name": "tipo_operacao",
+            "summary": "",
+            "url": "classes/Representante-Model.html#property_tipo_operacao"
+        },                {
+            "fqsen": "\\Representante_Model\u003A\u003A\u0024arr_contatos",
+            "name": "arr_contatos",
+            "summary": "",
+            "url": "classes/Representante-Model.html#property_arr_contatos"
         },                {
             "fqsen": "\\Representante_Model\u003A\u003A\u0024usuario_nome",
             "name": "usuario_nome",
@@ -36760,6 +36935,11 @@ Search.appendIndex(
             "name": "arr_itens",
             "summary": "",
             "url": "classes/Tipo-Oportunidade-Model.html#property_arr_itens"
+        },                {
+            "fqsen": "\\Tipo_Oportunidade_Model\u003A\u003A\u0024filtra_padrao",
+            "name": "filtra_padrao",
+            "summary": "",
+            "url": "classes/Tipo-Oportunidade-Model.html#property_filtra_padrao"
         },                {
             "fqsen": "\\Unidade_Medida_Model",
             "name": "Unidade_Medida_Model",

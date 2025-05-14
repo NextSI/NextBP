@@ -1,5 +1,30 @@
 [
     {
+        "versao": "24.80.1",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao listar revis\u00f5es de documentos",
+                "referencia": [
+                    "BPM38485"
+                ],
+                "modulo": "Documentos",
+                "hash": "e44d8ca8fbe641751970595424f477c865ce2e83",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38485"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Integra\u00e7\u00e3o com RD Station MKT Webhook",
+                "referencia": [
+                    "BPM36429"
+                ],
+                "modulo": "CRM",
+                "hash": "dad494edbda03e10078b32b25033e113263632ca",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM36429"
+            }
+        ]
+    },
+    {
         "versao": "24.79.1",
         "itens": [
             {

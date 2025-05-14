@@ -6,7 +6,7 @@ on:
 name: 🚀 Deploy on push versão 24 PHP 8.2
 
 jobs:
-  deploy:
+  deploy_next_homolog:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -18,7 +18,70 @@ jobs:
             dir: ./homolog/
             api: FTP_URL_DBU_HOMOLOG
             server: FTP_HOST_PORTALPRODHOMOLOG
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
 
+      - name: 📂 Sync files ${{ matrix.nome }}
+        if: matrix.tipo == 'ftp'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets[matrix.server] }}
+          username: ${{ secrets[matrix.username_secret] }}
+          password: ${{ secrets[matrix.password_secret] }}
+          server-dir: ${{ matrix.dir }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            webservice/especificos_
+            webservice/especificos_/**
+        
+      - name: 📂 Sync via SFTP ${{ matrix.nome }}
+        if: matrix.tipo == 'sftp'
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets[matrix.server] }}
+          username: ${{ secrets[matrix.username_secret] }}
+          password: ${{ secrets[matrix.password_secret] }}
+          port: ${{ secrets[matrix.port] }}
+          source: ./
+          target: ${{ matrix.dir }}
+
+      - name: 🔗 Call API after deploy ${{ matrix.nome }}
+        run: |
+          echo "📡 Chamando API para ${{ matrix.nome }}"
+
+          RESPONSE_CODE=$(curl -X POST "${{ secrets[matrix.api] }}${{ secrets.SUFIXO_DBU_API }}" \
+            -H "Content-Type: application/json" \
+            -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
+            -d '{"status": "success", "message": "FTP deploy complete"}' \
+            -w "%{http_code}" -o response.txt -s)
+
+          echo "🔍 HTTP Response Code: $RESPONSE_CODE"
+
+          RESPONSE_BODY=$(cat response.txt)
+          echo "📄 API Response:"
+          echo "$RESPONSE_BODY"
+
+          if [ "$RESPONSE_CODE" -ne 200 ]; then
+            echo "❌ API call failed with status code $RESPONSE_CODE"
+            exit 1
+          fi
+
+          if [[ "$RESPONSE_BODY" != *"Atualizacao de estrutura procedimentos e funcoes do banco de dados concluida"* ]]; then
+            echo "❌ Resposta inesperada da API!"
+            echo "🔎 Esperado: 'Atualizacao de estrutura procedimentos e funcoes do banco de dados concluida'"
+            exit 1
+          fi
+
+          echo "✅ Deploy e atualização do banco de dados realizados com sucesso para ${{ matrix.nome }}"
+
+  deploy_next_prod:
+    runs-on: ubuntu-latest
+    needs: [deploy_next_homolog]
+    strategy:
+      matrix:
+        include:
           - nome: PortalProd
             tipo: ftp
             username_secret: FTP_USERNAME_PORTALPROD
@@ -26,7 +89,70 @@ jobs:
             dir: ./
             api: FTP_URL_DBU_PROD
             server: FTP_HOST_PORTALPRODHOMOLOG
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
 
+      - name: 📂 Sync files ${{ matrix.nome }}
+        if: matrix.tipo == 'ftp'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets[matrix.server] }}
+          username: ${{ secrets[matrix.username_secret] }}
+          password: ${{ secrets[matrix.password_secret] }}
+          server-dir: ${{ matrix.dir }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            webservice/especificos_
+            webservice/especificos_/**
+        
+      - name: 📂 Sync via SFTP ${{ matrix.nome }}
+        if: matrix.tipo == 'sftp'
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets[matrix.server] }}
+          username: ${{ secrets[matrix.username_secret] }}
+          password: ${{ secrets[matrix.password_secret] }}
+          port: ${{ secrets[matrix.port] }}
+          source: ./
+          target: ${{ matrix.dir }}
+
+      - name: 🔗 Call API after deploy ${{ matrix.nome }}
+        run: |
+          echo "📡 Chamando API para ${{ matrix.nome }}"
+
+          RESPONSE_CODE=$(curl -X POST "${{ secrets[matrix.api] }}${{ secrets.SUFIXO_DBU_API }}" \
+            -H "Content-Type: application/json" \
+            -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
+            -d '{"status": "success", "message": "FTP deploy complete"}' \
+            -w "%{http_code}" -o response.txt -s)
+
+          echo "🔍 HTTP Response Code: $RESPONSE_CODE"
+
+          RESPONSE_BODY=$(cat response.txt)
+          echo "📄 API Response:"
+          echo "$RESPONSE_BODY"
+
+          if [ "$RESPONSE_CODE" -ne 200 ]; then
+            echo "❌ API call failed with status code $RESPONSE_CODE"
+            exit 1
+          fi
+
+          if [[ "$RESPONSE_BODY" != *"Atualizacao de estrutura procedimentos e funcoes do banco de dados concluida"* ]]; then
+            echo "❌ Resposta inesperada da API!"
+            echo "🔎 Esperado: 'Atualizacao de estrutura procedimentos e funcoes do banco de dados concluida'"
+            exit 1
+          fi
+
+          echo "✅ Deploy e atualização do banco de dados realizados com sucesso para ${{ matrix.nome }}"
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [deploy_next_prod]
+    strategy:
+      matrix:
+        include:
           - nome: 000205 Homolog
             tipo: ftp
             username_secret: FTP_USERNAME_000205

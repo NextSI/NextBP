@@ -1,5 +1,50 @@
 [
     {
+        "versao": "24.81.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Adicionada rotina para exclus\u00e3o de par\u00e2metros de usu\u00e1rios",
+                "referencia": [
+                    "BPM38518"
+                ],
+                "modulo": "Configura\u00e7\u00f5es",
+                "hash": "fc46a3a81ed7a5e435a427b746cb28df6869d144",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38518"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Coluna \"Vig\u00eancia\" n\u00e3o estava sendo exibida na formato \"dd\/mm\/aaaa\"",
+                "referencia": [
+                    "BPM38437"
+                ],
+                "modulo": "Documentos",
+                "hash": "6abdb3ffcd4dabbc79b6094118ed0b9f0e4c6f26",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38437"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Coluna \"Aprova\u00e7\u00e3o\" n\u00e3o estava sendo exibida na listagem de documentos",
+                "referencia": [
+                    "BPM38398"
+                ],
+                "modulo": "Documentos",
+                "hash": "6abdb3ffcd4dabbc79b6094118ed0b9f0e4c6f26",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38398"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Atualiza\u00e7\u00e3o da listagem de Job Scheduler",
+                "referencia": [
+                    "BPM37684"
+                ],
+                "modulo": "Configura\u00e7\u00f5es",
+                "hash": "a28613e91de9905fbd15145473632a0301fbfd21",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM37684"
+            }
+        ]
+    },
+    {
         "versao": "24.80.1",
         "itens": [
             {

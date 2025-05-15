@@ -11961,6 +11961,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Parametro-Usuario-DAO.html#method_existe"
         },                {
+            "fqsen": "\\Parametro_Usuario_DAO\u003A\u003Alistar\u0028\u0029",
+            "name": "listar",
+            "summary": "",
+            "url": "classes/Parametro-Usuario-DAO.html#method_listar"
+        },                {
+            "fqsen": "\\Parametro_Usuario_DAO\u003A\u003Amapeamento_colunas\u0028\u0029",
+            "name": "mapeamento_colunas",
+            "summary": "",
+            "url": "classes/Parametro-Usuario-DAO.html#method_mapeamento_colunas"
+        },                {
             "fqsen": "\\Parametro_Usuario_DAO\u003A\u003Ainsert\u0028\u0029",
             "name": "insert",
             "summary": "",
@@ -11970,6 +11980,11 @@ Search.appendIndex(
             "name": "update",
             "summary": "",
             "url": "classes/Parametro-Usuario-DAO.html#method_update"
+        },                {
+            "fqsen": "\\Parametro_Usuario_DAO\u003A\u003Adelete\u0028\u0029",
+            "name": "delete",
+            "summary": "",
+            "url": "classes/Parametro-Usuario-DAO.html#method_delete"
         },                {
             "fqsen": "\\Parametro_Usuario_DAO\u003A\u003Aset\u0028\u0029",
             "name": "set",
@@ -23640,6 +23655,11 @@ Search.appendIndex(
             "name": "data_limite",
             "summary": "",
             "url": "classes/D4Sign-Evento-Model.html#property_data_limite"
+        },                {
+            "fqsen": "\\D4Sign_Evento_Model\u003A\u003A\u0024d4sign_document_key",
+            "name": "d4sign_document_key",
+            "summary": "",
+            "url": "classes/D4Sign-Evento-Model.html#property_d4sign_document_key"
         },                {
             "fqsen": "\\Documento_Model",
             "name": "Documento_Model",

@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.81.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na execu\u00e7\u00e3o do Job Scheduler",
+                "referencia": [
+                    "BPM38659"
+                ],
+                "modulo": "Geral",
+                "hash": "771ebdaa2f7c7f199808185b07e8fba82e383f53",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38659"
+            }
+        ]
+    },
+    {
         "versao": "24.81.1",
         "itens": [
             {

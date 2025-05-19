@@ -1821,11 +1821,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Atualizacao-Reprocessamentos-DAO.html"
         },                {
-            "fqsen": "\\Atualizacao_Reprocessamentos_DAO\u003A\u003Aget_hashs\u0028\u0029",
-            "name": "get_hashs",
-            "summary": "",
-            "url": "classes/Atualizacao-Reprocessamentos-DAO.html#method_get_hashs"
-        },                {
             "fqsen": "\\Atualizacao_Reprocessamentos_DAO\u003A\u003Aget_reprocessamentos\u0028\u0029",
             "name": "get_reprocessamentos",
             "summary": "",
@@ -13596,11 +13591,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Solicitacao-DAO.html#method_update_formulario"
         },                {
-            "fqsen": "\\Solicitacao_DAO\u003A\u003Agera_descricao\u0028\u0029",
-            "name": "gera_descricao",
-            "summary": "",
-            "url": "classes/Solicitacao-DAO.html#method_gera_descricao"
-        },                {
             "fqsen": "\\Solicitacao_DAO\u003A\u003Aexcluir\u0028\u0029",
             "name": "excluir",
             "summary": "",
@@ -23586,6 +23576,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/D4Sign-Model.html#constant_D4SIGN_CERTIFICADO_CNPJ"
         },                {
+            "fqsen": "\\D4Sign_Model\u003A\u003AD4SIGN_PERMITE_DOWNLOAD",
+            "name": "D4SIGN_PERMITE_DOWNLOAD",
+            "summary": "",
+            "url": "classes/D4Sign-Model.html#constant_D4SIGN_PERMITE_DOWNLOAD"
+        },                {
+            "fqsen": "\\D4Sign_Model\u003A\u003AD4SIGN_NAO_PERMITE_DOWNLOAD",
+            "name": "D4SIGN_NAO_PERMITE_DOWNLOAD",
+            "summary": "",
+            "url": "classes/D4Sign-Model.html#constant_D4SIGN_NAO_PERMITE_DOWNLOAD"
+        },                {
             "fqsen": "\\D4Sign_Model\u003A\u003A\u0024id",
             "name": "id",
             "summary": "",
@@ -25281,6 +25281,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Documento-Revisao-Assinatura-Signatario-Model.html#constant_REJEITADA"
         },                {
+            "fqsen": "\\Documento_Revisao_Assinatura_Signatario_Model\u003A\u003AOBSERVADOR",
+            "name": "OBSERVADOR",
+            "summary": "",
+            "url": "classes/Documento-Revisao-Assinatura-Signatario-Model.html#constant_OBSERVADOR"
+        },                {
             "fqsen": "\\Documento_Revisao_Assinatura_Signatario_Model\u003A\u003A\u0024documento_id",
             "name": "documento_id",
             "summary": "",
@@ -25380,6 +25385,11 @@ Search.appendIndex(
             "name": "mensagem",
             "summary": "",
             "url": "classes/Documento-Revisao-Assinatura-Signatario-Model.html#property_mensagem"
+        },                {
+            "fqsen": "\\Documento_Revisao_Assinatura_Signatario_Model\u003A\u003A\u0024observadores",
+            "name": "observadores",
+            "summary": "",
+            "url": "classes/Documento-Revisao-Assinatura-Signatario-Model.html#property_observadores"
         },                {
             "fqsen": "\\Documento_Tag_Model",
             "name": "Documento_Tag_Model",
@@ -34736,6 +34746,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Solicitacao-Model.html#method_situacao_str"
         },                {
+            "fqsen": "\\Solicitacao_Model\u003A\u003Agerar_descricao\u0028\u0029",
+            "name": "gerar_descricao",
+            "summary": "",
+            "url": "classes/Solicitacao-Model.html#method_gerar_descricao"
+        },                {
             "fqsen": "\\Solicitacao_Model\u003A\u003AMINHAS_ATIVIDADES_PENDENTES",
             "name": "MINHAS_ATIVIDADES_PENDENTES",
             "summary": "",
@@ -35645,6 +35660,21 @@ Search.appendIndex(
             "name": "edicao_cabecalho",
             "summary": "",
             "url": "classes/Solicitacao-Atividade-Model.html#property_edicao_cabecalho"
+        },                {
+            "fqsen": "\\Solicitacao_Atividade_Model\u003A\u003A\u0024permissao_altera_responsavel",
+            "name": "permissao_altera_responsavel",
+            "summary": "",
+            "url": "classes/Solicitacao-Atividade-Model.html#property_permissao_altera_responsavel"
+        },                {
+            "fqsen": "\\Solicitacao_Atividade_Model\u003A\u003A\u0024permissao_vincula_responsabilidade",
+            "name": "permissao_vincula_responsabilidade",
+            "summary": "",
+            "url": "classes/Solicitacao-Atividade-Model.html#property_permissao_vincula_responsabilidade"
+        },                {
+            "fqsen": "\\Solicitacao_Atividade_Model\u003A\u003A\u0024permissao_cancela_solicitacao",
+            "name": "permissao_cancela_solicitacao",
+            "summary": "",
+            "url": "classes/Solicitacao-Atividade-Model.html#property_permissao_cancela_solicitacao"
         },                {
             "fqsen": "\\Solicitacao_Gateway_Model",
             "name": "Solicitacao_Gateway_Model",

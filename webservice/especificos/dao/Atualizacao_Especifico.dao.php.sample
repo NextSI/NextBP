@@ -1,0 +1,74 @@
+<?php
+use \Sys\App;
+use \Sys\DB;
+use \Sys\Basic;
+use \Sys\Util;
+use \Sys\Validation;
+use \Sys\Sessao;
+
+class Atualizacao_Especifico_DAO extends \Sys\DAO {
+  
+  static function get_instrucoes()
+  {
+    
+    $updSQL['BPM31738_create_table_programacao_recurso'] = "
+      CREATE TABLE IF NOT EXISTS `programacao_recurso` (
+        `id` INT NOT NULL AUTO_INCREMENT,
+        `excluido` CHAR(1) NOT NULL DEFAULT 'N',
+        `insert_hora` DATETIME NULL,
+        `update_hora` DATETIME NULL,
+        `delete_hora` DATETIME NULL,
+        `insert_usuario_id` INT NULL,
+        `update_usuario_id` INT NULL,
+        `delete_usuario_id` INT NULL,
+        `tecnico_id` INT NOT NULL,
+        `projeto_id` INT NOT NULL,
+        `projeto_atividade_id` INT NOT NULL,
+        `dia` DATE NULL,
+        `horas_trabalhadas` DECIMAL(19,1) NULL,
+        `time_horas_trabalhadas` TIME NULL,
+        `apontamento_padrao` CHAR(1) NOT NULL DEFAULT 'N',
+        PRIMARY KEY (`id`),
+        INDEX `fk_programacao_recurso_projeto_idx` (`projeto_id` ASC),
+        INDEX `fk_programacao_recurso_projeto_atividade_idx` (`projeto_atividade_id` ASC),
+        INDEX `fk_programacao_recurso_insert_usuario_id_idx` (`insert_usuario_id` ASC),
+        INDEX `fk_programacao_recurso_update_usuario_id_idx` (`update_usuario_id` ASC),
+        INDEX `fk_programacao_recurso_delete_usuario_id_idx` (`delete_usuario_id` ASC),
+        CONSTRAINT `fk_programacao_recurso_projeto`
+          FOREIGN KEY (`projeto_id`)
+          REFERENCES `projeto` (`id`)
+          ON DELETE NO ACTION
+          ON UPDATE NO ACTION,
+        CONSTRAINT `fk_programacao_recurso_projeto_atividade`
+          FOREIGN KEY (`projeto_atividade_id`)
+          REFERENCES `projeto_atividade` (`id`)
+          ON DELETE NO ACTION
+          ON UPDATE NO ACTION,
+        CONSTRAINT `fk_programacao_recurso_usuario`
+          FOREIGN KEY (`tecnico_id`)
+          REFERENCES `usuario` (`id`)
+          ON DELETE NO ACTION
+          ON UPDATE NO ACTION
+        CONSTRAINT `fk_programacao_recurso_insert_usuario_id`
+          FOREIGN KEY (`insert_usuario_id`)
+          REFERENCES `usuario` (`id`)
+          ON DELETE NO ACTION
+          ON UPDATE NO ACTION,
+        CONSTRAINT `fk_programacao_recurso_update_usuario_id`
+          FOREIGN KEY (`update_usuario_id`)
+          REFERENCES `usuario` (`id`)
+          ON DELETE NO ACTION
+          ON UPDATE NO ACTION,
+        CONSTRAINT `fk_programacao_recurso_delete_usuario_id`
+          FOREIGN KEY (`delete_usuario_id`)
+          REFERENCES `usuario` (`id`)
+          ON DELETE NO ACTION
+          ON UPDATE NO ACTION);
+    ";
+    
+    
+    return $updSQL;
+    
+  }
+  
+}

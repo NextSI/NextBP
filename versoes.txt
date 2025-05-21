@@ -1,5 +1,30 @@
 [
     {
+        "versao": "24.82.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na rotina de salvar atividade de projeto",
+                "referencia": [
+                    "CHM76486"
+                ],
+                "modulo": "Projetos",
+                "hash": "165733f0b0c9de263c9680680af22e2708449d9e",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/CHM76486"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na modelagem de processo ao clicar no bot\u00e3o de nova atividade de processo",
+                "referencia": [
+                    "BPM38734"
+                ],
+                "modulo": "Processo",
+                "hash": "6f21f702301fd02dd4478c6c6789630aef7a84fa",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38734"
+            }
+        ]
+    },
+    {
         "versao": "24.82.1",
         "itens": [
             {

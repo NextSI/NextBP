@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title>Next BP 24.82.2</title>
+            <title>Next BP 24.83.2</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../">
@@ -25,7 +25,7 @@
     </head>
 <body id="top">
     <header class="phpdocumentor-header phpdocumentor-section">
-    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">Next BP 24.82.2</a></h1>
+    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">Next BP 24.83.2</a></h1>
     <input class="phpdocumentor-header__menu-button" type="checkbox" id="menu-button" name="menu-button" />
     <label class="phpdocumentor-header__menu-icon" for="menu-button">
         <i class="fas fa-bars"></i>
@@ -850,6 +850,12 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
 <dd>Salva um model de chamado</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Chamado-DAO.html#method_salvar_vinculo_chamado">salvar_vinculo_chamado()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Sys-Basic.html#method_set_login_anonimo">set_login_anonimo()</a>
     <span>
                                 &nbsp;: mixed    </span>
@@ -1576,7 +1582,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8941</span>
+    <span class="phpdocumentor-element-found-in__line">8983</span>
 
     </aside>
 
@@ -1655,7 +1661,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5647</span>
+    <span class="phpdocumentor-element-found-in__line">5684</span>
 
     </aside>
 
@@ -1737,14 +1743,14 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4215</span>
+    <span class="phpdocumentor-element-found-in__line">4243</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">avaliarChamado</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$chamado_id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nota_avaliacao_id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$mensagem_encerramento</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$enviar_documento</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$documentos</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$campos_personalizados</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">avaliarChamado</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$chamado_id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nota_avaliacao_id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$mensagem_encerramento</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$enviar_documento</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$documentos</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$formulario_avaliacao</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$formulario_encerramento</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$campos_personalizados</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1787,6 +1793,20 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
                 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$formulario_avaliacao</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$formulario_encerramento</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$campos_personalizados</span>
                 : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
                  = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
@@ -1813,7 +1833,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9199</span>
+    <span class="phpdocumentor-element-found-in__line">9241</span>
 
     </aside>
 
@@ -1854,7 +1874,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7082</span>
+    <span class="phpdocumentor-element-found-in__line">7119</span>
 
     </aside>
 
@@ -1895,7 +1915,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3930</span>
+    <span class="phpdocumentor-element-found-in__line">3958</span>
 
     </aside>
 
@@ -2121,7 +2141,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2918</span>
+    <span class="phpdocumentor-element-found-in__line">2935</span>
 
     </aside>
 
@@ -2255,7 +2275,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3253</span>
+    <span class="phpdocumentor-element-found-in__line">3281</span>
 
     </aside>
 
@@ -2520,7 +2540,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2004</span>
+    <span class="phpdocumentor-element-found-in__line">2009</span>
 
     </aside>
 
@@ -2528,7 +2548,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">encerrarChamado</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Chamado-Model.html"><abbr title="\Chamado_Model">Chamado_Model</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$chamado_model</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                    <span class="phpdocumentor-signature__name">encerrarChamado</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Chamado-Model.html"><abbr title="\Chamado_Model">Chamado_Model</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$chamado_model</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$formulario_encerramento</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -2544,6 +2564,13 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
 Preencher a propriedade mensagem_encerramento.</p>
 </section>
 
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$formulario_encerramento</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
             </dd>
             </dl>
 
@@ -2573,7 +2600,7 @@ Preencher a propriedade mensagem_encerramento.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2185</span>
+    <span class="phpdocumentor-element-found-in__line">2198</span>
 
     </aside>
 
@@ -2625,7 +2652,7 @@ Preencher a propriedade mensagem_encerramento.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2366</span>
+    <span class="phpdocumentor-element-found-in__line">2379</span>
 
     </aside>
 
@@ -2678,7 +2705,7 @@ Obs: não realiza encerramento</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">6045</span>
+    <span class="phpdocumentor-element-found-in__line">6082</span>
 
     </aside>
 
@@ -2719,7 +2746,7 @@ Obs: não realiza encerramento</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1979</span>
+    <span class="phpdocumentor-element-found-in__line">1984</span>
 
     </aside>
 
@@ -2772,7 +2799,7 @@ Obs: não realiza encerramento</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1992</span>
+    <span class="phpdocumentor-element-found-in__line">1997</span>
 
     </aside>
 
@@ -2825,7 +2852,7 @@ Obs: não realiza encerramento</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1967</span>
+    <span class="phpdocumentor-element-found-in__line">1972</span>
 
     </aside>
 
@@ -2878,7 +2905,7 @@ Obs: não realiza encerramento</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8454</span>
+    <span class="phpdocumentor-element-found-in__line">8496</span>
 
     </aside>
 
@@ -2983,7 +3010,7 @@ Obs: não realiza encerramento</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1766</span>
+    <span class="phpdocumentor-element-found-in__line">1771</span>
 
     </aside>
 
@@ -3024,7 +3051,7 @@ Obs: não realiza encerramento</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7214</span>
+    <span class="phpdocumentor-element-found-in__line">7251</span>
 
     </aside>
 
@@ -3065,7 +3092,7 @@ Obs: não realiza encerramento</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8913</span>
+    <span class="phpdocumentor-element-found-in__line">8955</span>
 
     </aside>
 
@@ -3113,7 +3140,7 @@ Obs: não realiza encerramento</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8957</span>
+    <span class="phpdocumentor-element-found-in__line">8999</span>
 
     </aside>
 
@@ -3164,7 +3191,7 @@ Obs: não realiza encerramento</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4080</span>
+    <span class="phpdocumentor-element-found-in__line">4108</span>
 
     </aside>
 
@@ -3412,7 +3439,7 @@ Obs: não realiza encerramento</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2453</span>
+    <span class="phpdocumentor-element-found-in__line">2466</span>
 
     </aside>
 
@@ -3465,7 +3492,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4945</span>
+    <span class="phpdocumentor-element-found-in__line">4982</span>
 
     </aside>
 
@@ -3506,7 +3533,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7104</span>
+    <span class="phpdocumentor-element-found-in__line">7141</span>
 
     </aside>
 
@@ -3617,7 +3644,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8294</span>
+    <span class="phpdocumentor-element-found-in__line">8336</span>
 
     </aside>
 
@@ -3649,7 +3676,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8359</span>
+    <span class="phpdocumentor-element-found-in__line">8401</span>
 
     </aside>
 
@@ -3690,7 +3717,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5272</span>
+    <span class="phpdocumentor-element-found-in__line">5309</span>
 
     </aside>
 
@@ -3731,7 +3758,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9232</span>
+    <span class="phpdocumentor-element-found-in__line">9274</span>
 
     </aside>
 
@@ -3803,7 +3830,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">6052</span>
+    <span class="phpdocumentor-element-found-in__line">6089</span>
 
     </aside>
 
@@ -3865,7 +3892,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4562</span>
+    <span class="phpdocumentor-element-found-in__line">4599</span>
 
     </aside>
 
@@ -3976,7 +4003,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4450</span>
+    <span class="phpdocumentor-element-found-in__line">4487</span>
 
     </aside>
 
@@ -4087,7 +4114,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4478</span>
+    <span class="phpdocumentor-element-found-in__line">4515</span>
 
     </aside>
 
@@ -4198,7 +4225,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4506</span>
+    <span class="phpdocumentor-element-found-in__line">4543</span>
 
     </aside>
 
@@ -4309,7 +4336,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4534</span>
+    <span class="phpdocumentor-element-found-in__line">4571</span>
 
     </aside>
 
@@ -4420,7 +4447,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4588</span>
+    <span class="phpdocumentor-element-found-in__line">4625</span>
 
     </aside>
 
@@ -4531,7 +4558,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4419</span>
+    <span class="phpdocumentor-element-found-in__line">4456</span>
 
     </aside>
 
@@ -4642,7 +4669,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4770</span>
+    <span class="phpdocumentor-element-found-in__line">4807</span>
 
     </aside>
 
@@ -4753,7 +4780,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4818</span>
+    <span class="phpdocumentor-element-found-in__line">4855</span>
 
     </aside>
 
@@ -4864,7 +4891,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4794</span>
+    <span class="phpdocumentor-element-found-in__line">4831</span>
 
     </aside>
 
@@ -4975,7 +5002,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4884</span>
+    <span class="phpdocumentor-element-found-in__line">4921</span>
 
     </aside>
 
@@ -5086,7 +5113,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4860</span>
+    <span class="phpdocumentor-element-found-in__line">4897</span>
 
     </aside>
 
@@ -5197,7 +5224,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5875</span>
+    <span class="phpdocumentor-element-found-in__line">5912</span>
 
     </aside>
 
@@ -5308,7 +5335,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5667</span>
+    <span class="phpdocumentor-element-found-in__line">5704</span>
 
     </aside>
 
@@ -5419,7 +5446,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2794</span>
+    <span class="phpdocumentor-element-found-in__line">2811</span>
 
     </aside>
 
@@ -5530,7 +5557,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4301</span>
+    <span class="phpdocumentor-element-found-in__line">4328</span>
 
     </aside>
 
@@ -5578,7 +5605,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2821</span>
+    <span class="phpdocumentor-element-found-in__line">2838</span>
 
     </aside>
 
@@ -5619,7 +5646,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2765</span>
+    <span class="phpdocumentor-element-found-in__line">2782</span>
 
     </aside>
 
@@ -5730,7 +5757,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2859</span>
+    <span class="phpdocumentor-element-found-in__line">2876</span>
 
     </aside>
 
@@ -5778,7 +5805,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1242</span>
+    <span class="phpdocumentor-element-found-in__line">1247</span>
 
     </aside>
 
@@ -5866,7 +5893,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1308</span>
+    <span class="phpdocumentor-element-found-in__line">1313</span>
 
     </aside>
 
@@ -5954,7 +5981,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1475</span>
+    <span class="phpdocumentor-element-found-in__line">1480</span>
 
     </aside>
 
@@ -6042,7 +6069,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1409</span>
+    <span class="phpdocumentor-element-found-in__line">1414</span>
 
     </aside>
 
@@ -6130,7 +6157,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1166</span>
+    <span class="phpdocumentor-element-found-in__line">1171</span>
 
     </aside>
 
@@ -6218,7 +6245,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1091</span>
+    <span class="phpdocumentor-element-found-in__line">1096</span>
 
     </aside>
 
@@ -6398,7 +6425,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4276</span>
+    <span class="phpdocumentor-element-found-in__line">4303</span>
 
     </aside>
 
@@ -6439,7 +6466,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1037</span>
+    <span class="phpdocumentor-element-found-in__line">1042</span>
 
     </aside>
 
@@ -6501,7 +6528,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">6093</span>
+    <span class="phpdocumentor-element-found-in__line">6130</span>
 
     </aside>
 
@@ -6556,7 +6583,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4160</span>
+    <span class="phpdocumentor-element-found-in__line">4188</span>
 
     </aside>
 
@@ -6587,7 +6614,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8859</span>
+    <span class="phpdocumentor-element-found-in__line">8901</span>
 
     </aside>
 
@@ -6635,7 +6662,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8328</span>
+    <span class="phpdocumentor-element-found-in__line">8370</span>
 
     </aside>
 
@@ -6692,7 +6719,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8585</span>
+    <span class="phpdocumentor-element-found-in__line">8627</span>
 
     </aside>
 
@@ -6768,7 +6795,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8758</span>
+    <span class="phpdocumentor-element-found-in__line">8800</span>
 
     </aside>
 
@@ -6823,7 +6850,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8495</span>
+    <span class="phpdocumentor-element-found-in__line">8537</span>
 
     </aside>
 
@@ -7167,7 +7194,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7490</span>
+    <span class="phpdocumentor-element-found-in__line">7527</span>
 
     </aside>
 
@@ -7198,7 +7225,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2933</span>
+    <span class="phpdocumentor-element-found-in__line">2950</span>
 
     </aside>
 
@@ -7386,7 +7413,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3764</span>
+    <span class="phpdocumentor-element-found-in__line">3792</span>
 
     </aside>
 
@@ -7562,7 +7589,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3457</span>
+    <span class="phpdocumentor-element-found-in__line">3485</span>
 
     </aside>
 
@@ -7740,7 +7767,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3610</span>
+    <span class="phpdocumentor-element-found-in__line">3638</span>
 
     </aside>
 
@@ -7918,7 +7945,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8472</span>
+    <span class="phpdocumentor-element-found-in__line">8514</span>
 
     </aside>
 
@@ -7973,7 +8000,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2415</span>
+    <span class="phpdocumentor-element-found-in__line">2428</span>
 
     </aside>
 
@@ -8034,7 +8061,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">6559</span>
+    <span class="phpdocumentor-element-found-in__line">6596</span>
 
     </aside>
 
@@ -8126,7 +8153,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2536</span>
+    <span class="phpdocumentor-element-found-in__line">2549</span>
 
     </aside>
 
@@ -8201,7 +8228,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2585</span>
+    <span class="phpdocumentor-element-found-in__line">2598</span>
 
     </aside>
 
@@ -8277,7 +8304,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8887</span>
+    <span class="phpdocumentor-element-found-in__line">8929</span>
 
     </aside>
 
@@ -8318,7 +8345,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2275</span>
+    <span class="phpdocumentor-element-found-in__line">2288</span>
 
     </aside>
 
@@ -8705,7 +8732,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">6038</span>
+    <span class="phpdocumentor-element-found-in__line">6075</span>
 
     </aside>
 
@@ -8797,6 +8824,61 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
         class="phpdocumentor-element
             -method
             -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_salvar_vinculo_chamado">
+        salvar_vinculo_chamado()
+        <a href="classes/Chamado-DAO.html#method_salvar_vinculo_chamado" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">9294</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">salvar_vinculo_chamado</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$formulario_id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$chamado_id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$acao_chamado</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$formulario_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$chamado_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$acao_chamado</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
                                     -static                    "
 >
     <h4 class="phpdocumentor-element__name" id="method_set_login_anonimo">
@@ -8848,7 +8930,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7727</span>
+    <span class="phpdocumentor-element-found-in__line">7769</span>
 
     </aside>
 
@@ -8879,7 +8961,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7705</span>
+    <span class="phpdocumentor-element-found-in__line">7747</span>
 
     </aside>
 
@@ -8910,7 +8992,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7720</span>
+    <span class="phpdocumentor-element-found-in__line">7762</span>
 
     </aside>
 
@@ -8941,7 +9023,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8000</span>
+    <span class="phpdocumentor-element-found-in__line">8042</span>
 
     </aside>
 
@@ -8972,7 +9054,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7970</span>
+    <span class="phpdocumentor-element-found-in__line">8012</span>
 
     </aside>
 
@@ -9003,7 +9085,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8108</span>
+    <span class="phpdocumentor-element-found-in__line">8150</span>
 
     </aside>
 
@@ -9034,7 +9116,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8121</span>
+    <span class="phpdocumentor-element-found-in__line">8163</span>
 
     </aside>
 
@@ -9065,7 +9147,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7577</span>
+    <span class="phpdocumentor-element-found-in__line">7615</span>
 
     </aside>
 
@@ -9106,7 +9188,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7740</span>
+    <span class="phpdocumentor-element-found-in__line">7782</span>
 
     </aside>
 
@@ -9137,7 +9219,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8035</span>
+    <span class="phpdocumentor-element-found-in__line">8077</span>
 
     </aside>
 
@@ -9168,7 +9250,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8028</span>
+    <span class="phpdocumentor-element-found-in__line">8070</span>
 
     </aside>
 
@@ -9199,7 +9281,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8212</span>
+    <span class="phpdocumentor-element-found-in__line">8254</span>
 
     </aside>
 
@@ -9254,7 +9336,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8178</span>
+    <span class="phpdocumentor-element-found-in__line">8220</span>
 
     </aside>
 
@@ -9316,7 +9398,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8136</span>
+    <span class="phpdocumentor-element-found-in__line">8178</span>
 
     </aside>
 
@@ -9378,7 +9460,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8163</span>
+    <span class="phpdocumentor-element-found-in__line">8205</span>
 
     </aside>
 
@@ -9433,7 +9515,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8201</span>
+    <span class="phpdocumentor-element-found-in__line">8243</span>
 
     </aside>
 
@@ -9488,7 +9570,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8460</span>
+    <span class="phpdocumentor-element-found-in__line">8502</span>
 
     </aside>
 
@@ -9519,7 +9601,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8253</span>
+    <span class="phpdocumentor-element-found-in__line">8295</span>
 
     </aside>
 
@@ -9581,7 +9663,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7128</span>
+    <span class="phpdocumentor-element-found-in__line">7165</span>
 
     </aside>
 
@@ -9747,7 +9829,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7757</span>
+    <span class="phpdocumentor-element-found-in__line">7799</span>
 
     </aside>
 
@@ -9778,7 +9860,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7865</span>
+    <span class="phpdocumentor-element-found-in__line">7907</span>
 
     </aside>
 
@@ -9809,7 +9891,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7753</span>
+    <span class="phpdocumentor-element-found-in__line">7795</span>
 
     </aside>
 
@@ -9840,7 +9922,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8044</span>
+    <span class="phpdocumentor-element-found-in__line">8086</span>
 
     </aside>
 
@@ -9871,7 +9953,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8072</span>
+    <span class="phpdocumentor-element-found-in__line">8114</span>
 
     </aside>
 
@@ -9902,7 +9984,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7960</span>
+    <span class="phpdocumentor-element-found-in__line">8002</span>
 
     </aside>
 
@@ -9933,7 +10015,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8099</span>
+    <span class="phpdocumentor-element-found-in__line">8141</span>
 
     </aside>
 
@@ -9964,7 +10046,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1551</span>
+    <span class="phpdocumentor-element-found-in__line">1556</span>
 
     </aside>
 
@@ -10052,7 +10134,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">354</span>
+    <span class="phpdocumentor-element-found-in__line">355</span>
 
     </aside>
 
@@ -10104,7 +10186,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1911</span>
+    <span class="phpdocumentor-element-found-in__line">1916</span>
 
     </aside>
 
@@ -10155,7 +10237,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1606</span>
+    <span class="phpdocumentor-element-found-in__line">1611</span>
 
     </aside>
 
@@ -10199,7 +10281,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1813</span>
+    <span class="phpdocumentor-element-found-in__line">1818</span>
 
     </aside>
 
@@ -10261,7 +10343,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1740</span>
+    <span class="phpdocumentor-element-found-in__line">1745</span>
 
     </aside>
 
@@ -10321,7 +10403,7 @@ Chamado_Model::SITUACAO_ENCERRADO_INATIVIDADE</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1647</span>
+    <span class="phpdocumentor-element-found-in__line">1652</span>
 
     </aside>
 
@@ -10365,7 +10447,7 @@ Chamado_Model::SITUACAO_ENCERRADO_INATIVIDADE</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1678</span>
+    <span class="phpdocumentor-element-found-in__line">1683</span>
 
     </aside>
 
@@ -10418,7 +10500,7 @@ Chamado_Model::SITUACAO_ENCERRADO_INATIVIDADE</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1706</span>
+    <span class="phpdocumentor-element-found-in__line">1711</span>
 
     </aside>
 
@@ -10471,7 +10553,7 @@ Chamado_Model::SITUACAO_ENCERRADO_INATIVIDADE</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1785</span>
+    <span class="phpdocumentor-element-found-in__line">1790</span>
 
     </aside>
 
@@ -10524,7 +10606,7 @@ Chamado_Model::SITUACAO_ENCERRADO_INATIVIDADE</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8227</span>
+    <span class="phpdocumentor-element-found-in__line">8269</span>
 
     </aside>
 
@@ -10565,7 +10647,7 @@ Chamado_Model::SITUACAO_ENCERRADO_INATIVIDADE</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9122</span>
+    <span class="phpdocumentor-element-found-in__line">9164</span>
 
     </aside>
 
@@ -10616,7 +10698,7 @@ Chamado_Model::SITUACAO_ENCERRADO_INATIVIDADE</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7442</span>
+    <span class="phpdocumentor-element-found-in__line">7479</span>
 
     </aside>
 
@@ -10671,7 +10753,7 @@ Chamado_Model::SITUACAO_ENCERRADO_INATIVIDADE</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9183</span>
+    <span class="phpdocumentor-element-found-in__line">9225</span>
 
     </aside>
 
@@ -10719,7 +10801,7 @@ Chamado_Model::SITUACAO_ENCERRADO_INATIVIDADE</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8318</span>
+    <span class="phpdocumentor-element-found-in__line">8360</span>
 
     </aside>
 
@@ -10772,7 +10854,7 @@ Chamado_Model::SITUACAO_ENCERRADO_INATIVIDADE</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1940</span>
+    <span class="phpdocumentor-element-found-in__line">1945</span>
 
     </aside>
 
@@ -10825,7 +10907,7 @@ Chamado_Model::SITUACAO_ENCERRADO_INATIVIDADE</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1952</span>
+    <span class="phpdocumentor-element-found-in__line">1957</span>
 
     </aside>
 
@@ -10885,7 +10967,7 @@ Chamado_Model::SITUACAO_ENCERRADO_INATIVIDADE</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Chamado.dao.php"><a href="files/src-webservice-dao-chamado-dao.html"><abbr title="src/webservice/dao/Chamado.dao.php">Chamado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8442</span>
+    <span class="phpdocumentor-element-found-in__line">8484</span>
 
     </aside>
 
@@ -11202,6 +11284,7 @@ Chamado_Model::SITUACAO_ENCERRADO_INATIVIDADE</p>
                                             <li><a href="classes/Sys-Basic.html#method_ReadRequest">ReadRequest()</a></li>
                                             <li><a href="classes/Chamado-DAO.html#method_relacionar_oportunidade_chamado">relacionar_oportunidade_chamado()</a></li>
                                             <li><a href="classes/Chamado-DAO.html#method_salvar">salvar()</a></li>
+                                            <li><a href="classes/Chamado-DAO.html#method_salvar_vinculo_chamado">salvar_vinculo_chamado()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_set_login_anonimo">set_login_anonimo()</a></li>
                                             <li><a href="classes/Chamado-DAO.html#method_sql_coluna_sla_cor_percentual">sql_coluna_sla_cor_percentual()</a></li>
                                             <li><a href="classes/Chamado-DAO.html#method_sql_coluna_sla_excedido">sql_coluna_sla_excedido()</a></li>

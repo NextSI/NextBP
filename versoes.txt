@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.83.3",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na estrutura de \u00c1rvore do GED",
+                "referencia": [
+                    "BPM38440"
+                ],
+                "modulo": "Documentos (GED)",
+                "hash": "d4defcc28476ba12397a40d21382eec36c58ead8",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38440"
+            }
+        ]
+    },
+    {
         "versao": "24.83.2",
         "itens": [
             {

@@ -1,5 +1,45 @@
 [
     {
+        "versao": "24.83.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao encerrar chamados",
+                "referencia": [
+                    "CHM76660"
+                ],
+                "modulo": "Chamados",
+                "hash": "e7b6c35fac3d3894fe29a9ee18eb39960a73b566",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/CHM76660"
+            }
+        ]
+    },
+    {
+        "versao": "24.83.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Adicionada op\u00e7\u00e3o de formul\u00e1rio personalizado no encerramento do chamado",
+                "referencia": [
+                    "BPM35725"
+                ],
+                "modulo": "Chamado",
+                "hash": "edda9df86503e93a21f79640b48fac701688854a",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM35725"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Altera\u00e7\u00f5es estruturais e perform\u00e1tica nos formul\u00e1rios personalizados",
+                "referencia": [
+                    "BPM28536"
+                ],
+                "modulo": "Geral",
+                "hash": "edda9df86503e93a21f79640b48fac701688854a",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM28536"
+            }
+        ]
+    },
+    {
         "versao": "24.82.2",
         "itens": [
             {

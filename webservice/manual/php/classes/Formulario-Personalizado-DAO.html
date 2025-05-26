@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title>Next BP 24.82.2</title>
+            <title>Next BP 24.83.2</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../">
@@ -25,7 +25,7 @@
     </head>
 <body id="top">
     <header class="phpdocumentor-header phpdocumentor-section">
-    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">Next BP 24.82.2</a></h1>
+    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">Next BP 24.83.2</a></h1>
     <input class="phpdocumentor-header__menu-button" type="checkbox" id="menu-button" name="menu-button" />
     <label class="phpdocumentor-header__menu-icon" for="menu-button">
         <i class="fas fa-bars"></i>
@@ -113,7 +113,7 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Formulario_Personalizado.dao.php"><a href="files/src-webservice-dao-formulario-personalizado-dao.html"><abbr title="src/webservice/dao/Formulario_Personalizado.dao.php">Formulario_Personalizado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7</span>
+    <span class="phpdocumentor-element-found-in__line">8</span>
 
     </aside>
 
@@ -254,6 +254,12 @@
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Formulario-Personalizado-DAO.html#method_converter_tipo">converter_tipo()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Sys-Basic.html#method_Delete_Token_JOB">Delete_Token_JOB()</a>
     <span>
                                 &nbsp;: mixed    </span>
@@ -344,6 +350,12 @@
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Formulario-Personalizado-DAO.html#method_obter_id_formulario_personalizado">obter_id_formulario_personalizado()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Formulario-Personalizado-DAO.html#method_popular">popular()</a>
     <span>
                                 &nbsp;: mixed    </span>
@@ -351,6 +363,12 @@
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Formulario-Personalizado-DAO.html#method_preencher_formulario_personalizado">preencher_formulario_personalizado()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Formulario-Personalizado-DAO.html#method_processar_formulario_tabela">processar_formulario_tabela()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
@@ -404,6 +422,12 @@
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Formulario-Personalizado-DAO.html#method_reprocessar_formulario">reprocessar_formulario()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Formulario-Personalizado-DAO.html#method_salvar">salvar()</a>
     <span>
                                 &nbsp;: mixed    </span>
@@ -429,6 +453,12 @@
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Formulario-Personalizado-DAO.html#method_update">update()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Formulario-Personalizado-DAO.html#method_validar_campos_obrigatorios">validar_campos_obrigatorios()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
@@ -844,7 +874,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Formulario_Personalizado.dao.php"><a href="files/src-webservice-dao-formulario-personalizado-dao.html"><abbr title="src/webservice/dao/Formulario_Personalizado.dao.php">Formulario_Personalizado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9</span>
+    <span class="phpdocumentor-element-found-in__line">10</span>
 
     </aside>
 
@@ -875,7 +905,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Formulario_Personalizado.dao.php"><a href="files/src-webservice-dao-formulario-personalizado-dao.html"><abbr title="src/webservice/dao/Formulario_Personalizado.dao.php">Formulario_Personalizado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">79</span>
 
     </aside>
 
@@ -968,7 +998,7 @@
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">atualizar_tabelas</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$formulario_model</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nome_tabela</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">atualizar_tabelas</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$formulario_id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nome_tabela</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -976,7 +1006,7 @@
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$formulario_model</span>
+                <span class="phpdocumentor-signature__argument__name">$formulario_id</span>
                 : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
@@ -1073,6 +1103,47 @@
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$request_params</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_converter_tipo">
+        converter_tipo()
+        <a href="classes/Formulario-Personalizado-DAO.html#method_converter_tipo" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Formulario_Personalizado.dao.php"><a href="files/src-webservice-dao-formulario-personalizado-dao.html"><abbr title="src/webservice/dao/Formulario_Personalizado.dao.php">Formulario_Personalizado.dao.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">57</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">converter_tipo</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$coluna</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$coluna</span>
                 : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
@@ -1222,7 +1293,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Formulario_Personalizado.dao.php"><a href="files/src-webservice-dao-formulario-personalizado-dao.html"><abbr title="src/webservice/dao/Formulario_Personalizado.dao.php">Formulario_Personalizado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">57</span>
+    <span class="phpdocumentor-element-found-in__line">119</span>
 
     </aside>
 
@@ -1277,14 +1348,14 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Formulario_Personalizado.dao.php"><a href="files/src-webservice-dao-formulario-personalizado-dao.html"><abbr title="src/webservice/dao/Formulario_Personalizado.dao.php">Formulario_Personalizado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">71</span>
+    <span class="phpdocumentor-element-found-in__line">169</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">get_formulario</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$formulario_id</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">0</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nome_tabela</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$chaves</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">get_formulario</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$formulario_id</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">0</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nome_tabela</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$chaves</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$reprocessamento</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1309,6 +1380,13 @@
                 <span class="phpdocumentor-signature__argument__name">$chaves</span>
                 : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
                  = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$reprocessamento</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">false</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
             </dd>
@@ -1363,7 +1441,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Formulario_Personalizado.dao.php"><a href="files/src-webservice-dao-formulario-personalizado-dao.html"><abbr title="src/webservice/dao/Formulario_Personalizado.dao.php">Formulario_Personalizado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">91</span>
+    <span class="phpdocumentor-element-found-in__line">190</span>
 
     </aside>
 
@@ -1724,7 +1802,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Formulario_Personalizado.dao.php"><a href="files/src-webservice-dao-formulario-personalizado-dao.html"><abbr title="src/webservice/dao/Formulario_Personalizado.dao.php">Formulario_Personalizado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">507</span>
+    <span class="phpdocumentor-element-found-in__line">758</span>
 
     </aside>
 
@@ -1786,7 +1864,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Formulario_Personalizado.dao.php"><a href="files/src-webservice-dao-formulario-personalizado-dao.html"><abbr title="src/webservice/dao/Formulario_Personalizado.dao.php">Formulario_Personalizado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">391</span>
+    <span class="phpdocumentor-element-found-in__line">642</span>
 
     </aside>
 
@@ -1819,6 +1897,61 @@
             -public
                                     -static                    "
 >
+    <h4 class="phpdocumentor-element__name" id="method_obter_id_formulario_personalizado">
+        obter_id_formulario_personalizado()
+        <a href="classes/Formulario-Personalizado-DAO.html#method_obter_id_formulario_personalizado" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Formulario_Personalizado.dao.php"><a href="files/src-webservice-dao-formulario-personalizado-dao.html"><abbr title="src/webservice/dao/Formulario_Personalizado.dao.php">Formulario_Personalizado.dao.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">123</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">obter_id_formulario_personalizado</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nome_tabela</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$chave</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$valor</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$nome_tabela</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$chave</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$valor</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
     <h4 class="phpdocumentor-element__name" id="method_popular">
         popular()
         <a href="classes/Formulario-Personalizado-DAO.html#method_popular" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1827,14 +1960,14 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Formulario_Personalizado.dao.php"><a href="files/src-webservice-dao-formulario-personalizado-dao.html"><abbr title="src/webservice/dao/Formulario_Personalizado.dao.php">Formulario_Personalizado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">301</span>
+    <span class="phpdocumentor-element-found-in__line">452</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">popular</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$formulario_model</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$tabela_nome</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$chaves</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">popular</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$formulario_model</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$tabela_nome</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$chaves</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$reprocessamento</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1862,6 +1995,13 @@
             <dd class="phpdocumentor-argument-list__definition">
                 
             </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$reprocessamento</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">false</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
             </dl>
 
     
@@ -1882,7 +2022,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Formulario_Personalizado.dao.php"><a href="files/src-webservice-dao-formulario-personalizado-dao.html"><abbr title="src/webservice/dao/Formulario_Personalizado.dao.php">Formulario_Personalizado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">330</span>
+    <span class="phpdocumentor-element-found-in__line">532</span>
 
     </aside>
 
@@ -1907,6 +2047,68 @@
                 <span class="phpdocumentor-signature__argument__name">$valores</span>
                 : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
                             </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_processar_formulario_tabela">
+        processar_formulario_tabela()
+        <a href="classes/Formulario-Personalizado-DAO.html#method_processar_formulario_tabela" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Formulario_Personalizado.dao.php"><a href="files/src-webservice-dao-formulario-personalizado-dao.html"><abbr title="src/webservice/dao/Formulario_Personalizado.dao.php">Formulario_Personalizado.dao.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">777</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">processar_formulario_tabela</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$elemento</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nome_tabela</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$query_tabelas</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id_tabela_principal</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$elemento</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$nome_tabela</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$query_tabelas</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$id_tabela_principal</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
             </dd>
@@ -2242,7 +2444,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Formulario_Personalizado.dao.php"><a href="files/src-webservice-dao-formulario-personalizado-dao.html"><abbr title="src/webservice/dao/Formulario_Personalizado.dao.php">Formulario_Personalizado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">283</span>
+    <span class="phpdocumentor-element-found-in__line">425</span>
 
     </aside>
 
@@ -2275,6 +2477,68 @@
             -public
                                     -static                    "
 >
+    <h4 class="phpdocumentor-element__name" id="method_reprocessar_formulario">
+        reprocessar_formulario()
+        <a href="classes/Formulario-Personalizado-DAO.html#method_reprocessar_formulario" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Formulario_Personalizado.dao.php"><a href="files/src-webservice-dao-formulario-personalizado-dao.html"><abbr title="src/webservice/dao/Formulario_Personalizado.dao.php">Formulario_Personalizado.dao.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">839</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">reprocessar_formulario</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$formulario_id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nome_tabela</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$chave</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$chaves</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$formulario_id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$nome_tabela</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$chave</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$chaves</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
     <h4 class="phpdocumentor-element__name" id="method_salvar">
         salvar()
         <a href="classes/Formulario-Personalizado-DAO.html#method_salvar" class="headerlink"><i class="fas fa-link"></i></a>
@@ -2283,7 +2547,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Formulario_Personalizado.dao.php"><a href="files/src-webservice-dao-formulario-personalizado-dao.html"><abbr title="src/webservice/dao/Formulario_Personalizado.dao.php">Formulario_Personalizado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">37</span>
+    <span class="phpdocumentor-element-found-in__line">97</span>
 
     </aside>
 
@@ -2338,7 +2602,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Formulario_Personalizado.dao.php"><a href="files/src-webservice-dao-formulario-personalizado-dao.html"><abbr title="src/webservice/dao/Formulario_Personalizado.dao.php">Formulario_Personalizado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">458</span>
+    <span class="phpdocumentor-element-found-in__line">709</span>
 
     </aside>
 
@@ -2468,7 +2732,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Formulario_Personalizado.dao.php"><a href="files/src-webservice-dao-formulario-personalizado-dao.html"><abbr title="src/webservice/dao/Formulario_Personalizado.dao.php">Formulario_Personalizado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">169</span>
+    <span class="phpdocumentor-element-found-in__line">279</span>
 
     </aside>
 
@@ -2515,6 +2779,47 @@
             -public
                                     -static                    "
 >
+    <h4 class="phpdocumentor-element__name" id="method_validar_campos_obrigatorios">
+        validar_campos_obrigatorios()
+        <a href="classes/Formulario-Personalizado-DAO.html#method_validar_campos_obrigatorios" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Formulario_Personalizado.dao.php"><a href="files/src-webservice-dao-formulario-personalizado-dao.html"><abbr title="src/webservice/dao/Formulario_Personalizado.dao.php">Formulario_Personalizado.dao.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">134</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">validar_campos_obrigatorios</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$campos_personalizados</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$campos_personalizados</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
     <h4 class="phpdocumentor-element__name" id="method_validar_tabela">
         validar_tabela()
         <a href="classes/Formulario-Personalizado-DAO.html#method_validar_tabela" class="headerlink"><i class="fas fa-link"></i></a>
@@ -2523,7 +2828,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Formulario_Personalizado.dao.php"><a href="files/src-webservice-dao-formulario-personalizado-dao.html"><abbr title="src/webservice/dao/Formulario_Personalizado.dao.php">Formulario_Personalizado.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">264</span>
+    <span class="phpdocumentor-element-found-in__line">405</span>
 
     </aside>
 
@@ -2734,6 +3039,7 @@
                                             <li><a href="classes/Formulario-Personalizado-DAO.html#method_atualizar_tabelas">atualizar_tabelas()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_AutoLoad">AutoLoad()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_ConvertBase64">ConvertBase64()</a></li>
+                                            <li><a href="classes/Formulario-Personalizado-DAO.html#method_converter_tipo">converter_tipo()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_Delete_Token_JOB">Delete_Token_JOB()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_DxParamsAddFilter">DxParamsAddFilter()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_emp">emp()</a></li>
@@ -2749,8 +3055,10 @@
                                             <li><a href="classes/Sys-Basic.html#method_LoadPDF">LoadPDF()</a></li>
                                             <li><a href="classes/Formulario-Personalizado-DAO.html#method_monta_campo_historico">monta_campo_historico()</a></li>
                                             <li><a href="classes/Formulario-Personalizado-DAO.html#method_montar_anexo">montar_anexo()</a></li>
+                                            <li><a href="classes/Formulario-Personalizado-DAO.html#method_obter_id_formulario_personalizado">obter_id_formulario_personalizado()</a></li>
                                             <li><a href="classes/Formulario-Personalizado-DAO.html#method_popular">popular()</a></li>
                                             <li><a href="classes/Formulario-Personalizado-DAO.html#method_preencher_formulario_personalizado">preencher_formulario_personalizado()</a></li>
+                                            <li><a href="classes/Formulario-Personalizado-DAO.html#method_processar_formulario_tabela">processar_formulario_tabela()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_ReadBodyParams">ReadBodyParams()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_ReadDxParams">ReadDxParams()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_ReadFile">ReadFile()</a></li>
@@ -2759,11 +3067,13 @@
                                             <li><a href="classes/Sys-Basic.html#method_ReadPost">ReadPost()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_ReadRequest">ReadRequest()</a></li>
                                             <li><a href="classes/Formulario-Personalizado-DAO.html#method_remover_chaves_invalidas">remover_chaves_invalidas()</a></li>
+                                            <li><a href="classes/Formulario-Personalizado-DAO.html#method_reprocessar_formulario">reprocessar_formulario()</a></li>
                                             <li><a href="classes/Formulario-Personalizado-DAO.html#method_salvar">salvar()</a></li>
                                             <li><a href="classes/Formulario-Personalizado-DAO.html#method_salvar_anexo">salvar_anexo()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_set_login_anonimo">set_login_anonimo()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_Start_Token_JOB">Start_Token_JOB()</a></li>
                                             <li><a href="classes/Formulario-Personalizado-DAO.html#method_update">update()</a></li>
+                                            <li><a href="classes/Formulario-Personalizado-DAO.html#method_validar_campos_obrigatorios">validar_campos_obrigatorios()</a></li>
                                             <li><a href="classes/Formulario-Personalizado-DAO.html#method_validar_tabela">validar_tabela()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_WhatRequest">WhatRequest()</a></li>
                                     </ul>

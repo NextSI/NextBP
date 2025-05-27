@@ -14,13 +14,12 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Illuminate\Support\Traits\ForwardsCalls;
 use Illuminate\Support\Traits\Tappable;
-use Stringable;
 use Traversable;
 
 /**
  * @mixin \Illuminate\Support\Collection
  */
-abstract class AbstractCursorPaginator implements Htmlable, Stringable
+abstract class AbstractCursorPaginator implements Htmlable
 {
     use ForwardsCalls, Tappable;
 

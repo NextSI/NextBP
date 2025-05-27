@@ -60,7 +60,7 @@ class DefaultProviders
     /**
      * Replace the given providers with other providers.
      *
-     * @param  array  $replacements
+     * @param  array  $items
      * @return static
      */
     public function replace(array $replacements)

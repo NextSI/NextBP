@@ -25,7 +25,6 @@ namespace Illuminate\Support\Facades;
  * @method static bool exists(string|array $key)
  * @method static bool missing(string|array $key)
  * @method static bool has(string|array $key)
- * @method static bool hasAny(string|array $key)
  * @method static mixed get(string $key, mixed $default = null)
  * @method static mixed pull(string $key, mixed $default = null)
  * @method static bool hasOldInput(string|null $key = null)

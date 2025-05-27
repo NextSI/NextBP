@@ -4,7 +4,7 @@
  * This file is part of FPDI
  *
  * @package   setasign\Fpdi
- * @copyright Copyright (c) 2023 Setasign GmbH & Co. KG (https://www.setasign.com)
+ * @copyright Copyright (c) 2024 Setasign GmbH & Co. KG (https://www.setasign.com)
  * @license   http://opensource.org/licenses/mit-license The MIT License
  */
 
@@ -109,7 +109,7 @@ class PdfReader
     /**
      * Get a page instance.
      *
-     * @param int $pageNumber
+     * @param int|numeric-string $pageNumber
      * @return Page
      * @throws PdfTypeException
      * @throws CrossReferenceException
@@ -219,7 +219,10 @@ class PdfReader
                 $type = PdfDictionary::get($object->value, 'Type');
 
                 if ($type->value === 'Pages') {
-                    $readPages(PdfDictionary::get($object->value, 'Kids'), PdfDictionary::get($object->value, 'Count'));
+                    $readPages(
+                        PdfType::resolve(PdfDictionary::get($object->value, 'Kids'), $this->parser),
+                        PdfType::resolve(PdfDictionary::get($object->value, 'Count'), $this->parser)
+                    );
                 } else {
                     $this->pages[] = $object;
                 }

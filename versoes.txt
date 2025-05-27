@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.83.4",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao listar projetos",
+                "referencia": [
+                    "CHM76696"
+                ],
+                "modulo": "Projeto",
+                "hash": "c731c7b1c83d902188ea4dcac89232c43f09781b",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/CHM76696"
+            }
+        ]
+    },
+    {
         "versao": "24.83.3",
         "itens": [
             {

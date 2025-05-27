@@ -422,34 +422,9 @@ class MailFake implements Factory, Fake, Mailer, MailQueue
      * @param  \Illuminate\Contracts\Mail\Mailable|string|array  $view
      * @param  array  $data
      * @param  \Closure|string|null  $callback
-     * @return mixed|void
-     */
-    public function send($view, array $data = [], $callback = null)
-    {
-        return $this->sendMail($view, $view instanceof ShouldQueue);
-    }
-
-    /**
-     * Send a new message synchronously using a view.
-     *
-     * @param  \Illuminate\Contracts\Mail\Mailable|string|array  $mailable
-     * @param  array  $data
-     * @param  \Closure|string|null  $callback
      * @return void
      */
-    public function sendNow($mailable, array $data = [], $callback = null)
-    {
-        return $this->sendMail($mailable, shouldQueue: false);
-    }
-
-    /**
-     * Send a new message using a view.
-     *
-     * @param  \Illuminate\Contracts\Mail\Mailable|string|array  $view
-     * @param  bool  $shouldQueue
-     * @return mixed|void
-     */
-    protected function sendMail($view, $shouldQueue = false)
+    public function send($view, array $data = [], $callback = null)
     {
         if (! $view instanceof Mailable) {
             return;
@@ -457,8 +432,8 @@ class MailFake implements Factory, Fake, Mailer, MailQueue
 
         $view->mailer($this->currentMailer);
 
-        if ($shouldQueue) {
-            return $this->queue($view);
+        if ($view instanceof ShouldQueue) {
+            return $this->queue($view, $data);
         }
 
         $this->currentMailer = null;
@@ -467,7 +442,7 @@ class MailFake implements Factory, Fake, Mailer, MailQueue
     }
 
     /**
-     * Queue a new message for sending.
+     * Queue a new e-mail message for sending.
      *
      * @param  \Illuminate\Contracts\Mail\Mailable|string|array  $view
      * @param  string|null  $queue

@@ -6,7 +6,6 @@ use ArgumentCountError;
 use ArrayAccess;
 use Illuminate\Support\Traits\Macroable;
 use InvalidArgumentException;
-use Random\Randomizer;
 
 class Arr
 {
@@ -181,14 +180,10 @@ class Arr
     /**
      * Return the first element in an array passing a given truth test.
      *
-     * @template TKey
-     * @template TValue
-     * @template TFirstDefault
-     *
-     * @param  iterable<TKey, TValue>  $array
-     * @param  (callable(TValue, TKey): bool)|null  $callback
-     * @param  TFirstDefault|(\Closure(): TFirstDefault)  $default
-     * @return TValue|TFirstDefault
+     * @param  iterable  $array
+     * @param  callable|null  $callback
+     * @param  mixed  $default
+     * @return mixed
      */
     public static function first($array, ?callable $callback = null, $default = null)
     {
@@ -640,24 +635,6 @@ class Arr
     }
 
     /**
-     * Run a map over each nested chunk of items.
-     *
-     * @template TMapSpreadValue
-     *
-     * @param  array  $array
-     * @param  callable(mixed...): TMapSpreadValue  $callback
-     * @return array<TKey, TMapSpreadValue>
-     */
-    public static function mapSpread(array $array, callable $callback)
-    {
-        return static::map($array, function ($chunk, $key) use ($callback) {
-            $chunk[] = $key;
-
-            return $callback(...$chunk);
-        });
-    }
-
-    /**
      * Push an item onto the beginning of an array.
      *
      * @param  array  $array
@@ -726,24 +703,24 @@ class Arr
             );
         }
 
-        if (empty($array) || (! is_null($number) && $number <= 0)) {
-            return is_null($number) ? null : [];
-        }
-
-        $keys = (new Randomizer)->pickArrayKeys($array, $requested);
-
         if (is_null($number)) {
-            return $array[$keys[0]];
+            return $array[array_rand($array)];
         }
+
+        if ((int) $number === 0) {
+            return [];
+        }
+
+        $keys = array_rand($array, $number);
 
         $results = [];
 
         if ($preserveKeys) {
-            foreach ($keys as $key) {
+            foreach ((array) $keys as $key) {
                 $results[$key] = $array[$key];
             }
         } else {
-            foreach ($keys as $key) {
+            foreach ((array) $keys as $key) {
                 $results[] = $array[$key];
             }
         }
@@ -795,11 +772,20 @@ class Arr
      * Shuffle the given array and return the result.
      *
      * @param  array  $array
+     * @param  int|null  $seed
      * @return array
      */
-    public static function shuffle($array)
+    public static function shuffle($array, $seed = null)
     {
-        return (new Randomizer)->shuffleArray($array);
+        if (is_null($seed)) {
+            shuffle($array);
+        } else {
+            mt_srand($seed);
+            shuffle($array);
+            mt_srand();
+        }
+
+        return $array;
     }
 
     /**

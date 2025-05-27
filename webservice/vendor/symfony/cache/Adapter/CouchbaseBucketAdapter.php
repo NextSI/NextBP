@@ -39,7 +39,7 @@ class CouchbaseBucketAdapter extends AbstractAdapter
     private \CouchbaseBucket $bucket;
     private MarshallerInterface $marshaller;
 
-    public function __construct(\CouchbaseBucket $bucket, string $namespace = '', int $defaultLifetime = 0, MarshallerInterface $marshaller = null)
+    public function __construct(\CouchbaseBucket $bucket, string $namespace = '', int $defaultLifetime = 0, ?MarshallerInterface $marshaller = null)
     {
         if (!static::isSupported()) {
             throw new CacheException('Couchbase >= 2.6.0 < 3.0.0 is required.');
@@ -64,7 +64,7 @@ class CouchbaseBucketAdapter extends AbstractAdapter
             throw new CacheException('Couchbase >= 2.6.0 < 3.0.0 is required.');
         }
 
-        set_error_handler(function ($type, $msg, $file, $line) { throw new \ErrorException($msg, 0, $type, $file, $line); });
+        set_error_handler(static fn ($type, $msg, $file, $line) => throw new \ErrorException($msg, 0, $type, $file, $line));
 
         $dsnPattern = '/^(?<protocol>couchbase(?:s)?)\:\/\/(?:(?<username>[^\:]+)\:(?<password>[^\@]{6,})@)?'
             .'(?<host>[^\:]+(?:\:\d+)?)(?:\/(?<bucketName>[^\?]+))(?:\?(?<options>.*))?$/i';

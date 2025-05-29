@@ -75,6 +75,9 @@ define('USER_SYS_ID', 1);
 // Configura o delay que pode existir na execução do Job Scheduler
 //define('JOB_SCHEDULER_DELAY_MINUTO', 5);
 
+// desabilita todos os PEs
+// define('PE_HABILITADO', false);
+
 $error_log_path = str_replace('/', DIRECTORY_SEPARATOR, __DIR__ . '/../log/error.log');
 ini_set('error_log', $error_log_path);
 

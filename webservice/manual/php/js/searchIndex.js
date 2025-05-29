@@ -37651,6 +37651,11 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/default.html#constant_PAINEL_ADMIN_SENHA"
         },                {
+            "fqsen": "\\PE_HABILITADO",
+            "name": "PE_HABILITADO",
+            "summary": "",
+            "url": "namespaces/default.html#constant_PE_HABILITADO"
+        },                {
             "fqsen": "\\Sys\\App",
             "name": "App",
             "summary": "",
@@ -38221,15 +38226,20 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Sys-DB.html#method_criar_tabela"
         },                {
-            "fqsen": "\\Sys\\DB\u003A\u003Atabela_chave_primaria\u0028\u0029",
-            "name": "tabela_chave_primaria",
+            "fqsen": "\\Sys\\DB\u003A\u003Atabela_nome_coluna_chave\u0028\u0029",
+            "name": "tabela_nome_coluna_chave",
             "summary": "",
-            "url": "classes/Sys-DB.html#method_tabela_chave_primaria"
+            "url": "classes/Sys-DB.html#method_tabela_nome_coluna_chave"
         },                {
             "fqsen": "\\Sys\\DB\u003A\u003Atabela_fk_nome\u0028\u0029",
             "name": "tabela_fk_nome",
             "summary": "",
             "url": "classes/Sys-DB.html#method_tabela_fk_nome"
+        },                {
+            "fqsen": "\\Sys\\DB\u003A\u003Atabela_coluna_fk_nome\u0028\u0029",
+            "name": "tabela_coluna_fk_nome",
+            "summary": "",
+            "url": "classes/Sys-DB.html#method_tabela_coluna_fk_nome"
         },                {
             "fqsen": "\\Sys\\DB\u003A\u003Aexiste_coluna\u0028\u0029",
             "name": "existe_coluna",

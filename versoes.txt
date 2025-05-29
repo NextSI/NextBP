@@ -1,5 +1,60 @@
 [
     {
+        "versao": "24.83.5",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao salvar modelagem de processo",
+                "referencia": [
+                    "CHM76783"
+                ],
+                "modulo": "Processo",
+                "hash": "7f8e999b551f5fb1659a825bb19e9dc2da06544b",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/CHM76783"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao salvar e enviar atividade com notifica\u00e7\u00e3o por e-mail",
+                "referencia": [
+                    "CHM76708"
+                ],
+                "modulo": "Processo",
+                "hash": "cc49f8694514ebe54353b3344714fe9f67abd51d",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/CHM76708"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na sele\u00e7\u00e3o de formul\u00e1rio personalizado de quadros de tarefa",
+                "referencia": [
+                    "BPM38842"
+                ],
+                "modulo": "Tarefas",
+                "hash": "280be6b88db2e2aed56f954c1467e355cd752a58",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38842"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na fun\u00e7\u00e3o set_valor em campo decimal",
+                "referencia": [
+                    "BPM38584"
+                ],
+                "modulo": "Processos",
+                "hash": "2f350629df71735acbcb0b5dc511bea568d225ca",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38584"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na edi\u00e7\u00e3o de atividades em diagrama",
+                "referencia": [
+                    "BPM38461"
+                ],
+                "modulo": "Processos",
+                "hash": "bcd03c3f51511254b5391cc2db01ddfa73eb17ac",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38461"
+            }
+        ]
+    },
+    {
         "versao": "24.83.4",
         "itens": [
             {

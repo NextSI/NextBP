@@ -10351,6 +10351,56 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Notificacoes-DAO.html#method_listar"
         },                {
+            "fqsen": "\\OAuth2_RDStation",
+            "name": "OAuth2_RDStation",
+            "summary": "",
+            "url": "classes/OAuth2-RDStation.html"
+        },                {
+            "fqsen": "\\OAuth2_RDStation\u003A\u003AgetBaseAuthorizationUrl\u0028\u0029",
+            "name": "getBaseAuthorizationUrl",
+            "summary": "Get\u0020authorization\u0020url\u0020to\u0020begin\u0020OAuth\u0020flow",
+            "url": "classes/OAuth2-RDStation.html#method_getBaseAuthorizationUrl"
+        },                {
+            "fqsen": "\\OAuth2_RDStation\u003A\u003AgetBaseAccessTokenUrl\u0028\u0029",
+            "name": "getBaseAccessTokenUrl",
+            "summary": "Get\u0020access\u0020token\u0020url\u0020to\u0020retrieve\u0020token",
+            "url": "classes/OAuth2-RDStation.html#method_getBaseAccessTokenUrl"
+        },                {
+            "fqsen": "\\OAuth2_RDStation\u003A\u003AgetResourceOwnerDetailsUrl\u0028\u0029",
+            "name": "getResourceOwnerDetailsUrl",
+            "summary": "Get\u0020provider\u0020url\u0020to\u0020fetch\u0020user\u0020details",
+            "url": "classes/OAuth2-RDStation.html#method_getResourceOwnerDetailsUrl"
+        },                {
+            "fqsen": "\\OAuth2_RDStation\u003A\u003AgetDefaultScopes\u0028\u0029",
+            "name": "getDefaultScopes",
+            "summary": "Get\u0020the\u0020default\u0020scopes\u0020used\u0020by\u0020this\u0020provider.",
+            "url": "classes/OAuth2-RDStation.html#method_getDefaultScopes"
+        },                {
+            "fqsen": "\\OAuth2_RDStation\u003A\u003AcheckResponse\u0028\u0029",
+            "name": "checkResponse",
+            "summary": "Check\u0020a\u0020provider\u0020response\u0020for\u0020errors.",
+            "url": "classes/OAuth2-RDStation.html#method_checkResponse"
+        },                {
+            "fqsen": "\\OAuth2_RDStation\u003A\u003AcreateResourceOwner\u0028\u0029",
+            "name": "createResourceOwner",
+            "summary": "Generate\u0020a\u0020user\u0020object\u0020from\u0020a\u0020successful\u0020user\u0020details\u0020request.",
+            "url": "classes/OAuth2-RDStation.html#method_createResourceOwner"
+        },                {
+            "fqsen": "\\OAuth2_RDStationOwner",
+            "name": "OAuth2_RDStationOwner",
+            "summary": "",
+            "url": "classes/OAuth2-RDStationOwner.html"
+        },                {
+            "fqsen": "\\OAuth2_RDStationOwner\u003A\u003AgetId\u0028\u0029",
+            "name": "getId",
+            "summary": "",
+            "url": "classes/OAuth2-RDStationOwner.html#method_getId"
+        },                {
+            "fqsen": "\\OAuth2_RDStationOwner\u003A\u003AtoArray\u0028\u0029",
+            "name": "toArray",
+            "summary": "",
+            "url": "classes/OAuth2-RDStationOwner.html#method_toArray"
+        },                {
             "fqsen": "\\OAuth_Client_DAO",
             "name": "OAuth_Client_DAO",
             "summary": "",
@@ -12770,6 +12820,21 @@ Search.appendIndex(
             "name": "salvar",
             "summary": "",
             "url": "classes/Prospect-Representante-DAO.html#method_salvar"
+        },                {
+            "fqsen": "\\RD_Station_Api_DAO",
+            "name": "RD_Station_Api_DAO",
+            "summary": "",
+            "url": "classes/RD-Station-Api-DAO.html"
+        },                {
+            "fqsen": "\\RD_Station_Api_DAO\u003A\u003Agera_token\u0028\u0029",
+            "name": "gera_token",
+            "summary": "",
+            "url": "classes/RD-Station-Api-DAO.html#method_gera_token"
+        },                {
+            "fqsen": "\\RD_Station_Api_DAO\u003A\u003Arefresh_access_token\u0028\u0029",
+            "name": "refresh_access_token",
+            "summary": "",
+            "url": "classes/RD-Station-Api-DAO.html#method_refresh_access_token"
         },                {
             "fqsen": "\\RD_Station_Webhook_Mkt_DAO",
             "name": "RD_Station_Webhook_Mkt_DAO",
@@ -27696,6 +27761,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Grupo-Usuarios-Equipe-Projeto-Model.html#property_gerente_projeto"
         },                {
+            "fqsen": "\\Grupo_Usuarios_Equipe_Projeto_Model\u003A\u003A\u0024planejamento_formulario",
+            "name": "planejamento_formulario",
+            "summary": "",
+            "url": "classes/Grupo-Usuarios-Equipe-Projeto-Model.html#property_planejamento_formulario"
+        },                {
             "fqsen": "\\Item_Imposto_Model",
             "name": "Item_Imposto_Model",
             "summary": "",
@@ -29611,6 +29681,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/OAuth-Client-Model.html#constant_PROVEDOR_MICROSOFT"
         },                {
+            "fqsen": "\\OAuth_Client_Model\u003A\u003APROVEDOR_RD_STATION",
+            "name": "PROVEDOR_RD_STATION",
+            "summary": "",
+            "url": "classes/OAuth-Client-Model.html#constant_PROVEDOR_RD_STATION"
+        },                {
             "fqsen": "\\OAuth_Client_Model\u003A\u003APROVEDOR_GOOGLE",
             "name": "PROVEDOR_GOOGLE",
             "summary": "",
@@ -30115,6 +30190,11 @@ Search.appendIndex(
             "name": "uf_sigla_entidade",
             "summary": "",
             "url": "classes/Oportunidade-Model.html#property_uf_sigla_entidade"
+        },                {
+            "fqsen": "\\Oportunidade_Model\u003A\u003A\u0024cod_pais_entidade",
+            "name": "cod_pais_entidade",
+            "summary": "",
+            "url": "classes/Oportunidade-Model.html#property_cod_pais_entidade"
         },                {
             "fqsen": "\\Oportunidade_Model\u003A\u003A\u0024email",
             "name": "email",

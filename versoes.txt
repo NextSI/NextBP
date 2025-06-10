@@ -1,5 +1,70 @@
 [
     {
+        "versao": "23.59.81",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao salvar e enviar atividade com notifica\u00e7\u00e3o por e-mail",
+                "referencia": [
+                    "CHM76708"
+                ],
+                "modulo": "Processo",
+                "hash": "c3c5fe514865eac08024c3381d6ef7f8adcfe03f",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/CHM76708"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na rotina de remo\u00e7\u00e3o de favoritos de documentos e pastas",
+                "referencia": [
+                    "BPM39127"
+                ],
+                "modulo": "Timeline",
+                "hash": "44a7dd04853d973beb523c550b8ac285afe823bb",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39127"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na rotina de listagem de documentos na timeline",
+                "referencia": [
+                    "BPM38935"
+                ],
+                "modulo": "Documentos (GED)",
+                "hash": "87d6b96e0f3e54f4381ad7869b007d98d19a92f0",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38935"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na sele\u00e7\u00e3o de formul\u00e1rio personalizado de quadros de tarefa",
+                "referencia": [
+                    "BPM38842"
+                ],
+                "modulo": "Tarefas",
+                "hash": "acfccd7986691cca878cbc9c1a131df3ea1d7340",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38842"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na fun\u00e7\u00e3o set_valor em campo decimal",
+                "referencia": [
+                    "BPM38584"
+                ],
+                "modulo": "Processos",
+                "hash": "ccc59eddaca37af4141571a9abd5b3365baf0b30",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38584"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na situa\u00e7\u00e3o de atividades n\u00e3o entregues de solicita\u00e7\u00f5es canceladas",
+                "referencia": [
+                    "BPM38452"
+                ],
+                "modulo": "Processos",
+                "hash": "165475fbbd82a87d4d0a8a286f838a7802ca5b9a",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38452"
+            }
+        ]
+    },
+    {
         "versao": "23.59.80",
         "itens": [
             {

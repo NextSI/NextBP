@@ -1,5 +1,100 @@
 [
     {
+        "versao": "24.84.1",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao carregar Next BP para usu\u00e1rios do tipo cliente via link de chamado",
+                "referencia": [
+                    "CHM76792"
+                ],
+                "modulo": "Geral",
+                "hash": "bf85615ee8203e919248ef9f3bdd95d4ab749c83",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/CHM76792"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na rotina de remo\u00e7\u00e3o de favoritos de documentos e pastas",
+                "referencia": [
+                    "BPM39127"
+                ],
+                "modulo": "Timeline",
+                "hash": "0360ce41b976b4b81c8869f79cc6f5170e273f66",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39127"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao exportar Excel do relat\u00f3rio situa\u00e7\u00e3o de vig\u00eancia dos documentos",
+                "referencia": [
+                    "BPM39100"
+                ],
+                "modulo": "Documentos",
+                "hash": "c5d2990b58e6ba3d5e4b29b6a2c8468b7da43480",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39100"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Exibi\u00e7\u00e3o de campos de formul\u00e1rio customizado na tela de Projetos",
+                "referencia": [
+                    "BPM38983"
+                ],
+                "modulo": "Projetos",
+                "hash": "764743f4d5750b87ca51c80bcb3b6200daadf085",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38983"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na atualiza\u00e7\u00e3o do nome de pastas na \u00c1rvore de Documentos",
+                "referencia": [
+                    "BPM38965"
+                ],
+                "modulo": "Documentos (GED)",
+                "hash": "d08cf6cdac995517859290bb148467d3373a24f0",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38965"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na restaura\u00e7\u00e3o de colunas de atividades de projeto",
+                "referencia": [
+                    "BPM38944"
+                ],
+                "modulo": "Projeto",
+                "hash": "b42c7fb80bf3bb4655bcaaab76412f1ea66fbbdb",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38944"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na rotina de listagem de documentos na timeline",
+                "referencia": [
+                    "BPM38935"
+                ],
+                "modulo": "Documentos (GED)",
+                "hash": "68436528c5b9a0e13fd65923c9228c6c45858139",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38935"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na situa\u00e7\u00e3o de atividades n\u00e3o entregues de solicita\u00e7\u00f5es canceladas",
+                "referencia": [
+                    "BPM38452"
+                ],
+                "modulo": "Processos",
+                "hash": "67d68940fc0df2735bd6d9652e5a3797330b6efa",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38452"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Integra\u00e7\u00e3o Aplicativos da RD Station",
+                "referencia": [
+                    "BPM37807"
+                ],
+                "modulo": "Configura\u00e7\u00f5es",
+                "hash": "a5e7b929d1acb8afb48b9ed722604627a37d2cf2",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM37807"
+            }
+        ]
+    },
+    {
         "versao": "24.83.5",
         "itens": [
             {

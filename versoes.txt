@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.84.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na automa\u00e7\u00e3o de valores em campos do tipo inteiro",
+                "referencia": [
+                    "BPM39280"
+                ],
+                "modulo": "Processos",
+                "hash": "d6f9634d939035452e496fff76d3fb3e71153cb4",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39280"
+            }
+        ]
+    },
+    {
         "versao": "24.84.1",
         "itens": [
             {

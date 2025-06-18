@@ -1,5 +1,20 @@
 [
     {
+        "versao": "23.59.83",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste no evento de fechamento de tela com callback duplicado",
+                "referencia": [
+                    "BPM39088"
+                ],
+                "modulo": "Configura\u00e7\u00f5es",
+                "hash": "a4c8da22506d8cb3294f0d8806abc03ffeff5498",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39088"
+            }
+        ]
+    },
+    {
         "versao": "23.59.82",
         "itens": [
             {

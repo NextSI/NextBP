@@ -2,8 +2,29 @@
 const PROJETO_STATUS = { ANDAMENTO: 1, CONCLUIDO: 2, NAO_INICIADO: 3, CANCELADO: 4 };
 const PROJETO_STATUS_ATIVIDADES = { PROGRAMADO: 1, ANDAMENTO: 2, CONCLUIDO: 3, NAO_INICIADO: 4, ATRASADO: 5, CANCELADA: 6 };
 window.onload = function () { renderizarGantt({dadosGantt}) };
+function pad(n, width, z) {
+    z = z || '0';
+    n = n + '';
+    return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+}
 function renderizarGantt(a) { 
     DevExpress.localization.locale("pt-BR");
+    const replaceColumns = function (columns) {
+        columns.forEach(element => {
+            if (element.dataField === 'sequencia') {
+                element.calculateSortValue = function (data) {
+                    let sequencia = data.sequencia ?? "";
+                    let grupos = String(sequencia).split('.');
+                    sequencia = "";
+                    grupos.forEach(grupo => {
+                        sequencia += window.pad(grupo, 10) + '.';
+                    });
+                    return sequencia;
+                }
+            }
+        });
+        return columns;
+    }
     $("#gantt").dxGantt({
         tasks: { dataSource: a.tasks },
         dependencies: { dataSource: a.dependencies },
@@ -15,7 +36,7 @@ function renderizarGantt(a) {
         height: "calc(100vh - 25px)", 
         filterRow: { visible: true }, 
         headerFilter: { visible: true }, 
-        columns: {columns},
+        columns: replaceColumns({columns}),
         toolbar: {
             items: [
                 "collapseAll", "expandAll", "separator", "zoomIn", "zoomOut", "separator",

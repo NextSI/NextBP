@@ -1,5 +1,50 @@
 [
     {
+        "versao": "24.85.1",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste no evento de fechamento de tela com callback duplicado",
+                "referencia": [
+                    "BPM39088"
+                ],
+                "modulo": "Configura\u00e7\u00f5es",
+                "hash": "afec4483dcbb3e96f40dd46d3f2f3221f8d423b4",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39088"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Edi\u00e7\u00e3o do campo \"Prazo Dias\" da atividade para quando \"Tipo de Previs\u00e3o de In\u00edcio\" \u00e9 \"O mais breve poss\u00edvel\"",
+                "referencia": [
+                    "BPM38950"
+                ],
+                "modulo": "Projetos",
+                "hash": "ff1c2e14ffe52fd8756be2c6d6c7a19a4f4a9673",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38950"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Ordena\u00e7\u00e3o num\u00e9rica para cada n\u00edvel da sequ\u00eancia de atividades de projetos",
+                "referencia": [
+                    "BPM38947"
+                ],
+                "modulo": "Projetos",
+                "hash": "8f3445281b83b3c621ddd208af9e1f5d729af4fc",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38947"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Inclus\u00e3o de nova op\u00e7\u00e3o de filtro por colaboradores e melhorias na grid de convidados da agenda",
+                "referencia": [
+                    "BPM38827"
+                ],
+                "modulo": "Processos, Agenda",
+                "hash": "275391d3c544563a6412f3de2f289019dfe36dda",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38827"
+            }
+        ]
+    },
+    {
         "versao": "24.84.3",
         "itens": [
             {

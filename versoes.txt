@@ -1,5 +1,50 @@
 [
     {
+        "versao": "24.86.1",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na a\u00e7\u00e3o \"Novo documento\"",
+                "referencia": [
+                    "BPM39571"
+                ],
+                "modulo": "Documentos",
+                "hash": "7066898d68457f2018bafb30372e314b0f067bf7",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39571"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Inclus\u00e3o da coluna \"Equipe\" na listagem de projetos",
+                "referencia": [
+                    "BPM39193"
+                ],
+                "modulo": "Projetos",
+                "hash": "6f8b191a7c81e9675d4c4f58bc89f14c6f10451a",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39193"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Adicionada coluna \"Situa\u00e7\u00e3o da Solicita\u00e7\u00e3o\" no relat\u00f3rio \"Atividade de Processo\" em Excel",
+                "referencia": [
+                    "BPM38452"
+                ],
+                "modulo": "Processos",
+                "hash": "f382491394a1754a3fdd0e39018f7b715f2d7d4d",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38452-1"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Nova funcionalidade de notifica\u00e7\u00e3o por e-mail para novos documentos no GED",
+                "referencia": [
+                    "BPM35311"
+                ],
+                "modulo": "Documentos (GED)",
+                "hash": "e8c979fc8b64b26d177d2a2a00c785430a5207d1",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM35311"
+            }
+        ]
+    },
+    {
         "versao": "24.85.1",
         "itens": [
             {

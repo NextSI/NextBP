@@ -23671,6 +23671,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Documento-Model.html#constant_DOCUMENTOS_EXPIRADOS"
         },                {
+            "fqsen": "\\Documento_Model\u003A\u003ANOTIFICACAO_DOCUMENTO_CRIADO",
+            "name": "NOTIFICACAO_DOCUMENTO_CRIADO",
+            "summary": "",
+            "url": "classes/Documento-Model.html#constant_NOTIFICACAO_DOCUMENTO_CRIADO"
+        },                {
             "fqsen": "\\Documento_Model\u003A\u003ANOTIFICAR_POR_EMAIL_ANTES_AUTOR_DA_REVISAO_ATIVA",
             "name": "NOTIFICAR_POR_EMAIL_ANTES_AUTOR_DA_REVISAO_ATIVA",
             "summary": "",
@@ -24230,6 +24235,11 @@ Search.appendIndex(
             "name": "notificacao_seguranca",
             "summary": "",
             "url": "classes/Documento-Model.html#property_notificacao_seguranca"
+        },                {
+            "fqsen": "\\Documento_Model\u003A\u003A\u0024documento_criado",
+            "name": "documento_criado",
+            "summary": "",
+            "url": "classes/Documento-Model.html#property_documento_criado"
         },                {
             "fqsen": "\\Documento_Model\u003A\u003A\u0024isCopy",
             "name": "isCopy",

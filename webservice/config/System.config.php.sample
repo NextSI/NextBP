@@ -34,6 +34,12 @@ define('TRACE_BUSINESS_EXCEPTION', false);
 // utilizado para exibir o trace no retorno de erros para um ip externo
 //define('DEBUG_BUSINESS_EXCEPTION', '192.168.1.0');
 
+// utilizado para gravar o conteúdo de cada requisição nas rotas predefinidas
+//define('DEBUG_ROUTE', [
+//    '/projeto/listar/',
+//    '/cliente/salvar/',
+//]);
+
 // utilizado para gravar em Solicitacao_Atividade.dao.php.log a validação das origens do gateway inclusivo
 //define('DEBUG_SITUACAO_GATEWAY', true);
 

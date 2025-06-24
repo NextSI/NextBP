@@ -38141,10 +38141,20 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Sys-Controller-Request.html#method___construct"
         },                {
+            "fqsen": "\\Sys\\Controller_Request\u003A\u003A\u0024route",
+            "name": "route",
+            "summary": "",
+            "url": "classes/Sys-Controller-Request.html#property_route"
+        },                {
             "fqsen": "\\Sys\\Controller_Request\u003A\u003A\u0024ip",
             "name": "ip",
             "summary": "",
             "url": "classes/Sys-Controller-Request.html#property_ip"
+        },                {
+            "fqsen": "\\Sys\\Controller_Request\u003A\u003A\u0024class",
+            "name": "class",
+            "summary": "",
+            "url": "classes/Sys-Controller-Request.html#property_class"
         },                {
             "fqsen": "\\Sys\\Controller_Request\u003A\u003A\u0024action",
             "name": "action",
@@ -38155,11 +38165,6 @@ Search.appendIndex(
             "name": "params",
             "summary": "",
             "url": "classes/Sys-Controller-Request.html#property_params"
-        },                {
-            "fqsen": "\\Sys\\Controller_Request\u003A\u003A\u0024route",
-            "name": "route",
-            "summary": "",
-            "url": "classes/Sys-Controller-Request.html#property_route"
         },                {
             "fqsen": "\\Sys\\DAO",
             "name": "DAO",

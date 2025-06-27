@@ -5621,6 +5621,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Documento-Distribuicao-Controlada-DAO.html#method_existe_distribuicao_local"
         },                {
+            "fqsen": "\\Documento_Distribuicao_Controlada_DAO\u003A\u003Aexiste_distribuicao_responsavel_local\u0028\u0029",
+            "name": "existe_distribuicao_responsavel_local",
+            "summary": "",
+            "url": "classes/Documento-Distribuicao-Controlada-DAO.html#method_existe_distribuicao_responsavel_local"
+        },                {
+            "fqsen": "\\Documento_Distribuicao_Controlada_DAO\u003A\u003Aexiste_distribuicao_responsavel_ciencia\u0028\u0029",
+            "name": "existe_distribuicao_responsavel_ciencia",
+            "summary": "",
+            "url": "classes/Documento-Distribuicao-Controlada-DAO.html#method_existe_distribuicao_responsavel_ciencia"
+        },                {
             "fqsen": "\\Documento_Distribuicao_Controlada_DAO\u003A\u003Aexiste\u0028\u0029",
             "name": "existe",
             "summary": "",
@@ -24390,6 +24400,16 @@ Search.appendIndex(
             "name": "TIPO_ACAO_CIENCIA",
             "summary": "",
             "url": "classes/Documento-Distribuicao-Controlada-Model.html#constant_TIPO_ACAO_CIENCIA"
+        },                {
+            "fqsen": "\\Documento_Distribuicao_Controlada_Model\u003A\u003AORIGEM_DISTRIBUICAO_PREDEFINIDA",
+            "name": "ORIGEM_DISTRIBUICAO_PREDEFINIDA",
+            "summary": "",
+            "url": "classes/Documento-Distribuicao-Controlada-Model.html#constant_ORIGEM_DISTRIBUICAO_PREDEFINIDA"
+        },                {
+            "fqsen": "\\Documento_Distribuicao_Controlada_Model\u003A\u003AORIGEM_DISTRIBUICAO_MANUAL",
+            "name": "ORIGEM_DISTRIBUICAO_MANUAL",
+            "summary": "",
+            "url": "classes/Documento-Distribuicao-Controlada-Model.html#constant_ORIGEM_DISTRIBUICAO_MANUAL"
         },                {
             "fqsen": "\\Documento_Distribuicao_Controlada_Model\u003A\u003A\u0024id",
             "name": "id",

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title>Next BP 24.87.1</title>
+            <title>Next BP 24.88.1</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../">
@@ -25,7 +25,7 @@
     </head>
 <body id="top">
     <header class="phpdocumentor-header phpdocumentor-section">
-    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">Next BP 24.87.1</a></h1>
+    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">Next BP 24.88.1</a></h1>
     <input class="phpdocumentor-header__menu-button" type="checkbox" id="menu-button" name="menu-button" />
     <label class="phpdocumentor-header__menu-icon" for="menu-button">
         <i class="fas fa-bars"></i>
@@ -242,6 +242,12 @@
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Fila-Evento-DAO.html#method_delete">delete()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Sys-Basic.html#method_Delete_Token_JOB">Delete_Token_JOB()</a>
     <span>
                                 &nbsp;: mixed    </span>
@@ -336,6 +342,12 @@
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Sys-Basic.html#method_LoadPDF">LoadPDF()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Fila-Evento-DAO.html#method_mapeamento_colunas">mapeamento_colunas()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
@@ -969,6 +981,47 @@ Função utilizada pelo função popular.</dd>
         class="phpdocumentor-element
             -method
             -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_delete">
+        delete()
+        <a href="classes/Fila-Evento-DAO.html#method_delete" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Fila_Evento/Fila_Evento.dao.php"><a href="files/src-webservice-dao-fila-evento-fila-evento-dao.html"><abbr title="src/webservice/dao/Fila_Evento/Fila_Evento.dao.php">Fila_Evento.dao.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">258</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">delete</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$parametro_usuario_exclusao</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$parametro_usuario_exclusao</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
                                     -static                    "
 >
     <h4 class="phpdocumentor-element__name" id="method_Delete_Token_JOB">
@@ -1010,7 +1063,7 @@ Função utilizada pelo função popular.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Fila_Evento/Fila_Evento.dao.php"><a href="files/src-webservice-dao-fila-evento-fila-evento-dao.html"><abbr title="src/webservice/dao/Fila_Evento/Fila_Evento.dao.php">Fila_Evento.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">245</span>
+    <span class="phpdocumentor-element-found-in__line">282</span>
 
     </aside>
 
@@ -1196,7 +1249,7 @@ Função utilizada pelo função popular.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Fila_Evento/Fila_Evento.dao.php"><a href="files/src-webservice-dao-fila-evento-fila-evento-dao.html"><abbr title="src/webservice/dao/Fila_Evento/Fila_Evento.dao.php">Fila_Evento.dao.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">233</span>
+    <span class="phpdocumentor-element-found-in__line">270</span>
 
     </aside>
 
@@ -1410,12 +1463,22 @@ Função utilizada pelo função popular.</dd>
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">listar</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">listar</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$parametros_datagrid</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
     
-    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$parametros_datagrid</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
     
 
     
@@ -1691,6 +1754,37 @@ Função utilizada pelo função popular.</dd>
             </dd>
             </dl>
 
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_mapeamento_colunas">
+        mapeamento_colunas()
+        <a href="classes/Fila-Evento-DAO.html#method_mapeamento_colunas" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/dao/Fila_Evento/Fila_Evento.dao.php"><a href="files/src-webservice-dao-fila-evento-fila-evento-dao.html"><abbr title="src/webservice/dao/Fila_Evento/Fila_Evento.dao.php">Fila_Evento.dao.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">243</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">mapeamento_colunas</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
     
 
     
@@ -2483,6 +2577,7 @@ Caso o ID seja informado, o sistema irá atualizar o registro.</p>
                                             <li><a href="classes/Sys-Basic.html#method_api_token">api_token()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_AutoLoad">AutoLoad()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_ConvertBase64">ConvertBase64()</a></li>
+                                            <li><a href="classes/Fila-Evento-DAO.html#method_delete">delete()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_Delete_Token_JOB">Delete_Token_JOB()</a></li>
                                             <li><a href="classes/Fila-Evento-DAO.html#method_destruir_historico">destruir_historico()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_DxParamsAddFilter">DxParamsAddFilter()</a></li>
@@ -2499,6 +2594,7 @@ Caso o ID seja informado, o sistema irá atualizar o registro.</p>
                                             <li><a href="classes/Sys-Basic.html#method_LoadMail">LoadMail()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_LoadModel">LoadModel()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_LoadPDF">LoadPDF()</a></li>
+                                            <li><a href="classes/Fila-Evento-DAO.html#method_mapeamento_colunas">mapeamento_colunas()</a></li>
                                             <li><a href="classes/Fila-Evento-DAO.html#method_popular">popular()</a></li>
                                             <li><a href="classes/Fila-Evento-DAO.html#method_preencher">preencher()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_ReadBodyParams">ReadBodyParams()</a></li>

@@ -1,5 +1,40 @@
 [
     {
+        "versao": "24.88.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Ajuste na listagem de grupo de motivos de chamado",
+                "referencia": [
+                    "BPM39757"
+                ],
+                "modulo": "Corre\u00e7\u00e3o",
+                "hash": "7a5131451615fb1f5fffa1113715c64852522cba",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39757"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Manuten\u00e7\u00e3o da Fila de Eventos pendentes de execu\u00e7\u00e3o",
+                "referencia": [
+                    "BPM39748"
+                ],
+                "modulo": "Configura\u00e7\u00f5es",
+                "hash": "eada406fa22ac19a7566811312e4b91c0279b5b7",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39748"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na notifica\u00e7\u00e3o por e-mail do solicitante do chamado",
+                "referencia": [
+                    "BPM39742"
+                ],
+                "modulo": "Chamados",
+                "hash": "4280411c8dd3e5cc977ec661407cecd9979d6630",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39742"
+            }
+        ]
+    },
+    {
         "versao": "24.87.1",
         "itens": [
             {

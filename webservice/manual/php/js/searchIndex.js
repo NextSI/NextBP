@@ -7136,6 +7136,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Fila-Evento-DAO.html#method_listar"
         },                {
+            "fqsen": "\\Fila_Evento_DAO\u003A\u003Amapeamento_colunas\u0028\u0029",
+            "name": "mapeamento_colunas",
+            "summary": "",
+            "url": "classes/Fila-Evento-DAO.html#method_mapeamento_colunas"
+        },                {
+            "fqsen": "\\Fila_Evento_DAO\u003A\u003Adelete\u0028\u0029",
+            "name": "delete",
+            "summary": "",
+            "url": "classes/Fila-Evento-DAO.html#method_delete"
+        },                {
             "fqsen": "\\Fila_Evento_DAO\u003A\u003Aexecutar\u0028\u0029",
             "name": "executar",
             "summary": "",
@@ -37765,6 +37775,11 @@ Search.appendIndex(
             "name": "PE_HABILITADO",
             "summary": "",
             "url": "namespaces/default.html#constant_PE_HABILITADO"
+        },                {
+            "fqsen": "\\REQ_ID",
+            "name": "REQ_ID",
+            "summary": "",
+            "url": "namespaces/default.html#constant_REQ_ID"
         },                {
             "fqsen": "\\Sys\\App",
             "name": "App",

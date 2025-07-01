@@ -43,6 +43,10 @@ define('TRACE_BUSINESS_EXCEPTION', false);
 // utilizado para gravar em Solicitacao_Atividade.dao.php.log a validação das origens do gateway inclusivo
 //define('DEBUG_SITUACAO_GATEWAY', true);
 
+// utilizado para gravar em SQL_Debug.log todas as instruções que foram executadas
+// utilizar temporariamente, gera muito log
+// if (date('Y-m-d') === '2025-06-30') define('DEBUG_SQL', true);
+
 // utilizado para gravar em SQL_Lento.log as instruções que demorarem mais que X segundos para serem executadas
 //define('DEBUG_SQL_LENTO', true);
 //define('DEBUG_SQL_LENTO_SEGUNDOS', 1);

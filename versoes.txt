@@ -1,5 +1,30 @@
 [
     {
+        "versao": "23.59.84",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Ajuste na listagem de grupo de motivos de chamado",
+                "referencia": [
+                    "BPM39757"
+                ],
+                "modulo": "Corre\u00e7\u00e3o",
+                "hash": "d4694ec47f79ca0e63bf19935d0a56848737f2bb",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39757"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Adicionada coluna \"Situa\u00e7\u00e3o da Solicita\u00e7\u00e3o\" no relat\u00f3rio \"Atividade de Processo\" em Excel",
+                "referencia": [
+                    "BPM38452"
+                ],
+                "modulo": "Processos",
+                "hash": "8930835e2bcf68cfb1691f820a8f671c062c3435",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38452-1"
+            }
+        ]
+    },
+    {
         "versao": "23.59.83",
         "itens": [
             {

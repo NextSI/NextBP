@@ -67,8 +67,7 @@ class Title extends AbstractElement
             $this->writeText($text);
             $xmlWriter->endElement(); // w:t
             $xmlWriter->endElement(); // w:r
-        }
-        if ($text instanceof \PhpOffice\PhpWord\Element\AbstractContainer) {
+        } elseif ($text instanceof \PhpOffice\PhpWord\Element\AbstractContainer) {
             $containerWriter = new Container($xmlWriter, $text);
             $containerWriter->write();
         }

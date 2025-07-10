@@ -45,7 +45,7 @@ class LazyObjectState
         $this->status = \is_array($initializer) ? self::STATUS_UNINITIALIZED_PARTIAL : self::STATUS_UNINITIALIZED_FULL;
     }
 
-    public function initialize($instance, $propertyName, $writeScope)
+    public function initialize($instance, $propertyName, $propertyScope)
     {
         if (self::STATUS_INITIALIZED_FULL === $this->status) {
             return self::STATUS_INITIALIZED_FULL;
@@ -53,17 +53,19 @@ class LazyObjectState
 
         if (\is_array($this->initializer)) {
             $class = $instance::class;
-            $writeScope ??= $class;
+            $propertyScope ??= $class;
             $propertyScopes = Hydrator::$propertyScopes[$class];
-            $propertyScopes[$k = "\0$writeScope\0$propertyName"] ?? $propertyScopes[$k = "\0*\0$propertyName"] ?? $k = $propertyName;
+            $propertyScopes[$k = "\0$propertyScope\0$propertyName"] ?? $propertyScopes[$k = "\0*\0$propertyName"] ?? $k = $propertyName;
 
             if ($initializer = $this->initializer[$k] ?? null) {
-                $value = $initializer(...[$instance, $propertyName, $writeScope, LazyObjectRegistry::$defaultProperties[$class][$k] ?? null]);
-                $accessor = LazyObjectRegistry::$classAccessors[$writeScope] ??= LazyObjectRegistry::getClassAccessors($writeScope);
+                $value = $initializer(...[$instance, $propertyName, $propertyScope, LazyObjectRegistry::$defaultProperties[$class][$k] ?? null]);
+                $accessor = LazyObjectRegistry::$classAccessors[$propertyScope] ??= LazyObjectRegistry::getClassAccessors($propertyScope);
                 $accessor['set']($instance, $propertyName, $value);
 
                 return $this->status = self::STATUS_INITIALIZED_PARTIAL;
             }
+
+            $status = self::STATUS_UNINITIALIZED_PARTIAL;
 
             if ($initializer = $this->initializer["\0"] ?? null) {
                 if (!\is_array($values = $initializer($instance, LazyObjectRegistry::$defaultProperties[$class]))) {
@@ -71,26 +73,21 @@ class LazyObjectState
                 }
                 $properties = (array) $instance;
                 foreach ($values as $key => $value) {
-                    if (!\array_key_exists($key, $properties) && [$scope, $name, $writeScope] = $propertyScopes[$key] ?? null) {
-                        $scope = $writeScope ?? $scope;
+                    if ($k === $key) {
+                        $status = self::STATUS_INITIALIZED_PARTIAL;
+                    }
+                    if (!\array_key_exists($key, $properties) && [$scope, $name, $readonlyScope] = $propertyScopes[$key] ?? null) {
+                        $scope = $readonlyScope ?? ('*' !== $scope ? $scope : $class);
                         $accessor = LazyObjectRegistry::$classAccessors[$scope] ??= LazyObjectRegistry::getClassAccessors($scope);
                         $accessor['set']($instance, $name, $value);
-
-                        if ($k === $key) {
-                            $this->status = self::STATUS_INITIALIZED_PARTIAL;
-                        }
                     }
                 }
             }
 
-            return $this->status;
+            return $status;
         }
 
-        if (self::STATUS_INITIALIZED_PARTIAL === $this->status) {
-            return self::STATUS_INITIALIZED_PARTIAL;
-        }
-
-        $this->status = self::STATUS_INITIALIZED_PARTIAL;
+        $this->status = self::STATUS_INITIALIZED_FULL;
 
         try {
             if ($defaultProperties = array_diff_key(LazyObjectRegistry::$defaultProperties[$instance::class], $this->skippedProperties)) {
@@ -105,7 +102,7 @@ class LazyObjectState
             throw $e;
         }
 
-        return $this->status = self::STATUS_INITIALIZED_FULL;
+        return self::STATUS_INITIALIZED_FULL;
     }
 
     public function reset($instance): void
@@ -116,10 +113,10 @@ class LazyObjectState
         $properties = (array) $instance;
         $onlyProperties = \is_array($this->initializer) ? $this->initializer : null;
 
-        foreach ($propertyScopes as $key => [$scope, $name, , $access]) {
+        foreach ($propertyScopes as $key => [$scope, $name, $readonlyScope]) {
             $propertyScopes[$k = "\0$scope\0$name"] ?? $propertyScopes[$k = "\0*\0$name"] ?? $k = $name;
 
-            if ($k === $key && ($access & Hydrator::PROPERTY_HAS_HOOKS || ($access >> 2) & \ReflectionProperty::IS_READONLY || !\array_key_exists($k, $properties))) {
+            if ($k === $key && (null !== $readonlyScope || !\array_key_exists($k, $properties))) {
                 $skippedProperties[$k] = true;
             }
         }

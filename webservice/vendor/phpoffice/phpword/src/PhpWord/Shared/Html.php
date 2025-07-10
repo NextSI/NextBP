@@ -37,8 +37,6 @@ use PhpOffice\PhpWord\Style\Paragraph;
  */
 class Html
 {
-    private const RGB_REGEXP = '/^\s*rgb\s*[(]\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*[)]\s*$/';
-
     protected static $listIndex = 0;
 
     protected static $xpath;
@@ -102,7 +100,7 @@ class Html
      * parse Inline style of a node.
      *
      * @param DOMNode $node Node to check on attributes and to compile a style array
-     * @param array<string, mixed> $styles is supplied, the inline style attributes are added to the already existing style
+     * @param array $styles is supplied, the inline style attributes are added to the already existing style
      *
      * @return array
      */
@@ -111,14 +109,11 @@ class Html
         if (XML_ELEMENT_NODE == $node->nodeType) {
             $attributes = $node->attributes; // get all the attributes(eg: id, class)
 
-            $attributeDir = $attributes->getNamedItem('dir');
-            $attributeDirValue = $attributeDir ? $attributeDir->nodeValue : '';
-            $bidi = $attributeDirValue === 'rtl';
             foreach ($attributes as $attribute) {
                 $val = $attribute->value;
                 switch (strtolower($attribute->name)) {
                     case 'align':
-                        $styles['alignment'] = self::mapAlign(trim($val), $bidi);
+                        $styles['alignment'] = self::mapAlign(trim($val));
 
                         break;
                     case 'lang':
@@ -146,7 +141,7 @@ class Html
                         break;
                     case 'bgcolor':
                         // tables, rows, cells e.g. <tr bgColor="#FF0000">
-                        $styles['bgColor'] = self::convertRgb($val);
+                        $styles['bgColor'] = trim($val, '# ');
 
                         break;
                     case 'valign':
@@ -161,15 +156,15 @@ class Html
 
             $attributeIdentifier = $attributes->getNamedItem('id');
             if ($attributeIdentifier && self::$css) {
-                $styles = self::parseStyleDeclarations(self::$css->getStyle('#' . $attributeIdentifier->nodeValue), $styles);
+                $styles = self::parseStyleDeclarations(self::$css->getStyle('#' . $attributeIdentifier->value), $styles);
             }
 
             $attributeClass = $attributes->getNamedItem('class');
             if ($attributeClass) {
                 if (self::$css) {
-                    $styles = self::parseStyleDeclarations(self::$css->getStyle('.' . $attributeClass->nodeValue), $styles);
+                    $styles = self::parseStyleDeclarations(self::$css->getStyle('.' . $attributeClass->value), $styles);
                 }
-                $styles['className'] = $attributeClass->nodeValue;
+                $styles['className'] = $attributeClass->value;
             }
 
             $attributeStyle = $attributes->getNamedItem('style');
@@ -276,7 +271,7 @@ class Html
      * Parse child nodes.
      *
      * @param DOMNode $node
-     * @param \PhpOffice\PhpWord\Element\AbstractContainer|Row|Table $element
+     * @param \PhpOffice\PhpWord\Element\AbstractContainer $element
      * @param array $styles
      * @param array $data
      */
@@ -327,10 +322,10 @@ class Html
             return;
         }
 
-        $inputType = $attributes->getNamedItem('type')->nodeValue;
+        $inputType = $attributes->getNamedItem('type')->value;
         switch ($inputType) {
             case 'checkbox':
-                $checked = ($checked = $attributes->getNamedItem('checked')) && $checked->nodeValue === 'true' ? true : false;
+                $checked = ($checked = $attributes->getNamedItem('checked')) && $checked->value === 'true' ? true : false;
                 $textrun = $element->addTextRun($styles['paragraph']);
                 $textrun->addFormField('checkbox')->setValue($checked);
 
@@ -425,8 +420,8 @@ class Html
         }
 
         $attributes = $node->attributes;
-        if ($attributes->getNamedItem('border')) {
-            $border = (int) $attributes->getNamedItem('border')->nodeValue;
+        if ($attributes->getNamedItem('border') !== null) {
+            $border = (int) $attributes->getNamedItem('border')->value;
             $newElement->getStyle()->setBorderSize(Converter::pixelToTwip($border));
         }
 
@@ -685,7 +680,6 @@ class Html
 
     protected static function parseStyleDeclarations(array $selectors, array $styles)
     {
-        $bidi = ($selectors['direction'] ?? '') === 'rtl';
         foreach ($selectors as $property => $value) {
             switch ($property) {
                 case 'text-decoration':
@@ -702,7 +696,7 @@ class Html
 
                     break;
                 case 'text-align':
-                    $styles['alignment'] = self::mapAlign($value, $bidi);
+                    $styles['alignment'] = self::mapAlign($value);
 
                     break;
                 case 'display':
@@ -711,7 +705,6 @@ class Html
                     break;
                 case 'direction':
                     $styles['rtl'] = $value === 'rtl';
-                    $styles['bidi'] = $value === 'rtl';
 
                     break;
                 case 'font-size':
@@ -724,11 +717,11 @@ class Html
 
                     break;
                 case 'color':
-                    $styles['color'] = self::convertRgb($value);
+                    $styles['color'] = trim($value, '#');
 
                     break;
                 case 'background-color':
-                    $styles['bgColor'] = self::convertRgb($value);
+                    $styles['bgColor'] = trim($value, '#');
 
                     break;
                 case 'line-height':
@@ -777,14 +770,6 @@ class Html
                         $tValue = true;
                     }
                     $styles['italic'] = $tValue;
-
-                    break;
-                case 'font-variant':
-                    $tValue = false;
-                    if (preg_match('#small-caps#', $value)) {
-                        $tValue = true;
-                    }
-                    $styles['smallCaps'] = $tValue;
 
                     break;
                 case 'margin':
@@ -902,34 +887,12 @@ class Html
                     break;
                 case 'width':
                     $width = $attribute->value;
-
-                    // pt
-                    if (false !== strpos($width, 'pt')) {
-                        $width = Converter::pointToPixel((float) str_replace('pt', '', $width));
-                    }
-
-                    // px
-                    if (false !== strpos($width, 'px')) {
-                        $width = str_replace('px', '', $width);
-                    }
-
                     $style['width'] = $width;
                     $style['unit'] = \PhpOffice\PhpWord\Style\Image::UNIT_PX;
 
                     break;
                 case 'height':
                     $height = $attribute->value;
-
-                    // pt
-                    if (false !== strpos($height, 'pt')) {
-                        $height = Converter::pointToPixel((float) str_replace('pt', '', $height));
-                    }
-
-                    // px
-                    if (false !== strpos($height, 'px')) {
-                        $height = str_replace('px', '', $height);
-                    }
-
                     $style['height'] = $height;
                     $style['unit'] = \PhpOffice\PhpWord\Style\Image::UNIT_PX;
 
@@ -994,10 +957,7 @@ class Html
                 $tmpDir = Settings::getTempDir() . '/';
                 $match = [];
                 preg_match('/.+\.(\w+)$/', $src, $match);
-                $src = $tmpDir . uniqid();
-                if (isset($match[1])) {
-                    $src .= '.' . $match[1];
-                }
+                $src = $tmpDir . uniqid() . '.' . $match[1];
 
                 $ifp = fopen($src, 'wb');
 
@@ -1055,21 +1015,20 @@ class Html
      * Transforms a HTML/CSS alignment into a \PhpOffice\PhpWord\SimpleType\Jc.
      *
      * @param string $cssAlignment
-     * @param bool $bidi
      *
      * @return null|string
      */
-    protected static function mapAlign($cssAlignment, $bidi)
+    protected static function mapAlign($cssAlignment)
     {
         switch ($cssAlignment) {
             case 'right':
-                return $bidi ? Jc::START : Jc::END;
+                return Jc::END;
             case 'center':
                 return Jc::CENTER;
             case 'justify':
                 return Jc::BOTH;
             default:
-                return $bidi ? Jc::END : Jc::START;
+                return Jc::START;
         }
     }
 
@@ -1156,11 +1115,7 @@ class Html
         }
         $styles['font'] = self::parseInlineStyle($node, $styles['font']);
 
-        if (empty($target)) {
-            $target = '#';
-        }
-
-        if (strpos($target, '#') === 0 && strlen($target) > 1) {
+        if (strpos($target, '#') === 0) {
             return $element->addLink(substr($target, 1), $node->textContent, $styles['font'], $styles['paragraph'], true);
         }
 
@@ -1199,14 +1154,5 @@ class Html
         // - table - throws error "cannot be inside textruns", e.g. lists
         // - line - that is a shape, has different behaviour
         // - repeated text, e.g. underline "_", because of unpredictable line wrapping
-    }
-
-    private static function convertRgb(string $rgb): string
-    {
-        if (preg_match(self::RGB_REGEXP, $rgb, $matches) === 1) {
-            return sprintf('%02X%02X%02X', $matches[1], $matches[2], $matches[3]);
-        }
-
-        return trim($rgb, '# ');
     }
 }

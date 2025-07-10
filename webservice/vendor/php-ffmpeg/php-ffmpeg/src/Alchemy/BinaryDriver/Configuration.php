@@ -78,7 +78,7 @@ class Configuration implements ConfigurationInterface
     /**
      * {@inheritdoc}
      */
-    public function offsetExists(mixed $offset): bool
+    public function offsetExists($offset): bool
     {
         return $this->has($offset);
     }
@@ -86,7 +86,7 @@ class Configuration implements ConfigurationInterface
     /**
      * {@inheritdoc}
      */
-    public function offsetGet(mixed $offset): mixed
+    public function offsetGet($offset): mixed
     {
         return $this->get($offset);
     }
@@ -94,7 +94,7 @@ class Configuration implements ConfigurationInterface
     /**
      * {@inheritdoc}
      */
-    public function offsetSet(mixed $offset, $value): void
+    public function offsetSet($offset, $value): void
     {
         $this->set($offset, $value);
     }
@@ -102,7 +102,7 @@ class Configuration implements ConfigurationInterface
     /**
      * {@inheritdoc}
      */
-    public function offsetUnset(mixed $offset): void
+    public function offsetUnset($offset): void
     {
         $this->remove($offset);
     }

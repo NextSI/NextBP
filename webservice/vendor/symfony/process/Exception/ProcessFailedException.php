@@ -20,7 +20,7 @@ use Symfony\Component\Process\Process;
  */
 class ProcessFailedException extends RuntimeException
 {
-    private Process $process;
+    private $process;
 
     public function __construct(Process $process)
     {

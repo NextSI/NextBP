@@ -15,8 +15,6 @@ class TemporaryDirectory
 
     protected bool $forceCreate = false;
 
-    protected bool $deleteWhenDestroyed = false;
-
     public function __construct(string $location = '')
     {
         $this->location = $this->sanitizePath($location);
@@ -107,11 +105,6 @@ class TemporaryDirectory
         return file_exists($this->getFullPath());
     }
 
-    public function getName(): string
-    {
-        return $this->name;
-    }
-
     protected function getFullPath(): string
     {
         return $this->location.(! empty($this->name) ? DIRECTORY_SEPARATOR.$this->name : '');
@@ -173,7 +166,7 @@ class TemporaryDirectory
             }
 
             foreach (new FilesystemIterator($path) as $item) {
-                if (! $this->deleteDirectory((string) $item)) {
+                if (! $this->deleteDirectory($item)) {
                     return false;
                 }
             }
@@ -185,22 +178,8 @@ class TemporaryDirectory
             gc_collect_cycles();
 
             return rmdir($path);
-        } catch (Throwable) {
+        } catch (Throwable $throwable) {
             return false;
-        }
-    }
-
-    public function deleteWhenDestroyed(bool $deleteWhenDestroyed = true): self
-    {
-        $this->deleteWhenDestroyed = $deleteWhenDestroyed;
-
-        return $this;
-    }
-
-    public function __destruct()
-    {
-        if ($this->deleteWhenDestroyed) {
-            $this->delete();
         }
     }
 }

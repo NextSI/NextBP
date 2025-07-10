@@ -151,7 +151,6 @@ class Settings extends AbstractPart
         $this->setOnOffValue('w:updateFields', $documentSettings->hasUpdateFields());
         $this->setOnOffValue('w:autoHyphenation', $documentSettings->hasAutoHyphenation());
         $this->setOnOffValue('w:doNotHyphenateCaps', $documentSettings->hasDoNotHyphenateCaps());
-        $this->setOnOffValue('w:bookFoldPrinting', $documentSettings->hasBookFoldPrinting());
 
         $this->setThemeFontLang($documentSettings->getThemeFontLang());
         $this->setRevisionView($documentSettings->getRevisionView());
@@ -218,6 +217,8 @@ class Settings extends AbstractPart
 
     /**
      * Set the Proof state.
+     *
+     * @param ProofState $proofState
      */
     private function setProofState(?ProofState $proofState = null): void
     {
@@ -233,6 +234,8 @@ class Settings extends AbstractPart
 
     /**
      * Set the Revision View.
+     *
+     * @param TrackChangesView $trackChangesView
      */
     private function setRevisionView(?TrackChangesView $trackChangesView = null): void
     {
@@ -250,6 +253,8 @@ class Settings extends AbstractPart
 
     /**
      * Sets the language.
+     *
+     * @param Language $language
      */
     private function setThemeFontLang(?Language $language = null): void
     {

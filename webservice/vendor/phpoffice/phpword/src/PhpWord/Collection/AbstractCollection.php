@@ -21,23 +21,22 @@ namespace PhpOffice\PhpWord\Collection;
  * Collection abstract class.
  *
  * @since 0.10.0
- * @template T
  */
 abstract class AbstractCollection
 {
     /**
      * Items.
      *
-     * @var T[]
+     * @var \PhpOffice\PhpWord\Element\AbstractContainer[]
      */
     private $items = [];
 
     /**
      * Get items.
      *
-     * @return T[]
+     * @return \PhpOffice\PhpWord\Element\AbstractContainer[]
      */
-    public function getItems(): array
+    public function getItems()
     {
         return $this->items;
     }
@@ -45,9 +44,11 @@ abstract class AbstractCollection
     /**
      * Get item by index.
      *
-     * @return ?T
+     * @param int $index
+     *
+     * @return \PhpOffice\PhpWord\Element\AbstractContainer
      */
-    public function getItem(int $index)
+    public function getItem($index)
     {
         if (array_key_exists($index, $this->items)) {
             return $this->items[$index];
@@ -59,9 +60,10 @@ abstract class AbstractCollection
     /**
      * Set item.
      *
-     * @param ?T $item
+     * @param int $index
+     * @param \PhpOffice\PhpWord\Element\AbstractContainer $item
      */
-    public function setItem(int $index, $item): void
+    public function setItem($index, $item): void
     {
         if (array_key_exists($index, $this->items)) {
             $this->items[$index] = $item;
@@ -71,11 +73,13 @@ abstract class AbstractCollection
     /**
      * Add new item.
      *
-     * @param T $item
+     * @param \PhpOffice\PhpWord\Element\AbstractContainer $item
+     *
+     * @return int
      */
-    public function addItem($item): int
+    public function addItem($item)
     {
-        $index = $this->countItems();
+        $index = $this->countItems() + 1;
         $this->items[$index] = $item;
 
         return $index;
@@ -83,8 +87,10 @@ abstract class AbstractCollection
 
     /**
      * Get item count.
+     *
+     * @return int
      */
-    public function countItems(): int
+    public function countItems()
     {
         return count($this->items);
     }

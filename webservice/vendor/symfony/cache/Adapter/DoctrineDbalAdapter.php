@@ -21,7 +21,6 @@ use Doctrine\DBAL\Exception\TableNotFoundException;
 use Doctrine\DBAL\ParameterType;
 use Doctrine\DBAL\Schema\DefaultSchemaManagerFactory;
 use Doctrine\DBAL\Schema\Schema;
-use Doctrine\DBAL\ServerVersionProvider;
 use Doctrine\DBAL\Tools\DsnParser;
 use Symfony\Component\Cache\Exception\InvalidArgumentException;
 use Symfony\Component\Cache\Marshaller\DefaultMarshaller;
@@ -30,7 +29,7 @@ use Symfony\Component\Cache\PruneableInterface;
 
 class DoctrineDbalAdapter extends AbstractAdapter implements PruneableInterface
 {
-    private const MAX_KEY_LENGTH = 255;
+    protected $maxIdLength = 255;
 
     private MarshallerInterface $marshaller;
     private Connection $conn;
@@ -59,7 +58,7 @@ class DoctrineDbalAdapter extends AbstractAdapter implements PruneableInterface
      *
      * @throws InvalidArgumentException When namespace contains invalid characters
      */
-    public function __construct(Connection|string $connOrDsn, string $namespace = '', int $defaultLifetime = 0, array $options = [], ?MarshallerInterface $marshaller = null)
+    public function __construct(Connection|string $connOrDsn, string $namespace = '', int $defaultLifetime = 0, array $options = [], MarshallerInterface $marshaller = null)
     {
         if (isset($namespace[0]) && preg_match('#[^-+.A-Za-z0-9]#', $namespace, $match)) {
             throw new InvalidArgumentException(sprintf('Namespace contains "%s" but only characters in [-+.A-Za-z0-9] are allowed.', $match[0]));
@@ -95,7 +94,6 @@ class DoctrineDbalAdapter extends AbstractAdapter implements PruneableInterface
             $this->conn = DriverManager::getConnection($params, $config);
         }
 
-        $this->maxIdLength = self::MAX_KEY_LENGTH;
         $this->table = $options['db_table'] ?? $this->table;
         $this->idCol = $options['db_id_col'] ?? $this->idCol;
         $this->dataCol = $options['db_data_col'] ?? $this->dataCol;
@@ -214,7 +212,11 @@ class DoctrineDbalAdapter extends AbstractAdapter implements PruneableInterface
     protected function doClear(string $namespace): bool
     {
         if ('' === $namespace) {
-            $sql = $this->conn->getDatabasePlatform()->getTruncateTableSQL($this->table);
+            if ('sqlite' === $this->getPlatformName()) {
+                $sql = "DELETE FROM $this->table";
+            } else {
+                $sql = "TRUNCATE TABLE $this->table";
+            }
         } else {
             $sql = "DELETE FROM $this->table WHERE $this->idCol LIKE '$namespace%'";
         }
@@ -386,14 +388,12 @@ class DoctrineDbalAdapter extends AbstractAdapter implements PruneableInterface
             return $this->serverVersion;
         }
 
-        if ($this->conn instanceof ServerVersionProvider || $this->conn instanceof ServerInfoAwareConnection) {
-            return $this->serverVersion = $this->conn->getServerVersion();
+        $conn = $this->conn->getWrappedConnection();
+        if ($conn instanceof ServerInfoAwareConnection) {
+            return $this->serverVersion = $conn->getServerVersion();
         }
 
-        // The condition should be removed once support for DBAL <3.3 is dropped
-        $conn = method_exists($this->conn, 'getNativeConnection') ? $this->conn->getNativeConnection() : $this->conn->getWrappedConnection();
-
-        return $this->serverVersion = $conn->getAttribute(\PDO::ATTR_SERVER_VERSION);
+        return $this->serverVersion = '0';
     }
 
     private function addTableToSchema(Schema $schema): void

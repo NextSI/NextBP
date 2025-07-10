@@ -35,7 +35,7 @@ class FormField extends Text
     /**
      * Form field name.
      *
-     * @var ?string
+     * @var bool|int|string
      */
     private $name;
 
@@ -53,7 +53,7 @@ class FormField extends Text
     /**
      * Value.
      *
-     * @var null|bool|int|string
+     * @var bool|int|string
      */
     private $value;
 
@@ -105,7 +105,7 @@ class FormField extends Text
     /**
      * Get name.
      *
-     * @return ?string
+     * @return string
      */
     public function getName()
     {
@@ -115,7 +115,7 @@ class FormField extends Text
     /**
      * Set name.
      *
-     * @param ?string $value
+     * @param bool|int|string $value
      *
      * @return self
      */
@@ -153,7 +153,7 @@ class FormField extends Text
     /**
      * Get value.
      *
-     * @return null|bool|int|string
+     * @return bool|int|string
      */
     public function getValue()
     {
@@ -163,7 +163,7 @@ class FormField extends Text
     /**
      * Set value.
      *
-     * @param null|bool|int|string $value
+     * @param bool|int|string $value
      *
      * @return self
      */

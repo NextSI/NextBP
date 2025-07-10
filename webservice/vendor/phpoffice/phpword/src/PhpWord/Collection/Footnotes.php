@@ -17,13 +17,10 @@
 
 namespace PhpOffice\PhpWord\Collection;
 
-use PhpOffice\PhpWord\Element\Footnote;
-
 /**
  * Footnotes collection.
  *
  * @since 0.10.0
- * @extends AbstractCollection<Footnote>
  */
 class Footnotes extends AbstractCollection
 {

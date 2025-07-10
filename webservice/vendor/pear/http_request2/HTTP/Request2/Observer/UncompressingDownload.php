@@ -14,7 +14,7 @@
  * @package   HTTP_Request2
  * @author    Delian Krustev <krustev@krustev.net>
  * @author    Alexey Borzov <avb@php.net>
- * @copyright 2008-2025 Alexey Borzov <avb@php.net>
+ * @copyright 2008-2022 Alexey Borzov <avb@php.net>
  * @license   http://opensource.org/licenses/BSD-3-Clause BSD 3-Clause License
  * @link      http://pear.php.net/package/HTTP_Request2
  */
@@ -110,7 +110,7 @@ class HTTP_Request2_Observer_UncompressingDownload implements SplObserver
     /**
      * 'zlib.inflate' filter possibly added to stream
      *
-     * @var resource|null
+     * @var resource
      */
     private $_streamFilter;
 
@@ -170,7 +170,7 @@ class HTTP_Request2_Observer_UncompressingDownload implements SplObserver
         $this->_stream = $stream;
         if ($maxDownloadSize) {
             $this->_maxDownloadSize = $maxDownloadSize;
-            $this->_startPosition   = ftell($this->_stream) ?: 0;
+            $this->_startPosition   = ftell($this->_stream);
         }
     }
 
@@ -178,17 +178,15 @@ class HTTP_Request2_Observer_UncompressingDownload implements SplObserver
     /**
      * Called when the request notifies us of an event.
      *
-     * @param HTTP_Request2 $subject The HTTP_Request2 instance
+     * @param SplSubject $request The HTTP_Request2 instance
      *
      * @return void
      * @throws HTTP_Request2_MessageException
      */
-    public function update(SplSubject $subject)
+    public function update(SplSubject $request)
     {
-        if (!$subject instanceof HTTP_Request2) {
-            return;
-        }
-        $event   = $subject->getLastEvent();
+        /* @var $request HTTP_Request2 */
+        $event   = $request->getLastEvent();
         $encoded = false;
 
         /* @var $event['data'] HTTP_Request2_Response */
@@ -204,14 +202,9 @@ class HTTP_Request2_Observer_UncompressingDownload implements SplObserver
             if (!$this->_streamFilter
                 && ($this->_encoding === 'deflate' || $this->_encoding === 'gzip')
             ) {
-                if (false === $filter = stream_filter_append(
-                    $this->_stream,
-                    'zlib.inflate',
-                    STREAM_FILTER_WRITE
-                )) {
-                    throw new HTTP_Request2_Exception("Failed to append 'zlib.inflate' stream filter");
-                }
-                $this->_streamFilter = $filter;
+                $this->_streamFilter = stream_filter_append(
+                    $this->_stream, 'zlib.inflate', STREAM_FILTER_WRITE
+                );
             }
             $encoded = true;
             // fall-through is intentional
@@ -228,12 +221,11 @@ class HTTP_Request2_Observer_UncompressingDownload implements SplObserver
                 $offset = 0;
                 $this->_possibleHeader .= $event['data'];
                 if ('deflate' === $this->_encoding) {
-                    if (2 > strlen($this->_possibleHeader)
-                        || false === $header = unpack('n', (string)substr($this->_possibleHeader, 0, 2))
-                    ) {
+                    if (2 > strlen($this->_possibleHeader)) {
                         break;
                     }
-                    if (0 === $header[1] % 31) {
+                    $header = unpack('n', substr($this->_possibleHeader, 0, 2));
+                    if (0 == $header[1] % 31) {
                         $offset = 2;
                     }
 
@@ -254,7 +246,7 @@ class HTTP_Request2_Observer_UncompressingDownload implements SplObserver
                 }
 
                 $this->_processingHeader = false;
-                $bytes = fwrite($this->_stream, (string)substr($this->_possibleHeader, $offset));
+                $bytes = fwrite($this->_stream, substr($this->_possibleHeader, $offset));
             }
 
             if (false === $bytes) {
@@ -262,8 +254,7 @@ class HTTP_Request2_Observer_UncompressingDownload implements SplObserver
             }
 
             if ($this->_maxDownloadSize
-                && (false !== $position = ftell($this->_stream))
-                && $position - $this->_startPosition > $this->_maxDownloadSize
+                && ftell($this->_stream) - $this->_startPosition > $this->_maxDownloadSize
             ) {
                 throw new HTTP_Request2_MessageException(
                     sprintf(

@@ -41,6 +41,7 @@ class Media
      * @param string $container section|headerx|footerx|footnote|endnote
      * @param string $mediaType image|object|link
      * @param string $source
+     * @param \PhpOffice\PhpWord\Element\Image $image
      *
      * @return int
      */

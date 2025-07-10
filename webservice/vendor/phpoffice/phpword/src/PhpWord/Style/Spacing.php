@@ -30,21 +30,21 @@ class Spacing extends AbstractStyle
     /**
      * Spacing above paragraph (twip).
      *
-     * @var null|float|int
+     * @var float|int
      */
     private $before;
 
     /**
      * Spacing below paragraph (twip).
      *
-     * @var null|float|int
+     * @var float|int
      */
     private $after;
 
     /**
      * Spacing between lines in paragraph (twip).
      *
-     * @var null|float|int
+     * @var float|int
      */
     private $line;
 
@@ -68,7 +68,7 @@ class Spacing extends AbstractStyle
     /**
      * Get before.
      *
-     * @return null|float|int
+     * @return float|int
      */
     public function getBefore()
     {
@@ -78,7 +78,7 @@ class Spacing extends AbstractStyle
     /**
      * Set before.
      *
-     * @param null|float|int $value
+     * @param float|int $value
      *
      * @return self
      */
@@ -92,7 +92,7 @@ class Spacing extends AbstractStyle
     /**
      * Get after.
      *
-     * @return null|float|int
+     * @return float|int
      */
     public function getAfter()
     {
@@ -102,7 +102,7 @@ class Spacing extends AbstractStyle
     /**
      * Set after.
      *
-     * @param null|float|int $value
+     * @param float|int $value
      *
      * @return self
      */
@@ -116,7 +116,7 @@ class Spacing extends AbstractStyle
     /**
      * Get line.
      *
-     * @return null|float|int
+     * @return float|int
      */
     public function getLine()
     {
@@ -126,7 +126,7 @@ class Spacing extends AbstractStyle
     /**
      * Set distance.
      *
-     * @param null|float|int $value
+     * @param float|int $value
      *
      * @return self
      */

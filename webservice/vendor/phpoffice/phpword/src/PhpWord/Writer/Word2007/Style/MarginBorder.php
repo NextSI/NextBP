@@ -120,7 +120,7 @@ class MarginBorder extends AbstractStyle
     /**
      * Set colors.
      *
-     * @param array<null|string> $value
+     * @param string[] $value
      */
     public function setColors($value): void
     {

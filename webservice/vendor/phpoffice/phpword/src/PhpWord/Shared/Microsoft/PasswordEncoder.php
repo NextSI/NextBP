@@ -34,9 +34,6 @@ class PasswordEncoder
     const ALGORITHM_MAC = 'MAC';
     const ALGORITHM_HMAC = 'HMAC';
 
-    private const ALL_ONE_BITS = (PHP_INT_SIZE > 4) ? 0xFFFFFFFF : -1;
-    private const HIGH_ORDER_BIT = (PHP_INT_SIZE > 4) ? 0x80000000 : PHP_INT_MIN;
-
     /**
      * Mapping between algorithm name and algorithm ID.
      *
@@ -131,7 +128,7 @@ class PasswordEncoder
         // build low-order word and hig-order word and combine them
         $combinedKey = self::buildCombinedKey($byteChars);
         // build reversed hexadecimal string
-        $hex = str_pad(strtoupper(dechex($combinedKey & self::ALL_ONE_BITS)), 8, '0', \STR_PAD_LEFT);
+        $hex = str_pad(strtoupper(dechex($combinedKey & 0xFFFFFFFF)), 8, '0', \STR_PAD_LEFT);
         $reversedHex = $hex[6] . $hex[7] . $hex[4] . $hex[5] . $hex[2] . $hex[3] . $hex[0] . $hex[1];
 
         $generatedKey = mb_convert_encoding($reversedHex, 'UCS-2LE', 'UTF-8');
@@ -235,10 +232,10 @@ class PasswordEncoder
      */
     private static function int32($value)
     {
-        $value = $value & self::ALL_ONE_BITS;
+        $value = ($value & 0xFFFFFFFF);
 
-        if ($value & self::HIGH_ORDER_BIT) {
-            $value = -((~$value & self::ALL_ONE_BITS) + 1);
+        if ($value & 0x80000000) {
+            $value = -((~$value & 0xFFFFFFFF) + 1);
         }
 
         return $value;

@@ -286,11 +286,7 @@ class HeaderUtils
         }
 
         foreach ($partMatches as $matches) {
-            if ('' === $separators && '' !== $unquoted = self::unquote($matches[0][0])) {
-                $parts[] = $unquoted;
-            } elseif ($groupedParts = self::groupParts($matches, $separators, false)) {
-                $parts[] = $groupedParts;
-            }
+            $parts[] = '' === $separators ? self::unquote($matches[0][0]) : self::groupParts($matches, $separators, false);
         }
 
         return $parts;

@@ -11,7 +11,6 @@
 
 namespace Symfony\Component\HttpFoundation;
 
-use Symfony\Component\HttpFoundation\Exception\BadRequestException;
 use Symfony\Component\HttpFoundation\Exception\ConflictingHeadersException;
 use Symfony\Component\HttpFoundation\Exception\JsonException;
 use Symfony\Component\HttpFoundation\Exception\SessionNotFoundException;
@@ -327,8 +326,6 @@ class Request
      * @param array                $files      The request files ($_FILES)
      * @param array                $server     The server parameters ($_SERVER)
      * @param string|resource|null $content    The raw body data
-     *
-     * @throws BadRequestException When the URI is invalid
      */
     public static function create(string $uri, string $method = 'GET', array $parameters = [], array $cookies = [], array $files = [], array $server = [], $content = null): static
     {
@@ -351,20 +348,11 @@ class Request
         $server['PATH_INFO'] = '';
         $server['REQUEST_METHOD'] = strtoupper($method);
 
-        if (false === $components = parse_url(\strlen($uri) !== strcspn($uri, '?#') ? $uri : $uri.'#')) {
-            throw new BadRequestException('Invalid URI.');
+        $components = parse_url($uri);
+        if (false === $components) {
+            trigger_deprecation('symfony/http-foundation', '6.3', 'Calling "%s()" with an invalid URI is deprecated.', __METHOD__);
+            $components = [];
         }
-
-        if (false !== ($i = strpos($uri, '\\')) && $i < strcspn($uri, '?#')) {
-            throw new BadRequestException('Invalid URI: A URI cannot contain a backslash.');
-        }
-        if (\strlen($uri) !== strcspn($uri, "\r\n\t")) {
-            throw new BadRequestException('Invalid URI: A URI cannot contain CR/LF/TAB characters.');
-        }
-        if ('' !== $uri && (\ord($uri[0]) <= 32 || \ord($uri[-1]) <= 32)) {
-            throw new BadRequestException('Invalid URI: A URI must not start nor end with ASCII control characters or spaces.');
-        }
-
         if (isset($components['host'])) {
             $server['SERVER_NAME'] = $components['host'];
             $server['HTTP_HOST'] = $components['host'];
@@ -1242,7 +1230,7 @@ class Request
         }
 
         if (!preg_match('/^[A-Z]++$/D', $method)) {
-            throw new SuspiciousOperationException('Invalid HTTP method override.');
+            throw new SuspiciousOperationException(sprintf('Invalid method override "%s".', $method));
         }
 
         return $this->method = $method;

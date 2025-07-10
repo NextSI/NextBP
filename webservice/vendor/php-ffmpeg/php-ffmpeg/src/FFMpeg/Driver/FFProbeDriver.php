@@ -22,8 +22,6 @@ class FFProbeDriver extends AbstractBinary
 {
     /**
      * {@inheritdoc}
-     *
-     * @return string
      */
     public function getName()
     {
@@ -38,7 +36,7 @@ class FFProbeDriver extends AbstractBinary
      *
      * @return FFProbeDriver
      */
-    public static function create($configuration, ?LoggerInterface $logger = null)
+    public static function create($configuration, LoggerInterface $logger = null)
     {
         if (!$configuration instanceof ConfigurationInterface) {
             $configuration = new Configuration($configuration);

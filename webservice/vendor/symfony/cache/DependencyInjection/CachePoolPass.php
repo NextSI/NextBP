@@ -181,11 +181,11 @@ class CachePoolPass implements CompilerPassInterface
             $container->removeDefinition('cache.early_expiration_handler');
         }
 
-        $notAliasedCacheClearerId = 'cache.global_clearer';
-        while ($container->hasAlias($notAliasedCacheClearerId)) {
-            $notAliasedCacheClearerId = (string) $container->getAlias($notAliasedCacheClearerId);
+        $notAliasedCacheClearerId = $aliasedCacheClearerId = 'cache.global_clearer';
+        while ($container->hasAlias('cache.global_clearer')) {
+            $aliasedCacheClearerId = (string) $container->getAlias('cache.global_clearer');
         }
-        if ($container->hasDefinition($notAliasedCacheClearerId)) {
+        if ($container->hasDefinition($aliasedCacheClearerId)) {
             $clearers[$notAliasedCacheClearerId] = $allPools;
         }
 
@@ -197,6 +197,10 @@ class CachePoolPass implements CompilerPassInterface
                 $clearer->setArgument(0, $pools);
             }
             $clearer->addTag('cache.pool.clearer');
+
+            if ('cache.system_clearer' === $id) {
+                $clearer->addTag('kernel.cache_clearer');
+            }
         }
 
         $allPoolsKeys = array_keys($allPools);
@@ -231,6 +235,7 @@ class CachePoolPass implements CompilerPassInterface
 
             if (!$container->hasDefinition($name = '.cache_connection.'.ContainerBuilder::hash($dsn))) {
                 $definition = new Definition(AbstractAdapter::class);
+                $definition->setPublic(false);
                 $definition->setFactory([AbstractAdapter::class, 'createConnection']);
                 $definition->setArguments([$dsn, ['lazy' => true]]);
                 $container->setDefinition($name, $definition);

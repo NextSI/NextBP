@@ -1,5 +1,60 @@
 [
     {
+        "versao": "24.89.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Adicionado nos logs do webservice altera\u00e7\u00f5es na equipe dos quadros de tarefa",
+                "referencia": [
+                    "BPM39973"
+                ],
+                "modulo": "Tarefas",
+                "hash": "9aef391005de73959de1f63dd58115e7988ad81a",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39973"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste perform\u00e1tico no reprocessamento de atividades de processo",
+                "referencia": [
+                    "BPM39961"
+                ],
+                "modulo": "Processo",
+                "hash": "a5ed291c910b75bb34ac01e7c14e6c54567f9edf",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39961"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Aplicativos Conectados (OAuth Client) com provedor Google",
+                "referencia": [
+                    "BPM39829"
+                ],
+                "modulo": "Geral",
+                "hash": "26efe405190f9a3ae6d86954ce1bdf51904ecd93",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39829"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Libera\u00e7\u00e3o do Campo de Atividade do Projeto no Apontamento via Agenda",
+                "referencia": [
+                    "BPM39682"
+                ],
+                "modulo": "Agenda",
+                "hash": "6ace68c707f0128eb95531291c475a93d7126c1a",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39682"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o no Link da Solicita\u00e7\u00e3o nas Refer\u00eancias da Agenda",
+                "referencia": [
+                    "BPM39487"
+                ],
+                "modulo": "Agenda",
+                "hash": "326a85e2c0797d7fc6e03814ebe10ba9dca26233",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39487"
+            }
+        ]
+    },
+    {
         "versao": "24.88.1",
         "itens": [
             {

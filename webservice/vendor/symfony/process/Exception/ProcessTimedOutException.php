@@ -23,8 +23,8 @@ class ProcessTimedOutException extends RuntimeException
     public const TYPE_GENERAL = 1;
     public const TYPE_IDLE = 2;
 
-    private Process $process;
-    private int $timeoutType;
+    private $process;
+    private $timeoutType;
 
     public function __construct(Process $process, int $timeoutType)
     {

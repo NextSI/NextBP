@@ -1162,7 +1162,6 @@ interface CarbonInterface extends DateTimeInterface, JsonSerializable
      *
      * @return static
      */
-    #[ReturnTypeWillChange]
     public static function createFromTimestamp($timestamp, $tz = null);
 
     /**

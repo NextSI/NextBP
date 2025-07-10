@@ -1,5 +1,20 @@
 [
     {
+        "versao": "23.59.85",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste perform\u00e1tico no reprocessamento de atividades de processo",
+                "referencia": [
+                    "BPM39961"
+                ],
+                "modulo": "Processo",
+                "hash": "b5c3acd28692679c323e684177c3fed753ad1a36",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39961"
+            }
+        ]
+    },
+    {
         "versao": "23.59.84",
         "itens": [
             {

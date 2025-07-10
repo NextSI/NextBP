@@ -54,7 +54,7 @@ class Image extends AbstractElement
     /**
      * Image style.
      *
-     * @var ?ImageStyle
+     * @var ImageStyle
      */
     private $style;
 
@@ -159,7 +159,7 @@ class Image extends AbstractElement
     /**
      * Get Image style.
      *
-     * @return ?ImageStyle
+     * @return ImageStyle
      */
     public function getStyle()
     {
@@ -386,9 +386,8 @@ class Image extends AbstractElement
             $imageBinary = $this->source;
         } else {
             $fileHandle = fopen($actualSource, 'rb', false);
-            $fileSize = filesize($actualSource);
-            if ($fileHandle !== false && $fileSize > 0) {
-                $imageBinary = fread($fileHandle, $fileSize);
+            if ($fileHandle !== false) {
+                $imageBinary = fread($fileHandle, filesize($actualSource));
                 fclose($fileHandle);
             }
         }
@@ -418,10 +417,10 @@ class Image extends AbstractElement
         }
 
         if ($base64) {
-            return base64_encode($imageBinary);
+            return chunk_split(base64_encode($imageBinary));
         }
 
-        return bin2hex($imageBinary);
+        return chunk_split(bin2hex($imageBinary));
     }
 
     /**

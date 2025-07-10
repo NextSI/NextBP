@@ -762,6 +762,17 @@ class Str
     }
 
     /**
+     * Remove all non-numeric characters from a string.
+     *
+     * @param  string  $value
+     * @return string
+     */
+    public static function numbers($value)
+    {
+        return preg_replace('/[^0-9]/', '', $value);
+    }
+
+    /**
      * Pad both sides of a string with another.
      *
      * @param  string  $value
@@ -1189,7 +1200,7 @@ class Str
      * Replace the patterns matching the given regular expression.
      *
      * @param  array|string  $pattern
-     * @param  \Closure|string  $replace
+     * @param  \Closure|string[]|string  $replace
      * @param  array|string  $subject
      * @param  int  $limit
      * @return string|string[]|null
@@ -1305,12 +1316,13 @@ class Str
         $minorWords = [
             'and', 'as', 'but', 'for', 'if', 'nor', 'or', 'so', 'yet', 'a', 'an',
             'the', 'at', 'by', 'for', 'in', 'of', 'off', 'on', 'per', 'to', 'up', 'via',
-            'et', 'ou', 'un', 'une', 'la', 'le', 'les', 'de', 'du', 'des', 'par', 'à',
         ];
 
         $endPunctuation = ['.', '!', '?', ':', '—', ','];
 
         $words = preg_split('/\s+/', $value, -1, PREG_SPLIT_NO_EMPTY);
+
+        $words[0] = ucfirst(mb_strtolower($words[0]));
 
         for ($i = 0; $i < count($words); $i++) {
             $lowercaseWord = mb_strtolower($words[$i]);
@@ -1319,9 +1331,7 @@ class Str
                 $hyphenatedWords = explode('-', $lowercaseWord);
 
                 $hyphenatedWords = array_map(function ($part) use ($minorWords) {
-                    return (in_array($part, $minorWords) && mb_strlen($part) <= 3)
-                        ? $part
-                        : mb_strtoupper(mb_substr($part, 0, 1)).mb_substr($part, 1);
+                    return (in_array($part, $minorWords) && mb_strlen($part) <= 3) ? $part : ucfirst($part);
                 }, $hyphenatedWords);
 
                 $words[$i] = implode('-', $hyphenatedWords);
@@ -1331,7 +1341,7 @@ class Str
                     ! ($i === 0 || in_array(mb_substr($words[$i - 1], -1), $endPunctuation))) {
                     $words[$i] = $lowercaseWord;
                 } else {
-                    $words[$i] = mb_strtoupper(mb_substr($lowercaseWord, 0, 1)).mb_substr($lowercaseWord, 1);
+                    $words[$i] = ucfirst($lowercaseWord);
                 }
             }
         }
@@ -1409,6 +1419,54 @@ class Str
     }
 
     /**
+     * Remove all whitespace from both ends of a string.
+     *
+     * @param  string  $value
+     * @param  string|null  $charlist
+     * @return string
+     */
+    public static function trim($value, $charlist = null)
+    {
+        if ($charlist === null) {
+            return preg_replace('~^[\s\x{FEFF}\x{200B}\x{200E}]+|[\s\x{FEFF}\x{200B}\x{200E}]+$~u', '', $value) ?? trim($value);
+        }
+
+        return trim($value, $charlist);
+    }
+
+    /**
+     * Remove all whitespace from the beginning of a string.
+     *
+     * @param  string  $value
+     * @param  string|null  $charlist
+     * @return string
+     */
+    public static function ltrim($value, $charlist = null)
+    {
+        if ($charlist === null) {
+            return preg_replace('~^[\s\x{FEFF}\x{200B}\x{200E}]+~u', '', $value) ?? ltrim($value);
+        }
+
+        return ltrim($value, $charlist);
+    }
+
+    /**
+     * Remove all whitespace from the end of a string.
+     *
+     * @param  string  $value
+     * @param  string|null  $charlist
+     * @return string
+     */
+    public static function rtrim($value, $charlist = null)
+    {
+        if ($charlist === null) {
+            return preg_replace('~[\s\x{FEFF}\x{200B}\x{200E}]+$~u', '', $value) ?? rtrim($value);
+        }
+
+        return rtrim($value, $charlist);
+    }
+
+    /**
      * Remove all "extra" blank space from the given string.
      *
      * @param  string  $value
@@ -1416,7 +1474,7 @@ class Str
      */
     public static function squish($value)
     {
-        return preg_replace('~(\s|\x{3164}|\x{1160})+~u', ' ', preg_replace('~^[\s\x{FEFF}]+|[\s\x{FEFF}]+$~u', '', $value));
+        return preg_replace('~(\s|\x{3164}|\x{1160})+~u', ' ', static::trim($value));
     }
 
     /**

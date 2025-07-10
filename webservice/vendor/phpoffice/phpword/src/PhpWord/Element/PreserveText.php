@@ -29,21 +29,21 @@ class PreserveText extends AbstractElement
     /**
      * Text content.
      *
-     * @var null|array|string
+     * @var array|string
      */
     private $text;
 
     /**
      * Text style.
      *
-     * @var null|\PhpOffice\PhpWord\Style\Font|string
+     * @var \PhpOffice\PhpWord\Style\Font|string
      */
     private $fontStyle;
 
     /**
      * Paragraph style.
      *
-     * @var null|\PhpOffice\PhpWord\Style\Paragraph|string
+     * @var \PhpOffice\PhpWord\Style\Paragraph|string
      */
     private $paragraphStyle;
 
@@ -69,7 +69,7 @@ class PreserveText extends AbstractElement
     /**
      * Get Text style.
      *
-     * @return null|\PhpOffice\PhpWord\Style\Font|string
+     * @return \PhpOffice\PhpWord\Style\Font|string
      */
     public function getFontStyle()
     {
@@ -79,7 +79,7 @@ class PreserveText extends AbstractElement
     /**
      * Get Paragraph style.
      *
-     * @return null|\PhpOffice\PhpWord\Style\Paragraph|string
+     * @return \PhpOffice\PhpWord\Style\Paragraph|string
      */
     public function getParagraphStyle()
     {
@@ -89,7 +89,7 @@ class PreserveText extends AbstractElement
     /**
      * Get Text content.
      *
-     * @return null|array|string
+     * @return array|string
      */
     public function getText()
     {

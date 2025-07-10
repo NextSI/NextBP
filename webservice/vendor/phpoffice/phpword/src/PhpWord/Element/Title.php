@@ -43,7 +43,7 @@ class Title extends AbstractElement
     /**
      * Name of the heading style, e.g. 'Heading1'.
      *
-     * @var ?string
+     * @var string
      */
     private $style;
 
@@ -55,19 +55,12 @@ class Title extends AbstractElement
     protected $collectionRelation = true;
 
     /**
-     * Page number.
-     *
-     * @var int
-     */
-    private $pageNumber;
-
-    /**
      * Create a new Title Element.
      *
      * @param string|TextRun $text
      * @param int $depth
      */
-    public function __construct($text, $depth = 1, ?int $pageNumber = null)
+    public function __construct($text, $depth = 1)
     {
         if (is_string($text)) {
             $this->text = SharedText::toUTF8($text);
@@ -82,16 +75,12 @@ class Title extends AbstractElement
         if (array_key_exists($styleName, Style::getStyles())) {
             $this->style = str_replace('_', '', $styleName);
         }
-
-        if ($pageNumber !== null) {
-            $this->pageNumber = $pageNumber;
-        }
     }
 
     /**
      * Get Title Text content.
      *
-     * @return string|TextRun
+     * @return string
      */
     public function getText()
     {
@@ -111,18 +100,10 @@ class Title extends AbstractElement
     /**
      * Get Title style.
      *
-     * @return ?string
+     * @return string
      */
     public function getStyle()
     {
         return $this->style;
-    }
-
-    /**
-     * Get page number.
-     */
-    public function getPageNumber(): ?int
-    {
-        return $this->pageNumber;
     }
 }

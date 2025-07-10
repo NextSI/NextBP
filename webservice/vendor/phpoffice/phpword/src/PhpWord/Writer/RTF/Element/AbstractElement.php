@@ -24,7 +24,8 @@ use PhpOffice\PhpWord\Shared\Text as SharedText;
 use PhpOffice\PhpWord\Style;
 use PhpOffice\PhpWord\Style\Font as FontStyle;
 use PhpOffice\PhpWord\Style\Paragraph as ParagraphStyle;
-use PhpOffice\PhpWord\Writer\RTF as WriterRTF;
+use PhpOffice\PhpWord\Writer\AbstractWriter;
+use PhpOffice\PhpWord\Writer\HTML\Element\AbstractElement as HTMLAbstractElement;
 use PhpOffice\PhpWord\Writer\RTF\Style\Font as FontStyleWriter;
 use PhpOffice\PhpWord\Writer\RTF\Style\Paragraph as ParagraphStyleWriter;
 
@@ -33,36 +34,8 @@ use PhpOffice\PhpWord\Writer\RTF\Style\Paragraph as ParagraphStyleWriter;
  *
  * @since 0.11.0
  */
-abstract class AbstractElement
+abstract class AbstractElement extends HTMLAbstractElement
 {
-    /**
-     * Parent writer.
-     *
-     * @var WriterRTF
-     */
-    protected $parentWriter;
-
-    /**
-     * Element.
-     *
-     * @var \PhpOffice\PhpWord\Element\AbstractElement
-     */
-    protected $element;
-
-    /**
-     * Without paragraph.
-     *
-     * @var bool
-     */
-    protected $withoutP = false;
-
-    /**
-     * Write element.
-     *
-     * @return string
-     */
-    abstract public function write();
-
     /**
      * Font style.
      *
@@ -77,16 +50,10 @@ abstract class AbstractElement
      */
     protected $paragraphStyle;
 
-    /**
-     * @var \PhpOffice\PhpWord\Escaper\EscaperInterface
-     */
-    protected $escaper;
-
-    public function __construct(WriterRTF $parentWriter, Element $element, bool $withoutP = false)
+    public function __construct(AbstractWriter $parentWriter, Element $element, $withoutP = false)
     {
-        $this->parentWriter = $parentWriter;
-        $this->element = $element;
-        $this->withoutP = $withoutP;
+        parent::__construct($parentWriter, $element, $withoutP);
+
         $this->escaper = new Rtf();
     }
 

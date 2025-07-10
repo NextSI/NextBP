@@ -22,19 +22,20 @@ abstract class AbstractPipes implements PipesInterface
 {
     public array $pipes = [];
 
-    private string $inputBuffer = '';
-    /** @var resource|string|\Iterator */
+    private $inputBuffer = '';
     private $input;
-    private bool $blocked = true;
-    private ?string $lastError = null;
+    private $blocked = true;
+    private $lastError;
 
     /**
-     * @param resource|string|\Iterator $input
+     * @param resource|string|int|float|bool|\Iterator|null $input
      */
-    public function __construct($input)
+    public function __construct(mixed $input)
     {
         if (\is_resource($input) || $input instanceof \Iterator) {
             $this->input = $input;
+        } elseif (\is_string($input)) {
+            $this->inputBuffer = $input;
         } else {
             $this->inputBuffer = (string) $input;
         }

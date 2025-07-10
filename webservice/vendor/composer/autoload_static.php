@@ -7,9 +7,8 @@ namespace Composer\Autoload;
 class ComposerStaticInitbe0d53d685a716b9403cc68e144d829b
 {
     public static $files = array (
-        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        'ad155f8f1cf0d418fe49e248db8c661b' => __DIR__ . '/..' . '/react/promise/src/functions_include.php',
+        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '60799491728b879e74601d83e38b2cad' => __DIR__ . '/..' . '/illuminate/collections/helpers.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
@@ -18,7 +17,6 @@ class ComposerStaticInitbe0d53d685a716b9403cc68e144d829b
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         '662a729f963d39afe703c9d9b7ab4a8c' => __DIR__ . '/..' . '/symfony/polyfill-php83/bootstrap.php',
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
-        '3be16222a6efa6dd226a219eaaff823b' => __DIR__ . '/..' . '/ratchet/pawl/src/functions_include.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -57,17 +55,6 @@ class ComposerStaticInitbe0d53d685a716b9403cc68e144d829b
             'Symfony\\Component\\Cache\\' => 24,
             'Spatie\\TemporaryDirectory\\' => 26,
         ),
-        'R' => 
-        array (
-            'React\\Stream\\' => 13,
-            'React\\Socket\\' => 13,
-            'React\\Promise\\' => 14,
-            'React\\EventLoop\\' => 16,
-            'React\\Dns\\' => 10,
-            'React\\Cache\\' => 12,
-            'Ratchet\\RFC6455\\' => 16,
-            'Ratchet\\Client\\' => 15,
-        ),
         'P' => 
         array (
             'Psr\\SimpleCache\\' => 16,
@@ -79,7 +66,6 @@ class ComposerStaticInitbe0d53d685a716b9403cc68e144d829b
             'Psr\\Cache\\' => 10,
             'PhpOffice\\PhpWord\\' => 18,
             'PhpOffice\\PhpSpreadsheet\\' => 25,
-            'PhpOffice\\Math\\' => 15,
             'PHPMailer\\PHPMailer\\' => 20,
         ),
         'M' => 
@@ -94,6 +80,7 @@ class ComposerStaticInitbe0d53d685a716b9403cc68e144d829b
             'League\\OAuth2\\Client\\' => 21,
             'League\\MimeTypeDetection\\' => 25,
             'League\\Flysystem\\' => 17,
+            'Laminas\\Escaper\\' => 16,
         ),
         'I' => 
         array (
@@ -210,38 +197,6 @@ class ComposerStaticInitbe0d53d685a716b9403cc68e144d829b
         array (
             0 => __DIR__ . '/..' . '/spatie/temporary-directory/src',
         ),
-        'React\\Stream\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/react/stream/src',
-        ),
-        'React\\Socket\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/react/socket/src',
-        ),
-        'React\\Promise\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/react/promise/src',
-        ),
-        'React\\EventLoop\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/react/event-loop/src',
-        ),
-        'React\\Dns\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/react/dns/src',
-        ),
-        'React\\Cache\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/react/cache/src',
-        ),
-        'Ratchet\\RFC6455\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/ratchet/rfc6455/src',
-        ),
-        'Ratchet\\Client\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/ratchet/pawl/src',
-        ),
         'Psr\\SimpleCache\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/simple-cache/src',
@@ -279,10 +234,6 @@ class ComposerStaticInitbe0d53d685a716b9403cc68e144d829b
         array (
             0 => __DIR__ . '/..' . '/phpoffice/phpspreadsheet/src/PhpSpreadsheet',
         ),
-        'PhpOffice\\Math\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/phpoffice/math/src/Math',
-        ),
         'PHPMailer\\PHPMailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
@@ -305,7 +256,8 @@ class ComposerStaticInitbe0d53d685a716b9403cc68e144d829b
         ),
         'League\\OAuth2\\Client\\' => 
         array (
-            0 => __DIR__ . '/..' . '/league/oauth2-client/src',
+            0 => __DIR__ . '/..' . '/league/oauth2-google/src',
+            1 => __DIR__ . '/..' . '/league/oauth2-client/src',
         ),
         'League\\MimeTypeDetection\\' => 
         array (
@@ -315,12 +267,16 @@ class ComposerStaticInitbe0d53d685a716b9403cc68e144d829b
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
         ),
+        'Laminas\\Escaper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laminas/laminas-escaper/src',
+        ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/collections',
-            1 => __DIR__ . '/..' . '/illuminate/conditionable',
+            0 => __DIR__ . '/..' . '/illuminate/support',
+            1 => __DIR__ . '/..' . '/illuminate/collections',
             2 => __DIR__ . '/..' . '/illuminate/macroable',
-            3 => __DIR__ . '/..' . '/illuminate/support',
+            3 => __DIR__ . '/..' . '/illuminate/conditionable',
         ),
         'Illuminate\\Pagination\\' => 
         array (
@@ -444,6 +400,8 @@ class ComposerStaticInitbe0d53d685a716b9403cc68e144d829b
         'TCPDF_FONTS' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_fonts.php',
         'TCPDF_FONT_DATA' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_font_data.php',
         'TCPDF_IMAGES' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_images.php',
+        'TCPDF_IMPORT' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf_import.php',
+        'TCPDF_PARSER' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf_parser.php',
         'TCPDF_STATIC' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_static.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',

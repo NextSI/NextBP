@@ -138,6 +138,8 @@ class Document extends AbstractPart
 
     /**
      * Read w:p node.
+     *
+     * @todo <w:lastRenderedPageBreak>
      */
     private function readWPNode(XMLReader $xmlReader, DOMElement $node, Section &$section): void
     {

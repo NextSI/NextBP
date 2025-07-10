@@ -27,7 +27,7 @@ use PhpOffice\PhpWord\Writer\AbstractWriter;
 abstract class AbstractPart
 {
     /**
-     * @var \PhpOffice\PhpWord\Writer\RTF
+     * @var \PhpOffice\PhpWord\Writer\AbstractWriter
      */
     private $parentWriter;
 
@@ -47,7 +47,7 @@ abstract class AbstractPart
     abstract public function write();
 
     /**
-     * @param \PhpOffice\PhpWord\Writer\RTF $writer
+     * @param \PhpOffice\PhpWord\Writer\AbstractWriter $writer
      */
     public function setParentWriter(?AbstractWriter $writer = null): void
     {
@@ -55,7 +55,7 @@ abstract class AbstractPart
     }
 
     /**
-     * @return \PhpOffice\PhpWord\Writer\RTF
+     * @return \PhpOffice\PhpWord\Writer\AbstractWriter
      */
     public function getParentWriter()
     {

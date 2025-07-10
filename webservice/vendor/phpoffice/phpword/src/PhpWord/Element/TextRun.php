@@ -32,14 +32,14 @@ class TextRun extends AbstractContainer
     /**
      * Paragraph style.
      *
-     * @var Paragraph|string
+     * @var \PhpOffice\PhpWord\Style\Paragraph|string
      */
     protected $paragraphStyle;
 
     /**
      * Create new instance.
      *
-     * @param array|Paragraph|string $paragraphStyle
+     * @param array|\PhpOffice\PhpWord\Style\Paragraph|string $paragraphStyle
      */
     public function __construct($paragraphStyle = null)
     {
@@ -49,7 +49,7 @@ class TextRun extends AbstractContainer
     /**
      * Get Paragraph style.
      *
-     * @return Paragraph|string
+     * @return \PhpOffice\PhpWord\Style\Paragraph|string
      */
     public function getParagraphStyle()
     {
@@ -59,9 +59,9 @@ class TextRun extends AbstractContainer
     /**
      * Set Paragraph style.
      *
-     * @param array|Paragraph|string $style
+     * @param array|\PhpOffice\PhpWord\Style\Paragraph|string $style
      *
-     * @return Paragraph|string
+     * @return \PhpOffice\PhpWord\Style\Paragraph|string
      */
     public function setParagraphStyle($style = null)
     {
@@ -77,17 +77,5 @@ class TextRun extends AbstractContainer
         }
 
         return $this->paragraphStyle;
-    }
-
-    public function getText(): string
-    {
-        $outstr = '';
-        foreach ($this->getElements() as $element) {
-            if ($element instanceof Text) {
-                $outstr .= $element->getText();
-            }
-        }
-
-        return $outstr;
     }
 }

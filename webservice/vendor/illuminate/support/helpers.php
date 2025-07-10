@@ -4,7 +4,10 @@ use Illuminate\Contracts\Support\DeferringDisplayableValue;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Env;
+use Illuminate\Support\Fluent;
 use Illuminate\Support\HigherOrderTapProxy;
+use Illuminate\Support\Once;
+use Illuminate\Support\Onceable;
 use Illuminate\Support\Optional;
 use Illuminate\Support\Sleep;
 use Illuminate\Support\Str;
@@ -57,6 +60,10 @@ if (! function_exists('blank')) {
             return count($value) === 0;
         }
 
+        if ($value instanceof Stringable) {
+            return trim((string) $value) === '';
+        }
+
         return empty($value);
     }
 }
@@ -103,7 +110,7 @@ if (! function_exists('e')) {
     /**
      * Encode HTML special characters in a string.
      *
-     * @param  \Illuminate\Contracts\Support\DeferringDisplayableValue|\Illuminate\Contracts\Support\Htmlable|\BackedEnum|string|null  $value
+     * @param  \Illuminate\Contracts\Support\DeferringDisplayableValue|\Illuminate\Contracts\Support\Htmlable|\BackedEnum|string|int|float|null  $value
      * @param  bool  $doubleEncode
      * @return string
      */
@@ -152,16 +159,32 @@ if (! function_exists('filled')) {
     }
 }
 
-if (! function_exists('laravel_cloud')) {
+if (! function_exists('fluent')) {
     /**
-     * Determine if the application is running on Laravel Cloud.
+     * Create an Fluent object from the given value.
      *
-     * @return bool
+     * @param  object|array  $value
+     * @return \Illuminate\Support\Fluent
      */
-    function laravel_cloud()
+    function fluent($value)
     {
-        return ($_ENV['LARAVEL_CLOUD'] ?? false) === '1' ||
-               ($_SERVER['LARAVEL_CLOUD'] ?? false) === '1';
+        return new Fluent($value);
+    }
+}
+
+if (! function_exists('literal')) {
+    /**
+     * Return a new literal or anonymous object using named arguments.
+     *
+     * @return \stdClass
+     */
+    function literal(...$arguments)
+    {
+        if (count($arguments) === 1 && array_is_list($arguments)) {
+            return $arguments[0];
+        }
+
+        return (object) $arguments;
     }
 }
 
@@ -189,6 +212,26 @@ if (! function_exists('object_get')) {
         }
 
         return $object;
+    }
+}
+
+if (! function_exists('once')) {
+    /**
+     * Ensures a callable is only called once, and returns the result on subsequent calls.
+     *
+     * @template  TReturnType
+     *
+     * @param  callable(): TReturnType  $callback
+     * @return TReturnType
+     */
+    function once(callable $callback)
+    {
+        $onceable = Onceable::tryFromTrace(
+            debug_backtrace(DEBUG_BACKTRACE_PROVIDE_OBJECT, 2),
+            $callback,
+        );
+
+        return $onceable ? Once::instance()->value($onceable) : call_user_func($callback);
     }
 }
 
@@ -239,7 +282,7 @@ if (! function_exists('retry')) {
      * @param  callable|null  $when
      * @return mixed
      *
-     * @throws \Exception
+     * @throws \Throwable
      */
     function retry($times, callable $callback, $sleepMilliseconds = 0, $when = null)
     {
@@ -259,7 +302,7 @@ if (! function_exists('retry')) {
 
         try {
             return $callback($attempts);
-        } catch (Exception $e) {
+        } catch (Throwable $e) {
             if ($times < 1 || ($when && ! $when($e))) {
                 throw $e;
             }

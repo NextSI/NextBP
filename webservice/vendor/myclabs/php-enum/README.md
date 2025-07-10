@@ -34,8 +34,6 @@ use MyCLabs\Enum\Enum;
 
 /**
  * Action enum
- *
- * @extends Enum<Action::*>
  */
 final class Action extends Enum
 {

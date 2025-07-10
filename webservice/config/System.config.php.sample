@@ -36,8 +36,10 @@ define('TRACE_BUSINESS_EXCEPTION', false);
 
 // utilizado para gravar o conteúdo de cada requisição nas rotas predefinidas
 //define('DEBUG_ROUTE', [
-//    '/projeto/listar/',
-//    '/cliente/salvar/',
+//    '/clicksign/webhook/',
+//    '/certsign/webhook/',
+//    '/d4sign/webhook/',
+//    '/rd_station_mkt/webhook/',
 //]);
 
 // utilizado para gravar em Solicitacao_Atividade.dao.php.log a validação das origens do gateway inclusivo

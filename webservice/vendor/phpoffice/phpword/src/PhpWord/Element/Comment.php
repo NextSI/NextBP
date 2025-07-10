@@ -79,11 +79,15 @@ class Comment extends TrackChange
 
     /**
      * Sets the element where this comment starts.
+     *
+     * @param \PhpOffice\PhpWord\Element\AbstractElement $value
      */
     public function setStartElement(AbstractElement $value): void
     {
         $this->startElement = $value;
-        $value->setCommentRangeStart($this);
+        if ($value->getCommentRangeStart() == null) {
+            $value->setCommentRangeStart($this);
+        }
     }
 
     /**
@@ -98,11 +102,15 @@ class Comment extends TrackChange
 
     /**
      * Sets the element where this comment ends.
+     *
+     * @param \PhpOffice\PhpWord\Element\AbstractElement $value
      */
     public function setEndElement(AbstractElement $value): void
     {
         $this->endElement = $value;
-        $value->setCommentRangeEnd($this);
+        if ($value->getCommentRangeEnd() == null) {
+            $value->setCommentRangeEnd($this);
+        }
     }
 
     /**

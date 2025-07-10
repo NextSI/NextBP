@@ -17,13 +17,10 @@
 
 namespace PhpOffice\PhpWord\Collection;
 
-use PhpOffice\PhpWord\Element\Endnote;
-
 /**
  * Endnotes collection.
  *
  * @since 0.10.0
- * @extends AbstractCollection<Endnote>
  */
 class Endnotes extends AbstractCollection
 {

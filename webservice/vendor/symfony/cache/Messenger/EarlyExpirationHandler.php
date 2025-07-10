@@ -13,13 +13,12 @@ namespace Symfony\Component\Cache\Messenger;
 
 use Symfony\Component\Cache\CacheItem;
 use Symfony\Component\DependencyInjection\ReverseContainer;
-use Symfony\Component\Messenger\Attribute\AsMessageHandler;
+use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
 /**
  * Computes cached values sent to a message bus.
  */
-#[AsMessageHandler]
-class EarlyExpirationHandler
+class EarlyExpirationHandler implements MessageHandlerInterface
 {
     private ReverseContainer $reverseContainer;
     private array $processedNonces = [];
@@ -29,9 +28,6 @@ class EarlyExpirationHandler
         $this->reverseContainer = $reverseContainer;
     }
 
-    /**
-     * @return void
-     */
     public function __invoke(EarlyExpirationMessage $message)
     {
         $item = $message->getItem();

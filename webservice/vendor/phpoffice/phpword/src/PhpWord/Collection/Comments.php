@@ -17,13 +17,10 @@
 
 namespace PhpOffice\PhpWord\Collection;
 
-use PhpOffice\PhpWord\Element\Comment;
-
 /**
  * Comments collection.
  *
  * @since 0.12.0
- * @extends AbstractCollection<Comment>
  */
 class Comments extends AbstractCollection
 {

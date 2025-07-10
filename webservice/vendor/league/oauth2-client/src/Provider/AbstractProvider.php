@@ -17,7 +17,6 @@ namespace League\OAuth2\Client\Provider;
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\ClientInterface as HttpClientInterface;
 use GuzzleHttp\Exception\BadResponseException;
-use GuzzleHttp\Exception\GuzzleException;
 use InvalidArgumentException;
 use League\OAuth2\Client\Grant\AbstractGrant;
 use League\OAuth2\Client\Grant\GrantFactory;
@@ -406,7 +405,6 @@ abstract class AbstractProvider
      *
      * @param  array $options
      * @return array Authorization parameters
-     * @throws InvalidArgumentException
      */
     protected function getAuthorizationParameters(array $options)
     {
@@ -478,7 +476,6 @@ abstract class AbstractProvider
      *
      * @param  array $options
      * @return string Authorization URL
-     * @throws InvalidArgumentException
      */
     public function getAuthorizationUrl(array $options = [])
     {
@@ -495,11 +492,10 @@ abstract class AbstractProvider
      * @param  array $options
      * @param  callable|null $redirectHandler
      * @return mixed
-     * @throws InvalidArgumentException
      */
     public function authorize(
         array $options = [],
-        ?callable $redirectHandler = null
+        callable $redirectHandler = null
     ) {
         $url = $this->getAuthorizationUrl($options);
         if ($redirectHandler) {
@@ -617,19 +613,12 @@ abstract class AbstractProvider
      *
      * @param  mixed                $grant
      * @param  array<string, mixed> $options
-     * @return AccessTokenInterface
      * @throws IdentityProviderException
-     * @throws UnexpectedValueException
-     * @throws GuzzleException
+     * @return AccessTokenInterface
      */
     public function getAccessToken($grant, array $options = [])
     {
         $grant = $this->verifyGrant($grant);
-
-        if (isset($options['scope']) && is_array($options['scope'])) {
-            $separator = $this->getScopeSeparator();
-            $options['scope'] = implode($separator, $options['scope']);
-        }
 
         $params = [
             'client_id'     => $this->clientId,
@@ -711,7 +700,6 @@ abstract class AbstractProvider
      *
      * @param  RequestInterface $request
      * @return ResponseInterface
-     * @throws GuzzleException
      */
     public function getResponse(RequestInterface $request)
     {
@@ -722,10 +710,8 @@ abstract class AbstractProvider
      * Sends a request and returns the parsed response.
      *
      * @param  RequestInterface $request
-     * @return mixed
      * @throws IdentityProviderException
-     * @throws UnexpectedValueException
-     * @throws GuzzleException
+     * @return mixed
      */
     public function getParsedResponse(RequestInterface $request)
     {
@@ -771,7 +757,7 @@ abstract class AbstractProvider
      */
     protected function getContentType(ResponseInterface $response)
     {
-        return implode(';', $response->getHeader('content-type'));
+        return join(';', (array) $response->getHeader('content-type'));
     }
 
     /**
@@ -829,7 +815,7 @@ abstract class AbstractProvider
      * Custom mapping of expiration, etc should be done here. Always call the
      * parent method when overloading this method.
      *
-     * @param  array<string, mixed> $result
+     * @param  mixed $result
      * @return array
      */
     protected function prepareAccessTokenResponse(array $result)
@@ -873,9 +859,6 @@ abstract class AbstractProvider
      *
      * @param  AccessToken $token
      * @return ResourceOwnerInterface
-     * @throws IdentityProviderException
-     * @throws UnexpectedValueException
-     * @throws GuzzleException
      */
     public function getResourceOwner(AccessToken $token)
     {
@@ -889,9 +872,6 @@ abstract class AbstractProvider
      *
      * @param  AccessToken $token
      * @return mixed
-     * @throws IdentityProviderException
-     * @throws UnexpectedValueException
-     * @throws GuzzleException
      */
     protected function fetchResourceOwnerDetails(AccessToken $token)
     {

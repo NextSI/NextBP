@@ -17,11 +17,7 @@
 
 namespace PhpOffice\PhpWord\Writer\PDF;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Settings;
-use PhpOffice\PhpWord\Style;
 use PhpOffice\PhpWord\Writer\WriterInterface;
-use TCPDF as TCPDFBase;
 
 /**
  * TCPDF writer.
@@ -46,56 +42,24 @@ class TCPDF extends AbstractRenderer implements WriterInterface
      * @param string $unit Unit measure
      * @param string $paperSize Paper size
      *
-     * @return TCPDFBase implementation
+     * @return \TCPDF implementation
      */
     protected function createExternalWriterInstance($orientation, $unit, $paperSize)
     {
-        $instance = new TCPDFBase($orientation, $unit, $paperSize);
-
-        if ($this->getFont()) {
-            $instance->setFont($this->getFont(), $instance->getFontStyle(), $instance->getFontSizePt());
-        }
-
-        return $instance;
-    }
-
-    /**
-     * Overwriteable function to allow user to extend TCPDF.
-     * There should always be an AddPage call, preceded or followed
-     *   by code to customize TCPDF configuration.
-     * The customization below sets vertical spacing
-     *   between paragaraphs when the user has
-     *   explicitly set those values to numeric in default style.
-     */
-    protected function prepareToWrite(TCPDFBase $pdf): void
-    {
-        $pdf->AddPage();
-        $customStyles = Style::getStyles();
-        $normal = $customStyles['Normal'] ?? null;
-        if ($normal instanceof Style\Paragraph) {
-            $before = $normal->getSpaceBefore();
-            $after = $normal->getSpaceAfter();
-            if (is_numeric($before) && is_numeric($after)) {
-                $height = $normal->getLineHeight() ?? '';
-                $pdf->setHtmlVSpace([
-                    'p' => [
-                        ['n' => $before, 'h' => $height],
-                        ['n' => $after, 'h' => $height],
-                    ],
-                ]);
-            }
-        }
+        return new \TCPDF($orientation, $unit, $paperSize);
     }
 
     /**
      * Save PhpWord to file.
+     *
+     * @param string $filename Name of the file to save as
      */
-    public function save(string $filename): void
+    public function save($filename = null): void
     {
         $fileHandle = parent::prepareForSave($filename);
 
         //  PDF settings
-        $paperSize = strtoupper(Settings::getDefaultPaper());
+        $paperSize = 'A4';
         $orientation = 'P';
 
         // Create PDF
@@ -103,8 +67,8 @@ class TCPDF extends AbstractRenderer implements WriterInterface
         $pdf->setFontSubsetting(false);
         $pdf->setPrintHeader(false);
         $pdf->setPrintFooter(false);
+        $pdf->AddPage();
         $pdf->SetFont($this->getFont());
-        $this->prepareToWrite($pdf);
         $pdf->writeHTML($this->getContent());
 
         // Write document properties

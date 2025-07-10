@@ -90,8 +90,7 @@ class Exporter
                     $properties = $serializeProperties;
                 } else {
                     foreach ($serializeProperties as $n => $v) {
-                        $p = $reflector->hasProperty($n) ? $reflector->getProperty($n) : null;
-                        $c = $p && (\PHP_VERSION_ID >= 80400 ? $p->isProtectedSet() || $p->isPrivateSet() : $p->isReadOnly()) ? $p->class : 'stdClass';
+                        $c = \PHP_VERSION_ID >= 80100 && $reflector->hasProperty($n) && ($p = $reflector->getProperty($n))->isReadOnly() ? $p->class : 'stdClass';
                         $properties[$c][$n] = $v;
                     }
                 }
@@ -145,8 +144,7 @@ class Exporter
                 $i = 0;
                 $n = (string) $name;
                 if ('' === $n || "\0" !== $n[0]) {
-                    $p = $reflector->hasProperty($n) ? $reflector->getProperty($n) : null;
-                    $c = $p && (\PHP_VERSION_ID >= 80400 ? $p->isProtectedSet() || $p->isPrivateSet() : $p->isReadOnly()) ? $p->class : 'stdClass';
+                    $c = $reflector->hasProperty($n) && ($p = $reflector->getProperty($n))->isReadOnly() ? $p->class : 'stdClass';
                 } elseif ('*' === $n[1]) {
                     $n = substr($n, 3);
                     $c = $reflector->getProperty($n)->class;
@@ -161,11 +159,11 @@ class Exporter
                     $n = substr($n, 1 + $i);
                 }
                 if (null !== $sleep) {
-                    if (!isset($sleep[$name]) && (!isset($sleep[$n]) || ($i && $c !== $class))) {
+                    if (!isset($sleep[$n]) || ($i && $c !== $class)) {
                         unset($arrayValue[$name]);
                         continue;
                     }
-                    unset($sleep[$name], $sleep[$n]);
+                    $sleep[$n] = false;
                 }
                 if (!\array_key_exists($name, $proto) || $proto[$name] !== $v || "\x00Error\x00trace" === $name || "\x00Exception\x00trace" === $name) {
                     $properties[$c][$n] = $v;
@@ -173,7 +171,9 @@ class Exporter
             }
             if ($sleep) {
                 foreach ($sleep as $n => $v) {
-                    trigger_error(sprintf('serialize(): "%s" returned as member variable from __sleep() but does not exist', $n), \E_USER_NOTICE);
+                    if (false !== $v) {
+                        trigger_error(sprintf('serialize(): "%s" returned as member variable from __sleep() but does not exist', $n), \E_USER_NOTICE);
+                    }
                 }
             }
             if (method_exists($class, '__unserialize')) {

@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 // Not fully implemented
-//     - supports only PAGE, NUMPAGES, DATE and FILENAME
+//     - supports only PAGE and NUMPAGES
 //     - supports only default formats and options
 //     - supports style only if specified by name
 //     - spaces before and after field may be dropped
@@ -44,7 +44,6 @@ class Field extends Text
             case 'date':
             case 'page':
             case 'numpages':
-            case 'filename':
                 $this->writeDefault($element, $type);
 
                 break;
@@ -77,18 +76,6 @@ class Field extends Text
                 break;
             case 'numpages':
                 $xmlWriter->startElement('text:page-count');
-                $xmlWriter->endElement();
-
-                break;
-            case 'filename':
-                $xmlWriter->startElement('text:file-name');
-                $xmlWriter->writeAttribute('text:fixed', 'false');
-                $options = $element->getOptions();
-                if ($options != null && in_array('Path', $options)) {
-                    $xmlWriter->writeAttribute('text:display', 'full');
-                } else {
-                    $xmlWriter->writeAttribute('text:display', 'name');
-                }
                 $xmlWriter->endElement();
 
                 break;

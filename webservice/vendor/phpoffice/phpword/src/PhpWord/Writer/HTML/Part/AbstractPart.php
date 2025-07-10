@@ -17,8 +17,9 @@
 
 namespace PhpOffice\PhpWord\Writer\HTML\Part;
 
+use Laminas\Escaper\Escaper;
 use PhpOffice\PhpWord\Exception\Exception;
-use PhpOffice\PhpWord\Writer\HTML;
+use PhpOffice\PhpWord\Writer\AbstractWriter;
 
 /**
  * @since 0.11.0
@@ -26,22 +27,35 @@ use PhpOffice\PhpWord\Writer\HTML;
 abstract class AbstractPart
 {
     /**
-     * @var ?HTML
+     * @var \PhpOffice\PhpWord\Writer\AbstractWriter
      */
     private $parentWriter;
+
+    /**
+     * @var \Laminas\Escaper\Escaper
+     */
+    protected $escaper;
+
+    public function __construct()
+    {
+        $this->escaper = new Escaper();
+    }
 
     /**
      * @return string
      */
     abstract public function write();
 
-    public function setParentWriter(?HTML $writer = null): void
+    /**
+     * @param \PhpOffice\PhpWord\Writer\AbstractWriter $writer
+     */
+    public function setParentWriter(?AbstractWriter $writer = null): void
     {
         $this->parentWriter = $writer;
     }
 
     /**
-     * @return HTML
+     * @return \PhpOffice\PhpWord\Writer\AbstractWriter
      */
     public function getParentWriter()
     {

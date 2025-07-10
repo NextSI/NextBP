@@ -2,6 +2,7 @@
 
 namespace Illuminate\Support\Traits;
 
+use BackedEnum;
 use CachingIterator;
 use Closure;
 use Exception;
@@ -13,7 +14,6 @@ use Illuminate\Support\Enumerable;
 use Illuminate\Support\HigherOrderCollectionProxy;
 use InvalidArgumentException;
 use JsonSerializable;
-use Symfony\Component\VarDumper\VarDumper;
 use Traversable;
 use UnexpectedValueException;
 use UnitEnum;
@@ -200,7 +200,7 @@ trait EnumeratesValues
     }
 
     /**
-     * Dump the items and end the script.
+     * Dump the given arguments and terminate execution.
      *
      * @param  mixed  ...$args
      * @return never
@@ -209,21 +209,18 @@ trait EnumeratesValues
     {
         $this->dump(...$args);
 
-        exit(1);
+        dd();
     }
 
     /**
      * Dump the items.
      *
+     * @param  mixed  ...$args
      * @return $this
      */
-    public function dump()
+    public function dump(...$args)
     {
-        (new Collection(func_get_args()))
-            ->push($this->all())
-            ->each(function ($item) {
-                VarDumper::dump($item);
-            });
+        dump($this->all(), ...$args);
 
         return $this;
     }
@@ -330,7 +327,7 @@ trait EnumeratesValues
     {
         $allowedTypes = is_array($type) ? $type : [$type];
 
-        return $this->each(function ($item) use ($allowedTypes) {
+        return $this->each(function ($item, $index) use ($allowedTypes) {
             $itemType = get_debug_type($item);
 
             foreach ($allowedTypes as $allowedType) {
@@ -340,7 +337,7 @@ trait EnumeratesValues
             }
 
             throw new UnexpectedValueException(
-                sprintf("Collection should only include [%s] items, but '%s' found.", implode(', ', $allowedTypes), $itemType)
+                sprintf("Collection should only include [%s] items, but '%s' found at position %d.", implode(', ', $allowedTypes), $itemType, $index)
             );
         });
     }
@@ -414,6 +411,10 @@ trait EnumeratesValues
      */
     public function mapInto($class)
     {
+        if (is_subclass_of($class, BackedEnum::class)) {
+            return $this->map(fn ($value, $key) => $class::from($value));
+        }
+
         return $this->map(fn ($value, $key) => new $class($value, $key));
     }
 

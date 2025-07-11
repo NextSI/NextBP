@@ -1881,6 +1881,81 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Botao-Atalho-DAO.html#method_listar"
         },                {
+            "fqsen": "\\Cadastro_Generico_DAO",
+            "name": "Cadastro_Generico_DAO",
+            "summary": "",
+            "url": "classes/Cadastro-Generico-DAO.html"
+        },                {
+            "fqsen": "\\Cadastro_Generico_DAO\u003A\u003Alistar\u0028\u0029",
+            "name": "listar",
+            "summary": "",
+            "url": "classes/Cadastro-Generico-DAO.html#method_listar"
+        },                {
+            "fqsen": "\\Cadastro_Generico_DAO\u003A\u003Asalvar\u0028\u0029",
+            "name": "salvar",
+            "summary": "",
+            "url": "classes/Cadastro-Generico-DAO.html#method_salvar"
+        },                {
+            "fqsen": "\\Cadastro_Generico_DAO\u003A\u003Aexiste\u0028\u0029",
+            "name": "existe",
+            "summary": "",
+            "url": "classes/Cadastro-Generico-DAO.html#method_existe"
+        },                {
+            "fqsen": "\\Cadastro_Generico_DAO\u003A\u003Ainsert\u0028\u0029",
+            "name": "insert",
+            "summary": "",
+            "url": "classes/Cadastro-Generico-DAO.html#method_insert"
+        },                {
+            "fqsen": "\\Cadastro_Generico_DAO\u003A\u003Aupdate\u0028\u0029",
+            "name": "update",
+            "summary": "",
+            "url": "classes/Cadastro-Generico-DAO.html#method_update"
+        },                {
+            "fqsen": "\\Cadastro_Generico_DAO\u003A\u003Aexcluir\u0028\u0029",
+            "name": "excluir",
+            "summary": "",
+            "url": "classes/Cadastro-Generico-DAO.html#method_excluir"
+        },                {
+            "fqsen": "\\Cadastro_Generico_DAO\u003A\u003Apopular\u0028\u0029",
+            "name": "popular",
+            "summary": "",
+            "url": "classes/Cadastro-Generico-DAO.html#method_popular"
+        },                {
+            "fqsen": "\\Cadastro_Generico_DAO\u003A\u003Apreencher\u0028\u0029",
+            "name": "preencher",
+            "summary": "",
+            "url": "classes/Cadastro-Generico-DAO.html#method_preencher"
+        },                {
+            "fqsen": "\\Cadastro_Generico_DAO\u003A\u003Alistar_dados\u0028\u0029",
+            "name": "listar_dados",
+            "summary": "",
+            "url": "classes/Cadastro-Generico-DAO.html#method_listar_dados"
+        },                {
+            "fqsen": "\\Cadastro_Generico_DAO\u003A\u003Aexcluir_dados_cadastro_generico\u0028\u0029",
+            "name": "excluir_dados_cadastro_generico",
+            "summary": "",
+            "url": "classes/Cadastro-Generico-DAO.html#method_excluir_dados_cadastro_generico"
+        },                {
+            "fqsen": "\\Cadastro_Generico_DAO\u003A\u003Aexiste_formulario_vinculado\u0028\u0029",
+            "name": "existe_formulario_vinculado",
+            "summary": "",
+            "url": "classes/Cadastro-Generico-DAO.html#method_existe_formulario_vinculado"
+        },                {
+            "fqsen": "\\Cadastro_Generico_DAO\u003A\u003Alistar_equipe\u0028\u0029",
+            "name": "listar_equipe",
+            "summary": "",
+            "url": "classes/Cadastro-Generico-DAO.html#method_listar_equipe"
+        },                {
+            "fqsen": "\\Cadastro_Generico_DAO\u003A\u003Alistar_usuarios_equipe\u0028\u0029",
+            "name": "listar_usuarios_equipe",
+            "summary": "",
+            "url": "classes/Cadastro-Generico-DAO.html#method_listar_usuarios_equipe"
+        },                {
+            "fqsen": "\\Cadastro_Generico_DAO\u003A\u003Asalvar_equipe\u0028\u0029",
+            "name": "salvar_equipe",
+            "summary": "",
+            "url": "classes/Cadastro-Generico-DAO.html#method_salvar_equipe"
+        },                {
             "fqsen": "\\Calendario_Trabalho_DAO",
             "name": "Calendario_Trabalho_DAO",
             "summary": "",
@@ -19420,6 +19495,41 @@ Search.appendIndex(
             "name": "opcoes",
             "summary": "",
             "url": "classes/Botao-Atalho-Model.html#property_opcoes"
+        },                {
+            "fqsen": "\\Cadastro_Generico_Model",
+            "name": "Cadastro_Generico_Model",
+            "summary": "",
+            "url": "classes/Cadastro-Generico-Model.html"
+        },                {
+            "fqsen": "\\Cadastro_Generico_Model\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Cadastro-Generico-Model.html#method___construct"
+        },                {
+            "fqsen": "\\Cadastro_Generico_Model\u003A\u003Avalidation\u0028\u0029",
+            "name": "validation",
+            "summary": "",
+            "url": "classes/Cadastro-Generico-Model.html#method_validation"
+        },                {
+            "fqsen": "\\Cadastro_Generico_Model\u003A\u003A\u0024nome",
+            "name": "nome",
+            "summary": "",
+            "url": "classes/Cadastro-Generico-Model.html#property_nome"
+        },                {
+            "fqsen": "\\Cadastro_Generico_Model\u003A\u003A\u0024formulario_id",
+            "name": "formulario_id",
+            "summary": "",
+            "url": "classes/Cadastro-Generico-Model.html#property_formulario_id"
+        },                {
+            "fqsen": "\\Cadastro_Generico_Model\u003A\u003A\u0024nome_tabela",
+            "name": "nome_tabela",
+            "summary": "",
+            "url": "classes/Cadastro-Generico-Model.html#property_nome_tabela"
+        },                {
+            "fqsen": "\\Cadastro_Generico_Model\u003A\u003A\u0024campos_personalizados",
+            "name": "campos_personalizados",
+            "summary": "",
+            "url": "classes/Cadastro-Generico-Model.html#property_campos_personalizados"
         },                {
             "fqsen": "\\Calendario_Trabalho_Model",
             "name": "Calendario_Trabalho_Model",

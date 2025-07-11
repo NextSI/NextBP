@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.90.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Cadastros Gen\u00e9ricos",
+                "referencia": [
+                    "BPM29788"
+                ],
+                "modulo": "Configura\u00e7\u00f5es",
+                "hash": "68a9c734d83c9a33f1e8643e1ebc1e18970aaefc",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM29788"
+            }
+        ]
+    },
+    {
         "versao": "24.89.1",
         "itens": [
             {

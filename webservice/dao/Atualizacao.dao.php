@@ -264,7 +264,7 @@ class Atualizacao_DAO extends \Sys\DAO {
 
   function dbu_cli($command_line_interface) {
 
-      Log::escrever(basename(__FILE__), "Next BP DBU " . VERSION . " " . substr(APP_URL, 0, 25) . "...", $command_line_interface);
+      Log::escrever(basename(__FILE__), "Next BP DBU " . VERSION . " " . str_replace(['http://', 'https://'], ['',''], APP_URL), $command_line_interface);
 
       Log::escrever(basename(__FILE__), 'Atualização da estrutura do banco de dados iniciada', $command_line_interface);
       Log::escrever(basename(__FILE__), 'Verificando atualizações pendentes da estrutura da base de dados ', $command_line_interface);

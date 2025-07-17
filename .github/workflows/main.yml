@@ -51,7 +51,7 @@ jobs:
         run: |
           echo "📡 Chamando API para ${{ matrix.nome }}"
 
-          RESPONSE_CODE=$(curl -X POST "${{ secrets[matrix.api] }}${{ secrets.SUFIXO_DBU_API }}" \
+          RESPONSE_CODE=$(curl -X POST "${{ secrets[matrix.api] }}${{ secrets.SUFIXO_DBU_API }}&anticache=$(date +%s)" \
             -H "Content-Type: application/json" \
             -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
             -d '{"status": "success", "message": "FTP deploy complete"}' \
@@ -122,7 +122,7 @@ jobs:
         run: |
           echo "📡 Chamando API para ${{ matrix.nome }}"
 
-          RESPONSE_CODE=$(curl -X POST "${{ secrets[matrix.api] }}${{ secrets.SUFIXO_DBU_API }}" \
+          RESPONSE_CODE=$(curl -X POST "${{ secrets[matrix.api] }}${{ secrets.SUFIXO_DBU_API }}&anticache=$(date +%s)" \
             -H "Content-Type: application/json" \
             -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
             -d '{"status": "success", "message": "FTP deploy complete"}' \
@@ -275,7 +275,7 @@ jobs:
         run: |
           echo "📡 Chamando API para ${{ matrix.nome }}"
 
-          RESPONSE_CODE=$(curl -X POST "${{ secrets[matrix.api] }}${{ secrets.SUFIXO_DBU_API }}" \
+          RESPONSE_CODE=$(curl -X POST "${{ secrets[matrix.api] }}${{ secrets.SUFIXO_DBU_API }}&anticache=$(date +%s)" \
             -H "Content-Type: application/json" \
             -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
             -d '{"status": "success", "message": "FTP deploy complete"}' \
@@ -428,7 +428,7 @@ jobs:
         run: |
           echo "📡 Chamando API para ${{ matrix.nome }}"
 
-          RESPONSE_CODE=$(curl -X POST "${{ secrets[matrix.api] }}${{ secrets.SUFIXO_DBU_API }}" \
+          RESPONSE_CODE=$(curl -X POST "${{ secrets[matrix.api] }}${{ secrets.SUFIXO_DBU_API }}&anticache=$(date +%s)" \
             -H "Content-Type: application/json" \
             -H "Dbutoken: ${{ secrets.DBU_API_TOKEN }}" \
             -d '{"status": "success", "message": "FTP deploy complete"}' \

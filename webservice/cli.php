@@ -31,9 +31,9 @@ if (php_sapi_name() !== 'cli') {
     // Caso os parâmetros estejam disponíveis na URL
     $argv = explode(' ', $_REQUEST['argv']);
 
-    error_log(sprintf('argv: %s', print_r($argv)));
+    //error_log(sprintf('argv: %s', print_r($argv, true)));
 
-    $command_line_interface = false;
+    $command_line_interface = true;
 } else {
     // Caso o script esteja sendo executado no terminal
     if (!isset($argv)) {

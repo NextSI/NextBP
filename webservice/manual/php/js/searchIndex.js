@@ -11771,6 +11771,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Parametro-Usuario-DAO.html#method_delete"
         },                {
+            "fqsen": "\\Parametro_Usuario_DAO\u003A\u003Adelete_nome\u0028\u0029",
+            "name": "delete_nome",
+            "summary": "",
+            "url": "classes/Parametro-Usuario-DAO.html#method_delete_nome"
+        },                {
             "fqsen": "\\Parametro_Usuario_DAO\u003A\u003Aset\u0028\u0029",
             "name": "set",
             "summary": "",

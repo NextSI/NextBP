@@ -4,10 +4,10 @@
     "static/js/1.b5396640.chunk.js": "./static/js/1.b5396640.chunk.js",
     "static/js/2.2a3bf383.chunk.js": "./static/js/2.2a3bf383.chunk.js",
     "main.js": "./static/js/main.43f7a0db.chunk.js",
-    "runtime-main.js": "./static/js/runtime-main.0f31ac76.js",
+    "runtime-main.js": "./static/js/runtime-main.d3eb1674.js",
     "static/js/5.4150e97d.chunk.js": "./static/js/5.4150e97d.chunk.js",
     "static/css/6.acd67942.chunk.css": "./static/css/6.acd67942.chunk.css",
-    "static/js/6.f178d1be.chunk.js": "./static/js/6.f178d1be.chunk.js",
+    "static/js/6.846b7bf9.chunk.js": "./static/js/6.846b7bf9.chunk.js",
     "static/js/7.7b24aede.chunk.js": "./static/js/7.7b24aede.chunk.js",
     "static/css/8.41cbbf28.chunk.css": "./static/css/8.41cbbf28.chunk.css",
     "static/js/8.15760811.chunk.js": "./static/js/8.15760811.chunk.js",
@@ -48,7 +48,7 @@
     "static/media/index.scss": "./static/media/fa-solid-900.eeccf4f6.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.0f31ac76.js",
+    "static/js/runtime-main.d3eb1674.js",
     "static/js/5.4150e97d.chunk.js",
     "static/js/main.43f7a0db.chunk.js"
   ]

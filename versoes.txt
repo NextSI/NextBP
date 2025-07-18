@@ -1,5 +1,40 @@
 [
     {
+        "versao": "24.90.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na Exibi\u00e7\u00e3o de Campos Obrigat\u00f3rios no Formul\u00e1rio",
+                "referencia": [
+                    "BPM40063"
+                ],
+                "modulo": "Processos",
+                "hash": "4870330847065995259b0b450dd0f0be5adc531a",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40063"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na Mensagem de Cancelamento do Gateway do Fluxo da Solicita\u00e7\u00e3o",
+                "referencia": [
+                    "BPM39964"
+                ],
+                "modulo": "Processos",
+                "hash": "216756ee67791ea3b3c341199fa6951a84790f79",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39964"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na Gera\u00e7\u00e3o do Relat\u00f3rio \"Atividades de Processo\"",
+                "referencia": [
+                    "BPM39784"
+                ],
+                "modulo": "Processos",
+                "hash": "6c92828ca40b42ea37f396447d255266cdbec636",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39784"
+            }
+        ]
+    },
+    {
         "versao": "24.90.1",
         "itens": [
             {

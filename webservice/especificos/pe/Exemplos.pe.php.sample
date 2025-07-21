@@ -36,6 +36,8 @@ PE::add('cubo_get_datasource', function(Cubo_Model $cubo_model, object &$datasou
 // Tarefas
 PE::add('tarefas_mover_cartao_lista_antes', function($tarefa_quadro_lista_cartao_model) { ... });
 PE::add('tarefas_mover_cartao_lista_depois', function($tarefa_quadro_lista_cartao_model) { ... });
+PE::add('tarefa_quadro_lista_cartao_salvar_antes', function($tarefa_quadro_lista_cartao_model) { ... });
+PE::add('tarefa_quadro_lista_cartao_salvar_depois', function($tarefa_quadro_lista_cartao_model) { ... });
 
 // Chamados
 PE::add('chamado_mensagem_salvar_antes', function($mensagem_model, $chamado_model) { ... });
@@ -138,5 +140,9 @@ PE::add('itens_excluir_depois', function($itens_model) { ... });
 //RD Station
 PE::add('rd_station_salvar_oportunidade_antes', function($oportunidade_model, $leads));
 PE::add('rd_station_salvar_oportunidade_depois', function($oportunidade_model, $leads)) ; 
-*/
 
+//Integração Next Força de Vendas
+PE::add('integracao_next_forca_vendas_salvar_oportunidade_antes', function($oportunidade_model));
+PE::add('integracao_next_forca_vendas_salvar_oportunidade_depois', function($oportunidade_model)) ; 
+
+*/

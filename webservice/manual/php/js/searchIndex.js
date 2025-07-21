@@ -7261,6 +7261,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Fila-Evento-RD-Station-Webhook-Mkt-DAO.html#method_executar"
         },                {
+            "fqsen": "\\Fila_Integracao_Next_Forca_Vendas_DAO",
+            "name": "Fila_Integracao_Next_Forca_Vendas_DAO",
+            "summary": "",
+            "url": "classes/Fila-Integracao-Next-Forca-Vendas-DAO.html"
+        },                {
+            "fqsen": "\\Fila_Integracao_Next_Forca_Vendas_DAO\u003A\u003Aexecutar\u0028\u0029",
+            "name": "executar",
+            "summary": "",
+            "url": "classes/Fila-Integracao-Next-Forca-Vendas-DAO.html#method_executar"
+        },                {
             "fqsen": "\\Filtro_Usuario_DAO",
             "name": "Filtro_Usuario_DAO",
             "summary": "",
@@ -8760,6 +8770,106 @@ Search.appendIndex(
             "name": "salvar_importacao_cliente",
             "summary": "",
             "url": "classes/Importar-Excel-DAO.html#method_salvar_importacao_cliente"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO",
+            "name": "Integracao_Next_Forca_Vendas_DAO",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#method___construct"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003Alistar\u0028\u0029",
+            "name": "listar",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#method_listar"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003Asalvar\u0028\u0029",
+            "name": "salvar",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#method_salvar"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003Aexiste\u0028\u0029",
+            "name": "existe",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#method_existe"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003Ainsert\u0028\u0029",
+            "name": "insert",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#method_insert"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003Aupdate\u0028\u0029",
+            "name": "update",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#method_update"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003Aexcluir\u0028\u0029",
+            "name": "excluir",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#method_excluir"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003Apopular\u0028\u0029",
+            "name": "popular",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#method_popular"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003Apreencher\u0028\u0029",
+            "name": "preencher",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#method_preencher"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003Abuscar_novos_clientes\u0028\u0029",
+            "name": "buscar_novos_clientes",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#method_buscar_novos_clientes"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003Aintegrar_novos_clientes\u0028\u0029",
+            "name": "integrar_novos_clientes",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#method_integrar_novos_clientes"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003Asalvar_contato\u0028\u0029",
+            "name": "salvar_contato",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#method_salvar_contato"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003Asalvar_prospect\u0028\u0029",
+            "name": "salvar_prospect",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#method_salvar_prospect"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003Asalvar_oportunidade\u0028\u0029",
+            "name": "salvar_oportunidade",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#method_salvar_oportunidade"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003Ainformar_cliente_integrado\u0028\u0029",
+            "name": "informar_cliente_integrado",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#method_informar_cliente_integrado"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003A\u0024api_url",
+            "name": "api_url",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#property_api_url"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003A\u0024api_chave",
+            "name": "api_chave",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#property_api_chave"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003A\u0024funil_vendas",
+            "name": "funil_vendas",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#property_funil_vendas"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003A\u0024etapa_funil",
+            "name": "etapa_funil",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#property_etapa_funil"
         },                {
             "fqsen": "\\Item_Imposto_DAO",
             "name": "Item_Imposto_DAO",
@@ -27920,6 +28030,41 @@ Search.appendIndex(
             "name": "planejamento_formulario",
             "summary": "",
             "url": "classes/Grupo-Usuarios-Equipe-Projeto-Model.html#property_planejamento_formulario"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_Model",
+            "name": "Integracao_Next_Forca_Vendas_Model",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-Model.html"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_Model\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-Model.html#method___construct"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_Model\u003A\u003Avalidation\u0028\u0029",
+            "name": "validation",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-Model.html#method_validation"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_Model\u003A\u003A\u0024funil_vendas_id",
+            "name": "funil_vendas_id",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-Model.html#property_funil_vendas_id"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_Model\u003A\u003A\u0024funil_vendas_etapa_id",
+            "name": "funil_vendas_etapa_id",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-Model.html#property_funil_vendas_etapa_id"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_Model\u003A\u003A\u0024api_url",
+            "name": "api_url",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-Model.html#property_api_url"
+        },                {
+            "fqsen": "\\Integracao_Next_Forca_Vendas_Model\u003A\u003A\u0024api_chave",
+            "name": "api_chave",
+            "summary": "",
+            "url": "classes/Integracao-Next-Forca-Vendas-Model.html#property_api_chave"
         },                {
             "fqsen": "\\Item_Imposto_Model",
             "name": "Item_Imposto_Model",

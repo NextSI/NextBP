@@ -1,5 +1,40 @@
 [
     {
+        "versao": "24.91.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Integra\u00e7\u00e3o com Next For\u00e7a de Vendas",
+                "referencia": [
+                    "BPM39253"
+                ],
+                "modulo": "CRM",
+                "hash": "e9d83c09d08c6b9c1da909d0d4524d77e16d6f36",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39253"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Cria\u00e7\u00e3o de configura\u00e7\u00e3o para defini\u00e7\u00e3o gen\u00e9rica de SLA por Prioridade no motivo do chamado",
+                "referencia": [
+                    "BPM38620"
+                ],
+                "modulo": "Chamados",
+                "hash": "1de00c77550ca60ebf7b143e5c6d68e2f3b24d2c",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38620"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Ponto de Entrada ao Salvar Cart\u00e3o.",
+                "referencia": [
+                    "BPM38221"
+                ],
+                "modulo": "Tarefas",
+                "hash": "67b489fe127b6a11faf437d45f09d778fa1d59fb",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38221"
+            }
+        ]
+    },
+    {
         "versao": "24.90.2",
         "itens": [
             {

@@ -5,3 +5,6 @@ deny from all
 
 # Libera acesso para um IP
 # allow from 179.174.56.168
+
+# Bloqueia listagem de arquivos
+# Options -Indexes

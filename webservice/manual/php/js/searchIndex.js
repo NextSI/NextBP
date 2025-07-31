@@ -8776,10 +8776,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Integracao-Next-Forca-Vendas-DAO.html"
         },                {
-            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
+            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003Acarregar_configuracoes\u0028\u0029",
+            "name": "carregar_configuracoes",
             "summary": "",
-            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#method___construct"
+            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#method_carregar_configuracoes"
         },                {
             "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003Alistar\u0028\u0029",
             "name": "listar",
@@ -8851,25 +8851,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#method_informar_cliente_integrado"
         },                {
-            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003A\u0024api_url",
-            "name": "api_url",
+            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003A\u0024configuracoes_forca_vendas",
+            "name": "configuracoes_forca_vendas",
             "summary": "",
-            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#property_api_url"
-        },                {
-            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003A\u0024api_chave",
-            "name": "api_chave",
-            "summary": "",
-            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#property_api_chave"
-        },                {
-            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003A\u0024funil_vendas",
-            "name": "funil_vendas",
-            "summary": "",
-            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#property_funil_vendas"
-        },                {
-            "fqsen": "\\Integracao_Next_Forca_Vendas_DAO\u003A\u003A\u0024etapa_funil",
-            "name": "etapa_funil",
-            "summary": "",
-            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#property_etapa_funil"
+            "url": "classes/Integracao-Next-Forca-Vendas-DAO.html#property_configuracoes_forca_vendas"
         },                {
             "fqsen": "\\Item_Imposto_DAO",
             "name": "Item_Imposto_DAO",
@@ -12906,6 +12891,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prospect-DAO.html#method_existe_cnpj"
         },                {
+            "fqsen": "\\Prospect_DAO\u003A\u003Averifica_cnpj\u0028\u0029",
+            "name": "verifica_cnpj",
+            "summary": "",
+            "url": "classes/Prospect-DAO.html#method_verifica_cnpj"
+        },                {
             "fqsen": "\\Prospect_DAO\u003A\u003Agerar_unidade_automatico\u0028\u0029",
             "name": "gerar_unidade_automatico",
             "summary": "",
@@ -14125,6 +14115,21 @@ Search.appendIndex(
             "name": "retornar_atividade_cancelar_posteriores",
             "summary": "",
             "url": "classes/Solicitacao-Atividade-DAO.html#method_retornar_atividade_cancelar_posteriores"
+        },                {
+            "fqsen": "\\Solicitacao_Atividade_DAO\u003A\u003Ainsere_solicitacao_atividade_semaforo\u0028\u0029",
+            "name": "insere_solicitacao_atividade_semaforo",
+            "summary": "",
+            "url": "classes/Solicitacao-Atividade-DAO.html#method_insere_solicitacao_atividade_semaforo"
+        },                {
+            "fqsen": "\\Solicitacao_Atividade_DAO\u003A\u003Aexiste_solicitacao_atividade_semaforo\u0028\u0029",
+            "name": "existe_solicitacao_atividade_semaforo",
+            "summary": "",
+            "url": "classes/Solicitacao-Atividade-DAO.html#method_existe_solicitacao_atividade_semaforo"
+        },                {
+            "fqsen": "\\Solicitacao_Atividade_DAO\u003A\u003Aapagar_solicitacao_atividade_semaforo\u0028\u0029",
+            "name": "apagar_solicitacao_atividade_semaforo",
+            "summary": "",
+            "url": "classes/Solicitacao-Atividade-DAO.html#method_apagar_solicitacao_atividade_semaforo"
         },                {
             "fqsen": "\\Solicitacao_Atividade_DAO\u003A\u003A\u0024sessao_model",
             "name": "sessao_model",
@@ -29475,6 +29480,11 @@ Search.appendIndex(
             "name": "arr_representantes",
             "summary": "",
             "url": "classes/Metas-Vendas-Model.html#property_arr_representantes"
+        },                {
+            "fqsen": "\\Metas_Vendas_Model\u003A\u003A\u0024meta_eventos",
+            "name": "meta_eventos",
+            "summary": "",
+            "url": "classes/Metas-Vendas-Model.html#property_meta_eventos"
         },                {
             "fqsen": "\\Motivo_Perda_Negocio_Model",
             "name": "Motivo_Perda_Negocio_Model",

@@ -1,5 +1,70 @@
 [
     {
+        "versao": "23.59.87",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na listagem de representantes de oportunidades compartilhadas",
+                "referencia": [
+                    "BPM40405"
+                ],
+                "modulo": "CRM",
+                "hash": "c3426743fb2983c883fe0c58dcdfa96e983d071b",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40405"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na duplica\u00e7\u00e3o de atividades ao salvar e enviar",
+                "referencia": [
+                    "BPM40391"
+                ],
+                "modulo": "Processos",
+                "hash": "6cb0ec90961e1b524c80ee2495116964995bc1e9",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40391"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na substitui\u00e7\u00e3o de revis\u00e3o via Home por substituto",
+                "referencia": [
+                    "BPM39703"
+                ],
+                "modulo": "Documentos (GED)",
+                "hash": "d88d4927532f2da9f568c781b6aebb59f9a6afb3",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39703"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na abertura via links do NextBP",
+                "referencia": [
+                    "BPM39436"
+                ],
+                "modulo": "Geral",
+                "hash": "6f275fca28a9eb5f002fd324c6a4760a06087f4f",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39436"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na exibi\u00e7\u00e3o de metas no dashboard de representantes",
+                "referencia": [
+                    "BPM39403"
+                ],
+                "modulo": "CRM",
+                "hash": "54dd029ac548c4f30bff7aa2d483c9f35cab707d",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39403"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Melhoria na Exibi\u00e7\u00e3o do Nome de Arquivos no Hist\u00f3rico de Altera\u00e7\u00f5es",
+                "referencia": [
+                    "BPM39208"
+                ],
+                "modulo": "Processos",
+                "hash": "86bdd3db162f77bbd42f8b8ac5e7c53482a0ceb6",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39208"
+            }
+        ]
+    },
+    {
         "versao": "23.59.86",
         "itens": [
             {

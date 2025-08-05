@@ -1,5 +1,30 @@
 [
     {
+        "versao": "23.59.88",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na exibi\u00e7\u00e3o dos filtros na vis\u00e3o kanban do CRM",
+                "referencia": [
+                    "BPM40426"
+                ],
+                "modulo": "CRM",
+                "hash": "b4e3a556f2083ab26f485eb4fd2983f2cc98c88a",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40426"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na exibi\u00e7\u00e3o de permiss\u00e3o de grupos de formul\u00e1rio",
+                "referencia": [
+                    "BPM40423"
+                ],
+                "modulo": "Processos",
+                "hash": "b4e3a556f2083ab26f485eb4fd2983f2cc98c88a",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40423"
+            }
+        ]
+    },
+    {
         "versao": "23.59.87",
         "itens": [
             {

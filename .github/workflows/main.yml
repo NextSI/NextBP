@@ -407,6 +407,7 @@ jobs:
           username: ${{ secrets[matrix.username_secret] }}
           password: ${{ secrets[matrix.password_secret] }}
           server-dir: ${{ matrix.dir }}
+          dangerous-clean-slate: false,
           exclude: |
             **/.git*
             **/.git*/**

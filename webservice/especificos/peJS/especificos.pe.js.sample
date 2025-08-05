@@ -102,14 +102,7 @@ App.PE.Solicitacao_Atividade_Salvar_Enviar_Depois = function(main, response) {
     // alert_saved(main.atividade.descricao + ' salvo com sucesso');
 
     // Necessário para exibir a janela de confirmação de envio da atividade
-    if (main.solicitacao_atividade.solicitacao.versao_processo.exibir_modal_confirmacao_envio == "S" || main.solicitacao_atividade.solicitacao.versao_processo.exibir_modal_confirmacao_envio === true) {
-        main.libera_download();
-    }else{
-        main.unload();
-        if (main.onconfirm) {
-            main.onconfirm();
-        }
-    }
+    main.libera_download();
 }
 
 App.PE.Login_depois = function() {

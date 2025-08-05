@@ -3,7 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '87ed2a115c119980ee3236b545c35c7c6a31f313',
+        'reference' => 'b703fb1d3835fa1943a62102e240cbdddbc809ca',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         '__root__' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '87ed2a115c119980ee3236b545c35c7c6a31f313',
+            'reference' => 'b703fb1d3835fa1943a62102e240cbdddbc809ca',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -241,15 +241,6 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'league/oauth2-google' => array(
-            'pretty_version' => '4.0.1',
-            'version' => '4.0.1.0',
-            'reference' => '1b01ba18ba31b29e88771e3e0979e5c91d4afe76',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../league/oauth2-google',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
         'maennchen/zipstream-php' => array(
             'pretty_version' => '2.4.0',
             'version' => '2.4.0.0',
@@ -397,8 +388,8 @@
         'psr/cache-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '2.0|3.0',
-                1 => '^1.0',
+                0 => '^1.0',
+                1 => '2.0|3.0',
             ),
         ),
         'psr/clock' => array(
@@ -491,8 +482,8 @@
         'psr/simple-cache-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0|3.0',
-                1 => '^1.0',
+                0 => '^1.0',
+                1 => '1.0|2.0|3.0',
             ),
         ),
         'ralouphie/getallheaders' => array(

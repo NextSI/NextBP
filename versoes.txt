@@ -1,5 +1,40 @@
 [
     {
+        "versao": "24.92.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na exibi\u00e7\u00e3o dos filtros na vis\u00e3o kanban do CRM",
+                "referencia": [
+                    "BPM40426"
+                ],
+                "modulo": "CRM",
+                "hash": "fbc7aad681ad83464aab8ac8a2c51cb6793074f4",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40426"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na exibi\u00e7\u00e3o de permiss\u00e3o de grupos de formul\u00e1rio",
+                "referencia": [
+                    "BPM40423"
+                ],
+                "modulo": "Processos",
+                "hash": "fbc7aad681ad83464aab8ac8a2c51cb6793074f4",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40423"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00f5es na rotina de apontamento e exibi\u00e7\u00e3o de cliente na agenda",
+                "referencia": [
+                    "BPM39682"
+                ],
+                "modulo": "Agenda",
+                "hash": "a63fc0670f17280c77459ec75f123f723fb66142",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39682-1"
+            }
+        ]
+    },
+    {
         "versao": "24.92.1",
         "itens": [
             {

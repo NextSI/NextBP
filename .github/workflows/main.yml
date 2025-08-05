@@ -30,6 +30,8 @@ jobs:
           username: ${{ secrets[matrix.username_secret] }}
           password: ${{ secrets[matrix.password_secret] }}
           server-dir: ${{ matrix.dir }}
+          passive: true
+          dangerous-clean-slate: true
           exclude: |
             **/.git*
             **/.git*/**
@@ -101,6 +103,8 @@ jobs:
           username: ${{ secrets[matrix.username_secret] }}
           password: ${{ secrets[matrix.password_secret] }}
           server-dir: ${{ matrix.dir }}
+          passive: true
+          dangerous-clean-slate: true
           exclude: |
             **/.git*
             **/.git*/**
@@ -254,6 +258,8 @@ jobs:
           username: ${{ secrets[matrix.username_secret] }}
           password: ${{ secrets[matrix.password_secret] }}
           server-dir: ${{ matrix.dir }}
+          passive: true
+          dangerous-clean-slate: true
           exclude: |
             **/.git*
             **/.git*/**
@@ -407,6 +413,8 @@ jobs:
           username: ${{ secrets[matrix.username_secret] }}
           password: ${{ secrets[matrix.password_secret] }}
           server-dir: ${{ matrix.dir }}
+          passive: true
+          dangerous-clean-slate: true
           exclude: |
             **/.git*
             **/.git*/**

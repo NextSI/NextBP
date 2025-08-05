@@ -24,7 +24,7 @@ jobs:
 
       - name: 📂 Sync files ${{ matrix.nome }}
         if: matrix.tipo == 'ftp'
-        uses: ghaithatfeh/FTP-Deploy-Action
+        uses: ghaithatfeh/FTP-Deploy-Action@master
         with:
           server: ${{ secrets[matrix.server] }}
           username: ${{ secrets[matrix.username_secret] }}
@@ -95,7 +95,7 @@ jobs:
 
       - name: 📂 Sync files ${{ matrix.nome }}
         if: matrix.tipo == 'ftp'
-        uses: ghaithatfeh/FTP-Deploy-Action
+        uses: ghaithatfeh/FTP-Deploy-Action@master
         with:
           server: ${{ secrets[matrix.server] }}
           username: ${{ secrets[matrix.username_secret] }}
@@ -248,7 +248,7 @@ jobs:
 
       - name: 📂 Sync files ${{ matrix.nome }}
         if: matrix.tipo == 'ftp'
-        uses: ghaithatfeh/FTP-Deploy-Action
+        uses: ghaithatfeh/FTP-Deploy-Action@master
         with:
           server: ${{ secrets[matrix.server] }}
           username: ${{ secrets[matrix.username_secret] }}
@@ -401,7 +401,7 @@ jobs:
 
       - name: 📂 Sync files ${{ matrix.nome }}
         if: matrix.tipo == 'ftp'
-        uses: ghaithatfeh/FTP-Deploy-Action
+        uses: ghaithatfeh/FTP-Deploy-Action@master
         with:
           server: ${{ secrets[matrix.server] }}
           username: ${{ secrets[matrix.username_secret] }}

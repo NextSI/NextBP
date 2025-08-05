@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.92.3",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na exibi\u00e7\u00e3o do nome do quadro na aba",
+                "referencia": [
+                    "BPM40430"
+                ],
+                "modulo": "Tarefas",
+                "hash": "7dc081ee94f8b47d65f5e5b32e98e187651d4fc9",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40430"
+            }
+        ]
+    },
+    {
         "versao": "24.92.2",
         "itens": [
             {

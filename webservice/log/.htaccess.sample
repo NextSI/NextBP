@@ -6,8 +6,5 @@ deny from all
 # Libera acesso para a Next SI
 allow from 179.174.56.168
 
-# Libera páginas
-<FilesMatch ".*\.(html|js|css|jpg|png|php)$">
-    Order Allow,Deny
-    Allow from all
-</FilesMatch>
+# Bloqueia listagem de arquivos
+# Options -Indexes

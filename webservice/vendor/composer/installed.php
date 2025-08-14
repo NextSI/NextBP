@@ -3,7 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'b302d57995f4e85ad289d8d795dd5aa1649cf90e',
+        'reference' => '87ed2a115c119980ee3236b545c35c7c6a31f313',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         '__root__' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'b302d57995f4e85ad289d8d795dd5aa1649cf90e',
+            'reference' => '87ed2a115c119980ee3236b545c35c7c6a31f313',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -101,9 +101,9 @@
             'dev_requirement' => false,
         ),
         'ezyang/htmlpurifier' => array(
-            'pretty_version' => 'v4.18.0',
-            'version' => '4.18.0.0',
-            'reference' => 'cb56001e54359df7ae76dc522d08845dc741621b',
+            'pretty_version' => 'v4.16.0',
+            'version' => '4.16.0.0',
+            'reference' => '523407fb06eb9e5f3d59889b3978d5bfe94299c8',
             'type' => 'library',
             'install_path' => __DIR__ . '/../ezyang/htmlpurifier',
             'aliases' => array(),
@@ -206,9 +206,9 @@
             ),
         ),
         'laminas/laminas-escaper' => array(
-            'pretty_version' => '2.17.0',
-            'version' => '2.17.0.0',
-            'reference' => 'df1ef9503299a8e3920079a16263b578eaf7c3ba',
+            'pretty_version' => '2.12.0',
+            'version' => '2.12.0.0',
+            'reference' => 'ee7a4c37bf3d0e8c03635d5bddb5bb3184ead490',
             'type' => 'library',
             'install_path' => __DIR__ . '/../laminas/laminas-escaper',
             'aliases' => array(),
@@ -238,6 +238,15 @@
             'reference' => '160d6274b03562ebeb55ed18399281d8118b76c8',
             'type' => 'library',
             'install_path' => __DIR__ . '/../league/oauth2-client',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'league/oauth2-google' => array(
+            'pretty_version' => '4.0.1',
+            'version' => '4.0.1.0',
+            'reference' => '1b01ba18ba31b29e88771e3e0979e5c91d4afe76',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../league/oauth2-google',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -388,8 +397,8 @@
         'psr/cache-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '^1.0',
-                1 => '2.0|3.0',
+                0 => '2.0|3.0',
+                1 => '^1.0',
             ),
         ),
         'psr/clock' => array(
@@ -482,8 +491,8 @@
         'psr/simple-cache-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '^1.0',
-                1 => '1.0|2.0|3.0',
+                0 => '1.0|2.0|3.0',
+                1 => '^1.0',
             ),
         ),
         'ralouphie/getallheaders' => array(

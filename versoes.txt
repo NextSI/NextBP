@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.93.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Corre\u00e7\u00e3o na Coluna \"Modifica\u00e7\u00e3o\"",
+                "referencia": [
+                    "BPM40501"
+                ],
+                "modulo": "Documentos",
+                "hash": "0fc48b79e534957b859cc1493bae90458dbeca4a",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40501"
+            }
+        ]
+    },
+    {
         "versao": "24.92.3",
         "itens": [
             {

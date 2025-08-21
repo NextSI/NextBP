@@ -1,0 +1,4 @@
+<?php
+
+define('WEBSOCKET_PORT', 8080);
+define('WEBSERVICE_URL', 'https://[endereço do BP]/webservice/index.php/');

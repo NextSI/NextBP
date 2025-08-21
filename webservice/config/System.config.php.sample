@@ -124,6 +124,10 @@ error_reporting(0);
 // Exibe os erros das consultas MySQL na tela do usuário (não afeta o ambiente de desenvolvimento)
 define('SHOW_SQL_ERRORS', false);
 
+// URL do WebSocket que será utilizada pelo WebService e pelo Frontend
+// define('WEBSOCKET_URL_WEBSERVICE', 'ws://dominio:3002');
+// define('WEBSOCKET_URL_FRONT', 'ws://dominio:3002');
+
 //
 // MYSQL
 //

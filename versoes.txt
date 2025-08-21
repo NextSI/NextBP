@@ -1,5 +1,50 @@
 [
     {
+        "versao": "24.94.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Adicionado ao menu de contexto de pastas a op\u00e7\u00e3o \"Abrir em nova aba\"",
+                "referencia": [
+                    "BPM40495"
+                ],
+                "modulo": "Documentos",
+                "hash": "cbc8c2108e5d29536497dae8049c455afb82f5a5",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40495"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na tela Job Scheduler ao exibir o bot\u00e3o \"Limpar Sem\u00e1foro\"",
+                "referencia": [
+                    "BPM40357"
+                ],
+                "modulo": "Configura\u00e7\u00f5es",
+                "hash": "8c8987f4b29ff4f5443ee25486eb76784be14485",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40357"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na exibi\u00e7\u00e3o do formul\u00e1rio personalizado para preenchimento durante inclus\u00e3o de projetos",
+                "referencia": [
+                    "BPM40306"
+                ],
+                "modulo": "Projetos",
+                "hash": "13b62503e074b04ec3b76a5c9428dafa7728e035",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40306"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na Valida\u00e7\u00e3o de Campos Obrigat\u00f3rios",
+                "referencia": [
+                    "BPM40063"
+                ],
+                "modulo": "Processos",
+                "hash": "d58235120d0bc737dea1b8430a74bef2f672dbfb",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40063-1"
+            }
+        ]
+    },
+    {
         "versao": "24.92.4",
         "itens": [
             {

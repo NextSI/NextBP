@@ -9011,6 +9011,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Job-Scheduler-DAO.html#method_existe"
         },                {
+            "fqsen": "\\Job_Scheduler_DAO\u003A\u003Aexiste_job_em_execucao\u0028\u0029",
+            "name": "existe_job_em_execucao",
+            "summary": "",
+            "url": "classes/Job-Scheduler-DAO.html#method_existe_job_em_execucao"
+        },                {
             "fqsen": "\\Job_Scheduler_DAO\u003A\u003Ainsert\u0028\u0029",
             "name": "insert",
             "summary": "",
@@ -15606,6 +15611,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Usuario-DAO.html#method_dados_basicos_usuario"
         },                {
+            "fqsen": "\\Usuario_DAO\u003A\u003Adados_basicos_usuario_token\u0028\u0029",
+            "name": "dados_basicos_usuario_token",
+            "summary": "",
+            "url": "classes/Usuario-DAO.html#method_dados_basicos_usuario_token"
+        },                {
             "fqsen": "\\Usuario_DAO\u003A\u003Aget_usuario_by_chave_ics\u0028\u0029",
             "name": "get_usuario_by_chave_ics",
             "summary": "Retorna\u0020usu\u00E1rio\u0020pela\u0020chave\u0020do\u0020ics",
@@ -16075,6 +16085,21 @@ Search.appendIndex(
             "name": "votar",
             "summary": "",
             "url": "classes/Votacao-DAO.html#method_votar"
+        },                {
+            "fqsen": "\\WebSocket_DAO",
+            "name": "WebSocket_DAO",
+            "summary": "",
+            "url": "classes/WebSocket-DAO.html"
+        },                {
+            "fqsen": "\\WebSocket_DAO\u003A\u003Aconectar\u0028\u0029",
+            "name": "conectar",
+            "summary": "",
+            "url": "classes/WebSocket-DAO.html#method_conectar"
+        },                {
+            "fqsen": "\\WebSocket_DAO\u003A\u003Anotificar\u0028\u0029",
+            "name": "notificar",
+            "summary": "",
+            "url": "classes/WebSocket-DAO.html#method_notificar"
         },                {
             "fqsen": "\\Agenda_Email_CLiente_Mail",
             "name": "Agenda_Email_CLiente_Mail",

@@ -16,7 +16,8 @@
         "pear/http_request2": "^2.5",
         "firebase/php-jwt": "^6.3",
         "thenetworg/oauth2-azure": "^2.2",
-        "webklex/php-imap": "^5.5"
+        "webklex/php-imap": "^5.5",
+        "ratchet/pawl": "^0.4.3"
     },
     "config": {
         "platform-check": false

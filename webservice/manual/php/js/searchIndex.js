@@ -23551,6 +23551,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/D4Sign-Model.html#constant_FINALIZADO"
         },                {
+            "fqsen": "\\D4Sign_Model\u003A\u003AEMAIL_NAO_ENVIADO",
+            "name": "EMAIL_NAO_ENVIADO",
+            "summary": "",
+            "url": "classes/D4Sign-Model.html#constant_EMAIL_NAO_ENVIADO"
+        },                {
             "fqsen": "\\D4Sign_Model\u003A\u003ACANCELADO",
             "name": "CANCELADO",
             "summary": "",
@@ -25355,6 +25360,11 @@ Search.appendIndex(
             "name": "OBSERVADOR",
             "summary": "",
             "url": "classes/Documento-Revisao-Assinatura-Signatario-Model.html#constant_OBSERVADOR"
+        },                {
+            "fqsen": "\\Documento_Revisao_Assinatura_Signatario_Model\u003A\u003AEMAIL_NAO_ENVIADO",
+            "name": "EMAIL_NAO_ENVIADO",
+            "summary": "",
+            "url": "classes/Documento-Revisao-Assinatura-Signatario-Model.html#constant_EMAIL_NAO_ENVIADO"
         },                {
             "fqsen": "\\Documento_Revisao_Assinatura_Signatario_Model\u003A\u003A\u0024documento_id",
             "name": "documento_id",
@@ -34875,6 +34885,21 @@ Search.appendIndex(
             "name": "padrao",
             "summary": "",
             "url": "classes/Servidor-LDAP-Model.html#property_padrao"
+        },                {
+            "fqsen": "\\Servidor_LDAP_Model\u003A\u003A\u0024dominio",
+            "name": "dominio",
+            "summary": "",
+            "url": "classes/Servidor-LDAP-Model.html#property_dominio"
+        },                {
+            "fqsen": "\\Servidor_LDAP_Model\u003A\u003A\u0024usuario_ldap",
+            "name": "usuario_ldap",
+            "summary": "",
+            "url": "classes/Servidor-LDAP-Model.html#property_usuario_ldap"
+        },                {
+            "fqsen": "\\Servidor_LDAP_Model\u003A\u003A\u0024senha_ldap",
+            "name": "senha_ldap",
+            "summary": "",
+            "url": "classes/Servidor-LDAP-Model.html#property_senha_ldap"
         },                {
             "fqsen": "\\Solicitacao_Model",
             "name": "Solicitacao_Model",

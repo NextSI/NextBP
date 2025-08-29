@@ -1,5 +1,20 @@
 [
     {
+        "versao": "23.59.90",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na valida\u00e7\u00e3o de apontamentos pendentes de chamados",
+                "referencia": [
+                    "BPM40635"
+                ],
+                "modulo": "Chamados",
+                "hash": "868166aee3fe7924033ae520b5623309639ea99a",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40635"
+            }
+        ]
+    },
+    {
         "versao": "23.59.89",
         "itens": [
             {

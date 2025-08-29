@@ -1,5 +1,20 @@
 [
     {
+        "versao": "23.59.89",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na exibi\u00e7\u00e3o da situa\u00e7\u00e3o de assinatura de documentos D4Sign",
+                "referencia": [
+                    "BPM40408"
+                ],
+                "modulo": "Documentos (GED)",
+                "hash": "043ebb14c53d86ef75f8199c73fd6dc4a91053bf",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40408"
+            }
+        ]
+    },
+    {
         "versao": "23.59.88",
         "itens": [
             {

@@ -22526,6 +22526,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/D4Sign-Model.html#constant_FINALIZADO"
         },                {
+            "fqsen": "\\D4Sign_Model\u003A\u003AEMAIL_NAO_ENVIADO",
+            "name": "EMAIL_NAO_ENVIADO",
+            "summary": "",
+            "url": "classes/D4Sign-Model.html#constant_EMAIL_NAO_ENVIADO"
+        },                {
             "fqsen": "\\D4Sign_Model\u003A\u003ACANCELADO",
             "name": "CANCELADO",
             "summary": "",
@@ -24015,6 +24020,11 @@ Search.appendIndex(
             "name": "REJEITADA",
             "summary": "",
             "url": "classes/Documento-Revisao-Assinatura-Signatario-Model.html#constant_REJEITADA"
+        },                {
+            "fqsen": "\\Documento_Revisao_Assinatura_Signatario_Model\u003A\u003AEMAIL_NAO_ENVIADO",
+            "name": "EMAIL_NAO_ENVIADO",
+            "summary": "",
+            "url": "classes/Documento-Revisao-Assinatura-Signatario-Model.html#constant_EMAIL_NAO_ENVIADO"
         },                {
             "fqsen": "\\Documento_Revisao_Assinatura_Signatario_Model\u003A\u003A\u0024documento_id",
             "name": "documento_id",

@@ -1,5 +1,20 @@
 [
     {
+        "versao": "23.59.91",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na importa\u00e7\u00e3o de arquivo Excel de Clientes e Organiza\u00e7\u00f5es",
+                "referencia": [
+                    "BPM40661"
+                ],
+                "modulo": "Geral",
+                "hash": "a8b0b6281fbe9d9e2156edfd1961296c840e961c",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40661"
+            }
+        ]
+    },
+    {
         "versao": "23.59.90",
         "itens": [
             {

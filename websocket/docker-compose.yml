@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  bp_websocket:
+    build: .
+    ports:
+      - 8080:8080
+    restart: on-failure
+  bp_websocket_ssl:
+    image: nginx
+    ports:
+      - 8081:8080
+    volumes:
+      - <caminho/para/seu/config>:/etc/nginx
+      - <caminho/para/seus/certificados>:/etc/ssl/private

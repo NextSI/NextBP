@@ -827,7 +827,8 @@
                 "telefone3": "Telefone 3",
                 "telefone4": "Telefone 4",
                 "entidade": "Entidade",
-                "ultimo_acesso": "Último Acesso"
+                "ultimo_acesso": "Último Acesso",
+                "servidor_ldap_nome": "Servidor LDAP"
             },
             "botoes_cabecalho": {
                 "hint_usuario": "Adicionar usuário",

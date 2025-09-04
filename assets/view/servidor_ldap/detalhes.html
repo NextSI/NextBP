@@ -91,25 +91,6 @@
                                     </div>
                                 </div>
                             </div>
-                                
-    
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="edt_base">Base DN para consulta de usuários</label>
-                                        <input id="edt_base" type="text" class="form-control edt_base" placeholder="Exemplo: DC=corp,DC=nextsi,DC=com,DC=br" maxlength="150">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="edt_filtro">Filtro para consulta de usuários</label>
-                                        <textarea id="edt_filtro" class="form-control edt_filtro" maxlength="200" rows="3"></textarea>
-                                    </div>
-                                </div>
-                            </div>
 
                             <div class="row">
                                 <div class="col-md-3 div_dominio">
@@ -134,7 +115,7 @@
                                 </div>
 
                                 <div class="col-md-3">
-                                    <div class="form-group">
+                                    <div class="form-group" style="text-align: right;">
                                         <br/>
                                         <button type="button" class="btn_testar_conexao btn btn-primary">
                                             <span class="glyphicon glyphicon-send"></span> Testar Conexão
@@ -142,7 +123,34 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="edt_base">Base DN para consulta de usuários</label>
+                                        <input id="edt_base" type="text" class="form-control edt_base" placeholder="Exemplo: DC=corp,DC=nextsi,DC=com,DC=br" maxlength="150">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="edt_filtro">Filtro para consulta de usuários</label>
+                                        <textarea id="edt_filtro" class="form-control edt_filtro" maxlength="200" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-9 hidden-xs"></div>
+                                <div class="col-md-3" style="text-align: right;">
+                                    <button type="button" class="btn_testar_filtro btn btn-primary">
+                                        <span class="glyphicon glyphicon-send"></span> Testar Filtro
+                                    </button> 
+                                </div>
+                            </div>
+
                         </div> 
                         
                     </div>

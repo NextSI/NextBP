@@ -138,11 +138,11 @@ PE::add('itens_excluir_antes', function(&$itens_model) { ... });
 PE::add('itens_excluir_depois', function($itens_model) { ... });
 
 //RD Station
-PE::add('rd_station_salvar_oportunidade_antes', function($oportunidade_model, $leads));
-PE::add('rd_station_salvar_oportunidade_depois', function($oportunidade_model, $leads)) ; 
+PE::add('rd_station_salvar_oportunidade_antes', function($oportunidade_model, $lead));
+PE::add('rd_station_salvar_oportunidade_depois', function($oportunidade_model, $lead)) ; 
 
 //Integração Next Força de Vendas
-PE::add('integracao_next_forca_vendas_salvar_oportunidade_antes', function($oportunidade_model));
-PE::add('integracao_next_forca_vendas_salvar_oportunidade_depois', function($oportunidade_model)) ; 
+PE::add('integracao_next_forca_vendas_salvar_oportunidade_antes', function($oportunidade_model, $lead));
+PE::add('integracao_next_forca_vendas_salvar_oportunidade_depois', function($oportunidade_model, $lead)) ; 
 
 */

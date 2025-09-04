@@ -1,5 +1,50 @@
 [
     {
+        "versao": "24.94.5",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na importa\u00e7\u00e3o de arquivo Excel de Clientes e Organiza\u00e7\u00f5es",
+                "referencia": [
+                    "BPM40661"
+                ],
+                "modulo": "Geral",
+                "hash": "cecb89553977951468c88940ad1934421497bd3e",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40661"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na valida\u00e7\u00e3o de obrigatoriedade em campos do tipo anexo em formul\u00e1rios",
+                "referencia": [
+                    "BPM40645"
+                ],
+                "modulo": "Processo",
+                "hash": "9cfeedb62c00b4ed57cff8dd19a45cfd18f4d971",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40645"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste em obrigatoriedade do campo Dom\u00ednio no cadastro de Servidores LDAP",
+                "referencia": [
+                    "BPM40577"
+                ],
+                "modulo": "Geral",
+                "hash": "5a7b354b91e49716ba056cdd52f4e90b36c626c1",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40577"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na tela de edi\u00e7\u00e3o de usu\u00e1rios e v\u00ednculo com LDAP",
+                "referencia": [
+                    "BPM40562"
+                ],
+                "modulo": "Geral",
+                "hash": "5a7b354b91e49716ba056cdd52f4e90b36c626c1",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40562"
+            }
+        ]
+    },
+    {
         "versao": "24.94.4",
         "itens": [
             {

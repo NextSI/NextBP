@@ -70,7 +70,29 @@
                     </div>
                 </div>
 
-                <div class="row"> 
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Usuário LDAP</label>
+                            <div class="input-group">
+                                <select id="cbo_usuario_ldap" class="form-control selectpicker cbo_usuario_ldap show-tick" data-live-search="true" title="Não">
+                                </select>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn_limpar btn-default" title="Remover vínculo com usuário de servidor LDAP">
+                                        <span class="fa fa-trash"></span>
+                                    </button>
+                                </div>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn_listar_usuarios_ldap btn btn-default" title="Conectar em servidor LDAP para carregar usuários">
+                                        <span class="fa fa-cloud-download-alt"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                                                     
+                </div>
+
+                <div class="row div_username_senha"> 
                     <div class="col-md-12 col-lg-6">   
                         <div class="form-group">
                             <label for="modal_usuario_edt_username">Usuário <span class="campo_obrigatorio" style="color:red">*</span></label>
@@ -93,31 +115,12 @@
                     </div>
                 </div>
                 <div class="row"> 
-                    <div class="col-md-6">   
+                    <div class="col-md-12">   
                         <div class="form-group">
                             <label for="modal_usuario_edt_email">E-mail</label>
                             <input type="text" class="edt_email form-control" maxlength="150" autocomplete="false">
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label>Usuário LDAP</label>
-                            <div class="input-group">
-                                <select id="cbo_usuario_ldap" class="form-control selectpicker cbo_usuario_ldap show-tick" data-live-search="true" title="Vincular Usuário LDAP">
-                                </select>
-                                <div class="input-group-btn">
-                                    <button type="button" class="btn btn_limpar btn-default">
-                                        <span class="fa fa-trash"></span>
-                                    </button>
-                                </div>
-                                <div class="input-group-btn">
-                                    <button type="button" class="btn_listar_usuarios_ldap btn btn-default">
-                                        <span class="fa fa-cloud-download-alt"></span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                                                     
+                    </div>                                           
                 </div>
                 <div class="row">
                     <div class="col-md-6">

@@ -9,6 +9,12 @@
                 <label>Servidor</label>
                 <select id="cbo_servidor_ldap" class="cbo_servidor_ldap form-control"></select>
                 <br>
+                <label for="edt_base">Base DN para consulta de usuários</label>
+                <input id="edt_base" type="text" class="form-control edt_base" placeholder="Exemplo: DC=corp,DC=nextsi,DC=com,DC=br" maxlength="150">
+                <br>
+                <label for="edt_filtro">Filtro para consulta de usuários</label>
+                <textarea id="edt_filtro" class="form-control edt_filtro" maxlength="200" rows="3"></textarea>
+                <br>
                 <label>Usuário</label>
                 <input type="text" name="username" class="edt_usuario_ldap form-control" placeholder="Usuário" translate-placeholder="login.usuario_ldap" maxlength="50">
                 <br>

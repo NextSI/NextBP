@@ -7,25 +7,34 @@ Primeiro passo é configurar o servidor LDAP.
 ![]([PATH_IMG]/ldap_configuracao.png)
 
 * **Nome:** Informe um nome para o servidor que irá configurar.
+* **Tipo de Integração:** Você pode escolher se irá utilzar o Active Directory do Windows ou o OpenLDAP.
 * **Endereço:** Informe o endereço para acessar o servidor que se encontra o servidor com o LDAP.
 * **Porta:** Informe a porta do servidor (o Padrão é 389, e em servidores com LDAPS costuma-se utilizar 636)
 * **SSL:** Habilite para conexão LDAPS
 * **Dominio:** Informe o dominio do servidor LDAP
-* **Filtro da Conexão:** Você pode alterar o filtro da conexão neste campo. Observação: caso não tenha conhecimento em LDAP recomendo que você mantenha o padrão "(&(objectClass=user)(objectCategory=person)(!userAccountControl:1.2.840.113556.1.4.803:=2))" sem aspas, que irá trazer todos os usuários e todos os grupos.
-* **Tipo de Integração:** Você pode escolher se irá utilzar o Active Directory do Windows ou o OpenLDAP.
-* **Base DN:** Você pode pegar está informação no Active Directory, conforme imagem abaixo:
+* **Filtro para consulta de usuários:** Você pode alterar o filtro da conexão neste campo. Observação: caso não tenha conhecimento em LDAP recomendo que você mantenha o padrão "(&(objectClass=user)(objectCategory=person)(!userAccountControl:1.2.840.113556.1.4.803:=2))" sem aspas, que irá trazer todos os usuários e todos os grupos.
+* **Base DN para consulta de usuários:** Você pode pegar está informação no Active Directory, conforme imagem abaixo:
 
 ![]([PATH_IMG]/ldap_base_dn.png)
 
 ## Testando a Conexão
 
-Para testar a conexão, clique no botão "Testar Conexão", informe um login e senha do LDAP válido no servidor configurado.
-Caso a configuração esteja correta será exibido a mensagem, conforme imagem abaixo:
+Após informar os dados de conexão do servidor LDAP, clique no botão "Testar Conexão".
 
-![]([PATH_IMG]/ldap_validar_conexao.png)
+Estas são as possíveis mensagens de retorno:
 
-Caso o usuário ou senha do LDAP informado não seja válido, será informado uma mensagem de senha inválida.
-Porém caso as configurações do LDAP não esteja correta, a mensagem de senha inválida poderá demorar, pois não houve sucesso em conectar com o LDAP.
+* Usuário e/ou senha inválido(s)
+* Conexão realizada com sucesso
+* Não foi possível conectar ao servidor LDAP (ldap_bind): O endereço do servidor ou porta estão inválidos. Outra possibilidade é de ser obrigatório de utilizar SSL para conectar-se ao servidor LDAP.
+
+## Testando o Filtro
+
+Clique no botão "Testar Filtro" para que a conexão seja testada e uma consulta com a "Base DN" e "Filtro" seja executada no servidor LDAP.
+
+Estas são as possíveis mensagens de retorno:
+
+* Conexão realizada com sucesso. O filtro retornou XXX entradas. (ldap_get_entries)
+* Erro ao realizar consulta no servidor LDAP. Confira o "Base DN" e "Filtro" informados. (ldap_search)
 
 ## Requisitos Técnicos
 
@@ -52,9 +61,10 @@ TLS_REQCERT never
 
 ## Importando os Usuários do LDAP
 
-No menu principal, clique em "Importação de Usuários", será solicitado um servidor (que configuramos no item anterior) um usuário e senha válido do LDAP no servidor que queremos importar os usuários, conforme imagem abaixo:
+No menu principal, clique em "Importação de Usuários", será solicitado um servidor (que configuramos no item anterior) um usuário e senha válido do LDAP no servidor que queremos importar os usuários. Também será possível modificar a "Base DN" e "Filtros" para listagem de registros (usuários).
 
 ![]([PATH_IMG]/ldap_importacao_autenticar.png)
+
 
 ### Considerações
 
@@ -77,7 +87,7 @@ Não será possivel importar os usuários sem essas informações.
 
 ![]([PATH_IMG]/ldap_importacao_configuracoes.png)
 
-Em seguida, clique em "Confirmar" será exibido a mensagem abaixo:
+Em seguida, clique em "Confirmar" será exibido a mensagem "Deseja aplicar as alterações à todos os usuários?".
 
 ![]([PATH_IMG]/ldap_importacao_aplicar_alteracoes.png)
 

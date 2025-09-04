@@ -37526,6 +37526,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Usuario-Model.html#property_chave_ics"
         },                {
+            "fqsen": "\\Usuario_Model\u003A\u003A\u0024vinculo_usuario_bp",
+            "name": "vinculo_usuario_bp",
+            "summary": "",
+            "url": "classes/Usuario-Model.html#property_vinculo_usuario_bp"
+        },                {
             "fqsen": "\\Usuario_Model\u003A\u003A\u0024ead_plataforma_aluno_id",
             "name": "ead_plataforma_aluno_id",
             "summary": "",

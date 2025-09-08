@@ -1,1 +1,6 @@
+/**
+ * Next Business Process
+ * www.nextsi.com.br
+ * @copyright Copyright © 2014-2020 Next Soluções Inteligentes
+ */
 define([],function(){return function(a){"use strict";var t=this;this.html_id=a,this.dialog=$("#"+this.html_id),this.title=App.lang.tarefa.titulo_quadro,this.dx_listagem_quadro=this.dialog.find(".dx_listagem_quadro"),this.dataGrid=null,this.listar=function(){var a=App.get_parametro_usuario("tarefas");t.dataGrid=dx_Listagem_Padrao({div_html:t.dx_listagem_quadro,coluna_chave:"id",colunas:dx_Tarefa_Quadro_Colunas(t),url_params:{listar_todos_quadros:a.listar_todos_quadros},toolbar:[dx_Tarefa_Quadro_Btn_Novo(t),dx_Tarefa_Quadro_Btn_Listar_Todos(t)],datasource:WS_URI+"tarefa_quadro/listar/",nome:this.title,nome_parametro_usuario:"listagem_quadros",editing_mode:dx_Tarefa_Quadro_Editing_Mode(),funcao_botao_salvar:dx_Tarefa_Quadro_Funcao_Salvar(t),on_loaded:dx_Tarefa_Quadro_Funcao_OnLoaded(t),diferenca_altura:46})},this.unload=function(){View.unload(this.html_id)},this.listar()}});

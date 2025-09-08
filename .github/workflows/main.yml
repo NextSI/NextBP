@@ -35,6 +35,7 @@ jobs:
             **/.git*/**
             webservice/especificos_
             webservice/especificos_/**
+            webservice/manual/php/**
         
       - name: 📂 Sync via SFTP ${{ matrix.nome }}
         if: matrix.tipo == 'sftp'
@@ -106,6 +107,7 @@ jobs:
             **/.git*/**
             webservice/especificos_
             webservice/especificos_/**
+            webservice/manual/php/**
         
       - name: 📂 Sync via SFTP ${{ matrix.nome }}
         if: matrix.tipo == 'sftp'
@@ -259,6 +261,7 @@ jobs:
             **/.git*/**
             webservice/especificos_
             webservice/especificos_/**
+            webservice/manual/php/**
         
       - name: 📂 Sync via SFTP ${{ matrix.nome }}
         if: matrix.tipo == 'sftp'
@@ -412,6 +415,7 @@ jobs:
             **/.git*/**
             webservice/especificos_
             webservice/especificos_/**
+            webservice/manual/php/**
         
       - name: 📂 Sync via SFTP ${{ matrix.nome }}
         if: matrix.tipo == 'sftp'

@@ -159,6 +159,16 @@ jobs:
 
           echo "✅ Deploy e atualização do banco de dados realizados com sucesso para ${{ matrix.nome }}"
 
+      - name: 📂 PHPDoc ${{ matrix.nome }}
+        if: matrix.tipo == 'ftp'
+        uses: ghaithatfeh/FTP-Deploy-Action@master
+        with:
+          server: ${{ secrets[matrix.server] }}
+          username: ${{ secrets[matrix.username_secret] }}
+          password: ${{ secrets[matrix.password_secret] }}
+          server-dir: ${{ matrix.dir }}/webservice/manual/php/
+          local-dir: './webservice/manual/php/'
+
   deploy_homolog:
     runs-on: ubuntu-latest
     needs: [deploy_next_prod]
@@ -313,6 +323,16 @@ jobs:
 
           echo "✅ Deploy e atualização do banco de dados realizados com sucesso para ${{ matrix.nome }}"
   
+      - name: 📂 PHPDoc ${{ matrix.nome }}
+        if: matrix.tipo == 'ftp'
+        uses: ghaithatfeh/FTP-Deploy-Action@master
+        with:
+          server: ${{ secrets[matrix.server] }}
+          username: ${{ secrets[matrix.username_secret] }}
+          password: ${{ secrets[matrix.password_secret] }}
+          server-dir: ${{ matrix.dir }}/webservice/manual/php/
+          local-dir: './webservice/manual/php/'
+
   deploy_prod:
     runs-on: ubuntu-latest
     needs: [deploy_homolog]
@@ -466,3 +486,13 @@ jobs:
           fi
 
           echo "✅ Deploy e atualização do banco de dados realizados com sucesso para ${{ matrix.nome }}"
+
+      - name: 📂 PHPDoc ${{ matrix.nome }}
+        if: matrix.tipo == 'ftp'
+        uses: ghaithatfeh/FTP-Deploy-Action@master
+        with:
+          server: ${{ secrets[matrix.server] }}
+          username: ${{ secrets[matrix.username_secret] }}
+          password: ${{ secrets[matrix.password_secret] }}
+          server-dir: ${{ matrix.dir }}/webservice/manual/php/
+          local-dir: './webservice/manual/php/'

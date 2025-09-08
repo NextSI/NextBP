@@ -32801,6 +32801,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Processo-Model.html#property_esconder_grupos_campos_vazios"
         },                {
+            "fqsen": "\\Processo_Model\u003A\u003A\u0024ocultar_mensagem_campos_vazios",
+            "name": "ocultar_mensagem_campos_vazios",
+            "summary": "",
+            "url": "classes/Processo-Model.html#property_ocultar_mensagem_campos_vazios"
+        },                {
             "fqsen": "\\Processo_Model\u003A\u003A\u0024excluir_solicitacoes_em_branco",
             "name": "excluir_solicitacoes_em_branco",
             "summary": "",
@@ -35810,6 +35815,11 @@ Search.appendIndex(
             "name": "esconder_grupos_campos_vazios",
             "summary": "",
             "url": "classes/Solicitacao-Atividade-Model.html#property_esconder_grupos_campos_vazios"
+        },                {
+            "fqsen": "\\Solicitacao_Atividade_Model\u003A\u003A\u0024ocultar_mensagem_campos_vazios",
+            "name": "ocultar_mensagem_campos_vazios",
+            "summary": "",
+            "url": "classes/Solicitacao-Atividade-Model.html#property_ocultar_mensagem_campos_vazios"
         },                {
             "fqsen": "\\Solicitacao_Atividade_Model\u003A\u003A\u0024usuario_responsavel_id",
             "name": "usuario_responsavel_id",

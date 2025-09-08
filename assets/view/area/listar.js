@@ -1,1 +1,6 @@
+/**
+ * Next Business Process
+ * www.nextsi.com.br
+ * @copyright Copyright © 2014-2020 Next Soluções Inteligentes
+ */
 define([],function(){return function(a){"use strict";var t=this;this.html_id=a,this.dialog=$("#"+this.html_id),this.title=App.lang.area.area,this.dx_listagem=this.dialog.find(".dx_listagem"),this.dataGrid=null,this.listar=function(){t.dataGrid=dx_Listagem_Padrao({div_html:t.dx_listagem,coluna_chave:"id",colunas:dx_Area_Colunas(t),toolbar:[dx_Area_Btn_Novo(t)],datasource:WS_URI+"area/listar/",nome:this.title,nome_parametro_usuario:"listagem_areas",diferenca_altura:42})},this.unload=function(){View.unload(this.html_id)},this.listar()}});

@@ -11,4 +11,5 @@ Versões beta/homologação para testes não fazem parte deste repositório.
 * Correções
 
 # Instalação
-* [Debian 9](debian9.md)
+* [Informações Técnicas](manuais/informacoes_tecnicas.md)
+* [Debian 9](manuais/instalacao/debian9.md)

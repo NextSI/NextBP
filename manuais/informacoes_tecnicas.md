@@ -103,4 +103,4 @@ Para um melhor desempenho nas operações de leitura/escrita, recomendamos o uso
 
 --------
 
-Agora que você conhece os requisitos para instalar o Next BP, [veja um exemplo de instalação da em um servidor Linux](manuais/instalacao/debian9.md).
+Agora que você conhece os requisitos para instalar o Next BP, [veja um exemplo de instalação da em um servidor Linux](instalacao/debian9.md).

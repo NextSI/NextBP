@@ -1,0 +1,32 @@
+
+
+App.PE.Oportunidade_Itens_onInitNewRow = function(e) {
+    
+}
+
+App.PE.Oportunidade_Itens_onEditingStart = function(e) {
+    
+}
+
+App.PE.Oportunidade_Itens_onRowUpdated = function(e) {
+    
+}
+
+App.PE.Oportunidade_Itens_onRowInserted = function(e) {
+    
+}
+
+App.PE.Oportunidade_Itens_onRowRemoved = function(e) {
+    
+}
+
+App.PE.Oportunidade_Itens_onRowUpdating = function(e) {
+    
+}
+
+App.PE.Oportunidade_Itens_onRowPrepared = function(e) {
+    
+}
+
+
+

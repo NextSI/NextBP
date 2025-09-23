@@ -1,5 +1,40 @@
 [
     {
+        "versao": "24.96.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Leiaute dos formul\u00e1rios personalizados",
+                "referencia": [
+                    "BPM40791"
+                ],
+                "modulo": "Geral",
+                "hash": "a0f39e581f0a0997154f900ca5a14ada6dcb79a8",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40791"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Implementado visualizador de PDF embutido",
+                "referencia": [
+                    "BPM40670"
+                ],
+                "modulo": "Geral",
+                "hash": "c862a6c06b2c9127d62230a8620becd7078479c1",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40670"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Altera\u00e7\u00e3o da listagem de Itens da Oportunidade para o formato Grid.",
+                "referencia": [
+                    "BPM38317"
+                ],
+                "modulo": "CRM",
+                "hash": "294226751d7bc9ab0af323d4e320f42170fcbf18",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38317"
+            }
+        ]
+    },
+    {
         "versao": "24.95.1",
         "itens": [
             {

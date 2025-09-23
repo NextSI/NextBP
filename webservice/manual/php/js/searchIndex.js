@@ -17591,6 +17591,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Apontamento-Despesas-Model.html#property_tecnico_id"
         },                {
+            "fqsen": "\\Apontamento_Despesas_Model\u003A\u003A\u0024nome",
+            "name": "nome",
+            "summary": "",
+            "url": "classes/Apontamento-Despesas-Model.html#property_nome"
+        },                {
             "fqsen": "\\Apontamento_Despesas_Model\u003A\u003A\u0024cliente_nome",
             "name": "cliente_nome",
             "summary": "",
@@ -17605,6 +17610,11 @@ Search.appendIndex(
             "name": "sugerir_despesas_no_apontamento_atividades",
             "summary": "",
             "url": "classes/Apontamento-Despesas-Model.html#property_sugerir_despesas_no_apontamento_atividades"
+        },                {
+            "fqsen": "\\Apontamento_Despesas_Model\u003A\u003A\u0024projeto_sugerir_despesas_no_apontamento_atividades",
+            "name": "projeto_sugerir_despesas_no_apontamento_atividades",
+            "summary": "",
+            "url": "classes/Apontamento-Despesas-Model.html#property_projeto_sugerir_despesas_no_apontamento_atividades"
         },                {
             "fqsen": "\\Apontamento_Projeto_Model",
             "name": "Apontamento_Projeto_Model",
@@ -38040,6 +38050,11 @@ Search.appendIndex(
             "name": "WS_PARAMS_BASE64",
             "summary": "",
             "url": "namespaces/default.html#constant_WS_PARAMS_BASE64"
+        },                {
+            "fqsen": "\\FORCAR_VISUALIZADOR_PDF_EMBUTIDO",
+            "name": "FORCAR_VISUALIZADOR_PDF_EMBUTIDO",
+            "summary": "",
+            "url": "namespaces/default.html#constant_FORCAR_VISUALIZADOR_PDF_EMBUTIDO"
         },                {
             "fqsen": "\\HTTP_RESPONSE_CODE_500",
             "name": "HTTP_RESPONSE_CODE_500",

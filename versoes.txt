@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.96.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na prioriza\u00e7\u00e3o de respons\u00e1veis em atividades de solicita\u00e7\u00e3o",
+                "referencia": [
+                    "BPM40567"
+                ],
+                "modulo": "Processos",
+                "hash": "866cc4b9bfe780c18b4126d1b4e429a369edd545",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40567"
+            }
+        ]
+    },
+    {
         "versao": "24.96.1",
         "itens": [
             {

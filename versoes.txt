@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.97.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Melhorias nas Listagens e Detalhes de Projetos e Atividades",
+                "referencia": [
+                    "BPM40093"
+                ],
+                "modulo": "Projetos",
+                "hash": "8cd4292a4c4d42d7ef52d26f29e906377da53270",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40093"
+            }
+        ]
+    },
+    {
         "versao": "24.96.2",
         "itens": [
             {

@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.97.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na edi\u00e7\u00e3o de Projetos por gerentes",
+                "referencia": [
+                    "BPM40872"
+                ],
+                "modulo": "Projetos",
+                "hash": "ed975a7d8a8a973dda7463aec6ae8f89b0826538",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40872"
+            }
+        ]
+    },
+    {
         "versao": "24.97.1",
         "itens": [
             {

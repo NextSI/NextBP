@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.97.3",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na limpeza de usu\u00e1rios na agenda",
+                "referencia": [
+                    "BPM40750"
+                ],
+                "modulo": "Agenda",
+                "hash": "daf699b38d0e51563889f5e5c8a64e2a6f86e535",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40750"
+            }
+        ]
+    },
+    {
         "versao": "24.97.2",
         "itens": [
             {

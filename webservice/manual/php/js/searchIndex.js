@@ -31196,6 +31196,26 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Oportunidade-Item-Model.html#property_calcular_preco_por_percentual"
         },                {
+            "fqsen": "\\Oportunidade_Item_Model\u003A\u003A\u0024observacoes",
+            "name": "observacoes",
+            "summary": "",
+            "url": "classes/Oportunidade-Item-Model.html#property_observacoes"
+        },                {
+            "fqsen": "\\Oportunidade_Item_Model\u003A\u003A\u0024codigo_pedido",
+            "name": "codigo_pedido",
+            "summary": "",
+            "url": "classes/Oportunidade-Item-Model.html#property_codigo_pedido"
+        },                {
+            "fqsen": "\\Oportunidade_Item_Model\u003A\u003A\u0024codigo_pedido_item",
+            "name": "codigo_pedido_item",
+            "summary": "",
+            "url": "classes/Oportunidade-Item-Model.html#property_codigo_pedido_item"
+        },                {
+            "fqsen": "\\Oportunidade_Item_Model\u003A\u003A\u0024item_observacoes",
+            "name": "item_observacoes",
+            "summary": "",
+            "url": "classes/Oportunidade-Item-Model.html#property_item_observacoes"
+        },                {
             "fqsen": "\\Oportunidade_Item_Model\u003A\u003A\u0024item_codigo",
             "name": "item_codigo",
             "summary": "",

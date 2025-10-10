@@ -6976,6 +6976,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Exporta-Excel-Processo-DAO.html#method_Filtrar_Campos"
         },                {
+            "fqsen": "\\Exporta_Excel_Processo_DAO\u003A\u003Averificar_supervisao_processo\u0028\u0029",
+            "name": "verificar_supervisao_processo",
+            "summary": "",
+            "url": "classes/Exporta-Excel-Processo-DAO.html#method_verificar_supervisao_processo"
+        },                {
             "fqsen": "\\Exporta_Excel_Relatorio_DAO",
             "name": "Exporta_Excel_Relatorio_DAO",
             "summary": "",
@@ -36511,6 +36516,21 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tarefa-Quadro-Model.html#constant_TIPO_PERMISSAO_USUARIO_ACOMPANHAMENTO"
         },                {
+            "fqsen": "\\Tarefa_Quadro_Model\u003A\u003AFILTRO_QUADROS_QUE_CRIEI",
+            "name": "FILTRO_QUADROS_QUE_CRIEI",
+            "summary": "",
+            "url": "classes/Tarefa-Quadro-Model.html#constant_FILTRO_QUADROS_QUE_CRIEI"
+        },                {
+            "fqsen": "\\Tarefa_Quadro_Model\u003A\u003AFILTRO_MEUS_QUADROS",
+            "name": "FILTRO_MEUS_QUADROS",
+            "summary": "",
+            "url": "classes/Tarefa-Quadro-Model.html#constant_FILTRO_MEUS_QUADROS"
+        },                {
+            "fqsen": "\\Tarefa_Quadro_Model\u003A\u003AFILTRO_TODOS_QUADROS",
+            "name": "FILTRO_TODOS_QUADROS",
+            "summary": "",
+            "url": "classes/Tarefa-Quadro-Model.html#constant_FILTRO_TODOS_QUADROS"
+        },                {
             "fqsen": "\\Tarefa_Quadro_Model\u003A\u003A\u0024nome",
             "name": "nome",
             "summary": "",
@@ -36660,6 +36680,11 @@ Search.appendIndex(
             "name": "nome",
             "summary": "",
             "url": "classes/Tarefa-Quadro-Lista-Cartao-Model.html#property_nome"
+        },                {
+            "fqsen": "\\Tarefa_Quadro_Lista_Cartao_Model\u003A\u003A\u0024nome_quadro",
+            "name": "nome_quadro",
+            "summary": "",
+            "url": "classes/Tarefa-Quadro-Lista-Cartao-Model.html#property_nome_quadro"
         },                {
             "fqsen": "\\Tarefa_Quadro_Lista_Cartao_Model\u003A\u003A\u0024tarefa_quadro_id",
             "name": "tarefa_quadro_id",

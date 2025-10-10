@@ -1,5 +1,70 @@
 [
     {
+        "versao": "24.98.1",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na Configura\u00e7\u00e3o da Tabela \"Controle de Tempo de Atendimento por Entidade\" no Motivo do Chamado",
+                "referencia": [
+                    "BPM40892"
+                ],
+                "modulo": "Chamados",
+                "hash": "b1cd538f5ab09b80bf5c5058082cba95e62b3b39",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40892"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na abertura de processos recorrentes",
+                "referencia": [
+                    "BPM40839"
+                ],
+                "modulo": "Processos",
+                "hash": "e65d4a90f3a4a320a7d63644420064ef250a74ac",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40839"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste nos filtros de datas do CRM",
+                "referencia": [
+                    "BPM40782"
+                ],
+                "modulo": "CRM",
+                "hash": "b7ab9f02dcb2386451342d23d82b09936ce9257d",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40782"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Melhorias na Interface dos Quadros e Cart\u00f5es",
+                "referencia": [
+                    "BPM38218"
+                ],
+                "modulo": "Tarefas",
+                "hash": "030ea43d90620c0f568afe941103f2b47ea4d956",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38218"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Filtro de Quadros no M\u00f3dulo de Tarefas",
+                "referencia": [
+                    "BPM38215"
+                ],
+                "modulo": "Tarefas",
+                "hash": "6b80b1c8acf4da863303ebed43af006d14791e68",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38215"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Restri\u00e7\u00e3o de visualiza\u00e7\u00e3o no relat\u00f3rio de atividades do processo",
+                "referencia": [
+                    "BPM30562"
+                ],
+                "modulo": "Processos",
+                "hash": "abaff8baa61dac777913644e09d4c0c783f57272",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM30562"
+            }
+        ]
+    },
+    {
         "versao": "24.97.3",
         "itens": [
             {

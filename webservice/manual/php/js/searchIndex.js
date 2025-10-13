@@ -29796,6 +29796,51 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Mural-Mensagem-Model.html#property_usuario_id"
         },                {
+            "fqsen": "\\Mural_Mensagem_Model\u003A\u003A\u0024mural_mensagem_id",
+            "name": "mural_mensagem_id",
+            "summary": "",
+            "url": "classes/Mural-Mensagem-Model.html#property_mural_mensagem_id"
+        },                {
+            "fqsen": "\\Mural_Mensagem_Model\u003A\u003A\u0024count_comentario",
+            "name": "count_comentario",
+            "summary": "",
+            "url": "classes/Mural-Mensagem-Model.html#property_count_comentario"
+        },                {
+            "fqsen": "\\Mural_Mensagem_Model\u003A\u003A\u0024segundo_maior_id",
+            "name": "segundo_maior_id",
+            "summary": "",
+            "url": "classes/Mural-Mensagem-Model.html#property_segundo_maior_id"
+        },                {
+            "fqsen": "\\Mural_Mensagem_Model\u003A\u003A\u0024permite_comentario",
+            "name": "permite_comentario",
+            "summary": "",
+            "url": "classes/Mural-Mensagem-Model.html#property_permite_comentario"
+        },                {
+            "fqsen": "\\Mural_Mensagem_Model\u003A\u003A\u0024grupo_privacidade",
+            "name": "grupo_privacidade",
+            "summary": "",
+            "url": "classes/Mural-Mensagem-Model.html#property_grupo_privacidade"
+        },                {
+            "fqsen": "\\Mural_Mensagem_Model\u003A\u003A\u0024votacao_pergunta",
+            "name": "votacao_pergunta",
+            "summary": "",
+            "url": "classes/Mural-Mensagem-Model.html#property_votacao_pergunta"
+        },                {
+            "fqsen": "\\Mural_Mensagem_Model\u003A\u003A\u0024votacao_expiracao",
+            "name": "votacao_expiracao",
+            "summary": "",
+            "url": "classes/Mural-Mensagem-Model.html#property_votacao_expiracao"
+        },                {
+            "fqsen": "\\Mural_Mensagem_Model\u003A\u003A\u0024votacao_voto_secreto",
+            "name": "votacao_voto_secreto",
+            "summary": "",
+            "url": "classes/Mural-Mensagem-Model.html#property_votacao_voto_secreto"
+        },                {
+            "fqsen": "\\Mural_Mensagem_Model\u003A\u003A\u0024votacao",
+            "name": "votacao",
+            "summary": "",
+            "url": "classes/Mural-Mensagem-Model.html#property_votacao"
+        },                {
             "fqsen": "\\Mural_Mensagem_Documento_Model",
             "name": "Mural_Mensagem_Documento_Model",
             "summary": "",

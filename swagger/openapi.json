@@ -12822,8 +12822,8 @@
                   },
                   "destinos": {
                     "type": "string",
-                    "description": "Obrigatório quando `acao = 1`. JSON com um array de objetos.\n```json\n[\n    {\n        \"processo_atividade_id\": 410,\n        \"responsavel_id\": 2\n    }\n]\n```",
-                    "example": "[\n    {\n        \"processo_atividade_id\": 410,\n        \"responsavel_id\": 2\n    }\n]"
+                    "description": "Obrigatório quando `acao = 1`. JSON com um array de objetos.\n```json\n[\n    {\n        \"processo_atividade_id\": 410,\n        \"responsavel_id\": 2\n    },\n    {\n        \"processo_atividade_id\": 411,\n        \"grupo_usuarios_responsaveis_id\": 4\n    }\n]\n```",
+                    "example": "[\n    {\n        \"processo_atividade_id\": 410,\n        \"responsavel_id\": 2\n    },\n    {\n        \"processo_atividade_id\": 411,\n        \"grupo_usuarios_responsaveis_id\": 4\n    }\n]"
                   }
                 }
               }

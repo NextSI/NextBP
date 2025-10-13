@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.100.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Atualiza\u00e7\u00e3o API Clicksign",
+                "referencia": [
+                    "BPM30828"
+                ],
+                "modulo": "Configura\u00e7\u00f5es",
+                "hash": "bc91e4ae42c9fd614cbb623213dfe42bd687ebb8",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM30828"
+            }
+        ]
+    },
+    {
         "versao": "24.99.1",
         "itens": [
             {

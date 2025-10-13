@@ -3891,6 +3891,11 @@ Search.appendIndex(
             "summary": "Cancela\u0020a\u0020assinatura\u0020de\u0020um\u0020documento",
             "url": "classes/Clicksign-DAO.html#method_cancelar_assinatura"
         },                {
+            "fqsen": "\\Clicksign_DAO\u003A\u003Abuscar_documento_key\u0028\u0029",
+            "name": "buscar_documento_key",
+            "summary": "",
+            "url": "classes/Clicksign-DAO.html#method_buscar_documento_key"
+        },                {
             "fqsen": "\\Clicksign_DAO\u003A\u003Areprocessar_finalizados_sem_download\u0028\u0029",
             "name": "reprocessar_finalizados_sem_download",
             "summary": "",
@@ -3910,6 +3915,51 @@ Search.appendIndex(
             "name": "retornar_dados_documento_assinado_ou_cancelado",
             "summary": "",
             "url": "classes/Clicksign-DAO.html#method_retornar_dados_documento_assinado_ou_cancelado"
+        },                {
+            "fqsen": "\\Clicksign_DAO\u003A\u003Aregistrar_webhook\u0028\u0029",
+            "name": "registrar_webhook",
+            "summary": "",
+            "url": "classes/Clicksign-DAO.html#method_registrar_webhook"
+        },                {
+            "fqsen": "\\Clicksign_DAO\u003A\u003Aenviar_documento_assinatura\u0028\u0029",
+            "name": "enviar_documento_assinatura",
+            "summary": "",
+            "url": "classes/Clicksign-DAO.html#method_enviar_documento_assinatura"
+        },                {
+            "fqsen": "\\Clicksign_DAO\u003A\u003Acriar_envelope\u0028\u0029",
+            "name": "criar_envelope",
+            "summary": "",
+            "url": "classes/Clicksign-DAO.html#method_criar_envelope"
+        },                {
+            "fqsen": "\\Clicksign_DAO\u003A\u003Aupload_documento\u0028\u0029",
+            "name": "upload_documento",
+            "summary": "",
+            "url": "classes/Clicksign-DAO.html#method_upload_documento"
+        },                {
+            "fqsen": "\\Clicksign_DAO\u003A\u003Acriar_signatario\u0028\u0029",
+            "name": "criar_signatario",
+            "summary": "",
+            "url": "classes/Clicksign-DAO.html#method_criar_signatario"
+        },                {
+            "fqsen": "\\Clicksign_DAO\u003A\u003Acriar_requisito\u0028\u0029",
+            "name": "criar_requisito",
+            "summary": "",
+            "url": "classes/Clicksign-DAO.html#method_criar_requisito"
+        },                {
+            "fqsen": "\\Clicksign_DAO\u003A\u003Avincular_signatario_documento\u0028\u0029",
+            "name": "vincular_signatario_documento",
+            "summary": "",
+            "url": "classes/Clicksign-DAO.html#method_vincular_signatario_documento"
+        },                {
+            "fqsen": "\\Clicksign_DAO\u003A\u003Anotificar_signatarios\u0028\u0029",
+            "name": "notificar_signatarios",
+            "summary": "",
+            "url": "classes/Clicksign-DAO.html#method_notificar_signatarios"
+        },                {
+            "fqsen": "\\Clicksign_DAO\u003A\u003Aativar_envelope\u0028\u0029",
+            "name": "ativar_envelope",
+            "summary": "",
+            "url": "classes/Clicksign-DAO.html#method_ativar_envelope"
         },                {
             "fqsen": "\\Clicksign_Evento_DAO",
             "name": "Clicksign_Evento_DAO",
@@ -25285,6 +25335,11 @@ Search.appendIndex(
             "name": "clicksign_document_key",
             "summary": "",
             "url": "classes/Documento-Revisao-Assinatura-Model.html#property_clicksign_document_key"
+        },                {
+            "fqsen": "\\Documento_Revisao_Assinatura_Model\u003A\u003A\u0024clicksign_envelope_key",
+            "name": "clicksign_envelope_key",
+            "summary": "",
+            "url": "classes/Documento-Revisao-Assinatura-Model.html#property_clicksign_envelope_key"
         },                {
             "fqsen": "\\Documento_Revisao_Assinatura_Model\u003A\u003A\u0024certsign_document_key",
             "name": "certsign_document_key",

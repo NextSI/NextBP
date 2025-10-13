@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.99.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Melhoria no envio de anexos da Tela de Apontamentos e Download de OS com imagens anexas",
+                "referencia": [
+                    "BPM40368"
+                ],
+                "modulo": "Projetos",
+                "hash": "7c06f9eb918d4fa259039acdd450495ac12b92d3",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40368"
+            }
+        ]
+    },
+    {
         "versao": "24.98.1",
         "itens": [
             {

@@ -99,6 +99,10 @@ ini_set('error_log', $error_log_path);
 // Altera retornos HTTP de código 500 para outro código. Utilizar em possíveis incompatibilidades com integrações.
 // define('HTTP_RESPONSE_CODE_500', 203);
 
+// Nível de debug no log de envio por de e-mail por SMTP
+// Off = 0; Client = 1; Server = 2; Connection = 3; Low Level = 4;
+// define('SMTP_DEBUG_LEVEL', 0);
+
 // Altera os parâmetros do tipo texto das requisições HTTP enviadas pelo BP.
 // Deve ser utilizado para burlar firewalls abusivos, que monitoram
 // o conteúdo das requisições e realizam bloqueios inesperados e indesejados.
@@ -136,8 +140,8 @@ define('SHOW_SQL_ERRORS', false);
 //
 define('DB_HOST', 'localhost');
 define('DB_PORT', '3306');
-define('DB_NAME', 'next_bp');
-define('DB_USER', 'next_bp');
+define('DB_NAME', '');
+define('DB_USER', '');
 define('DB_PASSWORD', '');
 // exemplo de conexão SSL
 // define('DB_OPTIONS', [

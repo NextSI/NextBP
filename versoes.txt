@@ -1,5 +1,40 @@
 [
     {
+        "versao": "24.101.1",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na Valida\u00e7\u00e3o de Encerramento de Chamado",
+                "referencia": [
+                    "BPM40980"
+                ],
+                "modulo": "Chamados",
+                "hash": "3f764fcb665fddc4d3cd5d9d01cf4d819633f163",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40980"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Ajuste na valida\u00e7\u00e3o da quantidade de linhas obrigat\u00f3rias em tabelas de formul\u00e1rios de processos",
+                "referencia": [
+                    "BPM40979"
+                ],
+                "modulo": "Processo",
+                "hash": "ba96526928b3fdd5cc7f5b6795ab7b2079f79242",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40979"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Inclus\u00e3o de a\u00e7\u00e3o Copiar Usu\u00e1rio na Listagem de Usu\u00e1rios",
+                "referencia": [
+                    "BPM40671"
+                ],
+                "modulo": "Cadastros B\u00e1sicos",
+                "hash": "68f9f28f8e8e2034d633dc9f2ffc507c71713e76",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40671"
+            }
+        ]
+    },
+    {
         "versao": "24.100.1",
         "itens": [
             {

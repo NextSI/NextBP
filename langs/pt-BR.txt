@@ -844,7 +844,8 @@
                 "hint_excluir_usuario": "Excluir usuário",
                 "hint_editar_usuarios_selecionados": "Editar usuários selecionados",
                 "hint_visualizar_usuarios_selecionados": "Visualizar usuários selecionados",
-                "hint_excluir_usuarios_selecionados": "Excluir usuários selecionados"
+                "hint_excluir_usuarios_selecionados": "Excluir usuários selecionados",
+                "hint_copiar_usuario": "Copiar usuário"
             }
         },
 

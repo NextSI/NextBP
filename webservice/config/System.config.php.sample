@@ -76,6 +76,10 @@ define('SHOW_SQL_ERRORS', false);
 // Altera retornos HTTP de código 500 para outro código. Utilizar em possíveis incompatibilidades com integrações.
 // define('HTTP_RESPONSE_CODE_500', 203);
 
+// Nível de debug no log de envio por de e-mail por SMTP
+// Off = 0; Client = 1; Server = 2; Connection = 3; Low Level = 4;
+// define('SMTP_DEBUG_LEVEL', 0);
+
 // Altera os parâmetros do tipo texto das requisições HTTP enviadas pelo BP.
 // Deve ser utilizado para burlar firewalls abusivos, que monitoram
 // o conteúdo das requisições e realizam bloqueios inesperados e indesejados.

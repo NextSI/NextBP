@@ -20111,6 +20111,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Chamado-Model.html#method_validation"
         },                {
+            "fqsen": "\\Chamado_Model\u003A\u003AisEncerrado\u0028\u0029",
+            "name": "isEncerrado",
+            "summary": "",
+            "url": "classes/Chamado-Model.html#method_isEncerrado"
+        },                {
+            "fqsen": "\\Chamado_Model\u003A\u003AvalidarEncerramento\u0028\u0029",
+            "name": "validarEncerramento",
+            "summary": "",
+            "url": "classes/Chamado-Model.html#method_validarEncerramento"
+        },                {
             "fqsen": "\\Chamado_Model\u003A\u003AEXCLUIDO_TIPO_RASCUNHO",
             "name": "EXCLUIDO_TIPO_RASCUNHO",
             "summary": "",
@@ -35030,6 +35040,11 @@ Search.appendIndex(
             "name": "HTTP_RESPONSE_CODE_500",
             "summary": "",
             "url": "namespaces/default.html#constant_HTTP_RESPONSE_CODE_500"
+        },                {
+            "fqsen": "\\SMTP_DEBUG_LEVEL",
+            "name": "SMTP_DEBUG_LEVEL",
+            "summary": "",
+            "url": "namespaces/default.html#constant_SMTP_DEBUG_LEVEL"
         },                {
             "fqsen": "\\Sys\\App",
             "name": "App",

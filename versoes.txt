@@ -1,5 +1,20 @@
 [
     {
+        "versao": "23.59.93",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o na Valida\u00e7\u00e3o de Encerramento de Chamado",
+                "referencia": [
+                    "BPM40980"
+                ],
+                "modulo": "Chamados",
+                "hash": "61c2d9d3983bdba07beda63071ac290042869565",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40980"
+            }
+        ]
+    },
+    {
         "versao": "23.59.92",
         "itens": [
             {

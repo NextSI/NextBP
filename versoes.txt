@@ -1,5 +1,30 @@
 [
     {
+        "versao": "24.102.1",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste perform\u00e1tico na listagem de atividades de solicita\u00e7\u00f5es de processos",
+                "referencia": [
+                    "BPM41081"
+                ],
+                "modulo": "Processos",
+                "hash": "becd050c72b5bd76b076dda08a7e9bfebf74404e",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41081"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Altera\u00e7\u00e3o do leiaute da Sa\u00edda de E-mail",
+                "referencia": [
+                    "BPM39529"
+                ],
+                "modulo": "Configura\u00e7\u00f5es",
+                "hash": "c308c885cbf5fe7a526281d70d4468d412671b02",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39529"
+            }
+        ]
+    },
+    {
         "versao": "24.101.1",
         "itens": [
             {

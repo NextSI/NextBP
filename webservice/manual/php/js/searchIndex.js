@@ -3961,6 +3961,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Clicksign-DAO.html#method_ativar_envelope"
         },                {
+            "fqsen": "\\Clicksign_DAO\u003A\u003Alistar_pastas\u0028\u0029",
+            "name": "listar_pastas",
+            "summary": "",
+            "url": "classes/Clicksign-DAO.html#method_listar_pastas"
+        },                {
             "fqsen": "\\Clicksign_Evento_DAO",
             "name": "Clicksign_Evento_DAO",
             "summary": "Realiza\u0020a\u0020persist\u00EAncia\u0020e\u0020consultas\u0020de\u0020dados\u0020relacionados\u0020\u00E0\u0020\u00C1reas.",

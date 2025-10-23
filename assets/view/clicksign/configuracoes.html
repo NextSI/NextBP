@@ -6,7 +6,7 @@
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 
                 <div class="form-group">
-                    <label for="cbo_api_url">Clicksing API URL:</label>
+                    <label for="cbo_api_url">Clicksign API URL:</label>
                     <select id="cbo_api_url" class="form-control cbo_api_url">
                         <option value="https://app.clicksign.com">https://app.clicksign.com</option>
                         <option value="https://sandbox.clicksign.com">https://sandbox.clicksign.com</option>
@@ -19,8 +19,16 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="edt_diretorio">Diretório para armazenamento:</label>
-                    <input id="edt_diretorio" type="text" class="form-control edt_diretorio" maxlength="500">
+                    <label for="cbo_pasta">Pasta para armazenamento:</label>
+                    <div class="input-group">
+                        <select id="cbo_pasta" type="text" class="form-control cbo_pasta"></select>
+                        <span class="input-group-btn">
+                            <button class="form-control btn_listar_pastas" type="button">
+                                <img src="assets/img/icones_bp/process.svg" data-original-title="" title="" style="cursor: pointer;">
+                            </button>
+                        </span>
+                    </div>
+                    
                 </div>
 
                 <div class="form-group">

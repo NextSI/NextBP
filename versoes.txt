@@ -1,5 +1,50 @@
 [
     {
+        "versao": "24.102.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na solicita\u00e7\u00e3o de assinaturas para Clicksign",
+                "referencia": [
+                    "BPM41105"
+                ],
+                "modulo": "Documentos",
+                "hash": "c525651a8d2045d38c1b9de190ffef8ddf155ee8",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41105"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao encontrar executor de atividade predecessora de solicita\u00e7\u00e3o de processo",
+                "referencia": [
+                    "BPM41103"
+                ],
+                "modulo": "Processo",
+                "hash": "cb4d05b1e9d1041bc72025770932bc8b688aba99",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41103"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao finalizar uma solicita\u00e7\u00e3o de processo",
+                "referencia": [
+                    "BPM41087"
+                ],
+                "modulo": "Processo",
+                "hash": "cae6ba4d0e8febbf0f3392f8f082dd240cb6e468",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41087"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao colar e\/ou editar campo da modelagem de formul\u00e1rio",
+                "referencia": [
+                    "BPM41085"
+                ],
+                "modulo": "Processo",
+                "hash": "e5c809907507703607505f12b4fa7e66d1945e83",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41085"
+            }
+        ]
+    },
+    {
         "versao": "24.102.1",
         "itens": [
             {

@@ -14,7 +14,7 @@ Posteriormente, no menu de Configurações você deverá configurar a comunicaç
 
 Onde:
 
-* Clicksing API URL: Endereço utilizado pela API do clicksign
+* Clicksign API URL: Endereço utilizado pela API do clicksign
 
 * Access Token: Token gerado pelo Clicksign para realizar requisições na API
 

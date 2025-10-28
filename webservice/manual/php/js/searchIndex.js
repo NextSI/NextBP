@@ -14146,6 +14146,11 @@ Search.appendIndex(
             "summary": "Verifica\u0020se\u0020o\u0020e\u002Dmail\u0020informado\u0020possui\u0020acesso\u0020para\u0020executar\u0020a\u0020atividade\u0020do\u0020processo\nUtilizado\u0020quando\u0020a\u0020atividade\u0020de\u0020processo\u0020\u00E9\u0020executada\u0020por\u0020um\u0020usu\u00E1rio\u0020an\u00F4nimo",
             "url": "classes/Solicitacao-Atividade-DAO.html#method_verificar_acesso_anonimo_atividade"
         },                {
+            "fqsen": "\\Solicitacao_Atividade_DAO\u003A\u003Averificar_acesso_anonimo_atividade_inicio\u0028\u0029",
+            "name": "verificar_acesso_anonimo_atividade_inicio",
+            "summary": "",
+            "url": "classes/Solicitacao-Atividade-DAO.html#method_verificar_acesso_anonimo_atividade_inicio"
+        },                {
             "fqsen": "\\Solicitacao_Atividade_DAO\u003A\u003Alistar_responsaveis_anonimos\u0028\u0029",
             "name": "listar_responsaveis_anonimos",
             "summary": "",

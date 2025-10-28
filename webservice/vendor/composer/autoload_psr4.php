@@ -45,7 +45,7 @@ return array(
     'Mimey\\' => array($vendorDir . '/xantios/mimey/src'),
     'Michelf\\' => array($vendorDir . '/michelf/php-markdown/Michelf'),
     'Matrix\\' => array($vendorDir . '/markbaker/matrix/classes/src'),
-    'League\\OAuth2\\Client\\' => array($vendorDir . '/league/oauth2-google/src', $vendorDir . '/league/oauth2-client/src'),
+    'League\\OAuth2\\Client\\' => array($vendorDir . '/league/oauth2-client/src'),
     'League\\MimeTypeDetection\\' => array($vendorDir . '/league/mime-type-detection/src'),
     'League\\Flysystem\\' => array($vendorDir . '/league/flysystem/src'),
     'Laminas\\Escaper\\' => array($vendorDir . '/laminas/laminas-escaper/src'),

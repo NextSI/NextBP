@@ -231,13 +231,29 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="div_configuracoes">
+                    <tr class="div_anonimo">
                         <td class="text-left">
                             <label for="modal_processo_atividade_chk_responsavel_anonimo">Tornar responsável por esta atividade um usuário anônimo</label>
                             <br />
                             <small>Um usuário anônimo não precisa estar cadastrado no Next BP. Ele poderá acessar a atividade através de um link gerado pelo próprio sistema no momento que ela for iniciada.</small>
                         </td>
                         <td class="text-right"><input id="modal_processo_atividade_chk_responsavel_anonimo" class="chk_responsavel_anonimo checkbox_bootstrap_toggle" type="checkbox"></td>
+                    </tr>
+                    <tr class="link_externo hidden">
+                        <td class="text-left">
+                            <div class="form-group">
+                                <label for="input_link_acesso_externo">Link Externo</label>
+                                <input type="text" class="edt_codigo form-control input_link_acesso_externo" id="input_link_acesso_externo" maxlength="255" readonly>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label>&nbsp;</label>
+                                <button type="button" class="form-control btn btn-outline-secondary btn_copiar_link_externo" title="Copiar link">
+                                    <i class="fa fa-copy"></i>
+                                </button>
+                            </div>
+                        </td>
                     </tr>
                 </table>
                 <br />

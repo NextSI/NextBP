@@ -1,5 +1,50 @@
 [
     {
+        "versao": "24.103.1",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na notifica\u00e7\u00e3o por e-mail aos signat\u00e1rios de documentos via Clicksign",
+                "referencia": [
+                    "BPM41143"
+                ],
+                "modulo": "Documentos",
+                "hash": "0065ee6ee449ed2d471d4f93f1dba2f06210fdae",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41143"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Problema ao atribuir refer\u00eancias como primeira aba da oportunidade",
+                "referencia": [
+                    "BPM40950"
+                ],
+                "modulo": "CRM",
+                "hash": "addbe8803100b5f5fefb6b539a6c678b0a26fec2",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40950"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Abertura de Processos atrav\u00e9s de Link P\u00fablico",
+                "referencia": [
+                    "BPM40315"
+                ],
+                "modulo": "Processo",
+                "hash": "ede51d0e490feb9bc20511e8bf444c645034d497",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40315"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Manter campo de pesquisa da Timeline ap\u00f3s recarregar a listagem",
+                "referencia": [
+                    "BPM38839"
+                ],
+                "modulo": "Home",
+                "hash": "44fe30ca02ab4345aea455f79b048e2e0c91f0b6",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38839"
+            }
+        ]
+    },
+    {
         "versao": "24.102.2",
         "itens": [
             {

@@ -1,5 +1,50 @@
 [
     {
+        "versao": "24.105.1",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na configura\u00e7\u00e3o de recorr\u00eancias na modelagem de processos",
+                "referencia": [
+                    "BPM79663"
+                ],
+                "modulo": "Processo",
+                "hash": "3a588163bcad543afe26331467f0f03705700615",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM79663"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Ajuste na rotina de copiar usu\u00e1rio",
+                "referencia": [
+                    "BPM41158"
+                ],
+                "modulo": "Geral",
+                "hash": "4df1cad4fc267ddb90ebefdc3d02e289c1b9ec4c",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41158"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste no redimensionamento de colunas de listagens",
+                "referencia": [
+                    "BPM41142"
+                ],
+                "modulo": "Geral",
+                "hash": "1ad58b3bd2eb0052a73e7a5f9f3a1dccb416e665",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41142"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na an\u00e1lise do fluxo do gateway com campos decimais",
+                "referencia": [
+                    "BPM41095"
+                ],
+                "modulo": "Processo",
+                "hash": "617f55059e4bb76d589ff58c4e1c47ed57d8e41f",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41095"
+            }
+        ]
+    },
+    {
         "versao": "24.104.1",
         "itens": [
             {

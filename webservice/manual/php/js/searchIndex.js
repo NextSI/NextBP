@@ -13811,6 +13811,11 @@ Search.appendIndex(
             "summary": "Verifica\u0020se\u0020h\u00E1\u0020atividades\u0020n\u00E3o\u0020entregues\u0020de\u0020uma\u0020solicita\u00E7\u00E3o\u0020conclu\u00EDda",
             "url": "classes/Solicitacao-DAO.html#method_verificar_atividades_nao_entregues"
         },                {
+            "fqsen": "\\Solicitacao_DAO\u003A\u003Alistar_atividades_pendentes\u0028\u0029",
+            "name": "listar_atividades_pendentes",
+            "summary": "",
+            "url": "classes/Solicitacao-DAO.html#method_listar_atividades_pendentes"
+        },                {
             "fqsen": "\\Solicitacao_DAO\u003A\u003Aapagar_arquivos\u0028\u0029",
             "name": "apagar_arquivos",
             "summary": "",

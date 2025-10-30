@@ -1,5 +1,40 @@
 [
     {
+        "versao": "24.104.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "API para cancelamento de solicita\u00e7\u00f5es de processo",
+                "referencia": [
+                    "BPM41088"
+                ],
+                "modulo": "Processo",
+                "hash": "c083bef6ceaffbffb0ae30006d40a1e3ca38ab88",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41088"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao remover campo da modelagem de formul\u00e1rio",
+                "referencia": [
+                    "BPM41085"
+                ],
+                "modulo": "Processo",
+                "hash": "c137e37fb920b3f749c5b873b0491b07e83ebffc",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41085-1"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Refatora\u00e7\u00e3o da Tela de Sess\u00f5es com Suporte a WebSocket",
+                "referencia": [
+                    "BPM38425"
+                ],
+                "modulo": "Configura\u00e7\u00f5es",
+                "hash": "b79051f92f609df216e421dff6663fed6ad72794",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38425"
+            }
+        ]
+    },
+    {
         "versao": "24.103.1",
         "itens": [
             {

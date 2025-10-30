@@ -13094,6 +13094,71 @@
         }
       }
     },
+    "/webservice/index.php/solicitacao/cancelar/": {
+      "post": {
+        "tags": [
+          "Solicitação"
+        ],
+        "summary": "Cancelar uma solicitação",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "solicitacao_id": {
+                    "type": "integer",
+                    "description": "ID da Solicitação (opcional caso solicitacao_atividade_id seja informado)",
+                    "example": "123"
+                  },
+                  "solicitacao_atividade_id": {
+                    "type": "integer",
+                    "description": "ID da Atividade da Solicitação (opcional caso solicitacao_id seja informado)",
+                    "example": "456"
+                  },
+                  "cancelamento_motivo": {
+                    "type": "string",
+                    "description": "Motivo do cancelamento"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "X-Auth-Token",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Token de autenticação do usuário"
+          },
+          {
+            "name": "X-Emp",
+            "in": "header",
+            "schema": {
+              "type": "integer"
+            },
+            "description": "ID da Empresa",
+            "example": "1"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "multipart/form-data"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/webservice/index.php/eadplataforma/get_parametros/": {
       "get": {
         "tags": [

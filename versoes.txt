@@ -1,5 +1,20 @@
 [
     {
+        "versao": "23.59.94",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na an\u00e1lise do fluxo do gateway com campos decimais",
+                "referencia": [
+                    "BPM41095"
+                ],
+                "modulo": "Processo",
+                "hash": "f7a850791cadcbc1a3461d1cd473e1f6c57d1795",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41095"
+            }
+        ]
+    },
+    {
         "versao": "23.59.93",
         "itens": [
             {

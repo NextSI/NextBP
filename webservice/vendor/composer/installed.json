@@ -1703,6 +1703,64 @@
             "install-path": "../league/oauth2-client"
         },
         {
+            "name": "league/oauth2-google",
+            "version": "4.0.1",
+            "version_normalized": "4.0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/oauth2-google.git",
+                "reference": "1b01ba18ba31b29e88771e3e0979e5c91d4afe76"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-google/zipball/1b01ba18ba31b29e88771e3e0979e5c91d4afe76",
+                "reference": "1b01ba18ba31b29e88771e3e0979e5c91d4afe76",
+                "shasum": ""
+            },
+            "require": {
+                "league/oauth2-client": "^2.0",
+                "php": "^7.3 || ^8.0"
+            },
+            "require-dev": {
+                "eloquent/phony-phpunit": "^6.0 || ^7.1",
+                "phpunit/phpunit": "^8.0 || ^9.0",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "time": "2023-03-17T15:20:52+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "League\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Woody Gilk",
+                    "email": "hello@shadowhand.com",
+                    "homepage": "https://shadowhand.com"
+                }
+            ],
+            "description": "Google OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "Authentication",
+                "authorization",
+                "client",
+                "google",
+                "oauth",
+                "oauth2"
+            ],
+            "support": {
+                "issues": "https://github.com/thephpleague/oauth2-google/issues",
+                "source": "https://github.com/thephpleague/oauth2-google/tree/4.0.1"
+            },
+            "install-path": "../league/oauth2-google"
+        },
+        {
             "name": "maennchen/zipstream-php",
             "version": "2.4.0",
             "version_normalized": "2.4.0.0",
@@ -2232,17 +2290,17 @@
         },
         {
             "name": "pear/http_request2",
-            "version": "v2.5.1",
-            "version_normalized": "2.5.1.0",
+            "version": "v2.7.0",
+            "version_normalized": "2.7.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pear/HTTP_Request2.git",
-                "reference": "db4ce7844f838d3adca0513a77420c0fec22ed2d"
+                "reference": "b1c61b71128045734d757c4d3d436457ace80ea7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pear/HTTP_Request2/zipball/db4ce7844f838d3adca0513a77420c0fec22ed2d",
-                "reference": "db4ce7844f838d3adca0513a77420c0fec22ed2d",
+                "url": "https://api.github.com/repos/pear/HTTP_Request2/zipball/b1c61b71128045734d757c4d3d436457ace80ea7",
+                "reference": "b1c61b71128045734d757c4d3d436457ace80ea7",
                 "shasum": ""
             },
             "require": {
@@ -2251,6 +2309,7 @@
                 "php": ">=5.6.0"
             },
             "require-dev": {
+                "pear/log": "^1",
                 "yoast/phpunit-polyfills": "^1.0.0"
             },
             "suggest": {
@@ -2259,7 +2318,7 @@
                 "ext-openssl": "Allows handling SSL requests when not using cURL.",
                 "ext-zlib": "Allows handling gzip compressed responses."
             },
-            "time": "2022-01-06T18:20:25+00:00",
+            "time": "2025-04-06T13:48:50+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {

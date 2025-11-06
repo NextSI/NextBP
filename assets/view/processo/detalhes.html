@@ -35,7 +35,10 @@
                     <a class="menu_atividades" href="#" role="tab" data-toggle="tab">Atividades</a>
                 </li>
                 <li>
-                    <a class="menu_supervisores" href="#" role="tab" data-toggle="tab">Supervisores do Processo</a>
+                    <a class="menu_modelistas" href="#" role="tab" data-toggle="tab">Modelistas</a>
+                </li>
+                <li>
+                    <a class="menu_supervisores" href="#" role="tab" data-toggle="tab">Supervisores</a>
                 </li>
                 <li class="lbl_tab_historico">
                     <a class="menu_historico" href="#" role="tab" data-toggle="tab" translate="processo.aba_historico">Histórico</a>
@@ -227,6 +230,28 @@
                         </div>
                     </div>
                     
+                </div>
+
+                <div class="tab-pane aba_modelistas">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="alert alert-info" style="font-size:13px; line-height:1.5;">
+                                <p>
+                                    <span class="label label-default">Regra de Acesso</span><br><br>
+                                    Caso <strong>não exista nenhum usuário</strong> ou <strong>grupo de usuários</strong> vinculado a este processo,
+                                    todos que possuírem a permissão <span class="label label-primary">Modelagem de Processo</span> poderão acessar.
+                                </p>
+                                <p>
+                                    Porém, se houver <strong>usuários</strong> ou <strong>grupos de usuários</strong> definidos, 
+                                    apenas os <strong>usuários listados</strong>,
+                                    os <strong>membros dos grupos</strong> e os <strong>administradores</strong> 
+                                    terão acesso à modelagem.
+                                </p>
+                            </div>
+
+                            <div class="dx_modelistas_processos"></div>
+                        </div>
+                    </div>
                 </div>
     
                 <div class="tab-pane aba_atividades">

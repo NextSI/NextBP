@@ -4,20 +4,31 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="btn_cancelar close" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="modal_clonar_permissao_label">Clonar Permissões de</h4>
+                <h4 class="modal-title" id="modal_clonar_permissao_label">Copiar de outro usuário</h4>
             </div>
             <div class="modal-body">
 
                       
-                <div class="form-group">
-                    <select class="form-control selectpicker cbo_usuario" data-live-search="true"></select>
-                </div>
-              
                 
+
+                <div class="form-group">
+                    <input type="checkbox" class="chk_clonar_permissoes_usuario template_switch" id="chk_clonar_permissoes_usuario">
+                    <label for="chk_clonar_permissoes_usuario">Copiar as permissões</label>
+                    <div class="text-muted small">Exclui as antigas permissões e copia novas permissões de acordo com o usuário selecionado abaixo.</div>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" class="chk_clonar_grupos_usuario template_switch" id="chk_clonar_grupos_usuario">
+                    <label for="chk_clonar_grupos_usuario">Copiar os grupos de usuário</label>
+                    <div class="text-muted small">Exclui os grupos de usuários e copia novos grupos do usuário de acordo com o usuário selecionado abaixo.</div>
+                </div>
+                <div class="form-group">
+                    <select class="form-control selectpicker cbo_usuario" data-live-search="true" placeholder="Usuário que será copiado"></select>
+                </div>
+                <div class="clearfix"></div>
             </div>
             <div class="modal-footer" style="bottom: 0px;">
                 <button type="button" class="btn_cancelar btn btn-default">Cancelar</button>
-                <button type="button" class="btn_salvar btn btn-primary">Salvar</button>
+                <button type="button" class="btn_salvar btn btn-primary disabled">Copiar</button>
             </div>
         </div>
     </div>

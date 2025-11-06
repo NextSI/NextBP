@@ -241,6 +241,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'league/oauth2-google' => array(
+            'pretty_version' => '4.0.1',
+            'version' => '4.0.1.0',
+            'reference' => '1b01ba18ba31b29e88771e3e0979e5c91d4afe76',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../league/oauth2-google',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'maennchen/zipstream-php' => array(
             'pretty_version' => '2.4.0',
             'version' => '2.4.0.0',
@@ -314,9 +323,9 @@
             'dev_requirement' => false,
         ),
         'pear/http_request2' => array(
-            'pretty_version' => 'v2.5.1',
-            'version' => '2.5.1.0',
-            'reference' => 'db4ce7844f838d3adca0513a77420c0fec22ed2d',
+            'pretty_version' => 'v2.7.0',
+            'version' => '2.7.0.0',
+            'reference' => 'b1c61b71128045734d757c4d3d436457ace80ea7',
             'type' => 'library',
             'install_path' => __DIR__ . '/../pear/http_request2',
             'aliases' => array(),

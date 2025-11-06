@@ -17,6 +17,7 @@
         "firebase/php-jwt": "^6.3",
         "thenetworg/oauth2-azure": "^2.2",
         "webklex/php-imap": "^5.5",
+        "league/oauth2-google": "^4.0",
         "ratchet/pawl": "^0.4.3"
     },
     "config": {

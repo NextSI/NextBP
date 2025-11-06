@@ -6886,6 +6886,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Etiqueta-DAO.html#method_listar_para_selecao"
         },                {
+            "fqsen": "\\Etiqueta_DAO\u003A\u003Alistar_por_nome\u0028\u0029",
+            "name": "listar_por_nome",
+            "summary": "",
+            "url": "classes/Etiqueta-DAO.html#method_listar_por_nome"
+        },                {
             "fqsen": "\\Etiqueta_DAO\u003A\u003Asalvar_referencias\u0028\u0029",
             "name": "salvar_referencias",
             "summary": "",
@@ -8756,6 +8761,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Grupo-Usuarios-DAO.html#method_clonar"
         },                {
+            "fqsen": "\\Grupo_Usuarios_DAO\u003A\u003Aclonar_grupo_usuario\u0028\u0029",
+            "name": "clonar_grupo_usuario",
+            "summary": "",
+            "url": "classes/Grupo-Usuarios-DAO.html#method_clonar_grupo_usuario"
+        },                {
             "fqsen": "\\Grupo_Usuarios_Equipe_Projeto_DAO",
             "name": "Grupo_Usuarios_Equipe_Projeto_DAO",
             "summary": "",
@@ -8830,6 +8840,11 @@ Search.appendIndex(
             "name": "salvar_importacao_cliente",
             "summary": "",
             "url": "classes/Importar-Excel-DAO.html#method_salvar_importacao_cliente"
+        },                {
+            "fqsen": "\\Importar_Excel_DAO\u003A\u003Asalvar_importacao_oportunidade\u0028\u0029",
+            "name": "salvar_importacao_oportunidade",
+            "summary": "",
+            "url": "classes/Importar-Excel-DAO.html#method_salvar_importacao_oportunidade"
         },                {
             "fqsen": "\\Integracao_Next_Forca_Vendas_DAO",
             "name": "Integracao_Next_Forca_Vendas_DAO",
@@ -10220,6 +10235,11 @@ Search.appendIndex(
             "name": "listar_por_cod_municipio",
             "summary": "Listagem\u0020de\u0020informa\u00E7\u00F5es\u0020do\u0020mun\u00EDcipio",
             "url": "classes/Municipio-DAO.html#method_listar_por_cod_municipio"
+        },                {
+            "fqsen": "\\Municipio_DAO\u003A\u003Alistar_por_nome\u0028\u0029",
+            "name": "listar_por_nome",
+            "summary": "",
+            "url": "classes/Municipio-DAO.html#method_listar_por_nome"
         },                {
             "fqsen": "\\Mural_Mensagem_DAO",
             "name": "Mural_Mensagem_DAO",
@@ -15160,6 +15180,56 @@ Search.appendIndex(
             "name": "salvar",
             "summary": "",
             "url": "classes/Tema-DAO.html#method_salvar"
+        },                {
+            "fqsen": "\\TesteClickSign_DAO",
+            "name": "TesteClickSign_DAO",
+            "summary": "Realiza\u0020a\u0020abertura\u0020de\u0020solicita\u00E7\u00F5es\u0020para\u0020cada\u0020usu\u00E1rio\u0020solicitante\u0020do\u0020processo.",
+            "url": "classes/TesteClickSign-DAO.html"
+        },                {
+            "fqsen": "\\TesteClickSign_DAO\u003A\u003AcriarEnvelope\u0028\u0029",
+            "name": "criarEnvelope",
+            "summary": "",
+            "url": "classes/TesteClickSign-DAO.html#method_criarEnvelope"
+        },                {
+            "fqsen": "\\TesteClickSign_DAO\u003A\u003AfazerUploadDocumento\u0028\u0029",
+            "name": "fazerUploadDocumento",
+            "summary": "",
+            "url": "classes/TesteClickSign-DAO.html#method_fazerUploadDocumento"
+        },                {
+            "fqsen": "\\TesteClickSign_DAO\u003A\u003AcriarSignatario\u0028\u0029",
+            "name": "criarSignatario",
+            "summary": "",
+            "url": "classes/TesteClickSign-DAO.html#method_criarSignatario"
+        },                {
+            "fqsen": "\\TesteClickSign_DAO\u003A\u003AvincularSignatarioAoDocumento\u0028\u0029",
+            "name": "vincularSignatarioAoDocumento",
+            "summary": "",
+            "url": "classes/TesteClickSign-DAO.html#method_vincularSignatarioAoDocumento"
+        },                {
+            "fqsen": "\\TesteClickSign_DAO\u003A\u003AnotificarSignatarios\u0028\u0029",
+            "name": "notificarSignatarios",
+            "summary": "",
+            "url": "classes/TesteClickSign-DAO.html#method_notificarSignatarios"
+        },                {
+            "fqsen": "\\TesteClickSign_DAO\u003A\u003AativarEnvelope\u0028\u0029",
+            "name": "ativarEnvelope",
+            "summary": "",
+            "url": "classes/TesteClickSign-DAO.html#method_ativarEnvelope"
+        },                {
+            "fqsen": "\\TesteClickSign_DAO\u003A\u003AregistrarWebhook\u0028\u0029",
+            "name": "registrarWebhook",
+            "summary": "",
+            "url": "classes/TesteClickSign-DAO.html#method_registrarWebhook"
+        },                {
+            "fqsen": "\\TesteClickSign_DAO\u003A\u003A\u0024apiToken",
+            "name": "apiToken",
+            "summary": "",
+            "url": "classes/TesteClickSign-DAO.html#property_apiToken"
+        },                {
+            "fqsen": "\\TesteClickSign_DAO\u003A\u003A\u0024baseUrl",
+            "name": "baseUrl",
+            "summary": "",
+            "url": "classes/TesteClickSign-DAO.html#property_baseUrl"
         },                {
             "fqsen": "\\Tipo_Agenda_DAO",
             "name": "Tipo_Agenda_DAO",
@@ -33015,6 +33085,11 @@ Search.appendIndex(
             "name": "elementos",
             "summary": "",
             "url": "classes/Processo-Model.html#property_elementos"
+        },                {
+            "fqsen": "\\Processo_Model\u003A\u003A\u0024array_modelistas",
+            "name": "array_modelistas",
+            "summary": "",
+            "url": "classes/Processo-Model.html#property_array_modelistas"
         },                {
             "fqsen": "\\Processo_Model\u003A\u003A\u0024array_supervisores",
             "name": "array_supervisores",

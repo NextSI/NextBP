@@ -807,7 +807,7 @@
                 "hint_editar_usuario": "Editar usuário",
                 "hint_visualizar_usuario": "Visualizar usuário",
                 "hint_enviar_senha_email": "Enviar senha do usuário por e-mail",
-                "hint_copiar_permissoes": "Copiar permissões de outro usuário",
+                "hint_copiar_permissoes": "Copiar de outro usuário",
                 "hint_excluir_usuario": "Excluir usuário",
                 "hint_editar_usuarios_selecionados": "Editar usuários selecionados",
                 "hint_visualizar_usuarios_selecionados": "Visualizar usuários selecionados",

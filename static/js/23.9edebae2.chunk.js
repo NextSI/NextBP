@@ -1,1 +1,0 @@
-(this.webpackJsonpnext_bp=this.webpackJsonpnext_bp||[]).push([[23],{1147:function(h,i,n){window.Highcharts=n(508),n(588)(window.Highcharts),n(846)(window.Highcharts)}}]);

@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.106.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na listagem de oportunidades sem valor de neg\u00f3cio definido",
+                "referencia": [
+                    "BPM39433"
+                ],
+                "modulo": "CRM",
+                "hash": "eaaa9b99e87e8366c6b49cb226cc6211346eb00f",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM39433-1"
+            }
+        ]
+    },
+    {
         "versao": "24.106.1",
         "itens": [
             {

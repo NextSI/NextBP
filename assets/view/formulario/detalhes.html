@@ -123,29 +123,30 @@
                                 </div>
                             </div>
 
-                            <div class="form-grupo-campo" template-campo template-ref="" style="display: none; min-height: 100px">
+                            <div class="form-grupo-campo" template-campo template-ref="" style="display: none; min-height: 75px">
                                 <div class="div_campo form-group" style="cursor: pointer; margin-bottom: 0px; padding-bottom: 3px; border: #ccc dotted 1px;">
                                     <div class="context-menu"></div>
-                                    <span class="lbl_nome">Nome</span>
+                                    <div class="lbl_nome" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Nome</div>
+                                    <div class="lbl_id text-muted small"></div>
                                     <input class="input_foco" value="" style="display: none; max-width: 0px;" />
-                                    <div>
+                                    <div class="display: flex-inline;">
                                         <span class="lbl_tipo label label-default">tipo (tamanho, decimal)</span>
-                                        <span class="lbl_id label label-default"></span>
-                                        <span class="lbl_obrigatorio label label-warning">obrigatorio</span>
+                                        <span class="lbl_obrigatorio label label-warning" title="Obrigatório">*</span>
                                         <span class="lbl_possui_evento label label-info" style="display: none;" title="Possui eventos javascript"><i class="fas fa-code"></i></span>
+                                        <div class="pull-right" style="margin-top: -2px;">
+                                            <div class="btn-group" style="margin-top: 0px; padding-top: 0px;">
+                                                <button type="button" class="btn_form_up_campo btn btn-xs btn-default" title="Mover campo para esquerda">
+                                                    <i class="fa fa-solid fa-caret-left"></i>
+                                                </button>
+                                                <button type="button" class="btn_form_down_campo btn btn-xs btn-default" title="Mover campo para direita">
+                                                    <i class="fa fa-solid fa-caret-right"></i>
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="div_tabela_campos" style="display: none;"></div>
                                 </div>
-                                <div class="text-left" style="padding-bottom: 10px;">
-                                    <div class="btn-group" style="margin-top: 0px; padding-top: 0px;">
-                                        <button type="button" class="btn_form_up_campo btn btn-xs btn-default" title="Mover campo para trás">
-                                            <i class="fa fa-solid fa-caret-left"></i>
-                                        </button>
-                                        <button type="button" class="btn_form_down_campo btn btn-xs btn-default" title="Mover campo para frente">
-                                            <i class="fa fa-solid fa-caret-right"></i>
-                                        </button>
-                                    </div>
-                                </div>
+                                
                             </div>
 
                         </div>

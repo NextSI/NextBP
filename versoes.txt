@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.107.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Melhoria no layout do formul\u00e1rio do BP",
+                "referencia": [
+                    "BPM40791"
+                ],
+                "modulo": "Processos",
+                "hash": "715d526727d2a9984e20be2409db70faec97c990",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40791-1"
+            }
+        ]
+    },
+    {
         "versao": "24.106.2",
         "itens": [
             {

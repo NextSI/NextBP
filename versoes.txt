@@ -1,5 +1,61 @@
 [
     {
+        "versao": "24.107.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste no hist\u00f3rico dos cart\u00f5es de quadros de tarefas",
+                "referencia": [
+                    "BPM41274"
+                ],
+                "modulo": "Tarefas",
+                "hash": "9c4e324286edc1a3a2036019e5d4ec728b183548",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41274"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste de valida\u00e7\u00e3o ao avaliar chamado",
+                "referencia": [
+                    "BPM41223"
+                ],
+                "modulo": "Chamado",
+                "hash": "89b2b12010dd88695249a9b36ea9a234f1905adb",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41223"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste no leiaute das barras de rolagem do cockpit e kanbans",
+                "referencia": [
+                    "BPM41047"
+                ],
+                "modulo": "Geral",
+                "hash": "d4616661376a267c98954d351370c23e9bb25084",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41047"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste no bot\u00e3o \"Salvar e Enviar\" de solicita\u00e7\u00f5es de processos",
+                "referencia": [
+                    "BPM40791"
+                ],
+                "modulo": "Processo",
+                "hash": "21e578227eccc7b7d75a9dd7949b734d77e0053b",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40791-2"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajustes de leiaute nas telas de sele\u00e7\u00e3o de projetos, clientes e apontamentos",
+                "referencia": [
+                    "BPM40093",
+                    "BPM40368"
+                ],
+                "modulo": "Projetos",
+                "hash": "d4616661376a267c98954d351370c23e9bb25084",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40093-1"
+            }
+        ]
+    },
+    {
         "versao": "24.107.1",
         "itens": [
             {

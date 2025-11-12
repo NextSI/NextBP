@@ -1,5 +1,20 @@
 [
     {
+        "versao": "23.59.95",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Ajuste de valida\u00e7\u00e3o ao avaliar chamado",
+                "referencia": [
+                    "BPM41223"
+                ],
+                "modulo": "Chamado",
+                "hash": "8cc3ca2e420513b8b39708b9d8503c99096c3fde",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41223"
+            }
+        ]
+    },
+    {
         "versao": "23.59.94",
         "itens": [
             {

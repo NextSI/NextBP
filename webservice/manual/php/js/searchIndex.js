@@ -15096,6 +15096,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tarefa-Quadro-Lista-Cartao-Historico-DAO.html#method_listar"
         },                {
+            "fqsen": "\\Tarefa_Quadro_Lista_Cartao_Historico_DAO\u003A\u003Adetalhar_historico\u0028\u0029",
+            "name": "detalhar_historico",
+            "summary": "",
+            "url": "classes/Tarefa-Quadro-Lista-Cartao-Historico-DAO.html#method_detalhar_historico"
+        },                {
             "fqsen": "\\Tecnico_DAO",
             "name": "Tecnico_DAO",
             "summary": "",

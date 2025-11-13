@@ -1,9 +1,24 @@
 [
     {
+        "versao": "23.59.96",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Realizado ajuste na leitura de e-mail na intera\u00e7\u00e3o de chamado",
+                "referencia": [
+                    "BPM36153"
+                ],
+                "modulo": "Chamados",
+                "hash": "bc74d93520ec6b8fd51473e67c8b0949a249fd96",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM36153"
+            }
+        ]
+    },
+    {
         "versao": "23.59.95",
         "itens": [
             {
-                "tipo": "M",
+                "tipo": "C",
                 "descricao": "Ajuste de valida\u00e7\u00e3o ao avaliar chamado",
                 "referencia": [
                     "BPM41223"

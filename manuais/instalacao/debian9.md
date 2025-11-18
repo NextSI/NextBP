@@ -210,7 +210,7 @@ Configure os Job Scheduler corretamente, desativando scripts desnecessários.
 
 Cron
 ```bash
-sudo crontab -e 
+sudo crontab -u www-data -e
 ```
 
 Adicione a linha:

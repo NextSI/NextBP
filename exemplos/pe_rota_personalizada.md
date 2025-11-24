@@ -3,7 +3,7 @@
 ```php
 <?php
 // webservice/especificos/pe/minha_rota_personalizada.pe.php
-// ATENÇÃO: é obrigatório que o arquivos esteja nesta pasta e com a extenção .pe.php
+// ATENÇÃO: é obrigatório que o arquivo esteja nesta pasta e com a extenção .pe.php
 
 use \Sys\RouteMap;
 use \Sys\App;

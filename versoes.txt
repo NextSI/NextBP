@@ -1,5 +1,50 @@
 [
     {
+        "versao": "24.107.4",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na exibi\u00e7\u00e3o do formul\u00e1rio de avalia\u00e7\u00e3o de chamados encerrados por inatividade",
+                "referencia": [
+                    "BPM41435"
+                ],
+                "modulo": "Chamados",
+                "hash": "a2144f4b28d5bc91c021b7af584e6cd1dfad5425",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41435"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na utiliza\u00e7\u00e3o da rolagem do mouse (scroll) em janelas sobrepostas no Microsoft Windows",
+                "referencia": [
+                    "BPM41434"
+                ],
+                "modulo": "Geral",
+                "hash": "c46d5269278c5293bb4c93c454d1681172822066",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41434"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Problema com Anexo no formul\u00e1rio",
+                "referencia": [
+                    "BPM41114"
+                ],
+                "modulo": "Processos",
+                "hash": "4e78095acd56501044d124b498ebf0ff54887d49",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41114"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajustes nos modelistas no momento de gerar vers\u00e3o",
+                "referencia": [
+                    "BPM40450"
+                ],
+                "modulo": "Processo",
+                "hash": "8fc7ce6289fe9c5fa8d36204f48d5ad04a2cce7d",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40450-1"
+            }
+        ]
+    },
+    {
         "versao": "24.107.3",
         "itens": [
             {

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title>Next BP 24.107.3</title>
+            <title>Next BP 24.107.4</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../">
@@ -25,7 +25,7 @@
     </head>
 <body id="top">
     <header class="phpdocumentor-header phpdocumentor-section">
-    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">Next BP 24.107.3</a></h1>
+    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">Next BP 24.107.4</a></h1>
     <input class="phpdocumentor-header__menu-button" type="checkbox" id="menu-button" name="menu-button" />
     <label class="phpdocumentor-header__menu-icon" for="menu-button">
         <i class="fas fa-bars"></i>
@@ -564,6 +564,18 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Sys-Basic.html#method_getFormData">getFormData()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Sys-Basic.html#method_getJsonData">getJsonData()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Chamado-DAO.html#method_getMotivoChamados">getMotivoChamados()</a>
     <span>
                                 &nbsp;: mixed    </span>
@@ -626,6 +638,12 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Sys-Basic.html#method_instance_token">instance_token()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Sys-Basic.html#method_isJsonRequest">isJsonRequest()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
@@ -2093,7 +2111,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/sys/Basic.class.php"><a href="files/src-webservice-sys-basic-class.html"><abbr title="src/webservice/sys/Basic.class.php">Basic.class.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">334</span>
+    <span class="phpdocumentor-element-found-in__line">357</span>
 
     </aside>
 
@@ -2213,7 +2231,7 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/sys/Basic.class.php"><a href="files/src-webservice-sys-basic-class.html"><abbr title="src/webservice/sys/Basic.class.php">Basic.class.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">404</span>
+    <span class="phpdocumentor-element-found-in__line">427</span>
 
     </aside>
 
@@ -5636,6 +5654,88 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
         class="phpdocumentor-element
             -method
             -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getFormData">
+        getFormData()
+        <a href="classes/Sys-Basic.html#method_getFormData" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/sys/Basic.class.php"><a href="files/src-webservice-sys-basic-class.html"><abbr title="src/webservice/sys/Basic.class.php">Basic.class.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">346</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getFormData</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$param</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$param</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getJsonData">
+        getJsonData()
+        <a href="classes/Sys-Basic.html#method_getJsonData" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/sys/Basic.class.php"><a href="files/src-webservice-sys-basic-class.html"><abbr title="src/webservice/sys/Basic.class.php">Basic.class.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">336</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getJsonData</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$param</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$param</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
                                                         "
 >
     <h4 class="phpdocumentor-element__name" id="method_getMotivoChamados">
@@ -6402,6 +6502,37 @@ Obs: Esta função é utilizada na interação de e-mails, o md5 do chamado acom
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
             <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">instance_token</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_isJsonRequest">
+        isJsonRequest()
+        <a href="classes/Sys-Basic.html#method_isJsonRequest" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/sys/Basic.class.php"><a href="files/src-webservice-sys-basic-class.html"><abbr title="src/webservice/sys/Basic.class.php">Basic.class.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">329</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">isJsonRequest</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -8461,7 +8592,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/sys/Basic.class.php"><a href="files/src-webservice-sys-basic-class.html"><abbr title="src/webservice/sys/Basic.class.php">Basic.class.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">364</span>
+    <span class="phpdocumentor-element-found-in__line">387</span>
 
     </aside>
 
@@ -8492,7 +8623,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/sys/Basic.class.php"><a href="files/src-webservice-sys-basic-class.html"><abbr title="src/webservice/sys/Basic.class.php">Basic.class.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">428</span>
+    <span class="phpdocumentor-element-found-in__line">451</span>
 
     </aside>
 
@@ -8547,7 +8678,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/sys/Basic.class.php"><a href="files/src-webservice-sys-basic-class.html"><abbr title="src/webservice/sys/Basic.class.php">Basic.class.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">454</span>
+    <span class="phpdocumentor-element-found-in__line">477</span>
 
     </aside>
 
@@ -8588,7 +8719,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/sys/Basic.class.php"><a href="files/src-webservice-sys-basic-class.html"><abbr title="src/webservice/sys/Basic.class.php">Basic.class.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">347</span>
+    <span class="phpdocumentor-element-found-in__line">370</span>
 
     </aside>
 
@@ -8684,7 +8815,7 @@ Preencher a propriedade descricao com o motivo da reabertura.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/sys/Basic.class.php"><a href="files/src-webservice-sys-basic-class.html"><abbr title="src/webservice/sys/Basic.class.php">Basic.class.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">411</span>
+    <span class="phpdocumentor-element-found-in__line">434</span>
 
     </aside>
 
@@ -11020,7 +11151,7 @@ Chamado_Model::SITUACAO_ENCERRADO_INATIVIDADE</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/webservice/sys/Basic.class.php"><a href="files/src-webservice-sys-basic-class.html"><abbr title="src/webservice/sys/Basic.class.php">Basic.class.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">463</span>
+    <span class="phpdocumentor-element-found-in__line">486</span>
 
     </aside>
 
@@ -11239,6 +11370,8 @@ Chamado_Model::SITUACAO_ENCERRADO_INATIVIDADE</p>
                                             <li><a href="classes/Chamado-DAO.html#method_getClassificacaoChamados">getClassificacaoChamados()</a></li>
                                             <li><a href="classes/Chamado-DAO.html#method_getCountSituacaoUsuario">getCountSituacaoUsuario()</a></li>
                                             <li><a href="classes/Chamado-DAO.html#method_getDashboardPrevisaoRetorno">getDashboardPrevisaoRetorno()</a></li>
+                                            <li><a href="classes/Sys-Basic.html#method_getFormData">getFormData()</a></li>
+                                            <li><a href="classes/Sys-Basic.html#method_getJsonData">getJsonData()</a></li>
                                             <li><a href="classes/Chamado-DAO.html#method_getMotivoChamados">getMotivoChamados()</a></li>
                                             <li><a href="classes/Chamado-DAO.html#method_getSituacaoChamados">getSituacaoChamados()</a></li>
                                             <li><a href="classes/Chamado-DAO.html#method_grafico_em_andamento">grafico_em_andamento()</a></li>
@@ -11249,6 +11382,7 @@ Chamado_Model::SITUACAO_ENCERRADO_INATIVIDADE</p>
                                             <li><a href="classes/Chamado-DAO.html#method_grafico_remanescentes">grafico_remanescentes()</a></li>
                                             <li><a href="classes/Chamado-DAO.html#method_insert">insert()</a></li>
                                             <li><a href="classes/Sys-Basic.html#method_instance_token">instance_token()</a></li>
+                                            <li><a href="classes/Sys-Basic.html#method_isJsonRequest">isJsonRequest()</a></li>
                                             <li><a href="classes/Chamado-DAO.html#method_liberaNovaMensagem">liberaNovaMensagem()</a></li>
                                             <li><a href="classes/Chamado-DAO.html#method_listar">listar()</a></li>
                                             <li><a href="classes/Chamado-DAO.html#method_listar_chamado_by_solicitacao_atividade">listar_chamado_by_solicitacao_atividade()</a></li>

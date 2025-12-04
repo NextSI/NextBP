@@ -1,5 +1,50 @@
 [
     {
+        "versao": "24.109.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Possibilitar ocultar o campo respons\u00e1vel na abertura de chamados",
+                "referencia": [
+                    "BPM41292"
+                ],
+                "modulo": "Chamados",
+                "hash": "eeb020d6e8e9ba72393d19be2de21fe8c735379e",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41292"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Filtro por descri\u00e7\u00e3o de atividade em vis\u00f5es kanban",
+                "referencia": [
+                    "BPM41118"
+                ],
+                "modulo": "Processos",
+                "hash": "403523123da958b58286a5cc3b52d9c0580fa945",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41118"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Adicionado bot\u00e3o de recarregar listagem da Fila de Eventos",
+                "referencia": [
+                    "BPM40779"
+                ],
+                "modulo": "Geral",
+                "hash": "ae13826cb26bfa346a88d4cfb5c5d0441d47356f",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40779"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Melhorias na Aba de Executor da Atividade de Projeto",
+                "referencia": [
+                    "BPM38959"
+                ],
+                "modulo": "Projetos",
+                "hash": "02ff55175f2de46278869857b2a42b69d8638a62",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM38959"
+            }
+        ]
+    },
+    {
         "versao": "24.108.1",
         "itens": [
             {

@@ -1,5 +1,50 @@
 [
     {
+        "versao": "24.108.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Adicionados pontos de entrada para customiza\u00e7\u00e3o de impress\u00e3o de chamados",
+                "referencia": [
+                    "BPM41349"
+                ],
+                "modulo": "Chamados",
+                "hash": "b27801af48a4d3fc66211e75c404aabaf51165cf",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41349"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Inclus\u00e3o de filtros no GED",
+                "referencia": [
+                    "BPM41304"
+                ],
+                "modulo": "Documentos",
+                "hash": "fb5b4583a1e83de0b54beaadc9657c80fc6a79ec",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41304"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Ajuste na valida\u00e7\u00e3o de campos obrigat\u00f3rios do tipo \"Op\u00e7\u00f5es\" de formul\u00e1rios",
+                "referencia": [
+                    "BPM41245"
+                ],
+                "modulo": "Geral",
+                "hash": "9007ab012d4ad337a053b5e86d25268669feaeaf",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41245"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Melhoria na listagem de eventos da agenda na timeline",
+                "referencia": [
+                    "BPM40713"
+                ],
+                "modulo": "Timeline",
+                "hash": "d945cd8ab9048a489e309e41b666faa1503e84b0",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40713"
+            }
+        ]
+    },
+    {
         "versao": "24.107.4",
         "itens": [
             {

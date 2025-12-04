@@ -13056,11 +13056,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prospect-DAO.html#method_get_prospect_dominios"
         },                {
-            "fqsen": "\\Prospect_DAO\u003A\u003Avalidar_campos_obrigatorios\u0028\u0029",
-            "name": "validar_campos_obrigatorios",
-            "summary": "",
-            "url": "classes/Prospect-DAO.html#method_validar_campos_obrigatorios"
-        },                {
             "fqsen": "\\Prospect_DAO\u003A\u003Aget_ids\u0028\u0029",
             "name": "get_ids",
             "summary": "",
@@ -38535,6 +38530,21 @@ Search.appendIndex(
             "name": "imprimir_chamado",
             "summary": "",
             "url": "classes/Chamado-PDF.html#method_imprimir_chamado"
+        },                {
+            "fqsen": "\\Formulario_PDF",
+            "name": "Formulario_PDF",
+            "summary": "",
+            "url": "classes/Formulario-PDF.html"
+        },                {
+            "fqsen": "\\Formulario_PDF\u003A\u003Agerar_pdf\u0028\u0029",
+            "name": "gerar_pdf",
+            "summary": "",
+            "url": "classes/Formulario-PDF.html#method_gerar_pdf"
+        },                {
+            "fqsen": "\\Formulario_PDF\u003A\u003Ahtml\u0028\u0029",
+            "name": "html",
+            "summary": "Fun\u00E7\u00E3o\u0020respons\u00E1vel\u0020por\u0020gerar\u0020HTML\u0020de\u0020um\u0020formul\u00E1rio",
+            "url": "classes/Formulario-PDF.html#method_html"
         },                {
             "fqsen": "\\Oportunidade_PDF",
             "name": "Oportunidade_PDF",

@@ -178,7 +178,7 @@
                                     </div>
 
                                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 ">
-                                            <label>Previsão de Início</label>
+                                        <label>Previsão de Início</label>
                                         <input type="date" min="1900-01-01" max="2222-12-31" class="form-control edt_previsao_inicio">
                                     </div>
                                 
@@ -442,15 +442,7 @@
                         <div class="div_componente_movimentacao_financeira"></div>
                     </div>
                     <div class="tab-pane aba_executores" >
-
-                         <div class="row">
-
-                            <div class="div_exibir_prazo_agenda">
-                                <div class="col-md-12">
-                                    <input type="checkbox" class="checkbox_bootstrap_toggle template_switch chk_exibir_prazo_agenda">
-                                    <label>Exibir prazo da atividade na agenda</label>
-                                </div>
-                            </div>
+                        <div class="row">
 
                             <div class="row"><div class="col-md-12">&nbsp;</div></div>
 
@@ -500,11 +492,11 @@
                                                             <div class="div_horas_alocadas" template-field="div_horas_alocadas"></div>
                                                         </div>
                                                     </div>
-
+    
                                                     <div class="col-md-3">
                                                         <div class="form-group">
-                                                            <label for="edt_horas_dedicadas">Horas dedicadas/dia</label>
-                                                            <input type="text" class="form-control" template-field="edt_horas_dedicadas" placeholder="hh:mm"></input>
+                                                            <label>Horas dedicadas/dia</label>
+                                                            <div class="edt_horas_dedicadas" template-field="edt_horas_dedicadas"></div>
                                                         </div>
                                                     </div>
     
@@ -651,7 +643,21 @@
                                 </div>
 
                             </div>
+                        </div>
 
+                        <div class="row">
+                            <div class="div_exibir_prazo_agenda">
+                                <div class="col-md-6">
+                                    <input type="checkbox" class="checkbox_bootstrap_toggle template_switch chk_exibir_prazo_agenda">
+                                    <label>Exibir prazo da atividade na agenda</label>
+                                </div>
+                            </div>
+                            <div class="div_utilizar_data_prevista_executores">
+                                <div class="col-md-6">
+                                    <input type="checkbox" class="checkbox_bootstrap_toggle template_switch chk_utilizar_data_prevista_executores">
+                                    <label>Utilizar data prevista do projeto para início dos executores</label>
+                                </div>
+                            </div>
                         </div>
 
                     </div>

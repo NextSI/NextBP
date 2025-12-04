@@ -18601,6 +18601,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Atividade-Projeto-Model.html#property_exibir_prazo_agenda"
         },                {
+            "fqsen": "\\Atividade_Projeto_Model\u003A\u003A\u0024utilizar_data_prevista_executores",
+            "name": "utilizar_data_prevista_executores",
+            "summary": "",
+            "url": "classes/Atividade-Projeto-Model.html#property_utilizar_data_prevista_executores"
+        },                {
             "fqsen": "\\Atividade_Projeto_Model\u003A\u003A\u0024valor_previsto",
             "name": "valor_previsto",
             "summary": "",
@@ -21616,6 +21621,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Chamado-Model.html#property_chamado_motivo_altera_solicitante"
         },                {
+            "fqsen": "\\Chamado_Model\u003A\u003A\u0024chamado_motivo_solicitante_podera_alterar_responsavel",
+            "name": "chamado_motivo_solicitante_podera_alterar_responsavel",
+            "summary": "",
+            "url": "classes/Chamado-Model.html#property_chamado_motivo_solicitante_podera_alterar_responsavel"
+        },                {
             "fqsen": "\\Chamado_Model\u003A\u003A\u0024chamado_motivo_descricao_on_assunto",
             "name": "chamado_motivo_descricao_on_assunto",
             "summary": "",
@@ -21945,6 +21955,11 @@ Search.appendIndex(
             "name": "somente_solicitante_encerra",
             "summary": "",
             "url": "classes/Chamado-Motivo-Model.html#property_somente_solicitante_encerra"
+        },                {
+            "fqsen": "\\Chamado_Motivo_Model\u003A\u003A\u0024solicitante_podera_alterar_responsavel",
+            "name": "solicitante_podera_alterar_responsavel",
+            "summary": "",
+            "url": "classes/Chamado-Motivo-Model.html#property_solicitante_podera_alterar_responsavel"
         },                {
             "fqsen": "\\Chamado_Motivo_Model\u003A\u003A\u0024altera_solicitante",
             "name": "altera_solicitante",

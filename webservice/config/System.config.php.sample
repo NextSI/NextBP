@@ -108,7 +108,11 @@ ini_set('error_log', $error_log_path);
 // o conteúdo das requisições e realizam bloqueios inesperados e indesejados.
 // define('WS_PARAMS_BASE64', true);
 
-// Força a utilização de um visualizador de PDF embutido na aplicação, evitando o visualizador de PDF do navegador
+// Força a utilização de um visualizador de PDF embutido na aplicação, evitando o visualizador de PDF do navegador.
+// Mime-types obrigatórios:
+//   .ftl text/plain
+//   .mjs application/javascript
+//   .wasm application/wasm
 // define('FORCAR_VISUALIZADOR_PDF_EMBUTIDO', true);
 
 // Habilitar botão "Cadastre-se" para registro de usuários de clientes com domínios configurados

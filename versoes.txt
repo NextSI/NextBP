@@ -1,5 +1,31 @@
 [
     {
+        "versao": "24.110.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Ajuste na verifica\u00e7\u00e3o de campos obrigat\u00f3rios de formul\u00e1rios personalizados",
+                "referencia": [
+                    "BPM41489"
+                ],
+                "modulo": "Geral",
+                "hash": "8425ea4bbae3d039ff75271239e687131940556c",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41489"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na exibi\u00e7\u00e3o do filtro por n\u00famero da solicita\u00e7\u00e3o de processo em vis\u00f5es kanban",
+                "referencia": [
+                    "BPM41477",
+                    "BPM41501"
+                ],
+                "modulo": "Processos",
+                "hash": "fe8505fc43e187e54372aa4ee62e112235f4900c",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41477"
+            }
+        ]
+    },
+    {
         "versao": "24.109.1",
         "itens": [
             {

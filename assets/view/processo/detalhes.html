@@ -4,30 +4,61 @@
     <div class="panel panel-default" style="margin-bottom: 0px;">
         <div class="panel-heading" style="border-bottom: none; padding-bottom: 0px; margin-bottom:0px;">
             <div class="pull-right hidden-xs">
-                <div >
-                    <button type="button" class="btn_atv_arvore btn btn-default" style="display: none;">
-                        <i class="fas fa-stream"></i> Árvore
-                    </button>
-                    <button type="button" class="btn_atv_diagrama btn btn-default" style="display: none;">
+                <div>
+                    <button type="button" class="btn_atv_diagrama btn btn-xs btn-default" style="display: none;">
                         <i class="fas fa-project-diagram"></i> Diagrama
                     </button>
-                    <button type="button" class="btn_atv_diagrama_reprocessar btn btn-default" style="display: none;" title="Reprocessar Diagrama">
-                        <i class="fas fa-project-diagram"></i> 
-                        <div class="fas fa-magic icon-on-top"></div>
-                    </button>
-                    <button type="button" class="btn_versoes btn btn-default">
+                    
+                    <div class="btn_atv_arvore_group btn-group">
+                        <button type="button" class="btn_atv_arvore btn btn-xs btn-default" style="display: none;">
+                            <i class="fas fa-stream"></i> Árvore
+                        </button>
+                        <button type="button" class="btn_atv_arvore_dropdown btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="display: none;">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li class="btn_atv_diagrama_reprocessar">
+                               <a href="#"><i class="fas fa-project-diagram"></i> <div class="fas fa-magic icon-on-top"></div> Reprocessar Diagrama</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button type="button" class="btn_versoes btn btn-xs btn-default">
                         <i class="fas fa-history"></i> Versões
                     </button>
-                    <button type="button" class="btn_excluir btn btn-danger">Excluir</button>
-                    <button type="button" class="btn_salvar_processo btn btn-default">
-                        <i class="far fa-save"></i> Salvar
-                    </button>
-                    <button type="button" class="btn_salvar_processo salvar-e-sair btn btn-default">
-                        <i class="far fa-save"></i> <div class="fa fa-sign-out-alt icon-on-top"></div> Salvar e Sair
-                    </button>
+                    <button type="button" class="btn_excluir btn btn-xs btn-danger">Excluir</button>
+                    
+                    <div class="btn-group">
+                        <button type="button" class="btn_salvar_processo btn btn-xs btn-default">
+                            <i class="far fa-save"></i> Salvar
+                        </button>
+                        <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li class="btn_salvar_processo salvar-e-sair">
+                                <a href="$"><i class="far fa-save"></i> <div class="fa fa-sign-out-alt icon-on-top"></div> Salvar e Sair</a>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
-            <ul class="nav nav-tabs" role="tablist" style="padding-bottom: 0px; margin-bottom:0px;">
+            <style>
+                .abas_modelagem_processo {
+                    border-bottom: none;
+                    margin-bottom: 0px;
+                    padding-bottom: 0px;
+                    padding-bottom: 0px;
+                    display: flex !important;
+                }
+                .abas_modelagem_processo>li>a {
+                    padding: 7px 5px;
+                }
+            </style>
+            <ul class="abas_modelagem_processo nav nav-tabs" role="tablist">
                 <li class="active">
                     <a class="menu_configuracoes" href="#" role="tab" data-toggle="tab">Configurações</a>
                 </li>

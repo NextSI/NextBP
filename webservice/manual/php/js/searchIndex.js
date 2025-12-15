@@ -12436,6 +12436,56 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Processo-Gateway-DAO.html#method_listar_por_processo"
         },                {
+            "fqsen": "\\Processo_Subprocesso_DAO",
+            "name": "Processo_Subprocesso_DAO",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-DAO.html"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_DAO\u003A\u003Asalvar\u0028\u0029",
+            "name": "salvar",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-DAO.html#method_salvar"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_DAO\u003A\u003Aexiste\u0028\u0029",
+            "name": "existe",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-DAO.html#method_existe"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_DAO\u003A\u003Ainsert\u0028\u0029",
+            "name": "insert",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-DAO.html#method_insert"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_DAO\u003A\u003Aupdate\u0028\u0029",
+            "name": "update",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-DAO.html#method_update"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_DAO\u003A\u003Asalvar_destinos\u0028\u0029",
+            "name": "salvar_destinos",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-DAO.html#method_salvar_destinos"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_DAO\u003A\u003Aexcluir\u0028\u0029",
+            "name": "excluir",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-DAO.html#method_excluir"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_DAO\u003A\u003Apopular\u0028\u0029",
+            "name": "popular",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-DAO.html#method_popular"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_DAO\u003A\u003Apreencher\u0028\u0029",
+            "name": "preencher",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-DAO.html#method_preencher"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_DAO\u003A\u003Alistar_por_processo\u0028\u0029",
+            "name": "listar_por_processo",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-DAO.html#method_listar_por_processo"
+        },                {
             "fqsen": "\\Projeto_DAO",
             "name": "Projeto_DAO",
             "summary": "",
@@ -14431,6 +14481,21 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Solicitacao-Historico-DAO.html#method_listar"
         },                {
+            "fqsen": "\\Solicitacao_Subprocesso_DAO",
+            "name": "Solicitacao_Subprocesso_DAO",
+            "summary": "Realiza\u0020a\u0020persist\u00EAncia\u0020e\u0020consultas\u0020de\u0020dados\u0020relacionados\u0020\u00E0\u0020\u00C1reas.",
+            "url": "classes/Solicitacao-Subprocesso-DAO.html"
+        },                {
+            "fqsen": "\\Solicitacao_Subprocesso_DAO\u003A\u003Asalvar\u0028\u0029",
+            "name": "salvar",
+            "summary": "",
+            "url": "classes/Solicitacao-Subprocesso-DAO.html#method_salvar"
+        },                {
+            "fqsen": "\\Solicitacao_Subprocesso_DAO\u003A\u003Ainsert\u0028\u0029",
+            "name": "insert",
+            "summary": "",
+            "url": "classes/Solicitacao-Subprocesso-DAO.html#method_insert"
+        },                {
             "fqsen": "\\Solicitacao_Template_Word_DAO",
             "name": "Solicitacao_Template_Word_DAO",
             "summary": "",
@@ -16160,6 +16225,26 @@ Search.appendIndex(
             "name": "listar_por_versao_processo",
             "summary": "",
             "url": "classes/Versao-Processo-Gateway-DAO.html#method_listar_por_versao_processo"
+        },                {
+            "fqsen": "\\Versao_Processo_Subprocesso_DAO",
+            "name": "Versao_Processo_Subprocesso_DAO",
+            "summary": "",
+            "url": "classes/Versao-Processo-Subprocesso-DAO.html"
+        },                {
+            "fqsen": "\\Versao_Processo_Subprocesso_DAO\u003A\u003Apopular\u0028\u0029",
+            "name": "popular",
+            "summary": "",
+            "url": "classes/Versao-Processo-Subprocesso-DAO.html#method_popular"
+        },                {
+            "fqsen": "\\Versao_Processo_Subprocesso_DAO\u003A\u003Apreencher\u0028\u0029",
+            "name": "preencher",
+            "summary": "",
+            "url": "classes/Versao-Processo-Subprocesso-DAO.html#method_preencher"
+        },                {
+            "fqsen": "\\Versao_Processo_Subprocesso_DAO\u003A\u003Alistar_por_versao_processo\u0028\u0029",
+            "name": "listar_por_versao_processo",
+            "summary": "",
+            "url": "classes/Versao-Processo-Subprocesso-DAO.html#method_listar_por_versao_processo"
         },                {
             "fqsen": "\\Votacao_DAO",
             "name": "Votacao_DAO",
@@ -29101,6 +29186,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Log-Processo-Model.html#constant_PROCESSO_OPERACAO_SUPERVISORES"
         },                {
+            "fqsen": "\\Log_Processo_Model\u003A\u003APROCESSO_OPERACAO_SUBPROCESSO",
+            "name": "PROCESSO_OPERACAO_SUBPROCESSO",
+            "summary": "",
+            "url": "classes/Log-Processo-Model.html#constant_PROCESSO_OPERACAO_SUBPROCESSO"
+        },                {
             "fqsen": "\\Mensagem_Model",
             "name": "Mensagem_Model",
             "summary": "Estrutura\u0020de\u0020dados\u0020de\u0020uma\u0020\u00C1rea",
@@ -33226,6 +33316,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Processo-Model.html#constant_PROCESSO_ELEMENTO_TIPO_GATEWAY"
         },                {
+            "fqsen": "\\Processo_Model\u003A\u003APROCESSO_ELEMENTO_TIPO_SUBPROCESSO",
+            "name": "PROCESSO_ELEMENTO_TIPO_SUBPROCESSO",
+            "summary": "",
+            "url": "classes/Processo-Model.html#constant_PROCESSO_ELEMENTO_TIPO_SUBPROCESSO"
+        },                {
             "fqsen": "\\Processo_Model\u003A\u003APROCESSO_EXPRESSAO_FILTRO_IGUAL_A",
             "name": "PROCESSO_EXPRESSAO_FILTRO_IGUAL_A",
             "summary": "",
@@ -33700,6 +33795,106 @@ Search.appendIndex(
             "name": "tipo_automacao",
             "summary": "",
             "url": "classes/Processo-Gateway-Model.html#property_tipo_automacao"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_Model",
+            "name": "Processo_Subprocesso_Model",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-Model.html"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_Model\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-Model.html#method___construct"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_Model\u003A\u003Avalidation\u0028\u0029",
+            "name": "validation",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-Model.html#method_validation"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_Model\u003A\u003ASUBPROCESSO_TIPO_SOMENTE_ABRIR",
+            "name": "SUBPROCESSO_TIPO_SOMENTE_ABRIR",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-Model.html#constant_SUBPROCESSO_TIPO_SOMENTE_ABRIR"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_Model\u003A\u003ASUBPROCESSO_TIPO_ABRIR_AGUARDAR_CONCLUSAO",
+            "name": "SUBPROCESSO_TIPO_ABRIR_AGUARDAR_CONCLUSAO",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-Model.html#constant_SUBPROCESSO_TIPO_ABRIR_AGUARDAR_CONCLUSAO"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_Model\u003A\u003ASUBPROCESSO_TIPO_ABRIR_AGUARDAR_ATIVIDADE",
+            "name": "SUBPROCESSO_TIPO_ABRIR_AGUARDAR_ATIVIDADE",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-Model.html#constant_SUBPROCESSO_TIPO_ABRIR_AGUARDAR_ATIVIDADE"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_Model\u003A\u003A\u0024elemento_tipo",
+            "name": "elemento_tipo",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-Model.html#property_elemento_tipo"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_Model\u003A\u003A\u0024elem_key",
+            "name": "elem_key",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-Model.html#property_elem_key"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_Model\u003A\u003A\u0024processo_id",
+            "name": "processo_id",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-Model.html#property_processo_id"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_Model\u003A\u003A\u0024processo_atividade_id",
+            "name": "processo_atividade_id",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-Model.html#property_processo_atividade_id"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_Model\u003A\u003A\u0024sequencia",
+            "name": "sequencia",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-Model.html#property_sequencia"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_Model\u003A\u003A\u0024descricao",
+            "name": "descricao",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-Model.html#property_descricao"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_Model\u003A\u003A\u0024tipo",
+            "name": "tipo",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-Model.html#property_tipo"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_Model\u003A\u003A\u0024destinos",
+            "name": "destinos",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-Model.html#property_destinos"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_Model\u003A\u003A\u0024removido",
+            "name": "removido",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-Model.html#property_removido"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_Model\u003A\u003A\u0024sequencia_pai",
+            "name": "sequencia_pai",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-Model.html#property_sequencia_pai"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_Model\u003A\u003A\u0024alterado",
+            "name": "alterado",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-Model.html#property_alterado"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_Model\u003A\u003A\u0024de_para",
+            "name": "de_para",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-Model.html#property_de_para"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_Model\u003A\u003A\u0024processo_id_subprocesso",
+            "name": "processo_id_subprocesso",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-Model.html#property_processo_id_subprocesso"
+        },                {
+            "fqsen": "\\Processo_Subprocesso_Model\u003A\u003A\u0024processo_atividade_aguardar_id",
+            "name": "processo_atividade_aguardar_id",
+            "summary": "",
+            "url": "classes/Processo-Subprocesso-Model.html#property_processo_atividade_aguardar_id"
         },                {
             "fqsen": "\\Projeto_Model",
             "name": "Projeto_Model",
@@ -35826,6 +36021,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Solicitacao-Atividade-Model.html#constant_SOLICITACAO_ATIVIDADE_ENCONTRAR_DESTINO_PROCESSO_GATEWAY_ID"
         },                {
+            "fqsen": "\\Solicitacao_Atividade_Model\u003A\u003ASOLICITACAO_ATIVIDADE_ENCONTRAR_DESTINO_VERSAO_PROCESSO_SUBPROCESSO_ID",
+            "name": "SOLICITACAO_ATIVIDADE_ENCONTRAR_DESTINO_VERSAO_PROCESSO_SUBPROCESSO_ID",
+            "summary": "",
+            "url": "classes/Solicitacao-Atividade-Model.html#constant_SOLICITACAO_ATIVIDADE_ENCONTRAR_DESTINO_VERSAO_PROCESSO_SUBPROCESSO_ID"
+        },                {
+            "fqsen": "\\Solicitacao_Atividade_Model\u003A\u003ASOLICITACAO_ATIVIDADE_ENCONTRAR_DESTINO_PROCESSO_SUBPROCESSO_ID",
+            "name": "SOLICITACAO_ATIVIDADE_ENCONTRAR_DESTINO_PROCESSO_SUBPROCESSO_ID",
+            "summary": "",
+            "url": "classes/Solicitacao-Atividade-Model.html#constant_SOLICITACAO_ATIVIDADE_ENCONTRAR_DESTINO_PROCESSO_SUBPROCESSO_ID"
+        },                {
             "fqsen": "\\Solicitacao_Atividade_Model\u003A\u003ASOLICITACAO_TIPO_VISUALIZAR_ATIVIDADE",
             "name": "SOLICITACAO_TIPO_VISUALIZAR_ATIVIDADE",
             "summary": "",
@@ -36606,6 +36811,26 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Solicitacao-Historico-Model.html#constant_ACAO_REABRIR_SOLICITACAO"
         },                {
+            "fqsen": "\\Solicitacao_Historico_Model\u003A\u003AACAO_SUBPROCESSO_ABERTO",
+            "name": "ACAO_SUBPROCESSO_ABERTO",
+            "summary": "",
+            "url": "classes/Solicitacao-Historico-Model.html#constant_ACAO_SUBPROCESSO_ABERTO"
+        },                {
+            "fqsen": "\\Solicitacao_Historico_Model\u003A\u003AACAO_SOLICITACAO_ORIGEM_VINCULADO",
+            "name": "ACAO_SOLICITACAO_ORIGEM_VINCULADO",
+            "summary": "",
+            "url": "classes/Solicitacao-Historico-Model.html#constant_ACAO_SOLICITACAO_ORIGEM_VINCULADO"
+        },                {
+            "fqsen": "\\Solicitacao_Historico_Model\u003A\u003AACAO_AVANCO_SOLICITACAO_ORIGEM",
+            "name": "ACAO_AVANCO_SOLICITACAO_ORIGEM",
+            "summary": "",
+            "url": "classes/Solicitacao-Historico-Model.html#constant_ACAO_AVANCO_SOLICITACAO_ORIGEM"
+        },                {
+            "fqsen": "\\Solicitacao_Historico_Model\u003A\u003AACAO_AVANCADO_VIA_SUBPROCESSO",
+            "name": "ACAO_AVANCADO_VIA_SUBPROCESSO",
+            "summary": "",
+            "url": "classes/Solicitacao-Historico-Model.html#constant_ACAO_AVANCADO_VIA_SUBPROCESSO"
+        },                {
             "fqsen": "\\Solicitacao_Historico_Model\u003A\u003A\u0024acao",
             "name": "acao",
             "summary": "",
@@ -36655,6 +36880,41 @@ Search.appendIndex(
             "name": "solicitacao_gateway_id",
             "summary": "",
             "url": "classes/Solicitacao-Historico-Model.html#property_solicitacao_gateway_id"
+        },                {
+            "fqsen": "\\Solicitacao_Subprocesso_Model",
+            "name": "Solicitacao_Subprocesso_Model",
+            "summary": "Estrutura\u0020de\u0020dados\u0020referente\u0020a\u0020Atividade\u0020de\u0020uma\u0020Solicita\u00E7\u00E3o",
+            "url": "classes/Solicitacao-Subprocesso-Model.html"
+        },                {
+            "fqsen": "\\Solicitacao_Subprocesso_Model\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Solicitacao-Subprocesso-Model.html#method___construct"
+        },                {
+            "fqsen": "\\Solicitacao_Subprocesso_Model\u003A\u003Avalidation\u0028\u0029",
+            "name": "validation",
+            "summary": "",
+            "url": "classes/Solicitacao-Subprocesso-Model.html#method_validation"
+        },                {
+            "fqsen": "\\Solicitacao_Subprocesso_Model\u003A\u003A\u0024solicitacao_id",
+            "name": "solicitacao_id",
+            "summary": "",
+            "url": "classes/Solicitacao-Subprocesso-Model.html#property_solicitacao_id"
+        },                {
+            "fqsen": "\\Solicitacao_Subprocesso_Model\u003A\u003A\u0024versao_processo_subprocesso_id",
+            "name": "versao_processo_subprocesso_id",
+            "summary": "",
+            "url": "classes/Solicitacao-Subprocesso-Model.html#property_versao_processo_subprocesso_id"
+        },                {
+            "fqsen": "\\Solicitacao_Subprocesso_Model\u003A\u003A\u0024origem_solicitacao_atividade_id",
+            "name": "origem_solicitacao_atividade_id",
+            "summary": "",
+            "url": "classes/Solicitacao-Subprocesso-Model.html#property_origem_solicitacao_atividade_id"
+        },                {
+            "fqsen": "\\Solicitacao_Subprocesso_Model\u003A\u003A\u0024origem_solicitacao_id",
+            "name": "origem_solicitacao_id",
+            "summary": "",
+            "url": "classes/Solicitacao-Subprocesso-Model.html#property_origem_solicitacao_id"
         },                {
             "fqsen": "\\Solicitacao_Template_Word_Model",
             "name": "Solicitacao_Template_Word_Model",
@@ -38415,6 +38675,81 @@ Search.appendIndex(
             "name": "destinos",
             "summary": "",
             "url": "classes/Versao-Processo-Gateway-Model.html#property_destinos"
+        },                {
+            "fqsen": "\\Versao_Processo_Subprocesso_Model",
+            "name": "Versao_Processo_Subprocesso_Model",
+            "summary": "",
+            "url": "classes/Versao-Processo-Subprocesso-Model.html"
+        },                {
+            "fqsen": "\\Versao_Processo_Subprocesso_Model\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Versao-Processo-Subprocesso-Model.html#method___construct"
+        },                {
+            "fqsen": "\\Versao_Processo_Subprocesso_Model\u003A\u003Avalidation\u0028\u0029",
+            "name": "validation",
+            "summary": "",
+            "url": "classes/Versao-Processo-Subprocesso-Model.html#method_validation"
+        },                {
+            "fqsen": "\\Versao_Processo_Subprocesso_Model\u003A\u003A\u0024elemento_tipo",
+            "name": "elemento_tipo",
+            "summary": "",
+            "url": "classes/Versao-Processo-Subprocesso-Model.html#property_elemento_tipo"
+        },                {
+            "fqsen": "\\Versao_Processo_Subprocesso_Model\u003A\u003A\u0024id",
+            "name": "id",
+            "summary": "",
+            "url": "classes/Versao-Processo-Subprocesso-Model.html#property_id"
+        },                {
+            "fqsen": "\\Versao_Processo_Subprocesso_Model\u003A\u003A\u0024excluido",
+            "name": "excluido",
+            "summary": "",
+            "url": "classes/Versao-Processo-Subprocesso-Model.html#property_excluido"
+        },                {
+            "fqsen": "\\Versao_Processo_Subprocesso_Model\u003A\u003A\u0024versao_processo_id",
+            "name": "versao_processo_id",
+            "summary": "",
+            "url": "classes/Versao-Processo-Subprocesso-Model.html#property_versao_processo_id"
+        },                {
+            "fqsen": "\\Versao_Processo_Subprocesso_Model\u003A\u003A\u0024processo_subprocesso_id",
+            "name": "processo_subprocesso_id",
+            "summary": "",
+            "url": "classes/Versao-Processo-Subprocesso-Model.html#property_processo_subprocesso_id"
+        },                {
+            "fqsen": "\\Versao_Processo_Subprocesso_Model\u003A\u003A\u0024sequencia",
+            "name": "sequencia",
+            "summary": "",
+            "url": "classes/Versao-Processo-Subprocesso-Model.html#property_sequencia"
+        },                {
+            "fqsen": "\\Versao_Processo_Subprocesso_Model\u003A\u003A\u0024descricao",
+            "name": "descricao",
+            "summary": "",
+            "url": "classes/Versao-Processo-Subprocesso-Model.html#property_descricao"
+        },                {
+            "fqsen": "\\Versao_Processo_Subprocesso_Model\u003A\u003A\u0024processo_atividade_id",
+            "name": "processo_atividade_id",
+            "summary": "",
+            "url": "classes/Versao-Processo-Subprocesso-Model.html#property_processo_atividade_id"
+        },                {
+            "fqsen": "\\Versao_Processo_Subprocesso_Model\u003A\u003A\u0024de_para",
+            "name": "de_para",
+            "summary": "",
+            "url": "classes/Versao-Processo-Subprocesso-Model.html#property_de_para"
+        },                {
+            "fqsen": "\\Versao_Processo_Subprocesso_Model\u003A\u003A\u0024tipo",
+            "name": "tipo",
+            "summary": "",
+            "url": "classes/Versao-Processo-Subprocesso-Model.html#property_tipo"
+        },                {
+            "fqsen": "\\Versao_Processo_Subprocesso_Model\u003A\u003A\u0024processo_id",
+            "name": "processo_id",
+            "summary": "",
+            "url": "classes/Versao-Processo-Subprocesso-Model.html#property_processo_id"
+        },                {
+            "fqsen": "\\Versao_Processo_Subprocesso_Model\u003A\u003A\u0024destinos",
+            "name": "destinos",
+            "summary": "",
+            "url": "classes/Versao-Processo-Subprocesso-Model.html#property_destinos"
         },                {
             "fqsen": "\\Votacao_Model",
             "name": "Votacao_Model",

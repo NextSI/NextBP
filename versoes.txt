@@ -1,9 +1,34 @@
 [
     {
+        "versao": "24.111.1",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao criar automaticamente usu\u00e1rios de intera\u00e7\u00e3o por e-mail",
+                "referencia": [
+                    "BPM41528"
+                ],
+                "modulo": "Geral",
+                "hash": "d0786e1baef818d250a946e6b43ad7dc7984e0e5",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41528"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Inclus\u00e3o do elemento Subprocesso nos processos",
+                "referencia": [
+                    "BPM31442"
+                ],
+                "modulo": "Processos",
+                "hash": "c348d8bf4560a3e86ef9528d328c6de96ffbf0c3",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM31442"
+            }
+        ]
+    },
+    {
         "versao": "24.110.1",
         "itens": [
             {
-                "tipo": "M",
+                "tipo": "C",
                 "descricao": "Ajuste na verifica\u00e7\u00e3o de campos obrigat\u00f3rios de formul\u00e1rios personalizados",
                 "referencia": [
                     "BPM41489"

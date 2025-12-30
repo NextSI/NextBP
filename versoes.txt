@@ -1,5 +1,40 @@
 [
     {
+        "versao": "24.112.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Nova funcionalidade para o Cubo - Cria\u00e7\u00e3o de Pain\u00e9is",
+                "referencia": [
+                    "BPM41319"
+                ],
+                "modulo": "Cubo",
+                "hash": "d03f16dce08ddbec2090a3771612c0a8d5ec54b0",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41319"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na sele\u00e7\u00e3o de clientes e projetos em apontamentos de atividades",
+                "referencia": [
+                    "BPM40093"
+                ],
+                "modulo": "Projetos",
+                "hash": "89993ee8ba99be5cb5065ad7521f469fcee2365a",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40093-2"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na exibi\u00e7\u00e3o do endere\u00e7o da pasta de documentos",
+                "referencia": [
+                    "BPM41522"
+                ],
+                "modulo": "Documentos",
+                "hash": "c471cd29572c4347b162425a691e9335a28e75cb",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41522"
+            }
+        ]
+    },
+    {
         "versao": "24.111.1",
         "itens": [
             {

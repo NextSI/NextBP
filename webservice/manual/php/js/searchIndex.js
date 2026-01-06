@@ -5121,6 +5121,11 @@ Search.appendIndex(
             "summary": "Cancela\u0020a\u0020assinatura\u0020de\u0020um\u0020documento",
             "url": "classes/D4Sign-DAO.html#method_cancelar_assinatura"
         },                {
+            "fqsen": "\\D4Sign_DAO\u003A\u003Aalterar_email_signatario\u0028\u0029",
+            "name": "alterar_email_signatario",
+            "summary": "",
+            "url": "classes/D4Sign-DAO.html#method_alterar_email_signatario"
+        },                {
             "fqsen": "\\D4Sign_DAO\u003A\u003Aregistrar_evento\u0028\u0029",
             "name": "registrar_evento",
             "summary": "PENDENTE\u0020DOCUMENTA\u00C7\u00C3O\nCancelado\u003A\u0020\u007B\u0022uuid\u0022\u003A\u002217d8e213\u002Dfac6\u002D4a24\u002Dbbef\u002D8b80d0531179\u0022,\u0022type_post\u0022\u003A\u00223\u0022,\u0022message\u0022\u003A\u0022Cancelled\u0020document\u0022\u007D\nFinalizado\u003A\u0020\u007B\u0022uuid\u0022\u003A\u0022aef46449\u002Dab90\u002D459e\u002Dac9e\u002D7e304f02c51b\u0022,\u0022type_post\u0022\u003A\u00221\u0022,\u0022message\u0022\u003A\u0022Finished\u0020document\u0022\u007D\nAssinado\u003A\u0020\u007B\u0022uuid\u0022\u003A\u0022aef46449\u002Dab90\u002D459e\u002Dac9e\u002D7e304f02c51b\u0022,\u0022type_post\u0022\u003A\u00224\u0022,\u0022message\u0022\u003A\u0022Signed\u0022,\u0022email\u0022\u003A\u0022teste\u0040teste.com.br\u0022\u007D",
@@ -6440,6 +6445,11 @@ Search.appendIndex(
             "name": "atualiza_situacao_d4sign",
             "summary": "",
             "url": "classes/Documento-Revisao-Assinatura-Signatario-DAO.html#method_atualiza_situacao_d4sign"
+        },                {
+            "fqsen": "\\Documento_Revisao_Assinatura_Signatario_DAO\u003A\u003Aatualizar_email_signatario\u0028\u0029",
+            "name": "atualizar_email_signatario",
+            "summary": "",
+            "url": "classes/Documento-Revisao-Assinatura-Signatario-DAO.html#method_atualizar_email_signatario"
         },                {
             "fqsen": "\\Documento_Tag_DAO",
             "name": "Documento_Tag_DAO",
@@ -25855,6 +25865,11 @@ Search.appendIndex(
             "name": "d4sign_document_key",
             "summary": "",
             "url": "classes/Documento-Revisao-Assinatura-Signatario-Model.html#property_d4sign_document_key"
+        },                {
+            "fqsen": "\\Documento_Revisao_Assinatura_Signatario_Model\u003A\u003A\u0024d4sign_signer_id",
+            "name": "d4sign_signer_id",
+            "summary": "",
+            "url": "classes/Documento-Revisao-Assinatura-Signatario-Model.html#property_d4sign_signer_id"
         },                {
             "fqsen": "\\Documento_Revisao_Assinatura_Signatario_Model\u003A\u003A\u0024situacao",
             "name": "situacao",

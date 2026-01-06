@@ -1,5 +1,30 @@
 [
     {
+        "versao": "24.113.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Inclus\u00e3o de Coluna Grupo de Motivo em relat\u00f3rio Chamados Interagidos",
+                "referencia": [
+                    "BPM41346"
+                ],
+                "modulo": "Chamados",
+                "hash": "1988e855a6cbc8d71fb09fe6ab4c6b1769e691b8",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41346"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Criar rotina para edi\u00e7\u00e3o de e-mails dos assinantes",
+                "referencia": [
+                    "BPM41497"
+                ],
+                "modulo": "GED",
+                "hash": "90e85eaaa2dab800d2c9d6732508e2c07ce2aeff",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41497"
+            }
+        ]
+    },
+    {
         "versao": "24.112.1",
         "itens": [
             {

@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.113.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o retorno da altera\u00e7\u00e3o de e-mail D4Sign",
+                "referencia": [
+                    "BPM41497"
+                ],
+                "modulo": "GED",
+                "hash": "738b76cfb4e8d5144fdd715291417514b3923c8d",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41497-1"
+            }
+        ]
+    },
+    {
         "versao": "24.113.1",
         "itens": [
             {

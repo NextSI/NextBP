@@ -36896,6 +36896,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Solicitacao-Atividade-Model.html#property_tornar_responsavel_campo_formulario_id"
         },                {
+            "fqsen": "\\Solicitacao_Atividade_Model\u003A\u003A\u0024tornar_responsavel_anonimo_campo_formulario",
+            "name": "tornar_responsavel_anonimo_campo_formulario",
+            "summary": "",
+            "url": "classes/Solicitacao-Atividade-Model.html#property_tornar_responsavel_anonimo_campo_formulario"
+        },                {
+            "fqsen": "\\Solicitacao_Atividade_Model\u003A\u003A\u0024tornar_responsavel_anonimo_campo_formulario_id",
+            "name": "tornar_responsavel_anonimo_campo_formulario_id",
+            "summary": "",
+            "url": "classes/Solicitacao-Atividade-Model.html#property_tornar_responsavel_anonimo_campo_formulario_id"
+        },                {
             "fqsen": "\\Solicitacao_Atividade_Model\u003A\u003A\u0024emails_responsaveis_anonimos",
             "name": "emails_responsaveis_anonimos",
             "summary": "",

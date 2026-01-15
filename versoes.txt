@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.114.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o erro de campo n\u00e3o existente no envio de documentos para assinatura",
+                "referencia": [
+                    "BPM41497"
+                ],
+                "modulo": "GED",
+                "hash": "c7c0bc46861d287f95fa9cc6019ea381c7a48f3c",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41497-2"
+            }
+        ]
+    },
+    {
         "versao": "24.114.1",
         "itens": [
             {

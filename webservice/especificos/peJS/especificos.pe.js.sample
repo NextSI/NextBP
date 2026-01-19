@@ -178,3 +178,16 @@ App.PE.Solicitacao_Listagem_onRowPrepared = function(e) {
     //     }
     // }
 }
+
+App.PE.Timeline_Listagem_onRowPrepared = function(e) {
+    // Verifico se a linha é do tipo dados
+    // if(e.rowType === "data"){
+    //     if(e.data.data_inicio_atividade <= "2023-04-20 09:42:06"){
+    //         // Adiciono a classe info do bootstrap, poderia colocar uma cor de fundo manualmente tbm.
+    //         e.rowElement.addClass("bg-info");
+
+    //         // Removo a classe da zebra para cor de fundo funcionar corretamente.
+    //         e.rowElement.removeClass("dx-row-alt");
+    //     }
+    // }
+}

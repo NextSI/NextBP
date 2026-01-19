@@ -1,5 +1,50 @@
 [
     {
+        "versao": "24.115.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Criar rotina para encerrar chamados em lote",
+                "referencia": [
+                    "BPM41387"
+                ],
+                "modulo": "Chamado",
+                "hash": "abb858b3feeaa206ef1339491857750eeef4532c",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41387"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Nova tela de Carteira de Entidades",
+                "referencia": [
+                    "BPM41529"
+                ],
+                "modulo": "CRM",
+                "hash": "200d4a58da3e8740b5eb683dad443b0e5578684e",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41529"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Novo ponto de entrada no especificos.js",
+                "referencia": [
+                    "BPM41705"
+                ],
+                "modulo": "Customiza\u00e7\u00f5es",
+                "hash": "62a7372ff2a6e796e38ed54d6e7b5c8128b7c0c9",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41705"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o coluna Grupo Motivo no relat\u00f3rio de Chamados Interagidos",
+                "referencia": [
+                    "BPM41697"
+                ],
+                "modulo": "Chamados",
+                "hash": "d4d38482c13405a68e81a369c82efb0b850e1a26",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41697"
+            }
+        ]
+    },
+    {
         "versao": "24.114.2",
         "itens": [
             {

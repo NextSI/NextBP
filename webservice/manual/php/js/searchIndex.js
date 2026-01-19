@@ -3016,6 +3016,11 @@ Search.appendIndex(
             "summary": "Realiza\u0020o\u0020encerramento\u0020do\u0020chamado\u0020por\u0020inatividade",
             "url": "classes/Chamado-DAO.html#method_encerrarChamadoInatividade"
         },                {
+            "fqsen": "\\Chamado_DAO\u003A\u003AencerrarChamadoLote\u0028\u0029",
+            "name": "encerrarChamadoLote",
+            "summary": "",
+            "url": "classes/Chamado-DAO.html#method_encerrarChamadoLote"
+        },                {
             "fqsen": "\\Chamado_DAO\u003A\u003AreabrirChamado\u0028\u0029",
             "name": "reabrirChamado",
             "summary": "Realiza\u0020a\u0020reabertura\u0020do\u0020chamado",

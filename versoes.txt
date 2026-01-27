@@ -1,5 +1,40 @@
 [
     {
+        "versao": "24.116.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Documento finalizado n\u00e3o atualizado no BP",
+                "referencia": [
+                    "BPM40724"
+                ],
+                "modulo": "GED",
+                "hash": "c66882ba3a017abeb53af6e998a1c7fc95214ea4",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40724"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Inclus\u00e3o de subprocesso ap\u00f3s gateways exclusivos",
+                "referencia": [
+                    "BPM41648"
+                ],
+                "modulo": "Processos",
+                "hash": "157517944902ddf66fc5f10b15ae7e9891c6ff40",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41648"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Exibi\u00e7\u00e3o de etiquetas de processos na timeline",
+                "referencia": [
+                    "BPM41667"
+                ],
+                "modulo": "Timeline",
+                "hash": "ff80c839013693c8d1ae4116d56c2152435e81d7",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41667"
+            }
+        ]
+    },
+    {
         "versao": "24.115.1",
         "itens": [
             {

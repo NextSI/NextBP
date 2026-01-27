@@ -13,7 +13,7 @@
  * @category  HTTP
  * @package   HTTP_Request2
  * @author    Alexey Borzov <avb@php.net>
- * @copyright 2008-2025 Alexey Borzov <avb@php.net>
+ * @copyright 2008-2022 Alexey Borzov <avb@php.net>
  * @license   http://opensource.org/licenses/BSD-3-Clause BSD 3-Clause License
  * @link      http://pear.php.net/package/HTTP_Request2
  */
@@ -50,21 +50,20 @@ class HTTP_Request2_SOCKS5 extends HTTP_Request2_SocketWrapper
      */
     public function __construct(
         $address, $timeout = 10, array $contextOptions = [],
-        $username = '', $password = ''
+        $username = null, $password = null
     ) {
         parent::__construct($address, $timeout, $contextOptions);
 
-        if ('' !== $username) {
+        if (strlen($username)) {
             $request = pack('C4', 5, 2, 0, 2);
         } else {
             $request = pack('C3', 5, 1, 0);
         }
-        $this->write((string)$request);
-        $response = unpack('Cversion/Cmethod', (string)$this->read(3));
-        if (!$response || 5 !== $response['version']) {
+        $this->write($request);
+        $response = unpack('Cversion/Cmethod', $this->read(3));
+        if (5 != $response['version']) {
             throw new HTTP_Request2_MessageException(
-                'Invalid version received from SOCKS5 proxy: '
-                . ($response ? $response['version'] : 'none'),
+                'Invalid version received from SOCKS5 proxy: ' . $response['version'],
                 HTTP_Request2_Exception::MALFORMED_RESPONSE
             );
         }
@@ -93,12 +92,12 @@ class HTTP_Request2_SOCKS5 extends HTTP_Request2_SocketWrapper
      */
     protected function performAuthentication($username, $password)
     {
-        $request  = (string)pack('C2', 1, strlen($username)) . $username
-                    . (string)pack('C', strlen($password)) . $password;
+        $request  = pack('C2', 1, strlen($username)) . $username
+                    . pack('C', strlen($password)) . $password;
 
         $this->write($request);
-        $response = unpack('Cvn/Cstatus', (string)$this->read(3));
-        if (!$response || 1 !== $response['vn'] || 0 !== $response['status']) {
+        $response = unpack('Cvn/Cstatus', $this->read(3));
+        if (1 != $response['vn'] || 0 != $response['status']) {
             throw new HTTP_Request2_ConnectionException(
                 'Connection rejected by proxy due to invalid username and/or password'
             );
@@ -117,17 +116,17 @@ class HTTP_Request2_SOCKS5 extends HTTP_Request2_SocketWrapper
      */
     public function connect($remoteHost, $remotePort)
     {
-        $request = (string)pack('C5', 0x05, 0x01, 0x00, 0x03, strlen($remoteHost))
-                   . $remoteHost . (string)pack('n', $remotePort);
+        $request = pack('C5', 0x05, 0x01, 0x00, 0x03, strlen($remoteHost))
+                   . $remoteHost . pack('n', $remotePort);
 
         $this->write($request);
-        $response = unpack('Cversion/Creply/Creserved', (string)$this->read(1024));
-        if (!$response || 5 !== $response['version'] || 0 !== $response['reserved']) {
+        $response = unpack('Cversion/Creply/Creserved', $this->read(1024));
+        if (5 != $response['version'] || 0 != $response['reserved']) {
             throw new HTTP_Request2_MessageException(
                 'Invalid response received from SOCKS5 proxy',
                 HTTP_Request2_Exception::MALFORMED_RESPONSE
             );
-        } elseif (0 !== $response['reply']) {
+        } elseif (0 != $response['reply']) {
             throw new HTTP_Request2_ConnectionException(
                 "Unable to connect to {$remoteHost}:{$remotePort} through SOCKS5 proxy",
                 0, $response['reply']

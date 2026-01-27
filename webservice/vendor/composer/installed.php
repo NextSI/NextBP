@@ -3,7 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '22984c65d5d4f2a9d1bf84b4dff5b719c20a0b28',
+        'reference' => 'd8f955e76ff7c0c4288f80e0f57043442d0f8dcb',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         '__root__' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '22984c65d5d4f2a9d1bf84b4dff5b719c20a0b28',
+            'reference' => 'd8f955e76ff7c0c4288f80e0f57043442d0f8dcb',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -314,9 +314,9 @@
             'dev_requirement' => false,
         ),
         'pear/http_request2' => array(
-            'pretty_version' => 'v2.7.0',
-            'version' => '2.7.0.0',
-            'reference' => 'b1c61b71128045734d757c4d3d436457ace80ea7',
+            'pretty_version' => 'v2.5.1',
+            'version' => '2.5.1.0',
+            'reference' => 'db4ce7844f838d3adca0513a77420c0fec22ed2d',
             'type' => 'library',
             'install_path' => __DIR__ . '/../pear/http_request2',
             'aliases' => array(),
@@ -388,8 +388,8 @@
         'psr/cache-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '^1.0',
-                1 => '2.0|3.0',
+                0 => '2.0|3.0',
+                1 => '^1.0',
             ),
         ),
         'psr/clock' => array(
@@ -482,8 +482,8 @@
         'psr/simple-cache-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '^1.0',
-                1 => '1.0|2.0|3.0',
+                0 => '1.0|2.0|3.0',
+                1 => '^1.0',
             ),
         ),
         'ralouphie/getallheaders' => array(

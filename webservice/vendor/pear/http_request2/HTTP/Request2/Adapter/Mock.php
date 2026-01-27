@@ -13,7 +13,7 @@
  * @category  HTTP
  * @package   HTTP_Request2
  * @author    Alexey Borzov <avb@php.net>
- * @copyright 2008-2025 Alexey Borzov <avb@php.net>
+ * @copyright 2008-2022 Alexey Borzov <avb@php.net>
  * @license   http://opensource.org/licenses/BSD-3-Clause BSD 3-Clause License
  * @link      http://pear.php.net/package/HTTP_Request2
  */
@@ -52,7 +52,7 @@ class HTTP_Request2_Adapter_Mock extends HTTP_Request2_Adapter
     /**
      * A queue of responses to be returned by sendRequest()
      *
-     * @var array<int, array{HTTP_Request2_Response|Exception, ?string}>
+     * @var array
      */
     protected $responses = [];
 
@@ -80,17 +80,18 @@ class HTTP_Request2_Adapter_Mock extends HTTP_Request2_Adapter
                 break;
             }
         }
+        if (!$response) {
+            return self::createResponseFromString("HTTP/1.1 400 Bad Request\r\n\r\n");
 
-        if ($response instanceof HTTP_Request2_Response) {
+        } elseif ($response instanceof HTTP_Request2_Response) {
             return $response;
-        } elseif ($response instanceof Exception) {
+
+        } else {
             // rethrow the exception
             $class   = get_class($response);
             $message = $response->getMessage();
             $code    = $response->getCode();
             throw new $class($message, $code);
-        } else {
-            return self::createResponseFromString("HTTP/1.1 400 Bad Request\r\n\r\n");
         }
     }
 
@@ -129,7 +130,7 @@ class HTTP_Request2_Adapter_Mock extends HTTP_Request2_Adapter
      */
     public static function createResponseFromString($str)
     {
-        $parts       = preg_split('!(\r?\n){2}!m', $str, 2) ?: [''];
+        $parts       = preg_split('!(\r?\n){2}!m', $str, 2);
         $headerLines = explode("\n", $parts[0]);
         $response    = new HTTP_Request2_Response(array_shift($headerLines));
         foreach ($headerLines as $headerLine) {
@@ -152,14 +153,14 @@ class HTTP_Request2_Adapter_Mock extends HTTP_Request2_Adapter
      */
     public static function createResponseFromFile($fp)
     {
-        $response = new HTTP_Request2_Response((string)fgets($fp));
+        $response = new HTTP_Request2_Response(fgets($fp));
         do {
-            $headerLine = (string)fgets($fp);
+            $headerLine = fgets($fp);
             $response->parseHeaderLine($headerLine);
         } while ('' != trim($headerLine));
 
         while (!feof($fp)) {
-            $response->appendBody((string)fread($fp, 8192));
+            $response->appendBody(fread($fp, 8192));
         }
         return $response;
     }

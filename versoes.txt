@@ -1,5 +1,30 @@
 [
     {
+        "versao": "24.117.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Cria\u00e7\u00e3o de Ponto de entrada ao abrir pasta do GED",
+                "referencia": [
+                    "BPM41524"
+                ],
+                "modulo": "GED",
+                "hash": "d3d9376160731272c3129cfbeabbea00c49ec930",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41524-1"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o exibi\u00e7\u00e3o de logs de envio do documento D4Sign",
+                "referencia": [
+                    "BPM40724"
+                ],
+                "modulo": "GED",
+                "hash": "713256254ba77dd03fa753f4bbab538106c35cf1",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40724-1"
+            }
+        ]
+    },
+    {
         "versao": "24.116.1",
         "itens": [
             {

@@ -191,3 +191,10 @@ App.PE.Timeline_Listagem_onRowPrepared = function(e) {
     //     }
     // }
 }
+
+App.PE.GED_ao_acessar_pasta = function(main, documentoPastaID) {
+    //Esse trecho irá desconsiderar o campo de pesquisa ao acessar qualquer pasta.
+    //if (main.state.considerarCampoPesquisaPastaAtual && main.state.pesquisa && main.state.arrCurrentPath && documentoPastaID != main.state.arrCurrentPath[main.state.arrCurrentPath.length -1].id ) {
+    //    main.alterarConsiderarCampoPesquisaPastaAtual(false, false);
+    //}
+}

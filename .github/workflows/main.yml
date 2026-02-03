@@ -7,7 +7,7 @@ name: 🚀 Deploy on push versão 24 PHP 8.2
 
 jobs:
   deploy_next_homolog:
-    runs-on: ubuntu-latest
+    runs-on: bp-atualizacao
     strategy:
       matrix:
         include:
@@ -88,7 +88,7 @@ jobs:
           local-dir: './webservice/manual/php/'
           
   deploy_next_prod:
-    runs-on: ubuntu-latest
+    runs-on: bp-atualizacao
     needs: [deploy_next_homolog]
     strategy:
       matrix:
@@ -170,7 +170,7 @@ jobs:
           local-dir: './webservice/manual/php/'
 
   deploy_homolog:
-    runs-on: ubuntu-latest
+    runs-on: bp-atualizacao
     needs: [deploy_next_prod]
     strategy:
       matrix:
@@ -334,7 +334,7 @@ jobs:
           local-dir: './webservice/manual/php/'
 
   deploy_prod:
-    runs-on: ubuntu-latest
+    runs-on: bp-atualizacao
     needs: [deploy_homolog]
     strategy:
       matrix:

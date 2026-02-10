@@ -1,5 +1,31 @@
 [
     {
+        "versao": "24.118.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Acr\u00e9scimo de e-mail do signat\u00e1rio e confirma\u00e7\u00e3o de dados antes do envio",
+                "referencia": [
+                    "BPM41602",
+                    "BPM41603"
+                ],
+                "modulo": "GED",
+                "hash": "1d3c7ecf8be90e25e29f332ec33a1f8425b010a2",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41602"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Atualiza\u00e7\u00e3o da mensagem de encerramento autom\u00e1tico por inatividade",
+                "referencia": [
+                    "BPM41918"
+                ],
+                "modulo": "Chamados",
+                "hash": "97cfc04e158bfa835513944a6c85891ec12031bc",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41918"
+            }
+        ]
+    },
+    {
         "versao": "24.117.4",
         "itens": [
             {

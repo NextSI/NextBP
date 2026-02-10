@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.117.4",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Problema com a fun\u00e7\u00e3o \"get_totalizador\" no formul\u00e1rio",
+                "referencia": [
+                    "BPM41908"
+                ],
+                "modulo": "Processos",
+                "hash": "d0c12b3e5cdb0c3d73a93881ff4164a8cabfdd92",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41908"
+            }
+        ]
+    },
+    {
         "versao": "24.117.3",
         "itens": [
             {

@@ -207,13 +207,13 @@ jobs:
           #   api: FTP_URL_DBU_000353_HLG
           #   server: FTP_HOST_PORTALPRODHOMOLOG
 
-          - nome: 000333 Homolog
-            tipo: ftp
-            username_secret: FTP_USERNAME_000333
-            password_secret: FTP_PASSWORD_000333
-            dir: ./homolog/
-            api: FTP_URL_DBU_000333_HLG
-            server: FTP_HOST_PORTALPRODHOMOLOG
+          # - nome: 000333 Homolog
+          #   tipo: ftp
+          #   username_secret: FTP_USERNAME_000333
+          #   password_secret: FTP_PASSWORD_000333
+          #   dir: ./homolog/
+          #   api: FTP_URL_DBU_000333_HLG
+          #   server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000335 Homolog
             tipo: ftp
@@ -371,13 +371,13 @@ jobs:
           #   api: FTP_URL_DBU_000353
           #   server: FTP_HOST_PORTALPRODHOMOLOG
 
-          - nome: 000333 Prod
-            tipo: ftp
-            username_secret: FTP_USERNAME_000333
-            password_secret: FTP_PASSWORD_000333
-            dir: ./
-            api: FTP_URL_DBU_000333
-            server: FTP_HOST_PORTALPRODHOMOLOG
+          # - nome: 000333 Prod
+          #   tipo: ftp
+          #   username_secret: FTP_USERNAME_000333
+          #   password_secret: FTP_PASSWORD_000333
+          #   dir: ./
+          #   api: FTP_URL_DBU_000333
+          #   server: FTP_HOST_PORTALPRODHOMOLOG
 
           - nome: 000335 Prod
             tipo: ftp

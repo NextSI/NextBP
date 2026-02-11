@@ -1,5 +1,40 @@
 [
     {
+        "versao": "24.119.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Contagem de registros nos agrupamentos de listagens",
+                "referencia": [
+                    "BPM40616"
+                ],
+                "modulo": "Projetos, Central de Pend\u00eancias, Chamados e Processos",
+                "hash": "e9fcf8eef48f0eb8d5a25cddd9ff929ea4d9f10f",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40616"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Valida\u00e7\u00e3o da e-mails iguais na altera\u00e7\u00e3o signat\u00e1rio D4Sign",
+                "referencia": [
+                    "BPM41497"
+                ],
+                "modulo": "GED",
+                "hash": "536dab42ed96a75a194554b4eb87b95df3792359",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41497-3"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na pesquisa de t\u00e9cnicos no apontamento simples",
+                "referencia": [
+                    "BPM41934"
+                ],
+                "modulo": "Projeto",
+                "hash": "edf8f1d00c3f2e5d1643497feba674f4a4fc326a",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41934"
+            }
+        ]
+    },
+    {
         "versao": "24.118.1",
         "itens": [
             {

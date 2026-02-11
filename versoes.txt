@@ -1,5 +1,21 @@
 [
     {
+        "versao": "24.119.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Corre\u00e7\u00e3o erro ao tentar adicionar signat\u00e1rios",
+                "referencia": [
+                    "BPM41602",
+                    "BPM41603"
+                ],
+                "modulo": "GED",
+                "hash": "28fec3af261fc6bbd90490cf07433ac1ac65e5cd",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41602-1"
+            }
+        ]
+    },
+    {
         "versao": "24.119.1",
         "itens": [
             {

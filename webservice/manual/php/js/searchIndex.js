@@ -39426,6 +39426,11 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/default.html#constant_MEMORIA_LIMITE_GERAR_ZIP"
         },                {
+            "fqsen": "\\WS_PHP_SESSION",
+            "name": "WS_PHP_SESSION",
+            "summary": "",
+            "url": "namespaces/default.html#constant_WS_PHP_SESSION"
+        },                {
             "fqsen": "\\PATH_LIBREOFFICE",
             "name": "PATH_LIBREOFFICE",
             "summary": "",

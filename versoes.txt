@@ -1,5 +1,40 @@
 [
     {
+        "versao": "24.120.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Adicionada op\u00e7\u00e3o de totalizadores (soma, contagem, m\u00e9dia, m\u00e1ximo, m\u00ednimo) em colunas para cada n\u00edvel de agrupamento",
+                "referencia": [
+                    "BPM40618"
+                ],
+                "modulo": "Cubo",
+                "hash": "7fbcc41992cd269cf1d85f34c5d7012ba0b5fff9",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM40618"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste no nome do respons\u00e1el de atividade de solicita\u00e7\u00e3o de processo no e-mail de notifica\u00e7\u00e3o",
+                "referencia": [
+                    "BPM42013"
+                ],
+                "modulo": "Processos",
+                "hash": "014d6f065e845be7e10dffb92adbf2365a84baca",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM42013"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Listagem de Organiza\u00e7\u00e3o n\u00e3o esta respeitando a regra de carteira do Representante",
+                "referencia": [
+                    "BPM42048"
+                ],
+                "modulo": "CRM",
+                "hash": "565582b64beb8b372167059fd3206a40911a5697",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM42048"
+            }
+        ]
+    },
+    {
         "versao": "24.119.3",
         "itens": [
             {

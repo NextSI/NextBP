@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.120.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na exibi\u00e7\u00e3o das refer\u00eancias (p\u00f3s-a\u00e7\u00e3o) de atividades do PDCA",
+                "referencia": [
+                    "BPM42055"
+                ],
+                "modulo": "PDCA",
+                "hash": "89f2c13355812028226485dbe67018ccf41da9af",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM42055"
+            }
+        ]
+    },
+    {
         "versao": "24.120.1",
         "itens": [
             {

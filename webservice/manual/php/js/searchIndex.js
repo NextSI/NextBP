@@ -39431,6 +39431,11 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/default.html#constant_WS_PHP_SESSION"
         },                {
+            "fqsen": "\\WS_TEMPO_SESSAO_INATIVA",
+            "name": "WS_TEMPO_SESSAO_INATIVA",
+            "summary": "",
+            "url": "namespaces/default.html#constant_WS_TEMPO_SESSAO_INATIVA"
+        },                {
             "fqsen": "\\PATH_LIBREOFFICE",
             "name": "PATH_LIBREOFFICE",
             "summary": "",

@@ -1,5 +1,40 @@
 [
     {
+        "versao": "24.121.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Otimiza\u00e7\u00e3o da interface mobile nas listagens principais",
+                "referencia": [
+                    "BPM41950"
+                ],
+                "modulo": "Projetos, Chamados, Processos, Documentos",
+                "hash": "342d534f465bfdf34e388915321c77194608e8e5",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41950"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Erro ao salvar modelagem no Diagrama - Altera\u00e7\u00e3o de fluxo\/Layout",
+                "referencia": [
+                    "BPM41643"
+                ],
+                "modulo": "Processos",
+                "hash": "90ae08748cd59425b6c1ad2473793f7ee620622d",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41643"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na funcionalidade de alterar senha do usu\u00e1rio autenticado",
+                "referencia": [
+                    "BPM42127"
+                ],
+                "modulo": "Geral",
+                "hash": "f7cc30610d7d6f5dd3ddff0788de7ccec406ead2",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM42127"
+            }
+        ]
+    },
+    {
         "versao": "24.120.2",
         "itens": [
             {

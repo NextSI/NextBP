@@ -33996,6 +33996,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Processo-Model.html#property_importacao"
         },                {
+            "fqsen": "\\Processo_Model\u003A\u003A\u0024sincronizar_destinos_diagrama",
+            "name": "sincronizar_destinos_diagrama",
+            "summary": "",
+            "url": "classes/Processo-Model.html#property_sincronizar_destinos_diagrama"
+        },                {
             "fqsen": "\\Processo_Model\u003A\u003A\u0024formulario_model",
             "name": "formulario_model",
             "summary": "",
@@ -38500,6 +38505,11 @@ Search.appendIndex(
             "name": "validation",
             "summary": "",
             "url": "classes/Usuario-Model.html#method_validation"
+        },                {
+            "fqsen": "\\Usuario_Model\u003A\u003Avalidar_requisitos_senha\u0028\u0029",
+            "name": "validar_requisitos_senha",
+            "summary": "",
+            "url": "classes/Usuario-Model.html#method_validar_requisitos_senha"
         },                {
             "fqsen": "\\Usuario_Model\u003A\u003AUSUARIO_TIPO_CLIENTE",
             "name": "USUARIO_TIPO_CLIENTE",

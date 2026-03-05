@@ -1,5 +1,40 @@
 [
     {
+        "versao": "24.121.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste em valida\u00e7\u00e3o antes de efetivar a exclus\u00e3o de usu\u00e1rios",
+                "referencia": [
+                    "BPM41718"
+                ],
+                "modulo": "Geral",
+                "hash": "5db6fc8591c9bdccebf3b3d0a13fddc626e1d557",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41718"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na notifica\u00e7\u00e3o por e-mail para usu\u00e1rios bloqueados",
+                "referencia": [
+                    "BPM41773"
+                ],
+                "modulo": "Geral",
+                "hash": "3b04a4513c4b815de665c73ec4b30c392378d865",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41773"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao editar usu\u00e1rio com CPF",
+                "referencia": [
+                    "BPM42018"
+                ],
+                "modulo": "Geral",
+                "hash": "d44ee3ceedf73fdeec8277efce4830a6510bb73d",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM42018"
+            }
+        ]
+    },
+    {
         "versao": "24.121.1",
         "itens": [
             {

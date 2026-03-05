@@ -16256,6 +16256,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Usuario-DAO.html#method_usuario_id_substituidos_e_supervisionados"
         },                {
+            "fqsen": "\\Usuario_DAO\u003A\u003Aemail_de_usuario_bloqueado\u0028\u0029",
+            "name": "email_de_usuario_bloqueado",
+            "summary": "",
+            "url": "classes/Usuario-DAO.html#method_email_de_usuario_bloqueado"
+        },                {
             "fqsen": "\\USUARIO_CLIENTE_MENSAGEM_DOMINIO_NAO_ENCONTRADO",
             "name": "USUARIO_CLIENTE_MENSAGEM_DOMINIO_NAO_ENCONTRADO",
             "summary": "",

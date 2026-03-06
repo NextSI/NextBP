@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.122.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Adicionada quantidade de atividades pendentes na listagem de processos do usu\u00e1rio",
+                "referencia": [
+                    "BPM14264"
+                ],
+                "modulo": "Processo",
+                "hash": "4061a1e77d4a362e390285794ce0de6ba9b90231",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM14264"
+            }
+        ]
+    },
+    {
         "versao": "24.121.3",
         "itens": [
             {

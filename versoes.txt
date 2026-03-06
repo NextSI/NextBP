@@ -1,5 +1,30 @@
 [
     {
+        "versao": "24.121.3",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao pesquisar o cliente no apontamento de projetos",
+                "referencia": [
+                    "BPM42051"
+                ],
+                "modulo": "Projetos",
+                "hash": "2ec104149c5ad3998ad745fcac63f20cd180b554",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM42051"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na modelagem de processo ao \"Salvar e Sair\"",
+                "referencia": [
+                    "BPM42116"
+                ],
+                "modulo": "Processo",
+                "hash": "05084f4afc15df10254009bda423c596bafc99a4",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM42116"
+            }
+        ]
+    },
+    {
         "versao": "24.121.2",
         "itens": [
             {

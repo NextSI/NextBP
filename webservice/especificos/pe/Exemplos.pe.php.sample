@@ -90,6 +90,7 @@ PE::add('solicitacao_atividade_preencher', function($solicitacao_atividade_model
 PE::add('consultar_situacao_gateway_override', function($versao_processo_gateway_id, $solicitacao_model, $solicitacao_atividade_versao_processo_atividade_id, $destinos) { ... });
 PE::add('solicitacao_atividade_consultar_situacao_gateway_paralelo', function($solicitacao_model, $versao_processo_gateway_id, $qtde_origens_gateway, $total_atividades_aguardando_envio) { ... });
 PE::add('processo_solicitacao_formulario_pdf_antes', function($solicitacao_atividade, $solicitacao, $formulario) { ... });
+PE::add('solicitacao_atividade_email_anonimo', function($solicitacao_atividade_model, &$email_assunto, &$html, &$variaveis) { ... });
 
 // Projeto
 PE::add('projeto_salvar_antes', function(&$projeto_model) { ... });

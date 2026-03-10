@@ -8,6 +8,7 @@
 use \Sys\RouteMap;
 use \Sys\App;
 use \Sys\Basic;
+use \Sys\Controller;
 use \Sys\Sessao;
 
 RouteMap::add('/exemplos/minha_rota_personalizada/', function() {

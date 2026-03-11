@@ -1,5 +1,30 @@
 [
     {
+        "versao": "24.123.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na a\u00e7\u00e3o de deslizar a barra de rolagem do mouse (scroll)",
+                "referencia": [
+                    "BPM41281"
+                ],
+                "modulo": "Processo",
+                "hash": "d23241f1d7ca7f11638b6ce0fd6c8e336507510b",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41281"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Erro ao salvar atividades copiadas",
+                "referencia": [
+                    "BPM41951"
+                ],
+                "modulo": "Processos",
+                "hash": "09287ff11bbc23b9b7afe701f4226b28191a7662",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41951"
+            }
+        ]
+    },
+    {
         "versao": "24.123.1",
         "itens": [
             {

@@ -8836,6 +8836,21 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Importacao-Usuarios-LDAP-DAO.html#method_importar_usuarios_ldap"
         },                {
+            "fqsen": "\\Importacao_Usuarios_LDAP_Automatica_DAO",
+            "name": "Importacao_Usuarios_LDAP_Automatica_DAO",
+            "summary": "",
+            "url": "classes/Importacao-Usuarios-LDAP-Automatica-DAO.html"
+        },                {
+            "fqsen": "\\Importacao_Usuarios_LDAP_Automatica_DAO\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Importacao-Usuarios-LDAP-Automatica-DAO.html#method___construct"
+        },                {
+            "fqsen": "\\Importacao_Usuarios_LDAP_Automatica_DAO\u003A\u003Aimportar_usuarios_ldap\u0028\u0029",
+            "name": "importar_usuarios_ldap",
+            "summary": "",
+            "url": "classes/Importacao-Usuarios-LDAP-Automatica-DAO.html#method_importar_usuarios_ldap"
+        },                {
             "fqsen": "\\Importar_Excel_DAO",
             "name": "Importar_Excel_DAO",
             "summary": "",
@@ -36060,6 +36075,11 @@ Search.appendIndex(
             "name": "padrao",
             "summary": "",
             "url": "classes/Servidor-LDAP-Model.html#property_padrao"
+        },                {
+            "fqsen": "\\Servidor_LDAP_Model\u003A\u003A\u0024importar_automaticamente",
+            "name": "importar_automaticamente",
+            "summary": "",
+            "url": "classes/Servidor-LDAP-Model.html#property_importar_automaticamente"
         },                {
             "fqsen": "\\Servidor_LDAP_Model\u003A\u003A\u0024dominio",
             "name": "dominio",

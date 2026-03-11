@@ -1,5 +1,20 @@
 [
     {
+        "versao": "24.124.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Job de importa\u00e7\u00e3o autom\u00e1tica de usu\u00e1rios do LDAP",
+                "referencia": [
+                    "BPM41566"
+                ],
+                "modulo": "Configura\u00e7\u00f5es",
+                "hash": "4c487e71d03cc2a74dd1909cacf79b5407f045a4",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM41566"
+            }
+        ]
+    },
+    {
         "versao": "24.123.2",
         "itens": [
             {

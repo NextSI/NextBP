@@ -1,5 +1,30 @@
 [
     {
+        "versao": "24.125.1",
+        "itens": [
+            {
+                "tipo": "M",
+                "descricao": "Listagem de projetos vinculados a eventos de agenda",
+                "referencia": [
+                    "BPM24948"
+                ],
+                "modulo": "Agenda",
+                "hash": "5ea3d57130d82f0e2894b981458c899df6fc0bfb",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM24948"
+            },
+            {
+                "tipo": "M",
+                "descricao": "Novo ponto de entrada ao abrir chamados por e-mail",
+                "referencia": [
+                    "BPM42212"
+                ],
+                "modulo": "Chamado",
+                "hash": "f0d67c623b6fbfd49b76ba03678658ad23cf8925",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM42212"
+            }
+        ]
+    },
+    {
         "versao": "24.124.1",
         "itens": [
             {

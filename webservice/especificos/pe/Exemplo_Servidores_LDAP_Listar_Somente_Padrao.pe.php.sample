@@ -1,0 +1,11 @@
+<?php
+use \Sys\PE;
+
+PE::add('servidores_ldap_listar_basico', function(&$servidores) { 
+    // somente servidor padrão
+    foreach ($servidores as &$servidor) {
+        if ($servidor['padrao'] === 'S') continue;
+        $servidor = null;
+    }
+    $servidores = array_filter($servidores);
+});

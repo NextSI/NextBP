@@ -147,13 +147,9 @@ PE::add('integracao_next_forca_vendas_salvar_oportunidade_antes', function($opor
 PE::add('integracao_next_forca_vendas_salvar_oportunidade_depois', function($oportunidade_model, $lead) { ... });
 
 //LDAP
-PE::add('servidores_ldap_listar_basico', function(&$servidores) { 
-    // somente servidor padrão
-    foreach ($servidores as &$servidor) {
-        if ($servidor['padrao'] === 'S') continue;
-        $servidor = null;
-    }
-    $servidores = array_filter($servidores);
-});
+PE::add('servidores_ldap_listar_basico', function(&$servidores) { ... });
+
+// Interação por e-mail
+PE::add('interage_email_chamado_abertura_salvar', function(&$chamado_model, &$headers) { ... });
 
 */

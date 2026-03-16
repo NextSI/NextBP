@@ -1,0 +1,34 @@
+<?php
+/*
+* Exemplo de interação com aliases de e-mail.
+* Um alias é um endereço eletrônico alternativo e funcional (um "apelido")
+* associado à sua conta de e-mail principal.
+* Imagine que sua conta principal é portal@suaempresa.com.br,
+* e você deseja abrir chamados automaticamente para o SAC e para
+* a equipe comercial. Crie endereços alternativos como sac@suaempresa.com.br
+* e comercial@suaempresa.com.br que redirecionam para portal@suaempresa.com.br.
+* No ponto de entrada `interage_email_chamado_abertura_salvar`,
+* será possível analisar a propriedade "to" (para) e
+* alterar dados do chamado.
+*/
+
+use \Sys\PE;
+
+define('PE_INTERAGE_EMAIL_CHAMADO_SALVAR', [
+    'sac@suaempresa.com.br' => [
+        'grupo_motivo_id' => 3, // Atendimento (informar null quando estiver desativado o campo grupo de motivo)
+        'chamado_motivo_id' => 14, // SAC
+    ],
+    'comercial@suaempresa.com.br' => [
+        'grupo_motivo_id' => 3, // Atendimento (informar null quando estiver desativado o campo grupo de motivo)
+        'chamado_motivo_id' => 16, // Comercial
+    ]
+]);
+
+// Interação por e-mail
+PE::add('interage_email_chamado_abertura_salvar', function(&$chamado_model, &$headers) { 
+    if (!isset($headers['to'])) return;
+    if (!array_key_exists($headers['to'], PE_INTERAGE_EMAIL_CHAMADO_SALVAR)) return;
+    $chamado_model->grupo_motivo_id = PE_INTERAGE_EMAIL_CHAMADO_SALVAR[$headers['to']]['grupo_motivo_id'];
+    $chamado_model->chamado_motivo_id = PE_INTERAGE_EMAIL_CHAMADO_SALVAR[$headers['to']]['chamado_motivo_id'];
+});

@@ -1,5 +1,30 @@
 [
     {
+        "versao": "24.125.2",
+        "itens": [
+            {
+                "tipo": "C",
+                "descricao": "Ajuste ao salvar novo cadastro gen\u00e9rico",
+                "referencia": [
+                    "BPM42192"
+                ],
+                "modulo": "Cadastro Gen\u00e9rico",
+                "hash": "b7a6be35972d674489e8d7d410c53c9b1a8b6f12",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM42192"
+            },
+            {
+                "tipo": "C",
+                "descricao": "Ajuste na edi\u00e7\u00e3o de campos do tipo inteiro em formul\u00e1rios",
+                "referencia": [
+                    "BPM42220"
+                ],
+                "modulo": "Processo",
+                "hash": "020d7076ef525b8d7106d5fb6ccd79c7f7bbabc7",
+                "link": "webservice\/index.php\/manual\/?i=pt-BR&p=log\/BPM42220"
+            }
+        ]
+    },
+    {
         "versao": "24.125.1",
         "itens": [
             {

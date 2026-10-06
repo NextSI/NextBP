@@ -3,7 +3,7 @@
 Pré-requisitos: Docker e Docker Compose instalados no servidor. Nenhum PHP, MySQL ou Node
 precisa estar instalado — tudo roda em container.
 
-1. Faça o download dos ambientes em http://download-bp.nextsi.com.br/docker/bp-docker-compose.zip
+1. Faça o download dos ambientes em http://download-bp.nextsi.com.br/docker/bp-docker.zip
 ```bash
 wget http://download-bp.nextsi.com.br/docker/bp-docker.zip
 cd /opt/

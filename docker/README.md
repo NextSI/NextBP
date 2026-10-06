@@ -1,9 +1,8 @@
 # Next BP com Docker
 
-Pré-requisitos: Docker e Docker Compose instalados no servidor. Nenhum PHP, MySQL ou Node
-precisa estar instalado — tudo roda em container.
+Pré-requisitos: Docker e Docker Compose instalados no servidor. https://docs.docker.com/engine/install/ubuntu/
 
-Exemplo utilizando Ubuntu 26.04.
+No exemplo abaixo foi utilizando Ubuntu 26.04.
 
 1. Faça o download dos ambientes em https://download-bp.nextsi.com.br/docker/bp-docker.zip
 ```bash

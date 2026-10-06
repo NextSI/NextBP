@@ -1,14 +1,4 @@
-Para gerar a imagem do docker execute o comando abaixo na raiz do projeto
-```
-docker build -f bp_build/dockerfile -t nextsi/nextbp:latest .
-```
-
-Construir imagem forçando arquitetura amd64
-```
-docker buildx build --platform linux/amd64 -f bp_build/dockerfile -t nextsi/nextbp:latest .
-```
-
-## Instalar no servidor do cliente via Docker Compose
+# Instalar no servidor do cliente via Docker Compose
 
 Pré-requisitos: Docker e Docker Compose instalados no servidor. Nenhum PHP, MySQL ou Node
 precisa estar instalado — tudo roda em container.

@@ -1,14 +1,18 @@
-# Instalar no servidor do cliente via Docker Compose
+# Next BP com Docker
 
 Pré-requisitos: Docker e Docker Compose instalados no servidor. Nenhum PHP, MySQL ou Node
 precisa estar instalado — tudo roda em container.
 
-1. Copie a pasta `bp_build/` para o servidor do cliente (ou clone o repositório lá).
-
-2. Configure as variáveis de ambiente
+1. Faça o download dos ambientes em http://download-bp.nextsi.com.br/docker/bp-docker-compose.zip
 ```bash
-cd bp_build
-mkdir -p data
+wget http://download-bp.nextsi.com.br/docker/bp-docker.zip
+cd /opt/
+unzip bp-docker.zip
+```
+
+2. Configure as variáveis de ambiente de homologação
+```bash
+cd homologacao
 cp .env.sample .env
 nano .env
 ```
@@ -18,20 +22,22 @@ container do MySQL quanto o da aplicação — não é preciso repeti-las em out
 
 3. Suba o ambiente
 ```bash
-cp docker-compose.yml.sample docker-compose.yml
 docker compose up -d
 ```
 
 4. Na primeira execução, monte a estrutura do banco de dados
 ```bash
-docker compose exec app php webservice/cli.php -color -dbu
+docker compose exec app php webservice/cli.php -dbu
 ```
 
-5. Verifique se subiu corretamente
+5. Verifique se os serviços estão rodando e se estão nas portas corretas
 ```bash
-curl http://localhost:${APP_PORT:-80}/webservice/index.php/health/
+docker ps
 ```
-Deve retornar `"status":"ok"`. O `docker compose ps` também mostra o healthcheck da imagem.
 
 Para atualizar de versão depois: altere `BP_VERSION` no `.env`, rode `docker compose pull &&
 docker compose up -d` e execute o passo 4 novamente (o DBU só aplica o que estiver pendente).
+
+6. Repita o passo 2 até o 5 para o ambiente de produção.
+
+7. Inicie o servidor de proxy reverso Caddy para orquestrar os apps do BP e os certificados HTTPS

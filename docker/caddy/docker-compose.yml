@@ -1,0 +1,24 @@
+services:
+    caddy:
+        image: 'caddy:2'
+        restart: unless-stopped
+        ports:
+            - '80:80'
+            - '443:443'
+            - '443:443/udp' # HTTP/3
+        # permite ao Caddy alcancar as portas publicadas pelos ambientes
+        # (homologacao e producao) no host via "host.docker.internal"
+        extra_hosts:
+            - 'host.docker.internal:host-gateway'
+        environment:
+            ACME_EMAIL: '${ACME_EMAIL}'
+            HOMOLOGACAO_DOMINIO: '${HOMOLOGACAO_DOMINIO}'
+            HOMOLOGACAO_PORTA: '${HOMOLOGACAO_PORTA}'
+            PRODUCAO_DOMINIO: '${PRODUCAO_DOMINIO}'
+            PRODUCAO_PORTA: '${PRODUCAO_PORTA}'
+        volumes:
+            - './Caddyfile:/etc/caddy/Caddyfile:ro'
+            # certificados e chaves emitidos pelo Let's Encrypt - nao apagar,
+            # senao o Caddy reemite tudo (e pode esbarrar no rate limit)
+            - './data/caddy/data:/data'
+            - './data/caddy/config:/config'

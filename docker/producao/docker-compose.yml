@@ -1,0 +1,85 @@
+services:
+    mysql:
+        image: 'mysql:8.0'
+        restart: unless-stopped
+        # necessario para o DBU do Next BP criar functions/triggers (webservice/cli.php -dbu) —
+        # ver config grant-session-admin no fim do arquivo
+        command: --log-bin-trust-function-creators=1
+        volumes:
+            - './data/mysql:/var/lib/mysql'
+        configs:
+            - source: grant-session-admin
+              target: /docker-entrypoint-initdb.d/grant-session-admin.sql
+        environment:
+            MYSQL_ROOT_PASSWORD: '${DB_ROOT_PASSWORD}'
+            MYSQL_DATABASE: '${DB_NAME}'
+            MYSQL_USER: '${DB_USER}'
+            MYSQL_PASSWORD: '${DB_PASSWORD}'
+        healthcheck:
+            test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost', '-u', 'root', '-p${DB_ROOT_PASSWORD}']
+            interval: 10s
+            timeout: 5s
+            retries: 10
+
+    app:
+        image: 'nextsi/nextbp:${BP_VERSION}'
+        restart: unless-stopped
+        depends_on:
+            mysql:
+                condition: service_healthy
+        environment: &bp-environment
+            # Variaveis BP_* sao convertidas automaticamente em constantes do
+            # Next BP (ver src/webservice/sys/Env.config.php). Para casos
+            # avancados nao cobertos por elas (ex.: DB_OPTIONS com SSL),
+            # monte um config/System.config.php customizado como volume -
+            # ele tem prioridade sobre estas variaveis.
+            BP_APP_NOME: '${APP_NOME}'
+            BP_APP_URL: '${APP_URL}'
+            BP_APP_URI: '/webservice/index.php/'
+            BP_APP_DATA: '/var/www/data'
+            BP_DB_HOST: 'mysql'
+            BP_DB_PORT: '3306'
+            BP_DB_NAME: '${DB_NAME}'
+            BP_DB_USER: '${DB_USER}'
+            BP_DB_PASSWORD: '${DB_PASSWORD}'
+        volumes:
+            - './data/bp:/var/www/data'
+            # descomente para usar um System.config.php customizado
+            # (necessario apenas para casos avancados, ver comentario acima)
+            # - './config/System.config.php:/var/www/html/webservice/config/System.config.php'
+        ports:
+            - '${APP_PORT}:80'
+
+    # Job scheduler do Next BP (job/Executar.php) executado a cada 5 minutos.
+    # Usa a mesma imagem e configuracao do servico "app"; se montar um
+    # System.config.php customizado no "app", monte-o aqui tambem.
+    job:
+        image: 'nextsi/nextbp:${BP_VERSION}'
+        restart: unless-stopped
+        depends_on:
+            mysql:
+                condition: service_healthy
+        # mesmo usuario do Apache, para que os arquivos gerados em /var/www/data
+        # continuem acessiveis pelo servico "app"
+        user: 'www-data'
+        environment: *bp-environment
+        volumes:
+            - './data/bp:/var/www/data'
+            # - './config/System.config.php:/var/www/html/webservice/config/System.config.php'
+        entrypoint: ['/bin/sh', '-c']
+        command: ['while true; do php /var/www/html/webservice/job/Executar.php; sleep 300; done']
+        # o healthcheck da imagem consulta o Apache, que nao roda neste container
+        healthcheck:
+            disable: true
+
+
+configs:
+    # Roda uma vez, na primeira inicializacao do container (volume de dados vazio).
+    #
+    # O usuario criado automaticamente pelas variaveis MYSQL_USER/MYSQL_PASSWORD so recebe
+    # privilegios no schema da aplicacao. Sem SESSION_VARIABLES_ADMIN, o DBU do Next BP
+    # (webservice/cli.php -dbu) falha ao conectar com "Access denied; you need SYSTEM_VARIABLES_ADMIN
+    # or SESSION_VARIABLES_ADMIN" (Sys\DB::connect seta SESSION innodb_strict_mode a cada conexao).
+    grant-session-admin:
+        content: |
+            GRANT SESSION_VARIABLES_ADMIN ON *.* TO '${DB_USER}'@'%';

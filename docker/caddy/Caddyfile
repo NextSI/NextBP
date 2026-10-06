@@ -1,0 +1,25 @@
+{
+	email {$ACME_EMAIL}
+}
+
+{$PRODUCAO_DOMINIO} {
+	encode zstd gzip
+	reverse_proxy host.docker.internal:{$PRODUCAO_PORTA}
+}
+
+{$HOMOLOGACAO_DOMINIO} {
+	encode zstd gzip
+	reverse_proxy host.docker.internal:{$HOMOLOGACAO_PORTA}
+}
+
+# Acesso direto pelo IP do servidor (ou qualquer host nao listado acima) cai
+# na producao. Somente HTTP: o Let's Encrypt nao emite certificado para IP.
+# Os dominios acima continuam com redirecionamento automatico para HTTPS.
+:8080 {
+	encode zstd gzip
+	reverse_proxy host.docker.internal:{$PRODUCAO_PORTA}
+}
+:8081 {
+	encode zstd gzip
+	reverse_proxy host.docker.internal:{$HOMOLOGACAO_PORTA}
+}
